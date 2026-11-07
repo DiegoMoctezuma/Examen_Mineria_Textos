@@ -8,13 +8,13 @@
 
 - H2 en curso (2026-11-04): `src/mtx/preproceso.py` con 12 pruebas verdes, `config/stopwords_es.txt` (copia exacta de las 313 palabras de NLTK) y `config/stoplist_extra.txt`. Escritos pero **sin probar y sin scripts**: `src/mtx/indice.py` (índice a mano, persistencia, `matriz_conteos`) y `src/mtx/ranking.py` (BM25, Tfidf, filtro, `top_k`, `Buscador`, `variantes_oficiales`). Total: 94 pruebas rápidas verdes.
 - Q9 y Q10 aprobadas por el alumno sin cambios (2026-11-07); `[VALIDAR]` cerrado y registrado en `docs/decisiones.md`. Ya se pueden generar rankings.
+- Entorno macOS arm64 listo (2026-11-07): `uv`, `make setup`, `make corpus` (mismo hash de pasajes que en Linux) y `make test` con 94 pruebas verdes.
 
 ## Pendiente
 
-1. **Entorno en macOS arm64**: instalar `uv` (no está en esta máquina), correr `make setup` y revisar que torch CPU y kaleido funcionen en Mac (el `pyproject` solo fija el índice de torch para Linux y Windows). Después, `make corpus` para regenerar `data/pasajes.parquet` (no está versionado) y `make test` para confirmar las 94 pruebas.
-2. H2 (empezar aquí, skill `indice-ranking`): escribir `tests/test_indice.py` (T03, contra `CountVectorizer`), `tests/test_ranking.py` (T04 a T06: fórmulas a mano, subclase de `rank_bm25` con tolerancia 1e-6, fecha, 0/3/10 candidatos, marca sin efecto), `scripts/02_indice.py` (tokens.parquet, índice, `02_postings.md`, `02_vocabulario_top.csv`, `02_tokens_consultas.md`) y `scripts/03_ranking.py`, luego `pool.py` y `04_pool.py`. Probar `indice.py` y `ranking.py` ya escritos; no asumir que funcionan.
-3. H3 (alumno): `config/criterios_relevancia.md` `[VALIDAR]` y juicios en la app. Luego H4 a H9 (PRD §12.2).
-4. Alumno: verificar que el profesor tenga acceso a este repo de GitLab (el enunciado habla de GitHub).
+1. H2 (empezar aquí, skill `indice-ranking`): escribir `tests/test_indice.py` (T03, contra `CountVectorizer`), `tests/test_ranking.py` (T04 a T06: fórmulas a mano, subclase de `rank_bm25` con tolerancia 1e-6, fecha, 0/3/10 candidatos, marca sin efecto), `scripts/02_indice.py` (tokens.parquet, índice, `02_postings.md`, `02_vocabulario_top.csv`, `02_tokens_consultas.md`) y `scripts/03_ranking.py`, luego `pool.py` y `04_pool.py`. Probar `indice.py` y `ranking.py` ya escritos; no asumir que funcionan.
+2. H3 (alumno): `config/criterios_relevancia.md` `[VALIDAR]` y juicios en la app. Luego H4 a H9 (PRD §12.2).
+3. Alumno: verificar que el profesor tenga acceso a este repo de GitLab (el enunciado habla de GitHub).
 
 ## Decisiones
 
@@ -22,6 +22,5 @@ Ver `docs/decisiones.md`. Las no obvias: el corpus real tiene otro formato de ma
 
 ## Bloqueos
 
-- `uv` no está instalado en la Mac actual: `make` no corre (punto 1 de Pendiente).
-- NLTK no descarga stopwords aquí (validación de rutas); `preproceso.py` debe usar `config/stopwords_es.txt`, que hay que crear versionado en H2.
+- Falta `xelatex` en la Mac (solo para `make reporte`, H9): instalar BasicTeX o MacTeX antes del reporte.
 - Kaleido necesita el Chrome que instala `plotly_get_chrome` (`make setup` lo hace); los Chromium de snap fallan.

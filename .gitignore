@@ -10,6 +10,7 @@ data/*.parquet
 data/*.pkl
 data/*.npz
 kit/data/
+.nltk_data/
 
 # Pesos de modelos y cachés de Hugging Face
 hf_home/

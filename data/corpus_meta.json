@@ -2,7 +2,7 @@
   "dataset": "carevies/discursos_AMLO",
   "sha256_parquet": "e42531f24c64f61eea10660aede0b67f8d67b0fd66c953d4bdc83701f0a0c80d",
   "filas": 2294,
-  "fecha_descarga": "2026-11-04",
+  "fecha_descarga": "2026-11-07",
   "commit_dataset": "2c463bb3d5bf58742b4d842917da1211c44d2e18",
   "columnas": [
     "doc_id",
