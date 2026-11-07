@@ -1,0 +1,29 @@
+{
+  "construido": "2026-11-07T12:12:06",
+  "pares": 176,
+  "pasajes_distintos": 175,
+  "por_consulta": {
+    "Q1": 19,
+    "Q2": 19,
+    "Q3": 19,
+    "Q4": 15,
+    "Q5": 14,
+    "Q6": 28,
+    "Q7": 12,
+    "Q8": 14,
+    "Q9": 21,
+    "Q10": 15
+  },
+  "fuera_de_rango_15_40": [
+    "Q5",
+    "Q7",
+    "Q8"
+  ],
+  "semilla_orden": 42,
+  "sha256_pool": "5284fa8e5d85a216cf035b503df09df94305443e0a94e97d623e56e787dcf4dd",
+  "sha256_pool_csv": "e8e5095786c6db4532a919f4d829c600ff29213ae621231f75dbc2a4e7dc2e14",
+  "sha256_ranking_csv": "37ffa3e4367faf8d48f069afd3570ea44a44b4016a33cd1e9da8d92a88ec7f10",
+  "sha256_consultas_csv": "37377bcbeccede92aa2d99a9ca2d4f064d7f230f344b66836903d117e5a3e3b1",
+  "sha256_indice_meta": "8f9a83bb4340101623f8ed35215d4613def37273237450db0d2c107b9b3ab609",
+  "sha256_criterios_relevancia": null
+}

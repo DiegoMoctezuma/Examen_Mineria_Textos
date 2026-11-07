@@ -1,0 +1,11 @@
+query_id,pasajes,en_ventana,fuera_de_ventana,en_las_cuatro,solo_tfidf_con_filtro,solo_bm25_con_filtro,solo_tfidf_sin_filtro,solo_bm25_sin_filtro,fuera_de_rango_esperado
+Q1,19,18,1,2,0,1,0,1,0
+Q2,19,15,4,4,1,2,2,2,0
+Q3,19,15,4,3,1,2,1,2,0
+Q4,15,14,1,5,0,0,1,0,0
+Q5,14,14,0,6,0,0,0,0,1
+Q6,28,16,12,0,6,6,2,3,0
+Q7,12,12,0,8,0,0,0,0,1
+Q8,14,14,0,6,0,0,0,0,1
+Q9,21,16,5,2,0,3,2,3,0
+Q10,15,15,0,5,0,0,0,0,0

@@ -7,13 +7,14 @@
 - H1 (2026-11-04): `src/mtx/corpus.py` (limpieza, canonización de marcas, fechas, duplicados, segmentación), `config/limpieza.yaml`, `scripts/01_corpus_y_pasajes.py`, `make corpus` verde: 127,739 pasajes, 5 discursos excluidos, 10 fechas reparadas. Descubrimiento de Q9 y Q10 (`make explorar`, `salida/00_candidatos_q9q10.md`). `data/consultas.csv` con Q1 a Q10 (`make consultas`). 79 pruebas rápidas verdes.
 
 - H2 (2026-11-07), índice y ranking cerrados: `tests/test_indice.py` (T03) y `tests/test_ranking.py` (T04 a T06, D03, formato, evaluador del kit con juicios sintéticos, prueba lenta de contenido), `scripts/02_indice.py` y `scripts/03_ranking.py`. `make indice ranking` produce `ranking.csv` (400 filas, validado, copia en la raíz) y `salida/02_*` y `salida/03_*`, deterministas. `ranking.buscar()` listo para la demo y la app. 137 pruebas rápidas y la lenta, en verde.
+- Pool (2026-11-07): `src/mtx/pool.py` (construcción, diferencias, `validar_juicios`, exportación protegida), `scripts/04_pool.py` y `tests/test_pool.py` (T07, T08). `salida/04_pool.csv`: 176 pares; Q5, Q7 y Q8 bajo 15 por ventanas amplias (registrado). 158 pruebas rápidas en verde. H2 cerrado.
 - Q9 y Q10 aprobadas por el alumno sin cambios (2026-11-07); `[VALIDAR]` cerrado y registrado en `docs/decisiones.md`. Ya se pueden generar rankings.
 - Entorno macOS arm64 listo (2026-11-07): `uv`, `make setup`, `make corpus` (mismo hash de pasajes que en Linux) y `make test` con 94 pruebas verdes.
 
 ## Pendiente
 
-1. Cierre de H2 (skills `pool-juicios-ir` e `indice-ranking`): `src/mtx/pool.py` y `scripts/04_pool.py` (pool de las 4 variantes para los juicios).
-2. H3 (alumno): `config/criterios_relevancia.md` `[VALIDAR]` y juicios en la app. Luego H4 a H9 (PRD §12.2).
+1. H3, herramienta (skill `app-anotacion`): app Streamlit con las pestañas Estado y Juicios (ciega al modelo, autoguardado atómico en `anotaciones/juicios_relevancia.csv`, historial, T15) o la alternativa CLI.
+2. H3 (alumno): escribir `config/criterios_relevancia.md` `[VALIDAR]` (la propuesta del PRD §6.5 se le ofrece, no se escribe por él) y juzgar los 176 pares en la app (≈2 h a 40 s por pasaje; cronometrar el primer lote). Luego H4 a H9 (PRD §12.2).
 3. Alumno: verificar que el profesor tenga acceso a este repo de GitLab (el enunciado habla de GitHub).
 
 ## Decisiones
