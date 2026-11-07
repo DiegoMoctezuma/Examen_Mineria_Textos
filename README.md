@@ -11,12 +11,12 @@ preentrenado para español.
 
 Hitos H0 (preparación) y H1 (datos) hechos, con Q9 y Q10 aprobadas; H2 (recuperación) con índice y rankings listos (`ranking.csv`); falta el pool para los juicios. Ya
 corren `make setup`, `make contratos`, `make corpus`, `make consultas`,
-`make explorar`, `make indice`, `make ranking` y `make test`. Siguen H2 (índice y rankings), H3 y H6 (juicios y
+`make explorar`, `make indice`, `make ranking` y `make test`. Siguen el pool de H2, H3 y H6 (juicios y
 gold, trabajo humano) y el resto hasta H9. Este README se reemplaza en H9 por el
 README de 10 secciones que exige el enunciado (instalación desde cero,
 reproducción de resultados, flujo completo, uso de IA).
 
-Uso mínimo hoy (Linux, Python 3.11 y `uv`):
+Uso mínimo hoy (Linux o macOS, Python 3.11 y `uv`):
 
 ```bash
 make setup      # entorno, torch CPU, Chrome para kaleido
