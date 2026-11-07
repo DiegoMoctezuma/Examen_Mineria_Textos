@@ -1,0 +1,28 @@
+{
+  "N": 127739,
+  "vocabulario": 35891,
+  "avgdl": 72.20751688990833,
+  "construido": "2026-11-07T11:40:04",
+  "sha256_tokens": "538dcebc4cbf7c3206f9ab3ffe8a764330b564450f049e196a751b0a964293c9",
+  "sha256_configuracion_preproceso": "22d890c283042efe5be9af4a12ad3835ca47d03d97dd29862fb198ecd63e8914",
+  "sha256_indice": "0945fd295b8eff68928efdda56f267da56482d10badc54ad90a23d141f00d765",
+  "sha256_pasajes": "2c92857b452350ef130e5598c2d508717aac5f1cafbc105991733a452822fff5",
+  "preproceso": {
+    "regex_token": "[a-záéíóúñü0-9]+(?:-[a-záéíóúñü0-9]+)?",
+    "stemmer": "SnowballStemmer('spanish')",
+    "longitud_minima_no_numerica": 3,
+    "stoplist_palabras": 336,
+    "stoplist_sha256": "22d890c283042efe5be9af4a12ad3835ca47d03d97dd29862fb198ecd63e8914"
+  },
+  "pasajes_sin_tokens": 0,
+  "tfidf": {
+    "vocabulario": 35891,
+    "nnz": 7238490,
+    "sha256_pkl": "273c38ccd122458e25c9c157cfbc99005f8718d781bf85b76f409ab029bc11a1",
+    "sha256_npz": "66cbab426fb7b9b93eff407a92a42ce7c0a34b7c3bd3a07dcd2ee9e038e2d14b"
+  },
+  "segundos": {
+    "tokenizar": 8.0,
+    "total": 18.2
+  }
+}

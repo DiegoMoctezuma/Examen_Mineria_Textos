@@ -7,9 +7,11 @@ por fecha no recalcula N, df, idf ni avgdl.
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import math
 import pickle
+import unicodedata
 from collections import Counter
 from collections.abc import Iterable
 from dataclasses import dataclass, field
@@ -17,8 +19,9 @@ from datetime import datetime
 from pathlib import Path
 
 import numpy as np
+import pandas as pd
 
-from . import adaptadores_kit
+from . import adaptadores_kit, preproceso
 
 
 def identidad(tokens):
@@ -105,3 +108,71 @@ def cargar(ruta_pkl: Path, ruta_meta: Path | None = None, hash_tokens: str | Non
                              "`make indice`")
     with open(ruta_pkl, "rb") as f:
         return pickle.load(f)
+
+
+# --------------------------------------------------------------------------- tokens
+
+
+def tokenizar_pasajes(pasajes: pd.DataFrame) -> list[list[str]]:
+    """Tokens del cuerpo de cada pasaje (D03), en el orden de `pasajes`."""
+    return [preproceso.tokenizar_pasaje(t, i)
+            for t, i in zip(pasajes["texto"], pasajes["inicio_cuerpo"])]
+
+
+def hash_tokens(ids: list[str], lista_tokens: list[list[str]]) -> str:
+    """Huella del contenido de `tokens.parquet` (ids, orden y tokens), independiente del formato
+    binario del archivo."""
+    h = hashlib.sha256()
+    for pid, toks in zip(ids, lista_tokens):
+        h.update(pid.encode("utf-8"))
+        h.update(b"\x1f")
+        h.update(" ".join(toks).encode("utf-8"))
+        h.update(b"\x1e")
+    return h.hexdigest()
+
+
+def guardar_tokens(ids: list[str], lista_tokens: list[list[str]], ruta: Path) -> None:
+    pd.DataFrame({"passage_id": ids, "tokens": lista_tokens}).to_parquet(ruta, index=False)
+
+
+def cargar_tokens(ruta: Path) -> tuple[list[str], list[list[str]]]:
+    df = pd.read_parquet(ruta)
+    return list(df["passage_id"]), [list(t) for t in df["tokens"]]
+
+
+# --------------------------------------------------------------------------- muestras para el reporte
+
+
+def contexto(cuerpo: str, raiz: str, ancho: int = 80) -> str:
+    """`ancho` caracteres del cuerpo alrededor de la primera palabra cuya raíz es `raiz`."""
+    texto = unicodedata.normalize("NFC", cuerpo)
+    for m in preproceso.RE_TOKEN.finditer(texto):
+        if preproceso.tokenizar(m.group(0)) == [raiz]:
+            centro = (m.start() + m.end()) // 2
+            ini = max(0, min(centro - ancho // 2, len(texto) - ancho))
+            return " ".join(texto[ini:ini + ancho].split())
+    return " ".join(texto[:ancho].split())
+
+
+def muestra_postings(ind: Indice, pasajes: pd.DataFrame, raiz: str, n: int = 15) -> dict:
+    """df, idf (BM25) y los `n` pasajes con mayor tf de un término; desempate (doc_id, posicion)."""
+    fila = ind.postings.get(raiz, {})
+    p = pasajes.iloc[list(fila)].assign(tf=list(fila.values()))
+    p = p.sort_values(["tf", "doc_id", "posicion"], ascending=[False, True, True]).head(n)
+    return {
+        "raiz": raiz, "df": ind.df.get(raiz, 0), "idf_bm25": ind.idf_bm25(raiz),
+        "cf": int(sum(fila.values())),
+        "top": [{"passage_id": r.passage_id, "tf": int(r.tf),
+                 "fecha": "" if pd.isna(r.fecha) else r.fecha.date().isoformat(),
+                 "contexto": contexto(r.texto[r.inicio_cuerpo:], raiz)}
+                for r in p.itertuples(index=False)],
+    }
+
+
+def vocabulario_top(ind: Indice, n: int = 200) -> pd.DataFrame:
+    """Los `n` términos con mayor df (desempate alfabético), con cf e idf de BM25."""
+    filas = [{"termino": t, "df": ind.df[t], "cf": int(sum(f.values())),
+              "df_pct": round(100 * ind.df[t] / ind.N, 3), "idf_bm25": round(ind.idf_bm25(t), 6)}
+             for t, f in ind.postings.items()]
+    return (pd.DataFrame(filas).sort_values(["df", "termino"], ascending=[False, True])
+            .head(n).reset_index(drop=True))

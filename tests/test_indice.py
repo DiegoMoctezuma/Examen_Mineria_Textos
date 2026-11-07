@@ -46,7 +46,7 @@ def test_conteos_conocidos_del_fixture():
 def test_nombres_solo_en_marcas_tienen_df_cero_en_ambos():
     ids, toks = _fixture()
     ind = indice.construir(ids, toks)
-    vec, X = indice.matriz_conteos(toks)
+    vec, _ = indice.matriz_conteos(toks)
     vocab = vec.vocabulary_
     for nombre in ("zoe", "robled", "alcoc", "jorg", "pregunt"):
         assert ind.df.get(nombre, 0) == 0
