@@ -9,7 +9,7 @@ preentrenado para español.
 
 ## Estado
 
-Hitos H0 (preparación) y H1 (datos) hechos salvo la aprobación de Q9 y Q10; H2 (recuperación) empezado: preprocesamiento listo, índice y ranking escritos y por probar. Ya
+Hitos H0 (preparación) y H1 (datos) hechos, con Q9 y Q10 aprobadas; H2 (recuperación) empezado: preprocesamiento listo, índice y ranking escritos y por probar. Ya
 corren `make setup`, `make contratos`, `make corpus`, `make consultas`,
 `make explorar` y `make test`. Siguen H2 (índice y rankings), H3 y H6 (juicios y
 gold, trabajo humano) y el resto hasta H9. Este README se reemplaza en H9 por el

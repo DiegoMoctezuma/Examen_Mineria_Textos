@@ -1,6 +1,6 @@
 # Candidatos para Q9 y Q10
 
-Señal calculada sobre `data/pasajes.parquet` (127 mil pasajes, cuerpo sin la marca de interlocutor, búsqueda sin acentos ni mayúsculas). **Esto no elige nada**: Daniel decide dos temas distintos entre sí y de Q1 a Q8, y redacta consulta, ventana y pregunta. La redacción final queda `[VALIDAR]`.
+Señal calculada sobre `data/pasajes.parquet` (127 mil pasajes, cuerpo sin la marca de interlocutor, búsqueda sin acentos ni mayúsculas). **Esto no elige nada**: el alumno decide dos temas distintos entre sí y de Q1 a Q8, y redacta consulta, ventana y pregunta. La redacción final queda `[VALIDAR]`.
 
 ## Consultas obligatorias (no se tocan)
 
