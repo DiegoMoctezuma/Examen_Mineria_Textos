@@ -1,0 +1,11 @@
+query_id,interseccion_tfidf_vs_bm25_con_filtro,identico_tfidf_vs_bm25_con_filtro,interseccion_tfidf_vs_bm25_sin_filtro,identico_tfidf_vs_bm25_sin_filtro,interseccion_tfidf_con_vs_sin_filtro,identico_tfidf_con_vs_sin_filtro,interseccion_bm25_con_vs_sin_filtro,identico_bm25_con_vs_sin_filtro,discursos_tfidf_con_filtro,discursos_bm25_con_filtro,discursos_tfidf_sin_filtro,discursos_bm25_sin_filtro
+Q1,2,0,2,0,10,1,9,0,10,9,10,9
+Q2,5,0,4,0,8,0,8,0,8,9,9,10
+Q3,5,0,4,0,8,0,7,0,10,10,10,9
+Q4,6,0,5,0,9,0,10,1,8,7,8,7
+Q5,6,0,6,0,10,1,10,1,10,10,10,10
+Q6,4,0,7,0,1,0,0,0,10,9,9,8
+Q7,8,0,8,0,10,1,10,1,10,10,10,10
+Q8,6,0,6,0,10,1,10,1,10,10,10,10
+Q9,4,0,2,0,8,0,7,0,9,10,9,10
+Q10,5,0,5,0,10,1,10,1,10,9,10,9

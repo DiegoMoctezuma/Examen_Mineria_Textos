@@ -1,0 +1,77 @@
+{
+  "filas": 400,
+  "consultas": 10,
+  "excepciones_a_10_filas": [],
+  "filas_sin_senal_lexica": [],
+  "consultas_con_ranking_identico_tfidf_bm25_con_filtro": [],
+  "todas_identicas": false,
+  "sha256_ranking_csv": "37ffa3e4367faf8d48f069afd3570ea44a44b4016a33cd1e9da8d92a88ec7f10",
+  "tokens_por_consulta": {
+    "Q1": [
+      "avanc",
+      "construccion",
+      "tren",
+      "may"
+    ],
+    "Q2": [
+      "lleg",
+      "aplic",
+      "vacun",
+      "covid-19"
+    ],
+    "Q3": [
+      "refin",
+      "dos",
+      "boc",
+      "tabasc"
+    ],
+    "Q4": [
+      "aeropuert",
+      "felip",
+      "angel",
+      "sant",
+      "luc"
+    ],
+    "Q5": [
+      "program",
+      "sembr",
+      "vid",
+      "apoy",
+      "campesin"
+    ],
+    "Q6": [
+      "combat",
+      "huachicol",
+      "rob",
+      "combust"
+    ],
+    "Q7": [
+      "pension",
+      "universal",
+      "adult",
+      "mayor"
+    ],
+    "Q8": [
+      "aument",
+      "salari",
+      "minim",
+      "acuerd",
+      "empresari"
+    ],
+    "Q9": [
+      "oper",
+      "apertur",
+      "sucursal",
+      "banc",
+      "bienest"
+    ],
+    "Q10": [
+      "construccion",
+      "oper",
+      "tren",
+      "interocean",
+      "istmo",
+      "tehuantepec"
+    ]
+  }
+}

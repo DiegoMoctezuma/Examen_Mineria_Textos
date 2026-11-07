@@ -9,9 +9,9 @@ preentrenado para español.
 
 ## Estado
 
-Hitos H0 (preparación) y H1 (datos) hechos, con Q9 y Q10 aprobadas; H2 (recuperación) empezado: preprocesamiento listo, índice y ranking escritos y por probar. Ya
+Hitos H0 (preparación) y H1 (datos) hechos, con Q9 y Q10 aprobadas; H2 (recuperación) con índice y rankings listos (`ranking.csv`); falta el pool para los juicios. Ya
 corren `make setup`, `make contratos`, `make corpus`, `make consultas`,
-`make explorar` y `make test`. Siguen H2 (índice y rankings), H3 y H6 (juicios y
+`make explorar`, `make indice`, `make ranking` y `make test`. Siguen H2 (índice y rankings), H3 y H6 (juicios y
 gold, trabajo humano) y el resto hasta H9. Este README se reemplaza en H9 por el
 README de 10 secciones que exige el enunciado (instalación desde cero,
 reproducción de resultados, flujo completo, uso de IA).
@@ -23,6 +23,8 @@ make setup      # entorno, torch CPU, Chrome para kaleido
 make contratos  # pruebas de contrato del kit (kit/ no se modifica)
 make corpus     # descarga el corpus, limpia y segmenta: data/pasajes.parquet
 make consultas  # data/consultas.csv = kit + Q9 + Q10
+make indice     # tokens, índice invertido y TF-IDF en data/
+make ranking    # ranking.csv: TF-IDF y BM25, con y sin filtro de fecha
 make test       # pruebas rápidas, sin red
 ```
 

@@ -1,6 +1,7 @@
 """T04 a T06 · TF-IDF y BM25 contra sus fórmulas, `rank_bm25`, filtro de fecha y top-k (PRD §6.4)."""
 from __future__ import annotations
 
+import itertools
 import math
 import subprocess
 import sys
@@ -10,7 +11,7 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from mtx import indice, ranking
+from mtx import config, indice, ranking
 from mtx.preproceso import tokenizar, tokenizar_pasaje
 
 # --------------------------------------------------------------------------- utilidades
@@ -78,7 +79,7 @@ def _corpus_aleatorio(n=200, vocab=60, semilla=7):
 def test_bm25_valor_calculado_a_mano():
     """Caso mínimo a mano: N=2, avgdl=2, q=["a"]. Pasaje 0 = ["a","b"], pasaje 1 = ["b","b"].
     idf(a) = ln(1 + 1.5/1.5) = ln 2; score_0 = ln2 * 1*2.5 / (1 + 1.5*(0.25 + 0.75*1)) = ln2."""
-    ind, bm, _ = _modelos([["a", "b"], ["b", "b"]])
+    _, bm, _ = _modelos([["a", "b"], ["b", "b"]])
     s = bm.puntajes(["a"])
     assert s[0] == pytest.approx(math.log(2), abs=1e-12)
     assert s[1] == 0.0
@@ -158,7 +159,7 @@ def test_sin_subclase_bm25okapi_aplana_el_idf_de_los_terminos_frecuentes():
     assert len(propios) == len({ind.df[t] for t in frecuentes})  # el propio distingue por df
     por_df = sorted(ind.postings, key=lambda t: ind.df[t])
     idf = [ind.idf_bm25(t) for t in por_df]
-    assert all(a >= b for a, b in zip(idf, idf[1:]))
+    assert all(a >= b for a, b in itertools.pairwise(idf))
     raros = [t for t in ind.postings if ind.df[t] <= ind.N / 10]
     assert raros
     assert max(abs(ind.idf_bm25(t) - ref.idf[t]) / ind.idf_bm25(t) for t in raros) < 0.05
@@ -362,3 +363,81 @@ def test_variantes_oficiales_formato():
 
 def test_tokenizar_consulta_y_pasaje_usan_la_misma_cadena():
     assert tokenizar("Refinería de Dos Bocas") == tokenizar_pasaje("X: Refinería de Dos Bocas", 3)
+
+
+# --------------------------------------------------------------------------- formato de ranking.csv
+
+
+def _ranking_valido():
+    b = _buscador(FILAS)
+    cons = pd.DataFrame([{"query_id": "Q1", "consulta": "refinería Dos Bocas",
+                          "desde": "2020-01-01", "hasta": "2021-12-31"}])
+    r = ranking.formatear_ranking(ranking.variantes_oficiales(b, cons))
+    return r.astype(str), cons
+
+
+def test_validar_ranking_acepta_el_formato_y_detecta_errores():
+    r, cons = _ranking_valido()
+    assert ranking.validar_ranking(r, cons) == []
+    assert list(r.columns) == ranking.COLUMNAS_RANKING
+    assert "5_0" not in set(r.loc[r.variante == "con_filtro", "passage_id"])
+    assert (r.loc[r.passage_id == "5_0", "fecha"] == "").all()  # NaT → campo vacío
+    malos = {
+        "Columnas": r.drop(columns="posicion"),
+        "vacío": r.iloc[:0],
+        "Clave repetida": pd.concat([r, r.iloc[:1]]),
+        "fuera de su ventana": r.assign(fecha=r.fecha.where(r.variante != "con_filtro",
+                                                            "2030-01-01")),
+        "6 decimales": r.assign(puntaje="1.5"),
+        "no corresponde": r.assign(doc_id="999"),
+    }
+    for mensaje, df in malos.items():
+        assert any(mensaje in p for p in ranking.validar_ranking(df, cons)), mensaje
+    otra = pd.concat([cons, cons.assign(query_id="Q2")])
+    assert any("sin ranking" in p for p in ranking.validar_ranking(r, otra))
+
+
+# --------------------------------------------------------------------------- sobre la salida real
+
+RANKING_RAIZ = config.RAIZ / "ranking.csv"
+DETALLE = config.DIR_SALIDA / "03_ranking_detalle.csv"
+
+
+@pytest.mark.skipif(not RANKING_RAIZ.exists(), reason="requiere make ranking")
+def test_ranking_real_valido_y_evaluable_por_el_kit(tmp_path):
+    from mtx import adaptadores_kit, consultas
+    r = pd.read_csv(RANKING_RAIZ, dtype=str, keep_default_na=False)
+    assert ranking.validar_ranking(r, consultas.cargar()) == []
+    assert len(r) == 400
+    # Juicios sintéticos (no son juicios humanos): solo prueban que el evaluador no revienta.
+    sint = r.drop_duplicates("passage_id").groupby("query_id").head(3)
+    juicios = sint.assign(relevante=[i % 2 for i in range(len(sint))])[
+        ["query_id", "doc_id", "passage_id", "relevante"]]
+    ruta_j = tmp_path / "juicios_sinteticos.csv"
+    juicios.to_csv(ruta_j, index=False)
+    salida = adaptadores_kit.ejecutar_evaluador("ir", ruta_j, RANKING_RAIZ, tmp_path / "eval")
+    res = pd.read_csv(salida)
+    assert len(res) > 0
+
+
+@pytest.mark.lento
+@pytest.mark.skipif(not DETALLE.exists(), reason="requiere make ranking")
+def test_criterios_de_contenido_del_top10_bm25_con_filtro():
+    """PRD §6.4: Q3 con "refinería" o "Pemex", Q1 con "Tren Maya", Q6 con "huachicol"."""
+    d = pd.read_csv(DETALLE, dtype=str, keep_default_na=False)
+    p = pd.read_parquet(config.PASAJES_PARQUET,
+                        columns=["passage_id", "texto", "inicio_cuerpo"]).set_index("passage_id")
+    for qid, patrones in {"Q3": ["refinería", "pemex"], "Q1": ["tren maya"],
+                          "Q6": ["huachicol"]}.items():
+        ids = d.loc[(d.query_id == qid) & (d.modelo == "bm25_con_filtro"), "passage_id"]
+        cuerpos = [p.at[i, "texto"][p.at[i, "inicio_cuerpo"]:].lower() for i in ids]
+        assert any(x in c for c in cuerpos for x in patrones), qid
+
+
+@pytest.mark.skipif(not config.INDICE_META.exists(), reason="requiere make indice")
+def test_buscar_carga_desde_data_y_respeta_el_filtro():
+    res, est = ranking.buscar("refinería de Dos Bocas", "2019-01-01", "2019-12-31")
+    assert len(res) == 10 and est["tokens"]
+    assert res["fecha"].between(pd.Timestamp("2019-01-01"), pd.Timestamp("2019-12-31")).all()
+    vacia, est = ranking.buscar("de la")
+    assert vacia.empty and est["avisos"]

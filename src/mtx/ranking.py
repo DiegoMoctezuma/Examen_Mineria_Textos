@@ -193,18 +193,157 @@ class Buscador:
         })
 
 
-def variantes_oficiales(buscador: Buscador, consultas: pd.DataFrame) -> pd.DataFrame:
+def variantes_oficiales(buscador: Buscador, consultas: pd.DataFrame,
+                        estados: dict | None = None) -> pd.DataFrame:
     """Las cuatro variantes por consulta (`modelo` + `variante`) en el formato de `ranking.csv`
-    más `sin_senal_lexica`."""
+    más `sin_senal_lexica`. Si se da `estados`, guarda ahí el estado de cada búsqueda con clave
+    `(query_id, modelo)`."""
     filas = []
     for q in consultas.itertuples(index=False):
         for modelo in MODELOS:
             for variante in ("con_filtro", "sin_filtro"):
                 desde, hasta = (q.desde, q.hasta) if variante == "con_filtro" else (None, None)
-                res, _ = buscador.buscar(q.consulta, desde, hasta, modelo, K)
+                res, est = buscador.buscar(q.consulta, desde, hasta, modelo, K)
+                if estados is not None:
+                    estados[(q.query_id, f"{modelo}_{variante}")] = est
                 res = res.assign(query_id=q.query_id, modelo=f"{modelo}_{variante}",
                                  variante=variante)
                 filas.append(res)
     cols = ["query_id", "modelo", "variante", "rango", "passage_id", "doc_id", "fecha",
             "posicion", "puntaje", "sin_senal_lexica"]
     return pd.concat(filas, ignore_index=True)[cols]
+
+
+# --------------------------------------------------------------------------- ranking.csv (PRD §3.5)
+
+COLUMNAS_RANKING = ["query_id", "modelo", "variante", "rango", "passage_id", "doc_id", "fecha",
+                    "posicion", "puntaje"]
+MODELOS_OFICIALES = ("tfidf_con_filtro", "bm25_con_filtro", "tfidf_sin_filtro", "bm25_sin_filtro")
+
+
+def formatear_ranking(v: pd.DataFrame) -> pd.DataFrame:
+    """Las 9 columnas de `ranking.csv`: fecha ISO o vacía si NaT y puntaje con 6 decimales."""
+    out = v[COLUMNAS_RANKING].copy()
+    out["fecha"] = pd.to_datetime(out["fecha"]).dt.strftime("%Y-%m-%d").fillna("")
+    out["puntaje"] = out["puntaje"].map(lambda x: f"{x:.6f}")
+    return out
+
+
+def validar_ranking(r: pd.DataFrame, consultas: pd.DataFrame) -> list[str]:
+    """Problemas de formato de `ranking.csv` (lista vacía si es válido). Lee el CSV como texto."""
+    problemas = []
+    if list(r.columns) != COLUMNAS_RANKING:
+        return [f"Columnas {list(r.columns)}; se esperaban {COLUMNAS_RANKING}"]
+    if r.empty:
+        return ["Ranking vacío: el evaluador del kit revienta con un ranking sin filas"]
+    if not set(r["modelo"]) <= set(MODELOS_OFICIALES):
+        problemas.append(f"Modelos desconocidos: {sorted(set(r['modelo']) - set(MODELOS_OFICIALES))}")
+    if (r["variante"] != r["modelo"].str.split("_", n=1).str[1]).any():
+        problemas.append("`variante` no coincide con el sufijo de `modelo`")
+    for clave in (["query_id", "modelo", "rango"], ["query_id", "modelo", "passage_id"]):
+        if r.duplicated(clave).any():
+            problemas.append(f"Clave repetida: {clave}")
+    faltan = set(consultas["query_id"]) - set(r["query_id"])
+    if faltan:
+        problemas.append(f"Consultas sin ranking: {sorted(faltan)}")
+    pid = r["passage_id"].str.split("_", expand=True)
+    if (pid[0] != r["doc_id"].astype(str)).any() or (pid[1] != r["posicion"].astype(str)).any():
+        problemas.append("`passage_id` no corresponde a `doc_id`_`posicion`")
+    for (qid, modelo), g in r.groupby(["query_id", "modelo"]):
+        if list(g["rango"].astype(int)) != list(range(1, len(g) + 1)):
+            problemas.append(f"Rangos no consecutivos en {qid} {modelo}")
+            break
+    fechas = r["fecha"].fillna("")
+    if not fechas.str.fullmatch(r"(\d{4}-\d{2}-\d{2})?").all():
+        problemas.append("Fechas fuera de formato AAAA-MM-DD")
+    if not r["puntaje"].astype(str).str.fullmatch(r"-?\d+\.\d{6}").all():
+        problemas.append("Puntajes sin 6 decimales")
+    ventanas = consultas.set_index("query_id")
+    con = r[(r["variante"] == "con_filtro") & r["query_id"].isin(ventanas.index)]
+    if len(con):
+        d = con["query_id"].map(ventanas["desde"])
+        h = con["query_id"].map(ventanas["hasta"])
+        fuera = (con["fecha"] == "") | (con["fecha"] < d) | (con["fecha"] > h)
+        if fuera.any():
+            problemas.append(f"{int(fuera.sum())} filas con filtro fuera de su ventana")
+    return problemas
+
+
+# --------------------------------------------------------------------------- comparaciones
+
+
+def solape_modelos(v: pd.DataFrame) -> pd.DataFrame:
+    """Por consulta: intersección de top-10 entre modelos y entre variantes; discursos distintos."""
+    filas = []
+    for qid, g in v.groupby("query_id", sort=False):
+        top = {m: list(g.loc[g["modelo"] == m, "passage_id"]) for m in MODELOS_OFICIALES}
+        docs = {m: g.loc[g["modelo"] == m, "doc_id"].nunique() for m in MODELOS_OFICIALES}
+        fila = {"query_id": qid}
+        for a, b, nombre in [("tfidf_con_filtro", "bm25_con_filtro", "tfidf_vs_bm25_con_filtro"),
+                             ("tfidf_sin_filtro", "bm25_sin_filtro", "tfidf_vs_bm25_sin_filtro"),
+                             ("tfidf_con_filtro", "tfidf_sin_filtro", "tfidf_con_vs_sin_filtro"),
+                             ("bm25_con_filtro", "bm25_sin_filtro", "bm25_con_vs_sin_filtro")]:
+            fila[f"interseccion_{nombre}"] = len(set(top[a]) & set(top[b]))
+            fila[f"identico_{nombre}"] = int(top[a] == top[b])
+        fila |= {f"discursos_{m}": docs[m] for m in MODELOS_OFICIALES}
+        filas.append(fila)
+    return pd.DataFrame(filas)
+
+
+def excluidos_por_filtro(v: pd.DataFrame, consultas: pd.DataFrame,
+                         estados: dict[tuple[str, str], dict]) -> pd.DataFrame:
+    """Por consulta y modelo: pasajes que excluye la ventana y cuántos del top-10 sin filtro caen
+    fuera de ella o tienen fecha desconocida, con sus fechas."""
+    filas = []
+    for q in consultas.itertuples(index=False):
+        for modelo in MODELOS:
+            sin = v[(v["query_id"] == q.query_id) & (v["modelo"] == f"{modelo}_sin_filtro")]
+            f = sin["fecha"].to_numpy(dtype="datetime64[ns]")
+            mask_ok = mascara_fecha(f, q.desde, q.hasta)
+            nat = np.isnat(f)
+            est = estados[(q.query_id, f"{modelo}_con_filtro")]
+            fuera = sin.loc[~mask_ok & ~nat, "fecha"]
+            filas.append({
+                "query_id": q.query_id, "modelo": modelo, "desde": q.desde, "hasta": q.hasta,
+                "pasajes_elegibles": est["elegibles"],
+                "pasajes_excluidos_por_filtro": est["excluidos_por_filtro"],
+                "pasajes_excluidos_fecha_desconocida": est["excluidos_fecha_desconocida"],
+                "top10_sin_filtro_fuera_de_ventana": int((~mask_ok & ~nat).sum()),
+                "top10_sin_filtro_fecha_desconocida": int(nat.sum()),
+                "fechas_fuera_de_ventana": ";".join(
+                    pd.to_datetime(fuera).dt.strftime("%Y-%m-%d")),
+            })
+    return pd.DataFrame(filas)
+
+
+# --------------------------------------------------------------------------- carga para demo y app
+
+
+def cargar_buscador(verificar_pasajes: bool = False) -> Buscador:
+    """Buscador desde `data/` (lo que deja `make indice`). Exige que el índice corresponda a
+    `data/tokens.parquet`; con `verificar_pasajes`, también a `data/pasajes.parquet`."""
+    import json
+
+    from . import config, corpus
+    from . import indice as _indice
+    ids, toks = _indice.cargar_tokens(config.TOKENS_PARQUET)
+    ind = _indice.cargar(config.INDICE_PKL, config.INDICE_META, _indice.hash_tokens(ids, toks))
+    pasajes = pd.read_parquet(config.PASAJES_PARQUET)
+    if verificar_pasajes:
+        meta = json.loads(config.INDICE_META.read_text(encoding="utf-8"))
+        if meta.get("sha256_pasajes") != corpus.hash_pasajes(pasajes):
+            raise ValueError("data/pasajes.parquet cambió después de construir el índice: "
+                             "correr `make indice`")
+    return Buscador(ind, cargar_tfidf(config.TFIDF_PKL, config.TFIDF_NPZ), pasajes)
+
+
+_BUSCADOR: Buscador | None = None
+
+
+def buscar(consulta: str, desde=None, hasta=None, modelo: str = "bm25",
+           k: int = K) -> tuple[pd.DataFrame, dict]:
+    """Búsqueda libre para la demo y la app (PRD §6.4). Carga el buscador una sola vez."""
+    global _BUSCADOR
+    if _BUSCADOR is None:
+        _BUSCADOR = cargar_buscador()
+    return _BUSCADOR.buscar(consulta, desde, hasta, modelo, k)
