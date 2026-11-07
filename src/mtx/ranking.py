@@ -107,14 +107,15 @@ def mascara_fecha(fechas: np.ndarray, desde, hasta) -> np.ndarray:
     """Elegibles: `desde <= fecha <= hasta` (inclusivo). Sin límites: todos. NaT: fuera si hay
     algún límite."""
     d, h = validar_ventana(desde, hasta)
-    f = np.asarray(fechas, dtype="datetime64[ns]")
+    # Se compara por día: una fecha con hora dentro del último día sigue siendo elegible.
+    f = np.asarray(fechas, dtype="datetime64[ns]").astype("datetime64[D]")
     if d is None and h is None:
         return np.ones(len(f), dtype=bool)
     ok = ~np.isnat(f)
     if d is not None:
-        ok &= f >= np.datetime64(d, "ns")
+        ok &= f >= np.datetime64(d.date(), "D")
     if h is not None:
-        ok &= f <= np.datetime64(h, "ns")
+        ok &= f <= np.datetime64(h.date(), "D")
     return ok
 
 
