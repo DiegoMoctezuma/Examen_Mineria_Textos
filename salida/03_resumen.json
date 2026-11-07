@@ -6,6 +6,7 @@
   "consultas_con_ranking_identico_tfidf_bm25_con_filtro": [],
   "todas_identicas": false,
   "sha256_ranking_csv": "37ffa3e4367faf8d48f069afd3570ea44a44b4016a33cd1e9da8d92a88ec7f10",
+  "sha256_indice_meta": "8f9a83bb4340101623f8ed35215d4613def37273237450db0d2c107b9b3ab609",
   "tokens_por_consulta": {
     "Q1": [
       "avanc",

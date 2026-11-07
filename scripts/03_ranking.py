@@ -61,6 +61,7 @@ def main() -> None:
         "consultas_con_ranking_identico_tfidf_bm25_con_filtro": identicos,
         "todas_identicas": len(identicos) == len(cons),
         "sha256_ranking_csv": adaptadores_kit.sha256_archivo(ruta),
+        "sha256_indice_meta": adaptadores_kit.sha256_archivo(config.INDICE_META),
         "tokens_por_consulta": {q.query_id: estados[(q.query_id, "bm25_con_filtro")]["tokens"]
                                 for q in cons.itertuples(index=False)},
     }

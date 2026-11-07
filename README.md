@@ -11,7 +11,7 @@ preentrenado para español.
 
 Hitos H0 (preparación) y H1 (datos) hechos, con Q9 y Q10 aprobadas; H2 (recuperación) cerrado: `ranking.csv` y pool de 176 pares para los juicios. Ya
 corren `make setup`, `make contratos`, `make corpus`, `make consultas`,
-`make explorar`, `make indice`, `make ranking`, `make pool` y `make test`. Siguen H3 y H6 (juicios y
+`make explorar`, `make indice`, `make ranking`, `make pool`, `make app` y `make test`. Siguen H3 y H6 (juicios y
 gold, trabajo humano) y el resto hasta H9. Este README se reemplaza en H9 por el
 README de 10 secciones que exige el enunciado (instalación desde cero,
 reproducción de resultados, flujo completo, uso de IA).
@@ -26,6 +26,8 @@ make consultas  # data/consultas.csv = kit + Q9 + Q10
 make indice     # tokens, índice invertido y TF-IDF en data/
 make ranking    # ranking.csv: TF-IDF y BM25, con y sin filtro de fecha
 make pool       # salida/04_pool.csv: pasajes a juzgar (unión de los 4 top-10)
+make app        # app local de anotación (Estado y Juicios) en http://localhost:8501
+make app-cli    # juicios por terminal, misma persistencia
 make test       # pruebas rápidas, sin red
 ```
 

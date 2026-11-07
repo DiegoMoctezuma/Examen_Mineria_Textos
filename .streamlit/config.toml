@@ -1,0 +1,7 @@
+# App local de anotación (PRD §7, D19): solo en esta máquina y sin telemetría.
+[server]
+address = "localhost"
+
+[browser]
+gatherUsageStats = false
+serverAddress = "localhost"
