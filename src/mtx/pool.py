@@ -170,6 +170,7 @@ def validar_juicios(ruta_juicios: Path, pool_csv: pd.DataFrame,
                     pasajes: pd.DataFrame | None = None) -> Validacion:
     """Comprueba los juicios contra el pool (solo lectura; PRD §6.5, §13.2).
 
+    `relevante` vacío significa "omitido por ahora" y cuenta como pendiente de cobertura.
     Errores (impiden exportar): formato del archivo, columnas, valores fuera de {0, 1}, pares
     repetidos o fuera del pool, `doc_id` incoherente, cobertura incompleta y `texto_sha256` del
     pool distinto del texto actual (si se dan `pasajes`). Aviso: consulta sin relevantes.
@@ -193,12 +194,14 @@ def validar_juicios(ruta_juicios: Path, pool_csv: pd.DataFrame,
                          "(separador coma)")
         return v
     j = pd.read_csv(ruta, dtype=str, keep_default_na=False, encoding="utf-8-sig")
-    v.juzgados = len(j)
+    # `relevante` vacío = omitido por ahora (sin juzgar): cuenta como pendiente, nunca como 0.
+    pendientes = j[j["relevante"] == ""]
+    v.juzgados = int(j["relevante"].isin(["0", "1"]).sum())
 
-    malos = j[~j["relevante"].isin(["0", "1"])]
+    malos = j[~j["relevante"].isin(["0", "1", ""])]
     if len(malos):
-        v.errores.append(f"{len(malos)} juicios con `relevante` fuera de {{0, 1}} "
-                         f"(un pasaje omitido no lleva fila): {_pares(malos)}")
+        v.errores.append(f"{len(malos)} juicios con `relevante` fuera de {{0, 1}}: "
+                         f"{_pares(malos)}")
     rep = j[j.duplicated(["query_id", "passage_id"], keep=False)]
     if len(rep):
         v.errores.append(f"Pares (query_id, passage_id) con más de un juicio: {_pares(rep)}")
@@ -210,13 +213,15 @@ def validar_juicios(ruta_juicios: Path, pool_csv: pd.DataFrame,
     kp = set(zip(pool_csv["query_id"], pool_csv["passage_id"]))
     kj = set(zip(j["query_id"], j["passage_id"]))
     fuera = kj - kp
+    kj -= set(zip(pendientes["query_id"], pendientes["passage_id"]))
     if fuera:
         v.errores.append(f"{len(fuera)} juicios fuera del pool: {sorted(fuera)[:5]}")
     faltan = kp - kj
     if faltan:
         por_q = pd.Series([q for q, _ in faltan]).value_counts().sort_index()
         v.errores.append(f"Cobertura incompleta: faltan {len(faltan)} de {len(kp)} juicios ("
-                         + ", ".join(f"{q}: {n}" for q, n in por_q.items()) + ")")
+                         + ", ".join(f"{q}: {n}" for q, n in por_q.items())
+                         + f"); {len(pendientes)} de ellos omitidos por ahora")
 
     if pasajes is not None:
         actual = pasajes.set_index("passage_id")["texto"]

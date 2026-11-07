@@ -178,13 +178,23 @@ def test_cobertura_incompleta_es_error_y_no_se_exporta(tmp_path):
     (lambda f: f + [("Q1", "4", "4_0", 1)], "fuera del pool"),
     (lambda f: f + [f[0]], "más de un juicio"),
     (lambda f: [(f[0][0], f[0][1], f[0][2], 2)] + f[1:], "fuera de {0, 1}"),
-    (lambda f: [(f[0][0], f[0][1], f[0][2], "")] + f[1:], "fuera de {0, 1}"),
+    (lambda f: [(f[0][0], f[0][1], f[0][2], "x")] + f[1:], "fuera de {0, 1}"),
     (lambda f: [(f[0][0], "77", f[0][2], 1)] + f[1:], "doc_id"),
 ])
 def test_errores_de_contenido(tmp_path, cambio, mensaje):
     p = _pool()
     v = pool.validar_juicios(_juicios(tmp_path, cambio(_completos(p))), p)
     assert any(mensaje in e for e in v.errores), v.errores
+
+
+def test_omitido_es_pendiente_de_cobertura_no_cero(tmp_path):
+    p = _pool()
+    filas = _completos(p)
+    filas[0] = (*filas[0][:3], "")
+    v = pool.validar_juicios(_juicios(tmp_path, filas), p)
+    assert v.juzgados == len(p) - 1
+    assert not any("fuera de {0, 1}" in e for e in v.errores)
+    assert any("faltan 1" in e and "1 de ellos omitidos" in e for e in v.errores)
 
 
 def test_errores_de_formato(tmp_path):
