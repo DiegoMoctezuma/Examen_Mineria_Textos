@@ -267,6 +267,27 @@ def test_app_juicios_guarda_avanza_y_es_ciega(entorno):
 
 
 @requiere_pool
+def test_app_juicios_no_regresa_a_q1_tras_juzgar_en_otra_consulta(entorno):
+    """Regresión: la etiqueta del selector llevaba el contador "Qn · j/t". En el navegador, al
+    cambiar el contador tras un clic, Streamlit no hallaba la etiqueta enviada y volvía a Q1
+    (reproducido con navegador real). AppTest no reproduce ese envío, así que la causa se fija
+    exigiendo etiquetas estables: el ID de la consulta, sin contadores."""
+    from streamlit.testing.v1 import AppTest
+    at = AppTest.from_function(_app_juicios, default_timeout=60).run()
+    assert at.selectbox(key="consulta").options == [f"Q{i}" for i in range(1, 11)]
+    at.selectbox(key="consulta").select("Q2").run()
+    assert at.markdown[0].value.startswith('<p class="consulta">Q2:')
+    for accion in ("rel", "norel", "omitir"):
+        at.button(key=accion).click().run()
+        assert not at.exception
+        assert at.selectbox(key="consulta").value == "Q2"
+        assert '<p class="consulta">Q2:' in " ".join(m.value for m in at.markdown)
+    disco = pd.read_csv(entorno.juicios, dtype=str, keep_default_na=False)
+    assert set(disco["query_id"]) == {"Q2"}
+    assert list(disco["relevante"]) == ["1", "0", ""]
+
+
+@requiere_pool
 def test_cli_juicios(entorno):
     from rich.console import Console
 

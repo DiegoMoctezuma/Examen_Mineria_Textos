@@ -77,10 +77,15 @@ def _accion(items: pd.DataFrame, q: str, accion: str) -> None:
 def _barra_lateral(items, prog) -> str:
     ss = st.session_state
     st.sidebar.subheader("Consulta")
-    etiquetas = {r.query_id: f"{r.query_id} · {r.juzgados}/{r.total}"
-                 for r in prog.itertuples(index=False)}
-    q = st.sidebar.selectbox("Consulta", list(etiquetas), format_func=etiquetas.get,
-                             key="consulta", label_visibility="collapsed")
+    # Las opciones del selector deben ser estables entre recargas: Streamlit guarda la etiqueta
+    # mostrada y, si cambia (p. ej. un contador "5/18" → "6/18" tras un clic), no la encuentra y
+    # regresa a la primera opción. Por eso el progreso va aparte, no en la etiqueta.
+    q = st.sidebar.selectbox("Consulta", list(prog["query_id"]), key="consulta",
+                             label_visibility="collapsed")
+    st.sidebar.markdown(" ".join(
+        f'<span class="chip-q{" completa" if r.juzgados == r.total else ""}">'
+        f'{r.query_id} {r.juzgados}/{r.total}</span>' for r in prog.itertuples(index=False)),
+        unsafe_allow_html=True)
     fila = prog.set_index("query_id").loc[q]
     st.sidebar.progress(fila["juzgados"] / fila["total"],
                         text=f"Esta consulta: {fila['juzgados']} de {fila['total']}"
