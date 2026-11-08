@@ -1,0 +1,13 @@
+{
+  "modelo": "bm25_con_filtro",
+  "MAP": 0.484,
+  "alternativa": "tfidf_con_filtro",
+  "MAP_alternativa": 0.2949,
+  "diferencia": 0.1891,
+  "empate": false,
+  "diferencia_menor_0.01": false,
+  "regla": "D08: argmax del MAP oficial (resultados_ir.csv, filas PROMEDIO) entre tfidf_con_filtro y bm25_con_filtro; empate exacto → bm25_con_filtro; único para las diez consultas",
+  "sha256_ranking_csv": "37ffa3e4367faf8d48f069afd3570ea44a44b4016a33cd1e9da8d92a88ec7f10",
+  "sha256_juicios_relevancia_csv": "ef68db565626bde13a2dc0cc2db6f3f59f55e0c34d78325666d63f81e8c01c35",
+  "sha256_resultados_ir_csv": "edf51c066c7fac2d4f2c8638ac95b7a896f76f3ea5ba50932153d784905c0db4"
+}

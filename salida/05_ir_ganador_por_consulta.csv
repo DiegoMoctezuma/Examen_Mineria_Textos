@@ -1,0 +1,11 @@
+query_id,ganador_con_filtro,AP_tfidf_con_filtro,AP_bm25_con_filtro,diferencia_bm25_menos_tfidf,AP_tfidf_sin_filtro,AP_bm25_sin_filtro,tokens,n_tokens,longitud,n_terminos_df_alto,terminos_df_alto,tiene_sigla,tiene_nombre_propio,siglas_y_nombres,grupo_sinonimos,sinonimos_ausentes_en_consulta
+Q1,bm25_con_filtro,0.025,0.5428,0.5178,0.025,0.533,avanc construccion tren may,4,corta,1,may,0,1,Tren | Maya,,
+Q2,bm25_con_filtro,0.0667,0.3806,0.3139,0.0667,0.1571,lleg aplic vacun covid-19,4,corta,2,lleg aplic,1,0,COVID-19,,
+Q3,bm25_con_filtro,0.2381,0.2952,0.0571,0.3554,0.4675,refin dos boc tabasc,4,corta,1,dos,0,1,Dos | Bocas | Tabasco,dos_bocas,refinería Olmeca
+Q4,bm25_con_filtro,0.4417,0.8929,0.4512,0.4417,0.8929,aeropuert felip angel sant luc,5,larga,0,,0,1,Felipe | Ángeles | Santa | Lucía,aifa,AIFA
+Q5,bm25_con_filtro,0.2316,0.5636,0.332,0.2316,0.5636,program sembr vid apoy campesin,5,larga,3,program vid apoy,0,1,Sembrando | Vida,,
+Q6,tfidf_con_filtro,0.3039,0.2887,-0.0152,0.1403,0.1737,combat huachicol rob combust,4,corta,0,,0,0,,huachicol,
+Q7,bm25_con_filtro,0.3952,0.4508,0.0556,0.3952,0.4508,pension universal adult mayor,4,corta,1,mayor,0,0,,adultos_mayores,pensión del Bienestar
+Q8,tfidf_con_filtro,0.7044,0.4881,-0.2163,0.7044,0.4881,aument salari minim acuerd empresari,5,larga,1,acuerd,0,0,,,
+Q9,bm25_con_filtro,0.4391,0.453,0.0139,0.403,0.4734,oper apertur sucursal banc bienest,5,larga,2,oper bienest,0,1,Banco | Bienestar,,
+Q10,bm25_con_filtro,0.1032,0.4845,0.3813,0.1032,0.4845,construccion oper tren interocean istmo tehuantepec,6,larga,1,oper,0,1,Tren | Interoceánico | Istmo | Tehuantepec,,

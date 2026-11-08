@@ -1,0 +1,33 @@
+{
+  "ejecutado": "2026-11-08T17:50:26",
+  "comando_oficial": "python kit/evaluar.py ir juicios_relevancia.csv ranking.csv",
+  "comando_ventana": "python kit/evaluar.py ir salida/05_juicios_con_ventana.csv ranking.csv  (lee la columna `relevante` = relevante_ventana)",
+  "horizonte": "P@5, P@10 y AP sobre el top-10; AP divide entre los relevantes del pool de la consulta (kit); un pasaje no juzgado cuenta como no relevante",
+  "sha256": {
+    "kit/evaluar.py": "b70c33ca2cd1436a7d26186786e8ca6685e7d4e3bab8820d054bf6bea891a90f",
+    "juicios_relevancia.csv": "ef68db565626bde13a2dc0cc2db6f3f59f55e0c34d78325666d63f81e8c01c35",
+    "ranking.csv": "37ffa3e4367faf8d48f069afd3570ea44a44b4016a33cd1e9da8d92a88ec7f10",
+    "resultados_ir.csv": "edf51c066c7fac2d4f2c8638ac95b7a896f76f3ea5ba50932153d784905c0db4",
+    "salida/04_pool.csv": "e8e5095786c6db4532a919f4d829c600ff29213ae621231f75dbc2a4e7dc2e14",
+    "salida/05_juicios_con_ventana.csv": "7bc492750d3d1138e49507190024f3fea4583350e77337b4dcd8d4233ac1d65f",
+    "salida/05_resultados_ir_ventana.csv": "f764e852a20f45dc5e2b5d2488d227ba35b00bde86a828daf1a2332bded1e01a"
+  },
+  "juicios": {
+    "pares": 176,
+    "relevantes": 86
+  },
+  "map_oficial": {
+    "bm25_con_filtro": 0.484,
+    "bm25_sin_filtro": 0.4685,
+    "tfidf_con_filtro": 0.2949,
+    "tfidf_sin_filtro": 0.2866
+  },
+  "map_ventana_complementaria": {
+    "bm25_con_filtro": 0.5232,
+    "bm25_sin_filtro": 0.4179,
+    "tfidf_con_filtro": 0.3322,
+    "tfidf_sin_filtro": 0.2632
+  },
+  "mejor_modelo": "bm25_con_filtro",
+  "avisos": []
+}
