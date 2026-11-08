@@ -288,6 +288,34 @@ def test_app_juicios_no_regresa_a_q1_tras_juzgar_en_otra_consulta(entorno):
 
 
 @requiere_pool
+def test_app_juicios_permite_recorrer_y_revisar_todos_los_pasajes(entorno):
+    """Siguiente avanza sin guardar; la lista muestra todos los pasajes con su juicio; el salto
+    por número lleva a cualquiera; rejuzgar en una consulta completa avanza en orden."""
+    from streamlit.testing.v1 import AppTest
+    at = AppTest.from_function(_app_juicios, default_timeout=60).run()
+    n = int(at.number_input(key="ir_Q1").max)
+    texto = lambda: " ".join(m.value for m in at.markdown)
+    at.button(key="siguiente").click().run()
+    assert f"Pasaje 2 de {n}" in texto()
+    assert not entorno.juicios.exists()
+    tabla = at.dataframe[0].value
+    assert len(tabla) == n and set(tabla["Tu juicio"]) == {"Sin juzgar"}
+    for oculto in ("tfidf", "bm25", "variante", "rango", "puntaje"):
+        assert not any(oculto in c.lower() for c in tabla.columns)
+    at.number_input(key="ir_Q1").set_value(n).run()
+    assert f"Pasaje {n} de {n}" in texto() and at.button(key="siguiente").disabled
+    at.number_input(key="ir_Q1").set_value(1).run()
+    for _ in range(n):  # juzga toda Q1 en orden
+        at.button(key="norel").click().run()
+    assert any("Q1 completa" in s.value for s in at.success)
+    at.number_input(key="ir_Q1").set_value(3).run()
+    at.button(key="rel").click().run()
+    assert f"Pasaje 4 de {n}" in texto()
+    assert at.dataframe[0].value["Tu juicio"].tolist()[2] == "Relevante"
+    assert at.selectbox(key="consulta").value == "Q1"
+
+
+@requiere_pool
 def test_cli_juicios(entorno):
     from rich.console import Console
 

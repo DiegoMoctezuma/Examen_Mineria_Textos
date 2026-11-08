@@ -1,7 +1,8 @@
 """Pestaña Juicios (PRD §6.5): ciega al modelo, autoguardado atómico tras cada clic.
 
-Botones: Relevante (1), No relevante (0), Omitir por ahora y Anterior, con atajos de teclado
-`1`, `0`, `O` y `←`. "Omitido" se guarda con `relevante` vacío y es distinto de 0. No se muestran
+Botones: Relevante (1), No relevante (0), Omitir por ahora, Anterior y Siguiente, con atajos de
+teclado `1`, `0`, `O`, `←` y `→`. Debajo, la lista de todos los pasajes de la consulta con el juicio
+de cada uno y un salto por número, para revisar lo ya juzgado. "Omitido" se guarda con `relevante` vacío y es distinto de 0. No se muestran
 puntajes, rangos, variantes ni qué modelo recuperó el pasaje, y nada viene preseleccionado.
 """
 from __future__ import annotations
@@ -57,6 +58,9 @@ def _accion(items: pd.DataFrame, q: str, accion: str) -> None:
     if accion == "anterior":
         ss.pos[q] = max(0, i - 1)
         return
+    if accion == "siguiente":
+        ss.pos[q] = min(i + 1, len(g) - 1)
+        return
     if accion == "omitir":
         if C.valor_actual(ss.juicios, q, pid) in ("0", "1"):
             ss.pos[q] = min(i + 1, len(g) - 1)  # ya juzgado: solo avanza, no borra el juicio
@@ -66,12 +70,43 @@ def _accion(items: pd.DataFrame, q: str, accion: str) -> None:
     elif not _guardar(items, q, pid, accion):
         return
     sig = C.siguiente_pendiente(g, ss.juicios, i)
-    if sig is None:
+    if sig is None:  # consulta completa (también al revisar): pasa al siguiente en orden
         ss.mensaje = ("exito", f"{q} completa: todos sus pasajes tienen juicio.")
+        ss.pos[q] = min(i + 1, len(g) - 1)
     elif accion == "omitir" and sig == i:
         ss.mensaje = ("info", "Es el único pendiente de esta consulta.")
     else:
         ss.pos[q] = sig
+
+
+def _ir_a(q: str) -> None:
+    """Callback del salto por número: el campo cuenta desde 1, la posición desde 0."""
+    ss = st.session_state
+    ss.pos[q] = int(ss[f"ir_{q}"]) - 1
+
+
+def _lista_pasajes(g: pd.DataFrame, q: str, i: int) -> None:
+    """Todos los pasajes de la consulta en el orden de presentación, con el juicio actual. Ciega
+    al modelo: sin puntajes, rangos ni variantes."""
+    ss = st.session_state
+    with st.expander(f"Todos los pasajes de {q} ({len(g)}): revisar o ir a uno"):
+        tabla = pd.DataFrame({
+            "#": range(1, len(g) + 1),
+            "Tu juicio": [C.ETIQUETAS[C.valor_actual(ss.juicios, q, pid)]
+                          for pid in g["passage_id"]],
+            "doc_id": g["doc_id"].astype(str),
+            "Inicio del pasaje": [t[int(c):int(c) + 140].strip() + "…"
+                                  for t, c in zip(g["texto"], g["inicio_cuerpo"])],
+        })
+        st.dataframe(tabla.style.apply(
+            lambda fila: ["font-weight: 700"] * len(fila) if fila["#"] == i + 1
+            else [""] * len(fila), axis=1), hide_index=True, width="stretch",
+            height=35 * (len(g) + 1) + 3)  # todas las filas visibles, sin desplazarse
+        # El campo refleja siempre el pasaje actual; escribir un número (Enter) o usar +/- salta.
+        ss[f"ir_{q}"] = i + 1
+        c1, _ = st.columns([1, 3])
+        c1.number_input("Ir al pasaje número (Enter)", min_value=1, max_value=len(g), step=1,
+                        key=f"ir_{q}", on_change=_ir_a, args=(q,))
 
 
 def _barra_lateral(items, prog) -> str:
@@ -165,7 +200,7 @@ def mostrar() -> None:
     st.write("")
 
     off = bool(bloqueos)
-    b1, b2, b3, b4, _ = st.columns([1.3, 1.3, 1.3, 1, 2])
+    b1, b2, b3, b4, b5, _ = st.columns([1.3, 1.3, 1.3, 1, 1, 1])
     b1.button("Relevante (1)", key="rel", type="primary", shortcut="1", disabled=off,
               on_click=_accion, args=(items, q, "1"), width="stretch")
     b2.button("No relevante (0)", key="norel", shortcut="0", disabled=off,
@@ -174,3 +209,7 @@ def mostrar() -> None:
               on_click=_accion, args=(items, q, "omitir"), width="stretch")
     b4.button("Anterior", key="anterior", shortcut="left", disabled=i == 0,
               on_click=_accion, args=(items, q, "anterior"), width="stretch")
+    b5.button("Siguiente", key="siguiente", shortcut="right", disabled=i == len(g) - 1,
+              on_click=_accion, args=(items, q, "siguiente"), width="stretch")
+    st.write("")
+    _lista_pasajes(g, q, i)
