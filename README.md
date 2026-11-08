@@ -28,6 +28,8 @@ make ranking    # ranking.csv: TF-IDF y BM25, con y sin filtro de fecha
 make pool       # salida/04_pool.csv: pasajes a juzgar (unión de los 4 top-10)
 make app        # app local de anotación (Estado y Juicios) en http://localhost:8501
 make app-cli    # juicios por terminal, misma persistencia
+make evaluar-ir # tras los juicios: resultados_ir.csv, vista con ventana, mejor modelo
+make validar    # 15 condiciones de entrega (`scripts/99_validar.py --parcial` antes de H9)
 make test       # pruebas rápidas, sin red
 ```
 

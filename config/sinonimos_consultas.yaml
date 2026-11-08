@@ -1,0 +1,18 @@
+# Sinónimos conocidos de las consultas (PRD §6.6 punto 3). Solo sirven para etiquetar cada
+# consulta en salida/05_ir_ganador_por_consulta.csv; las consultas oficiales NO se expanden.
+# Una forma cuenta como presente en la consulta si todos sus stems aparecen entre los tokens de
+# la consulta (mismo preprocesamiento del índice).
+grupos:
+  huachicol:
+    - huachicol
+    - robo de combustible
+  adultos_mayores:
+    - adultos mayores
+    - pensión del Bienestar
+  aifa:
+    - AIFA
+    - Santa Lucía
+    - Felipe Ángeles
+  dos_bocas:
+    - Dos Bocas
+    - refinería Olmeca

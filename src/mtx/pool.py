@@ -218,7 +218,8 @@ def validar_juicios(ruta_juicios: Path, pool_csv: pd.DataFrame,
         v.errores.append(f"{len(fuera)} juicios fuera del pool: {sorted(fuera)[:5]}")
     faltan = kp - kj
     if faltan:
-        por_q = pd.Series([q for q, _ in faltan]).value_counts().sort_index()
+        por_q = pd.Series([q for q, _ in faltan]).value_counts().sort_index(
+            key=lambda i: i.str[1:].astype(int))
         v.errores.append(f"Cobertura incompleta: faltan {len(faltan)} de {len(kp)} juicios ("
                          + ", ".join(f"{q}: {n}" for q, n in por_q.items())
                          + f"); {len(pendientes)} de ellos omitidos por ahora")
