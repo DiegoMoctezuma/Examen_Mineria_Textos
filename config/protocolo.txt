@@ -1,0 +1,46 @@
+# Fórmulas de protocolo (PRD §6.11, U13): saludos, agradecimientos, despedidas y vocativos de
+# cortesía. Un pasaje con más de la mitad de sus palabras en esta lista se puede sustituir en la
+# muestra gold. Una palabra por línea, en minúsculas; las líneas con # se ignoran.
+buenos
+buenas
+días
+dias
+tardes
+noches
+hola
+saludo
+saludos
+saludar
+saludamos
+saludarlos
+bienvenido
+bienvenida
+bienvenidos
+bienvenidas
+gracias
+muchas
+muchísimas
+agradezco
+agradecemos
+agradecer
+agradecimiento
+adelante
+adiós
+despedida
+despedirme
+despedimos
+permiso
+gusto
+placer
+felicidades
+felicito
+felicitamos
+aplausos
+presidente
+presidenta
+señor
+señora
+compañeros
+compañeras
+amigos
+amigas
