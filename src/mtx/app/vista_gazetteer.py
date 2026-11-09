@@ -16,25 +16,37 @@ from mtx.app import componentes as C
 ETIQUETA_DECISION = {"": "— pendiente —", "ORG": "ORG", "LOC": "LOC", "descartar": "Descartar"}
 
 
-def _guardar(base: pd.DataFrame, token: str, clave: str, posiciones: list[int]) -> None:
-    """Callback del editor: aplica las celdas editadas y guarda en el acto. `posiciones` traduce
-    la fila mostrada (posición en la vista, quizá filtrada) a la fila de `base`."""
+def _cargar_foto(forzar: bool = False) -> None:
+    """Foto de la revisión al abrir la sesión (o al recargar). El editor se monta siempre sobre
+    esta foto y con la misma clave: así no se reinicia tras cada guardado y no se pierde la
+    posición. Lo editado vive en el estado del editor y se guarda encima de la foto."""
     ss = st.session_state
-    cambios = ss[clave].get("edited_rows", {})
-    df = base.copy()
-    for i, fila in cambios.items():
+    if forzar or "gaz_foto" not in ss:
+        ss.gaz_foto, ss.gaz_token = C.cargar_revision_siglas()
+        ss.gaz_epoca = ss.get("gaz_epoca", 0) + 1
+
+
+def _guardar(clave: str, posiciones: list[int]) -> None:
+    """Callback del editor: aplica todas las celdas editadas sobre la foto y guarda en el acto.
+    `posiciones` traduce la fila mostrada (quizá filtrada) a la fila de la foto."""
+    ss = st.session_state
+    df = ss.gaz_foto.copy()
+    for i, fila in ss[clave].get("edited_rows", {}).items():
         for col, valor in fila.items():
             if col == "decision":
                 valor = next((k for k, v in ETIQUETA_DECISION.items() if v == valor), valor)
             df.at[posiciones[int(i)], col] = "" if valor is None else str(valor).strip()
     try:
-        C.guardar_revision_siglas(df, token)
-        ss.msg_gaz = ("exito", "Guardado.")
+        ss.gaz_token = C.guardar_revision_siglas(df, ss.gaz_token)
+        ss.toast_gaz = "Guardado"
     except C.ConflictoEdicion as e:
-        ss.msg_gaz = ("error", f"{e} No se guardó nada.")
+        ss.msg_gaz = f"{e} No se guardó nada. Usa «Recargar desde disco»."
     except (ValueError, OSError) as e:
-        ss.msg_gaz = ("error", f"No se pudo guardar: {e}")
-    ss.version_gaz = ss.get("version_gaz", 0) + 1  # reinicia el editor con lo guardado
+        ss.msg_gaz = f"No se pudo guardar: {e}"
+
+
+def _cambiar_filtro() -> None:
+    _cargar_foto(forzar=True)  # al cambiar el filtro se parte de lo guardado
 
 
 def mostrar() -> None:
@@ -43,9 +55,10 @@ def mostrar() -> None:
     if not r.siglas_candidatas.exists():
         st.warning("Faltan las candidatas: corre `make reglas`.")
         return
+    ss = st.session_state
+    _cargar_foto()
     congeladas = C.reglas_congeladas()
-    df, token = C.cargar_revision_siglas(r)
-    res = C.resumen_revision(df)
+    res = C.resumen_revision(C.cargar_revision_siglas(r)[0])  # lo guardado en disco
 
     st.sidebar.subheader("Revisión de siglas")
     hechas = res["candidatas"] - res["pendientes"]
@@ -58,28 +71,36 @@ def mostrar() -> None:
         f"- Base del kit: **{len(base)}**\n- Manuales (PRD y D14): **{nuevas_manual}**\n"
         f"- Aceptadas: **{res['ORG']} ORG**, **{res['LOC']} LOC**\n"
         f"- Descartadas: **{res['descartadas']}**")
+    if st.sidebar.button("Recargar desde disco", width="stretch"):
+        _cargar_foto(forzar=True)
 
     st.markdown(
         "Siglas en mayúsculas que aparecen en el cuerpo de los discursos y que el gazetteer "
         "aún no reconoce. Para cada una decide **ORG** (dependencia, empresa, partido, "
         "organismo), **LOC** (lugar u obra) o **Descartar** (no es organización ni lugar, "
         "p. ej. una enfermedad o un impuesto). Si conoces el nombre completo, escríbelo en "
-        "*nombre_final*; si lo dejas vacío, se usa la sigla. Cada cambio se guarda solo.")
+        "*nombre completo*; si lo dejas vacío, se usa la sigla. Cada cambio se guarda solo, "
+        "sin mover la tabla.")
     if congeladas:
         st.info("Las reglas están congeladas (`reglas-congeladas`): la revisión es de solo "
                 "lectura. Un cambio ahora sería exploratorio (D15).")
-    msg = st.session_state.pop("msg_gaz", None)
-    if msg:
-        {"error": st.error, "exito": st.success}[msg[0]](msg[1])
+    if "msg_gaz" in ss:
+        st.error(ss.pop("msg_gaz"))
+    if "toast_gaz" in ss:
+        st.toast(ss.pop("toast_gaz"), icon="✅")
 
-    solo_pend = st.toggle("Mostrar solo pendientes", value=False)
-    vista = df.copy()
+    solo_pend = st.toggle("Mostrar solo pendientes", key="gaz_solo_pend",
+                          on_change=_cambiar_filtro,
+                          help="Filtra según lo guardado al activarlo; las filas que decidas "
+                               "después no desaparecen hasta que recargues.")
+    foto = ss.gaz_foto
+    vista = foto.copy()
     vista["decision"] = vista["decision"].map(ETIQUETA_DECISION).fillna(vista["decision"])
     vista["frecuencia"] = pd.to_numeric(vista["frecuencia"], errors="coerce").astype("Int64")
     if solo_pend:
-        vista = vista[df["decision"] == ""]
+        vista = vista[foto["decision"] == ""]
     posiciones = vista.index.tolist()
-    clave = f"ed_siglas_{st.session_state.get('version_gaz', 0)}_{int(solo_pend)}"
+    clave = f"ed_siglas_{ss.gaz_epoca}"
     st.data_editor(
         vista, key=clave, hide_index=True, width="stretch", height=640,
         disabled=congeladas or ["sigla", "nombre_propuesto", "frecuencia", "ejemplo"],
@@ -97,5 +118,5 @@ def mostrar() -> None:
                                                             width="medium"),
             "ejemplo": st.column_config.TextColumn("Ejemplo de uso", width="large"),
         },
-        on_change=_guardar, args=(df, token, clave, posiciones),
+        on_change=_guardar, args=(clave, posiciones),
     )
