@@ -17,7 +17,7 @@
 
 ## Pendiente
 
-1. H5 en curso (2026-11-08). Hecho: reglas, normalización base, gazetteers, minado de siglas, pestaña Gazetteer, criterio de anotación aprobado, NER principal verificado con caché, muestreo, pestaña Gold y `validar_gold()`. Recorte 2 + P2 decidido por el alumno (sin comparación de NER ni conjunto de selección). **Revisión de siglas cerrada por el alumno** (59 ORG, 1 LOC, 44 descartadas; ninguna aparece en el ámbito). Falta: `make congelar` y `make muestra-gold` (sin `--seleccion`). Después H6: el alumno anota los 20 pasajes del gold en modo ciego.
+1. H5 en curso (2026-11-08). Hecho: reglas, normalización base, gazetteers, minado de siglas, pestaña Gazetteer, criterio de anotación aprobado, NER principal verificado con caché, muestreo, pestaña Gold y `validar_gold()`. Recorte 2 + P2 decidido por el alumno (sin comparación de NER ni conjunto de selección). **Revisión de siglas cerrada por el alumno** (59 ORG, 1 LOC, 44 descartadas; ninguna aparece en el ámbito). Etiqueta `reglas-congeladas` en `aa613f5` y muestra gold sorteada (20 pasajes). **Siguiente, H6 (alumno):** anotar los 20 pasajes en la pestaña Gold en modo ciego y cerrar el gold.
 2. Análisis IR del reporte (p. 2, H9): se redacta a partir de `salida/05_ir_ganador_por_consulta.csv` y las figuras; se describe esta colección, sin generalizar.
 3. Alumno: verificar que el profesor tenga acceso a este repo de GitLab (el enunciado habla de GitHub).
 

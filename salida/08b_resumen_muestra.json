@@ -1,0 +1,15 @@
+{
+  "fecha": "2026-11-08T20:41:12",
+  "modelo_ir": "bm25_con_filtro",
+  "semilla": 42,
+  "universo_pares": 100,
+  "universo_pasajes": 99,
+  "excluidos_u13": 3,
+  "gold": 20,
+  "seleccion": 0,
+  "estratos_rango_1_5_y_6_10": true,
+  "avisos": [],
+  "archivos": {
+    "muestra_gold.csv": "escrito"
+  }
+}
