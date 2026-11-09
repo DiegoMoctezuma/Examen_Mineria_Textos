@@ -55,6 +55,25 @@ class Rutas:
     def cierre_gold(self) -> Path:
         return self.anotaciones / "cierre_gold.json"
 
+    @property
+    def revision_siglas(self) -> Path:
+        return self.anotaciones / "revision_siglas.csv"
+
+    @property
+    def gazetteer_extendido(self) -> Path:
+        """`MTX_GAZETTEER_EXTENDIDO` permite que las pruebas no toquen `config/`."""
+        return Path(os.environ.get("MTX_GAZETTEER_EXTENDIDO",
+                                   config.DIR_CONFIG / "gazetteer_extendido.csv"))
+
+    @property
+    def siglas_candidatas(self) -> Path:
+        return Path(os.environ.get("MTX_SIGLAS_CANDIDATAS",
+                                   config.DIR_SALIDA / "06_siglas_candidatas.csv"))
+
+    @property
+    def criterios_anotacion(self) -> Path:
+        return config.DIR_CONFIG / "criterios_anotacion.md"
+
 
 def rutas() -> Rutas:
     """Rutas efectivas. `MTX_ANOTACIONES` y `MTX_CRITERIOS_RELEVANCIA` permiten que las pruebas
@@ -244,6 +263,73 @@ def siguiente_pendiente(items_q: pd.DataFrame, juicios: pd.DataFrame, desde: int
     return None
 
 
+# --------------------------------------------------------------------------- revisión de siglas
+
+COLUMNAS_REVISION = ["sigla", "nombre_propuesto", "frecuencia", "ejemplo", "decision",
+                     "nombre_final"]
+DECISIONES = ("", "ORG", "LOC", "descartar")
+"""Vacío = pendiente. La app no preselecciona ninguna decisión."""
+
+
+def reglas_congeladas() -> bool:
+    """¿Existe la etiqueta git `reglas-congeladas` (D15)? Si existe, la revisión no se edita."""
+    import subprocess
+    r = subprocess.run(["git", "tag", "-l", "reglas-congeladas"], cwd=config.RAIZ,
+                       capture_output=True, text=True, check=False)
+    return bool(r.stdout.strip())
+
+
+def cargar_revision_siglas(r: Rutas | None = None) -> tuple[pd.DataFrame, str]:
+    """Candidatas de `salida/06_siglas_candidatas.csv` unidas a las decisiones ya guardadas en
+    `anotaciones/revision_siglas.csv`. Una decisión guardada nunca se pierde: si la sigla ya no
+    está entre las candidatas, se conserva al final."""
+    r = r or rutas()
+    cand = (pd.read_csv(r.siglas_candidatas, dtype=str, keep_default_na=False)
+            if r.siglas_candidatas.exists() else pd.DataFrame(columns=COLUMNAS_REVISION[:4]))
+    previas = (pd.read_csv(r.revision_siglas, dtype=str, keep_default_na=False)
+               if r.revision_siglas.exists() else pd.DataFrame(columns=COLUMNAS_REVISION))
+    df = cand.merge(previas[["sigla", "decision", "nombre_final"]], on="sigla", how="left")
+    huerfanas = previas[~previas["sigla"].isin(cand["sigla"]) & (previas["decision"] != "")]
+    df = pd.concat([df, huerfanas], ignore_index=True)[COLUMNAS_REVISION].fillna("")
+    return df, sha256_ruta(r.revision_siglas)
+
+
+def validar_revision_siglas(df: pd.DataFrame) -> list[str]:
+    errores = []
+    malas = sorted(set(df["decision"]) - set(DECISIONES))
+    if malas:
+        errores.append(f"Decisiones no válidas: {malas}")
+    if df["sigla"].duplicated().any():
+        errores.append("Siglas repetidas")
+    return errores
+
+
+def guardar_revision_siglas(df: pd.DataFrame, token: str, r: Rutas | None = None) -> str:
+    """Guarda las decisiones y reconstruye el gazetteer extendido. Rechaza la escritura si las
+    reglas están congeladas, si el archivo cambió desde otra pestaña o si hay valores inválidos."""
+    from mtx import reglas
+    r = r or rutas()
+    if reglas_congeladas():
+        raise ValueError("Las reglas están congeladas (`reglas-congeladas`): la revisión ya no "
+                         "se edita. Ver la skill integridad-congelacion.")
+    if sha256_ruta(r.revision_siglas) != token:
+        raise ConflictoEdicion("editado desde otra pestaña: recarga antes de guardar.")
+    errores = validar_revision_siglas(df)
+    if errores:
+        raise ValueError("; ".join(errores))
+    escribir_atomico(r.revision_siglas, _csv_bytes(df[COLUMNAS_REVISION]))
+    ext = reglas.construir_extendido(revision=r.revision_siglas)
+    escribir_atomico(r.gazetteer_extendido, _csv_bytes(ext))
+    return sha256_ruta(r.revision_siglas)
+
+
+def resumen_revision(df: pd.DataFrame) -> dict:
+    d = df["decision"]
+    return {"candidatas": len(df), "pendientes": int((d == "").sum()),
+            "ORG": int((d == "ORG").sum()), "LOC": int((d == "LOC").sum()),
+            "descartadas": int((d == "descartar").sum())}
+
+
 # --------------------------------------------------------------------------- resaltado
 
 
@@ -408,11 +494,43 @@ def estados_artefactos(r: Rutas | None = None, hash_pasajes_actual: str | None =
     else:
         fila("Juicios exportados (juicios_relevancia.csv)", VALIDO, "Copia idéntica")
 
+    if not r.criterios_anotacion.exists():
+        fila("Criterio de anotación (config/criterios_anotacion.md)", PENDIENTE_HUMANO,
+             "Lo escribe el alumno antes del gold", "Escribir el archivo")
+    else:
+        fila("Criterio de anotación (config/criterios_anotacion.md)", VALIDO,
+             "Escrito" + (" y congelado" if reglas_congeladas() else "; se congela con "
+                          "`make congelar`"))
+
+    if not r.siglas_candidatas.exists():
+        fila("Revisión de siglas (anotaciones/revision_siglas.csv)", PENDIENTE_TECNICO,
+             "Faltan las candidatas", "make reglas")
+    else:
+        from mtx import reglas as _reglas
+        rev, _ = cargar_revision_siglas(r)
+        res = resumen_revision(rev)
+        errores = validar_revision_siglas(rev)
+        hecho = res["candidatas"] - res["pendientes"]
+        if errores:
+            fila("Revisión de siglas (anotaciones/revision_siglas.csv)", ERROR,
+                 "; ".join(errores), "Pestaña Gazetteer")
+        elif res["pendientes"]:
+            fila("Revisión de siglas (anotaciones/revision_siglas.csv)", PENDIENTE_HUMANO,
+                 f"{hecho} de {res['candidatas']} revisadas", "Pestaña Gazetteer")
+        else:
+            fila("Revisión de siglas (anotaciones/revision_siglas.csv)", VALIDO,
+                 f"{res['ORG']} ORG, {res['LOC']} LOC, {res['descartadas']} descartadas")
+        ext_ok = (r.gazetteer_extendido.exists() and _csv_bytes(
+            _reglas.construir_extendido(revision=r.revision_siglas))
+            == r.gazetteer_extendido.read_bytes())
+        fila("Gazetteer extendido (config/gazetteer_extendido.csv)",
+             VALIDO if ext_ok else OBSOLETO,
+             "Coincide con kit + manual + revisión" if ext_ok
+             else "No refleja la revisión actual", "" if ext_ok else "make reglas")
+
     for nombre, ruta, sig in [
         ("Resultados IR (resultados_ir.csv)", config.RAIZ / "resultados_ir.csv",
          "H4: make evaluar-ir"),
-        ("Gazetteer extendido (config/gazetteer_extendido.csv)",
-         config.DIR_CONFIG / "gazetteer_extendido.csv", "H5: pestaña Gazetteer"),
         ("Muestra gold (anotaciones/muestra_gold.csv)", r.anotaciones / "muestra_gold.csv",
          "H5: make muestra-gold"),
         ("Gold (anotaciones/gold_entidades.csv)", r.anotaciones / "gold_entidades.csv",

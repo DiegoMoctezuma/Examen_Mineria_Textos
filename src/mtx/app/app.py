@@ -6,7 +6,7 @@ from __future__ import annotations
 
 import streamlit as st
 
-from mtx.app import estilo, vista_estado, vista_juicios, vista_pendiente
+from mtx.app import estilo, vista_estado, vista_gazetteer, vista_juicios, vista_pendiente
 
 st.set_page_config(page_title="Anotación · Minería de Textos", page_icon="📝", layout="wide")
 estilo.aplicar()
@@ -15,7 +15,7 @@ paginas = [
     st.Page(vista_estado.mostrar, title="Estado", url_path="estado", default=True),
     st.Page(vista_juicios.mostrar, title="Juicios", url_path="juicios"),
     st.Page(vista_pendiente.gold, title="Gold", url_path="gold"),
-    st.Page(vista_pendiente.gazetteer, title="Gazetteer", url_path="gazetteer"),
+    st.Page(vista_gazetteer.mostrar, title="Gazetteer", url_path="gazetteer"),
     st.Page(vista_pendiente.demo, title="Demo", url_path="demo"),
 ]
 st.navigation(paginas, position="top").run()

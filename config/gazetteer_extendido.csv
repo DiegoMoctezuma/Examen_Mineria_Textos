@@ -1,0 +1,93 @@
+nombre,variantes,siglas,tipo,etiqueta,origen,evidencia
+Secretaría de Gobernación,,Segob,dependencia,ORG,kit,kit/gazetteer_dependencias.csv
+Secretaría de Relaciones Exteriores,,SRE,dependencia,ORG,kit,kit/gazetteer_dependencias.csv
+Secretaría de la Defensa Nacional,,Sedena,dependencia,ORG,kit,kit/gazetteer_dependencias.csv
+Secretaría de Marina,,Semar,dependencia,ORG,kit,kit/gazetteer_dependencias.csv
+Secretaría de Seguridad y Protección Ciudadana,,SSPC,dependencia,ORG,kit,kit/gazetteer_dependencias.csv
+Secretaría de Hacienda y Crédito Público,,SHCP,dependencia,ORG,kit,kit/gazetteer_dependencias.csv
+Secretaría de Bienestar,Secretaría del Bienestar,Bienestar,dependencia,ORG,kit,kit/gazetteer_dependencias.csv; PRD §6.7.4: entrada obligatoria ausente del kit (variante con 'del')
+Secretaría de Medio Ambiente y Recursos Naturales,,Semarnat,dependencia,ORG,kit,kit/gazetteer_dependencias.csv
+Secretaría de Energía,,Sener,dependencia,ORG,kit,kit/gazetteer_dependencias.csv
+Secretaría de Economía,,SE,dependencia,ORG,kit,kit/gazetteer_dependencias.csv
+Secretaría de Agricultura y Desarrollo Rural,,Sader,dependencia,ORG,kit,kit/gazetteer_dependencias.csv
+Secretaría de Infraestructura Comunicaciones y Transportes,"Secretaría de Infraestructura, Comunicaciones y Transportes",SICT,dependencia,ORG,kit,kit/gazetteer_dependencias.csv; variante con coma del nombre oficial
+Secretaría de Comunicaciones y Transportes,,SCT,dependencia,ORG,kit,kit/gazetteer_dependencias.csv
+Secretaría de la Función Pública,,SFP,dependencia,ORG,kit,kit/gazetteer_dependencias.csv
+Secretaría de Educación Pública,,SEP,dependencia,ORG,kit,kit/gazetteer_dependencias.csv
+Secretaría de Salud,,Salud,dependencia,ORG,kit,kit/gazetteer_dependencias.csv
+Secretaría del Trabajo y Previsión Social,,STPS,dependencia,ORG,kit,kit/gazetteer_dependencias.csv
+Secretaría de Desarrollo Agrario Territorial y Urbano,,Sedatu,dependencia,ORG,kit,kit/gazetteer_dependencias.csv
+Secretaría de Cultura,,Cultura,dependencia,ORG,kit,kit/gazetteer_dependencias.csv
+Secretaría de Turismo,,Sectur,dependencia,ORG,kit,kit/gazetteer_dependencias.csv
+Consejería Jurídica del Ejecutivo Federal,,CJEF,dependencia,ORG,kit,kit/gazetteer_dependencias.csv
+Instituto Mexicano del Seguro Social,,IMSS,organismo,ORG,kit,kit/gazetteer_dependencias.csv
+Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,,ISSSTE,organismo,ORG,kit,kit/gazetteer_dependencias.csv
+Petróleos Mexicanos,,Pemex|PEMEX,empresa productiva del Estado,ORG,kit,kit/gazetteer_dependencias.csv; forma en mayúsculas de la sigla
+Comisión Federal de Electricidad,,CFE,empresa productiva del Estado,ORG,kit,kit/gazetteer_dependencias.csv
+Guardia Nacional,,GN,organismo,ORG,kit,kit/gazetteer_dependencias.csv
+Comisión Nacional del Agua,,Conagua,organismo,ORG,kit,kit/gazetteer_dependencias.csv
+Servicio de Administración Tributaria,,SAT,organismo,ORG,kit,kit/gazetteer_dependencias.csv
+Banco de México,,Banxico,organismo autónomo,ORG,kit,kit/gazetteer_dependencias.csv
+Instituto Nacional Electoral,,INE,organismo autónomo,ORG,kit,kit/gazetteer_dependencias.csv
+Fondo Nacional de Fomento al Turismo,,Fonatur,organismo,ORG,kit,kit/gazetteer_dependencias.csv
+Instituto del Fondo Nacional de la Vivienda para los Trabajadores,,Infonavit,organismo,ORG,kit,kit/gazetteer_dependencias.csv
+Comisión Federal para la Protección contra Riesgos Sanitarios,,Cofepris,organismo,ORG,kit,kit/gazetteer_dependencias.csv
+Instituto Nacional de Antropología e Historia,,INAH,organismo,ORG,kit,kit/gazetteer_dependencias.csv
+Consejo Nacional de Humanidades Ciencias y Tecnologías,"Consejo Nacional de Humanidades, Ciencias y Tecnologías",Conahcyt,organismo,ORG,kit,kit/gazetteer_dependencias.csv; variante con coma del nombre oficial
+Consejo Nacional de Ciencia y Tecnología,,Conacyt,organismo,ORG,kit,kit/gazetteer_dependencias.csv
+Comisión Nacional de los Salarios Mínimos,,Conasami,organismo,ORG,kit,kit/gazetteer_dependencias.csv
+Instituto Nacional de Migración,,INM,organismo,ORG,kit,kit/gazetteer_dependencias.csv
+Fiscalía General de la República,,FGR,organismo autónomo,ORG,kit,kit/gazetteer_dependencias.csv
+Suprema Corte de Justicia de la Nación,,SCJN,poder judicial,ORG,kit,kit/gazetteer_dependencias.csv
+Banco del Bienestar,,Banco del Bienestar,organismo,ORG,kit,kit/gazetteer_dependencias.csv
+Instituto de Salud para el Bienestar,,Insabi,organismo,ORG,kit,kit/gazetteer_dependencias.csv
+IMSS-Bienestar,,IMSS-Bienestar,organismo,ORG,kit,kit/gazetteer_dependencias.csv
+Procuraduría Federal del Consumidor,,Profeco,organismo,ORG,kit,kit/gazetteer_dependencias.csv
+Comisión Reguladora de Energía,,CRE,organismo,ORG,kit,kit/gazetteer_dependencias.csv
+Comisión Nacional de Hidrocarburos,,CNH,organismo,ORG,kit,kit/gazetteer_dependencias.csv
+Instituto Nacional de Estadística y Geografía,,Inegi,organismo autónomo,ORG,kit,kit/gazetteer_dependencias.csv
+Comisión Nacional Bancaria y de Valores,,CNBV,organismo,ORG,kit,kit/gazetteer_dependencias.csv
+Agencia Nacional de Aduanas de México,,ANAM,organismo,ORG,kit,kit/gazetteer_dependencias.csv
+Unidad de Inteligencia Financiera,,UIF,organismo,ORG,kit,kit/gazetteer_dependencias.csv
+Comisión Nacional de Búsqueda,,CNB,organismo,ORG,kit,kit/gazetteer_dependencias.csv
+Instituto Nacional de los Pueblos Indígenas,,INPI,organismo,ORG,kit,kit/gazetteer_dependencias.csv
+Diconsa,,Diconsa,empresa,ORG,kit,kit/gazetteer_dependencias.csv
+Liconsa,,Liconsa,empresa,ORG,kit,kit/gazetteer_dependencias.csv
+Segalmex,,Segalmex,organismo,ORG,kit,kit/gazetteer_dependencias.csv
+Aeropuerto Internacional Felipe Ángeles,,AIFA,obra,LOC,kit,kit/gazetteer_dependencias.csv
+Tren Maya,,Tren Maya,obra,LOC,kit,kit/gazetteer_dependencias.csv
+Refinería Olmeca,,Dos Bocas,obra,LOC,kit,kit/gazetteer_dependencias.csv
+Corredor Interoceánico del Istmo de Tehuantepec,,CIIT,obra,LOC,kit,kit/gazetteer_dependencias.csv
+Consejo Coordinador Empresarial,,CCE,organización empresarial,ORG,kit,kit/gazetteer_dependencias.csv
+Confederación Patronal de la República Mexicana,,Coparmex,organización empresarial,ORG,kit,kit/gazetteer_dependencias.csv
+Cámara Nacional de la Industria de Transformación,,Canacintra,organización empresarial,ORG,kit,kit/gazetteer_dependencias.csv
+Confederación de Cámaras Industriales,,Concamin,organización empresarial,ORG,kit,kit/gazetteer_dependencias.csv
+Confederación de Cámaras Nacionales de Comercio,,Concanaco,organización empresarial,ORG,kit,kit/gazetteer_dependencias.csv
+Organización Mundial de la Salud,,OMS,organismo internacional,ORG,kit,kit/gazetteer_dependencias.csv
+Organización Panamericana de la Salud,,OPS,organismo internacional,ORG,kit,kit/gazetteer_dependencias.csv
+Fondo Monetario Internacional,,FMI,organismo internacional,ORG,kit,kit/gazetteer_dependencias.csv
+Banco Mundial,,BM,organismo internacional,ORG,kit,kit/gazetteer_dependencias.csv
+Organización de las Naciones Unidas,,ONU,organismo internacional,ORG,kit,kit/gazetteer_dependencias.csv
+Movimiento Regeneración Nacional,,Morena,partido,ORG,kit,kit/gazetteer_dependencias.csv
+Partido Acción Nacional,,PAN,partido,ORG,kit,kit/gazetteer_dependencias.csv
+Partido Revolucionario Institucional,,PRI,partido,ORG,kit,kit/gazetteer_dependencias.csv
+Partido de la Revolución Democrática,,PRD,partido,ORG,kit,kit/gazetteer_dependencias.csv
+Partido Verde Ecologista de México,,PVEM,partido,ORG,kit,kit/gazetteer_dependencias.csv
+Partido del Trabajo,,PT,partido,ORG,kit,kit/gazetteer_dependencias.csv
+Movimiento Ciudadano,,MC,partido,ORG,kit,kit/gazetteer_dependencias.csv
+Laboratorios de Biológicos y Reactivos de México,,Birmex,empresa,ORG,manual,PRD §6.7.4: entrada obligatoria ausente del kit
+Grupo Carso,,,empresa,ORG,manual,PRD §6.7.4: entrada obligatoria ausente del kit
+Empresas ICA,,ICA,empresa,ORG,manual,PRD §6.7.4: entrada obligatoria ausente del kit
+Pfizer,,,farmacéutica,ORG,manual,"PRD §6.7.4: entrada obligatoria ausente del kit; D14: farmacéutica, marca de vacuna o mecanismo multilateral"
+BioNTech,,,farmacéutica,ORG,manual,"D14: farmacéutica, marca de vacuna o mecanismo multilateral"
+AstraZeneca,Astrazeneca,,farmacéutica,ORG,manual,"PRD §6.7.4: entrada obligatoria ausente del kit; D14: farmacéutica, marca de vacuna o mecanismo multilateral"
+CanSino,CanSino Biologics|Cansino,,farmacéutica,ORG,manual,"PRD §6.7.4: entrada obligatoria ausente del kit; D14: farmacéutica, marca de vacuna o mecanismo multilateral"
+Sputnik V,Sputnik,,vacuna,ORG,manual,"PRD §6.7.4: entrada obligatoria ausente del kit; D14: farmacéutica, marca de vacuna o mecanismo multilateral"
+Instituto Gamaleya,Gamaleya,,farmacéutica,ORG,manual,"D14: farmacéutica, marca de vacuna o mecanismo multilateral"
+Sinovac,,,farmacéutica,ORG,manual,"D14: farmacéutica, marca de vacuna o mecanismo multilateral"
+Moderna,,,farmacéutica,ORG,manual,"D14: farmacéutica, marca de vacuna o mecanismo multilateral"
+Janssen,,,farmacéutica,ORG,manual,"D14: farmacéutica, marca de vacuna o mecanismo multilateral"
+Johnson & Johnson,Johnson and Johnson,,farmacéutica,ORG,manual,"D14: farmacéutica, marca de vacuna o mecanismo multilateral"
+Abdala,,,vacuna,ORG,manual,"D14: farmacéutica, marca de vacuna o mecanismo multilateral"
+Patria,,,vacuna,ORG,manual,"D14: farmacéutica, marca de vacuna o mecanismo multilateral; solo tras 'vacuna' para no marcar 'la Patria'"
+COVAX,Covax,,mecanismo multilateral,ORG,manual,"PRD §6.7.4: entrada obligatoria ausente del kit; D14: farmacéutica, marca de vacuna o mecanismo multilateral"

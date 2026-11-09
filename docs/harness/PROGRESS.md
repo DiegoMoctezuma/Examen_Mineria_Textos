@@ -17,7 +17,8 @@
 
 ## Pendiente
 
-1. H5 (PRD §12.2): reglas FECHA y MONTO, gazetteers ORG/LOC, minado de siglas (revisión del alumno en la pestaña Gazetteer), NER con revisión fija y muestreo del conjunto de selección y de la muestra gold; `make congelar` y etiqueta `reglas-congeladas` antes del gold. `data/mejor_modelo.json` ya no debe cambiar.
+1. H5 en curso (2026-11-08). Hecho: reglas, normalización base, gazetteers, minado de siglas, pestaña Gazetteer y criterio de anotación (pendiente de aprobación). Falta: **alumno** revisa las 104 siglas en la pestaña Gazetteer y aprueba `config/criterios_anotacion.md`; asistente: NER (`07_ner.py`, skill `ner-modelo`) y muestreo del gold (`08b_muestra_gold.py`, skill `gold-anotacion`); luego `make reglas`, commit y `make congelar`.
+   Plan original de H5 (PRD §12.2): reglas FECHA y MONTO, gazetteers ORG/LOC, minado de siglas (revisión del alumno en la pestaña Gazetteer), NER con revisión fija y muestreo del conjunto de selección y de la muestra gold; `make congelar` y etiqueta `reglas-congeladas` antes del gold. `data/mejor_modelo.json` ya no debe cambiar.
 2. Análisis IR del reporte (p. 2, H9): se redacta a partir de `salida/05_ir_ganador_por_consulta.csv` y las figuras; se describe esta colección, sin generalizar.
 3. Alumno: verificar que el profesor tenga acceso a este repo de GitLab (el enunciado habla de GitHub).
 

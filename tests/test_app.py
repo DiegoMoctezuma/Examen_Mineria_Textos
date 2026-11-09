@@ -326,3 +326,80 @@ def test_cli_juicios(entorno):
     disco = pd.read_csv(entorno.juicios, dtype=str, keep_default_na=False)
     assert list(disco["query_id"]) == ["Q2"] * 3
     assert list(disco["relevante"]) == ["1", "0", ""]
+
+
+# --------------------------------------------------------------------------- revisión de siglas
+
+
+@pytest.fixture
+def siglas(tmp_path, monkeypatch):
+    anot = tmp_path / "anotaciones"
+    anot.mkdir()
+    cand = tmp_path / "06_siglas_candidatas.csv"
+    pd.DataFrame({"sigla": ["UNAM", "COVID", "IPN"], "nombre_propuesto": ["", "", ""],
+                  "frecuencia": ["859", "4476", "50"],
+                  "ejemplo": ["en la UNAM", "por el COVID", "del IPN"]}).to_csv(cand, index=False)
+    monkeypatch.setenv("MTX_ANOTACIONES", str(anot))
+    monkeypatch.setenv("MTX_SIGLAS_CANDIDATAS", str(cand))
+    monkeypatch.setenv("MTX_GAZETTEER_EXTENDIDO", str(tmp_path / "gazetteer_extendido.csv"))
+    monkeypatch.setattr(C, "reglas_congeladas", lambda: False)
+    return C.rutas()
+
+
+def test_revision_siglas_sin_preseleccion_guarda_y_reconstruye(siglas):
+    df, token = C.cargar_revision_siglas(siglas)
+    assert list(df["decision"]) == ["", "", ""]
+    df.loc[df["sigla"] == "UNAM", ["decision", "nombre_final"]] = [
+        "ORG", "Universidad Nacional Autónoma de México"]
+    df.loc[df["sigla"] == "COVID", "decision"] = "descartar"
+    token = C.guardar_revision_siglas(df, token, siglas)
+    ext = pd.read_csv(siglas.gazetteer_extendido, dtype=str, keep_default_na=False)
+    fila = ext[ext["origen"] == "minado"]
+    assert fila[["nombre", "siglas", "etiqueta"]].values.tolist() == [
+        ["Universidad Nacional Autónoma de México", "UNAM", "ORG"]]
+    assert "COVID" not in set(ext["siglas"])
+    assert C.resumen_revision(C.cargar_revision_siglas(siglas)[0]) == {
+        "candidatas": 3, "pendientes": 1, "ORG": 1, "LOC": 0, "descartadas": 1}
+
+
+def test_revision_siglas_dos_pestanas_y_valores_invalidos(siglas):
+    df, token = C.cargar_revision_siglas(siglas)
+    df.loc[0, "decision"] = "ORG"
+    C.guardar_revision_siglas(df, token, siglas)
+    with pytest.raises(C.ConflictoEdicion):
+        C.guardar_revision_siglas(df, token, siglas)
+    df2, token2 = C.cargar_revision_siglas(siglas)
+    df2.loc[1, "decision"] = "PER"
+    with pytest.raises(ValueError):
+        C.guardar_revision_siglas(df2, token2, siglas)
+
+
+def test_revision_siglas_bloqueada_tras_congelar(siglas, monkeypatch):
+    monkeypatch.setattr(C, "reglas_congeladas", lambda: True)
+    df, token = C.cargar_revision_siglas(siglas)
+    with pytest.raises(ValueError, match="congeladas"):
+        C.guardar_revision_siglas(df, token, siglas)
+    assert not siglas.revision_siglas.exists()
+
+
+def test_revision_conserva_decisiones_de_siglas_que_ya_no_son_candidatas(siglas):
+    df, token = C.cargar_revision_siglas(siglas)
+    df.loc[df["sigla"] == "IPN", "decision"] = "ORG"
+    C.guardar_revision_siglas(df, token, siglas)
+    pd.DataFrame({"sigla": ["UNAM"], "nombre_propuesto": [""], "frecuencia": ["1"],
+                  "ejemplo": ["x"]}).to_csv(siglas.siglas_candidatas, index=False)
+    df2, _ = C.cargar_revision_siglas(siglas)
+    assert set(df2["sigla"]) == {"UNAM", "IPN"}
+    assert df2.set_index("sigla").at["IPN", "decision"] == "ORG"
+
+
+def _app_gazetteer():
+    from mtx.app import vista_gazetteer
+    vista_gazetteer.mostrar()
+
+
+def test_app_gazetteer_muestra_candidatas_sin_decision(siglas):
+    from streamlit.testing.v1 import AppTest
+    at = AppTest.from_function(_app_gazetteer, default_timeout=60).run()
+    assert not at.exception
+    assert "0 de 3 revisadas" in " ".join(p.text for p in at.sidebar.get("progress"))

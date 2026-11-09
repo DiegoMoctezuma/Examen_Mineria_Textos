@@ -1,0 +1,21 @@
+nombre,variantes,siglas,tipo,etiqueta,evidencia
+Secretaría de Bienestar,Secretaría del Bienestar,,dependencia,ORG,PRD §6.7.4: entrada obligatoria ausente del kit (variante con 'del')
+Secretaría de Infraestructura Comunicaciones y Transportes,"Secretaría de Infraestructura, Comunicaciones y Transportes",,dependencia,ORG,variante con coma del nombre oficial
+Consejo Nacional de Humanidades Ciencias y Tecnologías,"Consejo Nacional de Humanidades, Ciencias y Tecnologías",,organismo,ORG,variante con coma del nombre oficial
+Petróleos Mexicanos,,PEMEX,empresa productiva del Estado,ORG,forma en mayúsculas de la sigla
+Laboratorios de Biológicos y Reactivos de México,,Birmex,empresa,ORG,PRD §6.7.4: entrada obligatoria ausente del kit
+Grupo Carso,,,empresa,ORG,PRD §6.7.4: entrada obligatoria ausente del kit
+Empresas ICA,,ICA,empresa,ORG,PRD §6.7.4: entrada obligatoria ausente del kit
+Pfizer,,,farmacéutica,ORG,"PRD §6.7.4: entrada obligatoria ausente del kit; D14: farmacéutica, marca de vacuna o mecanismo multilateral"
+BioNTech,,,farmacéutica,ORG,"D14: farmacéutica, marca de vacuna o mecanismo multilateral"
+AstraZeneca,Astrazeneca,,farmacéutica,ORG,"PRD §6.7.4: entrada obligatoria ausente del kit; D14: farmacéutica, marca de vacuna o mecanismo multilateral"
+CanSino,CanSino Biologics|Cansino,,farmacéutica,ORG,"PRD §6.7.4: entrada obligatoria ausente del kit; D14: farmacéutica, marca de vacuna o mecanismo multilateral"
+Sputnik V,Sputnik,,vacuna,ORG,"PRD §6.7.4: entrada obligatoria ausente del kit; D14: farmacéutica, marca de vacuna o mecanismo multilateral"
+Instituto Gamaleya,Gamaleya,,farmacéutica,ORG,"D14: farmacéutica, marca de vacuna o mecanismo multilateral"
+Sinovac,,,farmacéutica,ORG,"D14: farmacéutica, marca de vacuna o mecanismo multilateral"
+Moderna,,,farmacéutica,ORG,"D14: farmacéutica, marca de vacuna o mecanismo multilateral"
+Janssen,,,farmacéutica,ORG,"D14: farmacéutica, marca de vacuna o mecanismo multilateral"
+Johnson & Johnson,Johnson and Johnson,,farmacéutica,ORG,"D14: farmacéutica, marca de vacuna o mecanismo multilateral"
+Abdala,,,vacuna,ORG,"D14: farmacéutica, marca de vacuna o mecanismo multilateral"
+Patria,,,vacuna,ORG,"D14: farmacéutica, marca de vacuna o mecanismo multilateral; solo tras 'vacuna' para no marcar 'la Patria'"
+COVAX,Covax,,mecanismo multilateral,ORG,"PRD §6.7.4: entrada obligatoria ausente del kit; D14: farmacéutica, marca de vacuna o mecanismo multilateral"

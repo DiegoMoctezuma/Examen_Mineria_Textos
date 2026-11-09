@@ -1,0 +1,103 @@
+nombre,variantes,siglas,tipo,etiqueta,origen,evidencia
+Aguascalientes,,,estado,LOC,manual,PRD §6.7.5: entidad federativa
+Baja California,,,estado,LOC,manual,PRD §6.7.5: entidad federativa
+Baja California Sur,,,estado,LOC,manual,PRD §6.7.5: entidad federativa
+Campeche,,,estado,LOC,manual,PRD §6.7.5: entidad federativa
+Chiapas,,,estado,LOC,manual,PRD §6.7.5: entidad federativa
+Chihuahua,,,estado,LOC,manual,PRD §6.7.5: entidad federativa
+Ciudad de México,CDMX,,estado,LOC,manual,PRD §6.7.5: entidad federativa
+Coahuila,Coahuila de Zaragoza,,estado,LOC,manual,PRD §6.7.5: entidad federativa
+Colima,,,estado,LOC,manual,PRD §6.7.5: entidad federativa
+Durango,,,estado,LOC,manual,PRD §6.7.5: entidad federativa
+Guanajuato,,,estado,LOC,manual,PRD §6.7.5: entidad federativa
+Guerrero,,,estado,LOC,manual,PRD §6.7.5: entidad federativa
+Hidalgo,,,estado,LOC,manual,PRD §6.7.5: entidad federativa
+Jalisco,,,estado,LOC,manual,PRD §6.7.5: entidad federativa
+Estado de México,Edomex,,estado,LOC,manual,PRD §6.7.5: entidad federativa
+Michoacán,Michoacán de Ocampo,,estado,LOC,manual,PRD §6.7.5: entidad federativa
+Morelos,,,estado,LOC,manual,PRD §6.7.5: entidad federativa
+Nayarit,,,estado,LOC,manual,PRD §6.7.5: entidad federativa
+Nuevo León,,,estado,LOC,manual,PRD §6.7.5: entidad federativa
+Oaxaca,,,estado,LOC,manual,PRD §6.7.5: entidad federativa
+Puebla,,,estado,LOC,manual,PRD §6.7.5: entidad federativa
+Querétaro,,,estado,LOC,manual,PRD §6.7.5: entidad federativa
+Quintana Roo,,,estado,LOC,manual,PRD §6.7.5: entidad federativa
+San Luis Potosí,,,estado,LOC,manual,PRD §6.7.5: entidad federativa
+Sinaloa,,,estado,LOC,manual,PRD §6.7.5: entidad federativa
+Sonora,,,estado,LOC,manual,PRD §6.7.5: entidad federativa
+Tabasco,,,estado,LOC,manual,PRD §6.7.5: entidad federativa
+Tamaulipas,,,estado,LOC,manual,PRD §6.7.5: entidad federativa
+Tlaxcala,,,estado,LOC,manual,PRD §6.7.5: entidad federativa
+Veracruz,Veracruz de Ignacio de la Llave,,estado,LOC,manual,PRD §6.7.5: entidad federativa
+Yucatán,,,estado,LOC,manual,PRD §6.7.5: entidad federativa
+Zacatecas,,,estado,LOC,manual,PRD §6.7.5: entidad federativa
+Palenque,,,lugar,LOC,manual,PRD §6.7.5: lugar de las consultas
+Cancún,,,lugar,LOC,manual,PRD §6.7.5: lugar de las consultas
+Tulum,,,lugar,LOC,manual,PRD §6.7.5: lugar de las consultas
+Mérida,,,lugar,LOC,manual,PRD §6.7.5: lugar de las consultas
+Chetumal,,,lugar,LOC,manual,PRD §6.7.5: lugar de las consultas
+Escárcega,,,lugar,LOC,manual,PRD §6.7.5: lugar de las consultas
+Tula,,,lugar,LOC,manual,PRD §6.7.5: lugar de las consultas
+Salamanca,,,lugar,LOC,manual,PRD §6.7.5: lugar de las consultas
+Minatitlán,,,lugar,LOC,manual,PRD §6.7.5: lugar de las consultas
+Salina Cruz,,,lugar,LOC,manual,PRD §6.7.5: lugar de las consultas
+Coatzacoalcos,,,lugar,LOC,manual,PRD §6.7.5: lugar de las consultas
+Santa Lucía,,,lugar,LOC,manual,PRD §6.7.5: lugar de las consultas
+Istmo de Tehuantepec,,,lugar,LOC,manual,PRD §6.7.5: lugar de las consultas
+Tren Maya,,,obra,LOC,manual,PRD §6.7.5: obra (LOC según el enunciado)
+Dos Bocas,,,obra,LOC,manual,PRD §6.7.5: obra (LOC según el enunciado)
+Refinería Olmeca,refinería Olmeca,,obra,LOC,manual,PRD §6.7.5: obra (LOC según el enunciado)
+Aeropuerto Internacional Felipe Ángeles,AIFA,,obra,LOC,manual,PRD §6.7.5: obra (LOC según el enunciado)
+Tren Interoceánico,,,obra,LOC,manual,PRD §6.7.5: obra (LOC según el enunciado)
+Corredor Interoceánico,,,obra,LOC,manual,PRD §6.7.5: obra (LOC según el enunciado)
+Estados Unidos,,,pais,LOC,manual,PRD §6.7.5: país o capital
+Washington,,,pais,LOC,manual,PRD §6.7.5: país o capital
+China,,,pais,LOC,manual,PRD §6.7.5: país o capital
+Rusia,,,pais,LOC,manual,PRD §6.7.5: país o capital
+India,,,pais,LOC,manual,PRD §6.7.5: país o capital
+Argentina,,,pais,LOC,manual,PRD §6.7.5: país o capital
+Cuba,,,pais,LOC,manual,PRD §6.7.5: país o capital
+México,,,pais,LOC,manual,cobertura: país (añadido antes del gold)
+Canadá,,,pais,LOC,manual,cobertura: país (añadido antes del gold)
+Guatemala,,,pais,LOC,manual,cobertura: país (añadido antes del gold)
+Honduras,,,pais,LOC,manual,cobertura: país (añadido antes del gold)
+El Salvador,,,pais,LOC,manual,cobertura: país (añadido antes del gold)
+Nicaragua,,,pais,LOC,manual,cobertura: país (añadido antes del gold)
+Belice,,,pais,LOC,manual,cobertura: país (añadido antes del gold)
+Panamá,,,pais,LOC,manual,cobertura: país (añadido antes del gold)
+Venezuela,,,pais,LOC,manual,cobertura: país (añadido antes del gold)
+Colombia,,,pais,LOC,manual,cobertura: país (añadido antes del gold)
+Brasil,,,pais,LOC,manual,cobertura: país (añadido antes del gold)
+Chile,,,pais,LOC,manual,cobertura: país (añadido antes del gold)
+Bolivia,,,pais,LOC,manual,cobertura: país (añadido antes del gold)
+Perú,,,pais,LOC,manual,cobertura: país (añadido antes del gold)
+España,,,pais,LOC,manual,cobertura: país (añadido antes del gold)
+Francia,,,pais,LOC,manual,cobertura: país (añadido antes del gold)
+Alemania,,,pais,LOC,manual,cobertura: país (añadido antes del gold)
+Italia,,,pais,LOC,manual,cobertura: país (añadido antes del gold)
+Reino Unido,,,pais,LOC,manual,cobertura: país (añadido antes del gold)
+Japón,,,pais,LOC,manual,cobertura: país (añadido antes del gold)
+Ucrania,,,pais,LOC,manual,cobertura: país (añadido antes del gold)
+Monterrey,,,ciudad,LOC,manual,cobertura: ciudad frecuente (añadida antes del gold)
+Guadalajara,,,ciudad,LOC,manual,cobertura: ciudad frecuente (añadida antes del gold)
+Tijuana,,,ciudad,LOC,manual,cobertura: ciudad frecuente (añadida antes del gold)
+Ciudad Juárez,,,ciudad,LOC,manual,cobertura: ciudad frecuente (añadida antes del gold)
+Acapulco,,,ciudad,LOC,manual,cobertura: ciudad frecuente (añadida antes del gold)
+Culiacán,,,ciudad,LOC,manual,cobertura: ciudad frecuente (añadida antes del gold)
+Hermosillo,,,ciudad,LOC,manual,cobertura: ciudad frecuente (añadida antes del gold)
+Villahermosa,,,ciudad,LOC,manual,cobertura: ciudad frecuente (añadida antes del gold)
+Valladolid,,,ciudad,LOC,manual,cobertura: ciudad frecuente (añadida antes del gold)
+Playa del Carmen,,,ciudad,LOC,manual,cobertura: ciudad frecuente (añadida antes del gold)
+Bacalar,,,ciudad,LOC,manual,cobertura: ciudad frecuente (añadida antes del gold)
+Calakmul,,,ciudad,LOC,manual,cobertura: ciudad frecuente (añadida antes del gold)
+Tehuantepec,,,ciudad,LOC,manual,cobertura: ciudad frecuente (añadida antes del gold)
+Paraíso,,,ciudad,LOC,manual,cobertura: ciudad frecuente (añadida antes del gold)
+Cadereyta,,,ciudad,LOC,manual,cobertura: ciudad frecuente (añadida antes del gold)
+Ciudad Madero,,,ciudad,LOC,manual,cobertura: ciudad frecuente (añadida antes del gold)
+Texcoco,,,ciudad,LOC,manual,cobertura: ciudad frecuente (añadida antes del gold)
+Zumpango,,,ciudad,LOC,manual,cobertura: ciudad frecuente (añadida antes del gold)
+Tecámac,,,ciudad,LOC,manual,cobertura: ciudad frecuente (añadida antes del gold)
+Toluca,,,ciudad,LOC,manual,cobertura: ciudad frecuente (añadida antes del gold)
+Matamoros,,,ciudad,LOC,manual,cobertura: ciudad frecuente (añadida antes del gold)
+Reynosa,,,ciudad,LOC,manual,cobertura: ciudad frecuente (añadida antes del gold)
+Nuevo Laredo,,,ciudad,LOC,manual,cobertura: ciudad frecuente (añadida antes del gold)

@@ -1,0 +1,38 @@
+{
+  "ambito": {
+    "pares_consulta_pasaje": 100,
+    "pasajes_unicos": 99
+  },
+  "gazetteer": {
+    "origen": {
+      "kit": 76,
+      "manual": 16
+    },
+    "etiqueta": {
+      "ORG": 88,
+      "LOC": 4
+    },
+    "loc": 102,
+    "siglas_candidatas": 104
+  },
+  "entidades_por_tipo": {
+    "LOC": 335,
+    "PER": 82,
+    "ORG": 78,
+    "MONTO": 32,
+    "FECHA": 25
+  },
+  "entidades_por_fuente": {
+    "gazetteer_loc": 335,
+    "marca": 82,
+    "gazetteer_org": 78,
+    "regex_monto": 32,
+    "regex_fecha": 25
+  },
+  "entidades_en_marca": 94,
+  "auxiliares": {
+    "CANTIDAD": 55,
+    "PORCENTAJE": 33
+  },
+  "colisiones": {}
+}

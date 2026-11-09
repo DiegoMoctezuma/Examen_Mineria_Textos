@@ -1,0 +1,553 @@
+passage_id,tipo,texto,inicio,fin,fuente,en_marca
+1116_10,PER,HUGO LÓPEZ-GATELL RAMÍREZ,0,25,marca,True
+1116_10,LOC,México,1264,1270,gazetteer_loc,False
+1122_3,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+1122_3,LOC,Guatemala,737,746,gazetteer_loc,False
+1122_3,LOC,El Salvador,751,762,gazetteer_loc,False
+1122_3,LOC,Honduras,767,775,gazetteer_loc,False
+1128_40,PER,JOSÉ RAFAEL OJEDA DURÁN,0,23,marca,True
+1128_40,LOC,Baja California Sur,190,209,gazetteer_loc,False
+1128_40,LOC,Corredor Interoceánico del Istmo de Tehuantepec,260,307,gazetteer_loc,False
+1128_40,ORG,Secretaría de Marina,692,712,gazetteer_org,False
+1128_40,LOC,Oaxaca,748,754,gazetteer_loc,False
+1128_40,LOC,Istmo de Tehuantepec,793,813,gazetteer_loc,False
+1128_40,LOC,tren interoceánico,880,898,gazetteer_loc,False
+1128_40,ORG,Guardia Nacional,1104,1120,gazetteer_org,False
+1133_87,PER,MELINA VEGA,0,11,marca,True
+1145_65,LOC,Quintana Roo,196,208,gazetteer_loc,False
+1145_65,LOC,Quintana Roo,311,323,gazetteer_loc,False
+1188_80,FECHA,28 de marzo,24,35,regex_fecha,False
+1188_80,LOC,México,36,42,gazetteer_loc,False
+1188_80,ORG,AstraZeneca,91,102,gazetteer_org,False
+1188_80,LOC,México,240,246,gazetteer_loc,False
+1188_80,LOC,Estados Unidos,282,296,gazetteer_loc,False
+1188_80,FECHA,27 de marzo,445,456,regex_fecha,False
+1188_80,ORG,CanSino Biologics,476,493,gazetteer_org,False
+1188_80,ORG,Pfizer,680,686,gazetteer_org,False
+1188_80,ORG,BioNTech,687,695,gazetteer_org,False
+1188_80,ORG,AstraZeneca,697,708,gazetteer_org,False
+1188_80,ORG,Sputnik V,719,728,gazetteer_org,False
+1188_80,ORG,Gamaleya,800,808,gazetteer_org,False
+1188_80,ORG,CanSino Biologics,814,831,gazetteer_org,False
+1188_80,ORG,CanSino,899,906,gazetteer_org,False
+1188_80,LOC,Querétaro,941,950,gazetteer_loc,False
+1188_80,LOC,México,1186,1192,gazetteer_loc,False
+1216_44,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+1219_83,PER,HUMBERTO ORTIZ CASTAÑEDA,0,24,marca,True
+1219_83,LOC,Jalisco,98,105,gazetteer_loc,False
+1219_83,ORG,AstraZeneca,270,281,gazetteer_org,False
+1219_83,LOC,Jalisco,327,334,gazetteer_loc,False
+1219_83,ORG,Sinovac,349,356,gazetteer_org,False
+1253_5,PER,JORGE ALCOCER VARELA,0,20,marca,True
+1253_5,LOC,México,70,76,gazetteer_loc,False
+1253_5,FECHA,14 de febrero de 2021,256,277,regex_fecha,False
+1253_5,LOC,México,418,424,gazetteer_loc,False
+1259_59,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+1259_59,LOC,Ciudad de México,46,62,gazetteer_loc,False
+1259_59,LOC,Santa Lucía,71,82,gazetteer_loc,False
+1259_59,LOC,Ciudad de México,163,179,gazetteer_loc,False
+1259_59,LOC,Santa Lucía,199,210,gazetteer_loc,False
+1259_59,LOC,Santa Lucía,230,241,gazetteer_loc,False
+1259_59,LOC,Toluca,813,819,gazetteer_loc,False
+1259_59,LOC,Texcoco,1145,1152,gazetteer_loc,False
+1272_17,LOC,Istmo de Tehuantepec,109,129,gazetteer_loc,False
+1272_17,LOC,Salina Cruz,182,193,gazetteer_loc,False
+1272_17,LOC,Istmo de Tehuantepec,339,359,gazetteer_loc,False
+1272_17,LOC,México,444,450,gazetteer_loc,False
+1277_28,PER,CAROLINA VARGAS,0,15,marca,True
+1277_28,ORG,IMSS,722,726,gazetteer_org,False
+1277_28,LOC,Sonora,730,736,gazetteer_loc,False
+1290_42,LOC,Sonora,125,131,gazetteer_loc,False
+1290_42,LOC,Tijuana,173,180,gazetteer_loc,False
+1290_42,LOC,Baja California,258,273,gazetteer_loc,False
+1290_42,LOC,Sonora,278,284,gazetteer_loc,False
+1290_77,PER,JORGE ALCOCER VARELA,0,20,marca,True
+1290_77,ORG,Pfizer,240,246,gazetteer_org,False
+1290_77,ORG,Pfizer,430,436,gazetteer_org,False
+1290_77,ORG,BioNTech,437,445,gazetteer_org,False
+1293_76,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+1293_76,LOC,México,346,352,gazetteer_loc,False
+1293_76,ORG,Banco del Bienestar,938,957,gazetteer_org,False
+1297_31,ORG,Pfizer,733,739,gazetteer_org,False
+1297_31,ORG,AstraZeneca,751,762,gazetteer_org,False
+1298_13,LOC,Tren Maya,11,20,gazetteer_loc,False
+1298_13,ORG,INAH,288,292,gazetteer_org,False
+1298_13,LOC,Tren Maya,615,624,gazetteer_loc,False
+1298_13,LOC,Tren Maya,781,790,gazetteer_loc,False
+1298_13,LOC,Tren Maya,825,834,gazetteer_loc,False
+1298_13,LOC,Tren Maya,1144,1153,gazetteer_loc,False
+1310_37,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+1310_37,LOC,Guerrero,254,262,gazetteer_loc,False
+1316_37,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+1316_37,LOC,Texcoco,54,61,gazetteer_loc,False
+1316_37,LOC,Texcoco,181,188,gazetteer_loc,False
+1316_37,LOC,Santa Lucía,245,256,gazetteer_loc,False
+1316_37,LOC,Toluca,441,447,gazetteer_loc,False
+1316_37,LOC,Ciudad de México,470,486,gazetteer_loc,False
+1318_22,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+1318_22,LOC,México,428,434,gazetteer_loc,False
+1318_22,LOC,México,556,562,gazetteer_loc,False
+1342_19,LOC,Corredor Interoceánico del Istmo de Tehuantepec,14,61,gazetteer_loc,False
+1342_19,FECHA,23 de noviembre de 2020,92,115,regex_fecha,False
+1342_19,LOC,Coatzacoalcos,133,146,gazetteer_loc,False
+1342_19,LOC,Salina Cruz,593,604,gazetteer_loc,False
+1342_19,LOC,Istmo de Tehuantepec,964,984,gazetteer_loc,False
+1342_19,MONTO,tres mil millones de pesos,1014,1040,regex_monto,False
+1395_0,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+1395_0,LOC,Yucatán,58,65,gazetteer_loc,False
+1395_0,LOC,Tren Maya,144,153,gazetteer_loc,False
+1395_0,LOC,Tren Maya,402,411,gazetteer_loc,False
+1395_0,LOC,Yucatán,658,665,gazetteer_loc,False
+1395_0,LOC,Tren Maya,731,740,gazetteer_loc,False
+1395_0,LOC,Yucatán,755,762,gazetteer_loc,False
+1395_0,LOC,Yucatán,773,780,gazetteer_loc,False
+1395_0,LOC,Tren Maya,874,883,gazetteer_loc,False
+1395_0,FECHA,2023,1024,1028,regex_fecha,False
+1395_0,ORG,ICA,1129,1132,gazetteer_org,False
+1415_16,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+1415_16,MONTO,tres mil millones de pesos,205,231,regex_monto,False
+1415_16,LOC,Veracruz,250,258,gazetteer_loc,False
+1415_16,LOC,Veracruz,276,284,gazetteer_loc,False
+1415_16,MONTO,cinco mil pesos,748,763,regex_monto,False
+1415_16,LOC,Veracruz,943,951,gazetteer_loc,False
+1415_16,LOC,Veracruz,983,991,gazetteer_loc,False
+1458_12,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+1458_12,LOC,Tren Maya,148,157,gazetteer_loc,False
+1458_12,LOC,Tren Maya,351,360,gazetteer_loc,False
+1458_12,LOC,Istmo de Tehuantepec,377,397,gazetteer_loc,False
+1527_0,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+1527_0,LOC,México,249,255,gazetteer_loc,False
+1527_0,LOC,Salina Cruz,318,329,gazetteer_loc,False
+1527_0,LOC,Dos Bocas,816,825,gazetteer_loc,False
+1527_0,LOC,Paraíso,833,840,gazetteer_loc,False
+1527_0,LOC,Tabasco,842,849,gazetteer_loc,False
+1527_0,LOC,Paraíso,853,860,gazetteer_loc,False
+1527_0,LOC,Tabasco,862,869,gazetteer_loc,False
+1527_0,LOC,Dos Bocas,923,932,gazetteer_loc,False
+1606_0,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+1606_0,LOC,Santa Lucía,141,152,gazetteer_loc,False
+1606_0,LOC,Hidalgo,577,584,gazetteer_loc,False
+1606_0,LOC,Texcoco,958,965,gazetteer_loc,False
+1606_0,LOC,Santa Lucía,1009,1020,gazetteer_loc,False
+1606_0,FECHA,18 de marzo de 1938,1125,1144,regex_fecha,False
+1606_1,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+1606_1,LOC,Santa Lucía,67,78,gazetteer_loc,False
+1606_1,FECHA,18 de marzo de 1938,183,202,regex_fecha,False
+1606_1,FECHA,18 de marzo de 2020,342,361,regex_fecha,False
+1606_1,LOC,Santa Lucía,915,926,gazetteer_loc,False
+1606_1,LOC,Santa Lucía,962,973,gazetteer_loc,False
+1606_1,LOC,Toluca,994,1000,gazetteer_loc,False
+1606_1,LOC,Santa Lucía,1048,1059,gazetteer_loc,False
+1606_2,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+1606_2,LOC,Santa Lucía,67,78,gazetteer_loc,False
+1606_2,LOC,Santa Lucía,114,125,gazetteer_loc,False
+1606_2,LOC,Toluca,146,152,gazetteer_loc,False
+1606_2,LOC,Santa Lucía,200,211,gazetteer_loc,False
+1606_2,LOC,Estado de México,471,487,gazetteer_loc,False
+1606_2,LOC,Santa Lucía,755,766,gazetteer_loc,False
+1606_2,LOC,Toluca,927,933,gazetteer_loc,False
+1606_2,LOC,Ciudad de México,935,951,gazetteer_loc,False
+1606_2,LOC,Santa Lucía,954,965,gazetteer_loc,False
+1626_3,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+1640_5,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+1640_5,LOC,México,413,419,gazetteer_loc,False
+1685_4,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+1685_4,MONTO,tres mil 600 pesos,156,174,regex_monto,False
+1685_4,LOC,México,460,466,gazetteer_loc,False
+1691_3,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+1719_37,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+1719_37,MONTO,200 pesos,1072,1081,regex_monto,False
+1733_3,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+1787_11,LOC,Dos Bocas,186,195,gazetteer_loc,False
+1787_11,LOC,Tabasco,197,204,gazetteer_loc,False
+1812_0,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+1812_0,LOC,Santa Lucía,196,207,gazetteer_loc,False
+1812_0,LOC,Santa Lucía,326,337,gazetteer_loc,False
+1812_0,LOC,Ciudad de México,466,482,gazetteer_loc,False
+1812_0,LOC,Ciudad de México,535,551,gazetteer_loc,False
+1812_0,MONTO,100 mil millones de pesos,681,706,regex_monto,False
+1812_0,LOC,Texcoco,779,786,gazetteer_loc,False
+1812_0,LOC,Santa Lucía,995,1006,gazetteer_loc,False
+1812_0,LOC,Estado de México,1013,1029,gazetteer_loc,False
+1812_0,FECHA,2021,1042,1046,regex_fecha,False
+1812_0,LOC,Ciudad de México,1126,1142,gazetteer_loc,False
+1812_0,LOC,Toluca,1167,1173,gazetteer_loc,False
+1850_6,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+1850_6,MONTO,cinco mil pesos,1082,1097,regex_monto,False
+1870_19,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+1870_19,MONTO,cinco mil pesos,777,792,regex_monto,False
+1870_19,LOC,Tamaulipas,998,1008,gazetteer_loc,False
+1870_19,LOC,Tamaulipas,1094,1104,gazetteer_loc,False
+1943_6,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+1943_6,MONTO,mil 160 pesos,114,127,regex_monto,False
+1943_6,MONTO,diez mil millones de pesos,407,433,regex_monto,False
+1943_6,LOC,Ciudad de México,541,557,gazetteer_loc,False
+1943_6,LOC,Ciudad de México,944,960,gazetteer_loc,False
+1998_12,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+1998_12,LOC,México,249,255,gazetteer_loc,False
+1998_12,LOC,Quintana Roo,511,523,gazetteer_loc,False
+1998_12,LOC,Quintana Roo,904,916,gazetteer_loc,False
+1998_12,LOC,Yucatán,921,928,gazetteer_loc,False
+1998_12,LOC,Campeche,933,941,gazetteer_loc,False
+1998_12,LOC,Chiapas,946,953,gazetteer_loc,False
+1998_12,LOC,Tabasco,958,965,gazetteer_loc,False
+1998_12,LOC,Veracruz,970,978,gazetteer_loc,False
+2008_2,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+2008_2,MONTO,65 mil millones de pesos,81,105,regex_monto,False
+2030_1,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+2030_1,LOC,México,43,49,gazetteer_loc,False
+2030_1,LOC,Colima,340,346,gazetteer_loc,False
+2030_1,MONTO,dos mil 550 pesos,530,547,regex_monto,False
+2030_1,MONTO,dos mil 550 pesos,911,928,regex_monto,False
+2033_3,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+2033_3,LOC,Dos Bocas,620,629,gazetteer_loc,False
+2033_3,LOC,Tabasco,650,657,gazetteer_loc,False
+2033_3,LOC,Dos Bocas,786,795,gazetteer_loc,False
+2033_3,LOC,Campeche,877,885,gazetteer_loc,False
+2033_3,LOC,Tabasco,891,898,gazetteer_loc,False
+2033_3,LOC,Dos Bocas,946,955,gazetteer_loc,False
+2045_9,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+2045_9,ORG,Pemex,318,323,gazetteer_org,False
+2045_9,ORG,Pemex,370,375,gazetteer_org,False
+2045_9,LOC,Dos Bocas,955,964,gazetteer_loc,False
+2045_9,LOC,Paraíso,966,973,gazetteer_loc,False
+2045_9,LOC,Tabasco,975,982,gazetteer_loc,False
+2045_9,LOC,Dos Bocas,1034,1043,gazetteer_loc,False
+2045_9,LOC,Campeche,1133,1141,gazetteer_loc,False
+2045_9,LOC,Tabasco,1157,1164,gazetteer_loc,False
+2045_9,LOC,Dos Bocas,1210,1219,gazetteer_loc,False
+2086_10,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+2086_10,LOC,Morelos,292,299,gazetteer_loc,False
+2086_10,FECHA,noviembre de 1919,735,752,regex_fecha,False
+2086_10,LOC,Santa Lucía,823,834,gazetteer_loc,False
+2086_10,LOC,Hidalgo,874,881,gazetteer_loc,False
+2086_10,LOC,Santa Lucía,1032,1043,gazetteer_loc,False
+2088_3,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+2088_3,MONTO,mil 160 pesos,245,258,regex_monto,False
+2088_3,MONTO,dos mil 550 pesos,265,282,regex_monto,False
+2088_3,ORG,Pemex,662,667,gazetteer_org,False
+2088_3,ORG,Comisión Federal de Electricidad,713,745,gazetteer_org,False
+2088_3,MONTO,120 mil millones de pesos,808,833,regex_monto,False
+2088_3,LOC,México,867,873,gazetteer_loc,False
+2088_3,MONTO,mil 600 pesos,1167,1180,regex_monto,False
+2115_4,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+2115_4,MONTO,65 mil millones de pesos,840,864,regex_monto,False
+2115_4,LOC,Michoacán,896,905,gazetteer_loc,False
+2115_4,LOC,Michoacán,999,1008,gazetteer_loc,False
+2115_5,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+2115_5,LOC,Michoacán,132,141,gazetteer_loc,False
+2115_5,ORG,Pemex,379,384,gazetteer_org,False
+2149_27,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+2149_27,LOC,Dos Bocas,398,407,gazetteer_loc,False
+2149_27,MONTO,50 mil millones de pesos,447,471,regex_monto,False
+2149_27,LOC,Campeche,619,627,gazetteer_loc,False
+2149_27,LOC,Tabasco,668,675,gazetteer_loc,False
+2149_27,LOC,Veracruz,680,688,gazetteer_loc,False
+2149_27,LOC,Dos Bocas,716,725,gazetteer_loc,False
+2149_27,LOC,Dos Bocas,738,747,gazetteer_loc,False
+2149_27,LOC,Dos Bocas,908,917,gazetteer_loc,False
+216_81,PER,ÓSCAR DAVID LOZANO ÁGUILA,0,25,marca,True
+216_81,LOC,Tren Maya,125,134,gazetteer_loc,False
+216_81,LOC,corredor interoceánico del Istmo de Tehuantepec,582,629,gazetteer_loc,False
+216_81,LOC,Tren Maya,637,646,gazetteer_loc,False
+216_81,LOC,Palenque,674,682,gazetteer_loc,False
+216_81,LOC,Palenque,823,831,gazetteer_loc,False
+216_81,LOC,Escárcega,909,918,gazetteer_loc,False
+216_81,LOC,Campeche,998,1006,gazetteer_loc,False
+216_81,LOC,Mérida,1149,1155,gazetteer_loc,False
+2170_1,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+2171_28,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+2190_6,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+2190_6,MONTO,mil millones de pesos,40,61,regex_monto,False
+2190_6,MONTO,35 mil millones de pesos,347,371,regex_monto,False
+2190_6,MONTO,56 mil millones de pesos,540,564,regex_monto,False
+2190_6,LOC,Ciudad de México,983,999,gazetteer_loc,False
+2191_4,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+2191_4,MONTO,65 mil millones de pesos,443,467,regex_monto,False
+2191_4,LOC,Ciudad de México,861,877,gazetteer_loc,False
+2191_4,LOC,Hidalgo,1010,1017,gazetteer_loc,False
+2199_29,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+2199_29,LOC,Hidalgo,71,78,gazetteer_loc,False
+2199_29,LOC,México,288,294,gazetteer_loc,False
+2202_5,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+2202_5,LOC,Santa Lucía,109,120,gazetteer_loc,False
+2202_5,FECHA,1978,280,284,regex_fecha,False
+2202_5,LOC,Santa Lucía,750,761,gazetteer_loc,False
+2202_5,LOC,Santa Lucía,815,826,gazetteer_loc,False
+2202_5,LOC,Santa Lucía,972,983,gazetteer_loc,False
+2208_8,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+2208_8,MONTO,35 mil millones de pesos,224,248,regex_monto,False
+2208_8,MONTO,65 mil millones de pesos,443,467,regex_monto,False
+2209_3,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+2209_3,MONTO,dos mil 550 pesos,87,104,regex_monto,False
+2209_3,ORG,Pemex,256,261,gazetteer_org,False
+2250_60,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+2250_60,LOC,Dos Bocas,78,87,gazetteer_loc,False
+2250_60,MONTO,80 mil millones de pesos,345,369,regex_monto,False
+2259_13,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+2265_8,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+2265_8,LOC,España,544,550,gazetteer_loc,False
+2265_8,LOC,México,634,640,gazetteer_loc,False
+2265_8,LOC,España,674,680,gazetteer_loc,False
+2265_8,LOC,España,719,725,gazetteer_loc,False
+2265_8,LOC,Ciudad Juárez,1058,1071,gazetteer_loc,False
+2274_1,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+2274_1,LOC,México,368,374,gazetteer_loc,False
+2274_1,ORG,Pemex,884,889,gazetteer_org,False
+2274_1,ORG,Pemex,906,911,gazetteer_org,False
+228_7,LOC,México,27,33,gazetteer_loc,False
+228_7,LOC,Estados Unidos,270,284,gazetteer_loc,False
+228_7,LOC,Corredor Interoceánico del Istmo de Tehuantepec,340,387,gazetteer_loc,False
+228_7,LOC,México,405,411,gazetteer_loc,False
+228_7,LOC,Corredor Interoceánico del Istmo de Tehuantepec,435,482,gazetteer_loc,False
+228_7,ORG,Secretaría de Marina,500,520,gazetteer_org,False
+228_7,LOC,Salina Cruz,686,697,gazetteer_loc,False
+228_7,LOC,Coatzacoalcos,699,712,gazetteer_loc,False
+228_7,LOC,Dos Bocas,714,723,gazetteer_loc,False
+228_7,LOC,Chiapas,733,740,gazetteer_loc,False
+228_7,LOC,Istmo de Tehuantepec,769,789,gazetteer_loc,False
+228_7,LOC,México,906,912,gazetteer_loc,False
+228_7,LOC,Coatzacoalcos,1144,1157,gazetteer_loc,False
+228_7,LOC,Salina Cruz,1247,1258,gazetteer_loc,False
+256_14,PER,JOSÉ RAFAEL OJEDA DURÁN,0,23,marca,True
+256_14,LOC,Salina Cruz,50,61,gazetteer_loc,False
+256_14,LOC,México,242,248,gazetteer_loc,False
+256_14,LOC,Coatzacoalcos,442,455,gazetteer_loc,False
+256_14,LOC,Salina Cruz,458,469,gazetteer_loc,False
+256_14,LOC,Istmo de Tehuantepec,820,840,gazetteer_loc,False
+256_14,LOC,Istmo de Tehuantepec,930,950,gazetteer_loc,False
+256_14,LOC,Istmo de Tehuantepec,1094,1114,gazetteer_loc,False
+278_3,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+278_3,MONTO,350 mil millones de pesos,578,603,regex_monto,False
+278_3,ORG,Banco del Bienestar,682,701,gazetteer_org,False
+278_3,LOC,Sinaloa,857,864,gazetteer_loc,False
+278_3,LOC,Sinaloa,1014,1021,gazetteer_loc,False
+278_3,LOC,Sinaloa,1102,1109,gazetteer_loc,False
+326_25,ORG,SECRETARÍA DE LA DEFENSA NACIONAL,38,71,gazetteer_org,True
+326_25,ORG,SEDENA,73,79,gazetteer_org,True
+326_25,LOC,Tren Maya,94,103,gazetteer_loc,False
+343_2,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+343_2,LOC,Estado de México,121,137,gazetteer_loc,False
+343_2,LOC,Estado de México,397,413,gazetteer_loc,False
+343_2,FECHA,enero,870,875,regex_fecha,False
+347_71,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+347_71,ORG,Banco del Bienestar,737,756,gazetteer_org,False
+354_33,PER,RAYMUNDO MORALES ÁNGELES,0,24,marca,True
+354_33,LOC,CORREDOR INTEROCEÁNICO DEL ISTMO DE TEHUANTEPEC,47,94,gazetteer_loc,True
+354_33,LOC,CIIT,96,100,gazetteer_loc,True
+354_33,LOC,Corredor Interoceánico del Istmo de Tehuantepec,182,229,gazetteer_loc,False
+354_33,LOC,México,273,279,gazetteer_loc,False
+354_33,LOC,Istmo de Tehuantepec,458,478,gazetteer_loc,False
+354_33,LOC,Corredor Interoceánico,483,505,gazetteer_loc,False
+354_33,LOC,Salina Cruz,529,540,gazetteer_loc,False
+354_33,LOC,Coatzacoalcos,542,555,gazetteer_loc,False
+354_33,LOC,Chiapas,564,571,gazetteer_loc,False
+354_33,LOC,Dos Bocas,574,583,gazetteer_loc,False
+354_33,LOC,Istmo de Tehuantepec,846,866,gazetteer_loc,False
+354_33,LOC,Coatzacoalcos,936,949,gazetteer_loc,False
+354_33,LOC,Salina Cruz,952,963,gazetteer_loc,False
+354_33,FECHA,diciembre de este año,1178,1199,regex_fecha,False
+354_33,LOC,Coatzacoalcos,1289,1302,gazetteer_loc,False
+354_33,LOC,Palenque,1305,1313,gazetteer_loc,False
+354_38,LOC,Istmo de Tehuantepec,43,63,gazetteer_loc,False
+354_38,LOC,Corredor Interoceánico,151,173,gazetteer_loc,False
+354_38,LOC,Coatzacoalcos,236,249,gazetteer_loc,False
+354_38,LOC,Salina Cruz,252,263,gazetteer_loc,False
+354_38,LOC,Corredor Interoceánico,605,627,gazetteer_loc,False
+354_38,LOC,Estados Unidos,848,862,gazetteer_loc,False
+354_38,LOC,Istmo de Tehuantepec,986,1006,gazetteer_loc,False
+354_38,LOC,Corredor Interoceánico,1030,1052,gazetteer_loc,False
+396_23,ORG,SECRETARÍA DE LA DEFENSA NACIONAL,38,71,gazetteer_org,True
+396_23,ORG,SEDENA,73,79,gazetteer_org,True
+396_23,LOC,Mérida,409,415,gazetteer_loc,False
+396_23,LOC,Tren Maya,534,543,gazetteer_loc,False
+396_23,FECHA,noviembre del presente año,769,795,regex_fecha,False
+396_23,LOC,Tren Maya,1031,1040,gazetteer_loc,False
+396_23,LOC,Mérida,1068,1074,gazetteer_loc,False
+396_23,LOC,Tren Maya,1155,1164,gazetteer_loc,False
+396_24,ORG,SECRETARÍA DE LA DEFENSA NACIONAL,38,71,gazetteer_org,True
+396_24,ORG,SEDENA,73,79,gazetteer_org,True
+396_24,LOC,Tren Maya,185,194,gazetteer_loc,False
+396_24,LOC,Mérida,222,228,gazetteer_loc,False
+396_24,LOC,Tren Maya,309,318,gazetteer_loc,False
+419_11,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+419_11,ORG,Banco del Bienestar,720,739,gazetteer_org,False
+419_11,LOC,Puebla,776,782,gazetteer_loc,False
+419_11,ORG,Banco del Bienestar,815,834,gazetteer_org,False
+419_11,ORG,Banco del Bienestar,1034,1053,gazetteer_org,False
+419_11,LOC,Puebla,1093,1099,gazetteer_loc,False
+419_11,ORG,Banco del Bienestar,1128,1147,gazetteer_org,False
+419_11,ORG,Banco del Bienestar,1212,1231,gazetteer_org,False
+420_10,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+420_10,ORG,Banco del Bienestar,97,116,gazetteer_org,False
+420_10,ORG,Banco del Bienestar,452,471,gazetteer_org,False
+420_10,ORG,Banco del Bienestar,554,573,gazetteer_org,False
+420_10,ORG,Banco del Bienestar,717,736,gazetteer_org,False
+420_10,LOC,México,845,851,gazetteer_loc,False
+420_10,ORG,Banco del Bienestar,856,875,gazetteer_org,False
+476_28,PER,DIEGO PRIETO HERNÁNDEZ,0,22,marca,True
+476_28,ORG,INSTITUTO NACIONAL DE ANTROPOLOGÍA E HISTORIA,45,90,gazetteer_org,True
+476_28,ORG,INAH,92,96,gazetteer_org,True
+476_28,LOC,Mérida,542,548,gazetteer_loc,False
+476_28,LOC,Yucatán,550,557,gazetteer_loc,False
+476_28,LOC,Tren Maya,893,902,gazetteer_loc,False
+476_28,LOC,Tren Maya,1075,1084,gazetteer_loc,False
+478_44,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+478_44,LOC,Rusia,1168,1173,gazetteer_loc,False
+478_44,LOC,Ucrania,1174,1181,gazetteer_loc,False
+487_29,PER,JOAO PEDRO PARREIRA,0,19,marca,True
+487_29,LOC,Chiapas,162,169,gazetteer_loc,False
+487_29,LOC,Palenque,197,205,gazetteer_loc,False
+487_29,LOC,Chiapas,207,214,gazetteer_loc,False
+487_29,LOC,Tren Maya,250,259,gazetteer_loc,False
+487_29,LOC,Palenque,275,283,gazetteer_loc,False
+487_29,LOC,Tren Maya,468,477,gazetteer_loc,False
+487_29,LOC,Tren Maya,730,739,gazetteer_loc,False
+487_29,LOC,Tabasco,1161,1168,gazetteer_loc,False
+490_61,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+490_61,LOC,Chiapas,185,192,gazetteer_loc,False
+490_61,LOC,Chiapas,230,237,gazetteer_loc,False
+490_61,ORG,Banco del Bienestar,329,348,gazetteer_org,False
+490_61,LOC,Chiapas,497,504,gazetteer_loc,False
+490_61,LOC,Oaxaca,606,612,gazetteer_loc,False
+490_61,LOC,Oaxaca,633,639,gazetteer_loc,False
+490_61,ORG,Banco del Bienestar,719,738,gazetteer_org,False
+490_61,ORG,Banco del Bienestar,778,797,gazetteer_org,False
+490_61,LOC,Chiapas,812,819,gazetteer_loc,False
+490_61,ORG,Banco del Bienestar,1115,1134,gazetteer_org,False
+490_61,LOC,Oaxaca,1161,1167,gazetteer_loc,False
+499_68,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+499_68,ORG,Banco del Bienestar,257,276,gazetteer_org,False
+499_68,ORG,Banco del Bienestar,412,431,gazetteer_org,False
+499_68,ORG,Banco del Bienestar,451,470,gazetteer_org,False
+499_68,LOC,Zacatecas,487,496,gazetteer_loc,False
+499_68,ORG,Banco del Bienestar,685,704,gazetteer_org,False
+499_68,FECHA,julio,1186,1191,regex_fecha,False
+504_31,ORG,SECRETARÍA DE LA DEFENSA NACIONAL,0,33,gazetteer_org,True
+504_31,ORG,SEDENA,35,41,gazetteer_org,True
+504_31,ORG,INAH,143,147,gazetteer_org,False
+504_31,LOC,Tren Maya,604,613,gazetteer_loc,False
+504_31,LOC,Corredor Interoceánico del Istmo de Tehuantepec,663,710,gazetteer_loc,False
+504_31,ORG,Secretaría de Marina,730,750,gazetteer_org,False
+504_31,LOC,Palenque,904,912,gazetteer_loc,False
+504_31,LOC,Corredor Interoceánico,948,970,gazetteer_loc,False
+504_31,LOC,Tren Maya,976,985,gazetteer_loc,False
+504_31,LOC,Campeche,1033,1041,gazetteer_loc,False
+504_31,LOC,Mérida,1059,1065,gazetteer_loc,False
+504_31,LOC,Cancún,1070,1076,gazetteer_loc,False
+504_31,LOC,Chetumal,1082,1090,gazetteer_loc,False
+504_31,ORG,Petróleos Mexicanos,1218,1237,gazetteer_org,False
+504_31,ORG,Pemex,1257,1262,gazetteer_org,False
+504_31,LOC,Tren Maya,1293,1302,gazetteer_loc,False
+507_44,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+507_44,FECHA,julio,223,228,regex_fecha,False
+507_44,ORG,Banco del Bienestar,261,280,gazetteer_org,False
+507_44,LOC,México,325,331,gazetteer_loc,False
+507_44,ORG,Banco del Bienestar,440,459,gazetteer_org,False
+507_44,FECHA,julio,718,723,regex_fecha,False
+507_44,ORG,Banco del Bienestar,851,870,gazetteer_org,False
+507_44,MONTO,600 mil millones de pesos,871,896,regex_monto,False
+525_29,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+525_29,ORG,Banco del Bienestar,400,419,gazetteer_org,False
+525_29,LOC,Jalisco,443,450,gazetteer_loc,False
+525_29,ORG,Banco del Bienestar,501,520,gazetteer_org,False
+525_29,ORG,Banco del Bienestar,636,655,gazetteer_org,False
+525_29,MONTO,600 mil millones de pesos,701,726,regex_monto,False
+525_29,ORG,Banco del Bienestar,961,980,gazetteer_org,False
+549_11,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+549_11,ORG,Banco del Bienestar,162,181,gazetteer_org,False
+549_11,LOC,Oaxaca,200,206,gazetteer_loc,False
+549_11,LOC,Oaxaca,291,297,gazetteer_loc,False
+549_11,LOC,México,303,309,gazetteer_loc,False
+549_11,ORG,Banco del Bienestar,313,332,gazetteer_org,False
+549_11,LOC,Rusia,793,798,gazetteer_loc,False
+549_11,LOC,Ucrania,801,808,gazetteer_loc,False
+549_11,FECHA,julio,999,1004,regex_fecha,False
+549_11,ORG,Banco del Bienestar,1052,1071,gazetteer_org,False
+549_11,LOC,Oaxaca,1075,1081,gazetteer_loc,False
+578_0,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+578_0,ORG,Instituto Nacional de Antropología e Historia,338,383,gazetteer_org,False
+578_0,LOC,Tren Maya,529,538,gazetteer_loc,False
+578_0,LOC,Tren Maya,654,663,gazetteer_loc,False
+578_0,LOC,Tren Maya,824,833,gazetteer_loc,False
+630_73,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+630_73,ORG,Banco del Bienestar,93,112,gazetteer_org,False
+630_73,FECHA,noviembre,117,126,regex_fecha,False
+630_73,LOC,Ciudad de México,229,245,gazetteer_loc,False
+630_73,ORG,Banco del Bienestar,921,940,gazetteer_org,False
+657_54,LOC,Tabasco,82,89,gazetteer_loc,False
+657_54,LOC,Dos Bocas,232,241,gazetteer_loc,False
+657_54,LOC,Tabasco,388,395,gazetteer_loc,False
+657_54,LOC,Dos Bocas,537,546,gazetteer_loc,False
+657_54,LOC,Dos Bocas,671,680,gazetteer_loc,False
+657_54,LOC,Paraíso,784,791,gazetteer_loc,False
+657_54,LOC,Tabasco,877,884,gazetteer_loc,False
+744_69,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+744_69,FECHA,2024,202,206,regex_fecha,False
+745_5,PER,ANA ELIZABETH GARCÍA VILCHIS,0,28,marca,True
+745_5,LOC,México,151,157,gazetteer_loc,False
+745_5,LOC,Dos Bocas,295,304,gazetteer_loc,False
+745_5,LOC,refinería Olmeca,400,416,gazetteer_loc,False
+745_5,LOC,Dos Bocas,433,442,gazetteer_loc,False
+745_5,LOC,Paraíso,444,451,gazetteer_loc,False
+745_5,LOC,Tabasco,453,460,gazetteer_loc,False
+745_5,LOC,Dos Bocas,710,719,gazetteer_loc,False
+745_5,LOC,Dos Bocas,829,838,gazetteer_loc,False
+745_5,FECHA,2024,1131,1135,regex_fecha,False
+754_67,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+754_67,LOC,Tabasco,105,112,gazetteer_loc,False
+754_67,LOC,Dos Bocas,173,182,gazetteer_loc,False
+754_67,LOC,Dos Bocas,227,236,gazetteer_loc,False
+771_54,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+771_54,MONTO,cinco mil pesos,673,688,regex_monto,False
+771_54,MONTO,29 mil millones de pesos,797,821,regex_monto,False
+771_54,LOC,Guerrero,937,945,gazetteer_loc,False
+771_54,LOC,Morelos,1009,1016,gazetteer_loc,False
+771_54,LOC,Puebla,1020,1026,gazetteer_loc,False
+771_54,LOC,Oaxaca,1028,1034,gazetteer_loc,False
+771_54,LOC,Chiapas,1036,1043,gazetteer_loc,False
+771_54,LOC,Zacatecas,1045,1054,gazetteer_loc,False
+771_54,LOC,Durango,1056,1063,gazetteer_loc,False
+771_54,LOC,Nayarit,1065,1072,gazetteer_loc,False
+771_54,LOC,Veracruz,1085,1093,gazetteer_loc,False
+776_72,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+776_72,LOC,Tabasco,541,548,gazetteer_loc,False
+776_72,LOC,Chiapas,554,561,gazetteer_loc,False
+786_90,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+796_2,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+796_2,LOC,Chihuahua,144,153,gazetteer_loc,False
+796_2,LOC,Sonora,159,165,gazetteer_loc,False
+796_2,LOC,México,194,200,gazetteer_loc,False
+796_2,FECHA,enero del 24,457,469,regex_fecha,False
+796_2,LOC,Chihuahua,723,732,gazetteer_loc,False
+796_2,LOC,Sonora,738,744,gazetteer_loc,False
+834_74,LOC,Veracruz,183,191,gazetteer_loc,False
+834_74,LOC,Dos Bocas,279,288,gazetteer_loc,False
+834_74,FECHA,junio,312,317,regex_fecha,False
+834_74,LOC,Dos Bocas,743,752,gazetteer_loc,False
+834_74,LOC,Tabasco,757,764,gazetteer_loc,False
+845_12,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,marca,True
+917_1,PER,ANA ELIZABETH GARCÍA VILCHIS,0,28,marca,True
+917_1,LOC,Dos Bocas,133,142,gazetteer_loc,False
+917_1,LOC,Dos Bocas,274,283,gazetteer_loc,False
+917_1,LOC,Tabasco,285,292,gazetteer_loc,False
+917_1,LOC,Dos Bocas,539,548,gazetteer_loc,False
+917_1,LOC,Yucatán,696,703,gazetteer_loc,False
+928_1,PER,ANA ELIZABETH GARCÍA VILCHIS,0,28,marca,True
+928_1,LOC,México,232,238,gazetteer_loc,False
+928_1,LOC,Santa Lucía,604,615,gazetteer_loc,False
+928_1,LOC,Santa Lucía,717,728,gazetteer_loc,False
+928_1,LOC,Santa Lucía,932,943,gazetteer_loc,False
+928_1,FECHA,20 de septiembre,948,964,regex_fecha,False
+928_1,LOC,Italia,1120,1126,gazetteer_loc,False
+928_2,PER,ANA ELIZABETH GARCÍA VILCHIS,0,28,marca,True
+928_2,LOC,Santa Lucía,75,86,gazetteer_loc,False
+928_2,FECHA,20 de septiembre,91,107,regex_fecha,False
+928_2,LOC,Italia,263,269,gazetteer_loc,False
+928_2,LOC,Santa Lucía,601,612,gazetteer_loc,False
+928_2,LOC,Santa Lucía,978,989,gazetteer_loc,False
+972_21,LOC,Tren Maya,11,20,gazetteer_loc,False
+972_21,LOC,Campeche,557,565,gazetteer_loc,False
+972_21,LOC,Yucatán,790,797,gazetteer_loc,False
+972_21,LOC,Tren Maya,958,967,gazetteer_loc,False
+972_21,LOC,Tren Maya,1009,1018,gazetteer_loc,False
