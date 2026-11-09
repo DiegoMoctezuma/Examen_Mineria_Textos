@@ -47,7 +47,7 @@ def main() -> int:
 
     pasajes = pd.read_parquet(config.PASAJES_PARQUET,
                               columns=["passage_id", "texto", "inicio_cuerpo"])
-    siglas = reglas.minar_siglas(pasajes, gaz)
+    siglas = reglas.minar_siglas(pasajes, reglas.gazetteer_base())
     reglas.escribir_csv(siglas, SALIDA / "06_siglas_candidatas.csv")
 
     amb = mod_ambito.ambito_ie()[["query_id", "passage_id"]]

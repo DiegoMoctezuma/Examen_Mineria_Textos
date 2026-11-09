@@ -191,7 +191,7 @@ def test_cantidades_auxiliares(texto, tipo, valor, unidad):
 
 @pytest.fixture(scope="module")
 def extendido():
-    return R.construir_extendido(revision=config.RAIZ / "no_existe.csv")
+    return R.construir_extendido(revision=None)
 
 
 OBLIGATORIAS = ["IMSS", "ISSSTE", "Pemex", "CFE", "Sedena", "Semar", "Conagua", "Fonatur",
@@ -399,3 +399,27 @@ def test_normalizacion_mes_relativo():
     assert normalizar_fecha("diciembre de este año", ancla)["fecha_iso"] == "2023-12"
     assert normalizar_fecha("julio", ancla)["fecha_iso"] == "2023-07"
     assert normalizar_fecha("julio")["estado_fecha"] == "parcial_sin_ancla"
+
+
+# =========================================================================== minado de siglas
+
+
+def test_candidatas_no_dependen_de_la_revision(tmp_path):
+    """Las candidatas se minan contra el gazetteer base (LOC + kit + manual): aceptar una sigla
+    en la revisión no la saca de la lista en la siguiente corrida."""
+    cuerpo = "Hoy vino gente de la XYZQ. " * 25
+    pasajes = pd.DataFrame({"passage_id": ["1_1"], "texto": [cuerpo], "inicio_cuerpo": [0]})
+    antes = R.minar_siglas(pasajes, R.gazetteer_base())
+    assert "XYZQ" in set(antes["sigla"])
+
+    rev = tmp_path / "revision_siglas.csv"
+    pd.DataFrame([{"sigla": "XYZQ", "nombre_propuesto": "", "frecuencia": 25, "ejemplo": "",
+                   "decision": "ORG", "nombre_final": ""}]).to_csv(rev, index=False)
+    con_revision = R.construir_extendido(revision=rev)
+    assert "XYZQ" in set(con_revision["siglas"])
+    despues = R.minar_siglas(pasajes, R.gazetteer_base())
+    assert antes.equals(despues)
+    # minar contra el extendido sí la omitiría: por eso no se hace
+    gaz_ext = R.Gazetteer(pd.concat([R.leer_gazetteer(R.GAZ_LOC), con_revision],
+                                    ignore_index=True))
+    assert "XYZQ" not in set(R.minar_siglas(pasajes, gaz_ext)["sigla"])

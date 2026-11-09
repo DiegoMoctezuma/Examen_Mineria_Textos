@@ -243,9 +243,10 @@ def etiqueta_kit(tipo: str) -> str:
 
 
 def construir_extendido(kit: Path = KIT_GAZETTEER, manual: Path = GAZ_MANUAL,
-                        revision: Path = REVISION_SIGLAS) -> pd.DataFrame:
+                        revision: Path | None = REVISION_SIGLAS) -> pd.DataFrame:
     """`config/gazetteer_extendido.csv`: base del kit + entradas manuales (PRD y D14) + siglas
-    minadas que el alumno aceptó en la pestaña Gazetteer. Las rechazadas no entran."""
+    minadas que el alumno aceptó en la pestaña Gazetteer. Las rechazadas no entran. Con
+    `revision=None` devuelve solo kit + manual."""
     base = leer_gazetteer(kit)
     filas = {}
     for r in base.to_dict("records"):
@@ -266,7 +267,7 @@ def construir_extendido(kit: Path = KIT_GAZETTEER, manual: Path = GAZ_MANUAL,
                                           "siglas": r["siglas"], "tipo": r["tipo"],
                                           "etiqueta": r["etiqueta"], "origen": "manual",
                                           "evidencia": r["evidencia"]}
-    if Path(revision).exists():
+    if revision is not None and Path(revision).exists():
         rev = pd.read_csv(revision, dtype=str, keep_default_na=False)
         for r in rev[rev["decision"].isin(["ORG", "LOC"])].to_dict("records"):
             nombre = r["nombre_final"].strip() or r["sigla"]
@@ -471,6 +472,14 @@ def gazetteer_por_defecto() -> tuple[Gazetteer, dict[str, str]]:
     return Gazetteer(pd.concat([loc, ext], ignore_index=True)), tipos_loc
 
 
+def gazetteer_base() -> Gazetteer:
+    """LOC + kit + manual, sin las siglas que el alumno aceptó. Es contra lo que se minan las
+    candidatas: así la lista no depende de la revisión (si se minara contra el extendido, cada
+    sigla aceptada desaparecería de las candidatas en la siguiente corrida)."""
+    return Gazetteer(pd.concat([leer_gazetteer(GAZ_LOC), construir_extendido(revision=None)],
+                               ignore_index=True))
+
+
 def extraer_reglas_detalle(texto: str, inicio_cuerpo: int,
                            gaz: tuple[Gazetteer, dict[str, str]] | None = None) -> ResultadoReglas:
     gazetteer, tipos_loc = gaz or gazetteer_por_defecto()
@@ -522,11 +531,13 @@ def minar_siglas(pasajes: pd.DataFrame, gazetteer: Gazetteer | None = None,
     1. patrón `Nombre Largo (SIGLAS)`: nombre de 2 a 8 palabras y siglas de 2 a 8 mayúsculas;
     2. frecuencia de tokens todo en mayúsculas de 3 a 7 letras que no estén en la stoplist.
 
-    Se omiten las que el gazetteer ya reconoce. El alumno decide en la pestaña Gazetteer."""
+    Se omiten las que el gazetteer base ya reconoce (`gazetteer_base()`: LOC, kit y manual, sin
+    la revisión), para que la lista de candidatas sea la misma antes y después de revisar. El
+    alumno decide en la pestaña Gazetteer."""
     from mtx.preproceso import stoplist
 
     stop = {s.upper() for s in stoplist()}
-    gaz = gazetteer or gazetteer_por_defecto()[0]
+    gaz = gazetteer or gazetteer_base()
     frec: Counter = Counter()
     nombres: dict[str, Counter] = defaultdict(Counter)
     ejemplo: dict[str, str] = {}
