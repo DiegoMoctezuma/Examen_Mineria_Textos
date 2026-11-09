@@ -528,14 +528,37 @@ def estados_artefactos(r: Rutas | None = None, hash_pasajes_actual: str | None =
              "Coincide con kit + manual + revisión" if ext_ok
              else "No refleja la revisión actual", "" if ext_ok else "make reglas")
 
+    from mtx import gold as _gold
+    rg = _gold.RutasGold(r.anotaciones)
+    if not rg.muestra.exists():
+        fila("Gold (anotaciones/gold_entidades.csv)", PENDIENTE_TECNICO,
+             "Falta la muestra; antes, `make congelar`", "make muestra-gold")
+    elif pasajes is None:
+        fila("Gold (anotaciones/gold_entidades.csv)", PENDIENTE_TECNICO,
+             "Sin pasajes para validar", "make corpus")
+    else:
+        h = pasajes.copy()
+        if "texto_sha256" not in h.columns:
+            import hashlib as _h
+            h["texto_sha256"] = [_h.sha256(t.encode("utf-8")).hexdigest() for t in h["texto"]]
+        v = _gold.validar_gold(rg, h)
+        if rg.cierre.exists() and v.ok:
+            fila("Gold (anotaciones/gold_entidades.csv)", VALIDO,
+                 f"Cerrado; {v.pasajes_con_entidades} de {v.esperados} pasajes con entidades")
+        elif rg.cierre.exists():
+            fila("Gold (anotaciones/gold_entidades.csv)", OBSOLETO,
+                 "Cerrado, pero ya no valida: " + "; ".join(v.errores[:2]),
+                 "Ver skill gold-anotacion")
+        elif all(e.startswith("Pasajes cerrados") for e in v.errores):
+            fila("Gold (anotaciones/gold_entidades.csv)", PENDIENTE_HUMANO,
+                 f"{v.cerrados} de {v.esperados} pasajes revisados", "Pestaña Gold")
+        else:
+            fila("Gold (anotaciones/gold_entidades.csv)", ERROR, "; ".join(v.errores[:3]),
+                 "Pestaña Gold")
+
     for nombre, ruta, sig in [
         ("Resultados IR (resultados_ir.csv)", config.RAIZ / "resultados_ir.csv",
          "H4: make evaluar-ir"),
-        ("Muestra gold (anotaciones/muestra_gold.csv)", r.anotaciones / "muestra_gold.csv",
-         "H5: make muestra-gold"),
-        ("Gold (anotaciones/gold_entidades.csv)", r.anotaciones / "gold_entidades.csv",
-         "H6: pestaña Gold"),
-        ("Cierre del gold (anotaciones/cierre_gold.json)", r.cierre_gold, "H6: pestaña Gold"),
         ("Caché NER (data/cache_ner/)", config.DIR_DATA / "cache_ner", "H5: make ner"),
     ]:
         if not ruta.exists():

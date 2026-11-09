@@ -18,7 +18,7 @@ def _hash_pasajes(mtime: float) -> str:
 
 @st.cache_data(show_spinner=False)
 def _textos(mtime: float) -> pd.DataFrame:
-    return pd.read_parquet(config.PASAJES_PARQUET, columns=["passage_id", "texto"])
+    return pd.read_parquet(config.PASAJES_PARQUET, columns=["passage_id", "texto", "texto_sha256"])
 
 
 def mostrar() -> None:
