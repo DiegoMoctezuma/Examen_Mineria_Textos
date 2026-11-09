@@ -1,0 +1,99 @@
+{
+ "clave": "33fbd5a0e82b66a6f2c5a6966dca5010b51ae0b85dcd7ce6122e48ccf130d726",
+ "entidades_crudas": [
+  {
+   "confianza": 0.98399,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 2,
+   "inicio": 0,
+   "texto": "ME",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.993258,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 4,
+   "inicio": 2,
+   "texto": "LI",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.838765,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 11,
+   "inicio": 4,
+   "texto": "NA VEGA",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.964499,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 135,
+   "inicio": 133,
+   "texto": "ME",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.994458,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 137,
+   "inicio": 135,
+   "texto": "LI",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.878573,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 144,
+   "inicio": 137,
+   "texto": "NA VEGA",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999589,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 371,
+   "inicio": 368,
+   "texto": "Car",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.932769,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 390,
+   "inicio": 371,
+   "texto": "tilla de Vacunación",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.903234,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 517,
+   "inicio": 509,
+   "texto": "COVID-19",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "1133_87",
+ "segundos": 0.047,
+ "texto_sha256": "4808b3165cfc8f91af86887a49def9e10c8d64336864313e3961b040df75cc46",
+ "version_transformers": "5.22.1"
+}

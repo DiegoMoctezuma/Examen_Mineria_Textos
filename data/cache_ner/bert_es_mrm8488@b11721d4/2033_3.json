@@ -1,0 +1,99 @@
+{
+ "clave": "b48a7d983cd06d595a61f4eff569a43160fad967fe689e0ee457c10a85ff5217",
+ "entidades_crudas": [
+  {
+   "confianza": 0.944932,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 21,
+   "inicio": 18,
+   "texto": "MAN",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.692523,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 23,
+   "texto": "L LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998768,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 629,
+   "inicio": 620,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.969967,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 657,
+   "inicio": 650,
+   "texto": "Tabasco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998631,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 795,
+   "inicio": 786,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.750375,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 885,
+   "inicio": 877,
+   "texto": "Campeche",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999403,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 895,
+   "inicio": 891,
+   "texto": "Taba",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.797525,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 898,
+   "inicio": 895,
+   "texto": "sco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998953,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 955,
+   "inicio": 946,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "2033_3",
+ "segundos": 0.08,
+ "texto_sha256": "102e894a08dbc99954295987144467c58f9f1cdf5590b886999b00e28e4bc7a5",
+ "version_transformers": "5.22.1"
+}

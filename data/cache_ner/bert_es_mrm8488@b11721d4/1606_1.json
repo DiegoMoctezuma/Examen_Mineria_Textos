@@ -1,0 +1,144 @@
+{
+ "clave": "c8ef54d94c7808d3e49ea6be3ff77268f63cef61192d4f4beece3799d175fa6f",
+ "entidades_crudas": [
+  {
+   "confianza": 0.891527,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 18,
+   "texto": "MANUEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.970767,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 93,
+   "inicio": 67,
+   "texto": "Santa Lucía Felipe Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.93325,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 150,
+   "inicio": 136,
+   "texto": "Felipe Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.526083,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 179,
+   "inicio": 175,
+   "texto": "AMLO",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999696,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 327,
+   "inicio": 300,
+   "texto": "Andrés Manuel López Obrador",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.80713,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 340,
+   "inicio": 331,
+   "texto": "Miércoles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999369,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 487,
+   "inicio": 463,
+   "texto": "Secretaría de la Defensa",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99954,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 574,
+   "inicio": 550,
+   "texto": "Secretaría de la Defensa",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999675,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 770,
+   "inicio": 746,
+   "texto": "Secretaría de la Defensa",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999383,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 926,
+   "inicio": 915,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.9994,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 973,
+   "inicio": 962,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999775,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 997,
+   "inicio": 994,
+   "texto": "Tol",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.674427,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1000,
+   "inicio": 997,
+   "texto": "uca",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999386,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1059,
+   "inicio": 1048,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "1606_1",
+ "segundos": 0.077,
+ "texto_sha256": "662b2e17084f6a708de0ac78b46b8ea32c15be6aa51e47a2aab704160fc10049",
+ "version_transformers": "5.22.1"
+}

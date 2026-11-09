@@ -1,0 +1,108 @@
+{
+ "clave": "69fad2acec265d0f6b3693353e0d18a85d69ba5a8a1f37b67daa3a370757de7c",
+ "entidades_crudas": [
+  {
+   "confianza": 0.997185,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 60,
+   "inicio": 45,
+   "texto": "Yesenia Peralta",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.992365,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 80,
+   "inicio": 65,
+   "texto": "Business Energy",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.961963,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 86,
+   "inicio": 82,
+   "texto": "Taba",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.724126,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 89,
+   "inicio": 86,
+   "texto": "sco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.996984,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 241,
+   "inicio": 232,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.93781,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 395,
+   "inicio": 388,
+   "texto": "Tabasco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998524,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 546,
+   "inicio": 537,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99874,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 680,
+   "inicio": 671,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999731,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 791,
+   "inicio": 784,
+   "texto": "Paraíso",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.989325,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 884,
+   "inicio": 877,
+   "texto": "Tabasco",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "657_54",
+ "segundos": 0.081,
+ "texto_sha256": "1497bd310a20b6d74cdbb8e3526c5453404399771dda93e4852e1682607fd5d9",
+ "version_transformers": "5.22.1"
+}

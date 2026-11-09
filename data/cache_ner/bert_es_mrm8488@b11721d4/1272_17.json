@@ -1,0 +1,90 @@
+{
+ "clave": "7f92cdda01263e024fce14941b2002e2668ad57decd4477165b61573d264480f",
+ "entidades_crudas": [
+  {
+   "confianza": 0.648694,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 9,
+   "inicio": 0,
+   "texto": "VOZ MUJER",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.751206,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 120,
+   "inicio": 93,
+   "texto": "Ferrocarril del Istmo de Te",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.819584,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 129,
+   "inicio": 120,
+   "texto": "huantepec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99336,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 172,
+   "inicio": 167,
+   "texto": "Media",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99166,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 179,
+   "inicio": 172,
+   "texto": "s Aguas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.843475,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 193,
+   "inicio": 182,
+   "texto": "Salina Cruz",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.914525,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 359,
+   "inicio": 316,
+   "texto": "Paso Interoceánico del Istmo de Tehuantepec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99971,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 450,
+   "inicio": 432,
+   "texto": "Gobierno de México",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "1272_17",
+ "segundos": 0.048,
+ "texto_sha256": "5be10e527df6a9367f052b75f6e5cfbe861b1bc012dee2bacf9728cc60a34889",
+ "version_transformers": "5.22.1"
+}

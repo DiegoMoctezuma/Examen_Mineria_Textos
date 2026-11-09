@@ -1,0 +1,126 @@
+{
+ "clave": "be7e1e59e2cb8a810a238a645d1a080fa0ffaf09700df1ab7cee858f32153cf9",
+ "entidades_crudas": [
+  {
+   "confianza": 0.962677,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 21,
+   "inicio": 18,
+   "texto": "MAN",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.743961,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 21,
+   "texto": "UEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999855,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 221,
+   "inicio": 218,
+   "texto": "Sem",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.902558,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 232,
+   "inicio": 221,
+   "texto": "brando Vida",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.996627,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 262,
+   "inicio": 254,
+   "texto": "Guerrero",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999499,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 768,
+   "inicio": 740,
+   "texto": "Producción para el Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999822,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 786,
+   "inicio": 783,
+   "texto": "Sem",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.841024,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 797,
+   "inicio": 786,
+   "texto": "brando Vida",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998856,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 1157,
+   "inicio": 1146,
+   "texto": "Agricultura",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999626,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 1185,
+   "inicio": 1176,
+   "texto": "Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999803,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 1224,
+   "inicio": 1221,
+   "texto": "Sem",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.967518,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 1235,
+   "inicio": 1224,
+   "texto": "brando Vida",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "1310_37",
+ "segundos": 0.082,
+ "texto_sha256": "abfe26f7dcb9935996081f61b831a5174aaeee63e20dbf7f64d9b47fccecb20d",
+ "version_transformers": "5.22.1"
+}

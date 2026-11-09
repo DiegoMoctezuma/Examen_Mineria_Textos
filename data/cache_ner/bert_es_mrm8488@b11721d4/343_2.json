@@ -1,0 +1,126 @@
+{
+ "clave": "5dbc37d2711a6291e0581fab0c61061ba7c61a45b022479075b39d7843e81313",
+ "entidades_crudas": [
+  {
+   "confianza": 0.889098,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 18,
+   "texto": "MANUEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.687029,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 83,
+   "inicio": 80,
+   "texto": "Adu",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.996896,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 102,
+   "inicio": 100,
+   "texto": "Ec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.693919,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 108,
+   "inicio": 102,
+   "texto": "atepec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.861484,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 137,
+   "inicio": 121,
+   "texto": "Estado de México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.934004,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 360,
+   "inicio": 339,
+   "texto": "Delfina Gómez Álvarez",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.789645,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 403,
+   "inicio": 397,
+   "texto": "Estado",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.709399,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 413,
+   "inicio": 404,
+   "texto": "de México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.97743,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 480,
+   "inicio": 473,
+   "texto": "Delfina",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99855,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 680,
+   "inicio": 678,
+   "texto": "Ec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.612853,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 686,
+   "inicio": 680,
+   "texto": "atepec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.987879,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 978,
+   "inicio": 956,
+   "texto": "Programas de Bienestar",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "343_2",
+ "segundos": 0.079,
+ "texto_sha256": "f1c50d364c416465516c9ff64e711d48f78b98186498553fb4445a19e2b5d25a",
+ "version_transformers": "5.22.1"
+}

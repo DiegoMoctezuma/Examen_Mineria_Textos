@@ -1,0 +1,99 @@
+{
+ "clave": "052cb37284cd7ca9c15dc8d0cd7fd21427fd31c9aeb1f6603dfada71eba11729",
+ "entidades_crudas": [
+  {
+   "confianza": 0.633238,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 18,
+   "texto": "MANUEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999837,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 235,
+   "inicio": 233,
+   "texto": "Is",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.900322,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 239,
+   "inicio": 235,
+   "texto": "sste",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99842,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 251,
+   "inicio": 245,
+   "texto": "Seguro",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999831,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 258,
+   "inicio": 256,
+   "texto": "Pe",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.951883,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 261,
+   "inicio": 258,
+   "texto": "mex",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999706,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 285,
+   "inicio": 270,
+   "texto": "Fuerzas Armadas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999629,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1085,
+   "inicio": 1079,
+   "texto": "Europa",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.872706,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 1118,
+   "inicio": 1112,
+   "texto": "Estado",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "2209_3",
+ "segundos": 0.075,
+ "texto_sha256": "2cb6cb519eb0189859794f30fee6018d9959429b316222e1a6b6a7a9bd794c3a",
+ "version_transformers": "5.22.1"
+}

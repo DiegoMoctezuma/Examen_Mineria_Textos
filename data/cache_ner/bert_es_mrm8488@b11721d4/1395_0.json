@@ -1,0 +1,207 @@
+{
+ "clave": "d8aab660dcb0b4d8ebbab69ff44700e96e9d84f21b03a87efc8626979163befb",
+ "entidades_crudas": [
+  {
+   "confianza": 0.499887,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 24,
+   "inicio": 18,
+   "texto": "MANUEL",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.996278,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 65,
+   "inicio": 58,
+   "texto": "Yucatán",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999261,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 153,
+   "inicio": 144,
+   "texto": "Tren Maya",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99939,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 411,
+   "inicio": 402,
+   "texto": "Tren Maya",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999541,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 665,
+   "inicio": 658,
+   "texto": "Yucatán",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999638,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 692,
+   "inicio": 689,
+   "texto": "Tin",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.958318,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 694,
+   "inicio": 692,
+   "texto": "um",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999199,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 701,
+   "inicio": 700,
+   "texto": "U",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.948631,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 705,
+   "inicio": 701,
+   "texto": "ayma",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.996866,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 740,
+   "inicio": 731,
+   "texto": "Tren Maya",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99949,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 751,
+   "inicio": 748,
+   "texto": "Tin",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.98988,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 753,
+   "inicio": 751,
+   "texto": "um",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.980095,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 762,
+   "inicio": 755,
+   "texto": "Yucatán",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999467,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 769,
+   "inicio": 766,
+   "texto": "Tin",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.971418,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 771,
+   "inicio": 769,
+   "texto": "um",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997898,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 780,
+   "inicio": 773,
+   "texto": "Yucatán",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99917,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 883,
+   "inicio": 874,
+   "texto": "Tren Maya",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999382,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1132,
+   "inicio": 1123,
+   "texto": "Grupo ICA",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.587693,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 1221,
+   "inicio": 1217,
+   "texto": "ttps",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.843526,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 1223,
+   "inicio": 1222,
+   "texto": "/",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99971,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1272,
+   "inicio": 1253,
+   "texto": "Andrés Manuel López",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "1395_0",
+ "segundos": 0.082,
+ "texto_sha256": "389b9fe66b47618ae9c0a852ca59908b9bd786b74a153aff9673c2120d094215",
+ "version_transformers": "5.22.1"
+}

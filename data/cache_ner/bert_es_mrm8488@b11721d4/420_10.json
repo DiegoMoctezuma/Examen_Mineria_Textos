@@ -1,0 +1,144 @@
+{
+ "clave": "25e941509c0da799e0601377f25eb5e6b7647f3a24b3e104169f0c7520362c94",
+ "entidades_crudas": [
+  {
+   "confianza": 0.587901,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 21,
+   "inicio": 18,
+   "texto": "MAN",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.623202,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 23,
+   "texto": "L LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999539,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 116,
+   "inicio": 97,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999688,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 323,
+   "inicio": 295,
+   "texto": "Producción para el Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999592,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 389,
+   "inicio": 386,
+   "texto": "Sem",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.985488,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 400,
+   "inicio": 389,
+   "texto": "brando Vida",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998959,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 471,
+   "inicio": 452,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999487,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 573,
+   "inicio": 554,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999714,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 588,
+   "inicio": 583,
+   "texto": "Álamo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999668,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 736,
+   "inicio": 717,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999596,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 851,
+   "inicio": 845,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999771,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 875,
+   "inicio": 856,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999568,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 929,
+   "inicio": 926,
+   "texto": "Sem",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.754632,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 940,
+   "inicio": 929,
+   "texto": "brando Vida",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "420_10",
+ "segundos": 0.079,
+ "texto_sha256": "f3e7ca08291bea3dcbc4021183e21efd0fa5c658eb14561f5eaa24e8617d38df",
+ "version_transformers": "5.22.1"
+}

@@ -1,0 +1,81 @@
+{
+ "clave": "978018bd75722436083b3b73f1571e961190bd95b4b1e7160a3db13e332e182c",
+ "entidades_crudas": [
+  {
+   "confianza": 0.355442,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 21,
+   "inicio": 18,
+   "texto": "MAN",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999565,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 258,
+   "inicio": 250,
+   "texto": "Veracruz",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999621,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 284,
+   "inicio": 276,
+   "texto": "Veracruz",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999713,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 322,
+   "inicio": 319,
+   "texto": "Sem",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.828466,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 333,
+   "inicio": 322,
+   "texto": "brando Vida",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999263,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 951,
+   "inicio": 943,
+   "texto": "Veracruz",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999706,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 991,
+   "inicio": 983,
+   "texto": "Veracruz",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "1415_16",
+ "segundos": 0.078,
+ "texto_sha256": "4224c7ceba5f55466e632deb47f61739535a341dd29a24eec820c493cc5fadd5",
+ "version_transformers": "5.22.1"
+}

@@ -1,0 +1,117 @@
+{
+ "clave": "9cbae789e3c9792f3b88fda333052f3451c092850bb3c306b34865363378ba54",
+ "entidades_crudas": [
+  {
+   "confianza": 0.768568,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 21,
+   "inicio": 18,
+   "texto": "MAN",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.689472,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 21,
+   "texto": "UEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99952,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 157,
+   "inicio": 148,
+   "texto": "Tren Maya",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997496,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 258,
+   "inicio": 237,
+   "texto": "Ferrocarril del Istmo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.650938,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 331,
+   "inicio": 316,
+   "texto": "‘Felipe Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999469,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 360,
+   "inicio": 351,
+   "texto": "Tren Maya",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.535199,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 379,
+   "inicio": 377,
+   "texto": "Is",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.599986,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 382,
+   "inicio": 379,
+   "texto": "tmo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.607136,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 385,
+   "inicio": 383,
+   "texto": "de",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.600887,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 388,
+   "inicio": 386,
+   "texto": "Te",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.79966,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 397,
+   "inicio": 388,
+   "texto": "huantepec",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "1458_12",
+ "segundos": 0.045,
+ "texto_sha256": "09a9be32a584b0ff2c9747b2129fcc89027fcdfe9808728873cf9a9347679842",
+ "version_transformers": "5.22.1"
+}

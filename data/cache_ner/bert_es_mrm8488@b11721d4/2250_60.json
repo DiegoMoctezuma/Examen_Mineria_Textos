@@ -1,0 +1,36 @@
+{
+ "clave": "7654cb538a5aef0ade06b053b0d513505b4cc83df4b7796a05d5e61d628230d3",
+ "entidades_crudas": [
+  {
+   "confianza": 0.512075,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 21,
+   "inicio": 18,
+   "texto": "MAN",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.996192,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 87,
+   "inicio": 78,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "2250_60",
+ "segundos": 0.061,
+ "texto_sha256": "af0968d14582afd703365e8a57ca8f6197f2ae118a500d03b8ecbac0b8d259bc",
+ "version_transformers": "5.22.1"
+}

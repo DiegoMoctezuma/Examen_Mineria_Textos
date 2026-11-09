@@ -1,0 +1,126 @@
+{
+ "clave": "03e49f3cd0f71d1a372f8ead00b40507cd8b1c4f7116e12d822c597d006f4a01",
+ "entidades_crudas": [
+  {
+   "confianza": 0.999786,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 320,
+   "inicio": 318,
+   "texto": "Pe",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.898236,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 323,
+   "inicio": 320,
+   "texto": "mex",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999548,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 372,
+   "inicio": 370,
+   "texto": "Pe",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.734324,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 375,
+   "inicio": 372,
+   "texto": "mex",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998657,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 964,
+   "inicio": 955,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999358,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 973,
+   "inicio": 966,
+   "texto": "Paraíso",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.975616,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 982,
+   "inicio": 975,
+   "texto": "Tabasco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997051,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1043,
+   "inicio": 1034,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.929941,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1141,
+   "inicio": 1133,
+   "texto": "Campeche",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999239,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1161,
+   "inicio": 1157,
+   "texto": "Taba",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.735163,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1164,
+   "inicio": 1161,
+   "texto": "sco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997963,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1219,
+   "inicio": 1210,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "2045_9",
+ "segundos": 0.087,
+ "texto_sha256": "37ccf0e6cb94d4b25df088ba418db5e5017d3b085d39fc27aa3b4e213b456378",
+ "version_transformers": "5.22.1"
+}

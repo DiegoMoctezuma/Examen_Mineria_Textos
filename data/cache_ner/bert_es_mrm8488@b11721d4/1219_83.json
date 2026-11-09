@@ -1,0 +1,126 @@
+{
+ "clave": "3339cffc2b5c20e5191464584e44caa894dc2650847680b71a6b213c1686c5fb",
+ "entidades_crudas": [
+  {
+   "confianza": 0.518412,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 3,
+   "inicio": 0,
+   "texto": "HUM",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.643975,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 6,
+   "inicio": 3,
+   "texto": "BER",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.888485,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 24,
+   "inicio": 15,
+   "texto": "CASTAÑEDA",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999247,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 105,
+   "inicio": 98,
+   "texto": "Jalisco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99953,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 185,
+   "inicio": 182,
+   "texto": "Tla",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.922749,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 193,
+   "inicio": 185,
+   "texto": "quepaque",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.991115,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 230,
+   "inicio": 224,
+   "texto": "Tonalá",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998517,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 281,
+   "inicio": 270,
+   "texto": "AstraZeneca",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999436,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 334,
+   "inicio": 314,
+   "texto": "Los Altos de Jalisco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.989058,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 356,
+   "inicio": 349,
+   "texto": "Sinovac",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999462,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 410,
+   "inicio": 399,
+   "texto": "Plan DN-III",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.984331,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 477,
+   "inicio": 435,
+   "texto": "Estrategia Nacional de Vacunación COVID-19",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "1219_83",
+ "segundos": 0.047,
+ "texto_sha256": "aa4abebd6a11d54765076e9b30adda51432b795f44478f7ee498121650f88dc8",
+ "version_transformers": "5.22.1"
+}

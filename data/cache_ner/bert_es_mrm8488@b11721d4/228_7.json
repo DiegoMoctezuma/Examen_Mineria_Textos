@@ -1,0 +1,288 @@
+{
+ "clave": "c02061d2515053d76f45137d8a3763326619cb26c815df5797aa9dcac890b863",
+ "entidades_crudas": [
+  {
+   "confianza": 0.871114,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 33,
+   "inicio": 27,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999701,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 235,
+   "inicio": 208,
+   "texto": "Andrés Manuel López Obrador",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999107,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 294,
+   "inicio": 270,
+   "texto": "Estados Unidos Mexicanos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999762,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 338,
+   "inicio": 323,
+   "texto": "Fuerzas Armadas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.979159,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 387,
+   "inicio": 340,
+   "texto": "Corredor Interoceánico del Istmo de Tehuantepec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999674,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 411,
+   "inicio": 405,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.996141,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 440,
+   "inicio": 435,
+   "texto": "Corre",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.971788,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 482,
+   "inicio": 440,
+   "texto": "dor Interoceánico del Istmo de Tehuantepec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999459,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 520,
+   "inicio": 500,
+   "texto": "Secretaría de Marina",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.911271,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 574,
+   "inicio": 537,
+   "texto": "Empresa Multimodal Interoceánica, S.A",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.713234,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 582,
+   "inicio": 579,
+   "texto": "C.V",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.585513,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 631,
+   "inicio": 624,
+   "texto": "Sistema",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.726517,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 650,
+   "inicio": 632,
+   "texto": "Portuario Nacional",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.8364,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 681,
+   "inicio": 673,
+   "texto": "Asiponas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997102,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 690,
+   "inicio": 686,
+   "texto": "Sali",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.9431,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 697,
+   "inicio": 690,
+   "texto": "na Cruz",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998961,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 701,
+   "inicio": 699,
+   "texto": "Co",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.974109,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 712,
+   "inicio": 701,
+   "texto": "atzacoalcos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99898,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 723,
+   "inicio": 714,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.989856,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 740,
+   "inicio": 726,
+   "texto": "Puerto Chiapas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.658221,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 771,
+   "inicio": 769,
+   "texto": "Is",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.756501,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 783,
+   "inicio": 771,
+   "texto": "tmo de Tehua",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.795062,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 789,
+   "inicio": 783,
+   "texto": "ntepec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.851428,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 859,
+   "inicio": 844,
+   "texto": "Océano Pacífico",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.966349,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 883,
+   "inicio": 867,
+   "texto": "Océano Atlántico",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.842313,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 912,
+   "inicio": 906,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999535,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1146,
+   "inicio": 1144,
+   "texto": "Co",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.988964,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1157,
+   "inicio": 1146,
+   "texto": "atzacoalcos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998515,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1251,
+   "inicio": 1247,
+   "texto": "Sali",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.938336,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1258,
+   "inicio": 1251,
+   "texto": "na Cruz",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "228_7",
+ "segundos": 0.089,
+ "texto_sha256": "48411b87a07b4ff0040beb24a4f6bc1476f83341ba8c1e8cb27f02d31187d6cc",
+ "version_transformers": "5.22.1"
+}

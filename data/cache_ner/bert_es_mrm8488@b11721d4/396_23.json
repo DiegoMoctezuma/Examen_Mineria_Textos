@@ -1,0 +1,108 @@
+{
+ "clave": "6a00f3f5d492f2cce2214b67ef5d121d29dbb841336901005078573cc5e29107",
+ "entidades_crudas": [
+  {
+   "confianza": 0.637427,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 75,
+   "inicio": 73,
+   "texto": "SE",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999614,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 415,
+   "inicio": 409,
+   "texto": "Mérida",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.663128,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 466,
+   "inicio": 460,
+   "texto": "parque",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.902036,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 477,
+   "inicio": 467,
+   "texto": "La Plancha",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.984499,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 543,
+   "inicio": 534,
+   "texto": "Tren Maya",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.991375,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 670,
+   "inicio": 666,
+   "texto": "Umán",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.960718,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 677,
+   "inicio": 673,
+   "texto": "Teya",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.966519,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 1040,
+   "inicio": 1031,
+   "texto": "Tren Maya",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999612,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1074,
+   "inicio": 1068,
+   "texto": "Mérida",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.9996,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1164,
+   "inicio": 1155,
+   "texto": "Tren Maya",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "396_23",
+ "segundos": 0.083,
+ "texto_sha256": "4bfa4eef11b90438d87ae1f45924825c66964bc3382d6da2bacd8b2fe9b83206",
+ "version_transformers": "5.22.1"
+}

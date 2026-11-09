@@ -1,0 +1,45 @@
+{
+ "clave": "3dad1f78325aa7aeeb96815afa7f38e9529e653bfff8fb57ad4142287cdf759c",
+ "entidades_crudas": [
+  {
+   "confianza": 0.87688,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 18,
+   "texto": "MANUEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.80696,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 78,
+   "inicio": 71,
+   "texto": "Hidalgo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.977777,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 294,
+   "inicio": 288,
+   "texto": "México",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "2199_29",
+ "segundos": 0.082,
+ "texto_sha256": "54bcd3c613ee3ba8a7e9ce0235329d52f31b3d46de6f1f83d70efd78a372999b",
+ "version_transformers": "5.22.1"
+}

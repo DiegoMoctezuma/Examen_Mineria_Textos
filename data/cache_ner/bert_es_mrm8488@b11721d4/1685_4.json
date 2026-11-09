@@ -1,0 +1,45 @@
+{
+ "clave": "72ad81c532a1905b4f85c81ff03d95a5edeb8442102103cf67c9e91a0bb1b5db",
+ "entidades_crudas": [
+  {
+   "confianza": 0.921322,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 21,
+   "inicio": 18,
+   "texto": "MAN",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.676317,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 21,
+   "texto": "UEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999787,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 466,
+   "inicio": 460,
+   "texto": "México",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "1685_4",
+ "segundos": 0.076,
+ "texto_sha256": "cc7a9ad38bb7bf191ee93eac1789162035796fdb8d391a28f99aea84791e1daa",
+ "version_transformers": "5.22.1"
+}

@@ -1,0 +1,180 @@
+{
+ "clave": "4867fb2746a0eedbb19c61484ecf0923d6abaa9b2ecdf6fb20be65b1d7531006",
+ "entidades_crudas": [
+  {
+   "confianza": 0.557412,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 5,
+   "inicio": 0,
+   "texto": "ÓSCAR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.282548,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 8,
+   "inicio": 6,
+   "texto": "DA",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.235022,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 10,
+   "inicio": 8,
+   "texto": "VI",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998896,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 134,
+   "inicio": 125,
+   "texto": "Tren Maya",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.98578,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 629,
+   "inicio": 609,
+   "texto": "Istmo de Tehuantepec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999023,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 646,
+   "inicio": 637,
+   "texto": "Tren Maya",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.84179,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 682,
+   "inicio": 674,
+   "texto": "Palenque",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.961155,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 831,
+   "inicio": 823,
+   "texto": "Palenque",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999188,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 912,
+   "inicio": 909,
+   "texto": "Esc",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.967395,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 918,
+   "inicio": 912,
+   "texto": "árcega",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999277,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 932,
+   "inicio": 931,
+   "texto": "…",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.816057,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1006,
+   "inicio": 998,
+   "texto": "Campeche",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999518,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1025,
+   "inicio": 1022,
+   "texto": "Pom",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.944995,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1028,
+   "inicio": 1025,
+   "texto": "uch",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999643,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1036,
+   "inicio": 1033,
+   "texto": "Pom",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.951677,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1039,
+   "inicio": 1036,
+   "texto": "uch",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.895582,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1126,
+   "inicio": 1120,
+   "texto": "Poxilá",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99973,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1155,
+   "inicio": 1149,
+   "texto": "Mérida",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "216_81",
+ "segundos": 0.101,
+ "texto_sha256": "07b702fb41d40e6b34b43136fb1b201fd2c642728fcd82217f632b649fa90aad",
+ "version_transformers": "5.22.1"
+}

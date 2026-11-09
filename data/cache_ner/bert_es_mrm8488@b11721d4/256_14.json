@@ -1,0 +1,171 @@
+{
+ "clave": "d1f8f4a349c8ebcf8ff795548a8eb71411587675f9940a3ea9bfdf27d28a1f6e",
+ "entidades_crudas": [
+  {
+   "confianza": 0.934316,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 23,
+   "inicio": 5,
+   "texto": "RAFAEL OJEDA DURÁN",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.459229,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 42,
+   "inicio": 39,
+   "texto": "MAR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.299772,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 45,
+   "inicio": 42,
+   "texto": "INA",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.986998,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 54,
+   "inicio": 50,
+   "texto": "Sali",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.868324,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 61,
+   "inicio": 54,
+   "texto": "na Cruz",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999599,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 156,
+   "inicio": 152,
+   "texto": "1907",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999609,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 248,
+   "inicio": 230,
+   "texto": "Gobierno de México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999479,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 444,
+   "inicio": 442,
+   "texto": "Co",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.962065,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 455,
+   "inicio": 444,
+   "texto": "atzacoalcos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.995818,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 462,
+   "inicio": 458,
+   "texto": "Sali",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.977624,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 469,
+   "inicio": 462,
+   "texto": "na Cruz",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999132,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 840,
+   "inicio": 779,
+   "texto": "Programa Regional para el Desarrollo del Istmo de Tehuantepec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.976115,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 950,
+   "inicio": 930,
+   "texto": "Istmo de Tehuantepec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.892368,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 1086,
+   "inicio": 1081,
+   "texto": "Corre",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.804799,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 1111,
+   "inicio": 1086,
+   "texto": "dor del Istmo de Tehuante",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.461553,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1114,
+   "inicio": 1111,
+   "texto": "pec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99972,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1144,
+   "inicio": 1129,
+   "texto": "Morales Ángeles",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "256_14",
+ "segundos": 0.087,
+ "texto_sha256": "640d8a712be7c4f6b077a038ea0c0ba09a16fc8b5ed1cb1916b3586eb7e5b1d9",
+ "version_transformers": "5.22.1"
+}

@@ -1,0 +1,216 @@
+{
+ "clave": "a2180b5cf911ae4617b0b8bbea72a5bc50701026fb66345abf2f896356157224",
+ "entidades_crudas": [
+  {
+   "confianza": 0.497994,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 21,
+   "inicio": 18,
+   "texto": "MAN",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.463541,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 23,
+   "texto": "L LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999161,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 390,
+   "inicio": 362,
+   "texto": "Producción para el Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.979655,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 504,
+   "inicio": 496,
+   "texto": "Procampo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.987187,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 598,
+   "inicio": 587,
+   "texto": "Agricultura",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999835,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 647,
+   "inicio": 644,
+   "texto": "Sem",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999303,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 658,
+   "inicio": 647,
+   "texto": "brando Vida",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999787,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 732,
+   "inicio": 729,
+   "texto": "Sem",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.909697,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 743,
+   "inicio": 732,
+   "texto": "brando Vida",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.805665,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 945,
+   "inicio": 937,
+   "texto": "Guerrero",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999676,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1013,
+   "inicio": 1009,
+   "texto": "More",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998823,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1016,
+   "inicio": 1013,
+   "texto": "los",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999805,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1026,
+   "inicio": 1020,
+   "texto": "Puebla",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999793,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1034,
+   "inicio": 1028,
+   "texto": "Oaxaca",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999781,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1043,
+   "inicio": 1036,
+   "texto": "Chiapas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999816,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1054,
+   "inicio": 1045,
+   "texto": "Zacatecas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999706,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1061,
+   "inicio": 1056,
+   "texto": "Duran",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.616739,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1063,
+   "inicio": 1061,
+   "texto": "go",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999582,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1067,
+   "inicio": 1065,
+   "texto": "Na",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.9044,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1070,
+   "inicio": 1067,
+   "texto": "yar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.595491,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1072,
+   "inicio": 1070,
+   "texto": "it",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999847,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1093,
+   "inicio": 1085,
+   "texto": "Veracruz",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "771_54",
+ "segundos": 0.085,
+ "texto_sha256": "3642b778e8ad46f144f0ef3e2fb76ba534abbb9c1c69f17366b3950b4c0fe11d",
+ "version_transformers": "5.22.1"
+}

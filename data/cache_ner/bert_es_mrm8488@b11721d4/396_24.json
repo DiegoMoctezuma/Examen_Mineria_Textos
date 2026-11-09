@@ -1,0 +1,54 @@
+{
+ "clave": "643a7664a32386e6130147cbc941a4d9ed69ec2d51e1bfea20e98e999ff6fdab",
+ "entidades_crudas": [
+  {
+   "confianza": 0.897388,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 75,
+   "inicio": 73,
+   "texto": "SE",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.968861,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 194,
+   "inicio": 185,
+   "texto": "Tren Maya",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999748,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 228,
+   "inicio": 222,
+   "texto": "Mérida",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999798,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 318,
+   "inicio": 309,
+   "texto": "Tren Maya",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "396_24",
+ "segundos": 0.053,
+ "texto_sha256": "20f25e23a9fe3a425e1d7cfe211becfaafcc3f50e122d56679c0a1bb75d258c8",
+ "version_transformers": "5.22.1"
+}

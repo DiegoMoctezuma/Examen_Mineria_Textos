@@ -1,0 +1,135 @@
+{
+ "clave": "eb4f94987a5b254c75d01ab91f15ba6a71d91b6465d9aa6d9437fa2acbeed247",
+ "entidades_crudas": [
+  {
+   "confianza": 0.59244,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 18,
+   "texto": "MANUEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999715,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 125,
+   "inicio": 111,
+   "texto": "Felipe Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999686,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 196,
+   "inicio": 182,
+   "texto": "Felipe Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.996319,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 212,
+   "inicio": 207,
+   "texto": "Villa",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999397,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 296,
+   "inicio": 292,
+   "texto": "More",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.927198,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 299,
+   "inicio": 296,
+   "texto": "los",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998615,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 510,
+   "inicio": 503,
+   "texto": "Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997286,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 651,
+   "inicio": 644,
+   "texto": "Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99954,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 813,
+   "inicio": 799,
+   "texto": "Felipe Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999305,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 834,
+   "inicio": 823,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999316,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 881,
+   "inicio": 874,
+   "texto": "Hidalgo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999551,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 931,
+   "inicio": 917,
+   "texto": "Felipe Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999378,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1043,
+   "inicio": 1032,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "2086_10",
+ "segundos": 0.076,
+ "texto_sha256": "85bc0f5669d7352bc77ed5d16c30cf769b748ff2e2320fe910f3013b2f97e1eb",
+ "version_transformers": "5.22.1"
+}

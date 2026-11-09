@@ -1,0 +1,198 @@
+{
+ "clave": "500a969ef16b6bb751273f4de37a7a084fce565faf4286d4e085cb61d06a574f",
+ "entidades_crudas": [
+  {
+   "confianza": 0.990598,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 63,
+   "inicio": 43,
+   "texto": "Istmo de Tehuantepec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997569,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 156,
+   "inicio": 151,
+   "texto": "Corre",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.897601,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 173,
+   "inicio": 156,
+   "texto": "dor Interoceánico",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999496,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 238,
+   "inicio": 236,
+   "texto": "Co",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.992897,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 249,
+   "inicio": 238,
+   "texto": "atzacoalcos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998526,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 256,
+   "inicio": 252,
+   "texto": "Sali",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.970351,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 263,
+   "inicio": 256,
+   "texto": "na Cruz",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.989764,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 297,
+   "inicio": 276,
+   "texto": "Ferrocarril del Istmo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.819,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 583,
+   "inicio": 575,
+   "texto": "Pacífico",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.849129,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 600,
+   "inicio": 591,
+   "texto": "Atlántico",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998171,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 610,
+   "inicio": 605,
+   "texto": "Corre",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.90229,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 627,
+   "inicio": 610,
+   "texto": "dor Interoceánico",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999501,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 788,
+   "inicio": 784,
+   "texto": "Asia",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.96378,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 862,
+   "inicio": 848,
+   "texto": "Estados Unidos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999328,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 927,
+   "inicio": 921,
+   "texto": "Centro",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999424,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 940,
+   "inicio": 930,
+   "texto": "Sudamérica",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.970999,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 1006,
+   "inicio": 970,
+   "texto": "Ferrocarril del Istmo de Tehuantepec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998697,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 1035,
+   "inicio": 1030,
+   "texto": "Corre",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.895165,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 1052,
+   "inicio": 1035,
+   "texto": "dor Interoceánico",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.856039,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 1212,
+   "inicio": 1205,
+   "texto": "Línea Z",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "354_38",
+ "segundos": 0.081,
+ "texto_sha256": "fdc8f1767522270bc9c2bcb339d40902706c2fceadab62227c4225e5f27d3005",
+ "version_transformers": "5.22.1"
+}

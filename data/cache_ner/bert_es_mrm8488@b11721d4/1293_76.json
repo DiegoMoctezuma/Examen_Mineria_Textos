@@ -1,0 +1,63 @@
+{
+ "clave": "ddd0de20b4a33a5fb4d597352d9db5ec3520969b4adca9e6f1729f04ad458c3a",
+ "entidades_crudas": [
+  {
+   "confianza": 0.663336,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 18,
+   "texto": "MANUEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99957,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 321,
+   "inicio": 303,
+   "texto": "Banco de Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999449,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 352,
+   "inicio": 346,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.853917,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 536,
+   "inicio": 527,
+   "texto": "Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999683,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 957,
+   "inicio": 938,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "1293_76",
+ "segundos": 0.071,
+ "texto_sha256": "2ff821e4c891977a575ffcc490937d2e931aa3a3bbc1d30a6400d7b536dc6a29",
+ "version_transformers": "5.22.1"
+}

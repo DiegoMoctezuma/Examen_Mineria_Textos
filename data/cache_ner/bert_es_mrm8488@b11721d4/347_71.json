@@ -1,0 +1,36 @@
+{
+ "clave": "014d3ec32ba083ddb7fd4a1029ad3a2cbd20b5d287431ff17c5e12603d467735",
+ "entidades_crudas": [
+  {
+   "confianza": 0.771021,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 18,
+   "texto": "MANUEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999751,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 756,
+   "inicio": 737,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "347_71",
+ "segundos": 0.069,
+ "texto_sha256": "ebdc0b3c66b1ef94bbf36af18ab1213000df5ccef62e30a6433376f80f3466c7",
+ "version_transformers": "5.22.1"
+}

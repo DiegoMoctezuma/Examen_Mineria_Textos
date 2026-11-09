@@ -1,0 +1,90 @@
+{
+ "clave": "3b5cf2b085a1ee8934c80ce9840d9d063e03aeaa15db6f32c0d767947ff55cbb",
+ "entidades_crudas": [
+  {
+   "confianza": 0.794151,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 18,
+   "texto": "MANUEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.952569,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 461,
+   "inicio": 416,
+   "texto": "Organización Campesina Independiente Emiliano",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.695879,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 468,
+   "inicio": 462,
+   "texto": "Zapata",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999616,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1000,
+   "inicio": 993,
+   "texto": "Xagacía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999821,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 1029,
+   "inicio": 1026,
+   "texto": "Sem",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997556,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 1040,
+   "inicio": 1029,
+   "texto": "brando Vida",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999828,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 1075,
+   "inicio": 1072,
+   "texto": "Sem",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.994309,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 1086,
+   "inicio": 1075,
+   "texto": "brando Vida",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "1691_3",
+ "segundos": 0.08,
+ "texto_sha256": "23e840a79c14c42330d0f9920e3bed9906721fc2949cb7d1eeaad0eb89b13064",
+ "version_transformers": "5.22.1"
+}

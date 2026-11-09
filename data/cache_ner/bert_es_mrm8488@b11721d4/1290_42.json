@@ -1,0 +1,144 @@
+{
+ "clave": "486e0fb48632cc4581f94655df5224f46ac24b7bc6c8e338f3d9ab915329e1b5",
+ "entidades_crudas": [
+  {
+   "confianza": 0.977336,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 77,
+   "inicio": 63,
+   "texto": "Shaila Rosagel",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999644,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 106,
+   "inicio": 95,
+   "texto": "Grupo Healy",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999105,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 120,
+   "inicio": 108,
+   "texto": "El Imparcial",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999718,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 128,
+   "inicio": 125,
+   "texto": "Son",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.963335,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 131,
+   "inicio": 128,
+   "texto": "ora",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998782,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 143,
+   "inicio": 133,
+   "texto": "La Crónica",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998254,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 156,
+   "inicio": 148,
+   "texto": "Mexicali",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.654222,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 168,
+   "inicio": 160,
+   "texto": "Frontera",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.876793,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 180,
+   "inicio": 173,
+   "texto": "Tijuana",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.992583,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 249,
+   "inicio": 247,
+   "texto": "CO",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.894954,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 255,
+   "inicio": 249,
+   "texto": "VID-19",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99938,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 273,
+   "inicio": 258,
+   "texto": "Baja California",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999693,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 281,
+   "inicio": 278,
+   "texto": "Son",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.987664,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 284,
+   "inicio": 281,
+   "texto": "ora",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "1290_42",
+ "segundos": 0.052,
+ "texto_sha256": "fba6fecd2cf43ea2d7c918ac3de2f32eb6fb02ceee75e24e58a9c9ef42d70657",
+ "version_transformers": "5.22.1"
+}

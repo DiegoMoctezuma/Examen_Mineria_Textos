@@ -1,0 +1,108 @@
+{
+ "clave": "bc2a417fbee849fd1037a39cfbbc0802db6913961de9434ed6106d4bf90bc78d",
+ "entidades_crudas": [
+  {
+   "confianza": 0.627462,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 18,
+   "texto": "MANUEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.780347,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 58,
+   "inicio": 53,
+   "texto": "Ánimo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99647,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 198,
+   "inicio": 184,
+   "texto": "Cero Impunidad",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999748,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 287,
+   "inicio": 274,
+   "texto": "Ricardo Mejía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999769,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 323,
+   "inicio": 311,
+   "texto": "Diego Prieto",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999239,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 383,
+   "inicio": 338,
+   "texto": "Instituto Nacional de Antropología e Historia",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999226,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 538,
+   "inicio": 529,
+   "texto": "Tren Maya",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999291,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 663,
+   "inicio": 654,
+   "texto": "Tren Maya",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999101,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 833,
+   "inicio": 824,
+   "texto": "Tren Maya",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.989642,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1029,
+   "inicio": 1022,
+   "texto": "Ricardo",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "578_0",
+ "segundos": 0.08,
+ "texto_sha256": "0723031e16b1090fd975539e80c4b8c8df317b315b068e08dfaf912784fa6528",
+ "version_transformers": "5.22.1"
+}

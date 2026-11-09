@@ -1,0 +1,108 @@
+{
+ "clave": "57dd64bcbf18011b58992434f00309c757fb8fb70c7e128a0a1e15b47c642b4e",
+ "entidades_crudas": [
+  {
+   "confianza": 0.91049,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 18,
+   "texto": "MANUEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999722,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 374,
+   "inicio": 368,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999616,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 886,
+   "inicio": 884,
+   "texto": "Pe",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.798848,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 889,
+   "inicio": 886,
+   "texto": "mex",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999566,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 908,
+   "inicio": 906,
+   "texto": "Pe",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.781459,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 911,
+   "inicio": 908,
+   "texto": "mex",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998979,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 935,
+   "inicio": 913,
+   "texto": "Octavio Romero Oropeza",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999677,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1003,
+   "inicio": 979,
+   "texto": "Luis Crescencio Sandoval",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.942778,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 1029,
+   "inicio": 1022,
+   "texto": "Defensa",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999743,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1054,
+   "inicio": 1032,
+   "texto": "Alejandro Gertz Manero",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "2274_1",
+ "segundos": 0.08,
+ "texto_sha256": "286a75ded7126f29e6fec4572e0d9e3d7a3d26ba76523cf5a12b931f62f861e6",
+ "version_transformers": "5.22.1"
+}

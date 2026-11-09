@@ -1,0 +1,135 @@
+{
+ "clave": "ddd4e5b3dafd768e68ce55fb2775a5f4ea230e0f88287d558a10dc04315fe10b",
+ "entidades_crudas": [
+  {
+   "confianza": 0.739528,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 18,
+   "texto": "MANUEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999857,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 255,
+   "inicio": 249,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999402,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 517,
+   "inicio": 511,
+   "texto": "Quinta",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.879753,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 523,
+   "inicio": 517,
+   "texto": "na Roo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999701,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 580,
+   "inicio": 577,
+   "texto": "Sem",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.995334,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 591,
+   "inicio": 580,
+   "texto": "brando Vida",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.87213,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 916,
+   "inicio": 904,
+   "texto": "Quintana Roo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999789,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 928,
+   "inicio": 921,
+   "texto": "Yucatán",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.859063,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 941,
+   "inicio": 933,
+   "texto": "Campeche",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999836,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 953,
+   "inicio": 946,
+   "texto": "Chiapas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.890539,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 965,
+   "inicio": 958,
+   "texto": "Tabasco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999858,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 978,
+   "inicio": 970,
+   "texto": "Veracruz",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.993649,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 1048,
+   "inicio": 1034,
+   "texto": "Sembrando Vida",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "1998_12",
+ "segundos": 0.08,
+ "texto_sha256": "3df1e8c5384fe0eaa823ad750f24b1e56e01a6dc1986e3e5ed1e770a1002507d",
+ "version_transformers": "5.22.1"
+}

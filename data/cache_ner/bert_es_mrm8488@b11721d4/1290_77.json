@@ -1,0 +1,99 @@
+{
+ "clave": "e6902accfd2997cd7336f2a7b82a0b81cc8356df6a5d74520550463228b1dfcc",
+ "entidades_crudas": [
+  {
+   "confianza": 0.870714,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 20,
+   "inicio": 0,
+   "texto": "JORGE ALCOCER VARELA",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999432,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 241,
+   "inicio": 240,
+   "texto": "P",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.9735,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 243,
+   "inicio": 241,
+   "texto": "fi",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.531516,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 246,
+   "inicio": 243,
+   "texto": "zer",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.896173,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 407,
+   "inicio": 399,
+   "texto": "COVID-19",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999314,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 431,
+   "inicio": 430,
+   "texto": "P",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.875182,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 433,
+   "inicio": 431,
+   "texto": "fi",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.584914,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 436,
+   "inicio": 433,
+   "texto": "zer",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.925974,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 445,
+   "inicio": 437,
+   "texto": "BioNTech",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "1290_77",
+ "segundos": 0.076,
+ "texto_sha256": "2a387a5a8f5f77104090437dc9f356876769588babbfb4572ee225df22c61385",
+ "version_transformers": "5.22.1"
+}

@@ -1,0 +1,243 @@
+{
+ "clave": "c337fc46df110f33989ad7ef2694ee1b922c07fbac9f0007be7646d875848c8b",
+ "entidades_crudas": [
+  {
+   "confianza": 0.464049,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 9,
+   "inicio": 4,
+   "texto": "MUJER",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.996621,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 42,
+   "inicio": 36,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999622,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 102,
+   "inicio": 91,
+   "texto": "AstraZeneca",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.932715,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 118,
+   "inicio": 110,
+   "texto": "COVID-19",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.679826,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 246,
+   "inicio": 240,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999533,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 275,
+   "inicio": 248,
+   "texto": "Andrés Manuel López Obrador",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998358,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 296,
+   "inicio": 282,
+   "texto": "Estados Unidos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999091,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 310,
+   "inicio": 298,
+   "texto": "Joseph Biden",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997877,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 493,
+   "inicio": 476,
+   "texto": "CanSino Biologics",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.996031,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 686,
+   "inicio": 680,
+   "texto": "Pfizer",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.969966,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 695,
+   "inicio": 687,
+   "texto": "BioNTech",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998939,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 708,
+   "inicio": 697,
+   "texto": "AstraZeneca",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.989386,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 717,
+   "inicio": 710,
+   "texto": "SinoVac",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.996529,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 728,
+   "inicio": 719,
+   "texto": "Sputnik V",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999735,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 783,
+   "inicio": 734,
+   "texto": "Centro Nacional de Investigación de Epidemiología",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.989809,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 808,
+   "inicio": 786,
+   "texto": "Microbiología Gamaleya",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.955929,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 831,
+   "inicio": 814,
+   "texto": "CanSino Biologics",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.979314,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 906,
+   "inicio": 899,
+   "texto": "CanSino",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.417279,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 932,
+   "inicio": 930,
+   "texto": "Dr",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.581031,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 937,
+   "inicio": 932,
+   "texto": "ugmex",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.924519,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 950,
+   "inicio": 941,
+   "texto": "Querétaro",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.989414,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 1128,
+   "inicio": 1090,
+   "texto": "Política Nacional de Vacunación contra",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.975859,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 1148,
+   "inicio": 1138,
+   "texto": "SARS-CoV-2",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.982182,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 1182,
+   "inicio": 1174,
+   "texto": "COVID-19",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999757,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1192,
+   "inicio": 1186,
+   "texto": "México",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "1188_80",
+ "segundos": 0.092,
+ "texto_sha256": "466284575fcaf565f6a197f8ae1774dd730eae62c1ac1d11d4346b52d9d3d3b6",
+ "version_transformers": "5.22.1"
+}

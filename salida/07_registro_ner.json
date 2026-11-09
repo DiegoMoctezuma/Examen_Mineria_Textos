@@ -1,0 +1,34 @@
+{
+  "bert_es_mrm8488": {
+    "modelo": "mrm8488/bert-spanish-cased-finetuned-ner",
+    "slug": "bert_es_mrm8488",
+    "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+    "version_posproceso": 1,
+    "parametros_inferencia": {
+      "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+      "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+      "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+      "max_length_real": 510,
+      "ventana": 480,
+      "solape": 64,
+      "aggregation_strategy": "simple"
+    },
+    "pasajes": 99,
+    "inferidos": 0,
+    "cacheados": 99,
+    "segundos_carga": 0.0,
+    "segundos_inferencia": 0.0,
+    "ventanas": 0,
+    "segundos_totales": 0.02,
+    "entidades_por_tipo": {
+      "LOC": 344,
+      "ORG": 161,
+      "PER": 155
+    },
+    "uniones_interpalabra": 2,
+    "descartadas": {
+      "MISC": 243,
+      "vacia_tras_recorte": 3
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+ "clave": "8dd8465ff4dc439af06c1e85d7436786a89f0e1742d4fd9608061ff44d1c6e45",
+ "entidades_crudas": [
+  {
+   "confianza": 0.719919,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 18,
+   "texto": "MANUEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998393,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 162,
+   "inicio": 148,
+   "texto": "Sembrando Vida",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.9996,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 324,
+   "inicio": 321,
+   "texto": "Sem",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.915747,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 335,
+   "inicio": 324,
+   "texto": "brando Vida",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999308,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 545,
+   "inicio": 541,
+   "texto": "Taba",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.854156,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 548,
+   "inicio": 545,
+   "texto": "sco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999805,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 561,
+   "inicio": 554,
+   "texto": "Chiapas",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "776_72",
+ "segundos": 0.052,
+ "texto_sha256": "c2657d391afef90339052593538ced715157c4f29311d424609bfa902945d9ec",
+ "version_transformers": "5.22.1"
+}

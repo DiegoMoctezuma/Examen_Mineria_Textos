@@ -1,0 +1,108 @@
+{
+ "clave": "803c9a0bf3db8588868c46e4aeac59b0b06135a401caed0d48ad47337cde4149",
+ "entidades_crudas": [
+  {
+   "confianza": 0.913368,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 9,
+   "inicio": 0,
+   "texto": "VOZ MUJER",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.576638,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 30,
+   "inicio": 14,
+   "texto": "Corredor Interoc",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.516592,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 36,
+   "inicio": 30,
+   "texto": "eánico",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.56524,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 58,
+   "inicio": 37,
+   "texto": "del Istmo de Tehuante",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.586425,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 61,
+   "inicio": 58,
+   "texto": "pec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.934563,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 146,
+   "inicio": 133,
+   "texto": "Coatzacoalcos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99856,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 541,
+   "inicio": 522,
+   "texto": "Laguna de Pajaritos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.994504,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 604,
+   "inicio": 593,
+   "texto": "Salina Cruz",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.803399,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 975,
+   "inicio": 948,
+   "texto": "Ferrocarril del Istmo de Te",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.672992,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 984,
+   "inicio": 975,
+   "texto": "huantepec",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "1342_19",
+ "segundos": 0.08,
+ "texto_sha256": "d05bd03c37279bb7cc4d449c0fe5fe06b261af4fa8dc28b73641a77edf94276d",
+ "version_transformers": "5.22.1"
+}

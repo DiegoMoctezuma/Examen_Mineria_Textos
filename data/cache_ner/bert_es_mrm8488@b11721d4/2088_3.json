@@ -1,0 +1,171 @@
+{
+ "clave": "441ce16a121f2094754f72916afa1e15f20ed842f6fd9c90c07cb3acf6b684e5",
+ "entidades_crudas": [
+  {
+   "confianza": 0.491858,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 21,
+   "inicio": 18,
+   "texto": "MAN",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.589241,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 24,
+   "inicio": 23,
+   "texto": "L",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999605,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 295,
+   "inicio": 291,
+   "texto": "Pens",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.962115,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 320,
+   "inicio": 295,
+   "texto": "ión a los Adultos Mayores",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.812201,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 410,
+   "inicio": 408,
+   "texto": "Is",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.778718,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 414,
+   "inicio": 410,
+   "texto": "sste",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.950341,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 426,
+   "inicio": 420,
+   "texto": "Seguro",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.986964,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 584,
+   "inicio": 582,
+   "texto": "Is",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.396632,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 585,
+   "inicio": 584,
+   "texto": "s",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.771875,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 588,
+   "inicio": 585,
+   "texto": "ste",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.654251,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 601,
+   "inicio": 595,
+   "texto": "Seguro",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999844,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 664,
+   "inicio": 662,
+   "texto": "Pe",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.980974,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 667,
+   "inicio": 664,
+   "texto": "mex",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999807,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 693,
+   "inicio": 685,
+   "texto": "Ejército",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999718,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 745,
+   "inicio": 713,
+   "texto": "Comisión Federal de Electricidad",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999756,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 873,
+   "inicio": 867,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.826638,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 958,
+   "inicio": 953,
+   "texto": "Istmo",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "2088_3",
+ "segundos": 0.081,
+ "texto_sha256": "15e6122bca95d89427ca2a058bff7c66f894aa06d01e2937e3c61c7b94c0200f",
+ "version_transformers": "5.22.1"
+}

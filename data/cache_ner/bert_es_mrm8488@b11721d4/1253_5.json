@@ -1,0 +1,54 @@
+{
+ "clave": "a9fde3e75ca49e991631fc82af48293023dcb77b5c9fa8f35aef1e8136e9a215",
+ "entidades_crudas": [
+  {
+   "confianza": 0.999308,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 76,
+   "inicio": 58,
+   "texto": "Gobierno de México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999603,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 424,
+   "inicio": 418,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998137,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 565,
+   "inicio": 563,
+   "texto": "CO",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.918603,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 571,
+   "inicio": 565,
+   "texto": "VID-19",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "1253_5",
+ "segundos": 0.08,
+ "texto_sha256": "3cda979a69628231d420bc06ca0d9ff7aa0ad8ab4943e029930e392d10e68537",
+ "version_transformers": "5.22.1"
+}

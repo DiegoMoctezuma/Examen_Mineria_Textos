@@ -1,0 +1,135 @@
+{
+ "clave": "8b7d3426580e8cb6b2fe3067bd5e95ed7483b7506511bed6b2deb2d0b4d033e0",
+ "entidades_crudas": [
+  {
+   "confianza": 0.859862,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 18,
+   "texto": "MANUEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999571,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 120,
+   "inicio": 109,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999771,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 494,
+   "inicio": 479,
+   "texto": "Fuerzas Armadas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999775,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 698,
+   "inicio": 684,
+   "texto": "Luis Cresencio",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999514,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 761,
+   "inicio": 750,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999523,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 826,
+   "inicio": 815,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998193,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 877,
+   "inicio": 861,
+   "texto": "Salinas Carranza",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999412,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 941,
+   "inicio": 929,
+   "texto": "Fuerza Aérea",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999526,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 983,
+   "inicio": 972,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999553,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1028,
+   "inicio": 1014,
+   "texto": "Felipe Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999431,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1053,
+   "inicio": 1039,
+   "texto": "Felipe Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998946,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1127,
+   "inicio": 1112,
+   "texto": "Colegio Militar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998892,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1172,
+   "inicio": 1157,
+   "texto": "Colegio Militar",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "2202_5",
+ "segundos": 0.076,
+ "texto_sha256": "b444a3603b09dab9fb722bc6e4669131600171fa7ebcf6211477f8f01d0f334f",
+ "version_transformers": "5.22.1"
+}

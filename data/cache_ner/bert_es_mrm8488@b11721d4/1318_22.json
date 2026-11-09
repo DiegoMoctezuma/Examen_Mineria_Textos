@@ -1,0 +1,72 @@
+{
+ "clave": "e3cf36ac64552313c7c5786f0a241fbf81653b19b48c0b657647d88865f636c8",
+ "entidades_crudas": [
+  {
+   "confianza": 0.948325,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 21,
+   "inicio": 18,
+   "texto": "MAN",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.615989,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 21,
+   "texto": "UEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999844,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 434,
+   "inicio": 428,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999498,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 510,
+   "inicio": 496,
+   "texto": "América Latina",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999818,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 562,
+   "inicio": 556,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999755,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1012,
+   "inicio": 1000,
+   "texto": "Carlos Pozos",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "1318_22",
+ "segundos": 0.073,
+ "texto_sha256": "489bcd876f2a47ff3831c868d499f078b729a9f50fbf3e5ea68565e939c12ae5",
+ "version_transformers": "5.22.1"
+}

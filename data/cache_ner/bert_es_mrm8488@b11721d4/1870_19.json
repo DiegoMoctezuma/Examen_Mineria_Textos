@@ -1,0 +1,135 @@
+{
+ "clave": "fb93a0b7023dbfced846b0fc72b368c151d26e9dd05b7f63f27f01eccfa29aa7",
+ "entidades_crudas": [
+  {
+   "confianza": 0.664752,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 18,
+   "texto": "MANUEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999514,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 270,
+   "inicio": 251,
+   "texto": "Precios de Garantía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999839,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 453,
+   "inicio": 450,
+   "texto": "Sem",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.982647,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 464,
+   "inicio": 453,
+   "texto": "brando Vida",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.889606,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 693,
+   "inicio": 679,
+   "texto": "Sembrando Vida",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.979007,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1002,
+   "inicio": 998,
+   "texto": "Tama",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.970174,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1005,
+   "inicio": 1002,
+   "texto": "uli",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.850338,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1008,
+   "inicio": 1005,
+   "texto": "pas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999813,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 1067,
+   "inicio": 1064,
+   "texto": "Sem",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.944905,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 1078,
+   "inicio": 1067,
+   "texto": "brando Vida",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999074,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1098,
+   "inicio": 1094,
+   "texto": "Tama",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.995341,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1101,
+   "inicio": 1098,
+   "texto": "uli",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.862461,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1104,
+   "inicio": 1101,
+   "texto": "pas",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "1870_19",
+ "segundos": 0.08,
+ "texto_sha256": "0b326acebf44cc9aa77e3b6623194985a80699adcf551caa79f5c9f7d510c263",
+ "version_transformers": "5.22.1"
+}

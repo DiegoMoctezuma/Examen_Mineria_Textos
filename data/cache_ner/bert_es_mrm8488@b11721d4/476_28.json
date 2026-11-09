@@ -1,0 +1,144 @@
+{
+ "clave": "a63383c771dc5a415f9d810bcf95ac9f36d85048826637d520b0d31a5b615f5b",
+ "entidades_crudas": [
+  {
+   "confianza": 0.851547,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 4,
+   "inicio": 2,
+   "texto": "EG",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.790964,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 22,
+   "inicio": 6,
+   "texto": "PRIETO HERNÁNDEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.65481,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 90,
+   "inicio": 82,
+   "texto": "HISTORIA",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.724423,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 94,
+   "inicio": 92,
+   "texto": "IN",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.537587,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 217,
+   "inicio": 214,
+   "texto": "VII",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.914781,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 223,
+   "inicio": 219,
+   "texto": "VIII",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997382,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 381,
+   "inicio": 367,
+   "texto": "Museo del Puuc",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999635,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 548,
+   "inicio": 542,
+   "texto": "Mérida",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997298,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 557,
+   "inicio": 550,
+   "texto": "Yucatán",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.951109,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 575,
+   "inicio": 562,
+   "texto": "Dzibilchaltún",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998477,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 902,
+   "inicio": 893,
+   "texto": "Tren Maya",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.677233,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 979,
+   "inicio": 973,
+   "texto": "Centro",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.585228,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1004,
+   "inicio": 980,
+   "texto": "de Atención a Visitantes",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997967,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 1084,
+   "inicio": 1075,
+   "texto": "Tren Maya",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "476_28",
+ "segundos": 0.075,
+ "texto_sha256": "b1c43401fe7c4eb5a9cfaa59da04f88e35e5fa5fadee7957a86d039e0affad89",
+ "version_transformers": "5.22.1"
+}

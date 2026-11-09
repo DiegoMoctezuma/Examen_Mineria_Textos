@@ -1,0 +1,72 @@
+{
+ "clave": "fc02f779dc2f25d632429085b0666b8b63b136239d1e18ac40e3fa91c42851a6",
+ "entidades_crudas": [
+  {
+   "confianza": 0.580027,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 18,
+   "texto": "MANUEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999414,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 419,
+   "inicio": 400,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999492,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 520,
+   "inicio": 501,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999735,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 655,
+   "inicio": 636,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999502,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 980,
+   "inicio": 961,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999533,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1172,
+   "inicio": 1148,
+   "texto": "Secretaría de la Defensa",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "525_29",
+ "segundos": 0.086,
+ "texto_sha256": "bcf01a5bc9d9cdf827e876c796080308564f8f81c1890fff76eaea840ca079b5",
+ "version_transformers": "5.22.1"
+}

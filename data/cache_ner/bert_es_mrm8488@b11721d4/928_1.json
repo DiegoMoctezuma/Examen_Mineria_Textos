@@ -1,0 +1,153 @@
+{
+ "clave": "e54d5505b7de10caa661607793fd673ab7dfdffb50ea675d2fdbd276b78db27c",
+ "entidades_crudas": [
+  {
+   "confianza": 0.482622,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 2,
+   "inicio": 0,
+   "texto": "AN",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.638603,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 3,
+   "inicio": 2,
+   "texto": "A",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.453955,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 13,
+   "inicio": 4,
+   "texto": "ELIZABETH",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.292521,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 23,
+   "inicio": 21,
+   "texto": "VI",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.961114,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 163,
+   "inicio": 149,
+   "texto": "Quién es quién",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999671,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 238,
+   "inicio": 232,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.961972,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 405,
+   "inicio": 384,
+   "texto": "Cuarta Transformación",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999483,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 615,
+   "inicio": 604,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99939,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 728,
+   "inicio": 717,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999295,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 943,
+   "inicio": 932,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.889139,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1057,
+   "inicio": 1041,
+   "texto": "‘Felipe Ángeles’",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.994492,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1115,
+   "inicio": 1102,
+   "texto": "Torre de Pisa",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999802,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1126,
+   "inicio": 1120,
+   "texto": "Italia",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.986563,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1169,
+   "inicio": 1162,
+   "texto": "‘Felipe",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.987217,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1178,
+   "inicio": 1171,
+   "texto": "Ángeles",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "928_1",
+ "segundos": 0.082,
+ "texto_sha256": "eff9421e18b0649549096aa9e0f2e5e76192b3145951dc5a1941cb4407764df5",
+ "version_transformers": "5.22.1"
+}

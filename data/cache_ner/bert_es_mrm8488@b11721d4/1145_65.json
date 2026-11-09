@@ -1,0 +1,81 @@
+{
+ "clave": "c7d123b1d3f7b0f52b55fdb616abd263a270985a438145763cd153ed1742f5ab",
+ "entidades_crudas": [
+  {
+   "confianza": 0.685879,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 5,
+   "inicio": 0,
+   "texto": "INTER",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.418429,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 7,
+   "inicio": 5,
+   "texto": "LO",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.96299,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 208,
+   "inicio": 196,
+   "texto": "Quintana Roo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.94717,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 323,
+   "inicio": 311,
+   "texto": "Quintana Roo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.721875,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 378,
+   "inicio": 376,
+   "texto": "CO",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.912815,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 380,
+   "inicio": 378,
+   "texto": "VI",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.628906,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 381,
+   "inicio": 380,
+   "texto": "D",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "1145_65",
+ "segundos": 0.048,
+ "texto_sha256": "f46fb0ae0fbb0a024645e937efac79b0ccee9d9ca7ac9b2e724deb5579a13330",
+ "version_transformers": "5.22.1"
+}

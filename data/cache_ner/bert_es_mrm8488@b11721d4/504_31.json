@@ -1,0 +1,225 @@
+{
+ "clave": "e7f3d048c92a84f5b2b368018367ebd3219864e70b5111dd432385a9fd1f98b4",
+ "entidades_crudas": [
+  {
+   "confianza": 0.885405,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 33,
+   "inicio": 0,
+   "texto": "SECRETARÍA DE LA DEFENSA NACIONAL",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.942657,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 37,
+   "inicio": 35,
+   "texto": "SE",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.979483,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 147,
+   "inicio": 143,
+   "texto": "INAH",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.991809,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 613,
+   "inicio": 604,
+   "texto": "Tren Maya",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.988373,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 668,
+   "inicio": 663,
+   "texto": "Corre",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.958986,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 710,
+   "inicio": 668,
+   "texto": "dor Interoceánico del Istmo de Tehuantepec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999634,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 750,
+   "inicio": 730,
+   "texto": "Secretaría de Marina",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.971408,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 912,
+   "inicio": 904,
+   "texto": "Palenque",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997745,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 953,
+   "inicio": 948,
+   "texto": "Corre",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.944964,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 970,
+   "inicio": 953,
+   "texto": "dor Interoceánico",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.996866,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 985,
+   "inicio": 976,
+   "texto": "Tren Maya",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999659,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1038,
+   "inicio": 1033,
+   "texto": "Campe",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.556679,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1041,
+   "inicio": 1038,
+   "texto": "che",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.952979,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1054,
+   "inicio": 1046,
+   "texto": "Progreso",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99974,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1065,
+   "inicio": 1059,
+   "texto": "Mérida",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.981813,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1076,
+   "inicio": 1070,
+   "texto": "Cancún",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.965964,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1090,
+   "inicio": 1082,
+   "texto": "Chetumal",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.924254,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 1221,
+   "inicio": 1218,
+   "texto": "Pet",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.415813,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 1223,
+   "inicio": 1221,
+   "texto": "ró",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.565454,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1233,
+   "inicio": 1223,
+   "texto": "leos Mexic",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.505555,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 1237,
+   "inicio": 1233,
+   "texto": "anos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.886154,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1262,
+   "inicio": 1257,
+   "texto": "Pemex",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.914111,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 1302,
+   "inicio": 1293,
+   "texto": "Tren Maya",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "504_31",
+ "segundos": 0.095,
+ "texto_sha256": "55f99a37af07d6f278a11c6f5769fe0b77d77557b11f4e406f854b3edc6cbc00",
+ "version_transformers": "5.22.1"
+}

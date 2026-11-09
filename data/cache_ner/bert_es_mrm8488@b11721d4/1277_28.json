@@ -1,0 +1,90 @@
+{
+ "clave": "c3827cd31432fbba875da072e5d734be492fa3ef43236d6eedae3fa024959b6d",
+ "entidades_crudas": [
+  {
+   "confianza": 0.998094,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 3,
+   "inicio": 0,
+   "texto": "CAR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.936164,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 15,
+   "inicio": 3,
+   "texto": "OLINA VARGAS",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.907501,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 157,
+   "inicio": 137,
+   "texto": "Brigada Correcaminos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99961,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 687,
+   "inicio": 663,
+   "texto": "Edgar Jesús Zitle García",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.974951,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 726,
+   "inicio": 722,
+   "texto": "IMSS",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999551,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 733,
+   "inicio": 730,
+   "texto": "Son",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.657017,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 736,
+   "inicio": 733,
+   "texto": "ora",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.976832,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 785,
+   "inicio": 777,
+   "texto": "COVID-19",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "1277_28",
+ "segundos": 0.059,
+ "texto_sha256": "36b1c57438962216f80e7aab17766a330b7551250742aed9d39488bdbe2e28a1",
+ "version_transformers": "5.22.1"
+}

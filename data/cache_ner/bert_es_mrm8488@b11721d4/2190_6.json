@@ -1,0 +1,45 @@
+{
+ "clave": "13a0c3d09131c1e00c9bc45d1aeec56fbf587d1efc273b6e41d9c72f9ef412a3",
+ "entidades_crudas": [
+  {
+   "confianza": 0.75912,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 18,
+   "texto": "MANUEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.93975,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 89,
+   "inicio": 84,
+   "texto": "Corte",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998706,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 999,
+   "inicio": 983,
+   "texto": "Ciudad de México",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "2190_6",
+ "segundos": 0.087,
+ "texto_sha256": "2a429dac9a90de7a8e26b7c72a6fb6025840a1729e173bdda20d2df14d9b02ae",
+ "version_transformers": "5.22.1"
+}

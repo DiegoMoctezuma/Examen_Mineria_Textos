@@ -18,6 +18,7 @@ import sys
 
 import pandas as pd
 
+from mtx import ambito as mod_ambito
 from mtx import config, reglas
 
 SALIDA = config.DIR_SALIDA
@@ -28,13 +29,6 @@ def congeladas() -> bool:
     r = subprocess.run(["git", "tag", "-l", "reglas-congeladas"], cwd=config.RAIZ,
                        capture_output=True, text=True, check=False)
     return bool(r.stdout.strip())
-
-
-def ambito() -> pd.DataFrame:
-    """(query_id, passage_id) del top-10 con filtro del mejor modelo (D08)."""
-    modelo = json.loads((config.DIR_DATA / "mejor_modelo.json").read_text())["modelo"]
-    rk = pd.read_csv(SALIDA / "ranking.csv", dtype={"passage_id": str})
-    return rk[rk["modelo"] == modelo][["query_id", "passage_id"]].reset_index(drop=True)
 
 
 def main() -> int:
@@ -56,7 +50,7 @@ def main() -> int:
     siglas = reglas.minar_siglas(pasajes, gaz)
     reglas.escribir_csv(siglas, SALIDA / "06_siglas_candidatas.csv")
 
-    amb = ambito()
+    amb = mod_ambito.ambito_ie()[["query_id", "passage_id"]]
     unicos = pasajes[pasajes["passage_id"].isin(set(amb["passage_id"]))]
     ent, aux, col = [], [], []
     for pid, texto, ic in zip(unicos["passage_id"], unicos["texto"], unicos["inicio_cuerpo"]):

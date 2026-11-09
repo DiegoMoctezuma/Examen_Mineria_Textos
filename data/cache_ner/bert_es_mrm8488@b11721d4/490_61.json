@@ -1,0 +1,198 @@
+{
+ "clave": "6abcfd886d13121e07cef00605981924802744bcd0a015c61a78a1c30d4b89d7",
+ "entidades_crudas": [
+  {
+   "confianza": 0.999594,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 95,
+   "inicio": 93,
+   "texto": "Tu",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.885933,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 99,
+   "inicio": 95,
+   "texto": "xtla",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999724,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 169,
+   "inicio": 167,
+   "texto": "Tu",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.967917,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 183,
+   "inicio": 169,
+   "texto": "xtla Gutiérrez",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997396,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 192,
+   "inicio": 185,
+   "texto": "Chiapas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999741,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 214,
+   "inicio": 212,
+   "texto": "Tu",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.964996,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 228,
+   "inicio": 214,
+   "texto": "xtla Gutiérrez",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999052,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 237,
+   "inicio": 230,
+   "texto": "Chiapas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.996075,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 323,
+   "inicio": 303,
+   "texto": "Bancos del Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998533,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 348,
+   "inicio": 329,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.995539,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 492,
+   "inicio": 472,
+   "texto": "Bancos del Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999764,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 504,
+   "inicio": 497,
+   "texto": "Chiapas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.991962,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 564,
+   "inicio": 544,
+   "texto": "Bancos del Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999772,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 612,
+   "inicio": 606,
+   "texto": "Oaxaca",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999841,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 639,
+   "inicio": 633,
+   "texto": "Oaxaca",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999558,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 738,
+   "inicio": 719,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99959,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 797,
+   "inicio": 778,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999542,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 819,
+   "inicio": 812,
+   "texto": "Chiapas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999553,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1134,
+   "inicio": 1115,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999853,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1167,
+   "inicio": 1161,
+   "texto": "Oaxaca",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "490_61",
+ "segundos": 0.12,
+ "texto_sha256": "541d04f939fe849d0220d821dfef48665e7d7351ed874ae82764564adf87d82c",
+ "version_transformers": "5.22.1"
+}

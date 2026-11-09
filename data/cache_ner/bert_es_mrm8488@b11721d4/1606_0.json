@@ -1,0 +1,198 @@
+{
+ "clave": "c4db61daf87e3486f04a1ade454d340a7c30699f4e81b4ce1e0d0fdb3fcca5e1",
+ "entidades_crudas": [
+  {
+   "confianza": 0.933167,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999384,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 152,
+   "inicio": 141,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.959872,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 182,
+   "inicio": 168,
+   "texto": "Felipe Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99972,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 231,
+   "inicio": 208,
+   "texto": "Luis Cresencio Sandoval",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.991821,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 257,
+   "inicio": 250,
+   "texto": "Defensa",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999663,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 295,
+   "inicio": 272,
+   "texto": "José Rafael Ojeda Durán",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.988344,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 317,
+   "inicio": 311,
+   "texto": "Marina",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999552,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 353,
+   "inicio": 332,
+   "texto": "Javier Jiménez Espriú",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999811,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 383,
+   "inicio": 369,
+   "texto": "Comunicaciones",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998087,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 397,
+   "inicio": 386,
+   "texto": "Transportes",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999826,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 445,
+   "inicio": 423,
+   "texto": "Ricardo Vallejo Suárez",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.991608,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 497,
+   "inicio": 486,
+   "texto": "Román Meyer",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999358,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 530,
+   "inicio": 513,
+   "texto": "Desarrollo Urbano",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.985011,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 584,
+   "inicio": 577,
+   "texto": "Hidalgo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999818,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 596,
+   "inicio": 586,
+   "texto": "Omar Fayad",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.986842,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 965,
+   "inicio": 958,
+   "texto": "Texcoco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.886069,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1035,
+   "inicio": 1009,
+   "texto": "Santa Lucía Felipe Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.970076,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1092,
+   "inicio": 1078,
+   "texto": "Felipe Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.665157,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1121,
+   "inicio": 1117,
+   "texto": "AMLO",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999678,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1269,
+   "inicio": 1242,
+   "texto": "Andrés Manuel López Obrador",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "1606_0",
+ "segundos": 0.08,
+ "texto_sha256": "44b48161acdde10a3ef1e6727eea9a14d6aa23697a7517897d7f83e40b47b0cb",
+ "version_transformers": "5.22.1"
+}

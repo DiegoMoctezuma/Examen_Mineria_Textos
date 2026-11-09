@@ -1,0 +1,20 @@
+# NER con modelo (PRD §6.8, D09, D18). La revisión es el commit de Hugging Face registrado en la
+# primera descarga exitosa (2026-11-08); nunca "main". Cambiar cualquier parámetro de inferencia o
+# fragmentación cambia la clave de caché y obliga a reinferir; cambiar `version_posproceso` no.
+principal: bert_es_mrm8488
+modelos:
+  bert_es_mrm8488:
+    repo_id: mrm8488/bert-spanish-cased-finetuned-ner
+    revision: b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7
+    # 512 posiciones menos [CLS] y [SEP], verificado en model.config y el tokenizador (P06).
+    max_length_real: 510
+    # Ventana en subtokens (margen de 30 para la retokenización de la subcadena) y solapamiento.
+    ventana: 480
+    solape: 64
+    lote: 8
+    aggregation_strategy: simple
+    device: -1
+    # Etiquetas reales del modelo (id2label): B/I-PER, B/I-ORG, B/I-LOC, B/I-MISC.
+    mapa_etiquetas: {PER: PER, ORG: ORG, LOC: LOC}
+    descartadas: [MISC]
+    version_posproceso: 1

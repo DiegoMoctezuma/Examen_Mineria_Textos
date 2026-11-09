@@ -1,0 +1,153 @@
+{
+ "clave": "19df4eb30164e4e8450cac19ea172b9418fc9bee6aecff878f75dbd5dfdc4f7b",
+ "entidades_crudas": [
+  {
+   "confianza": 0.954507,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 9,
+   "inicio": 0,
+   "texto": "VOZ MUJER",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.864139,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 20,
+   "inicio": 11,
+   "texto": "Tren Maya",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999473,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 176,
+   "inicio": 167,
+   "texto": "San Pedro",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999334,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 189,
+   "inicio": 179,
+   "texto": "El Triunfo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999117,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 229,
+   "inicio": 219,
+   "texto": "El Triunfo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999132,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 342,
+   "inicio": 340,
+   "texto": "Po",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.923341,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 347,
+   "inicio": 342,
+   "texto": "c Boc",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.868444,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 481,
+   "inicio": 473,
+   "texto": "Hampolol",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.996822,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 553,
+   "inicio": 550,
+   "texto": "Bec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.52788,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 555,
+   "inicio": 553,
+   "texto": "al",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.988786,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 565,
+   "inicio": 557,
+   "texto": "Campeche",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.923157,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 788,
+   "inicio": 784,
+   "texto": "Umán",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998696,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 797,
+   "inicio": 790,
+   "texto": "Yucatán",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.990723,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 967,
+   "inicio": 958,
+   "texto": "Tren Maya",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.860479,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 1023,
+   "inicio": 1009,
+   "texto": "Tren Maya Avan",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "972_21",
+ "segundos": 0.075,
+ "texto_sha256": "3c107a95599bcf6c6ea9506766fba3cd09d2ee513219a295102f2203cafc272b",
+ "version_transformers": "5.22.1"
+}

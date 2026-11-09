@@ -1,0 +1,81 @@
+{
+ "clave": "be22c4c208321b677583d2b702f1684a35c39cd1996cdab08a1c99def5c0b50e",
+ "entidades_crudas": [
+  {
+   "confianza": 0.622325,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 18,
+   "texto": "MANUEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.989266,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 550,
+   "inicio": 544,
+   "texto": "España",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999866,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 640,
+   "inicio": 634,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999897,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 680,
+   "inicio": 674,
+   "texto": "España",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999904,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 725,
+   "inicio": 719,
+   "texto": "España",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999499,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 856,
+   "inicio": 848,
+   "texto": "Economía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999498,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1071,
+   "inicio": 1058,
+   "texto": "Ciudad Juárez",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "2265_8",
+ "segundos": 0.075,
+ "texto_sha256": "5416177c3a6d215c75e96932b76d0115cefdaac5601f7b578cece43ca47d25ce",
+ "version_transformers": "5.22.1"
+}

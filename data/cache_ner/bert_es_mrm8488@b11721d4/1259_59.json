@@ -1,0 +1,144 @@
+{
+ "clave": "b5704e241e34137886c626bbce484c6b7db9bf131398cdca6c9e0ea309d4e03c",
+ "entidades_crudas": [
+  {
+   "confianza": 0.756062,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 24,
+   "inicio": 18,
+   "texto": "MANUEL",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998829,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 62,
+   "inicio": 46,
+   "texto": "Ciudad de México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999583,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 82,
+   "inicio": 71,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99927,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 179,
+   "inicio": 163,
+   "texto": "Ciudad de México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998314,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 210,
+   "inicio": 185,
+   "texto": "Base Aérea de Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999583,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 241,
+   "inicio": 230,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997459,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 525,
+   "inicio": 522,
+   "texto": "Mit",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.673914,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 527,
+   "inicio": 525,
+   "texto": "re",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.455699,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 663,
+   "inicio": 656,
+   "texto": "‘Felipe",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.757138,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 671,
+   "inicio": 664,
+   "texto": "Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.649057,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 761,
+   "inicio": 760,
+   "texto": "‘",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.613543,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 775,
+   "inicio": 761,
+   "texto": "Felipe Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.972847,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 819,
+   "inicio": 813,
+   "texto": "Toluca",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.871833,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1152,
+   "inicio": 1137,
+   "texto": "lago de Texcoco",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "1259_59",
+ "segundos": 0.079,
+ "texto_sha256": "58d36d7f564449c752510e17928ba11d103ca5c2e8c16bb0335318cee0f694cc",
+ "version_transformers": "5.22.1"
+}

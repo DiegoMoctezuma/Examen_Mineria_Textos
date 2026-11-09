@@ -1,0 +1,279 @@
+{
+ "clave": "f5b62e35f9c2e773b3880ae0864cf1562f2517bb969d843a5af94cacc579d0a2",
+ "entidades_crudas": [
+  {
+   "confianza": 0.987668,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 2,
+   "inicio": 0,
+   "texto": "RA",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.630845,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 24,
+   "inicio": 17,
+   "texto": "ÁNGELES",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.764048,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 50,
+   "inicio": 47,
+   "texto": "COR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.853777,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 69,
+   "inicio": 56,
+   "texto": "INTEROCEÁNICO",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.349035,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 76,
+   "inicio": 74,
+   "texto": "IS",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.763732,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 94,
+   "inicio": 83,
+   "texto": "TEHUANTEPEC",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.993398,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 98,
+   "inicio": 96,
+   "texto": "CI",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.971913,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 229,
+   "inicio": 182,
+   "texto": "Corredor Interoceánico del Istmo de Tehuantepec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999681,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 279,
+   "inicio": 261,
+   "texto": "Gobierno de México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99662,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 478,
+   "inicio": 442,
+   "texto": "Ferrocarril del Istmo de Tehuantepec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999168,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 488,
+   "inicio": 483,
+   "texto": "Corre",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.938314,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 505,
+   "inicio": 488,
+   "texto": "dor Interoceánico",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998494,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 533,
+   "inicio": 529,
+   "texto": "Sali",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.993456,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 540,
+   "inicio": 533,
+   "texto": "na Cruz",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999312,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 544,
+   "inicio": 542,
+   "texto": "Co",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.969219,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 555,
+   "inicio": 544,
+   "texto": "atzacoalcos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999021,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 571,
+   "inicio": 557,
+   "texto": "Puerto Chiapas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998776,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 583,
+   "inicio": 574,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.963867,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 621,
+   "inicio": 598,
+   "texto": "Corrector Interoceánico",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.984584,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 866,
+   "inicio": 846,
+   "texto": "Istmo de Tehuantepec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.893711,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 906,
+   "inicio": 899,
+   "texto": "Línea Z",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999302,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 938,
+   "inicio": 936,
+   "texto": "Co",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.985324,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 949,
+   "inicio": 938,
+   "texto": "atzacoalcos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997713,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 956,
+   "inicio": 952,
+   "texto": "Sali",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.971002,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 963,
+   "inicio": 956,
+   "texto": "na Cruz",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99932,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1291,
+   "inicio": 1289,
+   "texto": "Co",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.978873,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1302,
+   "inicio": 1291,
+   "texto": "atzacoalcos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997698,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1309,
+   "inicio": 1305,
+   "texto": "Pale",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.781468,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1313,
+   "inicio": 1309,
+   "texto": "nque",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "354_33",
+ "segundos": 0.098,
+ "texto_sha256": "0d18c9213d175d9a915e2e9da06a20d5d80290fa3464f7e5a54fe9218abfaa9d",
+ "version_transformers": "5.22.1"
+}

@@ -1,0 +1,189 @@
+{
+ "clave": "f0577ba7b95c70ddbf553303d66431cc45d510a7eec94e3bddebdd6905ab2569",
+ "entidades_crudas": [
+  {
+   "confianza": 0.975554,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 19,
+   "inicio": 0,
+   "texto": "JOAO PEDRO PARREIRA",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.953913,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 63,
+   "inicio": 61,
+   "texto": "EN",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.712383,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 80,
+   "inicio": 63,
+   "texto": "GIL LATINOAMÉRICA",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.985979,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 149,
+   "inicio": 146,
+   "texto": "Tra",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.645493,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 151,
+   "inicio": 149,
+   "texto": "mo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999698,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 169,
+   "inicio": 162,
+   "texto": "Chiapas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.815603,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 205,
+   "inicio": 197,
+   "texto": "Palenque",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999168,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 214,
+   "inicio": 207,
+   "texto": "Chiapas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997555,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 259,
+   "inicio": 250,
+   "texto": "Tren Maya",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.864138,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 283,
+   "inicio": 275,
+   "texto": "Palenque",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.993956,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 349,
+   "inicio": 346,
+   "texto": "Tra",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.949688,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 351,
+   "inicio": 349,
+   "texto": "mo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999194,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 477,
+   "inicio": 468,
+   "texto": "Tren Maya",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.985994,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 705,
+   "inicio": 702,
+   "texto": "Tra",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.566672,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 707,
+   "inicio": 705,
+   "texto": "mo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99763,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 739,
+   "inicio": 730,
+   "texto": "Tren Maya",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998823,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 935,
+   "inicio": 925,
+   "texto": "El Triunfo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.903155,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1159,
+   "inicio": 1152,
+   "texto": "Triunfo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.989449,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1168,
+   "inicio": 1161,
+   "texto": "Tabasco",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "487_29",
+ "segundos": 0.083,
+ "texto_sha256": "1a4c53adf269cc70ceaccc120e73168680b9ad3cbcbc4e73eceab40b842f49b9",
+ "version_transformers": "5.22.1"
+}

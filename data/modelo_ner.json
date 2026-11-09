@@ -1,0 +1,8 @@
+{
+  "modelo": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "slug": "bert_es_mrm8488",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "f1_seleccion": null,
+  "f1_seleccion_alternativa": null,
+  "criterio": "tecnico"
+}

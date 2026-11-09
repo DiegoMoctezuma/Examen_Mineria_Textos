@@ -1,0 +1,54 @@
+{
+ "clave": "f7b855dd24494266dc2be298a78e59e0c7caa4aafcec0e2502df736b29f5be01",
+ "entidades_crudas": [
+  {
+   "confianza": 0.330465,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 21,
+   "inicio": 18,
+   "texto": "MAN",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998957,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 136,
+   "inicio": 132,
+   "texto": "Mich",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.761529,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 141,
+   "inicio": 136,
+   "texto": "oacán",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.996168,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 384,
+   "inicio": 370,
+   "texto": "Torre de Pemex",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "2115_5",
+ "segundos": 0.082,
+ "texto_sha256": "0b3ae5db298cf50c18ad23d190b85967cc2b7d5ff673e1e95ef9696546e50a25",
+ "version_transformers": "5.22.1"
+}

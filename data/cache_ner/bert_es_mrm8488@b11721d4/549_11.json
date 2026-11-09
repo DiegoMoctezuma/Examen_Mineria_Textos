@@ -1,0 +1,117 @@
+{
+ "clave": "7349733a92447f435a4fb86a44f56b3e0c86fe2fabc45764acef63796725c33d",
+ "entidades_crudas": [
+  {
+   "confianza": 0.764226,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 24,
+   "inicio": 18,
+   "texto": "MANUEL",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.944411,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 48,
+   "inicio": 43,
+   "texto": "Salud",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999695,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 181,
+   "inicio": 162,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999838,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 206,
+   "inicio": 200,
+   "texto": "Oaxaca",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999876,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 297,
+   "inicio": 291,
+   "texto": "Oaxaca",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999872,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 309,
+   "inicio": 303,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999722,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 332,
+   "inicio": 313,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997994,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 798,
+   "inicio": 793,
+   "texto": "Rusia",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99792,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 808,
+   "inicio": 801,
+   "texto": "Ucrania",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999677,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1071,
+   "inicio": 1052,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999832,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1081,
+   "inicio": 1075,
+   "texto": "Oaxaca",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "549_11",
+ "segundos": 0.086,
+ "texto_sha256": "ca0b5e81bc59394df0beb8b2f74fca1d7d669873e62dda54511da5edb7474200",
+ "version_transformers": "5.22.1"
+}

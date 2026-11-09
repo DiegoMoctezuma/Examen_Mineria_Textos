@@ -1,0 +1,72 @@
+{
+ "clave": "cf65fafc41307352fb90dd85ed9e8c58a9ec428b1ff8031b7aa0fe0cf12e093e",
+ "entidades_crudas": [
+  {
+   "confianza": 0.985072,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 21,
+   "inicio": 18,
+   "texto": "MAN",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.759917,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 21,
+   "texto": "UEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.511223,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 112,
+   "inicio": 105,
+   "texto": "Tabasco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99905,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 182,
+   "inicio": 173,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99142,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 223,
+   "inicio": 213,
+   "texto": "Cuauhtémoc",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998973,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 236,
+   "inicio": 227,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "754_67",
+ "segundos": 0.04,
+ "texto_sha256": "d1821813069d0aa4f4406c4e13e9e159fb7207e6560269f26fd0457b8283709a",
+ "version_transformers": "5.22.1"
+}

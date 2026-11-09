@@ -1,0 +1,90 @@
+{
+ "clave": "e258d6d76015de49b1070cef11c5da4843688ae16704d1ce2a74e61b8936cb88",
+ "entidades_crudas": [
+  {
+   "confianza": 0.988745,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1,
+   "inicio": 0,
+   "texto": "H",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.699385,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 10,
+   "inicio": 1,
+   "texto": "UGO LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.76674,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 14,
+   "inicio": 11,
+   "texto": "GAT",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.426553,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 17,
+   "inicio": 14,
+   "texto": "ELL",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998772,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 130,
+   "inicio": 83,
+   "texto": "Política Nacional de Vacunación contra la COVID",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.588055,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 133,
+   "inicio": 131,
+   "texto": "19",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999327,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 407,
+   "inicio": 384,
+   "texto": "Luis Cresencio Sandoval",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999719,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1270,
+   "inicio": 1264,
+   "texto": "México",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "1116_10",
+ "segundos": 0.08,
+ "texto_sha256": "e2af0302201173d240c4a4d5846d9d5bf62181b896342761eef4ea85f935a7ac",
+ "version_transformers": "5.22.1"
+}

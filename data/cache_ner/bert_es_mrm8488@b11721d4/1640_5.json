@@ -1,0 +1,108 @@
+{
+ "clave": "98eba72414e5889f5e4e650ee1c31e2db966b8165a136ba9cfafc33993c65017",
+ "entidades_crudas": [
+  {
+   "confianza": 0.760976,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 21,
+   "inicio": 18,
+   "texto": "MAN",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.696696,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 23,
+   "texto": "L LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.576087,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 277,
+   "inicio": 275,
+   "texto": "Is",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.87025,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 281,
+   "inicio": 277,
+   "texto": "sste",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.961199,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 293,
+   "inicio": 287,
+   "texto": "Seguro",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999133,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 419,
+   "inicio": 413,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999842,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 609,
+   "inicio": 601,
+   "texto": "Congreso",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998986,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1042,
+   "inicio": 1038,
+   "texto": "Tama",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.968978,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1044,
+   "inicio": 1042,
+   "texto": "zu",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.594429,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1046,
+   "inicio": 1044,
+   "texto": "la",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "1640_5",
+ "segundos": 0.08,
+ "texto_sha256": "9f35e3e97aae22ab6d129f1d9c331c4bc5a0c91251c5d9f1fb8f05f812dbc52e",
+ "version_transformers": "5.22.1"
+}

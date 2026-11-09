@@ -1,0 +1,63 @@
+{
+ "clave": "80ae27db90130edf8bd8af5491461f0adfbab3525094c5b587b50e58add6f21e",
+ "entidades_crudas": [
+  {
+   "confianza": 0.666577,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 18,
+   "texto": "MANUEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.988989,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 345,
+   "inicio": 295,
+   "texto": "Asociación Campesina Independiente Emiliano Zapata",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999509,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 638,
+   "inicio": 635,
+   "texto": "Sem",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.978021,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 649,
+   "inicio": 638,
+   "texto": "brando Vida",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.987077,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 995,
+   "inicio": 971,
+   "texto": "Secretaría de la Defensa",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "1850_6",
+ "segundos": 0.08,
+ "texto_sha256": "8fbecf292d2ece53b66bfe016fecceb93b0590bc5bbffb6139889ff266484d40",
+ "version_transformers": "5.22.1"
+}

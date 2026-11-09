@@ -1,0 +1,63 @@
+{
+ "clave": "a298f8e0094beb2e3cb1f97755e2934ca4232100237f988f1b06706c26c5a3ff",
+ "entidades_crudas": [
+  {
+   "confianza": 0.765497,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 13,
+   "inicio": 0,
+   "texto": "VOZ DE HOMBRE",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999592,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 84,
+   "inicio": 77,
+   "texto": "Energía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.995414,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 97,
+   "inicio": 86,
+   "texto": "Rocío Nahle",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998918,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 195,
+   "inicio": 186,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99198,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 204,
+   "inicio": 197,
+   "texto": "Tabasco",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "1787_11",
+ "segundos": 0.038,
+ "texto_sha256": "1a50fcb7a6bf6d1469ee6d6e386f7da0924a3d83584b73daeb3911afd24f8160",
+ "version_transformers": "5.22.1"
+}

@@ -1,0 +1,99 @@
+{
+ "clave": "983e0a4b9fe6099fe3ee4810775eeb892999301817c9b76b7ecabfb06a517ccc",
+ "entidades_crudas": [
+  {
+   "confianza": 0.577098,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 5,
+   "inicio": 0,
+   "texto": "INTER",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.371507,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 7,
+   "inicio": 5,
+   "texto": "LO",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999761,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 191,
+   "inicio": 183,
+   "texto": "Veracruz",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999137,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 247,
+   "inicio": 240,
+   "texto": "Energía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999248,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 288,
+   "inicio": 279,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999618,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 359,
+   "inicio": 347,
+   "texto": "Grupo Cantón",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999263,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 471,
+   "inicio": 464,
+   "texto": "Energía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998842,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 752,
+   "inicio": 743,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.97591,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 764,
+   "inicio": 757,
+   "texto": "Tabasco",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "834_74",
+ "segundos": 0.069,
+ "texto_sha256": "567290e9ca4053b33dcd00d80f190dcfc609a133ce9f996179069c7a63f23562",
+ "version_transformers": "5.22.1"
+}

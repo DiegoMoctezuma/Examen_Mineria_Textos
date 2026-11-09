@@ -1,0 +1,63 @@
+{
+ "clave": "bd58c985a3def33e915843c33fb05dea8a87809cb6f4408afc652b6a57b4c5fc",
+ "entidades_crudas": [
+  {
+   "confianza": 0.957065,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 21,
+   "inicio": 18,
+   "texto": "MAN",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.860786,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 21,
+   "texto": "UEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.981771,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 171,
+   "inicio": 157,
+   "texto": "Sembrando Vida",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999643,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 257,
+   "inicio": 254,
+   "texto": "Sem",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.933685,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 268,
+   "inicio": 257,
+   "texto": "brando Vida",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "1626_3",
+ "segundos": 0.045,
+ "texto_sha256": "6bdeafbb1b57f7e83b6cb10b5303b8bc40d99e5f60af092a650cdb9f7e1d306c",
+ "version_transformers": "5.22.1"
+}

@@ -1,0 +1,27 @@
+{
+ "clave": "34bf447ce61c4370ee3fec7324e26f649279b8008311c7e2a133dca084d2b15e",
+ "entidades_crudas": [
+  {
+   "confianza": 0.790382,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 21,
+   "inicio": 18,
+   "texto": "MAN",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "2008_2",
+ "segundos": 0.082,
+ "texto_sha256": "4e10a5d62c56df778208ea221970f7ac73caa45206e9308ac884dd7cbdb65d4e",
+ "version_transformers": "5.22.1"
+}

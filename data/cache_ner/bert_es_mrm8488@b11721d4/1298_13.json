@@ -1,0 +1,108 @@
+{
+ "clave": "f4cdc041e78496354bca577a7db7f8bf2ef45820dc6f8a7a0df368d42d9a3df4",
+ "entidades_crudas": [
+  {
+   "confianza": 0.982944,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 9,
+   "inicio": 0,
+   "texto": "VOZ MUJER",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.849783,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 20,
+   "inicio": 11,
+   "texto": "Tren Maya",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99963,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 290,
+   "inicio": 288,
+   "texto": "IN",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.789489,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 292,
+   "inicio": 290,
+   "texto": "AH",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.996818,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 624,
+   "inicio": 615,
+   "texto": "Tren Maya",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.996402,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 790,
+   "inicio": 781,
+   "texto": "Tren Maya",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997035,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 834,
+   "inicio": 825,
+   "texto": "Tren Maya",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.72638,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 976,
+   "inicio": 974,
+   "texto": "Cu",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.821024,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 980,
+   "inicio": 976,
+   "texto": "xtal",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.990009,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 1153,
+   "inicio": 1144,
+   "texto": "Tren Maya",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "1298_13",
+ "segundos": 0.077,
+ "texto_sha256": "68db134c0035f81cb7e68633dcc873d6739f6bc7a663dd017655cf60625e589a",
+ "version_transformers": "5.22.1"
+}

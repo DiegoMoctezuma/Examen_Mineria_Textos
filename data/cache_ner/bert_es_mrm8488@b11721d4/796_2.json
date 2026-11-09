@@ -1,0 +1,126 @@
+{
+ "clave": "169bf56f79b0e2dfb4eb6a096f78fc8103683b7b33c5f122d9e9075d60e22b85",
+ "entidades_crudas": [
+  {
+   "confianza": 0.777549,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 21,
+   "inicio": 18,
+   "texto": "MAN",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.492827,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 24,
+   "inicio": 23,
+   "texto": "L",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999264,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 147,
+   "inicio": 144,
+   "texto": "Chi",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.966898,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 153,
+   "inicio": 147,
+   "texto": "huahua",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999268,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 162,
+   "inicio": 159,
+   "texto": "Son",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.985014,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 165,
+   "inicio": 162,
+   "texto": "ora",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999779,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 200,
+   "inicio": 194,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999368,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 726,
+   "inicio": 723,
+   "texto": "Chi",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.979593,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 732,
+   "inicio": 726,
+   "texto": "huahua",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999359,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 741,
+   "inicio": 738,
+   "texto": "Son",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.585597,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 744,
+   "inicio": 741,
+   "texto": "ora",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999423,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 920,
+   "inicio": 890,
+   "texto": "Jóvenes Construyendo el Futuro",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "796_2",
+ "segundos": 0.085,
+ "texto_sha256": "5d596b1162fdbb46fe41d745e08da0a0d5e698c24d254f5eddb9dbcdb0f9b7be",
+ "version_transformers": "5.22.1"
+}

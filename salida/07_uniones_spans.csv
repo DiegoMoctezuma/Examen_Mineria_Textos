@@ -1,0 +1,3 @@
+passage_id,tipo,inicio_1,fin_1,inicio_2,fin_2,inicio_union,fin_union,texto_union,confianza_1,confianza_2
+216_81,PER,0,5,6,8,0,8,ÓSCAR DA,0.557412,0.282548
+396_23,LOC,460,466,467,477,460,477,parque La Plancha,0.663128,0.902036

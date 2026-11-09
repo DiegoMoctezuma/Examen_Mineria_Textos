@@ -1,0 +1,171 @@
+{
+ "clave": "e5d6c9391ad3a26b80bed9d93faced34920fc7aa2bda81333ba0ca0c631a56fe",
+ "entidades_crudas": [
+  {
+   "confianza": 0.679428,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 7,
+   "inicio": 5,
+   "texto": "RA",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.505285,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 9,
+   "inicio": 7,
+   "texto": "FA",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.717786,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 23,
+   "inicio": 9,
+   "texto": "EL OJEDA DURÁN",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.672975,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 45,
+   "inicio": 42,
+   "texto": "INA",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.9989,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 118,
+   "inicio": 101,
+   "texto": "Ejército Nacional",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998758,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 185,
+   "inicio": 174,
+   "texto": "El Vizcaíno",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999245,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 209,
+   "inicio": 190,
+   "texto": "Baja California Sur",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.809432,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 290,
+   "inicio": 260,
+   "texto": "Corredor Interoceánico del Ist",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.810185,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 307,
+   "inicio": 290,
+   "texto": "mo de Tehuantepec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999319,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 712,
+   "inicio": 692,
+   "texto": "Secretaría de Marina",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.9997,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 733,
+   "inicio": 717,
+   "texto": "Fiscalía General",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.995923,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 754,
+   "inicio": 748,
+   "texto": "Oaxaca",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.990724,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 813,
+   "inicio": 793,
+   "texto": "Istmo de Tehuantepec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999612,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 1077,
+   "inicio": 1066,
+   "texto": "Plan DN-III",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999672,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 1090,
+   "inicio": 1079,
+   "texto": "Plan Marina",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999561,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 1120,
+   "inicio": 1093,
+   "texto": "Plan de la Guardia Nacional",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.954459,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1168,
+   "inicio": 1163,
+   "texto": "COVID",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "1128_40",
+ "segundos": 0.082,
+ "texto_sha256": "3109dc786f2f2e078df9c6dfe3a87f6afa622cdc9baa46c6ed6d190c3faa7b4f",
+ "version_transformers": "5.22.1"
+}

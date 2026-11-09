@@ -1,0 +1,81 @@
+{
+ "clave": "7b2e2f7d57ed1404e9a6604c809979b2c97a2a3baca0563e35a0ec39e253c4f9",
+ "entidades_crudas": [
+  {
+   "confianza": 0.718066,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 18,
+   "texto": "MANUEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.740212,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 217,
+   "inicio": 215,
+   "texto": "Is",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.809952,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 221,
+   "inicio": 217,
+   "texto": "sste",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.931921,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 233,
+   "inicio": 227,
+   "texto": "Seguro",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998976,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 557,
+   "inicio": 541,
+   "texto": "Ciudad de México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.995694,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 563,
+   "inicio": 560,
+   "texto": "Fox",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999122,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 960,
+   "inicio": 944,
+   "texto": "Ciudad de México",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "1943_6",
+ "segundos": 0.076,
+ "texto_sha256": "20be34f87141d4cb607925b5dc418e3aad0d3eec7b36f92ec8fdecba42a1ab18",
+ "version_transformers": "5.22.1"
+}

@@ -1,0 +1,72 @@
+{
+ "clave": "dcfce11517d73aacaf58da0767c5a8d3fbb83f6384d1b283091f6cdbe66850fd",
+ "entidades_crudas": [
+  {
+   "confianza": 0.865959,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 18,
+   "texto": "MANUEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.930315,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 49,
+   "inicio": 43,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999442,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 343,
+   "inicio": 340,
+   "texto": "Col",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.76548,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 346,
+   "inicio": 343,
+   "texto": "ima",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.950995,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 602,
+   "inicio": 596,
+   "texto": "Issste",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.768878,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 614,
+   "inicio": 608,
+   "texto": "Seguro",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "2030_1",
+ "segundos": 0.076,
+ "texto_sha256": "3562e585825ebbf5c6fae76d4a2e9e9211e966f0ae442bc11d0059eba214def7",
+ "version_transformers": "5.22.1"
+}

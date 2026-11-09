@@ -1,0 +1,63 @@
+{
+ "clave": "f89ebca61b6c2b45c493adaac3c67cabbe951590ddbdbcddab46147b5b1138ea",
+ "entidades_crudas": [
+  {
+   "confianza": 0.604934,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 18,
+   "texto": "MANUEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998578,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 900,
+   "inicio": 896,
+   "texto": "Mich",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.727783,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 905,
+   "inicio": 900,
+   "texto": "oacán",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999088,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1003,
+   "inicio": 999,
+   "texto": "Mich",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.71033,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1008,
+   "inicio": 1003,
+   "texto": "oacán",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "2115_4",
+ "segundos": 0.083,
+ "texto_sha256": "41c93320518af51729e83ce13b374b6e51886caab25810bb8c434bfabf848186",
+ "version_transformers": "5.22.1"
+}
