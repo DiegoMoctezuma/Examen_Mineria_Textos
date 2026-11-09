@@ -31,3 +31,5 @@ reporte/*.toc
 # Editor / sistema
 .DS_Store
 *.swp
+config/*.bak
+config/*.tmp
