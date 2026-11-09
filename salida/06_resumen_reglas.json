@@ -6,11 +6,12 @@
   "gazetteer": {
     "origen": {
       "kit": 76,
+      "minado": 60,
       "manual": 16
     },
     "etiqueta": {
-      "ORG": 88,
-      "LOC": 4
+      "ORG": 147,
+      "LOC": 5
     },
     "loc": 102,
     "siglas_candidatas": 104
