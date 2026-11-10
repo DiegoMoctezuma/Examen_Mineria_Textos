@@ -121,7 +121,7 @@ def main() -> int:
     resumen = resumen.loc[sorted(resumen.index, key=lambda q: int(q[1:]))]
     print(resumen.to_string())
     print(f"\n{len(res)} filas en salida/respuestas.csv; tablas en {DIR_TABLAS}")
-    vigentes = 0 if not vals.exists() else len(hashes) - len(pend)
+    vigentes = len(hashes) - len(pend)
     print(f"Valoraciones vigentes: {vigentes} de {len(hashes)}. Se escriben en la pestaña "
           "Valoraciones de la app." if vigentes < len(hashes) else "Valoraciones completas.")
     return 0

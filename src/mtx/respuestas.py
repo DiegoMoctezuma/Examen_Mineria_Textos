@@ -362,7 +362,7 @@ def bloque_valoracion(entrada: dict | None, hash_actual: str) -> str:
 def validar_valoraciones(ruta: Path, hashes: dict[str, str]) -> list[str]:
     """`[VALIDAR]` previo al reporte: 10 entradas no vacías, escritas sobre la tabla vigente."""
     if not Path(ruta).exists():
-        return [f"Falta {Path(ruta).name}: el alumno escribe las valoraciones en la app"]
+        return [f"{q}: valoración pendiente (no existe {Path(ruta).name})" for q in hashes]
     datos = yaml.safe_load(Path(ruta).read_text(encoding="utf-8")) or {}
     err = []
     for q, h in hashes.items():
