@@ -177,14 +177,6 @@ def c05_resultados_ir(cx: Contexto) -> Resultado:
                      det or ["el kit reproduce la salida versionada; D08 vigente"])
 
 
-def _solo_existencia(n: int, titulo: str, archivos: list[Path], hito: str) -> Resultado:
-    faltan = [p.name for p in archivos if not p.exists()]
-    if faltan:
-        return Resultado(n, titulo, PENDIENTE, [f"faltan {', '.join(faltan)} ({hito})"])
-    return Resultado(n, titulo, PENDIENTE,
-                     [f"existen; el validador detallado se agrega en {hito}"])
-
-
 def c06_entidades(cx: Contexto) -> Resultado:
     from mtx import fusion
 
@@ -255,9 +247,29 @@ def c08_resultados_ie(cx: Contexto) -> Resultado:
 
 
 def c09_respuestas(cx: Contexto) -> Resultado:
-    return _solo_existencia(9, "respuestas.csv, diez tablas y valoraciones del alumno",
-                            [cx.rp.dir_salida / "respuestas.csv",
-                             cx.rp.app.anotaciones / "valoraciones.yaml"], "H8")
+    from mtx import respuestas
+
+    titulo = "respuestas.csv, diez tablas y valoraciones del alumno"
+    sal = cx.rp.dir_salida
+    ruta, hashes = sal / "respuestas.csv", sal / "10_hashes_tablas.json"
+    if not ruta.exists() or not hashes.exists():
+        return Resultado(9, titulo, PENDIENTE, ["falta: `make tablas` (H8)"])
+    res = pd.read_csv(ruta, dtype={"passage_id": str}, keep_default_na=False)
+    det = respuestas.validar_respuestas(res, dict(zip(cx.pasajes()["passage_id"],
+                                                      cx.pasajes()["texto"])))
+    faltan = [q for q in (f"Q{i}" for i in range(1, 11))
+              if not (sal / "tablas_respuesta" / f"{q}.md").exists()]
+    if faltan:
+        det.append(f"faltan tablas {faltan}")
+    if det:
+        return Resultado(9, titulo, FALLA, det)
+    pend = respuestas.validar_valoraciones(cx.rp.app.anotaciones / "valoraciones.yaml",
+                                           json.loads(hashes.read_text(encoding="utf-8")))
+    if pend:
+        return Resultado(9, titulo, PENDIENTE,
+                         [(f"contrato en verde; valoraciones del alumno: {len(pend)} pendientes "
+                          "(pestaña Valoraciones)")])
+    return Resultado(9, titulo, OK, ["contrato en verde; 10 valoraciones vigentes"])
 
 
 def c10_corpus(cx: Contexto) -> Resultado:

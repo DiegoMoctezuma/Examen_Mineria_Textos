@@ -13,6 +13,7 @@ from mtx.app import (
                      vista_gold,
                      vista_juicios,
                      vista_pendiente,
+                     vista_valoraciones,
 )
 
 st.set_page_config(page_title="Anotación · Minería de Textos", page_icon="📝", layout="wide")
@@ -23,6 +24,7 @@ paginas = [
     st.Page(vista_juicios.mostrar, title="Juicios", url_path="juicios"),
     st.Page(vista_gold.mostrar, title="Gold", url_path="gold"),
     st.Page(vista_gazetteer.mostrar, title="Gazetteer", url_path="gazetteer"),
+    st.Page(vista_valoraciones.mostrar, title="Valoraciones", url_path="valoraciones"),
     st.Page(vista_pendiente.demo, title="Demo", url_path="demo"),
 ]
 st.navigation(paginas, position="top").run()
