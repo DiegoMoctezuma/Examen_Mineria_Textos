@@ -272,6 +272,9 @@ def test_app_gold_buscar_elegir_aparicion_agregar_y_cerrar(tmp_path, monkeypatch
     radio.set_value(1).run()
     at.button(key="agregar_b").click().run()
     assert not at.exception
+    # la lista marca solo la aparición agregada, para agregar las demás una por una
+    marcadas = [o.startswith("✓ ya agregada como LOC") for o in at.radio(key="aparicion").options]
+    assert marcadas == [i == 1 for i in range(len(marcadas))]
     g = pd.read_csv(anot / "gold_entidades.csv")
     segunda = texto.find("México", texto.find("México") + 1)
     assert g[["passage_id", "tipo", "texto", "inicio", "fin"]].values.tolist() == [

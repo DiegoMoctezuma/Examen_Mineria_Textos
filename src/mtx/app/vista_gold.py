@@ -152,10 +152,22 @@ def mostrar() -> None:
             st.warning("No aparece tal cual en el pasaje (revisa mayúsculas, acentos y "
                        "espacios).")
         if apar:
+            # marca las apariciones que ya están en la tabla de este pasaje (anotación del alumno)
+            hechas = {(int(f["inicio"]), int(f["fin"])): f["tipo"]
+                      for f in gp.to_dict("records")}
+
+            def _etiqueta(k: int) -> str:
+                a = apar[k]
+                ya = hechas.get((a["inicio"], a["fin"]))
+                return (f"{'✓ ya agregada como ' + ya + ' · ' if ya else ''}"
+                        f"…{a['antes']}[{texto[a['inicio']:a['fin']]}]{a['despues']}… "
+                        f"({a['inicio']}-{a['fin']})")
+
+            n_hechas = sum((a["inicio"], a["fin"]) in hechas for a in apar)
+            st.caption(f"{len(apar)} apariciones; {n_hechas} ya en la tabla. Cada aparición es "
+                       "una entidad: agrégalas una por una.")
             st.radio("Aparición", list(range(len(apar))), key="aparicion", index=None,
-                     format_func=lambda k: f"…{apar[k]['antes']}[{texto[apar[k]['inicio']:apar[k]['fin']]}]"
-                                           f"{apar[k]['despues']}… ({apar[k]['inicio']}-{apar[k]['fin']})",
-                     disabled=off)
+                     format_func=_etiqueta, disabled=off)
         st.button("Agregar", key="agregar_b", type="primary",
                   disabled=off or not apar or st.session_state.get("tipo_busqueda") is None,
                   on_click=_agregar_busqueda, args=(r, tok, pid, texto, sha))
