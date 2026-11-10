@@ -56,14 +56,15 @@ en `salida/` o `data/`.
 | `indice.py` | Índice invertido a mano, postings, persistencia | 02 | `tokens.parquet` | `data/indice.pkl`, `indice_meta.json`, `salida/02_*` |
 | `ranking.py` | TF-IDF (sklearn), BM25 propio, filtro de fecha, top-k, `buscar()` | 03 | índice, `data/consultas.csv` | `salida/ranking.csv` → `ranking.csv`, `salida/03_*` |
 | `pool.py` | Pool de relevancia (D06), `validar_juicios()` | 04, 99 | `ranking.csv` | `salida/04_pool.csv`; valida `anotaciones/juicios_relevancia.csv` |
-| `evaluacion.py` | Envoltorio de `evaluar.py` (ir/ie), vista con ventana, análisis de errores | 05, 09 | juicios, ranking, gold, entidades | `resultados_ir.csv`, `resultados_ie.csv`, `salida/05_*`, `salida/09_*`, `data/mejor_modelo.json` |
+| `evaluacion.py` | Envoltorio de `evaluar.py ir`, vista con ventana, mejor modelo | 05 | juicios, ranking | `resultados_ir.csv`, `salida/05_*`, `data/mejor_modelo.json` |
+| `evaluacion_ie.py` | Detalle IE verificado contra el kit, complementaria de 20 IDs, análisis de errores, alertas U19, figuras IE | 09 | gold, entidades | `resultados_ie.csv` (vía kit), `salida/09_*` |
 | `muestreo.py` | Muestra gold y conjunto de selección con emparejamiento global | 08b | `ranking.csv`, `mejor_modelo.json` | `anotaciones/muestra_gold.csv`, `muestra_seleccion.csv` |
 | `reglas.py` | Regex FECHA y MONTO, cantidades auxiliares, gazetteers, regla de marca, colisiones | 06 | `texto` canónico, `kit/gazetteer_dependencias.csv`, `config/gazetteer_*.csv` | `salida/06_*`, `salida/cantidades_auxiliares.csv` |
 | `ner_modelo.py` | Pipeline HF, chunking, caché versionada, posproceso de spans | 07 | pasajes del top-10 del ganador, `config/ner.yaml` | `data/cache_ner/`, `salida/07_uniones_spans.csv` |
 | `fusion.py` | Fusión reglas + modelo por span exacto (D12) | 08 | salidas de 06 y 07 | `entidades.csv`, `salida/entidades_unicas.csv`, `entidades_enriquecidas.csv` |
 | `normalizacion.py` | `fecha_iso`, `valor_num`, moneda, canónicos (sin tocar spans) | 08 | entidades | columnas de `entidades_enriquecidas.csv` |
 | `respuestas.py` | Tablas de respuesta con evidencia y estados (D17) | 10 | `entidades_enriquecidas.csv`, `cantidades_auxiliares.csv`, `config/tablas_respuesta.yaml` | `salida/respuestas.csv`, `salida/tablas_respuesta/*.md` |
-| `artefactos.py` | Manifiesto, hashes, invalidación | todos | todos los artefactos | `salida/manifiesto_ejecucion.json`, `tiempos_ejecucion.json` |
+| `manifiesto.py` | Manifiesto de ejecución y tiempos (hashes de entradas y salidas, commit) | 08, 09 | artefactos de cada script | `salida/manifiesto_ejecucion.json`, `tiempos_ejecucion.json` |
 | `reporte.py` | Tablas y figuras del reporte | 11 | `salida/`, `anotaciones/valoraciones.yaml` | `reporte/figuras/`, `reporte/tablas/`, sección de resultados del README |
 | `laminas.py` (P2) | Generación del pptx | 12 | figuras | `laminas/laminas.pptx` |
 | `demo.py` | Demo en terminal con `rich`, sin red | 13 | artefactos cacheados | salida en terminal |
@@ -146,7 +147,7 @@ Todo opera solo sobre los pasajes únicos del top-10 con filtro del ganador (≤
 | D11: MONTO = dinero; porcentajes y cantidades van a auxiliares | Dos salidas distintas: `entidades.csv` (evaluada) y `cantidades_auxiliares.csv` (para tablas) |
 | D12/D16: fusión por span exacto; 8 columnas exactas | Enriquecimiento y normalización viven en un CSV aparte |
 | D17: tablas con evidencia y estados | `respuestas.py` nunca afirma una relación sin cita con offsets |
-| D18: hashes, revisiones fijas, caché versionada, manifiesto | `artefactos.py` registra entradas de cada script; `make validar` compara hashes |
+| D18: hashes, revisiones fijas, caché versionada, manifiesto | `manifiesto.py` registra entradas y salidas de cada script; `make validar` compara hashes |
 | D20: P0 → P1 → P2 | No se empieza un P1 con un P0 pendiente; la lista de recortes está ordenada (PRD §12.4) |
 
 ## 5. Puntos de congelación (en orden cronológico)

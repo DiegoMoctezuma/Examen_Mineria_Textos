@@ -186,20 +186,72 @@ def _solo_existencia(n: int, titulo: str, archivos: list[Path], hito: str) -> Re
 
 
 def c06_entidades(cx: Contexto) -> Resultado:
-    return _solo_existencia(6, "entidades.csv: método, offsets, claves, extractor congelado",
-                            [cx.raiz / "entidades.csv"], "H7")
+    from mtx import fusion
+
+    titulo = "entidades.csv: método, offsets, claves, extractor congelado"
+    ruta = cx.raiz / "entidades.csv"
+    if not ruta.exists():
+        return Resultado(6, titulo, PENDIENTE, ["falta: `make extraer` (H7)"])
+    ent = pd.read_csv(ruta, dtype={"passage_id": str, "query_id": str},
+                      keep_default_na=False)
+    det = fusion.validar_entidades(ent, dict(zip(cx.pasajes()["passage_id"],
+                                                 cx.pasajes()["texto"])))
+    salida = cx.rp.dir_salida / "entidades.csv"
+    if not salida.exists() or salida.read_bytes() != ruta.read_bytes():
+        det.append("entidades.csv de la raíz no es copia de salida/entidades.csv")
+    resumen = cx.rp.dir_salida / "08_resumen_extraccion.json"
+    if resumen.exists():
+        r = json.loads(resumen.read_text(encoding="utf-8"))
+        if not r.get("reglas_congeladas_vigentes"):
+            det.append("la extracción se corrió con reglas distintas de `reglas-congeladas`")
+    else:
+        det.append("falta salida/08_resumen_extraccion.json")
+    return Resultado(6, titulo, FALLA if det else OK,
+                     det or [f"{len(ent)} filas; contrato de 8 columnas y offsets en verde"])
 
 
 def c07_gold(cx: Contexto) -> Resultado:
-    a = cx.rp.app.anotaciones
-    return _solo_existencia(7, "gold_entidades.csv: 20 IDs, cerrados, offsets, cierre vigente",
-                            [cx.raiz / "gold_entidades.csv", a / "cierre_gold.json"], "H6")
+    from mtx import gold
+
+    titulo = "gold_entidades.csv: 20 IDs, cerrados, offsets, cierre vigente"
+    rg = gold.RutasGold(cx.rp.app.anotaciones)
+    if not rg.cierre.exists():
+        return Resultado(7, titulo, PENDIENTE, ["falta cerrar el gold en la pestaña Gold (H6)"])
+    pas = pd.read_parquet(cx.rp.app.pasajes, columns=["passage_id", "texto", "texto_sha256"])
+    v = gold.validar_gold(rg, pas)
+    det = list(v.errores)
+    raiz = cx.raiz / "gold_entidades.csv"
+    if not raiz.exists() or raiz.read_bytes() != rg.gold.read_bytes():
+        det.append("gold_entidades.csv de la raíz no es la exportación del gold cerrado")
+    return Resultado(7, titulo, FALLA if det else OK,
+                     det or ["validar_gold() en verde; etiqueta antes del gold"])
 
 
 def c08_resultados_ie(cx: Contexto) -> Resultado:
-    return _solo_existencia(8, "resultados_ie.csv reproducible; evaluación de 20 IDs",
-                            [cx.raiz / "resultados_ie.csv",
-                             cx.rp.dir_salida / "09_evaluacion_20_ids.csv"], "H7")
+    titulo = "resultados_ie.csv reproducible; evaluación de 20 IDs"
+    ruta = cx.raiz / "resultados_ie.csv"
+    comp = cx.rp.dir_salida / "09_evaluacion_20_ids.csv"
+    if not ruta.exists():
+        return Resultado(8, titulo, PENDIENTE, ["falta: `make evaluar-ie` (H7)"])
+    det = []
+    gold_raiz, ent = cx.raiz / "gold_entidades.csv", cx.raiz / "entidades.csv"
+    if not (gold_raiz.exists() and ent.exists()):
+        return Resultado(8, titulo, FALLA, ["hay resultados_ie.csv sin gold o sin entidades"])
+    with tempfile.TemporaryDirectory() as tmp:
+        nuevo = adaptadores_kit.ejecutar_evaluador("ie", gold_raiz, ent, Path(tmp))
+        if nuevo.read_bytes() != ruta.read_bytes():
+            det.append("El kit no reproduce resultados_ie.csv: corre `make evaluar-ie`")
+    res = pd.read_csv(ruta)
+    if list(res.columns) != COLUMNAS_RESULTADOS_IE:
+        det.append(f"columnas de resultados_ie.csv: {list(res.columns)}")
+    faltan = [m for m in ("regla", "modelo", "combinado")
+              if not ((res["metodo"] == m) & (res["tipo"] == "TODOS")).any()]
+    if faltan:
+        det.append(f"faltan filas TODOS de {faltan}")
+    if not comp.exists():
+        det.append("falta salida/09_evaluacion_20_ids.csv")
+    return Resultado(8, titulo, FALLA if det else OK,
+                     det or ["el kit reproduce la salida versionada; complementaria presente"])
 
 
 def c09_respuestas(cx: Contexto) -> Resultado:
