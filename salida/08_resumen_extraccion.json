@@ -1,0 +1,45 @@
+{
+  "modelo": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "criterio_modelo": "tecnico",
+  "reglas_congeladas_vigentes": true,
+  "version_extractor": "reglas-congeladas@aa613f5+posproceso1",
+  "pasajes": 99,
+  "pares_consulta_pasaje": 100,
+  "filas_entidades": 908,
+  "entidades_unicas": 900,
+  "unicas_por_metodo": {
+    "modelo": 348,
+    "ambos": 312,
+    "regla": 240
+  },
+  "unicas_por_tipo_y_metodo": {
+    "FECHA": {
+      "regla": 25
+    },
+    "LOC": {
+      "ambos": 249,
+      "modelo": 95,
+      "regla": 86
+    },
+    "MONTO": {
+      "regla": 32
+    },
+    "ORG": {
+      "modelo": 102,
+      "ambos": 59,
+      "regla": 19
+    },
+    "PER": {
+      "modelo": 151,
+      "regla": 78,
+      "ambos": 4
+    }
+  },
+  "solapes_parciales": {
+    "solape_parcial": 138,
+    "tipo_distinto": 7
+  },
+  "reglas": 552,
+  "modelo_filas": 660
+}

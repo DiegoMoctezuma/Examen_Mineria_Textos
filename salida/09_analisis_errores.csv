@@ -1,0 +1,129 @@
+passage_id,tipo,texto_gold,texto_pred,inicio,fin,metodo,categoria,fuente,contexto,error
+1122_3,ORG,Tecate,Tecate,95,101,modelo,tipo,modelo,"én con el programa de la frontera, porque aquí en [Tecate] los empresarios tienen descuentos en el pago de i",FN
+1122_3,ORG,Tecate,Tecate,275,281,modelo,tipo,modelo,Impuesto Sobre la Renta al 20 por ciento. Aquí en [Tecate] desde que llegamos al gobierno aumentó el salario,FN
+1122_3,LOC,últimos 30 años,,1158,1173,,omision,,"ar, de ganar en poder adquisitivo, perdía, en los [últimos 30 años] se perdieron alrededor del 70",FN
+1122_3,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,MAN,18,21,modelo,frontera,modelo,PRESIDENTE ANDRÉS [MAN]UEL LÓPEZ OBRADOR: también con el programa de la f,FP
+1122_3,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,MAN,18,21,modelo,frontera:entidad_partida,modelo,PRESIDENTE ANDRÉS [MAN]UEL LÓPEZ OBRADOR: también con el programa de la f,FP
+1122_3,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,MAN,18,21,modelo,en_marca,modelo,PRESIDENTE ANDRÉS [MAN]UEL LÓPEZ OBRADOR: también con el programa de la f,FP
+1122_3,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,L,23,24,modelo,frontera,modelo,PRESIDENTE ANDRÉS MANUE[L] LÓPEZ OBRADOR: también con el programa de la fron,FP
+1122_3,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,L,23,24,modelo,frontera:entidad_partida,modelo,PRESIDENTE ANDRÉS MANUE[L] LÓPEZ OBRADOR: también con el programa de la fron,FP
+1122_3,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,L,23,24,modelo,en_marca,modelo,PRESIDENTE ANDRÉS MANUE[L] LÓPEZ OBRADOR: también con el programa de la fron,FP
+1122_3,LOC,Tecate,Tecate,95,101,modelo,tipo,modelo,"én con el programa de la frontera, porque aquí en [Tecate] los empresarios tienen descuentos en el pago de i",FP
+1122_3,LOC,Tecate,Tecate,275,281,modelo,tipo,modelo,Impuesto Sobre la Renta al 20 por ciento. Aquí en [Tecate] desde que llegamos al gobierno aumentó el salario,FP
+1188_80,FECHA,domingo 28 de marzo,28 de marzo,16,35,regla,frontera,regex,VOZ MUJER: Este [domingo 28 de marzo] México recibió un millón y medio de dosis de la v,FN
+1188_80,FECHA,sábado 27 de marzo,27 de marzo,438,456,regla,frontera,regex,"tica. Estas vacunas, junto con las recibidas este [sábado 27 de marzo] de la farmacéutica CanSino Biologics, suman un mi",FN
+1188_80,ORG,Pfizer-BioNTech,Pfizer,680,695,ambos,frontera,gazetteer|modelo,"5 dosis de vacunas envasadas de las farmacéuticas [Pfizer-BioNTech], AstraZeneca, SinoVac, Sputnik V, del Centro Naci",FN
+1188_80,ORG,Pfizer-BioNTech,Pfizer,680,695,ambos,frontera:entidad_partida,gazetteer|modelo,"5 dosis de vacunas envasadas de las farmacéuticas [Pfizer-BioNTech], AstraZeneca, SinoVac, Sputnik V, del Centro Naci",FN
+1188_80,ORG,Centro Nacional de Investigación de Epidemiología e Microbiología Gamaleya,Centro Nacional de Investigación de Epidemiología,734,808,modelo,frontera,modelo,"er-BioNTech, AstraZeneca, SinoVac, Sputnik V, del [Centro Nacional de Investigación de Epidemiología e Microbiología Gamaleya] y de CanSino Biologics. Adicionalmente, fueron en",FN
+1188_80,ORG,Centro Nacional de Investigación de Epidemiología e Microbiología Gamaleya,Centro Nacional de Investigación de Epidemiología,734,808,modelo,frontera:entidad_partida,modelo,"er-BioNTech, AstraZeneca, SinoVac, Sputnik V, del [Centro Nacional de Investigación de Epidemiología e Microbiología Gamaleya] y de CanSino Biologics. Adicionalmente, fueron en",FN
+1188_80,FECHA,domingo 28 de marzo,28 de marzo,24,35,regla,frontera,regex,VOZ MUJER: Este domingo [28 de marzo] México recibió un millón y medio de dosis de la v,FP
+1188_80,ORG,Estados Unidos,Estados Unidos,282,296,modelo,tipo,modelo,"ntes de México, Andrés Manuel López Obrador, y de [Estados Unidos], Joseph Biden mediante el cual nuestro país recib",FP
+1188_80,FECHA,sábado 27 de marzo,27 de marzo,445,456,regla,frontera,regex,"stas vacunas, junto con las recibidas este sábado [27 de marzo] de la farmacéutica CanSino Biologics, suman un mi",FP
+1188_80,ORG,Pfizer-BioNTech,Pfizer,680,686,ambos,frontera,gazetteer|modelo,"5 dosis de vacunas envasadas de las farmacéuticas [Pfizer]-BioNTech, AstraZeneca, SinoVac, Sputnik V, del Ce",FP
+1188_80,ORG,Pfizer-BioNTech,Pfizer,680,686,ambos,frontera:entidad_partida,gazetteer|modelo,"5 dosis de vacunas envasadas de las farmacéuticas [Pfizer]-BioNTech, AstraZeneca, SinoVac, Sputnik V, del Ce",FP
+1188_80,ORG,Pfizer-BioNTech,BioNTech,687,695,ambos,frontera,gazetteer|modelo," de vacunas envasadas de las farmacéuticas Pfizer-[BioNTech], AstraZeneca, SinoVac, Sputnik V, del Centro Naci",FP
+1188_80,ORG,Pfizer-BioNTech,BioNTech,687,695,ambos,frontera:entidad_partida,gazetteer|modelo," de vacunas envasadas de las farmacéuticas Pfizer-[BioNTech], AstraZeneca, SinoVac, Sputnik V, del Centro Naci",FP
+1188_80,ORG,Centro Nacional de Investigación de Epidemiología e Microbiología Gamaleya,Centro Nacional de Investigación de Epidemiología,734,783,modelo,frontera,modelo,"er-BioNTech, AstraZeneca, SinoVac, Sputnik V, del [Centro Nacional de Investigación de Epidemiología] e Microbiología Gamaleya y de CanSino Biologics. ",FP
+1188_80,ORG,Centro Nacional de Investigación de Epidemiología e Microbiología Gamaleya,Centro Nacional de Investigación de Epidemiología,734,783,modelo,frontera:entidad_partida,modelo,"er-BioNTech, AstraZeneca, SinoVac, Sputnik V, del [Centro Nacional de Investigación de Epidemiología] e Microbiología Gamaleya y de CanSino Biologics. ",FP
+1188_80,ORG,Centro Nacional de Investigación de Epidemiología e Microbiología Gamaleya,Microbiología Gamaleya,786,808,modelo,frontera,modelo,"ntro Nacional de Investigación de Epidemiología e [Microbiología Gamaleya] y de CanSino Biologics. Adicionalmente, fueron en",FP
+1188_80,ORG,Centro Nacional de Investigación de Epidemiología e Microbiología Gamaleya,Microbiología Gamaleya,786,808,modelo,frontera:entidad_partida,modelo,"ntro Nacional de Investigación de Epidemiología e [Microbiología Gamaleya] y de CanSino Biologics. Adicionalmente, fueron en",FP
+1188_80,ORG,Centro Nacional de Investigación de Epidemiología e Microbiología Gamaleya,Gamaleya,800,808,regla,frontera,gazetteer,"de Investigación de Epidemiología e Microbiología [Gamaleya] y de CanSino Biologics. Adicionalmente, fueron en",FP
+1188_80,ORG,Centro Nacional de Investigación de Epidemiología e Microbiología Gamaleya,Gamaleya,800,808,regla,frontera:entidad_partida,gazetteer,"de Investigación de Epidemiología e Microbiología [Gamaleya] y de CanSino Biologics. Adicionalmente, fueron en",FP
+1812_0,LOC,aeropuerto de la Ciudad de México,Ciudad de México,449,482,ambos,frontera,gazetteer|modelo,ta manera el problema de la saturación del actual [aeropuerto de la Ciudad de México]. Va a seguir funcionando el actual aeropuerto de ,FN
+1812_0,LOC,aeropuerto de la Ciudad de México,Ciudad de México,518,551,ambos,frontera,gazetteer|modelo,udad de México. Va a seguir funcionando el actual [aeropuerto de la Ciudad de México] y al mismo tiempo se va a crear este aeropuerto m,FN
+1812_0,LOC,Aeropuerto Internacional 'General Felipe Ángeles',Felipe Ángeles,920,969,modelo,frontera,modelo,tina. Anunciamos el inicio de la construcción del [Aeropuerto Internacional 'General Felipe Ángeles'] en la Base Aérea Militar Santa Lucía en el Estado,FN
+1812_0,LOC,aeropuerto de la Ciudad de México,Ciudad de México,1109,1142,ambos,frontera,gazetteer|modelo,ionamiento. Resolveremos la saturación del actual [aeropuerto de la Ciudad de México] y rehabilitaremos el de Toluca.,FN
+1812_0,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,MANUEL LÓPEZ,18,30,modelo,frontera,modelo,PRESIDENTE ANDRÉS [MANUEL LÓPEZ] OBRADOR: Muy buenos días. Vamos a informar en lo ,FP
+1812_0,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,MANUEL LÓPEZ,18,30,modelo,frontera:entidad_partida,modelo,PRESIDENTE ANDRÉS [MANUEL LÓPEZ] OBRADOR: Muy buenos días. Vamos a informar en lo ,FP
+1812_0,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,MANUEL LÓPEZ,18,30,modelo,en_marca,modelo,PRESIDENTE ANDRÉS [MANUEL LÓPEZ] OBRADOR: Muy buenos días. Vamos a informar en lo ,FP
+1812_0,LOC,Base Aérea Militar de Santa Lucía,Santa Lucía,196,207,regla,frontera,gazetteer,"mos a estar más tarde en la Base Aérea Militar de [Santa Lucía], porque vamos a iniciar los trabajos para la cons",FP
+1812_0,LOC,Base Aérea Militar de Santa Lucía,Santa Lucía,196,207,regla,frontera:entidad_partida,gazetteer,"mos a estar más tarde en la Base Aérea Militar de [Santa Lucía], porque vamos a iniciar los trabajos para la cons",FP
+1812_0,LOC,Base Aérea Militar de Santa Lucía,Santa Lucía,326,337,regla,frontera,gazetteer,erto ‘Felipe Ángeles’ en la Base Aérea Militar de [Santa Lucía]. Esto es todo un acontecimiento porque vamos a re,FP
+1812_0,LOC,Base Aérea Militar de Santa Lucía,Santa Lucía,326,337,regla,frontera:entidad_partida,gazetteer,erto ‘Felipe Ángeles’ en la Base Aérea Militar de [Santa Lucía]. Esto es todo un acontecimiento porque vamos a re,FP
+1812_0,LOC,aeropuerto de la Ciudad de México,Ciudad de México,466,482,ambos,frontera,gazetteer|modelo,lema de la saturación del actual aeropuerto de la [Ciudad de México]. Va a seguir funcionando el actual aeropuerto de ,FP
+1812_0,LOC,aeropuerto de la Ciudad de México,Ciudad de México,535,551,ambos,frontera,gazetteer|modelo,a a seguir funcionando el actual aeropuerto de la [Ciudad de México] y al mismo tiempo se va a crear este aeropuerto m,FP
+1812_0,LOC,lago de Texcoco,Texcoco,779,786,regla,frontera,gazetteer,star la construcción del aeropuerto en el lago de [Texcoco]. Hoy es un día muy importante. La política es un ,FP
+1812_0,LOC,lago de Texcoco,Texcoco,779,786,regla,frontera:entidad_partida,gazetteer,star la construcción del aeropuerto en el lago de [Texcoco]. Hoy es un día muy importante. La política es un ,FP
+1812_0,LOC,Aeropuerto Internacional 'General Felipe Ángeles',Felipe Ángeles,954,968,modelo,frontera,modelo,onstrucción del Aeropuerto Internacional 'General [Felipe Ángeles]' en la Base Aérea Militar Santa Lucía en el Estad,FP
+1812_0,LOC,Base Aérea Militar Santa Lucía,Santa Lucía,995,1006,regla,frontera,gazetteer,'General Felipe Ángeles' en la Base Aérea Militar [Santa Lucía] en el Estado de México para que en 2021 esté en f,FP
+1812_0,LOC,Base Aérea Militar Santa Lucía,Santa Lucía,995,1006,regla,frontera:entidad_partida,gazetteer,'General Felipe Ángeles' en la Base Aérea Militar [Santa Lucía] en el Estado de México para que en 2021 esté en f,FP
+1812_0,LOC,aeropuerto de la Ciudad de México,Ciudad de México,1126,1142,ambos,frontera,gazetteer|modelo,veremos la saturación del actual aeropuerto de la [Ciudad de México] y rehabilitaremos el de Toluca.,FP
+1850_6,LOC,Asociación Campesina Independiente Emiliano Zapata,Asociación Campesina Independiente Emiliano Zapata,295,345,modelo,tipo,modelo,"lo que le corresponda. Nada de que: ‘Yo soy de la [Asociación Campesina Independiente Emiliano Zapata], dame a mí el dinero y yo lo voy a entregar, yo l",FN
+1850_6,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,MANUEL LÓPEZ,18,30,modelo,frontera,modelo,"PRESIDENTE ANDRÉS [MANUEL LÓPEZ] OBRADOR: adulto mayor la tarjeta, el apoyo a los ",FP
+1850_6,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,MANUEL LÓPEZ,18,30,modelo,frontera:entidad_partida,modelo,"PRESIDENTE ANDRÉS [MANUEL LÓPEZ] OBRADOR: adulto mayor la tarjeta, el apoyo a los ",FP
+1850_6,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,MANUEL LÓPEZ,18,30,modelo,en_marca,modelo,"PRESIDENTE ANDRÉS [MANUEL LÓPEZ] OBRADOR: adulto mayor la tarjeta, el apoyo a los ",FP
+1850_6,ORG,Asociación Campesina Independiente Emiliano Zapata,Asociación Campesina Independiente Emiliano Zapata,295,345,modelo,tipo,modelo,"lo que le corresponda. Nada de que: ‘Yo soy de la [Asociación Campesina Independiente Emiliano Zapata], dame a mí el dinero y yo lo voy a entregar, yo l",FP
+2033_3,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,MAN,18,21,modelo,frontera,modelo,PRESIDENTE ANDRÉS [MAN]UEL LÓPEZ OBRADOR: esta manera poder ofrecer mejor,FP
+2033_3,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,MAN,18,21,modelo,frontera:entidad_partida,modelo,PRESIDENTE ANDRÉS [MAN]UEL LÓPEZ OBRADOR: esta manera poder ofrecer mejor,FP
+2033_3,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,MAN,18,21,modelo,en_marca,modelo,PRESIDENTE ANDRÉS [MAN]UEL LÓPEZ OBRADOR: esta manera poder ofrecer mejor,FP
+2033_3,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,L LÓPEZ,23,30,modelo,frontera,modelo,PRESIDENTE ANDRÉS MANUE[L LÓPEZ] OBRADOR: esta manera poder ofrecer mejores precio,FP
+2033_3,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,L LÓPEZ,23,30,modelo,frontera:entidad_partida,modelo,PRESIDENTE ANDRÉS MANUE[L LÓPEZ] OBRADOR: esta manera poder ofrecer mejores precio,FP
+2033_3,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,L LÓPEZ,23,30,modelo,en_marca,modelo,PRESIDENTE ANDRÉS MANUE[L LÓPEZ] OBRADOR: esta manera poder ofrecer mejores precio,FP
+2045_9,LOC,California,,40,50,,omision,,PRESIDENTE ANDRÉS MANUEL LÓPEZ OBRADOR: [California] y lo mismo 72 aviones y helicópteros para altos f,FN
+2199_29,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,MANUEL LÓPEZ,18,30,modelo,frontera,modelo,"PRESIDENTE ANDRÉS [MANUEL LÓPEZ] OBRADOR: tristeza, me dolió mucho lo de Hidalgo, ",FP
+2199_29,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,MANUEL LÓPEZ,18,30,modelo,frontera:entidad_partida,modelo,"PRESIDENTE ANDRÉS [MANUEL LÓPEZ] OBRADOR: tristeza, me dolió mucho lo de Hidalgo, ",FP
+2199_29,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,MANUEL LÓPEZ,18,30,modelo,en_marca,modelo,"PRESIDENTE ANDRÉS [MANUEL LÓPEZ] OBRADOR: tristeza, me dolió mucho lo de Hidalgo, ",FP
+2209_3,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,MANUEL LÓPEZ,18,30,modelo,frontera,modelo,"PRESIDENTE ANDRÉS [MANUEL LÓPEZ] OBRADOR: meses, ahora van a recibir los adultos m",FP
+2209_3,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,MANUEL LÓPEZ,18,30,modelo,frontera:entidad_partida,modelo,"PRESIDENTE ANDRÉS [MANUEL LÓPEZ] OBRADOR: meses, ahora van a recibir los adultos m",FP
+2209_3,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,MANUEL LÓPEZ,18,30,modelo,en_marca,modelo,"PRESIDENTE ANDRÉS [MANUEL LÓPEZ] OBRADOR: meses, ahora van a recibir los adultos m",FP
+2209_3,ORG,,Seguro,245,251,modelo,espuria:modelo,modelo,"ntregaba a pensionados, jubilados del Issste, del [Seguro], de Pemex, de las Fuerzas Armadas. Ahora todos lo",FP
+2259_13,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,MAN,18,21,modelo,frontera,modelo,"PRESIDENTE ANDRÉS [MAN]UEL LÓPEZ OBRADOR: ayuden y que llamen, y que ello",FP
+2259_13,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,MAN,18,21,modelo,frontera:entidad_partida,modelo,"PRESIDENTE ANDRÉS [MAN]UEL LÓPEZ OBRADOR: ayuden y que llamen, y que ello",FP
+2259_13,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,MAN,18,21,modelo,en_marca,modelo,"PRESIDENTE ANDRÉS [MAN]UEL LÓPEZ OBRADOR: ayuden y que llamen, y que ello",FP
+2259_13,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,L,23,24,modelo,frontera,modelo,"PRESIDENTE ANDRÉS MANUE[L] LÓPEZ OBRADOR: ayuden y que llamen, y que ellos s",FP
+2259_13,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,L,23,24,modelo,frontera:entidad_partida,modelo,"PRESIDENTE ANDRÉS MANUE[L] LÓPEZ OBRADOR: ayuden y que llamen, y que ellos s",FP
+2259_13,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,L,23,24,modelo,en_marca,modelo,"PRESIDENTE ANDRÉS MANUE[L] LÓPEZ OBRADOR: ayuden y que llamen, y que ellos s",FP
+2265_8,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,MANUEL LÓPEZ,18,30,modelo,frontera,modelo,PRESIDENTE ANDRÉS [MANUEL LÓPEZ] OBRADOR: este aumento. Lo subrayo porque fue un a,FP
+2265_8,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,MANUEL LÓPEZ,18,30,modelo,frontera:entidad_partida,modelo,PRESIDENTE ANDRÉS [MANUEL LÓPEZ] OBRADOR: este aumento. Lo subrayo porque fue un a,FP
+2265_8,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,MANUEL LÓPEZ,18,30,modelo,en_marca,modelo,PRESIDENTE ANDRÉS [MANUEL LÓPEZ] OBRADOR: este aumento. Lo subrayo porque fue un a,FP
+326_25,ORG,DIRECCIÓN GENERAL DE INGENIEROS DE LA SECRETARÍA DE LA DEFENSA NACIONAL,SECRETARÍA DE LA DEFENSA NACIONAL,0,71,regla,frontera,gazetteer,"[DIRECCIÓN GENERAL DE INGENIEROS DE LA SECRETARÍA DE LA DEFENSA NACIONAL] (SEDENA): mayoritaria Tren Maya, cuya misión prin",FN
+326_25,ORG,DIRECCIÓN GENERAL DE INGENIEROS DE LA SECRETARÍA DE LA DEFENSA NACIONAL,SECRETARÍA DE LA DEFENSA NACIONAL,0,71,regla,en_marca,gazetteer,"[DIRECCIÓN GENERAL DE INGENIEROS DE LA SECRETARÍA DE LA DEFENSA NACIONAL] (SEDENA): mayoritaria Tren Maya, cuya misión prin",FN
+326_25,ORG,DIRECCIÓN GENERAL DE INGENIEROS DE LA SECRETARÍA DE LA DEFENSA NACIONAL,SECRETARÍA DE LA DEFENSA NACIONAL,38,71,regla,frontera,gazetteer,"DIRECCIÓN GENERAL DE INGENIEROS DE LA [SECRETARÍA DE LA DEFENSA NACIONAL] (SEDENA): mayoritaria Tren Maya, cuya misión prin",FP
+326_25,ORG,DIRECCIÓN GENERAL DE INGENIEROS DE LA SECRETARÍA DE LA DEFENSA NACIONAL,SECRETARÍA DE LA DEFENSA NACIONAL,38,71,regla,en_marca,gazetteer,"DIRECCIÓN GENERAL DE INGENIEROS DE LA [SECRETARÍA DE LA DEFENSA NACIONAL] (SEDENA): mayoritaria Tren Maya, cuya misión prin",FP
+326_25,ORG,Tren Maya,Tren Maya,94,103,modelo,tipo,modelo,"ARÍA DE LA DEFENSA NACIONAL (SEDENA): mayoritaria [Tren Maya], cuya misión principal será la de capacitación y ",FP
+326_25,ORG,Tren Maya,Tren Maya,94,103,modelo,tipo:obra_LOC_vs_ORG,modelo,"ARÍA DE LA DEFENSA NACIONAL (SEDENA): mayoritaria [Tren Maya], cuya misión principal será la de capacitación y ",FP
+354_38,LOC,Istmo,,292,297,,omision,,coalcos y Salina Cruz mediante el Ferrocarril del [Istmo] para facilitar el traslado de personas y mercancí,FN
+354_38,LOC,océano Pacífico,Pacífico,568,583,modelo,frontera,modelo,"las vocaciones productivas de la zona. Al unir al [océano Pacífico] con el Atlántico, el Corredor Interoceánico ofrec",FN
+354_38,LOC,Línea Z,,1205,1212,,omision,,". La primera línea que reinicia operaciones es la [Línea Z]. Para ello, se rehabilitaron 227 kilómetros de ví",FN
+354_38,LOC,océano Pacífico,Pacífico,575,583,modelo,frontera,modelo,"aciones productivas de la zona. Al unir al océano [Pacífico] con el Atlántico, el Corredor Interoceánico ofrec",FP
+354_38,LOC,,Centro,921,927,modelo,espuria:modelo,modelo,"necta, además, con las navegaciones que parten de [Centro] y Sudamérica hacia este mismo destino. El Ferroca",FP
+419_11,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,MAN,18,21,modelo,frontera,modelo,"PRESIDENTE ANDRÉS [MAN]UEL LÓPEZ OBRADOR: sólo de lunes a viernes, porque",FP
+419_11,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,MAN,18,21,modelo,frontera:entidad_partida,modelo,"PRESIDENTE ANDRÉS [MAN]UEL LÓPEZ OBRADOR: sólo de lunes a viernes, porque",FP
+419_11,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,MAN,18,21,modelo,en_marca,modelo,"PRESIDENTE ANDRÉS [MAN]UEL LÓPEZ OBRADOR: sólo de lunes a viernes, porque",FP
+419_11,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,L LÓPEZ,23,30,modelo,frontera,modelo,"PRESIDENTE ANDRÉS MANUE[L LÓPEZ] OBRADOR: sólo de lunes a viernes, porque también ",FP
+419_11,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,L LÓPEZ,23,30,modelo,frontera:entidad_partida,modelo,"PRESIDENTE ANDRÉS MANUE[L LÓPEZ] OBRADOR: sólo de lunes a viernes, porque también ",FP
+419_11,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,L LÓPEZ,23,30,modelo,en_marca,modelo,"PRESIDENTE ANDRÉS MANUE[L LÓPEZ] OBRADOR: sólo de lunes a viernes, porque también ",FP
+487_29,ORG,MOTA-ENGIL LATINOAMÉRICA,ENGIL LATINOAMÉRICA,56,80,modelo,en_marca,modelo,"EDRO PARREIRA, PRESIDENTE Y DIRECTOR EJECUTIVO DE [MOTA-ENGIL LATINOAMÉRICA]: Buenos días a todas y a todos. Me da gusto hacer",FN
+487_29,FECHA,próximos cinco años,,405,424,,omision,,omo para el futuro mantenimiento del tramo de los [próximos cinco años]. La obra ferroviaria que conocemos como el Tren M,FN
+487_29,FECHA,próximos cinco años,,990,1009,,omision,,"una base de mantenimiento muy importante para los [próximos cinco años], se tuvieron que fabricar 424 mil 760 mil durmien",FN
+487_29,LOC,MOTA-ENGIL LATINOAMÉRICA,ENGIL LATINOAMÉRICA,61,80,modelo,en_marca,modelo,"PARREIRA, PRESIDENTE Y DIRECTOR EJECUTIVO DE MOTA-[ENGIL LATINOAMÉRICA]: Buenos días a todas y a todos. Me da gusto hacer",FP
+504_31,ORG,Petróleos Mexicanos,leos Mexic,1223,1233,modelo,frontera,modelo,"ra transportar cargas desde los productos de Petró[leos Mexic]anos, que prácticamente Pemex será el principal cl",FP
+504_31,ORG,Petróleos Mexicanos,leos Mexic,1223,1233,modelo,frontera:entidad_partida,modelo,"ra transportar cargas desde los productos de Petró[leos Mexic]anos, que prácticamente Pemex será el principal cl",FP
+630_73,ORG,Bancos del Bienestar,,341,361,,omision,,e da gusto porque me dicen que en donde están los [Bancos del Bienestar] hay gente y hay colas. Inauguré uno con la jefa d,FN
+630_73,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,MANUEL LÓPEZ OB,18,33,modelo,frontera,modelo,PRESIDENTE ANDRÉS [MANUEL LÓPEZ OB]RADOR: banco comercial va a tener tantas sucursale,FP
+630_73,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,MANUEL LÓPEZ OB,18,33,modelo,frontera:entidad_partida,modelo,PRESIDENTE ANDRÉS [MANUEL LÓPEZ OB]RADOR: banco comercial va a tener tantas sucursale,FP
+630_73,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,MANUEL LÓPEZ OB,18,33,modelo,en_marca,modelo,PRESIDENTE ANDRÉS [MANUEL LÓPEZ OB]RADOR: banco comercial va a tener tantas sucursale,FP
+630_73,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,DO,35,37,modelo,frontera,modelo,PRESIDENTE ANDRÉS MANUEL LÓPEZ OBRA[DO]R: banco comercial va a tener tantas sucursales co,FP
+630_73,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,DO,35,37,modelo,frontera:entidad_partida,modelo,PRESIDENTE ANDRÉS MANUEL LÓPEZ OBRA[DO]R: banco comercial va a tener tantas sucursales co,FP
+630_73,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,DO,35,37,modelo,en_marca,modelo,PRESIDENTE ANDRÉS MANUEL LÓPEZ OBRA[DO]R: banco comercial va a tener tantas sucursales co,FP
+630_73,FECHA,,noviembre,117,126,regla,espuria:regex,regex,"tantas sucursales como el Banco del Bienestar. En [noviembre], por ejemplo, ya terminamos de inaugurar y de pon",FP
+776_72,ORG,gobierno federal,,68,84,,omision,,"MANUEL LÓPEZ OBRADOR: Por lo general es apoyo del [gobierno federal]. En esta región hay muchos, miles de campesinos e",FN
+776_72,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,MANUEL LÓPEZ,18,30,modelo,frontera,modelo,PRESIDENTE ANDRÉS [MANUEL LÓPEZ] OBRADOR: Por lo general es apoyo del gobierno fed,FP
+776_72,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,MANUEL LÓPEZ,18,30,modelo,frontera:entidad_partida,modelo,PRESIDENTE ANDRÉS [MANUEL LÓPEZ] OBRADOR: Por lo general es apoyo del gobierno fed,FP
+776_72,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,MANUEL LÓPEZ,18,30,modelo,en_marca,modelo,PRESIDENTE ANDRÉS [MANUEL LÓPEZ] OBRADOR: Por lo general es apoyo del gobierno fed,FP
+845_12,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,MANUEL LÓPEZ,18,30,modelo,frontera,modelo,PRESIDENTE ANDRÉS [MANUEL LÓPEZ] OBRADOR: pensión a adultos mayores; claro es muy ,FP
+845_12,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,MANUEL LÓPEZ,18,30,modelo,frontera:entidad_partida,modelo,PRESIDENTE ANDRÉS [MANUEL LÓPEZ] OBRADOR: pensión a adultos mayores; claro es muy ,FP
+845_12,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,MANUEL LÓPEZ,18,30,modelo,en_marca,modelo,PRESIDENTE ANDRÉS [MANUEL LÓPEZ] OBRADOR: pensión a adultos mayores; claro es muy ,FP
+928_1,LOC,aeropuerto ‘Felipe Ángeles’,Felipe Ángeles,1030,1057,modelo,frontera,modelo,"ción falsa, indicando que la torre de control del [aeropuerto ‘Felipe Ángeles’] estaba chueca, que estaba inclinada como la Torre",FN
+928_1,LOC,aeropuerto ‘Felipe ‘Ángeles’,Felipe,1151,1179,modelo,frontera,modelo," Torre de Pisa, en Italia. Es falso, la torre del [aeropuerto ‘Felipe ‘Ángeles’] fue construida bajo altos estándares",FN
+928_1,LOC,aeropuerto ‘Felipe ‘Ángeles’,Felipe,1151,1179,modelo,frontera:entidad_partida,modelo," Torre de Pisa, en Italia. Es falso, la torre del [aeropuerto ‘Felipe ‘Ángeles’] fue construida bajo altos estándares",FN
+928_1,ORG,ANA ELIZABETH GARCÍA VILCHIS,AN,0,2,modelo,en_marca,modelo,"[AN]A ELIZABETH GARCÍA VILCHIS: Señor presidente, con ",FP
+928_1,PER,ANA ELIZABETH GARCÍA VILCHIS,A,2,3,modelo,frontera,modelo,"AN[A] ELIZABETH GARCÍA VILCHIS: Señor presidente, con s",FP
+928_1,PER,ANA ELIZABETH GARCÍA VILCHIS,A,2,3,modelo,frontera:entidad_partida,modelo,"AN[A] ELIZABETH GARCÍA VILCHIS: Señor presidente, con s",FP
+928_1,PER,ANA ELIZABETH GARCÍA VILCHIS,A,2,3,modelo,en_marca,modelo,"AN[A] ELIZABETH GARCÍA VILCHIS: Señor presidente, con s",FP
+928_1,ORG,ANA ELIZABETH GARCÍA VILCHIS,ELIZABETH,4,13,modelo,en_marca,modelo,"ANA [ELIZABETH] GARCÍA VILCHIS: Señor presidente, con su permiso.",FP
+928_1,LOC,aeropuerto ‘Felipe Ángeles’,Felipe Ángeles,1042,1056,modelo,frontera,modelo,"indicando que la torre de control del aeropuerto ‘[Felipe Ángeles]’ estaba chueca, que estaba inclinada como la Torr",FP
+928_1,LOC,aeropuerto ‘Felipe ‘Ángeles’,Felipe,1163,1169,modelo,frontera,modelo,"sa, en Italia. Es falso, la torre del aeropuerto ‘[Felipe] ‘Ángeles’ fue construida bajo altos estándares",FP
+928_1,LOC,aeropuerto ‘Felipe ‘Ángeles’,Felipe,1163,1169,modelo,frontera:entidad_partida,modelo,"sa, en Italia. Es falso, la torre del aeropuerto ‘[Felipe] ‘Ángeles’ fue construida bajo altos estándares",FP
+928_1,LOC,aeropuerto ‘Felipe ‘Ángeles’,Ángeles,1171,1178,modelo,frontera,modelo,"talia. Es falso, la torre del aeropuerto ‘Felipe ‘[Ángeles]’ fue construida bajo altos estándares",FP
+928_1,LOC,aeropuerto ‘Felipe ‘Ángeles’,Ángeles,1171,1178,modelo,frontera:entidad_partida,modelo,"talia. Es falso, la torre del aeropuerto ‘Felipe ‘[Ángeles]’ fue construida bajo altos estándares",FP

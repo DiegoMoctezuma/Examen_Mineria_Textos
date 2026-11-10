@@ -1,0 +1,51 @@
+{
+  "08_extraer": {
+    "fecha": "2026-11-09T21:02:01",
+    "commit": "e1c5102",
+    "arbol_limpio": true,
+    "entradas": {
+      "data/pasajes.parquet": "766859a1ab322a449b6ce3ef9e25d15b95f275d140804f3935db7c1de632af0d",
+      "salida/ranking.csv": "37ffa3e4367faf8d48f069afd3570ea44a44b4016a33cd1e9da8d92a88ec7f10",
+      "data/mejor_modelo.json": "cfe87d7aa1d9aca7cf097a432b95e2cadd8e77eba91a013c8fbab4f5f44bc74b",
+      "data/modelo_ner.json": "2139cf092405ecccb3be80657b4dd5a6857162729963977aca9b6d865514ed6c",
+      "config/gazetteer_extendido.csv": "53382ef9d5459dfb07bb7c2611308b766ea41d1055cb7b234b735faedcbc53a0",
+      "config/gazetteer_loc.csv": "d463f2a244b43dbd533dfbad00735580b5b50a86d04fde5a6143b8d8193c0735",
+      "config/ner.yaml": "8a91b73cdd6cf9e1352be8e9ca601b269b382abd93e22439f1d1dcae8897b3b0"
+    },
+    "salidas": {
+      "salida/entidades.csv": "9f6c2c04fba4119cf0307960d12dc59b5195d23ecf0f6ecc162d010a8cb4d0e2",
+      "salida/entidades_unicas.csv": "5f725b6e844c56c07f24961726c300ff982d42672c52bcf92734f961ff1dc58f",
+      "salida/entidades_enriquecidas.csv": "128df0324aea5dfa0110999016ba0e2bf861041233a67b4245dbf1157b979e05",
+      "salida/08_solapes_parciales.csv": "c347dab1818994148ae580877ddcef4be77d3ac963d425cce910f893acf9ec60",
+      "entidades.csv": "9f6c2c04fba4119cf0307960d12dc59b5195d23ecf0f6ecc162d010a8cb4d0e2"
+    },
+    "modelo": "mrm8488/bert-spanish-cased-finetuned-ner",
+    "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+    "version_extractor": "reglas-congeladas@aa613f5+posproceso1"
+  },
+  "09_evaluar_ie": {
+    "fecha": "2026-11-09T21:02:11",
+    "commit": "e1c5102",
+    "arbol_limpio": true,
+    "entradas": {
+      "gold_entidades.csv": "c1c2cf98f9f5784d6fee1bb818e98eb045e37e51d54bbb1c78f1dcfb1731078a",
+      "entidades.csv": "9f6c2c04fba4119cf0307960d12dc59b5195d23ecf0f6ecc162d010a8cb4d0e2",
+      "salida/entidades_enriquecidas.csv": "128df0324aea5dfa0110999016ba0e2bf861041233a67b4245dbf1157b979e05",
+      "kit/evaluar.py": "b70c33ca2cd1436a7d26186786e8ca6685e7d4e3bab8820d054bf6bea891a90f",
+      "anotaciones/cierre_gold.json": "b839bd5ed2568d086d38c84e5798bac981dc3e0be2dda94f6e8a52d09b0272d6"
+    },
+    "salidas": {
+      "resultados_ie.csv": "6ecf82b48d04ab04ca31f5dd1b6d955282ccdc26a6ef402091d3c42445e9054d",
+      "salida/resultados_ie.csv": "6ecf82b48d04ab04ca31f5dd1b6d955282ccdc26a6ef402091d3c42445e9054d",
+      "salida/09_ie_detalle.csv": "1948f7b376c766caeea1d80849fed04cb48c127e7adc56ba5000050e9a339884",
+      "salida/09_evaluacion_20_ids.csv": "07eed0435b52536230f5aeacc765d7cac684d1c4a7c4c3d4ec8b159a2efc0e96",
+      "salida/09_analisis_errores.csv": "5195600bb81f495778bcb9eb7c49d17b7b15fd71bd5eeae5824e760581eda6cc",
+      "salida/09_resumen_errores.csv": "3c0bb4f695fba611f263e9da1b790be5ee2328ce46fa4857817012ade75c6796",
+      "reporte/figuras/ie_f1_por_tipo_metodo.png": "2e80c7a362f2ba9bf46a36e66428807a80cfcefe262715d5533813840e834cc5",
+      "reporte/figuras/ie_errores_por_categoria.png": "fb34fc217901a87242985c06e67608181925f9bd63895ee50bd10fc6db39345b"
+    },
+    "pasajes_evaluados_kit": 20,
+    "pasajes_manifiesto": 20,
+    "avisos": []
+  }
+}

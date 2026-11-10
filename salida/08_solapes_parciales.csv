@@ -1,0 +1,146 @@
+passage_id,clase,tipo_regla,inicio_regla,fin_regla,texto_regla,fuente_regla,tipo_modelo,inicio_modelo,fin_modelo,texto_modelo,longitud_solape
+1116_10,solape_parcial,PER,0,25,HUGO LÓPEZ-GATELL RAMÍREZ,marca,PER,0,10,HUGO LÓPEZ,10
+1116_10,solape_parcial,PER,0,25,HUGO LÓPEZ-GATELL RAMÍREZ,marca,PER,11,17,GATELL,6
+1122_3,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,21,MAN,3
+1122_3,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,23,24,L,1
+1128_40,solape_parcial,LOC,260,307,Corredor Interoceánico del Istmo de Tehuantepec,gazetteer_loc,LOC,290,307,mo de Tehuantepec,17
+1128_40,solape_parcial,PER,0,23,JOSÉ RAFAEL OJEDA DURÁN,marca,PER,5,7,RA,2
+1128_40,solape_parcial,PER,0,23,JOSÉ RAFAEL OJEDA DURÁN,marca,PER,9,23,EL OJEDA DURÁN,14
+1188_80,tipo_distinto,LOC,282,296,Estados Unidos,gazetteer_loc,ORG,282,296,Estados Unidos,14
+1188_80,solape_parcial,ORG,800,808,Gamaleya,gazetteer_org,ORG,786,808,Microbiología Gamaleya,8
+1216_44,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+1219_83,solape_parcial,LOC,327,334,Jalisco,gazetteer_loc,LOC,314,334,Los Altos de Jalisco,7
+1253_5,solape_parcial,LOC,70,76,México,gazetteer_loc,ORG,58,76,Gobierno de México,6
+1259_59,solape_parcial,LOC,199,210,Santa Lucía,gazetteer_loc,LOC,185,210,Base Aérea de Santa Lucía,11
+1259_59,solape_parcial,LOC,1145,1152,Texcoco,gazetteer_loc,LOC,1137,1152,lago de Texcoco,7
+1259_59,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,24,MANUEL,6
+1272_17,solape_parcial,LOC,109,129,Istmo de Tehuantepec,gazetteer_loc,LOC,120,129,huantepec,9
+1272_17,solape_parcial,LOC,444,450,México,gazetteer_loc,ORG,432,450,Gobierno de México,6
+1293_76,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+1310_37,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+1316_37,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+1318_22,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+1342_19,solape_parcial,LOC,14,61,Corredor Interoceánico del Istmo de Tehuantepec,gazetteer_loc,ORG,30,36,eánico,6
+1342_19,solape_parcial,LOC,14,61,Corredor Interoceánico del Istmo de Tehuantepec,gazetteer_loc,ORG,58,61,pec,3
+1342_19,solape_parcial,LOC,964,984,Istmo de Tehuantepec,gazetteer_loc,LOC,975,984,huantepec,9
+1395_0,solape_parcial,ORG,1129,1132,ICA,gazetteer_org,ORG,1123,1132,Grupo ICA,3
+1395_0,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,24,MANUEL,6
+1415_16,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,ORG,18,21,MAN,3
+1458_12,solape_parcial,LOC,377,397,Istmo de Tehuantepec,gazetteer_loc,LOC,377,379,Is,2
+1458_12,solape_parcial,LOC,377,397,Istmo de Tehuantepec,gazetteer_loc,LOC,383,385,de,2
+1458_12,solape_parcial,LOC,377,397,Istmo de Tehuantepec,gazetteer_loc,LOC,388,397,huantepec,9
+1458_12,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+1527_0,tipo_distinto,LOC,816,825,Dos Bocas,gazetteer_loc,ORG,816,825,Dos Bocas,9
+1527_0,solape_parcial,LOC,923,932,Dos Bocas,gazetteer_loc,LOC,927,932,Bocas,5
+1527_0,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+1606_0,solape_parcial,LOC,1009,1020,Santa Lucía,gazetteer_loc,LOC,1009,1035,Santa Lucía Felipe Ángeles,11
+1606_0,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,11,30,ANDRÉS MANUEL LÓPEZ,19
+1606_1,solape_parcial,LOC,67,78,Santa Lucía,gazetteer_loc,LOC,67,93,Santa Lucía Felipe Ángeles,11
+1606_1,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+1606_2,tipo_distinto,LOC,471,487,Estado de México,gazetteer_loc,ORG,471,487,Estado de México,16
+1606_2,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,21,MAN,3
+1626_3,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+1640_5,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,21,MAN,3
+1640_5,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,23,30,L LÓPEZ,7
+1685_4,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+1691_3,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+1719_37,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+1733_3,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,24,MANUEL,6
+1812_0,solape_parcial,LOC,196,207,Santa Lucía,gazetteer_loc,LOC,174,207,Base Aérea Militar de Santa Lucía,11
+1812_0,solape_parcial,LOC,326,337,Santa Lucía,gazetteer_loc,LOC,304,337,Base Aérea Militar de Santa Lucía,11
+1812_0,solape_parcial,LOC,779,786,Texcoco,gazetteer_loc,LOC,771,786,lago de Texcoco,7
+1812_0,solape_parcial,LOC,995,1006,Santa Lucía,gazetteer_loc,LOC,976,1006,Base Aérea Militar Santa Lucía,11
+1812_0,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+1850_6,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+1870_19,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+1943_6,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+1998_12,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+2008_2,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,21,MAN,3
+2030_1,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+2033_3,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,21,MAN,3
+2033_3,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,23,30,L LÓPEZ,7
+2086_10,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+2088_3,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,21,MAN,3
+2088_3,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,23,24,L,1
+2115_4,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+2115_5,solape_parcial,ORG,379,384,Pemex,gazetteer_org,LOC,370,384,Torre de Pemex,5
+2115_5,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,21,MAN,3
+2149_27,solape_parcial,LOC,619,627,Campeche,gazetteer_loc,LOC,610,627,Sonda de Campeche,8
+2149_27,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+216_81,solape_parcial,LOC,582,629,corredor interoceánico del Istmo de Tehuantepec,gazetteer_loc,LOC,609,629,Istmo de Tehuantepec,20
+216_81,solape_parcial,PER,0,25,ÓSCAR DAVID LOZANO ÁGUILA,marca,PER,0,8,ÓSCAR DA,8
+2170_1,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+2170_1,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,35,37,DO,2
+2171_28,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+2190_6,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+2191_4,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,24,MANUEL,6
+2199_29,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+2202_5,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+2208_8,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+2209_3,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+2250_60,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,ORG,18,21,MAN,3
+2259_13,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,21,MAN,3
+2259_13,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,23,24,L,1
+2265_8,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+2274_1,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+228_7,solape_parcial,LOC,270,284,Estados Unidos,gazetteer_loc,ORG,270,294,Estados Unidos Mexicanos,14
+228_7,solape_parcial,LOC,733,740,Chiapas,gazetteer_loc,LOC,726,740,Puerto Chiapas,7
+228_7,solape_parcial,LOC,769,789,Istmo de Tehuantepec,gazetteer_loc,LOC,769,771,Is,2
+228_7,solape_parcial,LOC,769,789,Istmo de Tehuantepec,gazetteer_loc,LOC,783,789,ntepec,6
+256_14,solape_parcial,LOC,242,248,México,gazetteer_loc,ORG,230,248,Gobierno de México,6
+256_14,solape_parcial,LOC,1094,1114,Istmo de Tehuantepec,gazetteer_loc,LOC,1111,1114,pec,3
+256_14,solape_parcial,PER,0,23,JOSÉ RAFAEL OJEDA DURÁN,marca,PER,5,23,RAFAEL OJEDA DURÁN,18
+278_3,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+326_25,tipo_distinto,LOC,94,103,Tren Maya,gazetteer_loc,ORG,94,103,Tren Maya,9
+343_2,solape_parcial,LOC,397,413,Estado de México,gazetteer_loc,ORG,397,403,Estado,6
+343_2,solape_parcial,LOC,397,413,Estado de México,gazetteer_loc,LOC,404,413,de México,9
+343_2,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+347_71,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+354_33,solape_parcial,LOC,47,94,CORREDOR INTEROCEÁNICO DEL ISTMO DE TEHUANTEPEC,gazetteer_loc,ORG,47,50,COR,3
+354_33,solape_parcial,LOC,47,94,CORREDOR INTEROCEÁNICO DEL ISTMO DE TEHUANTEPEC,gazetteer_loc,ORG,56,69,INTEROCEÁNICO,13
+354_33,solape_parcial,LOC,47,94,CORREDOR INTEROCEÁNICO DEL ISTMO DE TEHUANTEPEC,gazetteer_loc,LOC,83,94,TEHUANTEPEC,11
+354_33,solape_parcial,LOC,96,100,CIIT,gazetteer_loc,ORG,96,98,CI,2
+354_33,solape_parcial,LOC,273,279,México,gazetteer_loc,ORG,261,279,Gobierno de México,6
+354_33,solape_parcial,LOC,458,478,Istmo de Tehuantepec,gazetteer_loc,ORG,442,478,Ferrocarril del Istmo de Tehuantepec,20
+354_33,solape_parcial,LOC,564,571,Chiapas,gazetteer_loc,LOC,557,571,Puerto Chiapas,7
+354_33,solape_parcial,PER,0,24,RAYMUNDO MORALES ÁNGELES,marca,PER,0,2,RA,2
+354_33,solape_parcial,PER,0,24,RAYMUNDO MORALES ÁNGELES,marca,PER,17,24,ÁNGELES,7
+396_23,tipo_distinto,LOC,1155,1164,Tren Maya,gazetteer_loc,ORG,1155,1164,Tren Maya,9
+396_24,tipo_distinto,LOC,309,318,Tren Maya,gazetteer_loc,ORG,309,318,Tren Maya,9
+419_11,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,21,MAN,3
+419_11,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,23,30,L LÓPEZ,7
+420_10,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,21,MAN,3
+420_10,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,23,30,L LÓPEZ,7
+476_28,solape_parcial,ORG,92,96,INAH,gazetteer_org,ORG,92,94,IN,2
+476_28,solape_parcial,PER,0,22,DIEGO PRIETO HERNÁNDEZ,marca,PER,2,4,EG,2
+476_28,solape_parcial,PER,0,22,DIEGO PRIETO HERNÁNDEZ,marca,PER,6,22,PRIETO HERNÁNDEZ,16
+478_44,tipo_distinto,LOC,1174,1181,Ucrania,gazetteer_loc,ORG,1174,1181,Ucrania,7
+478_44,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+499_68,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+504_31,solape_parcial,ORG,1218,1237,Petróleos Mexicanos,gazetteer_org,ORG,1223,1233,leos Mexic,10
+507_44,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,21,MAN,3
+507_44,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,23,24,L,1
+525_29,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+549_11,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,24,MANUEL,6
+578_0,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+630_73,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,33,MANUEL LÓPEZ OB,15
+630_73,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,35,37,DO,2
+657_54,solape_parcial,LOC,82,89,Tabasco,gazetteer_loc,LOC,82,86,Taba,4
+657_54,solape_parcial,LOC,82,89,Tabasco,gazetteer_loc,ORG,86,89,sco,3
+744_69,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+745_5,solape_parcial,PER,0,28,ANA ELIZABETH GARCÍA VILCHIS,marca,ORG,0,13,ANA ELIZABETH,13
+754_67,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+771_54,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,21,MAN,3
+771_54,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,23,30,L LÓPEZ,7
+776_72,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+786_90,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+796_2,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,21,MAN,3
+796_2,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,23,24,L,1
+845_12,solape_parcial,PER,11,38,ANDRÉS MANUEL LÓPEZ OBRADOR,marca,PER,18,30,MANUEL LÓPEZ,12
+917_1,solape_parcial,LOC,696,703,Yucatán,gazetteer_loc,ORG,686,703,Diario de Yucatán,7
+917_1,solape_parcial,PER,0,28,ANA ELIZABETH GARCÍA VILCHIS,marca,PER,0,13,ANA ELIZABETH,13
+917_1,solape_parcial,PER,0,28,ANA ELIZABETH GARCÍA VILCHIS,marca,PER,21,23,VI,2
+917_1,solape_parcial,PER,0,28,ANA ELIZABETH GARCÍA VILCHIS,marca,ORG,25,28,HIS,3
+928_1,solape_parcial,PER,0,28,ANA ELIZABETH GARCÍA VILCHIS,marca,ORG,0,2,AN,2
+928_1,solape_parcial,PER,0,28,ANA ELIZABETH GARCÍA VILCHIS,marca,PER,2,3,A,1
+928_1,solape_parcial,PER,0,28,ANA ELIZABETH GARCÍA VILCHIS,marca,ORG,4,13,ELIZABETH,9
