@@ -47,5 +47,35 @@
     "pasajes_evaluados_kit": 20,
     "pasajes_manifiesto": 20,
     "avisos": []
+  },
+  "10_tablas": {
+    "fecha": "2026-11-09T21:20:01",
+    "commit": "e03677e",
+    "arbol_limpio": true,
+    "entradas": {
+      "salida/entidades_enriquecidas.csv": "128df0324aea5dfa0110999016ba0e2bf861041233a67b4245dbf1157b979e05",
+      "salida/cantidades_auxiliares.csv": "8e31e907df9a96d17ce9aa3e7c763e3d949f08ddb8fab71239ae5d16723328d3",
+      "config/tablas_respuesta.yaml": "b76c94f2902ad8854bb44d5c6cf8cf8071265ba63454381cd68d024d4f95d7dd",
+      "config/excluir_tablas.yaml": "61f67c38bdc66f0439e5aed93cce49885c299f7b650177c13ccb84fbd296f2dc",
+      "data/mejor_modelo.json": "cfe87d7aa1d9aca7cf097a432b95e2cadd8e77eba91a013c8fbab4f5f44bc74b"
+    },
+    "salidas": {
+      "salida/respuestas.csv": "6505e1910dd088533466997c3ca54c233d6cba1fc38dd2ba9fa6da09100e811e",
+      "salida/10_evidencias.csv": "a280d483f994360ad377581ff7b214921b3f9de20c13d4f9de9ff1bbb5e78f72",
+      "salida/10_exclusiones.csv": "a4b0d62bee4235e4b986604fd1472e9630af1e70176a8d68d937109b6bee2361",
+      "salida/10_hashes_tablas.json": "4f2e1d23e7c22b5e376baad64bcd22f62224a8f7640f678742f782ccc01fe10a",
+      "salida/tablas_respuesta/Q1.md": "93bcb214f54656893ef168e5017e0b12c7da1761d33137e71dec63a633ee2a25",
+      "salida/tablas_respuesta/Q2.md": "e6f87f22bccff01680894cdbb30812dc18c5742a9470e2c0ed386aa26e26dee6",
+      "salida/tablas_respuesta/Q3.md": "a46a7dea0c51d16e3d3c0465f8ec410f1c745c15f3cfd5e6374e4fa4438da249",
+      "salida/tablas_respuesta/Q4.md": "7669867a9ff6201f60f418883554e8bd87ffd233b1b902a970ad178178210bc0",
+      "salida/tablas_respuesta/Q5.md": "11f370ca4cc0ecab20bf2f26f7619ada1d901c5c06f8336fae7dc995bea54e8c",
+      "salida/tablas_respuesta/Q6.md": "867499cdeec2fffc50b22dfca7a694fc41186e0374eb9922143dc7dd5341d6e4",
+      "salida/tablas_respuesta/Q7.md": "77e97896e697ffbda66673b39897626a85f722bc7412f0b95e2a53430448d589",
+      "salida/tablas_respuesta/Q8.md": "e0d42ab59560a83f36b44f124c125b9efce2fa542d4783676fe443b7138be9ed",
+      "salida/tablas_respuesta/Q9.md": "9c05a6a1d3ddac3b7d7d616f2ef03d7a7658c4cd256df2cc4f498691f309f177",
+      "salida/tablas_respuesta/Q10.md": "38f005fdb4e5d545c89c56f7bb1a66f010570a4608fefcca22a15bf93f2cf54b",
+      "salida/tablas_respuesta/todas.md": "a6be5585557f3fe814a1b9dd9a5283389c18378da6e3da1de2621bd3447d135f"
+    },
+    "valoraciones_pendientes": 10
   }
 }
