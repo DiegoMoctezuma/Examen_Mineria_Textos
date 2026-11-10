@@ -1,0 +1,10 @@
+# PER que no se muestran en las tablas de respuesta (U14, PRD §6.13.1). Se comparan contra
+# `texto_normalizado` (minúsculas, sin acentos). Solo afectan a campos de tipo PER; ORG, LOC,
+# FECHA y MONTO no se filtran con esta lista. Fijado antes de generar las tablas.
+per:
+  - andres manuel lopez obrador
+  - andres manuel
+  - lopez obrador
+  - amlo
+  - andres manuel lopez
+  - manuel lopez obrador

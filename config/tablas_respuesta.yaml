@@ -1,0 +1,218 @@
+# Mapa consulta → campos de respuesta (PRD §6.13.2, D17). Fijado ANTES de generar las tablas.
+#
+# Cada campo:
+#   fuente: entidad (salida/entidades_enriquecidas.csv) | auxiliar (salida/cantidades_auxiliares.csv)
+#   tipo: PER | ORG | LOC | FECHA | MONTO (entidad) · CANTIDAD | PORCENTAJE (auxiliar)
+#   unidades: solo auxiliares; unidades aceptadas (columna `unidad`)
+#   filtro: d14 | entidades_federativas | organizacion_empresarial (intersección con el gazetteer)
+#   patrones_contexto: lista de regex en minúsculas sin acentos; TODAS deben aparecer en el
+#     contexto (±60 caracteres alrededor del span y oración contigua) para `respaldado_en_texto`.
+#     Sin ellas el valor queda `ambiguo` con su cita.
+#   relacion: evidencia mínima que exige el PRD.
+#   unidad: la que se escribe en `respuestas.csv` cuando el valor no la trae.
+#   unico_por_evento: si es true, dos valores distintos con evidencia en la misma intervención
+#     se marcan `contradictorio` (nunca se resuelve por mayoría).
+
+Q1:
+  - campo: dependencias y empresas
+    fuente: entidad
+    tipo: ORG
+    patrones_contexto: ["tren maya|tramo|maya", "constru|particip|contrat|obra|trabaj|encarg|opera|invers|licit|ejecut"]
+    relacion: participación o inversión vinculada al Tren Maya
+  - campo: estados
+    fuente: entidad
+    tipo: LOC
+    filtro: entidades_federativas
+    patrones_contexto: ["tren maya|tramo|maya|via|estacion"]
+    relacion: estado por donde pasa o donde se construye el Tren Maya
+  - campo: montos
+    fuente: entidad
+    tipo: MONTO
+    patrones_contexto: ["tren maya|tramo|maya", "invers|cost|presupuest|destin|gast|contrat|obra|constru"]
+    relacion: inversión o costo vinculado al Tren Maya
+
+Q2:
+  - campo: farmacéuticas
+    fuente: entidad
+    tipo: ORG
+    filtro: d14
+    patrones_contexto: ["vacun|dosis|biologic|lote|envas"]
+    relacion: farmacéutica o vacuna en la entrega, aplicación o gestión de vacunas
+  - campo: funcionarios
+    fuente: entidad
+    tipo: PER
+    patrones_contexto: ["vacun|dosis|aplic|biologic|salud|subsecretari|secretari|director"]
+    relacion: funcionario que gestiona, informa o aplica vacunas
+  - campo: fechas
+    fuente: entidad
+    tipo: FECHA
+    patrones_contexto: ["vacun|dosis|lleg|arrib|recib|aplic|entreg|embarque"]
+    relacion: fecha de llegada, entrega o aplicación de vacunas
+  - campo: dosis
+    fuente: auxiliar
+    tipo: CANTIDAD
+    unidades: [dosis, vacunas]
+    unidad: dosis
+    patrones_contexto: ["vacun|dosis|lleg|recib|aplic|entreg|envas"]
+    relacion: cantidad de dosis vinculada al evento citado
+
+Q3:
+  - campo: organizaciones
+    fuente: entidad
+    tipo: ORG
+    patrones_contexto: ["dos bocas|refineria|olmeca", "constru|particip|contrat|obra|encarg|opera|invers|respons|ejecut"]
+    relacion: responsabilidad o participación explícita en Dos Bocas o la refinería Olmeca
+  - campo: responsables
+    fuente: entidad
+    tipo: PER
+    patrones_contexto: ["dos bocas|refineria|olmeca", "director|secretari|encarg|respons|coordin|construc|a cargo"]
+    relacion: persona responsable de Dos Bocas o la refinería Olmeca
+  - campo: montos de inversión
+    fuente: entidad
+    tipo: MONTO
+    patrones_contexto: ["dos bocas|refineria|olmeca", "invers|cost|presupuest|destin|gast|cuest|vale"]
+    relacion: inversión o costo explícito de Dos Bocas o la refinería Olmeca
+
+Q4:
+  - campo: dependencia constructora
+    fuente: entidad
+    tipo: ORG
+    patrones_contexto: ["aeropuerto|aifa|santa lucia|felipe angeles", "constru|ingenier|obra|encarg|edific|a cargo"]
+    relacion: dependencia que construye el AIFA o Santa Lucía
+  - campo: lugares
+    fuente: entidad
+    tipo: LOC
+    patrones_contexto: ["aeropuerto|aifa|santa lucia|felipe angeles"]
+    relacion: lugar mencionado en relación con el AIFA o Santa Lucía
+  - campo: costos
+    fuente: entidad
+    tipo: MONTO
+    patrones_contexto: ["aifa|santa lucia|felipe angeles|nuevo aeropuerto", "cost|invers|presupuest|ahorr|gast|cuest|obra"]
+    relacion: costo asociado al AIFA o Santa Lucía (no a otro aeropuerto)
+
+Q5:
+  - campo: secretaría operadora
+    fuente: entidad
+    tipo: ORG
+    patrones_contexto: ["sembrando vida|programa", "opera|encarg|a cargo|coordin|secretaria|aplica|llev"]
+    relacion: dependencia que opera Sembrando Vida
+  - campo: estados
+    fuente: entidad
+    tipo: LOC
+    filtro: entidades_federativas
+    patrones_contexto: ["sembrando vida|sembrador|siembr|arbol|plant|hectarea"]
+    relacion: estado donde opera Sembrando Vida
+  - campo: monto por beneficiario
+    fuente: entidad
+    tipo: MONTO
+    unidad: MXN por beneficiario
+    patrones_contexto: ["mensual|al mes|por sembrador|por beneficiario|cada sembrador|cada beneficiario"]
+    relacion: apoyo por beneficiario, distinto del presupuesto total
+
+Q6:
+  - campo: lugares
+    fuente: entidad
+    tipo: LOC
+    patrones_contexto: ["huachicol|robo|ordeña|toma clandestin|ducto|combustible|gasolina"]
+    relacion: lugar del robo, la recuperación o el combate al robo de combustible
+  - campo: organizaciones
+    fuente: entidad
+    tipo: ORG
+    patrones_contexto: ["huachicol|robo|ordeña|toma clandestin|ducto|combustible|gasolina|abasto"]
+    relacion: organización que participa en el combate al robo o en el abasto de combustible
+  - campo: pérdidas
+    fuente: entidad
+    tipo: MONTO
+    patrones_contexto: ["huachicol|robo|ordeña|perd|combustible|gasolina|ahorr"]
+    relacion: pérdida o ahorro por robo de combustible, con su sentido
+  - campo: litros
+    fuente: auxiliar
+    tipo: CANTIDAD
+    unidades: [litros, barriles]
+    patrones_contexto: ["huachicol|robo|ordeña|perd|combustible|gasolina|diario|al dia"]
+    relacion: volumen robado, recuperado o perdido, con su unidad
+
+Q7:
+  - campo: montos bimestrales
+    fuente: entidad
+    tipo: MONTO
+    unidad: MXN bimestral
+    patrones_contexto: ["bimestr"]
+    relacion: monto bimestral de la pensión (distinguir previo y nuevo)
+  - campo: institución
+    fuente: entidad
+    tipo: ORG
+    patrones_contexto: ["pension|adultos mayores|pag|entreg|deposit|banco|tarjeta"]
+    relacion: institución que paga o entrega la pensión
+  - campo: fechas de aumento
+    fuente: entidad
+    tipo: FECHA
+    patrones_contexto: ["aument"]
+    relacion: fecha de aumento de la pensión
+
+Q8:
+  - campo: organizaciones empresariales
+    fuente: entidad
+    tipo: ORG
+    filtro: organizacion_empresarial
+    patrones_contexto: ["salari|acuerd|aument|minimo"]
+    relacion: organización empresarial en el acuerdo o la discusión del aumento salarial
+  - campo: porcentajes
+    fuente: auxiliar
+    tipo: PORCENTAJE
+    unidades: [porcentaje]
+    unidad: "%"
+    patrones_contexto: ["salari|minimo|aument|incremen"]
+    relacion: porcentaje de aumento al salario (distinguir propuesta y anuncio)
+  - campo: montos diarios
+    fuente: entidad
+    tipo: MONTO
+    unidad: MXN diario
+    patrones_contexto: ["diari|al dia|por dia"]
+    relacion: salario mínimo diario
+
+Q9:
+  - campo: institución
+    fuente: entidad
+    tipo: ORG
+    patrones_contexto: ["sucursal|banco|bienestar", "opera|abr|constru|instal|inaugur|encarg|a cargo|pag|entreg"]
+    relacion: institución que opera o construye las sucursales del Banco del Bienestar
+  - campo: sucursales
+    fuente: auxiliar
+    tipo: CANTIDAD
+    unidades: [sucursales]
+    patrones_contexto: ["banco|bienestar|sucursal"]
+    relacion: número de sucursales construidas, abiertas o planeadas
+  - campo: estados
+    fuente: entidad
+    tipo: LOC
+    filtro: entidades_federativas
+    patrones_contexto: ["sucursal|banco"]
+    relacion: estado donde se abren sucursales del Banco del Bienestar
+  - campo: montos
+    fuente: entidad
+    tipo: MONTO
+    patrones_contexto: ["sucursal|banco", "invers|cost|presupuest|destin|constru|gast|pag|entreg|deposit"]
+    relacion: inversión, costo o pago vinculado al Banco del Bienestar
+
+Q10:
+  - campo: dependencias y empresas
+    fuente: entidad
+    tipo: ORG
+    patrones_contexto: ["interoceanic|istmo|ferrocarril|tren|corredor", "constru|particip|contrat|obra|encarg|opera|invers|a cargo|ejecut|rehabilit"]
+    relacion: participación en la construcción u operación del Tren o Corredor Interoceánico
+  - campo: lugares que conecta
+    fuente: entidad
+    tipo: LOC
+    patrones_contexto: ["interoceanic|istmo|ferrocarril|tren|corredor|puerto", "conect|une|uni|comunic|de .{0,40} a |hasta|entre|ruta|tramo|linea"]
+    relacion: lugar que el Tren Interoceánico conecta o por donde pasa
+  - campo: montos
+    fuente: entidad
+    tipo: MONTO
+    patrones_contexto: ["interoceanic|istmo|ferrocarril|tren|corredor|puerto", "invers|cost|presupuest|destin|gast|constru"]
+    relacion: inversión o costo vinculado al Tren o Corredor Interoceánico
+  - campo: fechas de inauguración
+    fuente: entidad
+    tipo: FECHA
+    patrones_contexto: ["inaugur|arranc|inicio de operacion|empez|comenz|termin|conclu"]
+    relacion: fecha de inauguración, arranque o terminación
