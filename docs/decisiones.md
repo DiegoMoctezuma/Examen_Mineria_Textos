@@ -96,3 +96,4 @@
   - LOC (Zonas urbanas y colonias): No se anotan. Términos como "Centro" o nombres de barrios quedan fuera; la categoría se restringe a estados, municipios, países y obras con nombre propio.
 
   Nota para el reporte: el criterio congelado define FECHA como "absolutas y relativas resolubles"; excluir "hoy", "ayer" y "mañana" es un acotamiento del alumno que conviene explicar.
+- (2026-11-11) **Ruta del PDF sin XeLaTeX.** No hay TeX en la laptop y el pandoc de Anaconda es x86 sin Rosetta. `scripts/11_reporte.py` convierte `reporte/reporte.md` con pandoc 3.13 arm64 (Homebrew) a HTML con MathML y `reporte/estilo.css` (carta, márgenes 2.2 cm, tablas estilo booktabs) y lo imprime a PDF con el Chrome que instala kaleido. PRD §6.14 admite otra ruta documentada. Las tablas del reporte y la sección 8 del README se rellenan desde `salida/` en cada compilación; la prosa no se regenera.
