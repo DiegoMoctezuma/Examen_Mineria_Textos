@@ -1,0 +1,89 @@
+SALIDA GUARDADA, NO DEMO EN VIVO. Generada el 2026-11-11 13:26 con make demo Q=Q3; solo para contingencia si falla la máquina.
+
+╭───────────────────────────────────────────────── Consulta del experimento (artefactos guardados) ──────────────────────────────────────────────────╮
+│ Q3 · refinería de Dos Bocas en Tabasco                                                                                                             │
+│ Ventana: 2019-01-01 a 2022-12-31                                                                                                                   │
+│ Pregunta: Qué organizaciones, qué personas responsables y qué montos de inversión                                                                  │
+│ Mejor modelo (MAP): bm25_con_filtro                                                                                                                │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+                          Top-10 TF-IDF y BM25 (con filtro de fecha)                          
+┏━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━┳━━━━━━━━━┓
+┃ #  ┃ TF-IDF pasaje ┃ fecha      ┃ pos ┃ puntaje ┃ BM25 pasaje ┃ fecha      ┃ pos ┃ puntaje ┃
+┡━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━╇━━━━━━━━━┩
+│ 1  │ 754_67        │ 2022-06-27 │ 67  │ 0.510   │ 754_67      │ 2022-06-27 │ 67  │ 23.106  │
+│ 2  │ 2149_27       │ 2019-03-13 │ 27  │ 0.469   │ 2149_27     │ 2019-03-13 │ 27  │ 22.752  │
+│ 3  │ 1759_60       │ 2019-11-25 │ 60  │ 0.469   │ 2033_3      │ 2019-06-02 │ 3   │ 22.418  │
+│ 4  │ 1971_29       │ 2019-07-10 │ 29  │ 0.452   │ 745_5       │ 2022-07-06 │ 5   │ 21.487  │
+│ 5  │ 564_101       │ 2022-12-23 │ 101 │ 0.446   │ 657_54      │ 2022-09-27 │ 54  │ 21.397  │
+│ 6  │ 2033_3        │ 2019-06-02 │ 3   │ 0.431   │ 2045_9      │ 2019-05-26 │ 9   │ 21.252  │
+│ 7  │ 1569_23       │ 2020-04-15 │ 23  │ 0.423   │ 834_74      │ 2022-04-22 │ 74  │ 21.131  │
+│ 8  │ 1787_11       │ 2019-11-04 │ 11  │ 0.414   │ 1787_11     │ 2019-11-04 │ 11  │ 20.548  │
+│ 9  │ 662_58        │ 2022-09-20 │ 58  │ 0.414   │ 917_1       │ 2022-01-19 │ 1   │ 20.477  │
+│ 10 │ 834_74        │ 2022-04-22 │ 74  │ 0.410   │ 1527_0      │ 2020-06-05 │ 0   │ 20.147  │
+└────┴───────────────┴────────────┴─────┴─────────┴─────────────┴────────────┴─────┴─────────┘
+───────────────────────────────────────────────── Pasajes y entidades del top-10 de bm25_con_filtro ──────────────────────────────────────────────────
+754_67 · 2022-06-27 · PRESIDENTE ANDRÉS MANUEL LÓPEZ OBRADOR
+   Sí, yo creo que sí va a haber mañanera porque, aunque vamos a ir Tabasco, vamos a ir a iniciar la e…
+   ANDRÉS MANUEL LÓPEZ OBRADOR PER/regla · MANUEL LÓPEZ PER/modelo · Tabasco LOC/regla · Dos Bocas LOC/ambos · Dos Bocas LOC/ambos
+2149_27 · 2019-03-13 · PRESIDENTE ANDRÉS MANUEL LÓPEZ OBRADOR
+   el país y al sector energético, ahora tenemos que producir petróleo, tener materia prima para poder…
+   ANDRÉS MANUEL LÓPEZ OBRADOR PER/regla · MANUEL LÓPEZ PER/modelo · Dos Bocas LOC/ambos · 50 mil millones de pesos MONTO/regla · Sonda de Campeche 
+LOC/modelo · Campeche LOC/regla · Tabasco LOC/ambos · Veracruz LOC/ambos · Dos Bocas LOC/ambos · Dos Bocas LOC/ambos · Dos Bocas LOC/ambos
+2033_3 · 2019-06-02 · PRESIDENTE ANDRÉS MANUEL LÓPEZ OBRADOR
+   esta manera poder ofrecer mejores precios de estos combustibles a los consumidores. En esta primera…
+   ANDRÉS MANUEL LÓPEZ OBRADOR PER/regla · MAN PER/modelo · L LÓPEZ PER/modelo · Dos Bocas LOC/ambos · Tabasco LOC/ambos · Dos Bocas LOC/ambos · 
+Campeche LOC/ambos · Tabasco LOC/ambos · Dos Bocas LOC/ambos
+745_5 · 2022-07-06 · ANA ELIZABETH GARCÍA VILCHIS
+   la investidura, con el presidente de la República, el presidente de todos los mexicanos. Pero, buen…
+   ANA ELIZABETH ORG/modelo · ANA ELIZABETH GARCÍA VILCHIS PER/regla · República ORG/modelo · México LOC/ambos · Carlos Loret de Mola PER/modelo · Dos
+Bocas LOC/ambos · refinería Olmeca LOC/regla · Dos Bocas LOC/ambos · Paraíso LOC/ambos · Tabasco LOC/ambos · Carlos Loret de Mola PER/modelo · Latinus
+ORG/modelo · Dos Bocas LOC/ambos · W Radio ORG/modelo · Loret PER/modelo · Dos Bocas LOC/ambos · 2024 FECHA/regla · Loret PER/modelo
+657_54 · 2022-09-27 · PREGUNTA
+   Buenos días, señor presidente. Soy Yesenia Peralta, de Business Energy, Tabasco. Traigo una pregunt…
+   Yesenia Peralta PER/modelo · Business Energy ORG/modelo · Taba LOC/modelo · Tabasco LOC/regla · sco ORG/modelo · Dos Bocas LOC/ambos · Tabasco 
+LOC/ambos · Dos Bocas LOC/ambos · Dos Bocas LOC/ambos · Paraíso LOC/ambos · Tabasco LOC/ambos
+2045_9 · 2019-05-26 · PRESIDENTE ANDRÉS MANUEL LÓPEZ OBRADOR
+   California y lo mismo 72 aviones y helicópteros para altos funcionarios. Usaban los helicópteros ha…
+   ANDRÉS MANUEL LÓPEZ OBRADOR PER/regla · Pemex ORG/ambos · Pemex ORG/ambos · Dos Bocas LOC/ambos · Paraíso LOC/ambos · Tabasco LOC/ambos · Dos Bocas
+LOC/ambos · Campeche LOC/ambos · Tabasco LOC/ambos · Dos Bocas LOC/ambos
+834_74 · 2022-04-22 · INTERLOCUTORA
+   Gracias, presidente; gracias, secretario. Y ahora nada más a manera de retomar un poco lo que usted…
+   INTER ORG/modelo · LO PER/modelo · Veracruz LOC/ambos · Dos Bocas LOC/ambos · junio FECHA/regla · Grupo Cantón ORG/modelo · Dos Bocas LOC/ambos · 
+Tabasco LOC/ambos
+1787_11 · 2019-11-04 · VOZ DE HOMBRE
+   En un video que compartió en redes sociales, la secretaria de Energía, Rocío Nahle, mostró diferent…
+   Rocío Nahle PER/modelo · Dos Bocas LOC/ambos · Tabasco LOC/ambos
+917_1 · 2022-01-19 · ANA ELIZABETH GARCÍA VILCHIS
+   Con su permiso, señor presidente. Hoy traemos dos notas y una invitación. Una vez más, la refinería…
+   ANA ELIZABETH PER/modelo · ANA ELIZABETH GARCÍA VILCHIS PER/regla · VI PER/modelo · HIS ORG/modelo · Dos Bocas LOC/ambos · Dos Bocas LOC/ambos · 
+Tabasco LOC/ambos · Reforma ORG/modelo · Animal Político ORG/modelo · El Universal ORG/modelo · Dos Bocas LOC/ambos · Reforma ORG/modelo · Proceso 
+ORG/modelo · Diario de Yucatán ORG/modelo · Yucatán LOC/regla · Rocío Nahle PER/modelo
+1527_0 · 2020-06-05 · PRESIDENTE ANDRÉS MANUEL LÓPEZ OBRADOR
+   Amigas, amigos: Nos da mucho gusto estar aquí en esta construcción, en esta obra que se está llevan…
+   ANDRÉS MANUEL LÓPEZ OBRADOR PER/regla · MANUEL LÓPEZ PER/modelo · México LOC/ambos · Salina Cruz LOC/ambos · Ref ORG/modelo · Dos Bocas LOC/regla ·
+Dos Bocas ORG/modelo · Paraíso LOC/ambos · Tabasco LOC/ambos · Paraíso LOC/ambos · Tabasco LOC/ambos · Dos Bocas LOC/regla · Bocas LOC/modelo
+Color = tipo (PER magenta, ORG cian, LOC verde, FECHA amarillo, MONTO rojo); negrita = ambos, cursiva = solo modelo, normal = solo regla.
+─────────────────────────────────────────────────────── Tabla de respuesta con evidencia · Q3 ────────────────────────────────────────────────────────
+┏━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ campo               ┃ valor                    ┃ estado              ┃ pasaje  ┃ cita breve                                                        ┃
+┡━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ organizaciones      │ Reforma                  │ respaldado_en_texto │ 917_1   │ Desde hace tres años son cotidianos los ataques en contra de la   │
+│                     │                          │                     │         │ const…                                                            │
+│ organizaciones      │ Animal Político          │ respaldado_en_texto │ 917_1   │ Desde hace tres años son cotidianos los ataques en contra de la   │
+│                     │                          │                     │         │ const…                                                            │
+│ organizaciones      │ Dos Bocas                │ respaldado_en_texto │ 1527_0  │ Evaluación de trabajos de la Refinería Dos Bocas, desde Paraíso,  │
+│                     │                          │                     │         │ Taba…                                                             │
+│ organizaciones      │ Pemex                    │ ambiguo             │ 2045_9  │ Entonces, así como se está apoyando a Pemex estamos calculando y  │
+│                     │                          │                     │         │ esa …                                                             │
+│ responsables        │ Rocío Nahle              │ respaldado_en_texto │ 1787_11 │ En un video que compartió en redes sociales, la secretaria de     │
+│                     │                          │                     │         │ Energía…                                                          │
+│ responsables        │ Loret                    │ respaldado_en_texto │ 745_5   │ El presentador principal de la plataforma Latinus publicó en su   │
+│                     │                          │                     │         │ cuent…                                                            │
+│ responsables        │ Carlos Loret de Mola     │ ambiguo             │ 745_5   │ Carlos Loret de Mola cayó en la chapuza de publicar fotografías   │
+│                     │                          │                     │         │ como …                                                            │
+│ montos de inversión │ 50 mil millones de pesos │ respaldado_en_texto │ 2149_27 │ Dos Bocas. Y está en el presupuesto de este año, 50 mil millones  │
+│                     │                          │                     │         │ de p…                                                             │
+└─────────────────────┴──────────────────────────┴─────────────────────┴─────────┴───────────────────────────────────────────────────────────────────┘
+«respaldado» significa que el texto lo afirma cerca del valor, no que sea verdad. Tabla completa: salida/tablas_respuesta/Q3.md
+
+Carga de artefactos: 0.2 s · total: 0.2 s

@@ -59,7 +59,7 @@ reporte:
 laminas:
 	$(PY) scripts/12_laminas.py
 demo:
-	$(PY) scripts/13_demo.py $(if $(Q),--q $(Q),) $(if $(CONSULTA),--consulta "$(CONSULTA)",)
+	$(PY) scripts/13_demo.py $(if $(Q),--q $(Q),) $(if $(CONSULTA),--consulta "$(CONSULTA)",) $(if $(DESDE),--desde $(DESDE),) $(if $(HASTA),--hasta $(HASTA),)
 
 test:
 	uv run pytest -q
