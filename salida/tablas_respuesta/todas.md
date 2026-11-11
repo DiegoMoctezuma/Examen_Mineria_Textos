@@ -29,7 +29,9 @@ Sin evidencia en el top-10.
 
 ## Valoración del alumno
 
-valoracion: [VALIDAR] pendiente del alumno
+valoracion:
+
+> "Tren Maya" debe ser un lugar en vez catalogarlo como dependencia o empresa. Tiene un problema con las NER ya que separó "Grupo ICA" e "ICA". "Cuxtal" no tiene relacón con dependencia o empresa. Los estados que salen con el tren maya pueden ser catalogados como lugar donde pasa el tren, Sin evidencia en el top-10 puede deberse a los juicios donde no se encontró nada referente
 
 
 ---
@@ -86,7 +88,9 @@ Top-10 de `bm25_con_filtro` con filtro de fecha (2020-12-01 a 2021-12-31). Exclu
 
 ## Valoración del alumno
 
-valoracion: [VALIDAR] pendiente del alumno
+valoracion:
+
+> La tabla es creíble por que identifica bien los nombres propios de los funcionarios, fechas, dosis y farmacéuticas. Para "Sputnik V" toma bien la regla del gold donde se debe poner los nombres de las vacunas como organizaciones.  Falta devolver fechas sobre aplicaciones de las vacunas ya que solo están las llegadas al país. Es correcto catalogar "mil 200 vacunas" como dosis aunque no tenga la palabra explicita.
 
 
 ---
@@ -129,7 +133,9 @@ Top-10 de `bm25_con_filtro` con filtro de fecha (2019-01-01 a 2022-12-31). Exclu
 
 ## Valoración del alumno
 
-valoracion: [VALIDAR] pendiente del alumno
+valoracion:
+
+> Es poco creíble la tabla. Para organizaciones toma nombres de noticieros ya que se toma mucho el tema de "desinformación", solo "Pemex" es una organización relacionada con la refinería. Toma a "Carlos Loret de Mola" como responsable pero es un periodista. Solo hay una cifra de montos de inversión y es correcta, los faltantes se pueden deber a la falta de empresas contratistas reales. Hay problemas con NER ya que obtuvo "Ref" como organización.
 
 
 ---
@@ -175,7 +181,9 @@ Top-10 de `bm25_con_filtro` con filtro de fecha (2019-01-01 a 2022-06-30). Exclu
 
 ## Valoración del alumno
 
-valoracion: [VALIDAR] pendiente del alumno
+valoracion:
+
+> La tabla es poco creíble. Faltan dependencias constructoras , hay ruido como "Colegio Militar", "Mitre" o estados, estosno  deben pertenecer a esta categoría. Se hablan de otros aeropuertos y eso está bien ya que están relacionados pero "Felipe Ángeles" debería tomarse completo con aeropuerto antes del nombre para que sea el lugar. De costos solo hay uno "100 mil millones de pesos" puede deberse a que faltan pasajes donde se hable de las dependencias constructoras.
 
 
 ---
@@ -219,7 +227,9 @@ Top-10 de `bm25_con_filtro` con filtro de fecha (2019-01-01 a 2024-12-31). Exclu
 
 ## Valoración del alumno
 
-valoracion: [VALIDAR] pendiente del alumno
+valoracion:
+
+> La tabla es poco creíble. No menciona ninguna secretaría operadora, menciona dos organizaciones ficticias ("Asociación Campesina Independiente Emiliano Zapata", "Organización Campesina Independiente Emiliano") y la "SEDENA" no la menciona como operadora. No hay ningún problema con los estados, todos están relacionados con la query.  El monto por beneficiario es de "cinco mil pesos" y solo sale una vez, las otras cantidades hacen referencia a la inversión en el programa.
 
 
 ---
@@ -268,7 +278,9 @@ Top-10 de `bm25_con_filtro` con filtro de fecha (2018-12-01 a 2019-06-30). Exclu
 
 ## Valoración del alumno
 
-valoracion: [VALIDAR] pendiente del alumno
+valoracion:
+
+> La tabla es poco creíble. Se menciona "Michoacán" como lugar pero no se relaciona nada con la consulta ya que solo se pregunta por el presupuesto del estado, falta mencionar el monto del presupuesto y para que lo ocupan. Hay problemas con NER ya que pone  "Interven" como organización, la única organización es "Pemex". Solo "65 mil millones de pesos" y "56 mil millones de pesos" son las perdidas, las otras cantidades son ahorros y presupuesto para medicina, también se menciona la cantidad en el pasaje como "mil millones de pesos" sin más contexto.
 
 
 ---
@@ -315,7 +327,9 @@ Top-10 de `bm25_con_filtro` con filtro de fecha (2018-12-01 a 2024-12-31). Exclu
 
 ## Valoración del alumno
 
-valoracion: [VALIDAR] pendiente del alumno
+valoracion:
+
+> La tabla es algor creíble. Se menciona el monto real bimestral pero también toma el monto anterior al cambio "mil 160 pesos", aparece el presupuesto en millones de pesos y otro monto referente a una beca "mil 600 pesos". Hay un problema con NER ya que "Issste" lo separó en "Is". Las fechas son correctas y hablan sobre los aumentos.
 
 
 ---
@@ -350,7 +364,9 @@ Sin evidencia en el top-10.
 
 ## Valoración del alumno
 
-valoracion: [VALIDAR] pendiente del alumno
+valoracion:
+
+> La tabla es parcialmente creíble. Se toman algunos porcentajes que no hablan del salario mínimo como "50 por ciento" que se refiere al tiempo y "75 por ciento" que se refiere al poder de compra del salario. Para montos se menciona "tres mil 600 pesos" pero habla de un programa no del salario. Hace falta tener más montos diarios.
 
 
 ---
@@ -406,7 +422,9 @@ Top-10 de `bm25_con_filtro` con filtro de fecha (2019-01-01 a 2023-12-31). Exclu
 
 ## Valoración del alumno
 
-valoracion: [VALIDAR] pendiente del alumno
+valoracion:
+
+> La tabla es parcialmente creíble. Hay muchas repeticiones para "El banco del bienestar" en plural, singular y en un error con "de" en vez de "del". "Azteca" no debe de pertenecer ya que es otro banco y solo se usa para comparar el número de sucursales. Sucursales y estados todos son correctos y no hay ruido de otros temas. Para montos solo hay "600 mil millones de pesos" falta tener más información sobre montos de inversión, construcción, etc.
 
 
 ---
@@ -462,4 +480,6 @@ Top-10 de `bm25_con_filtro` con filtro de fecha (2020-01-01 a 2024-06-30). Exclu
 
 ## Valoración del alumno
 
-valoracion: [VALIDAR] pendiente del alumno
+valoracion:
+
+> La tabla es parcialmente creíble. Hay problemas con el NER ya que pone "eánico" de "oceánico" y "pec", "huantepec" de "Tehuantepec". Faltan empresas constructuras que se encargan del ferrocarril ya que solo hay dependencias, también falta fechas de inauguración, solo hay fechas de información. Hace falta más montos de construcción debido a la falta de mención de estas mismas empresas.

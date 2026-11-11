@@ -49,8 +49,8 @@
     "avisos": []
   },
   "10_tablas": {
-    "fecha": "2026-11-09T21:20:01",
-    "commit": "e03677e",
+    "fecha": "2026-11-11T13:19:44",
+    "commit": "24a65bb",
     "arbol_limpio": true,
     "entradas": {
       "salida/entidades_enriquecidas.csv": "128df0324aea5dfa0110999016ba0e2bf861041233a67b4245dbf1157b979e05",
@@ -64,18 +64,18 @@
       "salida/10_evidencias.csv": "a280d483f994360ad377581ff7b214921b3f9de20c13d4f9de9ff1bbb5e78f72",
       "salida/10_exclusiones.csv": "a4b0d62bee4235e4b986604fd1472e9630af1e70176a8d68d937109b6bee2361",
       "salida/10_hashes_tablas.json": "4f2e1d23e7c22b5e376baad64bcd22f62224a8f7640f678742f782ccc01fe10a",
-      "salida/tablas_respuesta/Q1.md": "93bcb214f54656893ef168e5017e0b12c7da1761d33137e71dec63a633ee2a25",
-      "salida/tablas_respuesta/Q2.md": "e6f87f22bccff01680894cdbb30812dc18c5742a9470e2c0ed386aa26e26dee6",
-      "salida/tablas_respuesta/Q3.md": "a46a7dea0c51d16e3d3c0465f8ec410f1c745c15f3cfd5e6374e4fa4438da249",
-      "salida/tablas_respuesta/Q4.md": "7669867a9ff6201f60f418883554e8bd87ffd233b1b902a970ad178178210bc0",
-      "salida/tablas_respuesta/Q5.md": "11f370ca4cc0ecab20bf2f26f7619ada1d901c5c06f8336fae7dc995bea54e8c",
-      "salida/tablas_respuesta/Q6.md": "867499cdeec2fffc50b22dfca7a694fc41186e0374eb9922143dc7dd5341d6e4",
-      "salida/tablas_respuesta/Q7.md": "77e97896e697ffbda66673b39897626a85f722bc7412f0b95e2a53430448d589",
-      "salida/tablas_respuesta/Q8.md": "e0d42ab59560a83f36b44f124c125b9efce2fa542d4783676fe443b7138be9ed",
-      "salida/tablas_respuesta/Q9.md": "9c05a6a1d3ddac3b7d7d616f2ef03d7a7658c4cd256df2cc4f498691f309f177",
-      "salida/tablas_respuesta/Q10.md": "38f005fdb4e5d545c89c56f7bb1a66f010570a4608fefcca22a15bf93f2cf54b",
-      "salida/tablas_respuesta/todas.md": "a6be5585557f3fe814a1b9dd9a5283389c18378da6e3da1de2621bd3447d135f"
+      "salida/tablas_respuesta/Q1.md": "4434d512522f4df9bca5fde051dfca450a5f78c2ab5929b980edc8d9b236ec9d",
+      "salida/tablas_respuesta/Q2.md": "624faf385e2bcf565d5cbdc9e640519cb4069fc21bb64672e10171e089a38ebb",
+      "salida/tablas_respuesta/Q3.md": "9a72b3be0a301c39a26d65fc77caa952a2281cf675823cebcdcc01208236128c",
+      "salida/tablas_respuesta/Q4.md": "71576131402cd3caf86b2960bdf351e97f2d76baa233d7025202a8e846dbaae0",
+      "salida/tablas_respuesta/Q5.md": "0616b3f83540277fe81e9efef1b3848258abcb9b4a0165672d8ea27e846d196c",
+      "salida/tablas_respuesta/Q6.md": "b0d2941c510148ab88777b330a8c63237f28e92afb2b904f13383d8d706f6eb2",
+      "salida/tablas_respuesta/Q7.md": "410ce183322c967f0a44c6de5710c03afb88f123b3f73cd33b66f06b9cef2db5",
+      "salida/tablas_respuesta/Q8.md": "741b57b9639646a5ac77f07da9828e30d8826edeef8bb3fadbd11871f860887e",
+      "salida/tablas_respuesta/Q9.md": "b81457fd3093cb9c90d355ce137572aba3d11b7c1d0fcf9d668839eeb05fdcee",
+      "salida/tablas_respuesta/Q10.md": "1be99e7900cb749a0687dcfdb88f79b0dabc9f2c3f8c24bdea8d5626d980c9d9",
+      "salida/tablas_respuesta/todas.md": "00917e231c64340a5bd7ae4874e94e3e991a358ae212c3f1d8d1839b1dbe267b"
     },
-    "valoraciones_pendientes": 10
+    "valoraciones_pendientes": 0
   }
 }
