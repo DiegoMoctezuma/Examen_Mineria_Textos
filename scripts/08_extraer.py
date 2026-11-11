@@ -30,10 +30,13 @@ RUTA_MODELO_NER = config.DIR_DATA / "modelo_ner.json"
 
 
 def reglas_congeladas_vigentes() -> bool:
-    """El código de reglas y `config/` coinciden con la etiqueta `reglas-congeladas`."""
+    """Ningún archivo que existía en `reglas-congeladas` (reglas, normalización, `config/`) se
+    modificó, renombró ni borró. Los archivos agregados después (p. ej. la configuración de las
+    tablas de H8) no forman parte de lo congelado y no cuentan."""
     if not manifiesto.git("tag", "-l", "reglas-congeladas"):
         return False
-    r = manifiesto.git("diff", "--name-only", "reglas-congeladas", "--", "src/mtx/reglas.py",
+    r = manifiesto.git("diff", "--name-only", "--diff-filter=MDRT", "reglas-congeladas", "--",
+                       "src/mtx/reglas.py",
                        "src/mtx/normalizacion.py", "config/")
     return r == ""
 

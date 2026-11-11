@@ -1,8 +1,8 @@
 {
   "08_extraer": {
-    "fecha": "2026-11-09T21:02:01",
-    "commit": "e1c5102",
-    "arbol_limpio": true,
+    "fecha": "2026-11-11T13:41:23",
+    "commit": "06e89ba",
+    "arbol_limpio": false,
     "entradas": {
       "data/pasajes.parquet": "766859a1ab322a449b6ce3ef9e25d15b95f275d140804f3935db7c1de632af0d",
       "salida/ranking.csv": "37ffa3e4367faf8d48f069afd3570ea44a44b4016a33cd1e9da8d92a88ec7f10",
