@@ -24,6 +24,8 @@ disponible, el PDF se imprime con Chrome sin ventana desde el HTML de pandoc (ru
 | Linux | `curl -LsSf https://astral.sh/uv/install.sh \| sh` y `sudo apt install pandoc` |
 | Windows | `winget install astral-sh.uv` y `winget install JohnMacFarlane.Pandoc`; sin `make`, correr `uv run python scripts/NN_*.py` en el orden de la sección 5 |
 
+Para regenerar las láminas (`make laminas`): Node 20 y `npm install` dentro de `laminas/deck/`.
+
 `requirements.txt` se exporta de `uv.lock` (`uv export --no-dev --format requirements-txt`) para
 quien use `pip install -r requirements.txt`.
 

@@ -1,0 +1,326 @@
+{
+ "corpus": {
+  "discursos": 2294,
+  "anio_ini": "2018",
+  "anio_fin": "2024",
+  "palabras_mediana": 8502,
+  "acotaciones": 7338,
+  "duplicados": 5,
+  "pasajes": 127739,
+  "pct_reporteros": 15.53
+ },
+ "humano": {
+  "juicios": 176,
+  "gold_pasajes": 20,
+  "gold_entidades": 163
+ },
+ "consultas": [
+  {
+   "id": "Q1",
+   "nombre": "Tren Maya",
+   "icono": "q1",
+   "color": "02614C",
+   "desde": "2020",
+   "hasta": "2023",
+   "ap_tfidf": 0.025,
+   "ap_bm25": 0.5428,
+   "respaldados": 5,
+   "ambiguos": 4,
+   "sin_evidencia": [
+    "montos"
+   ]
+  },
+  {
+   "id": "Q2",
+   "nombre": "Vacunas COVID-19",
+   "icono": "q2",
+   "color": "012B60",
+   "desde": "2020",
+   "hasta": "2021",
+   "ap_tfidf": 0.0667,
+   "ap_bm25": 0.3806,
+   "respaldados": 21,
+   "ambiguos": 3,
+   "sin_evidencia": []
+  },
+  {
+   "id": "Q3",
+   "nombre": "Dos Bocas",
+   "icono": "q3",
+   "color": "9E0C01",
+   "desde": "2019",
+   "hasta": "2022",
+   "ap_tfidf": 0.2381,
+   "ap_bm25": 0.2952,
+   "respaldados": 10,
+   "ambiguos": 9,
+   "sin_evidencia": []
+  },
+  {
+   "id": "Q4",
+   "nombre": "AIFA",
+   "icono": "q4",
+   "color": "011E51",
+   "desde": "2019",
+   "hasta": "2022",
+   "ap_tfidf": 0.4417,
+   "ap_bm25": 0.8929,
+   "respaldados": 20,
+   "ambiguos": 8,
+   "sin_evidencia": []
+  },
+  {
+   "id": "Q5",
+   "nombre": "Sembrando Vida",
+   "icono": "q5",
+   "color": "024B1B",
+   "desde": "2019",
+   "hasta": "2024",
+   "ap_tfidf": 0.2316,
+   "ap_bm25": 0.5636,
+   "respaldados": 9,
+   "ambiguos": 11,
+   "sin_evidencia": []
+  },
+  {
+   "id": "Q6",
+   "nombre": "Huachicol",
+   "icono": "q6",
+   "color": "A3010F",
+   "desde": "2018",
+   "hasta": "2019",
+   "ap_tfidf": 0.3039,
+   "ap_bm25": 0.2887,
+   "respaldados": 9,
+   "ambiguos": 7,
+   "sin_evidencia": []
+  },
+  {
+   "id": "Q7",
+   "nombre": "Pensión adultos mayores",
+   "icono": "q7",
+   "color": "5B0454",
+   "desde": "2018",
+   "hasta": "2024",
+   "ap_tfidf": 0.3952,
+   "ap_bm25": 0.4508,
+   "respaldados": 12,
+   "ambiguos": 9,
+   "sin_evidencia": []
+  },
+  {
+   "id": "Q8",
+   "nombre": "Salario mínimo",
+   "icono": "q8",
+   "color": "013147",
+   "desde": "2018",
+   "hasta": "2024",
+   "ap_tfidf": 0.7044,
+   "ap_bm25": 0.4881,
+   "respaldados": 6,
+   "ambiguos": 2,
+   "sin_evidencia": [
+    "organizaciones empresariales"
+   ]
+  },
+  {
+   "id": "Q9",
+   "nombre": "Banco del Bienestar",
+   "icono": "q9",
+   "color": "780526",
+   "desde": "2019",
+   "hasta": "2023",
+   "ap_tfidf": 0.4391,
+   "ap_bm25": 0.453,
+   "respaldados": 22,
+   "ambiguos": 2,
+   "sin_evidencia": []
+  },
+  {
+   "id": "Q10",
+   "nombre": "Tren Interoceánico",
+   "icono": "q10",
+   "color": "02204E",
+   "desde": "2020",
+   "hasta": "2024",
+   "ap_tfidf": 0.1032,
+   "ap_bm25": 0.4845,
+   "respaldados": 35,
+   "ambiguos": 23,
+   "sin_evidencia": []
+  }
+ ],
+ "postings": [
+  {
+   "termino": "tren",
+   "raiz": "tren",
+   "df": 5261,
+   "idf": 3.1896
+  },
+  {
+   "termino": "vacuna",
+   "raiz": "vacun",
+   "df": 4552,
+   "idf": 3.3343
+  },
+  {
+   "termino": "refinería",
+   "raiz": "refin",
+   "df": 2069,
+   "idf": 4.1227
+  },
+  {
+   "termino": "huachicol",
+   "raiz": "huachicol",
+   "df": 714,
+   "idf": 5.1862
+  }
+ ],
+ "map": {
+  "bm25_con_filtro": 0.484,
+  "bm25_sin_filtro": 0.4685,
+  "tfidf_con_filtro": 0.2949,
+  "tfidf_sin_filtro": 0.2866
+ },
+ "ie": {
+  "combinado": {
+   "FECHA": {
+    "f1": 0.3636,
+    "p": 0.4,
+    "r": 0.3333,
+    "gold": 6
+   },
+   "LOC": {
+    "f1": 0.8543,
+    "p": 0.8416,
+    "r": 0.8673,
+    "gold": 98
+   },
+   "MONTO": {
+    "f1": 1.0,
+    "p": 1.0,
+    "r": 1.0,
+    "gold": 3
+   },
+   "ORG": {
+    "f1": 0.725,
+    "p": 0.6744,
+    "r": 0.7838,
+    "gold": 37
+   },
+   "PER": {
+    "f1": 0.6786,
+    "p": 0.5135,
+    "r": 1.0,
+    "gold": 19
+   },
+   "TODOS": {
+    "f1": 0.7841,
+    "p": 0.7302,
+    "r": 0.8466,
+    "gold": 163
+   }
+  },
+  "modelo": {
+   "FECHA": {
+    "f1": 0.0,
+    "p": 0.0,
+    "r": 0.0,
+    "gold": 6
+   },
+   "LOC": {
+    "f1": 0.7845,
+    "p": 0.8554,
+    "r": 0.7245,
+    "gold": 98
+   },
+   "MONTO": {
+    "f1": 0.0,
+    "p": 0.0,
+    "r": 0.0,
+    "gold": 3
+   },
+   "ORG": {
+    "f1": 0.6389,
+    "p": 0.6571,
+    "r": 0.6216,
+    "gold": 37
+   },
+   "PER": {
+    "f1": 0.2381,
+    "p": 0.2174,
+    "r": 0.2632,
+    "gold": 19
+   },
+   "TODOS": {
+    "f1": 0.6513,
+    "p": 0.7021,
+    "r": 0.6074,
+    "gold": 163
+   }
+  },
+  "regla": {
+   "FECHA": {
+    "f1": 0.3636,
+    "p": 0.4,
+    "r": 0.3333,
+    "gold": 6
+   },
+   "LOC": {
+    "f1": 0.7931,
+    "p": 0.9079,
+    "r": 0.7041,
+    "gold": 98
+   },
+   "MONTO": {
+    "f1": 1.0,
+    "p": 1.0,
+    "r": 1.0,
+    "gold": 3
+   },
+   "ORG": {
+    "f1": 0.7187,
+    "p": 0.8519,
+    "r": 0.6216,
+    "gold": 37
+   },
+   "PER": {
+    "f1": 0.8824,
+    "p": 1.0,
+    "r": 0.7895,
+    "gold": 19
+   },
+   "TODOS": {
+    "f1": 0.7751,
+    "p": 0.8889,
+    "r": 0.6871,
+    "gold": 163
+   }
+  }
+ },
+ "fusion": {
+  "modelo": 348,
+  "ambos": 312,
+  "regla": 240
+ },
+ "errores": [
+  {
+   "pasaje": "1122_3",
+   "tipo": "PER",
+   "gold": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "pred": "MAN"
+  },
+  {
+   "pasaje": "1188_80",
+   "tipo": "ORG",
+   "gold": "Pfizer-BioNTech",
+   "pred": "Pfizer"
+  },
+  {
+   "pasaje": "326_25",
+   "tipo": "ORG",
+   "gold": "Tren Maya",
+   "pred": "Tren Maya"
+  }
+ ]
+}

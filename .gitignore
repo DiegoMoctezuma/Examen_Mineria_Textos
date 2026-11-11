@@ -33,3 +33,5 @@ reporte/*.toc
 *.swp
 config/*.bak
 config/*.tmp
+laminas/~$*
+laminas/_vista/

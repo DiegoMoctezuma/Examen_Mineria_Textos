@@ -1,69 +1,62 @@
 # Guion de la presentación (8 minutos)
 
-Reparto: unos 5 minutos de exposición (1 por lámina), 2 de demo y 1 de margen. Es un borrador:
-cámbialo a tus palabras. Las cifras salen de `salida/` y coinciden con el reporte.
+Unos 5 min 40 s de exposición en 12 diapositivas y 2 min de demo (7 min 40 s según las notas). Las notas de cada diapositiva de
+`laminas/laminas.pptx` son este mismo texto: `make laminas` lo copia aquí desde el deck para que no
+se desincronicen. Es un borrador: cámbialo a tus palabras (en `laminas/deck/deck.js`, `addNotes`).
 
 Tiempo medido: PENDIENTE (ensayar con cronómetro y escribir aquí m:ss, por ejemplo 7:40)
 
-## Lámina 1 · Problema, corpus y pipeline (≈1 min)
+<!-- notas:inicio -->
 
-- "Trabajé con 2,294 versiones estenográficas de las mañaneras, de 2018 a 2024. Cada discurso dura
-  una o dos horas, así que buscar el discurso completo no sirve: la unidad es el pasaje."
-- Señala el diagrama: corpus, pasajes, índice, dos modelos de ranking, juicios humanos y MAP;
-  después reglas más NER, gold humano y F1, y al final tablas de respuesta.
-- "Los dos bloques naranjas son trabajo humano: 176 juicios de relevancia y un gold de 20
-  pasajes. Lo anoté yo a mano en una app local, sin ver lo que predecía el sistema."
-- Transición: "Primero cómo partí el texto."
+## 1. Recuperación y extracción de información en las mañaneras
 
-## Lámina 2 · Segmentación e índice (≈1 min)
+Presentación (10 s). Buenas tardes. Presento mi sistema de recuperación y extracción de información sobre las versiones estenográficas de las mañaneras.
 
-- "Cada intervención se parte en ventanas de 200 palabras con paso 150; quedaron 127,739 pasajes."
-- "El nombre de quien habla lo pego al inicio del pasaje para poder extraer personas, pero no lo
-  indexo: si no, presidente y secretario dominarían todos los rankings."
-- "Costo: el 65 % de las intervenciones de reporteros son cortas y se pierden."
-- Señala la tabla: "huachicol aparece en 714 pasajes, 0.56 %: su idf es el más alto, 5.19; tren
-  aparece en 5,261 y vale 3.19."
-- Transición: "Con ese índice comparé TF-IDF y BM25."
+## 2. Seis años de mañaneras en 127,739 pasajes
 
-## Lámina 3 · Recuperación (≈1 min)
+Corpus (40 s). Son 2,294 versiones estenográficas de 2018 a 2024. Cada discurso dura una o dos horas, con una mediana de 8,500 palabras, así que buscar el discurso completo no sirve. Quité 7,338 acotaciones como inaudible o inicia video y 5 duplicados. Cada intervención se parte en ventanas de 200 palabras con paso 150: quedan 127,739 pasajes.
 
-- "BM25 con filtro de fecha es el mejor: MAP 0.484 frente a 0.295 de TF-IDF, y gana en 8 de 10."
-- Señala Q1 en la figura: "TF-IDF casi no encuentra nada en Tren Maya porque el stemmer convierte
-  Maya y mayo en la misma raíz."
-- "La consulta más difícil es Dos Bocas: el corpus también la llama refinería Olmeca y ese nombre
-  no está en la consulta. Ahí unos embeddings ayudarían."
-- Transición: "Sobre los 10 pasajes de BM25 extraje entidades."
+## 3. Diez preguntas sobre obras y programas
 
-## Lámina 4 · Extracción (≈1 min)
+Consultas (20 s). Las ocho primeras vienen del kit del profesor; la 9 y la 10 las elegí yo: Banco del Bienestar y Tren Interoceánico. Cada una tiene una ventana de fechas y una pregunta: quién participa, dónde, cuánto, cuándo.
 
-- "Combino reglas, que son regex de fechas y montos más gazetteers, con un BERT en español. Las
-  reglas las congelé con una etiqueta de git antes de anotar el gold, para no ajustarlas viendo
-  el resultado."
-- "F1 total: reglas 0.78, modelo 0.65, combinado 0.78; la combinación sube el recall a 0.85."
-- Señala los errores: "El modelo parte los nombres escritos en mayúsculas: de ANDRÉS MANUEL
-  LÓPEZ OBRADOR predice MAN. También parte Pfizer-BioNTech y confunde el Tren Maya como
-  organización."
-- Transición: "Con esas entidades armo respuestas con evidencia; lo muestro en vivo."
+## 4. Del discurso a la respuesta
 
-## Lámina 5 · Demo y limitaciones (≈1 min + demo)
+Pipeline (30 s). Corpus, pasajes, índice invertido, ranking con dos modelos, extracción de entidades y tablas de respuesta. Las pastillas son trabajo humano: juzgué 176 pares de relevancia, anoté un gold de 20 pasajes sin ver predicciones y valoré las diez tablas.
 
-- "Respaldado quiere decir que el texto lo afirma junto al valor, no que sea verdad."
-- Limitaciones: gold pequeño, NER elegido sin conjunto de selección, patrones laxos.
+## 5. Huachicol es el término más discriminante
 
-## Demo (2 min)
+Índice (30 s). Normalizo, quito stopwords con una lista ampliada para la estenográfica y aplico stemming. Huachicol aparece en 714 pasajes, 0.56 %: su idf es el más alto, 5.19. Tren aparece en más de 5 mil pasajes y vale 3.19. La marca del interlocutor no se indexa para que presidente o secretario no dominen los rankings.
 
-Comando: `make demo Q=Q3` (tarda menos de 1 s con los artefactos guardados).
+## 6. BM25 con filtro de fecha recupera mejor
 
-1. Panel de arriba: consulta, ventana de fechas y pregunta.
-2. Tabla lado a lado: "a la izquierda TF-IDF, a la derecha BM25; en Q3 comparten 5 de los 10 pasajes".
-3. Pasajes con entidades: "verde LOC, cian ORG; negrita es que reglas y modelo coinciden. Aquí
-   se ve el error de mayúsculas: MAN como persona."
-4. Tabla de respuesta: "respaldados en verde, ambiguos en amarillo, con el pasaje de la cita".
+IR (40 s). BM25 con filtro es el mejor: MAP 0.484 frente a 0.295 de TF-IDF con filtro. La explicación probable es que BM25 satura la frecuencia y normaliza por longitud. Los juicios los hice viendo solo el tema, sin saber qué modelo recuperó cada pasaje.
 
-Si el profesor pide una consulta libre: `make demo CONSULTA="vacunas Pfizer" DESDE=2021-01-01
-HASTA=2021-12-31`. Avisa que corre el NER en caliente (20 a 40 s) y que no tiene MAP ni F1.
-Contingencia, solo si falla la máquina: `laminas/demo_Q3_salida_guardada.txt`, anunciándolo como
-salida guardada.
+## 7. BM25 gana en 8 de 10 consultas
+
+AP por consulta (40 s). BM25 gana en 8 de 10. En Tren Maya TF-IDF casi no encuentra nada (AP 0.025) porque el stemmer convierte Maya y mayo en la misma raíz. La más difícil es Dos Bocas: el corpus también la llama refinería Olmeca y ese nombre no está en la consulta; ahí ayudarían embeddings densos.
+
+## 8. Reglas y modelo juntos: F1 0.78
+
+Extracción (50 s). Combino reglas (regex de fechas y montos, gazetteers de 152 organizaciones y 102 lugares, y el nombre de la marca de interlocutor) con un BERT en español. Las reglas las congelé con una etiqueta de git antes de anotar el gold. F1 total: reglas 0.78, modelo 0.65, combinado 0.78; combinar sube el recall de 0.69 a 0.85. El modelo no detecta fechas ni montos.
+
+## 9. El modelo parte nombres escritos en mayúsculas
+
+Errores (30 s). El peor resultado es PER del modelo (F1 0.24): en la marca, escrita en mayúsculas, el modelo parte los nombres; de ANDRÉS MANUEL LÓPEZ OBRADOR predice MAN. También parte Pfizer-BioNTech y marca el Tren Maya como organización cuando la convención lo trata como lugar. No afirmo que la causa sean las mayúsculas: sin el experimento de capitalización solo sé dónde ocurre.
+
+## 10. Cada respuesta cita el pasaje que la respalda
+
+Respuestas (30 s). Para cada pregunta, un valor es respaldado si su oración contiene la relación que se pide; si no, queda ambiguo con su cita. Hay 149 valores respaldados en total. Dos campos quedaron sin evidencia en el top-10. Respaldado significa que el texto lo dice, no que sea verdad. Las diez tablas tienen mi valoración en el reporte.
+
+## 11. Demo en vivo
+
+Demo (2 min). Comando: make demo Q=Q3. 1) Panel con consulta, ventana y pregunta. 2) TF-IDF a la izquierda y BM25 a la derecha; en Q3 comparten 5 de 10 pasajes. 3) Entidades por pasaje: color por tipo; negrita cuando reglas y modelo coinciden; aquí se ve MAN como persona. 4) Tabla de respuesta: verde respaldado, amarillo ambiguo. Consulta libre: make demo CONSULTA="..." DESDE=... HASTA=... (NER en caliente, 20 a 40 s, sin métricas). Respaldo si falla la máquina: laminas/demo_Q3_salida_guardada.txt, anunciado como salida guardada.
+
+## 12. Lo que falta para confiar más
+
+Cierre (20 s). El gold es pequeño, así que las cifras de FECHA y MONTO son poco estables; el modelo falla en nombres en mayúsculas; y elegí el NER por criterio técnico sin un conjunto para comparar modelos. Todo se reproduce desde un clon limpio en unos dos minutos. Gracias.
+
+<!-- notas:fin -->
 
 ## Preguntas probables (respuestas cortas)
 

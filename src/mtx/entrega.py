@@ -316,14 +316,19 @@ def c12_laminas(cx: Contexto) -> Resultado:
     from pptx import Presentation
     det = []
     n = len(Presentation(str(pptx)).slides)
-    if not 1 <= n <= 5:
+    dec = cx.raiz / "docs" / "decisiones.md"
+    excepcion = dec.exists() and "Más de 5 láminas por decisión del alumno" in dec.read_text(
+        encoding="utf-8")
+    if not 1 <= n <= 5 and not excepcion:
         det.append(f"{n} láminas")
     m = RE_TIEMPO.search(guion.read_text(encoding="utf-8"))
     if not m:
         det.append("el guion no registra «Tiempo medido: m:ss»")
     elif int(m.group(1)) * 60 + int(m.group(2)) > 480:
         det.append(f"tiempo medido {m.group(1)}:{m.group(2)} > 8:00")
-    return Resultado(12, titulo, FALLA if det else OK, det or [f"{n} láminas"])
+    nota = f"{n} láminas" + (" (más de 5 por decisión del alumno, docs/decisiones.md)"
+                             if n > 5 and excepcion else "")
+    return Resultado(12, titulo, FALLA if det else OK, det or [nota])
 
 
 def c13_pruebas(cx: Contexto) -> Resultado:
