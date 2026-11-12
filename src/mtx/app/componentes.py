@@ -556,14 +556,63 @@ def estados_artefactos(r: Rutas | None = None, hash_pasajes_actual: str | None =
             fila("Gold (anotaciones/gold_entidades.csv)", ERROR, "; ".join(v.errores[:3]),
                  "Pestaña Gold")
 
-    for nombre, ruta, sig in [
-        ("Resultados IR (resultados_ir.csv)", config.RAIZ / "resultados_ir.csv",
-         "H4: make evaluar-ir"),
-        ("Caché NER (data/cache_ner/)", config.DIR_DATA / "cache_ner", "H5: make ner"),
-    ]:
-        if not ruta.exists():
-            fila(nombre, PENDIENTE_TECNICO, "Aún no existe", sig)
-        else:
-            fila(nombre, PENDIENTE_TECNICO, "Existe, pero su validador aún no está en la app",
-                 sig)
+    _estado_resultados_ir(fila)
+    _estado_cache_ner(fila, pasajes)
     return out
+
+
+def _sha256(ruta: Path) -> str:
+    return hashlib.sha256(Path(ruta).read_bytes()).hexdigest()
+
+
+def _estado_resultados_ir(fila) -> None:
+    """`resultados_ir.csv` en la raíz: validador de PRD §6.6 y copia idéntica en `salida/`."""
+    from mtx import consultas as _consultas
+    from mtx import evaluacion as _evaluacion
+    nombre, sig = "Resultados IR (resultados_ir.csv)", "make evaluar-ir"
+    ruta = config.RAIZ / "resultados_ir.csv"
+    if not ruta.exists():
+        fila(nombre, PENDIENTE_TECNICO, "Aún no existe", sig)
+        return
+    res = pd.read_csv(ruta)
+    problemas = _evaluacion.validar_resultados_ir(res, _consultas.cargar())
+    copia = config.DIR_SALIDA / "resultados_ir.csv"
+    if copia.exists() and _sha256(copia) != _sha256(ruta):
+        problemas.append("La copia en salida/ difiere de la raíz")
+    if problemas:
+        fila(nombre, ERROR, "; ".join(problemas[:3]), sig)
+        return
+    mejor = _json(config.DIR_DATA / "mejor_modelo.json") or {}
+    detalle = f"{len(res)} filas; MAP de {mejor.get('modelo', '?')} = {mejor.get('MAP', '?')}"
+    if mejor.get("sha256_resultados_ir_csv") not in (None, _sha256(ruta)):
+        fila(nombre, OBSOLETO, "Cambió después de elegir el mejor modelo", sig)
+    else:
+        fila(nombre, VALIDO, detalle)
+
+
+def _estado_cache_ner(fila, pasajes: pd.DataFrame | None) -> None:
+    """Caché NER: cada pasaje del ámbito de IE tiene un JSON cuya clave coincide con su texto
+    actual y la configuración del modelo elegido (si no, `make ner` tendría que reinferir)."""
+    from mtx import ambito as _ambito
+    from mtx import ner_modelo as _ner
+    nombre, sig = "Caché NER (data/cache_ner/)", "make ner"
+    if not (config.DIR_DATA / "cache_ner").exists():
+        fila(nombre, PENDIENTE_TECNICO, "Aún no existe", sig)
+        return
+    if pasajes is None or not (config.DIR_DATA / "mejor_modelo.json").exists():
+        fila(nombre, PENDIENTE_TECNICO, "Faltan pasajes o mejor modelo para verificarla", sig)
+        return
+    principal, cfgs = _ner.cargar_config()
+    cfg = cfgs[principal]
+    ids = set(_ambito.ambito_ie()["passage_id"])
+    if "texto_sha256" not in pasajes.columns or not ids <= set(pasajes["passage_id"]):
+        fila(nombre, PENDIENTE_TECNICO, "Los pasajes cargados no cubren el ámbito de IE", sig)
+        return
+    sha = pasajes.set_index("passage_id")["texto_sha256"]
+    faltan = [p for p in sorted(ids) if _ner.leer_cache(cfg, p, sha[p]) is None]
+    if faltan:
+        fila(nombre, OBSOLETO, f"{len(faltan)} de {len(ids)} pasajes sin caché vigente "
+             f"(p. ej. {faltan[0]})", sig)
+    else:
+        fila(nombre, VALIDO, f"{len(ids)} pasajes del ámbito con caché vigente de "
+             f"{cfg.slug}@{cfg.revision_corta}")
