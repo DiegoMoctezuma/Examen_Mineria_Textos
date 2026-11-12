@@ -29,3 +29,10 @@ Ver `docs/decisiones.md`. Las no obvias: el corpus real tiene otro formato de ma
 
 - Falta `xelatex` en la Mac (solo para `make reporte`, H9): instalar BasicTeX o MacTeX antes del reporte.
 - Kaleido necesita el Chrome que instala `plotly_get_chrome` (`make setup` lo hace); los Chromium de snap fallan.
+
+## Actualización del guion del equipo (2026-11-11)
+
+- **Completado:** `laminas/guion.md` adaptado al PowerPoint final de 12 diapositivas y cinco integrantes. Incluye reparto sugerido, transiciones, demo de Q3, contingencia con salida guardada y preguntas de defensa. Las cifras se contrastaron con los artefactos existentes.
+- **Pendiente:** revisión final del equipo, confirmar el reparto y registrar el ensayo completo y las dos cargas de la demo. El objetivo de 7 minutos no es un tiempo medido.
+- **Decisión:** guion externo manual correspondiente a `Presentacion_Mineria_de_Textos_Equipo.pptx`, con demo en la diapositiva 10, limitaciones en la 11 y agradecimiento en la 12. Se retiran los marcadores de copia automática de notas para evitar que el generador anterior lo reemplace. Las notas del PowerPoint no se editaron.
+- **Bloqueos de esta edición:** ninguno. No se regeneraron resultados ni se alteraron insumos humanos.

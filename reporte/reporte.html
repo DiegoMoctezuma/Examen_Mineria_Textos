@@ -61,8 +61,10 @@ discursos presidenciales</h1>
 <div class="portada">
 <p><strong style="font-size:15pt;color:#1a1a1a">Recuperación y
 extracción de información sobre discursos presidenciales</strong><br>
-Diego Moctezuma · Minería de Textos, Examen 1 · 11 de noviembre de 2026
-· Repositorio: pendiente de confirmar destino (ver README)</p>
+Equipo Datisa: Carpio Angeles Leo Yair, Mera Montiel Gonzalo Sebastian,
+Moctezuma Ramirez Diego Rafael y Ramirez Maza Luis<br>Minería de Textos,
+Examen 1 · 11 de noviembre de 2026 · Repositorio:
+https://github.com/DiegoMoctezuma/Examen_Mineria_Textos</p>
 </div>
 <h2 id="datos-limpieza-y-segmentación">1. Datos, limpieza y
 segmentación</h2>
@@ -197,11 +199,12 @@ idf
 y puntaje
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∑</mo><mi>t</mi></msub><mi>i</mi><mi>d</mi><msub><mi>f</mi><mi>t</mi></msub><mfrac><mrow><mi>t</mi><mi>f</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><msub><mi>k</mi><mn>1</mn></msub><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mi>t</mi><mi>f</mi><mo>+</mo><msub><mi>k</mi><mn>1</mn></msub><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>b</mi><mo>+</mo><mi>b</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">|</mo><mi>d</mi><mo stretchy="false" form="prefix">|</mo><mi>/</mi><mi>a</mi><mi>v</mi><mi>g</mi><mi>d</mi><mi>l</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">\sum_t idf_t \frac{tf\,(k_1+1)}{tf + k_1(1-b+b\,|d|/avgdl)}</annotation></semantics></math>.
 Cada modelo corre con y sin el filtro de fecha de la consulta, y se
-recuperan los 10 mejores pasajes. Los juicios de relevancia los hizo el
-alumno sobre un pool de 176 pares, la unión de las cuatro variantes, sin
-ver modelo, rango ni puntaje, y juzgando el tema con independencia de la
-fecha. La vista oficial mide relevancia temática; la vista con ventana
-considera relevante solo lo que además cae dentro del periodo.</p>
+recuperan los 10 mejores pasajes. Los juicios de relevancia los hizo
+Diego Moctezuma sobre un pool de 176 pares, la unión de las cuatro
+variantes, sin ver modelo, rango ni puntaje, y juzgando el tema con
+independencia de la fecha. La vista oficial mide relevancia temática; la
+vista con ventana considera relevante solo lo que además cae dentro del
+periodo.</p>
 <div class="dos">
 <div>
 <p>Relevancia temática (resultados_ir.csv)</p>
@@ -402,8 +405,8 @@ escala y moneda o símbolo. Porcentajes, dosis, litros y sucursales se
 guardan como cantidades auxiliares y nunca como MONTO. Quedan sin cubrir
 las fechas en palabras (quince de enero) y las cifras escritas del todo
 con letra. El gazetteer ORG parte de las 76 entradas del kit y suma 16
-manuales y 60 siglas minadas del corpus, que el alumno revisó una por
-una (104 candidatas, 44 descartadas): 152 entradas en total. El
+manuales y 60 siglas minadas del corpus, que Diego Moctezuma revisó una
+por una (104 candidatas, 44 descartadas): 152 entradas en total. El
 gazetteer LOC tiene 102 entradas: las 32 entidades federativas con
 variantes, municipios de las consultas, países y las obras con nombre
 propio, que se anotan como LOC. Una regla adicional extrae la persona de
@@ -425,10 +428,10 @@ evaluados.</p>
 <h2 id="evaluación-de-ie-y-análisis-de-errores">5. Evaluación de IE y
 análisis de errores</h2>
 <p>El gold son 20 pasajes sorteados con semilla 42 (dos por consulta,
-uno del rango 1 a 5 y otro del 6 a 10), anotados a mano por el alumno en
-modo ciego con 163 entidades. El kit evalúa los 20 pasajes; la
-evaluación complementaria sobre los 20 IDs del manifiesto da las mismas
-cifras porque ningún pasaje quedó vacío.</p>
+uno del rango 1 a 5 y otro del 6 a 10), anotados a mano por Diego
+Moctezuma en modo ciego con 163 entidades. El kit evalúa los 20 pasajes;
+la evaluación complementaria sobre los 20 IDs del manifiesto da las
+mismas cifras porque ningún pasaje quedó vacío.</p>
 <!-- tabla:ie -->
 <table style="width:99%;">
 <colgroup>
@@ -583,12 +586,12 @@ la pregunta, fijados antes de generar las tablas; si no, queda ambiguo
 con su cita. Respaldado significa que el texto lo afirma, no que sea
 verdad. Las tablas completas con cita y pasaje están en
 salida/tablas_respuesta; la tabla resume cada consulta con la valoración
-escrita por el alumno, reproducida sin cambios.</p>
+humana, reproducida sin cambios.</p>
 <div class="valoraciones">
 <!-- tabla:respuestas -->
 <p><strong>Q1 avances en la construcción del Tren Maya.</strong> 5
 valores respaldados, 4 ambiguos; campos sin evidencia: montos.
-<em>Valoración del alumno:</em> “Tren Maya” debe ser un lugar en vez
+<em>Valoración humana:</em> “Tren Maya” debe ser un lugar en vez
 catalogarlo como dependencia o empresa. Tiene un problema con las NER ya
 que separó “Grupo ICA” e “ICA”. “Cuxtal” no tiene relacón con
 dependencia o empresa. Los estados que salen con el tren maya pueden ser
@@ -596,8 +599,8 @@ catalogados como lugar donde pasa el tren, Sin evidencia en el top-10
 puede deberse a los juicios donde no se encontró nada referente</p>
 <p><strong>Q2 llegada y aplicación de vacunas contra el
 COVID-19.</strong> 21 valores respaldados, 3 ambiguos; campos sin
-evidencia: ninguno. <em>Valoración del alumno:</em> La tabla es creíble
-por que identifica bien los nombres propios de los funcionarios, fechas,
+evidencia: ninguno. <em>Valoración humana:</em> La tabla es creíble por
+que identifica bien los nombres propios de los funcionarios, fechas,
 dosis y farmacéuticas. Para “Sputnik V” toma bien la regla del gold
 donde se debe poner los nombres de las vacunas como organizaciones.
 Falta devolver fechas sobre aplicaciones de las vacunas ya que solo
@@ -605,16 +608,16 @@ están las llegadas al país. Es correcto catalogar “mil 200 vacunas” como
 dosis aunque no tenga la palabra explicita.</p>
 <p><strong>Q3 refinería de Dos Bocas en Tabasco.</strong> 10 valores
 respaldados, 9 ambiguos; campos sin evidencia: ninguno. <em>Valoración
-del alumno:</em> Es poco creíble la tabla. Para organizaciones toma
-nombres de noticieros ya que se toma mucho el tema de “desinformación”,
-solo “Pemex” es una organización relacionada con la refinería. Toma a
-“Carlos Loret de Mola” como responsable pero es un periodista. Solo hay
-una cifra de montos de inversión y es correcta, los faltantes se pueden
+humana:</em> Es poco creíble la tabla. Para organizaciones toma nombres
+de noticieros ya que se toma mucho el tema de “desinformación”, solo
+“Pemex” es una organización relacionada con la refinería. Toma a “Carlos
+Loret de Mola” como responsable pero es un periodista. Solo hay una
+cifra de montos de inversión y es correcta, los faltantes se pueden
 deber a la falta de empresas contratistas reales. Hay problemas con NER
 ya que obtuvo “Ref” como organización.</p>
 <p><strong>Q4 aeropuerto Felipe Ángeles en Santa Lucía.</strong> 20
 valores respaldados, 8 ambiguos; campos sin evidencia: ninguno.
-<em>Valoración del alumno:</em> La tabla es poco creíble. Faltan
+<em>Valoración humana:</em> La tabla es poco creíble. Faltan
 dependencias constructoras , hay ruido como “Colegio Militar”, “Mitre” o
 estados, estosno deben pertenecer a esta categoría. Se hablan de otros
 aeropuertos y eso está bien ya que están relacionados pero “Felipe
@@ -624,7 +627,7 @@ puede deberse a que faltan pasajes donde se hable de las dependencias
 constructoras.</p>
 <p><strong>Q5 programa Sembrando Vida y apoyo a campesinos.</strong> 9
 valores respaldados, 11 ambiguos; campos sin evidencia: ninguno.
-<em>Valoración del alumno:</em> La tabla es poco creíble. No menciona
+<em>Valoración humana:</em> La tabla es poco creíble. No menciona
 ninguna secretaría operadora, menciona dos organizaciones ficticias
 (“Asociación Campesina Independiente Emiliano Zapata”, “Organización
 Campesina Independiente Emiliano”) y la “SEDENA” no la menciona como
@@ -634,7 +637,7 @@ pesos” y solo sale una vez, las otras cantidades hacen referencia a la
 inversión en el programa.</p>
 <p><strong>Q6 combate al huachicol y robo de combustible.</strong> 9
 valores respaldados, 7 ambiguos; campos sin evidencia: ninguno.
-<em>Valoración del alumno:</em> La tabla es poco creíble. Se menciona
+<em>Valoración humana:</em> La tabla es poco creíble. Se menciona
 “Michoacán” como lugar pero no se relaciona nada con la consulta ya que
 solo se pregunta por el presupuesto del estado, falta mencionar el monto
 del presupuesto y para que lo ocupan. Hay problemas con NER ya que pone
@@ -645,59 +648,60 @@ menciona la cantidad en el pasaje como “mil millones de pesos” sin más
 contexto.</p>
 <p><strong>Q7 pensión universal para adultos mayores.</strong> 12
 valores respaldados, 9 ambiguos; campos sin evidencia: ninguno.
-<em>Valoración del alumno:</em> La tabla es algor creíble. Se menciona
-el monto real bimestral pero también toma el monto anterior al cambio
-“mil 160 pesos”, aparece el presupuesto en millones de pesos y otro
-monto referente a una beca “mil 600 pesos”. Hay un problema con NER ya
-que “Issste” lo separó en “Is”. Las fechas son correctas y hablan sobre
-los aumentos.</p>
+<em>Valoración humana:</em> La tabla es algor creíble. Se menciona el
+monto real bimestral pero también toma el monto anterior al cambio “mil
+160 pesos”, aparece el presupuesto en millones de pesos y otro monto
+referente a una beca “mil 600 pesos”. Hay un problema con NER ya que
+“Issste” lo separó en “Is”. Las fechas son correctas y hablan sobre los
+aumentos.</p>
 <p><strong>Q8 aumento al salario mínimo y acuerdo con
 empresarios.</strong> 6 valores respaldados, 2 ambiguos; campos sin
-evidencia: organizaciones empresariales. <em>Valoración del alumno:</em>
-La tabla es parcialmente creíble. Se toman algunos porcentajes que no
+evidencia: organizaciones empresariales. <em>Valoración humana:</em> La
+tabla es parcialmente creíble. Se toman algunos porcentajes que no
 hablan del salario mínimo como “50 por ciento” que se refiere al tiempo
 y “75 por ciento” que se refiere al poder de compra del salario. Para
 montos se menciona “tres mil 600 pesos” pero habla de un programa no del
 salario. Hace falta tener más montos diarios.</p>
 <p><strong>Q9 operación y apertura de sucursales del Banco del
 Bienestar.</strong> 22 valores respaldados, 2 ambiguos; campos sin
-evidencia: ninguno. <em>Valoración del alumno:</em> La tabla es
-parcialmente creíble. Hay muchas repeticiones para “El banco del
-bienestar” en plural, singular y en un error con “de” en vez de “del”.
-“Azteca” no debe de pertenecer ya que es otro banco y solo se usa para
-comparar el número de sucursales. Sucursales y estados todos son
-correctos y no hay ruido de otros temas. Para montos solo hay “600 mil
-millones de pesos” falta tener más información sobre montos de
-inversión, construcción, etc.</p>
+evidencia: ninguno. <em>Valoración humana:</em> La tabla es parcialmente
+creíble. Hay muchas repeticiones para “El banco del bienestar” en
+plural, singular y en un error con “de” en vez de “del”. “Azteca” no
+debe de pertenecer ya que es otro banco y solo se usa para comparar el
+número de sucursales. Sucursales y estados todos son correctos y no hay
+ruido de otros temas. Para montos solo hay “600 mil millones de pesos”
+falta tener más información sobre montos de inversión, construcción,
+etc.</p>
 <p><strong>Q10 construcción y operación del Tren Interoceánico del Istmo
 de Tehuantepec.</strong> 35 valores respaldados, 23 ambiguos; campos sin
-evidencia: ninguno. <em>Valoración del alumno:</em> La tabla es
-parcialmente creíble. Hay problemas con el NER ya que pone “eánico” de
-“oceánico” y “pec”, “huantepec” de “Tehuantepec”. Faltan empresas
-constructuras que se encargan del ferrocarril ya que solo hay
-dependencias, también falta fechas de inauguración, solo hay fechas de
-información. Hace falta más montos de construcción debido a la falta de
-mención de estas mismas empresas. <!-- /tabla:respuestas --></p>
+evidencia: ninguno. <em>Valoración humana:</em> La tabla es parcialmente
+creíble. Hay problemas con el NER ya que pone “eánico” de “oceánico” y
+“pec”, “huantepec” de “Tehuantepec”. Faltan empresas constructuras que
+se encargan del ferrocarril ya que solo hay dependencias, también falta
+fechas de inauguración, solo hay fechas de información. Hace falta más
+montos de construcción debido a la falta de mención de estas mismas
+empresas. <!-- /tabla:respuestas --></p>
 </div>
 <h2 id="uso-de-ia-limitaciones-y-reproducibilidad">7. Uso de IA,
 limitaciones y reproducibilidad</h2>
 <p>El código, las pruebas, la app de anotación y la prosa de este
-reporte, del README y del guion los redactó un asistente (Claude Code) a
-partir de resultados reales; el alumno los revisó y corrigió. El alumno
-decidió la fase 0, los criterios de relevancia y de anotación, las
-consultas Q9 y Q10, la revisión de siglas, las convenciones de los casos
-no previstos y las valoraciones, y consultó a Gemini como tutor para
-dudas de criterio sin que redactara contenido. Los juicios de relevancia
-y el gold se hicieron a mano en la app leyendo cada pasaje, en modo
-ciego para el gold; el asistente no generó ni sugirió esos valores. El
-código se verificó con 433 pruebas automáticas y validadores de formato
-de cada entregable. Las limitaciones principales son el descarte de
-intervenciones cortas de reporteros, un gold de 20 pasajes con poco
-soporte en FECHA y MONTO, la elección técnica del NER sin conjunto de
-selección y patrones de relación que en algunos campos dejan pasar
-valores sin la relación pedida, como señalan las valoraciones. Desde un
-clon limpio, make resultados reproduce todas las cifras con los insumos
-humanos y la caché NER versionados; los pasos y tiempos medidos están en
-docs/reproducibilidad.md.</p>
+reporte, y del README los redactó un asistente (Claude Code) a partir de
+resultados reales; el equipo los revisó. La presentación y el guion
+final los hizo el equipo a mano, con apoyo de Codex en el guion. Diego
+Moctezuma decidió la fase 0, los criterios de relevancia y de anotación,
+las consultas Q9 y Q10, la revisión de siglas, las convenciones de los
+casos no previstos y las valoraciones de este repositorio, y consultó a
+Gemini como tutor para dudas de criterio sin que redactara contenido.
+Los juicios de relevancia y el gold se hicieron a mano en la app leyendo
+cada pasaje, en modo ciego para el gold; el asistente no generó ni
+sugirió esos valores. El código se verificó con 433 pruebas automáticas
+y validadores de formato de cada entregable. Las limitaciones
+principales son el descarte de intervenciones cortas de reporteros, un
+gold de 20 pasajes con poco soporte en FECHA y MONTO, la elección
+técnica del NER sin conjunto de selección y patrones de relación que en
+algunos campos dejan pasar valores sin la relación pedida, como señalan
+las valoraciones. Desde un clon limpio, make resultados reproduce todas
+las cifras con los insumos humanos y la caché NER versionados; los pasos
+y tiempos medidos están en docs/reproducibilidad.md.</p>
 </body>
 </html>

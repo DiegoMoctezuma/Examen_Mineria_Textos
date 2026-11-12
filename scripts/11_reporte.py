@@ -118,7 +118,7 @@ def t_respuestas() -> str:
         vacios = ", ".join(g.loc[g["estado"] == "no_encontrado", "campo_respuesta"]) or "ninguno"
         filas.append(f"**{q} {cons.at[q, 'consulta']}.** {n.get('respaldado_en_texto', 0)} "
                      f"valores respaldados, {n.get('ambiguo', 0)} ambiguos; campos sin "
-                     f"evidencia: {vacios}. *Valoración del alumno:* "
+                     f"evidencia: {vacios}. *Valoración humana:* "
                      + " ".join(str(val.get(q, {}).get("texto", "")).split()))
     return "\n\n".join(filas)
 

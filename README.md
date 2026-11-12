@@ -1,6 +1,8 @@
 # Sistema de recuperación y extracción de información sobre discursos presidenciales
 
-Examen 1 de Minería de Textos · Diego Moctezuma.
+Examen 1 de Minería de Textos · Equipo Datisa: Carpio Angeles Leo Yair, Mera Montiel Gonzalo Sebastian, Moctezuma Ramirez Diego Rafael y Ramirez Maza Luis.
+
+Repositorio: https://github.com/DiegoMoctezuma/Examen_Mineria_Textos
 
 ## 1. Qué hace el sistema
 
@@ -127,22 +129,23 @@ F1 del método combinado por tipo (`resultados_ie.csv`, 20 pasajes gold):
 
 - Asistente: Claude Code (modelo Claude Opus 5.5). Escribió o coescribió todo el código de
   `src/mtx/`, `scripts/`, `tests/`, la app de anotación, el `Makefile`, los documentos de `docs/`,
-  este README, el reporte, las láminas y el guion, a partir de los resultados reales y del PRD.
-- Autoría de la prosa: el reporte, el README y el guion los redactó el asistente; el alumno los
-  revisó y corrigió. [VALIDAR alumno: indicar qué secciones modificó de forma sustancial.]
-- Decisiones y trabajo del alumno: fase 0 (plazos, repositorio, utilerías con el profesor),
+  este README y el reporte, a partir de los resultados reales y del PRD.
+- Autoría de la prosa: el reporte y el README los redactó el asistente y el equipo los revisó.
+  La presentación final (`laminas/Presentacion_Mineria_de_Textos.pptx`) y el guion los hizo el
+  equipo a mano; el guion tuvo apoyo de Codex (registrado en `docs/decisiones.md`).
+- Decisiones y trabajo humano de este repositorio (Diego Moctezuma): fase 0 (plazos, repositorio, utilerías con el profesor),
   criterios de relevancia y de anotación, elección de Q9 y Q10, los 176 juicios de relevancia,
   la revisión de las 104 siglas candidatas, el gold de 20 pasajes y sus convenciones para casos no
   previstos, y las 10 valoraciones de las tablas.
-- El alumno consultó a Gemini como tutor para dudas de criterio durante el gold y las
+- Diego Moctezuma consultó a Gemini como tutor para dudas de criterio durante el gold y las
   valoraciones, con indicaciones de no redactar anotaciones ni valoraciones.
 - Los juicios de relevancia y el gold se hicieron a mano en la app leyendo cada pasaje, en modo
   ciego para el gold (sin predicciones visibles hasta el cierre); el asistente no generó ni sugirió
   ninguno de esos valores. Lo mismo vale para la revisión de siglas y las valoraciones.
 - Verificación del código: 433 pruebas de pytest sin red (contratos del kit, fórmulas de TF-IDF y
   BM25 contra implementaciones de referencia, reglas, fusión, app), validadores de formato de cada
-  CSV y `make validar` con 15 condiciones; el alumno leyó el código para la defensa.
-- Para la demo el alumno debe poder explicar cualquier función del paquete; la guía está en
+  CSV y `make validar` con 15 condiciones; el equipo leyó el código para la defensa.
+- Para la demo el equipo debe poder explicar cualquier función del paquete; la guía está en
   [`docs/guia_defensa.md`](docs/guia_defensa.md).
 
 ## 10. Dependencias y por qué

@@ -309,7 +309,9 @@ RE_TIEMPO = re.compile(r"tiempo medido:\s*(\d+):(\d{2})", re.IGNORECASE)
 
 
 def c12_laminas(cx: Contexto) -> Resultado:
-    pptx, guion = cx.raiz / "laminas" / "laminas.pptx", cx.raiz / "laminas" / "guion.md"
+    guion = cx.raiz / "laminas" / "guion.md"
+    final = cx.raiz / "laminas" / "Presentacion_Mineria_de_Textos.pptx"  # hecha a mano por el equipo
+    pptx = final if final.exists() else cx.raiz / "laminas" / "laminas.pptx"
     titulo = "1 a 5 láminas; guion con tiempo medido de 8 minutos o menos"
     if not pptx.exists() or not guion.exists():
         return Resultado(12, titulo, PENDIENTE, ["faltan laminas/laminas.pptx o guion.md (H9)"])

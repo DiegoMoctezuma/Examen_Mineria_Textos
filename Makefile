@@ -57,7 +57,9 @@ resultados: evaluar-ir evaluar-ie tablas
 reporte:
 	$(PY) scripts/11_reporte.py
 laminas:
-	$(PY) scripts/12_laminas.py
+	@echo "La presentación final (laminas/Presentacion_Mineria_de_Textos.pptx) y el guion los hizo el equipo a mano; no se regeneran."
+laminas-generadas:
+	$(PY) scripts/12_laminas.py  # deck automático anterior; escribe laminas/laminas.pptx
 demo:
 	$(PY) scripts/13_demo.py $(if $(Q),--q $(Q),) $(if $(CONSULTA),--consulta "$(CONSULTA)",) $(if $(DESDE),--desde $(DESDE),) $(if $(HASTA),--hasta $(HASTA),)
 
