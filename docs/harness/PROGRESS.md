@@ -1,38 +1,56 @@
 # Progreso — Sistema de recuperación y extracción de información sobre discursos presidenciales
 
+## Estado actual (2026-11-12)
+
+**Entregado.** H0 a H9 cerrados. Repo público en GitHub
+(`https://github.com/DiegoMoctezuma/Examen_Mineria_Textos`), etiqueta `v1.0-entrega` en `431f1c0`
+(2026-11-11, antes de las 20:00 CDMX). Entrega en equipo (equipo Datisa: Carpio Angeles Leo Yair,
+Mera Montiel Gonzalo Sebastian, Moctezuma Ramirez Diego Rafael, Ramirez Maza Luis). `make validar`:
+14 OK, 1 falla (condición 12: el guion no registra «Tiempo medido: m:ss»).
+
 ## Completado
 
-- Arnés (`/harnesser`): CLAUDE.md, AGENTS.md, 17 skills, `docs/harness/`.
-- H0 cerrado (2026-11-04): entorno `uv` (Python 3.11, torch CPU, plotly y kaleido), `Makefile`, kit copiado a `kit/` con hashes, `src/mtx/adaptadores_kit.py`, 42 pruebas de contrato, `docs/contratos_kit.md`, `docs/decisiones.md`. Alumno: Diego Moctezuma (nombre corregido el 2026-11-07). Plazo: entrega y presentación el 11 de noviembre de 2026, presentación a las 20:00 (CDMX). Repo de entrega: este GitLab.
-- H1 (2026-11-04): `src/mtx/corpus.py` (limpieza, canonización de marcas, fechas, duplicados, segmentación), `config/limpieza.yaml`, `scripts/01_corpus_y_pasajes.py`, `make corpus` verde: 127,739 pasajes, 5 discursos excluidos, 10 fechas reparadas. Descubrimiento de Q9 y Q10 (`make explorar`, `salida/00_candidatos_q9q10.md`). `data/consultas.csv` con Q1 a Q10 (`make consultas`). 79 pruebas rápidas verdes.
-
-- H2 (2026-11-07), índice y ranking cerrados: `tests/test_indice.py` (T03) y `tests/test_ranking.py` (T04 a T06, D03, formato, evaluador del kit con juicios sintéticos, prueba lenta de contenido), `scripts/02_indice.py` y `scripts/03_ranking.py`. `make indice ranking` produce `ranking.csv` (400 filas, validado, copia en la raíz) y `salida/02_*` y `salida/03_*`, deterministas. `ranking.buscar()` listo para la demo y la app. 137 pruebas rápidas y la lenta, en verde.
-- Pool (2026-11-07): `src/mtx/pool.py` (construcción, diferencias, `validar_juicios`, exportación protegida), `scripts/04_pool.py` y `tests/test_pool.py` (T07, T08). `salida/04_pool.csv`: 176 pares; Q5, Q7 y Q8 bajo 15 por ventanas amplias (registrado). 158 pruebas rápidas en verde. H2 cerrado.
-- App H3 (2026-11-07): `src/mtx/app/` con Estado y Juicios (ciega, atajos 1/0/O/←, autoguardado atómico, historial, dos pestañas, bloqueo sin criterio o con insumos cambiados), placeholders de Gold/Gazetteer/Demo, CLI `make app-cli`, `tests/test_app.py` (T15, 15 pruebas), `docs/pruebas_app.md`. 174 pruebas rápidas en verde.
-- H4 y validador escritos (2026-11-07), a la espera de los juicios: `src/mtx/evaluacion.py` (kit oficial, vista con ventana, tablas por consulta con etiquetas, D08, figuras, registro), `scripts/05_evaluar_ir.py`, `src/mtx/entrega.py` y `scripts/99_validar.py` (15 condiciones de §13.2; `--parcial`), `config/sinonimos_consultas.yaml` y `tests/test_evaluacion.py` (24 pruebas con juicios sintéticos en tmp). 198 pruebas rápidas en verde. Con los juicios incompletos, `make evaluar-ir` se niega y no escribe nada.
-- H3 y H4 cerrados (2026-11-08): el alumno juzgó los 176 pares (≈100 min activos); `make evaluar-ir` produjo `resultados_ir.csv`, la vista con ventana, las tablas por consulta, las tres figuras y `data/mejor_modelo.json` (D08: `bm25_con_filtro`, MAP 0.484 contra 0.295). `99_validar --parcial`: condiciones 1, 3, 4, 5 y 10 en OK, ninguna falla. App corregida (selector que regresaba a Q1, resaltado ilegible en tema oscuro) y con revisión de todos los pasajes. 200 pruebas en verde.
-- Criterio de relevancia aprobado (2026-11-07): propuesta del PRD §6.5 sin cambios en `config/criterios_relevancia.md`; se congela con el primer juicio.
-- Q9 y Q10 aprobadas por el alumno sin cambios (2026-11-07); `[VALIDAR]` cerrado y registrado en `docs/decisiones.md`. Ya se pueden generar rankings.
-- Entorno macOS arm64 listo (2026-11-07): `uv`, `make setup`, `make corpus` (mismo hash de pasajes que en Linux) y `make test` con 94 pruebas verdes.
+- H0 a H8 (2026-11-04 a 2026-11-11): corpus y pasajes (127,739), índice, TF-IDF y BM25, pool de
+  176 pares, juicios del alumno, `mejor_modelo` = BM25 con filtro (MAP 0.484), reglas congeladas,
+  NER `mrm8488` por criterio técnico, gold de 20 pasajes en modo ciego, fusión y evaluación IE
+  (F1 combinado 0.784), tablas de respuesta y 10 valoraciones del alumno.
+- H9 (2026-11-11):
+  - Reporte de 5 páginas (`reporte/reporte.md` → PDF con pandoc arm64 y Chrome; sin XeLaTeX).
+  - README de 10 secciones con Uso de IA y `requirements.txt` exportado con `--frozen`.
+  - Demo `make demo Q=Q3` (0.2 s) y consulta libre con NER en caliente (unos 10 s, sin red).
+  - Reconstrucción desde clon limpio (unos 2 min, seis CSV idénticos), en `docs/reproducibilidad.md`.
+  - `docs/guia_defensa.md`.
+- Presentación final y guion hechos a mano por el equipo: `laminas/Presentacion_Mineria_de_Textos.pptx`
+  y `laminas/guion.md`. El deck automático (pptxgenjs, `laminas/deck/`) quedó como
+  `make laminas-generadas`; `make laminas` ya no regenera nada.
+- Pestaña Estado de la app: resultados IR y caché NER ya tienen validador (13 de 13 en verde).
 
 ## Pendiente
 
-1. H5 a H7 cerrados; H8 técnico listo (2026-11-09): `make tablas` genera `salida/respuestas.csv` y `salida/tablas_respuesta/`. **Pendiente del alumno:** escribir las 10 valoraciones en la pestaña Valoraciones de la app (unos 40 min) y leer al menos un caso por categoría de `salida/09_analisis_errores.csv`. Después H9: reporte, README de 10 secciones, `requirements.txt`, láminas, reproducibilidad desde clon limpio y etiqueta `v1.0-entrega`.
-2. Análisis IR del reporte (p. 2, H9): se redacta a partir de `salida/05_ir_ganador_por_consulta.csv` y las figuras; se describe esta colección, sin generalizar.
-3. Alumno: verificar que el profesor tenga acceso a este repo de GitLab (el enunciado habla de GitHub).
+1. Equipo: ensayar con cronómetro y agregar `Tiempo medido: m:ss` al guion (cierra la condición 12).
+   El alumno pidió no tocar la presentación ni el guion: solo agregar esa línea si él da el tiempo.
+2. Decidir si `v1.0-entrega` se mueve a `f9cc3ee` (ajustes del equipo a la presentación, subidos
+   el 2026-11-12, después de la etiqueta). Por defecto no se mueve.
+3. Revisar el guion: menciona a "Jaramillo Salmerón, Arturo", que no está en la lista de
+   integrantes que dio el alumno.
+4. Confirmar con el alumno que sí consultó a Gemini (así lo declaran el README y el reporte).
+5. Opcional: usar los juicios del otro integrante como segundo anotador (acuerdo 115 de 176,
+   kappa ≈ 0.31) sin cambiar las cifras oficiales.
 
 ## Decisiones
 
-Ver `docs/decisiones.md`. Las no obvias: el corpus real tiene otro formato de marcas que el PRD (parser propio); acotaciones por lista y no por mayúsculas (se conservan siglas como `(IMSS)`); candidatas de fecha fuera de rango se descartan; el 65 % de las intervenciones de reporteros queda bajo 40 palabras y el reporte debe discutirlo (costo de D02); plotly en lugar de matplotlib por indicación del profesor.
+Ver `docs/decisiones.md`. Las no obvias de esta sesión:
+- Más de 5 láminas por decisión del alumno (el enunciado dice máximo 5); la condición 12 lo acepta
+  por la excepción registrada.
+- No se mezcló el repo del compañero (MAP 0.615): mismo `ranking.csv`, mismo pool y mismo NER; la
+  diferencia de MAP viene solo de juicios distintos. Elegir juicios por el MAP sería ajustar la
+  evaluación al resultado.
+- `reglas_congeladas_vigentes()` ignora archivos agregados a `config/` después de la etiqueta
+  (solo cuentan modificados, renombrados o borrados).
+- Remoto: GitHub del alumno; el GitLab anterior se desligó.
 
 ## Bloqueos
 
-- Falta `xelatex` en la Mac (solo para `make reporte`, H9): instalar BasicTeX o MacTeX antes del reporte.
-- Kaleido necesita el Chrome que instala `plotly_get_chrome` (`make setup` lo hace); los Chromium de snap fallan.
-
-## Actualización del guion del equipo (2026-11-11)
-
-- **Completado:** `laminas/guion.md` adaptado al PowerPoint final de 12 diapositivas y cinco integrantes. Incluye reparto sugerido, transiciones, demo de Q3, contingencia con salida guardada y preguntas de defensa. Las cifras se contrastaron con los artefactos existentes.
-- **Pendiente:** revisión final del equipo, confirmar el reparto y registrar el ensayo completo y las dos cargas de la demo. El objetivo de 7 minutos no es un tiempo medido.
-- **Decisión:** guion externo manual correspondiente a `Presentacion_Mineria_de_Textos_Equipo.pptx`, con demo en la diapositiva 10, limitaciones en la 11 y agradecimiento en la 12. Se retiran los marcadores de copia automática de notas para evitar que el generador anterior lo reemplace. Las notas del PowerPoint no se editaron.
-- **Bloqueos de esta edición:** ninguno. No se regeneraron resultados ni se alteraron insumos humanos.
+- Ninguno técnico. Para renderizar láminas, LibreOffice funciona con
+  `soffice --headless -env:UserInstallation=file://<scratch>` en segundo plano; Keynote no exporta
+  desde la sesión.
