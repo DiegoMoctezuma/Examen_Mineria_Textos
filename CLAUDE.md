@@ -49,7 +49,7 @@ Por hito del PRD (§12.2):
 - **Commits**: Conventional Commits con tipo en inglés y descripción en español (`feat(ranking): ...`, `data(juicios): ...`); uno por unidad probada. Etiquetas `reglas-congeladas` antes del gold y `v1.0-entrega` al final.
 - **Decisiones**: cada decisión y cada cambio posterior a una congelación se registra con fecha en `docs/decisiones.md`.
 - **PRD**: pesa ~58k tokens y la lectura lo trunca. Léelo por secciones con el mapa de líneas de `docs/harness/ARCHITECTURE.md` §9; cada skill cita las secciones que le tocan.
-- **Remote**: el repo vive en GitLab (`text-mining-ir-er`); el PRD habla de GitHub. Se registra en `docs/decisiones.md`; `AGENTS.md` de este repo es symlink a este archivo y cumple PRD §11.4.
+- **Remote**: `origin` es GitHub (`DiegoMoctezuma/Examen_Mineria_Textos`) desde el 2026-11-11; antes vivía en GitLab. Se registra en `docs/decisiones.md`; `AGENTS.md` de este repo es symlink a este archivo y cumple PRD §11.4.
 
 ## Retomar trabajo
 
