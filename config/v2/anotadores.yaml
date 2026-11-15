@@ -25,3 +25,38 @@ lotes:
     jueces_v1: [diego, luis, arturo]
   # "2": se define en WP-05 con el pool v2 (Arturo, Bruno y Leo; Luis si el pool queda el dom 15
   # antes de las 20:00).
+
+# Gold v2 (PRD v2 D31 y D33; WP-09). Cada parte nueva la anotan 2 personas por separado y en modo
+# ciego, en anotaciones/gold_v2/<id>.csv; la adjudica un tercero que no la anotó, en
+# anotaciones/gold_v2/adjudicado_<id>.csv. `manifiesto` es relativo a anotaciones/.
+# Pasada 1: PER, ORG, LOC y MONTO. Pasada 2: solo FECHA; se abre con la etiqueta `reglas-fecha-v2`
+# o, en el recorte de D33 (repo del profesor después del jue 19), con `pasada_2_sin_etiqueta: true`
+# registrado en docs/decisiones.md. Leo no anota ni adjudica gold: escribe las reglas FECHA.
+gold:
+  no_anotan: [leo]
+  pasada_2_sin_etiqueta: false
+  partes:
+    seleccion:
+      nombre: Selección
+      manifiesto: v2/muestra_seleccion.csv
+      anotadores: [diego, luis]
+      adjudicador: arturo
+      pasadas: [1, 2]
+    a:
+      nombre: Parte A
+      manifiesto: v2/muestra_gold_a.csv
+      anotadores: [diego, gonzalo]
+      adjudicador: bruno
+      pasadas: [1, 2]
+    b:
+      nombre: Parte B
+      manifiesto: v2/muestra_gold_b.csv
+      anotadores: [gonzalo, bruno]
+      adjudicador: diego
+      pasadas: [1, 2]
+    v1:
+      nombre: FECHA del gold v1
+      manifiesto: muestra_gold.csv
+      anotadores: [diego]
+      adjudicador: null
+      pasadas: [2]

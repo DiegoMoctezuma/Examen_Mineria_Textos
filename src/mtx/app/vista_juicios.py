@@ -17,8 +17,9 @@ import html
 import pandas as pd
 import streamlit as st
 
-from mtx import anotadores, consultas
+from mtx import consultas
 from mtx.app import componentes as C
+from mtx.app import sesion
 
 ESTADO_CLASE = {"1": "estado-1", "0": "estado-0", "": "estado-omitido", None: ""}
 
@@ -33,48 +34,11 @@ def _r() -> C.Rutas:
     return C.rutas(st.session_state.anotador)
 
 
-_ESTADO_SESION = ("juicios", "token", "pos", "mensaje", "consulta")
-
-
-def _fijar_anotador() -> None:
-    ss = st.session_state
-    for k in _ESTADO_SESION:
-        ss.pop(k, None)
-    ss.anotador = ss.elegir_anotador
-    st.query_params["anotador"] = ss.anotador
-
-
-def _cambiar_anotador() -> None:
-    ss = st.session_state
-    for k in _ESTADO_SESION + ("anotador", "elegir_anotador"):
-        ss.pop(k, None)
-    st.query_params.pop("anotador", None)
-
-
 def _anotador() -> str | None:
-    """Id del anotador de esta sesión, o None mientras no elija (y entonces dibuja el selector)."""
-    ss = st.session_state
-    try:
-        lista = anotadores.cargar_anotadores()
-    except FileNotFoundError:
-        st.error(f"Falta {anotadores.ruta_anotadores()} (lista de anotadores v2).")
-        return None
-    url = st.query_params.get("anotador")
-    if "anotador" not in ss and url in lista:
-        ss.anotador = url
-    if ss.get("anotador") in lista:
-        a = lista[ss.anotador]
-        st.sidebar.markdown(f"Juzgas como **{html.escape(a.nombre)}**")
-        st.sidebar.button("Cambiar de anotador", on_click=_cambiar_anotador, width="stretch")
-        st.sidebar.divider()
-        return ss.anotador
-    st.subheader("¿Quién va a juzgar?")
-    st.selectbox("Tu nombre", list(lista), index=None, key="elegir_anotador",
-                 format_func=lambda i: lista[i].nombre, placeholder="Elige tu nombre",
-                 on_change=_fijar_anotador)
-    st.caption("Cada quien juzga solo sus pares y en su propio archivo. No verás los juicios de "
-               "nadie más, ni puntajes, rangos o modelos.")
-    return None
+    return sesion.anotador(
+        "¿Quién va a juzgar?", "Juzgas como",
+        "Cada quien juzga solo sus pares y en su propio archivo. No verás los juicios de nadie "
+        "más, ni puntajes, rangos o modelos.")
 
 
 def _iniciar(items: pd.DataFrame, forzar: bool = False) -> None:

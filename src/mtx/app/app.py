@@ -8,9 +8,11 @@ import streamlit as st
 
 from mtx.app import (
                      estilo,
+                     vista_adjudicacion,
                      vista_estado,
                      vista_gazetteer,
                      vista_gold,
+                     vista_gold_v2,
                      vista_juicios,
                      vista_pendiente,
                      vista_valoraciones,
@@ -22,7 +24,9 @@ estilo.aplicar()
 paginas = [
     st.Page(vista_estado.mostrar, title="Estado", url_path="estado", default=True),
     st.Page(vista_juicios.mostrar, title="Juicios", url_path="juicios"),
-    st.Page(vista_gold.mostrar, title="Gold", url_path="gold"),
+    st.Page(vista_gold_v2.mostrar, title="Gold", url_path="gold"),
+    st.Page(vista_adjudicacion.mostrar, title="Adjudicación", url_path="adjudicacion"),
+    st.Page(vista_gold.mostrar, title="Gold v1", url_path="gold-v1"),
     st.Page(vista_gazetteer.mostrar, title="Gazetteer", url_path="gazetteer"),
     st.Page(vista_valoraciones.mostrar, title="Valoraciones", url_path="valoraciones"),
     st.Page(vista_pendiente.demo, title="Demo", url_path="demo"),
