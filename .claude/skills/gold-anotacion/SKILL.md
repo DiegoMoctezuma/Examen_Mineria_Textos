@@ -152,3 +152,12 @@ Nunca se retoca el gold para optimizar métricas, ni para "alinear" convenciones
   (`reglas-fecha-v2`). Leo no anota gold ni selección.
 - **Cierre:** `anotaciones/cierre_gold_v2.json` el viernes 20; hasta entonces, modo ciego total
   para quien anota (D32).
+- **Implementación (14 nov):** `make muestra-gold-v2 PARTES=seleccion,a` (sáb) y `PARTES=b` (dom,
+  con el pool v2) escriben `anotaciones/v2/muestra_*.csv` y `muestreo_v2.json`. Lógica en
+  `src/mtx/gold_v2.py`; papeles en `config/v2/anotadores.yaml` (`gold:`). Archivos:
+  `anotaciones/gold_v2/<id>.csv` y `<id>_estado.csv` por anotador; `adjudicado_<id>.csv` y
+  `adjudicado_<id>_estado.csv` por adjudicador (uno por persona, para que las ramas no choquen).
+  Pestañas "Gold" y "Adjudicación"; la v1 queda como "Gold v1", intacta. Techo humano:
+  `make acuerdo-gold` → `salida/v2/09_acuerdo_gold.csv`. El adjudicador solo incluye o excluye lo
+  propuesto; no agrega entidades. Pruebas: `tests/test_gold_v2.py` y la parte v2 de
+  `tests/test_muestreo.py`.
