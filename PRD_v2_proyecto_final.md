@@ -1,7 +1,7 @@
 # PRD v2 · Proyecto final · Recuperación y extracción de información en las mañaneras
 
-**Versión:** 2.0 borrador · 14 de noviembre de 2026 · PV1 a PV6 confirmados el 14 de noviembre; roles
-aprobados el 14 de noviembre; reglas de la sección 3 en `[VALIDAR]` por el equipo
+**Versión:** 2.0 · 15 de noviembre de 2026 · PV1 a PV6 confirmados el 14 de noviembre; roles
+aprobados el 14 de noviembre; reglas de la sección 3 (D23 a D36) aprobadas el 15 de noviembre (etiqueta `v2-inicio`)
 **Base:** `PRD_unificado_examen1_mineria_textos.md` (v3.0) y la entrega `v1.0-entrega`.
 **Plazo:** miércoles 25 de noviembre de 2026, antes de las 18:00 (hora de la Ciudad de México).
 **Destinatarios:** el equipo Datisa (6 integrantes) y Claude Code, que trabaja en cada computadora con el arnés de este repositorio (`CLAUDE.md` y `.claude/skills/`).
