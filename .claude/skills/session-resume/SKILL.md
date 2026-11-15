@@ -47,3 +47,15 @@ solo lo que esos dos no capturan: contexto, decisiones, bloqueos.
 
 (ninguno)
 ```
+
+## v2: progreso por paquete de trabajo (PRD v2 §6.3)
+
+Con seis personas, cada sesión trabaja en un paquete (WP-00 a WP-19). Al abrir:
+
+1. Pregunta quién opera y en qué WP, si no lo dijo.
+2. Lee `docs/harness/PROGRESS.md` (estado global) y `docs/harness/progreso/<wp>.md` (por
+   ejemplo `wp01.md`). Si el segundo no existe, créalo con la plantilla de arriba y una línea
+   `Dueño: <nombre>`.
+
+Al cerrar, escribe solo en `docs/harness/progreso/<wp>.md`. `PROGRESS.md` lo consolida Diego una
+vez al día; las decisiones van a `docs/decisiones.md` por pull request, con fecha y autor.

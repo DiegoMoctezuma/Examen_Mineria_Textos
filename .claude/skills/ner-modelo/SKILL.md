@@ -119,3 +119,13 @@ Comando: `uv run pytest tests/test_ner_posproceso.py`. El módulo no se da por t
 - `reglas-gazetteer`: la otra fuente de entidades (`metodo == regla`), que recupera lo que cae en MISC/OTH.
 - `fusion-normalizacion`: consume la salida del NER y la fusiona con reglas en `entidades.csv` (D12, D16).
 - `evaluacion-ie`: `kit/evaluar.py ie`, `salida/09_comparacion_ner.csv`, análisis de errores por método y tipo.
+
+## v2: comparación de candidatos (PRD v2 D34; WP-10, dueño Luis)
+
+- Candidatos: `mrm8488` (principal v1) y 3 o 4 más, por ejemplo RoBERTa BNE o CAPITEL, spaCy
+  `es_core_news_lg`, XLM-R y GLiNER, cada uno con revisión fija en `config/ner.yaml`. Verificar
+  en Hugging Face que sigan publicados (PV10).
+- **Criterio fijo:** F1 micro solo del modelo en PER, ORG y LOC sobre la selección v2 adjudicada;
+  empate → `mrm8488`. Luis anota la selección **antes** de inferir sobre esos pasajes.
+- `data/modelo_ner.json` v2 se escribe el jueves 19, con commit anterior a `cierre_gold_v2.json`.
+- Cachés por modelo y revisión en `data/cache_ner/`; nunca se reutiliza la caché de otro modelo.

@@ -220,3 +220,27 @@ Mientras el alumno anota (H3, H6), el asistente avanza en lo que no depende de e
 | §6.5-6.6 Pool, juicios, evaluación IR | 470-500 | §11 Reproducibilidad, README, IA, commits | 899-939 |
 | §6.7 Reglas y gazetteers | 501-565 | §12 Hitos, prioridades, recortes | 942-985 |
 | §6.8 NER | 566-585 | §13-§15 Validación, riesgos, anexos | 988-1146 |
+
+## 10. Fase v2 (PRD_v2_proyecto_final.md)
+
+Adenda del 14 de noviembre: seis integrantes, entrega el 25 antes de las 18:00. v1 queda intacto
+en `v1.0-entrega`; lo nuevo vive en rutas `v2`.
+
+```
+config/v2/anotadores.yaml ──► anotadores.py ──► data/v2/asignacion_juicios.csv (por lotes, solo agregar)
+                                   │                        │
+anotaciones/juicios_relevancia.csv ┘ (04c importa v1)       ▼
+                         anotaciones/juicios_v2/<anotador>.csv ◄── app (Juicios, CLI) por persona
+                                   │
+                                   ▼ 05a_agregar_juicios.py (mayoría de 3, Fleiss/Cohen)  [WP-02]
+                         juicios_relevancia.csv agregado ──► kit/evaluar.py ir ──► salida/v2/
+preproceso.lematizar ──► 8 variantes ──► pool v2 (lote 2) ──► ganador D28            [WP-03 a WP-06]
+muestreo v2 ──► gold doble + adjudicación ──► cierre_gold_v2.json ──► evaluación IE  [WP-08 a WP-12]
+artefactos v1 (hasta el 20) / v2 (desde el 21) ──► src/mtx/web/ (demo pública)       [WP-15]
+```
+
+Mapa de líneas del PRD v2 (741 líneas aprox.): §0 reglas 11–54, §1.3 retroalimentación 74–112,
+§2 roles 113–162, §3 decisiones D23–D36 163–341, §4 congelaciones 342–365, §5 paquetes WP-00 a
+WP-19 366–625, §6 equipo y propiedad 626–668, §7 calendario 669–690, §8 recortes 691–725, §9
+terminado 726–741, §10 pendientes al final. Verifica con `grep -n "^## \|^### "`: las líneas se
+mueven con cada edición.

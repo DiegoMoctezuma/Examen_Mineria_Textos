@@ -8,6 +8,16 @@
 Mera Montiel Gonzalo Sebastian, Moctezuma Ramirez Diego Rafael, Ramirez Maza Luis). `make validar`:
 14 OK, 1 falla (condición 12: el guion no registra «Tiempo medido: m:ss»).
 
+## Fase v2 (desde 2026-11-14)
+
+Proyecto final en equipo de 6; entrega el 2026-11-25 antes de las 18:00. Plan en
+`PRD_v2_proyecto_final.md`; progreso por paquete en `docs/harness/progreso/<wp>.md`.
+
+- WP-00 (arnés v2) y WP-01 (app multianotador, más la asignación del lote 1) hechos, sin commit.
+- Lote 1 completo: juicios v1 de Diego, Luis y Arturo importados (3 por par); PV12 cerrado.
+- Siguiente: commit, etiqueta `v2-inicio` y push cuando el alumno lo pida;
+  calibración antes del lote 2; WP-03 (lematización) y WP-04 (Q11 a Q15) para el domingo 15.
+
 ## Completado
 
 - H0 a H8 (2026-11-04 a 2026-11-11): corpus y pasajes (127,739), índice, TF-IDF y BM25, pool de

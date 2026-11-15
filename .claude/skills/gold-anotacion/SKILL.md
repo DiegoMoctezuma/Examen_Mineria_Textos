@@ -137,3 +137,18 @@ Nunca se retoca el gold para optimizar métricas, ni para "alinear" convenciones
 - `app-anotacion`: estructura general de la app Streamlit donde vive `vista_gold.py`.
 - `evaluacion-ie`: `resultados_ie.csv`, `salida/09_evaluacion_20_ids.csv` y consumo del gold exportado.
 - `ner-modelo`: uso del conjunto de selección para elegir el modelo NER.
+
+## v2: gold doble, adjudicación y pasadas (PRD v2 D31, D32, D33; WP-08, WP-09)
+
+- **Tamaños:** selección 10 (1 por consulta Q1 a Q10), parte A 10 (1 por consulta Q1 a Q10),
+  parte B 10 (2 por consulta Q11 a Q15). Se evalúa sobre 40: los 20 de v1 más A y B.
+- **Muestreo:** del pool con filtro, excluyendo el ámbito IE de v1 (99 pasajes) y el gold v1, con
+  semilla 42 y manifiesto con hash antes de ver predicciones.
+- **Doble anotación:** selección Diego y Luis; A Diego y Gonzalo; B Gonzalo y Bruno. Cada quien en
+  `anotaciones/gold_v2/<anotador>.csv`, sin ver el del otro.
+- **Adjudicación humana:** Arturo la selección, Bruno la A, Diego la B (`vista_adjudicacion.py`).
+  El F1 entre anotadores antes de adjudicar es el "techo humano".
+- **Pasadas:** la 1 anota todo menos FECHA; la 2 solo FECHA, cuando exista el criterio FECHA v2
+  (`reglas-fecha-v2`). Leo no anota gold ni selección.
+- **Cierre:** `anotaciones/cierre_gold_v2.json` el viernes 20; hasta entonces, modo ciego total
+  para quien anota (D32).

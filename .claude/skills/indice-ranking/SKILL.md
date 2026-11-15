@@ -141,3 +141,11 @@ No se cierra la fase de IR mientras falte uno (PRD §6.4):
 - `kit-contratos`: formato exacto de `ranking.csv` y uso de `kit/evaluar.py ir`.
 - `pool-juicios-ir`: consume el top-10 de las cuatro variantes para armar el pool de juicios de relevancia.
 - `tablas-respuesta`: toma `03_solape_modelos.csv` y `03_excluidos_por_filtro.csv` para la comparación TF-IDF vs. BM25 y con vs. sin filtro del reporte.
+
+## v2: lematización y ocho variantes (PRD v2 D26; WP-03)
+
+- `preproceso.lematizar` con spaCy `es_core_news_md` (alternativa `simplemma`), y
+  `tokenizar_pasaje(..., raiz="stem" | "lema")`. `scripts/02_indice.py --raiz lema` y
+  `scripts/03_ranking.py --v2` producen las 8 variantes {tfidf, bm25} × {con, sin}_filtro ×
+  {stem, lema} en `salida/v2/ranking_8_variantes.csv`.
+- Prueba bloqueante: las variantes stem son idénticas byte a byte a las de v1.

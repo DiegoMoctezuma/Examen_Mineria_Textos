@@ -111,3 +111,18 @@ T15 (PRD §13, `tests/`): "cambio de texto, modelo o regla; interrupción; dos p
 - `gold-anotacion`: muestra, `validar_gold()`, sustitución U13 y cierre del gold.
 - `reglas-gazetteer`: minado de siglas y uso de `config/gazetteer_extendido.csv`.
 - `indice-ranking`: stems para el resaltado de términos de la consulta.
+
+## v2: varios anotadores (PRD v2 D24; WP-01)
+
+- La pestaña Juicios pide quién juzga (lista cerrada de `config/v2/anotadores.yaml`, sin
+  contraseña) y lo recuerda en la sesión y en la URL (`?anotador=arturo`). Sin elegir, no muestra
+  pasajes ni botones.
+- `C.rutas(anotador)` apunta a `anotaciones/juicios_v2/<anotador>.csv` y a su historial;
+  `C.cargar_items(r)` devuelve solo los pares asignados con `origen = app`, con texto de
+  `data/pasajes.parquet`. Si la huella del texto difiere de la asignada, se bloquea
+  (`textos_cambiados`).
+- La app nunca lee el archivo de otro anotador; la pestaña Estado muestra conteos (no valores):
+  el propio a cada quien y el de todos al coordinador.
+- El archivo v1 `anotaciones/juicios_relevancia.csv` ya no se edita desde la app.
+- CLI: `make app-cli ANOTADOR=<id>`.
+- Pruebas: `tests/test_anotadores.py` y las de `tests/test_app.py` que usan `entorno_v2`.

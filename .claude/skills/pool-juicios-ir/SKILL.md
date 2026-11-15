@@ -174,3 +174,25 @@ Lista de aceptación (PRD §6.6, §13.2):
 - `indice-ranking`: produce el `ranking.csv` del que nace el pool.
 - `app-anotacion`: implementación de la pestaña "Juicios" y del autoguardado atómico.
 - `tablas-respuesta`: consume `data/mejor_modelo.json` para elegir el top-10 de la Tarea B.
+
+## v2: varios anotadores, agregación y acuerdo (PRD v2 D24, D27, D28, D29; WP-02, WP-05, WP-06)
+
+- **Archivos:** un CSV por persona en `anotaciones/juicios_v2/<anotador>.csv` con las mismas 4
+  columnas de v1 (`validar_juicios()` sirve tal cual). Lista de anotadores y lotes en
+  `config/v2/anotadores.yaml`; lógica en `src/mtx/anotadores.py`.
+- **Asignación:** `make asignar-juicios LOTE=n` agrega el lote a `data/v2/asignacion_juicios.csv`
+  (`lote, anotador, origen, orden, query_id, doc_id, passage_id, texto_sha256`). Cada par lo juzgan
+  todos los jueces del lote. `origen = v1` = juicios v1 importados con
+  `make importar-juicios ANOTADOR=x ORIGEN=ruta` (Diego, Luis y Arturo en el lote 1); no se editan.
+- **Lote 1:** los 176 pares v1, completo con los juicios v1 de Diego, Luis y Arturo (importados). **Lote 2:** pares nuevos del
+  pool v2 (unión de 8 variantes × 15 consultas, tope 450); Arturo, Bruno y Leo, o Luis en lugar de
+  Bruno si el pool queda el domingo 15 antes de las 20:00.
+- **Agregación (WP-02):** relevante = mayoría de 3 juicios válidos; un omitido no cuenta y el par
+  no se cierra. `scripts/05a_agregar_juicios.py` escribe `salida/v2/05a_juicios_agregados.csv` y el
+  `juicios_relevancia.csv` que lee el kit; nunca se edita a mano.
+- **Acuerdo:** Fleiss global y por consulta, Cohen por pareja, acuerdo observado. Es para el
+  reporte, nunca para descartar a un juez.
+- **Ganador v2 (D28):** mayor MAP entre las 4 variantes con filtro (stem y lema); empate → BM25
+  stem. El `ranking.csv` de la raíz conserva los 4 nombres de modelo de v1.
+- **Robustez (D29):** intervalo bootstrap por consultas, prueba de permutación pareada, P@10,
+  nDCG@10 y la comparación del MAP con pool v1 contra pool v2 (inflación por pool).

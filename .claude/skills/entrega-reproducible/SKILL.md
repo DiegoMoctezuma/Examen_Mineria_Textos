@@ -186,3 +186,13 @@ Cualquier recorte se registra en `docs/decisiones.md` con fecha, motivo y efecto
 - `reporte-pdf`: `make reporte`, conteo de páginas, lint de estilo y resultados autogenerados del README (condiciones 11 y 14).
 - `laminas-demo`: `make laminas` y `make demo`, guion con tiempo medido (condición 12).
 - `session-resume`: estado del repo y hito actual al retomar una sesión antes de correr `make entrega`.
+
+## v2: entrega final (PRD v2 §4, §9; WP-14)
+
+- Etiquetas: `v2-inicio` (aprobación del PRD v2), `reglas-fecha-v2` y `v2.0-entrega` el martes
+  24; la entrega es el miércoles 25 antes de las 18:00. `v1.0-entrega` no se mueve.
+- `make all-v2` reconstruye todo lo v2 desde un clon limpio; `make validar` agrega condiciones v2
+  (3 juicios por par, cierres, tiempo medido entre 15:00 y 20:00, láminas sin rutas).
+- README: equipo de 6 con "Leo Yahir", cifras v2, enlace a la demo web y "Uso de IA" actualizado.
+- Integración en `proyecto-final`; `main` no se toca hasta el merge final. Ramas `v2/wpXX-*` y
+  `anotacion/<anotador>` desde `proyecto-final`, pull request a ella; Diego integra.

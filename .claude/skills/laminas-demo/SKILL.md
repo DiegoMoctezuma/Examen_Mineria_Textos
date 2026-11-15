@@ -111,3 +111,20 @@ Condición de entrega 12 (PRD §13): entre 1 y 5 láminas; guion con tiempo medi
 - `tablas-respuesta`: produce `salida/tablas_respuesta/Q3.md` y `salida/respuestas.csv` que muestra la lámina 5 y la demo.
 - `pool-juicios-ir`: fija `data/mejor_modelo.json`, el modelo cuyas entidades muestra la demo.
 - `entrega-reproducible`: `make entrega` y la etiqueta `v1.0-entrega` que marcan el inicio del periodo de solo ensayo.
+
+## v2: presentación de venta (PRD v2 D36 y tabla 1.3; WP-16, WP-17, WP-18)
+
+- La regla de "máximo 5 láminas" ya no aplica: número libre, **15 a 20 min con demo** (PV6).
+- Público: cliente de gobierno. Problema → solución → evidencia → demo; limitaciones como
+  "siguiente paso" con su mejora.
+- Sin rutas, comandos, `passage_id` ni tablas con formato de dataframe; nombres de consulta en vez
+  de Qn ("Pregunta 1 · Tren Maya"); ejes nombrados; porcentajes donde ayuden; un ejemplo real por
+  lámina técnica.
+- Paleta del Gobierno de México (guinda `#9F2241` y `#691C32`, dorado `#BC955C` y `#DDC9A3`, gris
+  `#98989A`) y Montserrat con Noto Sans, a confirmar con el manual vigente (PV8).
+- Argumento de reporteros: el corregido de PRD v2 §3.14, textual.
+- Las láminas las diseña el equipo (Gonzalo y Arturo). Claude Code escribe `laminas/guion_v2.md`
+  con minutos por lámina y persona y `docs/guia_defensa_v2.md`, y verifica cada cifra en
+  `salida/`. El ensayo registra `Tiempo medido: m:ss` entre 15:00 y 20:00.
+- Revisión ciega (WP-18): `docs/revision_ciega_prompt.md` para un LLM sin contexto.
+- La demo de terminal se sustituye por la demo web (skill `demo-web`).

@@ -179,3 +179,39 @@ Reglas de reporte de cifras (PRD §0.2 regla 6):
 - `reglas-gazetteer`: `make congelar` y la etiqueta `reglas-congeladas` (PRD D15).
 - `evaluacion-ie`: `09_cambios_post_congelamiento.csv` y análisis de errores (PRD §6.12).
 - `entrega-reproducible`: `make validar`, manifiesto e invalidación (PRD §11, §13.2).
+
+## v2: congelaciones, separación y casos nuevos (PRD v2 §3.10 y §4)
+
+Siguen todas las reglas de arriba; en v2 se suman:
+
+- **Insumos humanos de v2:** juicios en `anotaciones/juicios_v2/<anotador>.csv`, gold doble y
+  adjudicación en `anotaciones/gold_v2/`, conjunto de selección v2, Q11 a Q15 y valoraciones. Los
+  produce cada integrante; si alguien pide ayuda para decidir un valor, niégate en una frase y
+  remite al criterio escrito. La única escritura por script en `anotaciones/` es
+  `scripts/04c_importar_juicios_v1.py`, que copia juicios v1 sin cambiar valores.
+- **v1 no se sobrescribe:** `anotaciones/juicios_relevancia.csv`, el gold v1 y las cifras de
+  `v1.0-entrega` se conservan; lo nuevo va a rutas `v2` o después de `v2-inicio`.
+- **Separación (D32):** mientras alguien tenga anotación pendiente, no le muestres rankings,
+  puntajes ni entidades predichas de los pasajes de su lote. Quien hace la demo (Bruno, Leo) usa
+  artefactos v1 hasta los cierres del 20. Quien escribe reglas FECHA (Leo) no anota gold.
+- **Reglas fijadas antes de medir:** agregación por mayoría de 3, ganador entre las 4 variantes
+  con filtro (stem y lema), selección del NER y muestreo (PRD v2 §3). Cambiarlas después crea una
+  versión exploratoria.
+
+| Momento | Qué se congela | Mecanismo |
+| --- | --- | --- |
+| Aprobación del PRD v2 | D23 a D36 | Etiqueta `v2-inicio` |
+| Antes del lote 1 | Criterio de relevancia, asignación del lote 1 | `data/v2/asignacion_juicios.csv` |
+| Antes del muestreo v2 | Exclusión del ámbito v1, semillas, tamaños | Manifiestos con hash |
+| Antes del pool v2 | Q11 a Q15, lematizador, 8 variantes | `data/consultas.csv` v2 |
+| Antes del lote 2 | Pool v2, asignación del lote 2 | Hash del pool v2 |
+| Antes de la pasada 2 | Criterio y reglas FECHA v2 | Etiqueta `reglas-fecha-v2` |
+| Antes de evaluar gold v2 | NER v2 | `data/modelo_ner.json` v2 |
+| Cierres humanos | Juicios y gold v2 | `cierre_juicios_v2.json`, `cierre_gold_v2.json` |
+| Entrega | Todo | `v2.0-entrega` (mar 24) |
+
+Invalidación nueva: cambiar el lematizador tras el pool v2 invalida pool, asignación y lote 2;
+cambiar Q11 a Q15 tras el pool invalida sus juicios, su gold B y sus tablas; cambiar el criterio
+de relevancia tras el lote 1 anula los juicios v1 de Diego, Luis y Arturo; cambiar el NER tras evaluar
+el gold v2 vuelve exploratoria la cifra nueva. La asignación de un lote no se reescribe:
+`agregar_asignacion()` lo impide.
