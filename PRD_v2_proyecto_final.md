@@ -121,7 +121,7 @@ juicios y el gold v1 (PRD v3.0 §11.1).
 | **Arturo** Jaramillo Salmerón | Contenido de la presentación: ejemplos, revisión ciega (WP-18), ensayo con cronómetro | Reporte: lectura y revisión | Juicios lote 2 (lunes 16); su lote 1 viene de v1 |
 | **Bruno** Ruiz Juarez | Demo web (líder, WP-15) | Reporte (WP-19) | Gold parte B y juicios lote 2 (lunes 16, miércoles 18 y viernes 20) |
 | **Leo** Carpio Angeles | Reglas de FECHA (WP-11) | Demo web | **Solo juicios** lote 2 (martes 17 a jueves 19); no anota gold |
-| **Luis** Ramirez Maza | Comparación de NER (WP-10) | Sección de IE del reporte, antes del 21 | Juicios lote 1 y selección (fin de semana) |
+| **Luis** Ramirez Maza | Comparación de NER (WP-10) | Sección de IE del reporte, antes del 21 | Selección (fin de semana); su lote 1 viene de v1 |
 
 Reglas de rol:
 
