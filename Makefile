@@ -1,7 +1,7 @@
 # Objetivos del PRD §10. Los que dependen de insumos humanos se detienen con un mensaje claro.
 PY := uv run python
 .PHONY: consultas setup contratos corpus explorar indice ranking pool app app-cli asignar-juicios importar-juicios evaluar-ir reglas congelar ner \
-        muestra-gold extraer evaluar-ie tablas resultados reporte laminas demo test test-lento \
+        muestra-gold muestra-gold-v2 extraer evaluar-ie tablas resultados reporte laminas demo test test-lento \
         validar entrega all limpiar
 
 setup:
@@ -48,6 +48,8 @@ ner:
 	$(PY) scripts/07_ner.py
 muestra-gold:
 	$(PY) scripts/08b_muestra_gold.py
+muestra-gold-v2:
+	$(PY) scripts/08b_muestra_gold.py --v2 --partes $(PARTES)
 extraer:
 	$(PY) scripts/08_extraer.py
 evaluar-ie:

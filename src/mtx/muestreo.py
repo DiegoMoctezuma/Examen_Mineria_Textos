@@ -176,3 +176,123 @@ def sortear(amb: pd.DataFrame, pasajes: pd.DataFrame, semilla: int = config.SEMI
         avisos.append(f"Solo {len(sel)} pasajes de selección disponibles (se esperaban "
                       f"{n_seleccion}).")
     return Muestra(gold, manifiesto(sel), excluidos, estratos, avisos)
+
+
+# =========================================================================== v2 (PRD v2 D31, WP-08)
+#
+# Tres partes nuevas, disjuntas entre sí y con todo pasaje que ya tuvo predicciones visibles en v1
+# (el ámbito IE de v1, 99 pasajes, que contiene al gold v1):
+#   - selección: 1 por consulta de Q1 a Q10;
+#   - parte A:   1 por consulta de Q1 a Q10;
+#   - parte B:   2 por consulta de Q11 a Q15 (se sortea el dom 15, con el pool v2).
+# Universo: pares del pool que aportó alguna variante con filtro (`*_con_filtro`), nunca el top-10
+# del ganador, para no esperar a los juicios. Semilla 42 y emparejamiento global (Kuhn) como en v1;
+# sin estratos de rango (con 1 plaza por consulta no aplican y en B el universo ya excluye el top-10
+# del ganador v1). Exclusión U13 antes del sorteo, igual que v1.
+
+PARTES_V2 = ("seleccion", "a", "b")
+ARCHIVO_PARTE_V2 = {"seleccion": "muestra_seleccion.csv", "a": "muestra_gold_a.csv",
+                    "b": "muestra_gold_b.csv"}
+SUBDIR_V2 = "v2"
+
+
+@dataclass
+class MuestraV2:
+    partes: dict[str, pd.DataFrame]
+    excluidos: pd.DataFrame
+    universo_pares: int
+    universo_pasajes: int
+    avisos: list[str] = field(default_factory=list)
+
+
+def universo_con_filtro(pool: pd.DataFrame, excluir: set[str] | frozenset[str]) -> pd.DataFrame:
+    """Pares del pool (`query_id, passage_id, doc_id, variantes`) que aportó alguna variante con
+    filtro, sin los pasajes de `excluir`. No usa rangos ni puntajes."""
+    con = pool["variantes"].astype(str).str.split("|").map(
+        lambda vs: any(v.endswith("_con_filtro") for v in vs))
+    u = pool[con & ~pool["passage_id"].isin(set(excluir))]
+    return u[["query_id", "passage_id", "doc_id"]].drop_duplicates().reset_index(drop=True)
+
+
+def sortear_v2(universo: pd.DataFrame, pasajes: pd.DataFrame,
+               partes: list[tuple[str, list[str], int]], semilla: int = config.SEMILLA,
+               protocolo: frozenset[str] | None = None, version: int = 1) -> MuestraV2:
+    """`universo`: `query_id, passage_id, doc_id` (ya sin los excluidos). `partes`: lista de
+    `(parte, consultas, por_consulta)`; las plazas se emparejan juntas, en ese orden, para que las
+    partes salgan disjuntas. `pasajes`: `passage_id, texto, inicio_cuerpo, texto_sha256`.
+    `MuestraInviable` si no existe asignación completa (no se amplía ni se duplica)."""
+    protocolo = protocolo if protocolo is not None else leer_protocolo()
+    info = pasajes.set_index("passage_id")
+    excl = []
+    for pid in sorted(set(universo["passage_id"])):
+        m = motivo_sustitucion(info.at[pid, "texto"], int(info.at[pid, "inicio_cuerpo"]),
+                               protocolo)
+        if m:
+            excl.append({"passage_id": pid, "motivo": m})
+    excluidos = pd.DataFrame(excl, columns=["passage_id", "motivo"])
+    eleg = universo[~universo["passage_id"].isin(set(excluidos["passage_id"]))]
+
+    rng = random.Random(semilla)
+    consultas = sorted({q for _, qs, _ in partes for q in qs}, key=_orden_natural)
+    faltan = [q for q in consultas if q not in set(universo["query_id"])]
+    if faltan:
+        raise MuestraInviable(faltan, "Esas consultas no tienen pares en el universo.")
+    preferencia = {}
+    for q in consultas:  # un orden de sorteo por consulta, fijo para la semilla
+        ids = sorted(eleg.loc[eleg["query_id"] == q, "passage_id"])
+        rng.shuffle(ids)
+        preferencia[q] = ids
+    plazas, cand = [], {}
+    for parte, qs, n in partes:
+        for q in sorted(qs, key=_orden_natural):
+            for k in range(n):
+                plazas.append((parte, q, k))
+                cand[(parte, q, k)] = preferencia[q]
+    asign = _emparejar(plazas, cand)
+    if asign is None:
+        raise MuestraInviable(sorted({p[1] for p in _plazas_sin_asignacion(plazas, cand)},
+                                     key=_orden_natural),
+                              "No se amplía el universo ni se duplican IDs.")
+    doc_de = dict(zip(universo["passage_id"], universo["doc_id"]))
+    out = {}
+    for parte, qs, n in partes:
+        filas = [(q, asign[(parte, q, k)]) for q in sorted(qs, key=_orden_natural)
+                 for k in range(n)]
+        df = pd.DataFrame(filas, columns=["query_id", "passage_id"])
+        df["doc_id"] = df["passage_id"].map(doc_de).astype(int)
+        df["texto_sha256"] = df["passage_id"].map(info["texto_sha256"])
+        df["semilla"] = semilla
+        df["version_muestra"] = version
+        df["_o"] = df["query_id"].map(_orden_natural)
+        out[parte] = df.sort_values(["_o", "passage_id"]).drop(columns="_o").reset_index(
+            drop=True)[COLUMNAS_MANIFIESTO]
+    return MuestraV2(out, excluidos, len(universo), int(universo["passage_id"].nunique()))
+
+
+def _plazas_sin_asignacion(plazas, candidatos) -> list:
+    fallan = []
+    for i in range(len(plazas)):
+        if _emparejar(plazas[: i + 1], candidatos) is None:
+            fallan.append(plazas[i])
+    return fallan
+
+
+def errores_muestra_v2(partes: dict[str, pd.DataFrame], excluir: set[str],
+                       esperado: dict[str, tuple[list[str], int]]) -> list[str]:
+    """Comprobación independiente del sorteo: tamaños por consulta, IDs únicos, partes disjuntas
+    entre sí y con `excluir` (ámbito v1 y gold v1)."""
+    err = []
+    vistos: dict[str, str] = {}
+    for parte, df in partes.items():
+        qs, n = esperado[parte]
+        cuenta = df["query_id"].value_counts()
+        if sorted(cuenta.index, key=_orden_natural) != sorted(qs, key=_orden_natural) or \
+                not cuenta.eq(n).all():
+            err.append(f"Parte {parte}: no hay {n} pasaje(s) por cada una de {', '.join(qs)}")
+        for pid in df["passage_id"]:
+            if pid in vistos:
+                err.append(f"{pid} aparece en las partes {vistos[pid]} y {parte}")
+            vistos[pid] = parte
+            if pid in excluir:
+                err.append(f"{pid} (parte {parte}) ya tuvo predicciones visibles en v1")
+    return err
