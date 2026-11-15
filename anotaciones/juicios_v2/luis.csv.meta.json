@@ -1,0 +1,11 @@
+{
+  "revision": 1,
+  "sha256": "d72ac90b69c3c9d24e6f1b088f00f478ce82302c88b1c2ee0cfee15f74c556e2",
+  "actualizado": "2026-11-14T20:14:19",
+  "origen": "importado_v1",
+  "lote": "1",
+  "ruta_origen": "juicios_relevancia.csv",
+  "sha256_origen": "cb3e4769ff430228bb78b3d06ce83272aa7b4a9a19e3ca72c48aec987b8a2860",
+  "sha256_pool_v1": "5284fa8e5d85a216cf035b503df09df94305443e0a94e97d623e56e787dcf4dd",
+  "sha256_criterios": "e846775fafc6c1587f2e5f5e3f946e37963739f7cb3dae0f51471e415856018c"
+}
