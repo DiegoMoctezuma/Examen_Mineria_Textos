@@ -13,10 +13,22 @@ Mera Montiel Gonzalo Sebastian, Moctezuma Ramirez Diego Rafael, Ramirez Maza Lui
 Proyecto final en equipo de 6; entrega el 2026-11-25 antes de las 18:00. Plan en
 `PRD_v2_proyecto_final.md`; progreso por paquete en `docs/harness/progreso/<wp>.md`.
 
-- WP-00 (arnés v2) y WP-01 (app multianotador, más la asignación del lote 1) hechos, sin commit.
-- Lote 1 completo: juicios v1 de Diego, Luis y Arturo importados (3 por par); PV12 cerrado.
-- Siguiente: commit, etiqueta `v2-inicio` y push cuando el alumno lo pida;
-  calibración antes del lote 2; WP-03 (lematización) y WP-04 (Q11 a Q15) para el domingo 15.
+- WP-00 (arnés v2) y WP-01 (app multianotador y asignación del lote 1) hechos y en la rama
+  `proyecto-final`, subida a GitHub el 14 (`d03f3c0`). `main` intacto en `84ab69d` hasta el merge final.
+- Lote 1 completo: juicios v1 de Diego, Luis y Arturo importados (3 por par, 103 unánimes y 73
+  por 2 a 1); PV12 cerrado. `make test`: 446 en verde.
+- Roles del PRD v2 aprobados el 14. Reparto por integrante entregado al alumno para el equipo.
+
+Pendiente, en orden:
+1. WP-08 y WP-09 (muestreo y app de gold doble): urgente, Luis solo anota la selección el dom 15.
+2. Aprobación de las reglas de PRD v2 §3 (D23 a D36) y etiqueta `v2-inicio`.
+3. Agregar a los 5 integrantes como colaboradores en GitHub (lo hace Diego).
+4. Dom 15: WP-03 (lematización), WP-04 (Q11 a Q15 con Arturo a mediodía), WP-05 (pool v2 y
+   asignación del lote 2 en la noche), calibración de 20 min antes del lote 2.
+5. PV7 (repo de FECHA del profesor), PV8 (manual de paleta), PV9 (límites de HF), PV10 (candidatos
+   NER), PV11 (spaCy en las 6 máquinas).
+
+Bloqueos v2: el repo de FECHA depende del profesor (PV7); WP-11 espera hasta el jue 19 como máximo.
 
 ## Completado
 
