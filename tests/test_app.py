@@ -36,6 +36,28 @@ def entorno(tmp_path, monkeypatch):
     return r
 
 
+@pytest.fixture
+def entorno_v2(entorno, tmp_path, monkeypatch):
+    """`entorno` más una lista de anotadores y una asignación de prueba: el lote 1 (todo el pool)
+    para arturo y bruno en la app y diego como v1. Devuelve las rutas de arturo."""
+    from mtx import anotadores as A
+    yaml_ = tmp_path / "anotadores.yaml"
+    shutil.copyfile(A.DIR_V2_CONFIG / "anotadores.yaml", yaml_)
+    monkeypatch.setenv("MTX_ANOTADORES", str(yaml_))
+    asig = tmp_path / "asignacion_juicios.csv"
+    monkeypatch.setenv("MTX_ASIGNACION", str(asig))
+    filas = A.asignar_lote(pool.leer_pool(entorno.pool), "1", ["arturo", "bruno"], ["diego"],
+                           A.cargar_anotadores())
+    filas.to_csv(asig, index=False)
+    return C.rutas("arturo")
+
+
+def _abrir_como(at, anotador="arturo"):
+    at.selectbox(key="elegir_anotador").select(anotador).run()
+    assert not at.exception
+    return at
+
+
 def _primeros(items, n=3, q="Q1"):
     return items[items["query_id"] == q].head(n)
 
@@ -235,19 +257,22 @@ def _app_juicios():
 
 
 @requiere_pool
-def test_app_juicios_bloquea_sin_criterio(entorno, monkeypatch):
+def test_app_juicios_bloquea_sin_criterio(entorno_v2, monkeypatch):
     from streamlit.testing.v1 import AppTest
-    monkeypatch.setenv("MTX_CRITERIOS_RELEVANCIA", str(entorno.criterios.with_name("no.md")))
-    at = AppTest.from_function(_app_juicios, default_timeout=60).run()
+    monkeypatch.setenv("MTX_CRITERIOS_RELEVANCIA", str(entorno_v2.criterios.with_name("no.md")))
+    at = _abrir_como(AppTest.from_function(_app_juicios, default_timeout=60).run())
     assert not at.exception
     assert any("criterios_relevancia.md" in e.value for e in at.error)
     assert at.button(key="rel").disabled and at.button(key="norel").disabled
 
 
 @requiere_pool
-def test_app_juicios_guarda_avanza_y_es_ciega(entorno):
+def test_app_juicios_guarda_avanza_y_es_ciega(entorno_v2):
     from streamlit.testing.v1 import AppTest
+    entorno = entorno_v2
     at = AppTest.from_function(_app_juicios, default_timeout=60).run()
+    assert not at.button  # sin anotador elegido no hay nada que juzgar
+    _abrir_como(at)
     assert not at.exception
     assert not at.button(key="rel").disabled
     visible = " ".join(m.value for m in at.markdown)
@@ -267,13 +292,14 @@ def test_app_juicios_guarda_avanza_y_es_ciega(entorno):
 
 
 @requiere_pool
-def test_app_juicios_no_regresa_a_q1_tras_juzgar_en_otra_consulta(entorno):
+def test_app_juicios_no_regresa_a_q1_tras_juzgar_en_otra_consulta(entorno_v2):
     """Regresión: la etiqueta del selector llevaba el contador "Qn · j/t". En el navegador, al
     cambiar el contador tras un clic, Streamlit no hallaba la etiqueta enviada y volvía a Q1
     (reproducido con navegador real). AppTest no reproduce ese envío, así que la causa se fija
     exigiendo etiquetas estables: el ID de la consulta, sin contadores."""
     from streamlit.testing.v1 import AppTest
-    at = AppTest.from_function(_app_juicios, default_timeout=60).run()
+    entorno = entorno_v2
+    at = _abrir_como(AppTest.from_function(_app_juicios, default_timeout=60).run())
     assert at.selectbox(key="consulta").options == [f"Q{i}" for i in range(1, 11)]
     at.selectbox(key="consulta").select("Q2").run()
     assert at.markdown[0].value.startswith('<p class="consulta">Q2:')
@@ -288,11 +314,12 @@ def test_app_juicios_no_regresa_a_q1_tras_juzgar_en_otra_consulta(entorno):
 
 
 @requiere_pool
-def test_app_juicios_permite_recorrer_y_revisar_todos_los_pasajes(entorno):
+def test_app_juicios_permite_recorrer_y_revisar_todos_los_pasajes(entorno_v2):
     """Siguiente avanza sin guardar; la lista muestra todos los pasajes con su juicio; el salto
     por número lleva a cualquiera; rejuzgar en una consulta completa avanza en orden."""
     from streamlit.testing.v1 import AppTest
-    at = AppTest.from_function(_app_juicios, default_timeout=60).run()
+    entorno = entorno_v2
+    at = _abrir_como(AppTest.from_function(_app_juicios, default_timeout=60).run())
     n = int(at.number_input(key="ir_Q1").max)
     texto = lambda: " ".join(m.value for m in at.markdown)
     at.button(key="siguiente").click().run()
@@ -316,13 +343,16 @@ def test_app_juicios_permite_recorrer_y_revisar_todos_los_pasajes(entorno):
 
 
 @requiere_pool
-def test_cli_juicios(entorno):
+def test_cli_juicios(entorno_v2):
     from rich.console import Console
 
     from mtx.app import cli
+    entorno = entorno_v2
     teclas = iter(["Q2", "1", "0", "o", "a", "s"])
     with open(os.devnull, "w") as nulo:
-        cli.juicios(entrada=lambda _: next(teclas), consola=Console(file=nulo))
+        cli.juicios("arturo", entrada=lambda _: next(teclas), consola=Console(file=nulo))
+        cli.juicios(None, entrada=lambda _: "s", consola=Console(file=nulo))  # sin anotador: nada
+    assert not (entorno.anotaciones / "juicios_relevancia.csv").exists()
     disco = pd.read_csv(entorno.juicios, dtype=str, keep_default_na=False)
     assert list(disco["query_id"]) == ["Q2"] * 3
     assert list(disco["relevante"]) == ["1", "0", ""]

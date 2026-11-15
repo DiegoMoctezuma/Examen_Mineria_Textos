@@ -25,7 +25,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from mtx import config, pool
+from mtx import anotadores, config, pool
 from mtx.preproceso import RE_TOKEN, tokenizar
 
 COLUMNAS_HISTORIAL = ["momento", "revision", "query_id", "passage_id", "anterior", "nuevo"]
@@ -37,18 +37,27 @@ ETIQUETAS = {"1": "Relevante", "0": "No relevante", "": "Omitido por ahora", Non
 
 @dataclass(frozen=True)
 class Rutas:
+    """Sin `anotador`, las rutas de v1 (`anotaciones/juicios_relevancia.csv`, ya cerrado). Con
+    `anotador`, las de v2: su archivo en `anotaciones/juicios_v2/` y sus pares asignados en
+    `data/v2/asignacion_juicios.csv` (PRD v2 D24)."""
     anotaciones: Path
     criterios: Path
     pool: Path
     pasajes: Path
     consultas: Path
+    anotador: str | None = None
+    asignacion: Path | None = None
 
     @property
     def juicios(self) -> Path:
+        if self.anotador:
+            return anotadores.ruta_juicios(self.anotaciones, self.anotador)
         return self.anotaciones / "juicios_relevancia.csv"
 
     @property
     def historial(self) -> Path:
+        if self.anotador:
+            return anotadores.ruta_historial(self.anotaciones, self.anotador)
         return self.anotaciones / "juicios_historial.csv"
 
     @property
@@ -75,9 +84,10 @@ class Rutas:
         return config.DIR_CONFIG / "criterios_anotacion.md"
 
 
-def rutas() -> Rutas:
-    """Rutas efectivas. `MTX_ANOTACIONES` y `MTX_CRITERIOS_RELEVANCIA` permiten que las pruebas
-    usen carpetas temporales sin tocar `anotaciones/` ni `config/`."""
+def rutas(anotador: str | None = None) -> Rutas:
+    """Rutas efectivas. `MTX_ANOTACIONES`, `MTX_CRITERIOS_RELEVANCIA`, `MTX_ASIGNACION` y
+    `MTX_ANOTADORES` permiten que las pruebas usen carpetas temporales sin tocar `anotaciones/`,
+    `config/` ni `data/`."""
     return Rutas(
         anotaciones=Path(os.environ.get("MTX_ANOTACIONES", config.DIR_ANOTACIONES)),
         criterios=Path(os.environ.get("MTX_CRITERIOS_RELEVANCIA",
@@ -85,6 +95,8 @@ def rutas() -> Rutas:
         pool=config.DIR_SALIDA / "04_pool.csv",
         pasajes=config.PASAJES_PARQUET,
         consultas=config.CONSULTAS_CSV,
+        anotador=anotador,
+        asignacion=anotadores.ruta_asignacion() if anotador else None,
     )
 
 
@@ -134,8 +146,13 @@ def leer_meta(ruta_csv: Path) -> dict:
 
 def cargar_items(r: Rutas | None = None) -> pd.DataFrame:
     """Pares del pool en orden de presentación, con lo que el anotador puede ver. Las columnas
-    de procedencia del pool (`variantes`, `mejor_rango_*`) no se cargan: modo ciego."""
+    de procedencia del pool (`variantes`, `mejor_rango_*`) no se cargan: modo ciego.
+
+    Con `r.anotador`, solo sus pares asignados para la app (`origen = app`), con el texto actual
+    de `data/pasajes.parquet` y la huella que se fijó al asignar (`texto_sha256_asignado`)."""
     r = r or rutas()
+    if r.anotador:
+        return _items_anotador(r)
     p = pd.read_csv(r.pool, dtype=str, keep_default_na=False,
                     usecols=["query_id", "passage_id", "doc_id", "fecha", "texto",
                              "texto_sha256"])
@@ -146,6 +163,31 @@ def cargar_items(r: Rutas | None = None) -> pd.DataFrame:
     p["inicio_cuerpo"] = p["passage_id"].map(meta["inicio_cuerpo"]).fillna(0).astype(int)
     p["orden"] = range(len(p))
     return p
+
+
+def _items_anotador(r: Rutas) -> pd.DataFrame:
+    a = anotadores.pares_de(anotadores.leer_asignacion(r.asignacion), r.anotador, origen="app")
+    meta = pd.read_parquet(r.pasajes, columns=["passage_id", "fecha", "texto", "texto_sha256",
+                                               "titulo", "interlocutor", "inicio_cuerpo"])
+    meta = meta[meta["passage_id"].isin(set(a["passage_id"]))].set_index("passage_id")
+    p = a[["query_id", "passage_id", "doc_id"]].copy()
+    p["texto_sha256_asignado"] = a["texto_sha256"]
+    for col in ("texto", "texto_sha256", "titulo", "interlocutor"):
+        p[col] = p["passage_id"].map(meta[col]).fillna("")
+    fechas = pd.to_datetime(meta["fecha"]).dt.strftime("%Y-%m-%d").fillna("")
+    p["fecha"] = p["passage_id"].map(fechas).fillna("")
+    p["inicio_cuerpo"] = p["passage_id"].map(meta["inicio_cuerpo"]).fillna(0).astype(int)
+    p["orden"] = range(len(p))
+    return p
+
+
+def textos_cambiados(items: pd.DataFrame) -> list[str]:
+    """`passage_id` cuyo texto actual ya no coincide con el que se asignó (o que desaparecieron).
+    Vacía en modo v1, donde esto lo vigila el hash del pool."""
+    if "texto_sha256_asignado" not in items:
+        return []
+    malos = items[items["texto_sha256"] != items["texto_sha256_asignado"]]
+    return sorted(set(malos["passage_id"]))
 
 
 def cargar_juicios(r: Rutas | None = None) -> tuple[pd.DataFrame, str]:
@@ -219,21 +261,29 @@ def guardar_juicio(items: pd.DataFrame, juicios: pd.DataFrame, token: str, query
 def insumos_actuales(r: Rutas | None = None) -> dict:
     """Hashes que se congelan con el primer juicio: pool (contenido) y criterio de relevancia."""
     r = r or rutas()
+    if r.anotador:  # v2: el pool crece por lotes; los textos se vigilan par por par
+        return {"sha256_criterios": sha256_ruta(r.criterios)}
     return {"sha256_pool": pool.hash_pool(pool.leer_pool(r.pool)) if r.pool.exists() else "",
             "sha256_criterios": sha256_ruta(r.criterios)}
 
 
-def cambios_en_insumos(r: Rutas | None = None) -> list[str]:
-    """Insumos congelados al primer juicio que cambiaron después (vacía si no hay juicios)."""
+def cambios_en_insumos(r: Rutas | None = None, items: pd.DataFrame | None = None) -> list[str]:
+    """Insumos congelados al primer juicio que cambiaron después (vacía si no hay juicios). En
+    v2, además, los pares asignados cuyo texto cambió desde la asignación (`items`)."""
     r = r or rutas()
+    avisos = []
+    if items is not None and textos_cambiados(items):
+        cambiados = textos_cambiados(items)
+        avisos.append(f"Cambió el texto de {len(cambiados)} pasajes asignados (corpus o "
+                      f"segmentación distintos): {cambiados[:5]}")
     meta = leer_meta(r.juicios)
     if not meta:
-        return []
+        return avisos
     actual = insumos_actuales(r)
     nombres = {"sha256_pool": "el pool (salida/04_pool.csv)",
                "sha256_criterios": "el criterio (config/criterios_relevancia.md)"}
-    return [f"Cambió {nombres[k]} después del primer juicio"
-            for k in nombres if k in meta and meta[k] != actual[k]]
+    return avisos + [f"Cambió {nombres[k]} después del primer juicio"
+                     for k in nombres if k in meta and k in actual and meta[k] != actual[k]]
 
 
 def progreso(items: pd.DataFrame, juicios: pd.DataFrame) -> pd.DataFrame:

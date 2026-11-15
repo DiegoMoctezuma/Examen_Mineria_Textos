@@ -1,4 +1,9 @@
-"""Pestaña Juicios (PRD §6.5): ciega al modelo, autoguardado atómico tras cada clic.
+"""Pestaña Juicios (PRD §6.5; v2 D24): ciega al modelo, autoguardado atómico tras cada clic.
+
+v2: al abrir pide quién juzga (lista cerrada de `config/v2/anotadores.yaml`, sin contraseña) y lo
+recuerda en la sesión y en la URL (`?anotador=arturo`). Solo muestra los pares asignados a esa
+persona y solo lee y escribe su archivo `anotaciones/juicios_v2/<anotador>.csv`: nunca los
+juicios de otros. El archivo v1 (`anotaciones/juicios_relevancia.csv`) ya no se edita aquí.
 
 Botones: Relevante (1), No relevante (0), Omitir por ahora, Anterior y Siguiente, con atajos de
 teclado `1`, `0`, `O`, `←` y `→`. Debajo, la lista de todos los pasajes de la consulta con el juicio
@@ -12,22 +17,70 @@ import html
 import pandas as pd
 import streamlit as st
 
-from mtx import consultas
+from mtx import anotadores, consultas
 from mtx.app import componentes as C
 
 ESTADO_CLASE = {"1": "estado-1", "0": "estado-0", "": "estado-omitido", None: ""}
 
 
-@st.cache_data(show_spinner="Cargando el pool…")
-def _items(sha_pool: str) -> pd.DataFrame:
-    """`sha_pool` solo sirve de llave de caché: si el pool cambia, se recarga."""
-    return C.cargar_items()
+@st.cache_data(show_spinner="Cargando tus pasajes…")
+def _items(anotador: str, sha_asignacion: str, mtime_pasajes: float) -> pd.DataFrame:
+    """Las llaves de caché recargan si cambia la asignación o los pasajes."""
+    return C.cargar_items(C.rutas(anotador))
+
+
+def _r() -> C.Rutas:
+    return C.rutas(st.session_state.anotador)
+
+
+_ESTADO_SESION = ("juicios", "token", "pos", "mensaje", "consulta")
+
+
+def _fijar_anotador() -> None:
+    ss = st.session_state
+    for k in _ESTADO_SESION:
+        ss.pop(k, None)
+    ss.anotador = ss.elegir_anotador
+    st.query_params["anotador"] = ss.anotador
+
+
+def _cambiar_anotador() -> None:
+    ss = st.session_state
+    for k in _ESTADO_SESION + ("anotador", "elegir_anotador"):
+        ss.pop(k, None)
+    st.query_params.pop("anotador", None)
+
+
+def _anotador() -> str | None:
+    """Id del anotador de esta sesión, o None mientras no elija (y entonces dibuja el selector)."""
+    ss = st.session_state
+    try:
+        lista = anotadores.cargar_anotadores()
+    except FileNotFoundError:
+        st.error(f"Falta {anotadores.ruta_anotadores()} (lista de anotadores v2).")
+        return None
+    url = st.query_params.get("anotador")
+    if "anotador" not in ss and url in lista:
+        ss.anotador = url
+    if ss.get("anotador") in lista:
+        a = lista[ss.anotador]
+        st.sidebar.markdown(f"Juzgas como **{html.escape(a.nombre)}**")
+        st.sidebar.button("Cambiar de anotador", on_click=_cambiar_anotador, width="stretch")
+        st.sidebar.divider()
+        return ss.anotador
+    st.subheader("¿Quién va a juzgar?")
+    st.selectbox("Tu nombre", list(lista), index=None, key="elegir_anotador",
+                 format_func=lambda i: lista[i].nombre, placeholder="Elige tu nombre",
+                 on_change=_fijar_anotador)
+    st.caption("Cada quien juzga solo sus pares y en su propio archivo. No verás los juicios de "
+               "nadie más, ni puntajes, rangos o modelos.")
+    return None
 
 
 def _iniciar(items: pd.DataFrame, forzar: bool = False) -> None:
     ss = st.session_state
     if forzar or "juicios" not in ss:
-        ss.juicios, ss.token = C.cargar_juicios()
+        ss.juicios, ss.token = C.cargar_juicios(_r())
         ss.pos = {}
         ss.mensaje = None
     for q, g in items.groupby("query_id", sort=False):
@@ -39,8 +92,9 @@ def _iniciar(items: pd.DataFrame, forzar: bool = False) -> None:
 def _guardar(items, q, pid, valor) -> bool:
     ss = st.session_state
     try:
-        ss.juicios, ss.token = C.guardar_juicio(items, ss.juicios, ss.token, q, pid, valor,
-                                                insumos=C.insumos_actuales())
+        r = _r()
+        ss.juicios, ss.token = C.guardar_juicio(items, ss.juicios, ss.token, q, pid, valor, r,
+                                                insumos=C.insumos_actuales(r))
         return True
     except C.ConflictoEdicion as e:
         ss.mensaje = ("error", f"{e} No se guardó nada.")
@@ -130,8 +184,8 @@ def _barra_lateral(items, prog) -> str:
     st.sidebar.divider()
     if st.sidebar.button("Guardar", width="stretch",
                          help="Cada clic ya se guarda solo; esto comprueba que el disco coincide"):
-        if C.sha256_ruta(C.rutas().juicios) == ss.token:
-            rev = C.leer_meta(C.rutas().juicios).get("revision", 0)
+        if C.sha256_ruta(_r().juicios) == ss.token:
+            rev = C.leer_meta(_r().juicios).get("revision", 0)
             ss.mensaje = ("exito", f"Todo guardado (revisión {rev}).")
         else:
             ss.mensaje = ("error", "El archivo cambió desde otra pestaña: recarga.")
@@ -146,11 +200,20 @@ def _barra_lateral(items, prog) -> str:
 
 
 def mostrar() -> None:
-    r = C.rutas()
-    if not r.pool.exists():
-        st.warning("Falta el pool: corre `make pool`.")
+    if _anotador() is None:
         return
-    items = _items(C.sha256_ruta(r.pool))
+    r = _r()
+    if not r.asignacion.exists():
+        st.warning("Falta la asignación de juicios v2: corre `make asignar-juicios LOTE=1`.")
+        return
+    if not r.pasajes.exists():
+        st.warning("Faltan los pasajes: corre `make corpus`.")
+        return
+    items = _items(r.anotador, C.sha256_ruta(r.asignacion), r.pasajes.stat().st_mtime)
+    if items.empty:
+        st.info("No tienes pares asignados para juzgar en la app. Si tus juicios vienen de v1, "
+                "ya están importados y no se editan aquí.")
+        return
     _iniciar(items)
     ss = st.session_state
     prog = C.progreso(items, ss.juicios)
@@ -161,7 +224,7 @@ def mostrar() -> None:
         bloqueos.append("Falta `config/criterios_relevancia.md`. El criterio lo escribe el "
                         "alumno antes del primer juicio (D07); hasta entonces no se puede juzgar.")
     bloqueos += [f"{c}. No se puede seguir juzgando: ver la skill `integridad-congelacion`."
-                 for c in C.cambios_en_insumos(r)]
+                 for c in C.cambios_en_insumos(r, items)]
     for b in bloqueos:
         st.error(b)
 

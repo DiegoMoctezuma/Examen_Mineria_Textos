@@ -1,20 +1,21 @@
-"""Alternativa sin Streamlit (PRD §7): `uv run python -m mtx.app.cli juicios` o `make app-cli`.
+"""Alternativa sin Streamlit (PRD §7): `make app-cli ANOTADOR=luis`, o
+`uv run python -m mtx.app.cli juicios --anotador luis`.
 
-Misma persistencia, mismo validador y mismo modo ciego que la app. Por ahora ofrece juicios;
-gold y demo se agregan en H5 y H6.
+Misma persistencia, mismo validador y mismo modo ciego que la app. v2 (D24): exige el anotador,
+muestra solo sus pares asignados y escribe solo `anotaciones/juicios_v2/<anotador>.csv`.
 
 Teclas: 1 = relevante, 0 = no relevante, o = omitir por ahora, a = anterior,
 c = cambiar de consulta, g = comprobar guardado, s = salir.
 """
 from __future__ import annotations
 
-import sys
+import argparse
 
 from rich.console import Console
 from rich.panel import Panel
 from rich.text import Text
 
-from mtx import consultas
+from mtx import anotadores, consultas
 from mtx.app import componentes as C
 
 AYUDA = "[1] relevante  [0] no relevante  [o] omitir  [a] anterior  [c] consulta  [g] guardado  [s] salir"
@@ -30,22 +31,31 @@ def _texto_rich(texto: str, inicio_cuerpo: int, consulta: str) -> Text:
     return t
 
 
-def juicios(entrada=input, consola: Console | None = None) -> None:
+def juicios(anotador: str | None, entrada=input, consola: Console | None = None) -> None:
     con = consola or Console()
-    r = C.rutas()
-    if not r.pool.exists():
-        con.print("Falta el pool: corre `make pool`.")
+    lista = anotadores.cargar_anotadores()
+    if anotador not in lista:
+        con.print("Indica quién juzga: `make app-cli ANOTADOR=<id>`, con id en "
+                  + ", ".join(lista) + ".")
+        return
+    r = C.rutas(anotador)
+    if not r.asignacion.exists():
+        con.print("Falta la asignación de juicios v2: corre `make asignar-juicios LOTE=1`.")
         return
     if not r.criterios.exists():
         con.print("Falta config/criterios_relevancia.md: el alumno lo escribe antes del primer "
                   "juicio (D07).")
         return
-    cambios = C.cambios_en_insumos(r)
+    items = C.cargar_items(r)
+    if items.empty:
+        con.print(f"{lista[anotador].nombre} no tiene pares asignados para juzgar en la app.")
+        return
+    cambios = C.cambios_en_insumos(r, items)
     if cambios:
         con.print(*cambios, "No se puede seguir juzgando: ver skill integridad-congelacion.",
                   sep="\n")
         return
-    items = C.cargar_items(r)
+    con.print(f"Juzgas como [bold]{lista[anotador].nombre}[/bold]. Tu archivo: {r.juicios}")
     cons = consultas.cargar().set_index("query_id")
     juicios_df, token = C.cargar_juicios(r)
     qids = list(dict.fromkeys(items["query_id"]))
@@ -109,14 +119,14 @@ def juicios(entrada=input, consola: Console | None = None) -> None:
 
 
 def main(argv: list[str] | None = None) -> None:
-    argv = sys.argv[1:] if argv is None else argv
-    modo = argv[0] if argv else "juicios"
-    if modo == "juicios":
-        juicios()
-    elif modo in ("gold", "demo"):
-        print(f"`{modo}` se agrega en H5 y H6; mientras tanto, la demo es `make demo Q=Q3`.")
+    ap = argparse.ArgumentParser(prog="python -m mtx.app.cli")
+    ap.add_argument("modo", nargs="?", default="juicios", choices=["juicios", "gold", "demo"])
+    ap.add_argument("--anotador", default=None)
+    args = ap.parse_args(argv)
+    if args.modo == "juicios":
+        juicios(args.anotador or None)
     else:
-        print("Uso: python -m mtx.app.cli [juicios|gold|demo]")
+        print(f"`{args.modo}` no está en la CLI; la demo es `make demo Q=Q3`.")
 
 
 if __name__ == "__main__":

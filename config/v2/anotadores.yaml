@@ -1,0 +1,27 @@
+# Anotadores y lotes de juicios v2 (PRD v2 D24). Lista cerrada: la app pide elegir uno al abrir.
+# `id` es el nombre del archivo anotaciones/juicios_v2/<id>.csv; no se cambia una vez que hay juicios.
+anotadores:
+  - id: diego
+    nombre: Diego Rafael Moctezuma Ramirez
+    coordinador: true
+  - id: gonzalo
+    nombre: Gonzalo Sebastian Mera Montiel
+  - id: arturo
+    nombre: Arturo Jaramillo Salmerón
+  - id: bruno
+    nombre: Bruno Ruiz Juarez
+  - id: leo
+    nombre: Leo Yahir Carpio Angeles
+  - id: luis
+    nombre: Luis Ramirez Maza
+
+# Cada par de un lote lo juzgan todos sus jueces (3 por par). `jueces_v1` son juicios de v1 que
+# se importan sin cambios con scripts/04c_importar_juicios_v1.py y no se editan en la app.
+lotes:
+  "1":
+    descripcion: Los 176 pares del pool v1
+    pool: salida/04_pool.csv
+    jueces: []
+    jueces_v1: [diego, luis, arturo]
+  # "2": se define en WP-05 con el pool v2 (Arturo, Bruno y Leo; Luis si el pool queda el dom 15
+  # antes de las 20:00).

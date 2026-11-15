@@ -35,3 +35,5 @@ config/*.bak
 config/*.tmp
 laminas/~$*
 laminas/_vista/
+anotaciones/juicios_v2/*.tmp
+anotaciones/juicios_v2/*.bak
