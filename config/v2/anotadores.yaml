@@ -23,8 +23,7 @@ lotes:
     pool: salida/04_pool.csv
     jueces: []
     jueces_v1: [diego, luis, arturo]
-  # "2": se define en WP-05 con el pool v2 (Arturo, Bruno y Leo; Luis si el pool queda el dom 15
-  # antes de las 20:00).
+  # "2": se define en WP-05 con el pool v2 (Arturo, Bruno y Leo).
 
 # Gold v2 (PRD v2 D31 y D33; WP-09). Cada parte nueva la anotan 2 personas por separado y en modo
 # ciego, en anotaciones/gold_v2/<id>.csv; la adjudica un tercero que no la anotó, en
@@ -39,8 +38,8 @@ gold:
     seleccion:
       nombre: Selección
       manifiesto: v2/muestra_seleccion.csv
-      anotadores: [diego, luis]
-      adjudicador: arturo
+      anotadores: [diego, arturo]  # Arturo sustituye a Luis (replanificación del 2026-11-21)
+      adjudicador: gonzalo
       pasadas: [1, 2]
     a:
       nombre: Parte A
