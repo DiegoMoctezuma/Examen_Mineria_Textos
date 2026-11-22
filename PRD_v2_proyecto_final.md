@@ -1,7 +1,7 @@
 # PRD v2 · Proyecto final · Recuperación y extracción de información en las mañaneras
 
 **Versión:** 2.0 · 15 de noviembre de 2026 · PV1 a PV6 confirmados el 14 de noviembre; roles
-aprobados el 14 de noviembre; reglas de la sección 3 (D23 a D36) aprobadas el 15 de noviembre (etiqueta `v2-inicio`); calendario y reparto replanificados el 21 de noviembre (secciones 2 y 7)
+aprobados el 14 de noviembre; reglas de la sección 3 (D23 a D36) aprobadas el 15 de noviembre (etiqueta `v2-inicio`); calendario y reparto replanificados el 21 de noviembre y, sin Bruno, el 22 (secciones 2 y 7)
 **Base:** `PRD_unificado_examen1_mineria_textos.md` (v3.0) y la entrega `v1.0-entrega`.
 **Plazo:** miércoles 25 de noviembre de 2026, antes de las 18:00 (hora de la Ciudad de México).
 **Destinatarios:** el equipo Datisa (6 integrantes) y Claude Code, que trabaja en cada computadora con el arnés de este repositorio (`CLAUDE.md` y `.claude/skills/`).
@@ -117,11 +117,11 @@ juicios y el gold v1 (PRD v3.0 §11.1).
 | Integrante | Frente principal | Apoyo | Anota |
 | --- | --- | --- | --- |
 | **Diego** Moctezuma Ramirez | Integración, coordinación, app multianotador e IR (WP-00 a WP-07); comparación de NER (WP-10) desde el 21 | Diseño de láminas | Selección, gold parte A y FECHA de los 20 de v1; adjudica la parte B |
-| **Gonzalo** Mera Montiel | Presentación (líder, WP-17) | Reporte (WP-19) | Gold partes A y B; adjudica la selección |
-| **Arturo** Jaramillo Salmerón | Contenido de la presentación: ejemplos, revisión ciega (WP-18), ensayo con cronómetro | Reporte: lectura y revisión | Selección (en lugar de Luis desde el 21) y juicios lote 2; su lote 1 viene de v1 |
-| **Bruno** Ruiz Juarez | Demo web (líder, WP-15) | Reporte (WP-19) | Gold parte B y juicios lote 2; adjudica la parte A |
-| **Leo** Carpio Angeles | Reglas de FECHA (WP-11) | Demo web | **Solo juicios** lote 2; no anota gold |
-| **Luis** Ramirez Maza | Sección de IE del reporte (mar 24) | Revisión del reporte | Nada nuevo (no puede del 21 al 23); su lote 1 viene de v1 |
+| **Gonzalo** Mera Montiel | Presentación (líder, WP-17) | Reporte (WP-19, líder) | Gold partes A y B; juicios lote 2; adjudica la selección |
+| **Arturo** Jaramillo Salmerón | Contenido de la presentación: ejemplos, revisión ciega (WP-18), ensayo con cronómetro | Reporte: lectura y revisión | Selección (en lugar de Luis) y gold parte B (en lugar de Bruno); juicios lote 2; su lote 1 viene de v1 |
+| ~~**Bruno** Ruiz Juarez~~ | Dejó el equipo el 22 de noviembre; su trabajo se repartió (`docs/decisiones.md`) | — | — |
+| **Leo** Carpio Angeles | Reglas de FECHA (WP-11); demo web (líder, WP-15, desde el 22) | — | **Solo juicios** lote 2; no anota gold |
+| **Luis** Ramirez Maza | Sección de IE del reporte y README (mar 24) | Revisión del reporte | Adjudica la parte A y valora tablas el mar 24 (no puede del 21 al 23); su lote 1 viene de v1 |
 
 Reglas de rol:
 
@@ -129,7 +129,7 @@ Reglas de rol:
   pasajes que vio anotados.
 - La comparación de NER (Diego desde el 21) infiere solo sobre los pasajes de la selección y solo
   después de anotarla; sobre los pasajes del gold no corre ningún NER v2 hasta `cierre_gold_v2.json`.
-- Quien desarrolla la demo (Bruno, Leo) trabaja con artefactos v1 hasta los cierres (lun 23 y
+- Quien desarrolla la demo (Leo) trabaja con artefactos v1 hasta los cierres (lun 23 y
   mar 24 en la replanificación del 21; sección 3.10).
 
 ### 2.2 Disponibilidad declarada para anotar
@@ -154,14 +154,13 @@ adjudicado. El primer lote de cada persona se mide y la tabla se corrige en `doc
 
 | Integrante | Tareas | Horas |
 | --- | --- | --- |
-| Diego | Selección (10), gold parte A (10), FECHA de 40 pasajes (selección, A y los 20 de v1), adjudicación de la parte B | ~5.9 |
-| Luis | Nada nuevo; sus juicios v1 ya cubren el lote 1 | 0 |
-| Arturo | Selección (10) con su FECHA, juicios lote 2 (~200); su lote 1 viene de v1 | ~3.9 |
-| Gonzalo | Gold parte A (10), gold parte B (10), FECHA de esos 20, adjudicación de la selección | ~4.9 |
-| Bruno | Gold parte B (10) con su FECHA, juicios lote 2 (~200), adjudicación de la parte A | ~4.4 |
+| Diego | Selección (10), gold parte A (10), FECHA de 40 pasajes (selección, A y los 20 de v1), adjudicación de la parte B | ~6.0 |
+| Luis | Adjudicación de la parte A (las dos pasadas); sus juicios v1 ya cubren el lote 1 | ~1.0 |
+| Arturo | Selección (10) y gold parte B (10) con su FECHA, juicios lote 2 (~200) | ~6.1 |
+| Gonzalo | Gold parte A (10) y parte B (10) con su FECHA, juicios lote 2 (~200), adjudicación de la selección | ~6.6 |
 | Leo | Juicios lote 2 (~200) | ~1.7 |
 
-Replanificado el 21 de noviembre; la pasada 2 (solo FECHA) se estima en 3 min por pasaje.
+Replanificado el 21 de noviembre y el 22 sin Bruno; la pasada 2 (solo FECHA) se estima en 3 min por pasaje.
 
 ---
 
@@ -192,8 +191,8 @@ Quedan fijas al aprobar este PRD. Cada una indica cuándo se congela.
   fila guarda la huella del texto; `origen = v1` marca los juicios importados, que la app no edita.
   La asignación de un lote no se reescribe una vez creada:
   - Lote 1: los 176 pares v1 → Diego, Luis y Arturo, los tres importados de v1; nadie los juzga en la app.
-  - Lote 2: los pares nuevos → Arturo, Bruno y Leo. Si el pool v2 queda congelado el domingo 15 antes
-    de las 20:00, Luis toma la parte de Bruno, que queda de reserva (Luis no anota del 21 al 23).
+  - Lote 2: los pares nuevos → Arturo, Gonzalo y Leo (Gonzalo en lugar de Bruno, que dejó el equipo
+    el 22; Luis no anota del 21 al 23).
 - **Ciego:** la app no muestra puntajes, rangos, variantes, juicios de otros ni el avance de los demás.
 - **Agregación:** relevante = mayoría (≥ 2 de 3). Los omitidos no cuentan: un par con menos de 3
   juicios válidos no se cierra. Lo que lee el kit, `juicios_relevancia.csv`, lo genera un script desde
@@ -271,12 +270,13 @@ Complementan la cifra oficial; no la sustituyen.
   - Gold parte B: 2 por consulta de Q11 a Q15 (10).
   - Semilla 42, emparejamiento global como en `muestreo.py`; selección, A y B disjuntas.
 - **Doble anotación:** cada pasaje nuevo lo anotan 2 personas por separado, en modo ciego.
-  - Selección: Diego y Luis.
+  - Selección: Diego y Arturo (Arturo en lugar de Luis desde el 21).
   - Parte A: Diego y Gonzalo.
-  - Parte B: Gonzalo y Bruno.
+  - Parte B: Gonzalo y Arturo (Arturo en lugar de Bruno desde el 22).
 - **Adjudicación humana:** un tercero que no anotó el pasaje resuelve los desacuerdos en una pestaña
   nueva. Ve las dos anotaciones y nunca predicciones. El resultado es el gold oficial del pasaje.
-  Adjudicadores: Arturo la selección, Bruno la parte A y Diego la parte B.
+  Adjudicadores: Gonzalo la selección, Luis la parte A y Diego la parte B (cambios de personas del 21
+  y el 22; la regla no cambia).
 - **Acuerdo entre anotadores antes de adjudicar:** F1 exacto entre los dos, por tipo. Es el **techo
   humano** contra el que se lee el F1 del sistema (S7a).
 - **Gold v1:** los 20 pasajes no se reanotan, salvo FECHA si cambia el criterio (D32).
@@ -557,8 +557,7 @@ calendario de la sección 7.
 
 - **Skill:** `tablas-respuesta`.
 - **Archivos:** `config/tablas_respuesta.yaml` (Q11 a Q15), `scripts/10_tablas.py`.
-- **Humano:** valoraciones de las 15 tablas, repartidas entre Gonzalo, Arturo y Bruno el sábado 21 y el
-  domingo 22.
+- **Humano:** valoraciones de las 15 tablas, repartidas entre Gonzalo, Arturo y Luis el martes 24.
 
 ### WP-14 · Reproducibilidad v2 (Diego · P0 · lun 23 y mar 24)
 
@@ -569,10 +568,10 @@ calendario de la sección 7.
     etiquetas en orden y cifras del reporte presentes en `salida/v2/`.
   - Clon limpio y etiqueta `v2.0-entrega`.
 
-### WP-15 · Demo web pública (Bruno y Leo · P0 · lun 16 a dom 22)
+### WP-15 · Demo web pública (Leo desde el 22, antes Bruno · P0 · hasta el mar 24)
 
 - **Skill:** `demo-web`, creada en WP-00.
-- **Tecnología:** la deciden Bruno y Leo antes del lunes 16 y se registra. Recomendación: Streamlit que
+- **Tecnología:** la decide Leo (antes Bruno y Leo) y se registra. Recomendación: Streamlit que
   reusa `ranking.buscar()` y los componentes de la app, publicado en un Space de Hugging Face (PV:
   verificar límites del plan gratuito). Los artefactos pesan unos 200 MB: pasajes 70, índice 45 y
   TF-IDF 67. Streamlit Community Cloud probablemente no alcanza en memoria (PV).
@@ -626,7 +625,7 @@ calendario de la sección 7.
   respuesta en `docs/revision_ciega_respuesta.md`.
 - El equipo decide qué cambios toma.
 
-### WP-19 · Reporte y README v2 (Gonzalo y Bruno; Luis la sección IE el mar 24 · P0 · mar 24)
+### WP-19 · Reporte y README v2 (Gonzalo; Luis la sección IE y el README, Arturo la revisión · P0 · mar 24)
 
 - **Skill:** `reporte-pdf`.
 - `reporte/reporte_v2.md` con las 8 secciones, comparación v1 → v2 y los tres cortes `[VALIDAR]`.
@@ -659,10 +658,10 @@ calendario de la sección 7.
 | `src/mtx/app/`, `anotadores.py`, `acuerdo.py`, `pool.py`, `muestreo.py`, `gold.py`, `preproceso.py`, `indice.py`, `ranking.py`, `evaluacion.py`, `booleano.py` | Diego | Solo lectura |
 | `src/mtx/ner_modelo.py`, `config/ner.yaml` | Luis | Solo lectura |
 | `src/mtx/reglas.py` (bloque FECHA), `tests/test_reglas.py` | Leo | Solo lectura |
-| `src/mtx/web/`, `presentacion.py`, archivos del Space | Bruno y Leo | Solo lectura |
+| `src/mtx/web/`, `presentacion.py`, archivos del Space | Leo | Solo lectura |
 | `src/mtx/figuras_v2.py`, `config/v2/estilo.yaml` | Gonzalo (con Diego) | Solo lectura |
 | `laminas/` | Gonzalo y Arturo | Solo lectura |
-| `reporte/`, `README.md` | Gonzalo y Bruno | Luis la sección IE |
+| `reporte/`, `README.md` | Gonzalo (reporte) y Luis (README) | Luis la sección IE |
 | `anotaciones/juicios_v2/<x>.csv`, `anotaciones/gold_v2/<x>.csv` | La app, por la persona `x` | Nadie más |
 | `CLAUDE.md`, `.claude/skills/`, `docs/decisiones.md`, `docs/harness/PROGRESS.md` | Diego | Proponen por pull request |
 
@@ -690,15 +689,15 @@ en la historia de git de este archivo.
 | Día | Claude Code y técnica | Humano | Puerta |
 | --- | --- | --- | --- |
 | **Sáb 21** | Selección con Arturo en lugar de Luis y Gonzalo como adjudicador; WP-03; WP-04 (propuesta) | Diego pregunta al profesor por el repo de FECHA (PV7); **selección**, pasada 1 (Diego y Arturo); gold A, pasada 1 (Diego y Gonzalo); borrador del criterio FECHA v2 (Gonzalo y Diego) | — |
-| **Dom 22** | WP-05 y asignación del lote 2; WP-08 (B); WP-10 sobre la selección adjudicada; WP-11; WP-15 y WP-16 con datos v1 | Q11 a Q15 `[VALIDAR]` (Arturo, 10:00); criterio FECHA v2 `[VALIDAR]` (12:00); adjudicación de la selección, pasada 1 (Gonzalo); calibración de 20 min y lote 2 (Arturo, Bruno y Leo); gold A termina; gold B, pasada 1 (Gonzalo y Bruno) | Pool v2 congelado (14:00); `modelo_ner.json` v2 en la noche |
-| **Lun 23** | `reglas-fecha-v2` a mediodía; WP-02 (agregación); WP-06 oficial; WP-15 a WP-17 | Lote 2 termina (18:00); gold B, pasada 1 termina; pasada 2 de FECHA desde la etiqueta (los mismos anotadores; Diego también los 20 de v1); adjudicación de A (Bruno) y B (Diego), pasada 1 | `cierre_juicios_v2` en la noche |
-| **Mar 24** | WP-12, WP-13 y robustez de WP-06 en la mañana; figuras y demo con datos v2; WP-07; WP-14 en la noche | Adjudicación de la pasada 2 (Gonzalo, Bruno y Diego) antes de las 10:00; valoraciones (Gonzalo, Arturo y Bruno) al mediodía; láminas; reporte, cortes 1 a 3 (Luis: sección IE); revisión ciega (Arturo) | `cierre_gold_v2` (10:00); demo pública (20:00) |
-| **Mié 25** | `make entrega` desde clon limpio; merge a `main` | Ensayo cronometrado (`Tiempo medido: m:ss`) en la mañana; entrega antes de las 18:00 | `v2.0-entrega` antes de las 14:00 |
+| **Dom 22** | Sin Bruno (sale del equipo). Desde las 13:00: WP-03; WP-04 (herramienta); en la noche WP-05, asignación del lote 2 y WP-08 (B) | Diego pregunta al profesor (PV7); **selección**, pasada 1 (Diego y Arturo); gold A, pasada 1 (Gonzalo; Diego al terminar la selección); Q11 a Q15 `[VALIDAR]` (Diego y Arturo, 17:00); borrador del criterio FECHA v2 (Gonzalo y Diego, noche); Leo toma la demo | Pool v2 congelado y parte B sorteada (21:00) |
+| **Lun 23** | WP-10 sobre la selección adjudicada; `reglas-fecha-v2` (17:00); WP-02 y WP-06 oficial en la noche; WP-15 a WP-17 con datos v1 | Calibración de 20 min (Arturo, Gonzalo y Leo, 9:00) y lote 2 hasta las 22:00; adjudicación de la selección, pasada 1 (Gonzalo, mañana); criterio FECHA v2 `[VALIDAR]` (11:00); gold A termina (Diego); gold B, pasada 1 (Gonzalo y Arturo); pasada 2 de FECHA desde la etiqueta (Diego, Gonzalo y Arturo); adjudicación de B, pasada 1 (Diego, noche) | `modelo_ner.json` v2 (15:00); `cierre_juicios_v2` (noche) |
+| **Mar 24** | WP-12 y WP-13 al mediodía; figuras y demo con datos v2; WP-06 robustez y WP-07 si sobra; WP-14 en la noche | Adjudicación de A, las dos pasadas (Luis, 8:00 a 11:00); de la pasada 2 de la selección (Gonzalo) y de B (Diego); valoraciones (Gonzalo, Arturo y Luis, 16:00); láminas; reporte (Gonzalo; Luis la sección IE y el README; Arturo revisa) | `cierre_gold_v2` (12:00); demo pública (22:00) |
+| **Mié 25** | `make entrega` desde clon limpio; merge a `main` | Ensayo cronometrado (`Tiempo medido: m:ss`) en la mañana; revisión ciega si da tiempo (Arturo); entrega antes de las 18:00 | `v2.0-entrega` antes de las 14:00 |
 
-La pasada 2 de FECHA se abre con `reglas-fecha-v2` (lun 23 a mediodía) y la hacen los mismos
-anotadores de cada pasaje (D33). Sin recortes no hay margen: el último momento para el recorte 2
-(parte B de 5) es antes de sortear B el dom 22, y para el recorte 5 (3 consultas nuevas), antes del
-pool v2. Si a las 14:00 del dom 22 la selección o el pool no están cerrados, Diego decide ahí.
+La pasada 2 de FECHA se abre con `reglas-fecha-v2` (lun 23, 17:00) y la hacen los mismos anotadores de
+cada pasaje (D33). El sábado 21 no hubo avance y Bruno dejó el equipo el 22: se mantiene la parte B de
+10 (decisión del 22, antes de sortearla). Sin recortes no hay margen; el recorte 5 (3 consultas nuevas)
+solo es posible antes del pool v2 (dom 22, 21:00).
 
 ---
 
@@ -760,7 +759,7 @@ Si el plazo peligra, se recorta en este orden y se avisa al equipo:
 | PV1 a PV6 | Sección 0.3 | Equipo | Confirmados el 14 de noviembre (PV4 por defecto) |
 | PV7 | Repo de FECHA del profesor: llegó (notebook "Assignment 1" de un curso de Coursera con `dates.txt`, en `extra/`, sin versionar). Falta que el profesor aclare qué espera y si se puede citar | Diego pregunta | Dom 22, 12:00 |
 | PV8 | Paleta y tipografía del manual vigente del Gobierno de México | Gonzalo | Lun 16 |
-| PV9 | Límites del plan gratuito de Hugging Face Spaces y Streamlit Cloud | Bruno | Lun 16 |
+| PV9 | Límites del plan gratuito de Hugging Face Spaces y Streamlit Cloud | Leo | Lun 23 |
 | PV10 | Disponibilidad y revisión de cada candidato NER en Hugging Face | Luis | Lun 16 |
 | PV11 | spaCy `es_core_news_md` instalable en las 6 máquinas (macOS, Windows y Linux) | Diego | Dom 15 |
 | PV12 | Luis y Arturo confirman que juzgaron con el criterio de relevancia, sin ver puntajes ni rangos ni los juicios de otros. Luis: que su Excel no traía rangos, puntajes ni variantes. **Cerrado el 14 de noviembre** (confirmado por medio de Diego); CSV importados | Luis y Arturo | Sáb 14 |

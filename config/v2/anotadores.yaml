@@ -8,7 +8,7 @@ anotadores:
     nombre: Gonzalo Sebastian Mera Montiel
   - id: arturo
     nombre: Arturo Jaramillo Salmerón
-  - id: bruno
+  - id: bruno  # dejó el equipo el 2026-11-22; sin lotes ni partes del gold
     nombre: Bruno Ruiz Juarez
   - id: leo
     nombre: Leo Yahir Carpio Angeles
@@ -23,7 +23,7 @@ lotes:
     pool: salida/04_pool.csv
     jueces: []
     jueces_v1: [diego, luis, arturo]
-  # "2": se define en WP-05 con el pool v2 (Arturo, Bruno y Leo).
+  # "2": se define en WP-05 con el pool v2 (Arturo, Gonzalo y Leo; Bruno dejó el equipo el 22).
 
 # Gold v2 (PRD v2 D31 y D33; WP-09). Cada parte nueva la anotan 2 personas por separado y en modo
 # ciego, en anotaciones/gold_v2/<id>.csv; la adjudica un tercero que no la anotó, en
@@ -45,12 +45,12 @@ gold:
       nombre: Parte A
       manifiesto: v2/muestra_gold_a.csv
       anotadores: [diego, gonzalo]
-      adjudicador: bruno
+      adjudicador: luis  # Bruno dejó el equipo el 2026-11-22; Luis adjudica el mar 24
       pasadas: [1, 2]
     b:
       nombre: Parte B
       manifiesto: v2/muestra_gold_b.csv
-      anotadores: [gonzalo, bruno]
+      anotadores: [gonzalo, arturo]  # Arturo en lugar de Bruno (2026-11-22)
       adjudicador: diego
       pasadas: [1, 2]
     v1:
