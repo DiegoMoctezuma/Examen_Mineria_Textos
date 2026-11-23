@@ -66,5 +66,107 @@
         "sha256": "3fa2cae533c6abb38184a6080b4ccf00eef8bce76a22c7cdb0aa5ea7c187dcda"
       }
     }
+  },
+  "b": {
+    "fecha": "2026-11-23T17:23:06",
+    "semilla": 42,
+    "regla": "PRD v2 D31: pool con filtro, sin el ámbito IE ni el gold v1; emparejamiento global; sin estratos; exclusión U13 antes del sorteo",
+    "pool": "salida/v2/04_pool.csv",
+    "sha256_pool": "1965a2f86bcf349b132024eef01fd0bf732e62c30ac62e2ae8d9d2dc148fd94b",
+    "universo_pares": 151,
+    "universo_pasajes": 151,
+    "excluidos_u13": [
+      {
+        "passage_id": "1038_78",
+        "motivo": "menos de 25 palabras de contenido (22)"
+      },
+      {
+        "passage_id": "1097_62",
+        "motivo": "menos de 25 palabras de contenido (19)"
+      },
+      {
+        "passage_id": "1159_57",
+        "motivo": "menos de 25 palabras de contenido (15)"
+      },
+      {
+        "passage_id": "1217_13",
+        "motivo": "menos de 25 palabras de contenido (22)"
+      },
+      {
+        "passage_id": "1261_3",
+        "motivo": "menos de 25 palabras de contenido (14)"
+      },
+      {
+        "passage_id": "1475_61",
+        "motivo": "menos de 25 palabras de contenido (19)"
+      },
+      {
+        "passage_id": "1782_43",
+        "motivo": "menos de 25 palabras de contenido (20)"
+      },
+      {
+        "passage_id": "2031_55",
+        "motivo": "menos de 25 palabras de contenido (23)"
+      },
+      {
+        "passage_id": "2143_29",
+        "motivo": "menos de 25 palabras de contenido (19)"
+      },
+      {
+        "passage_id": "253_104",
+        "motivo": "menos de 25 palabras de contenido (19)"
+      },
+      {
+        "passage_id": "256_99",
+        "motivo": "menos de 25 palabras de contenido (24)"
+      },
+      {
+        "passage_id": "310_91",
+        "motivo": "menos de 25 palabras de contenido (20)"
+      },
+      {
+        "passage_id": "445_68",
+        "motivo": "menos de 25 palabras de contenido (16)"
+      },
+      {
+        "passage_id": "564_91",
+        "motivo": "menos de 25 palabras de contenido (17)"
+      },
+      {
+        "passage_id": "675_35",
+        "motivo": "menos de 25 palabras de contenido (20)"
+      },
+      {
+        "passage_id": "753_84",
+        "motivo": "menos de 25 palabras de contenido (19)"
+      },
+      {
+        "passage_id": "933_33",
+        "motivo": "menos de 25 palabras de contenido (23)"
+      },
+      {
+        "passage_id": "948_46",
+        "motivo": "menos de 25 palabras de contenido (23)"
+      }
+    ],
+    "exclusion_v1": {
+      "etiqueta": "v1.0-entrega",
+      "modelo_ir_v1": "bm25_con_filtro",
+      "ambito_ie_v1": 99,
+      "gold_v1": 20,
+      "gold_v1_dentro_del_ambito": 20,
+      "sha256_ranking_v1": "37ffa3e4367faf8d48f069afd3570ea44a44b4016a33cd1e9da8d92a88ec7f10",
+      "sha256_muestra_gold_v1": "871edd0911f392d87e000c8c8156371f05bea06e81d19efa47efffcae43fa391",
+      "sha256_ids_excluidos": "a145308e34144f4442f865adc80ad55a9000226f018bf717800c3bbe1c9a6127"
+    },
+    "excluidos_por_partes_previas": 20,
+    "partes": {
+      "b": {
+        "archivo": "v2/muestra_gold_b.csv",
+        "pasajes": 5,
+        "por_consulta": 1,
+        "sha256": "c36857267f43000d9c074ba96dc84881c38fe3781a82a59fce3a87fff1f9508e"
+      }
+    }
   }
 }
