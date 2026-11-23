@@ -1,6 +1,6 @@
 # Objetivos del PRD §10. Los que dependen de insumos humanos se detienen con un mensaje claro.
 PY := uv run python
-.PHONY: consultas consultas-v2 setup contratos corpus explorar explorar-v2 indice indice-lema ranking ranking-v2 pool app app-cli asignar-juicios importar-juicios evaluar-ir reglas congelar ner \
+.PHONY: consultas consultas-v2 setup contratos corpus explorar explorar-v2 indice indice-lema ranking ranking-v2 pool pool-v2 app app-cli asignar-juicios importar-juicios evaluar-ir reglas congelar ner \
         muestra-gold muestra-gold-v2 acuerdo-gold extraer evaluar-ie tablas resultados reporte laminas demo test test-lento \
         validar entrega all limpiar
 
@@ -34,6 +34,8 @@ ranking-v2:
 	$(PY) scripts/03_ranking.py --v2
 pool:
 	$(PY) scripts/04_pool.py
+pool-v2:
+	$(PY) scripts/04_pool.py --v2
 app:
 	uv run streamlit run src/mtx/app/app.py
 app-cli:

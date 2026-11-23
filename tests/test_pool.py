@@ -255,7 +255,7 @@ def test_script_se_detiene_si_el_pool_cambia_y_hay_juicios(tmp_path, monkeypatch
     monkeypatch.setattr(mod, "RUTA_JUICIOS", juicios)
     antes = ruta_pool.read_bytes()
     with pytest.raises(SystemExit) as e:
-        mod.main()
+        mod.main_v1()
     assert e.value.code == 1
     assert "ALTO" in capsys.readouterr().out
     assert ruta_pool.read_bytes() == antes
@@ -280,3 +280,47 @@ def test_pool_real_cubre_el_ranking_y_sus_textos():
     actual = pas.set_index("passage_id")["texto"]
     assert all(pool.sha256_texto(actual[pid]) == h
                for pid, h in zip(p["passage_id"], p["texto_sha256"]))
+
+
+# --------------------------------------------------------------------------- v2 (D27, WP-05)
+
+TOPS_LEMA = {
+    ("Q1", "tfidf_lema_con_filtro"): ["9_1", "6_7"],
+    ("Q1", "bm25_lema_con_filtro"): ["7_0"],
+    ("Q1", "tfidf_lema_sin_filtro"): ["3_4", "10_0"],
+    ("Q1", "bm25_lema_sin_filtro"): ["10_0"],
+    ("Q2", "tfidf_lema_con_filtro"): ["9_1", "6_7"],
+    ("Q2", "bm25_lema_con_filtro"): ["9_1"],
+    ("Q2", "tfidf_lema_sin_filtro"): ["5_0"],
+    ("Q2", "bm25_lema_sin_filtro"): ["5_0"],
+}
+
+
+def test_pool_v2_contiene_el_v1_y_lote2_son_los_nuevos():
+    r8 = _ranking(TOPS | TOPS_LEMA)
+    v1 = pool.como_texto(pool.formatear_pool(pool.construir_pool(_ranking(), _pasajes(), CONSULTAS)))
+    crudo, usadas = pool.construir_pool_v2(r8, _pasajes(), CONSULTAS)
+    v2 = pool.como_texto(pool.formatear_pool(crudo))
+    assert len(usadas) == 8
+    assert set(zip(v1.query_id, v1.passage_id)) <= set(zip(v2.query_id, v2.passage_id))
+    lote2 = pool.pares_nuevos(v2, v1)
+    assert set(zip(lote2.query_id, lote2.passage_id)) == {("Q2", "6_7"), ("Q2", "5_0")}
+    assert "tfidf_lema_con_filtro" in v2.loc[v2.passage_id == "6_7", "variantes"].iloc[0]
+
+
+def test_pool_v2_tope_saca_las_lematizadas_sin_filtro():
+    r8 = _ranking(TOPS | TOPS_LEMA)
+    completo, _ = pool.construir_pool_v2(r8, _pasajes(), CONSULTAS)
+    recortado, usadas = pool.construir_pool_v2(r8, _pasajes(), CONSULTAS, tope=len(completo) - 1)
+    assert set(usadas) == set(pool.MODELOS_V2) - set(pool.FUERA_POR_TOPE)
+    assert ("Q2", "5_0") not in set(zip(recortado.query_id, recortado.passage_id))
+    assert not recortado["variantes"].str.contains("lema_sin_filtro").any()
+
+
+def test_pool_v2_hash_se_recalcula_igual():
+    r8 = _ranking(TOPS | TOPS_LEMA)
+    a = pool.como_texto(pool.formatear_pool(pool.construir_pool_v2(r8, _pasajes(), CONSULTAS)[0]))
+    b = pool.como_texto(pool.formatear_pool(pool.construir_pool_v2(r8, _pasajes(), CONSULTAS)[0]))
+    assert pool.hash_pool(a) == pool.hash_pool(b) and pool.diferencias_pool(a, b) == []
+    resumen = pool.resumen_pool(a.assign(en_ventana=a["en_ventana"] == "1"), pool.MODELOS_V2)
+    assert "en_todas" in resumen and "solo_bm25_lema_con_filtro" in resumen

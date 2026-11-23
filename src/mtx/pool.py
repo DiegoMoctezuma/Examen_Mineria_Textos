@@ -21,12 +21,15 @@ import numpy as np
 import pandas as pd
 
 from . import config
-from .ranking import MODELOS_OFICIALES, mascara_fecha
+from .ranking import MODELOS_OFICIALES, MODELOS_V2, mascara_fecha
 
 COLUMNAS_POOL = ["query_id", "passage_id", "doc_id", "fecha", "en_ventana", "variantes",
                  "mejor_rango_tfidf", "mejor_rango_bm25", "texto", "texto_sha256"]
 COLUMNAS_JUICIOS = ["query_id", "doc_id", "passage_id", "relevante"]
 TAM_ESPERADO = (15, 40)
+TOPE_V2 = 450
+"""PRD v2 D27: si el pool v2 supera 450 pares, salen las variantes lematizadas sin filtro."""
+FUERA_POR_TOPE = ("tfidf_lema_sin_filtro", "bm25_lema_sin_filtro")
 
 
 def _clave(pid: str) -> tuple[int, int]:
@@ -42,14 +45,15 @@ def sha256_texto(texto: str) -> str:
 
 
 def construir_pool(ranking: pd.DataFrame, pasajes: pd.DataFrame, consultas: pd.DataFrame,
-                   semilla: int = config.SEMILLA) -> pd.DataFrame:
+                   semilla: int = config.SEMILLA,
+                   modelos: tuple[str, ...] = MODELOS_OFICIALES) -> pd.DataFrame:
     """Pool de las consultas de `consultas`, en su orden, con las columnas de `COLUMNAS_POOL`.
 
     `ranking` puede venir de `ranking.csv` leído como texto; `pasajes` debe contener todos los
     `passage_id` del ranking (si falta alguno, `KeyError`).
     """
     r = ranking.assign(rango=ranking["rango"].astype(int))
-    if not set(r["modelo"]) <= set(MODELOS_OFICIALES):
+    if not set(r["modelo"]) <= set(modelos):
         raise ValueError(f"Modelos desconocidos en el ranking: {set(r['modelo'])}")
     p = pasajes.set_index("passage_id")
     faltan = set(r["passage_id"]) - set(p.index)
@@ -67,7 +71,7 @@ def construir_pool(ranking: pd.DataFrame, pasajes: pd.DataFrame, consultas: pd.D
         filas = []
         for pid in ids:
             de = rq[rq["passage_id"] == pid]
-            variantes = [m for m in MODELOS_OFICIALES if m in set(de["modelo"])]
+            variantes = [m for m in modelos if m in set(de["modelo"])]
             rango = {fam: de.loc[de["modelo"].str.startswith(fam), "rango"].min()
                      for fam in ("tfidf", "bm25")}
             filas.append({
@@ -84,6 +88,26 @@ def construir_pool(ranking: pd.DataFrame, pasajes: pd.DataFrame, consultas: pd.D
     for c in ("mejor_rango_tfidf", "mejor_rango_bm25"):
         pool[c] = pool[c].astype("Int64")
     return pool[COLUMNAS_POOL]
+
+
+def construir_pool_v2(ranking8: pd.DataFrame, pasajes: pd.DataFrame, consultas: pd.DataFrame,
+                      semilla: int = config.SEMILLA, tope: int = TOPE_V2
+                      ) -> tuple[pd.DataFrame, tuple[str, ...]]:
+    """Pool v2 (D27): unión de los top-10 de las 8 variantes. Si pasa de `tope` pares, se rehace
+    sin las lematizadas sin filtro. Devuelve `(pool, variantes_usadas)`."""
+    pool = construir_pool(ranking8, pasajes, consultas, semilla, MODELOS_V2)
+    if len(pool) <= tope:
+        return pool, MODELOS_V2
+    usadas = tuple(m for m in MODELOS_V2 if m not in FUERA_POR_TOPE)
+    r = ranking8[ranking8["modelo"].isin(usadas)]
+    return construir_pool(r, pasajes, consultas, semilla, usadas), usadas
+
+
+def pares_nuevos(pool_v2: pd.DataFrame, pool_v1: pd.DataFrame) -> pd.DataFrame:
+    """Lote 2 (D24): los pares del pool v2 que no estaban en el v1, en el orden del pool v2."""
+    v1 = set(zip(pool_v1["query_id"], pool_v1["passage_id"]))
+    nuevo = [(q, p) not in v1 for q, p in zip(pool_v2["query_id"], pool_v2["passage_id"])]
+    return pool_v2[nuevo].reset_index(drop=True)
 
 
 def formatear_pool(pool: pd.DataFrame) -> pd.DataFrame:
@@ -136,15 +160,16 @@ def diferencias_pool(viejo: pd.DataFrame, nuevo: pd.DataFrame) -> list[str]:
     return dif
 
 
-def resumen_pool(pool: pd.DataFrame) -> pd.DataFrame:
+def resumen_pool(pool: pd.DataFrame, modelos: tuple[str, ...] = MODELOS_OFICIALES) -> pd.DataFrame:
     """Tamaño por consulta, pasajes en ventana y aportes exclusivos de cada variante."""
     filas = []
     for qid, g in pool.groupby("query_id", sort=False):
         var = g["variantes"].str.split("|")
         fila = {"query_id": qid, "pasajes": len(g), "en_ventana": int(g["en_ventana"].sum()),
                 "fuera_de_ventana": int((~g["en_ventana"].astype(bool)).sum()),
-                "en_las_cuatro": int((var.str.len() == 4).sum())}
-        for m in MODELOS_OFICIALES:
+                **({"en_las_cuatro": int((var.str.len() == 4).sum())} if len(modelos) == 4 else
+                   {"en_todas": int((var.str.len() == len(modelos)).sum())})}
+        for m in modelos:
             fila[f"solo_{m}"] = int(var.map(lambda v, m=m: v == [m]).sum())
         fila["fuera_de_rango_esperado"] = int(not TAM_ESPERADO[0] <= len(g) <= TAM_ESPERADO[1])
         filas.append(fila)
