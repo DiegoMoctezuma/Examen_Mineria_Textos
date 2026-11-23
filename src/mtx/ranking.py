@@ -140,7 +140,10 @@ class Buscador:
     `indice.ids`."""
 
     def __init__(self, indice: Indice, tfidf: Tfidf, pasajes: pd.DataFrame,
-                 k1: float = 1.5, b: float = 0.75):
+                 k1: float = 1.5, b: float = 0.75, raiz: str = "stem"):
+        if raiz not in preproceso.RAICES:
+            raise ValueError(f"Raíz desconocida: {raiz!r}")
+        self.raiz = raiz
         if list(pasajes["passage_id"]) != indice.ids:
             raise ValueError("Los pasajes no coinciden con el orden del índice")
         self.pasajes = pasajes.reset_index(drop=True)
@@ -163,7 +166,7 @@ class Buscador:
         `estado`: tokens de la consulta, pasajes elegibles, excluidos por el filtro, excluidos
         por fecha desconocida y avisos. Una consulta sin tokens devuelve cero filas y un aviso.
         """
-        tokens = preproceso.tokenizar(consulta)
+        tokens = preproceso.tokenizar(consulta, self.raiz)
         elegibles = mascara_fecha(self.fecha, desde, hasta)
         con_filtro = desde is not None or hasta is not None
         estado = {
@@ -194,7 +197,7 @@ class Buscador:
 
 
 def variantes_oficiales(buscador: Buscador, consultas: pd.DataFrame,
-                        estados: dict | None = None) -> pd.DataFrame:
+                        estados: dict | None = None, sufijo: str = "") -> pd.DataFrame:
     """Las cuatro variantes por consulta (`modelo` + `variante`) en el formato de `ranking.csv`
     más `sin_senal_lexica`. Si se da `estados`, guarda ahí el estado de cada búsqueda con clave
     `(query_id, modelo)`."""
@@ -204,10 +207,10 @@ def variantes_oficiales(buscador: Buscador, consultas: pd.DataFrame,
             for variante in ("con_filtro", "sin_filtro"):
                 desde, hasta = (q.desde, q.hasta) if variante == "con_filtro" else (None, None)
                 res, est = buscador.buscar(q.consulta, desde, hasta, modelo, K)
+                nombre = f"{modelo}{sufijo}_{variante}"
                 if estados is not None:
-                    estados[(q.query_id, f"{modelo}_{variante}")] = est
-                res = res.assign(query_id=q.query_id, modelo=f"{modelo}_{variante}",
-                                 variante=variante)
+                    estados[(q.query_id, nombre)] = est
+                res = res.assign(query_id=q.query_id, modelo=nombre, variante=variante)
                 filas.append(res)
     cols = ["query_id", "modelo", "variante", "rango", "passage_id", "doc_id", "fecha",
             "posicion", "puntaje", "sin_senal_lexica"]
@@ -219,6 +222,20 @@ def variantes_oficiales(buscador: Buscador, consultas: pd.DataFrame,
 COLUMNAS_RANKING = ["query_id", "modelo", "variante", "rango", "passage_id", "doc_id", "fecha",
                     "posicion", "puntaje"]
 MODELOS_OFICIALES = ("tfidf_con_filtro", "bm25_con_filtro", "tfidf_sin_filtro", "bm25_sin_filtro")
+MODELOS_V2 = MODELOS_OFICIALES + ("tfidf_lema_con_filtro", "bm25_lema_con_filtro",
+                                  "tfidf_lema_sin_filtro", "bm25_lema_sin_filtro")
+"""Las 8 variantes de PRD v2 D26: {tfidf, bm25} × {con, sin}_filtro × {stem, lema}. Las de stem
+conservan el nombre de v1."""
+
+
+def variantes_v2(stem: Buscador, lema: Buscador, consultas: pd.DataFrame,
+                 estados: dict | None = None) -> pd.DataFrame:
+    """Las 8 variantes por consulta: las 4 de v1 (stem) y las 4 lematizadas (`*_lema_*`)."""
+    if stem.raiz != "stem" or lema.raiz != "lema":
+        raise ValueError("variantes_v2 necesita un buscador de stem y uno de lema")
+    return pd.concat([variantes_oficiales(stem, consultas, estados),
+                      variantes_oficiales(lema, consultas, estados, sufijo="_lema")],
+                     ignore_index=True)
 
 
 def formatear_ranking(v: pd.DataFrame) -> pd.DataFrame:
@@ -229,16 +246,19 @@ def formatear_ranking(v: pd.DataFrame) -> pd.DataFrame:
     return out
 
 
-def validar_ranking(r: pd.DataFrame, consultas: pd.DataFrame) -> list[str]:
-    """Problemas de formato de `ranking.csv` (lista vacía si es válido). Lee el CSV como texto."""
+def validar_ranking(r: pd.DataFrame, consultas: pd.DataFrame,
+                    modelos: tuple[str, ...] = MODELOS_OFICIALES) -> list[str]:
+    """Problemas de formato de `ranking.csv` (lista vacía si es válido). Lee el CSV como texto.
+    `modelos` = `MODELOS_V2` valida el ranking de 8 variantes de v2."""
     problemas = []
     if list(r.columns) != COLUMNAS_RANKING:
         return [f"Columnas {list(r.columns)}; se esperaban {COLUMNAS_RANKING}"]
     if r.empty:
         return ["Ranking vacío: el evaluador del kit revienta con un ranking sin filas"]
-    if not set(r["modelo"]) <= set(MODELOS_OFICIALES):
-        problemas.append(f"Modelos desconocidos: {sorted(set(r['modelo']) - set(MODELOS_OFICIALES))}")
-    if (r["variante"] != r["modelo"].str.split("_", n=1).str[1]).any():
+    if not set(r["modelo"]) <= set(modelos):
+        problemas.append(f"Modelos desconocidos: {sorted(set(r['modelo']) - set(modelos))}")
+    if not all(m.endswith("_" + v) and v in ("con_filtro", "sin_filtro")
+               for m, v in zip(r["modelo"], r["variante"])):
         problemas.append("`variante` no coincide con el sufijo de `modelo`")
     for clave in (["query_id", "modelo", "rango"], ["query_id", "modelo", "passage_id"]):
         if r.duplicated(clave).any():
@@ -319,22 +339,35 @@ def excluidos_por_filtro(v: pd.DataFrame, consultas: pd.DataFrame,
 # --------------------------------------------------------------------------- carga para demo y app
 
 
-def cargar_buscador(verificar_pasajes: bool = False) -> Buscador:
-    """Buscador desde `data/` (lo que deja `make indice`). Exige que el índice corresponda a
-    `data/tokens.parquet`; con `verificar_pasajes`, también a `data/pasajes.parquet`."""
+def rutas_indice(raiz: str = "stem") -> dict:
+    """Archivos del índice de cada raíz: el v1 en `data/` y el lematizado en `data/v2/`."""
+    from . import config
+    if raiz == "lema":
+        return {"tokens": config.TOKENS_LEMA_PARQUET, "pkl": config.INDICE_LEMA_PKL,
+                "meta": config.INDICE_LEMA_META, "tfidf_pkl": config.TFIDF_LEMA_PKL,
+                "tfidf_npz": config.TFIDF_LEMA_NPZ, "make": "make indice-lema"}
+    return {"tokens": config.TOKENS_PARQUET, "pkl": config.INDICE_PKL, "meta": config.INDICE_META,
+            "tfidf_pkl": config.TFIDF_PKL, "tfidf_npz": config.TFIDF_NPZ, "make": "make indice"}
+
+
+def cargar_buscador(verificar_pasajes: bool = False, raiz: str = "stem") -> Buscador:
+    """Buscador desde `data/` (lo que deja `make indice`; con `raiz="lema"`, `make indice-lema`).
+    Exige que el índice corresponda a sus tokens; con `verificar_pasajes`, también a
+    `data/pasajes.parquet`."""
     import json
 
     from . import config, corpus
     from . import indice as _indice
-    ids, toks = _indice.cargar_tokens(config.TOKENS_PARQUET)
-    ind = _indice.cargar(config.INDICE_PKL, config.INDICE_META, _indice.hash_tokens(ids, toks))
+    r = rutas_indice(raiz)
+    ids, toks = _indice.cargar_tokens(r["tokens"])
+    ind = _indice.cargar(r["pkl"], r["meta"], _indice.hash_tokens(ids, toks))
     pasajes = pd.read_parquet(config.PASAJES_PARQUET)
     if verificar_pasajes:
-        meta = json.loads(config.INDICE_META.read_text(encoding="utf-8"))
+        meta = json.loads(r["meta"].read_text(encoding="utf-8"))
         if meta.get("sha256_pasajes") != corpus.hash_pasajes(pasajes):
             raise ValueError("data/pasajes.parquet cambió después de construir el índice: "
-                             "correr `make indice`")
-    return Buscador(ind, cargar_tfidf(config.TFIDF_PKL, config.TFIDF_NPZ), pasajes)
+                             f"correr `{r['make']}`")
+    return Buscador(ind, cargar_tfidf(r["tfidf_pkl"], r["tfidf_npz"]), pasajes, raiz=raiz)
 
 
 _BUSCADOR: Buscador | None = None

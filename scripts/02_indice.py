@@ -4,10 +4,17 @@ Entradas: data/pasajes.parquet y data/consultas.csv.
 Salidas: data/tokens.parquet, data/indice.pkl, data/indice_meta.json, data/tfidf.pkl,
 data/tfidf_X.npz, salida/02_tokens_consultas.md, salida/02_postings.md y
 salida/02_vocabulario_top.csv. Determinista; no lee juicios ni gold.
+
+`--raiz lema` (PRD v2 D26, WP-03, `make indice-lema`): el mismo índice con lemas de spaCy en
+`data/v2/` (tokens_lema.parquet, indice_lema.pkl, indice_lema_meta.json, tfidf_lema.pkl y
+tfidf_lema_X.npz) y `salida/v2/02_comparacion_stem_lema.md`. No toca nada de v1 ni muestra rankings.
 """
 from __future__ import annotations
 
+import argparse
+import hashlib
 import json
+import os
 import time
 
 import pandas as pd
@@ -57,7 +64,93 @@ def md_postings(muestras: list[dict], ind: indice.Indice) -> str:
     return "\n".join(L)
 
 
+COMPARAR = [("maya", "mayo"), ("vacunas", "vacuna"), ("refinería", "refinerías"),
+            ("presidente", "presidencia"), ("programa", "programas"), ("elecciones", "electoral")]
+
+
+def md_comparacion(cons: pd.DataFrame, stem: indice.Indice, lema: indice.Indice,
+                   segundos: float) -> str:
+    """Vocabulario, pares de palabras y tokens de cada consulta con su df e idf en los dos índices.
+    No contiene rankings ni puntajes de pasajes (D32)."""
+    def tok(palabra, raiz, ind):
+        t = preproceso.tokenizar(palabra, raiz)
+        return ", ".join(f"`{x}` (df {ind.df.get(x, 0):,})" for x in t) or "(se descarta)"
+    L = ["# Stem frente a lema", "",
+         ("Mismo pipeline (NFC, `RE_TOKEN`, stoplist y longitud mínima sobre la superficie); solo "
+          "cambia la raíz: Snowball en v1, lema de spaCy `es_core_news_md` en v2 (PRD v2 D26)."), "",
+         "| | stem (v1) | lema (v2) |", "| --- | ---: | ---: |",
+         f"| Pasajes | {stem.N:,} | {lema.N:,} |",
+         f"| Vocabulario | {len(stem.postings):,} | {len(lema.postings):,} |",
+         f"| Tokens por pasaje (avgdl) | {stem.avgdl:.2f} | {lema.avgdl:.2f} |",
+         (f"| Pasajes sin tokens | {int((stem.longitud == 0).sum())} | "
+          f"{int((lema.longitud == 0).sum())} |"), "",
+         f"Lematizar el corpus tomó {segundos / 60:.1f} min.", "",
+         "## Pares de palabras", "", "| palabra | stem (v1) | lema (v2) |", "| --- | --- | --- |"]
+    for par in COMPARAR:
+        for w in par:
+            L.append(f"| {w} | {tok(w, 'stem', stem)} | {tok(w, 'lema', lema)} |")
+    L += ["", "## Términos de cada consulta", "",
+          "idf con la fórmula de BM25, ln(1 + (N - df + 0.5) / (df + 0.5)).", "",
+          "| consulta | stem (v1): término (idf) | lema (v2): término (idf) |", "| --- | --- | --- |"]
+    for q in cons.itertuples(index=False):
+        a = ", ".join(f"`{t}` ({stem.idf_bm25(t):.2f})" for t in preproceso.tokenizar(q.consulta))
+        b = ", ".join(f"`{t}` ({lema.idf_bm25(t):.2f})"
+                      for t in preproceso.tokenizar(q.consulta, "lema"))
+        L.append(f"| {q.query_id}: {q.consulta} | {a} | {b} |")
+    return "\n".join(L)
+
+
+def main_lema() -> None:
+    from mtx import ranking as _r
+    t0 = time.time()
+    config.DIR_DATA_V2.mkdir(parents=True, exist_ok=True)
+    config.DIR_SALIDA_V2.mkdir(parents=True, exist_ok=True)
+    pasajes = pd.read_parquet(config.PASAJES_PARQUET)
+    ids = list(pasajes["passage_id"])
+    procesos = max(1, min(6, (os.cpu_count() or 2) - 2))
+    toks = indice.tokenizar_pasajes(pasajes, raiz="lema", n_process=procesos)
+    t1 = time.time()
+    indice.guardar_tokens(ids, toks, config.TOKENS_LEMA_PARQUET)
+    h_tokens = indice.hash_tokens(ids, toks)
+    cfg = preproceso.configuracion_efectiva("lema")
+    h_cfg = hashlib.sha256(json.dumps(cfg, sort_keys=True).encode("utf-8")).hexdigest()
+    ind = indice.construir(ids, toks)
+    meta = indice.guardar(ind, config.INDICE_LEMA_PKL, config.INDICE_LEMA_META, h_tokens, h_cfg)
+    vec, X = ranking.ajustar_tfidf(toks)
+    ranking.guardar_tfidf(vec, X, config.TFIDF_LEMA_PKL, config.TFIDF_LEMA_NPZ)
+    if len(vec.vocabulary_) != len(ind.postings):
+        raise RuntimeError("TF-IDF y el índice no ven el mismo vocabulario (min_df debe ser 1)")
+    meta |= {
+        "sha256_pasajes": corpus.hash_pasajes(pasajes),
+        "preproceso": cfg,
+        "pasajes_sin_tokens": int((ind.longitud == 0).sum()),
+        "tfidf": {"vocabulario": len(vec.vocabulary_), "nnz": int(X.nnz),
+                  "sha256_pkl": indice.adaptadores_kit.sha256_archivo(config.TFIDF_LEMA_PKL),
+                  "sha256_npz": indice.adaptadores_kit.sha256_archivo(config.TFIDF_LEMA_NPZ)},
+        "sha256_tokens_parquet": indice.adaptadores_kit.sha256_archivo(config.TOKENS_LEMA_PARQUET),
+        "procesos_spacy": procesos,
+        "segundos": {"lematizar": round(t1 - t0, 1), "total": round(time.time() - t0, 1)},
+    }
+    config.INDICE_LEMA_META.write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n",
+                                       encoding="utf-8")
+    stem = _r.cargar_buscador().bm25.indice
+    (config.DIR_SALIDA_V2 / "02_comparacion_stem_lema.md").write_text(
+        md_comparacion(consultas.cargar(), stem, ind, t1 - t0) + "\n", encoding="utf-8")
+    print(f"Índice lematizado: {ind.N:,} pasajes, vocabulario {len(ind.postings):,} "
+          f"(stem: {len(stem.postings):,}), avgdl {ind.avgdl:.2f}, en {meta['segundos']['total']} s")
+    print(f"hash de tokens: {h_tokens}")
+
+
 def main() -> None:
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--raiz", choices=preproceso.RAICES, default="stem")
+    if ap.parse_args().raiz == "lema":
+        main_lema()
+    else:
+        main_stem()
+
+
+def main_stem() -> None:
     t0 = time.time()
     config.DIR_SALIDA.mkdir(exist_ok=True)
     pasajes = pd.read_parquet(config.PASAJES_PARQUET)

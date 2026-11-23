@@ -4,9 +4,15 @@ Entradas: data/consultas.csv (Q1 a Q10) y lo que deja `make indice`.
 Salidas: salida/ranking.csv (copia idéntica en la raíz tras validar), salida/03_ranking_detalle.csv,
 salida/03_solape_modelos.csv, salida/03_excluidos_por_filtro.csv y salida/03_resumen.json.
 No lee juicios ni gold.
+
+`--v2` (PRD v2 D26, WP-03, `make ranking-v2`): las 8 variantes {tfidf, bm25} × {con, sin}_filtro ×
+{stem, lema} en `salida/v2/ranking_8_variantes.csv`, con el formato de `ranking.csv`. Exige que las 4
+de stem sean idénticas a `salida/ranking.csv` en las consultas que ya tenía. No toca `ranking.csv`
+y solo imprime conteos.
 """
 from __future__ import annotations
 
+import argparse
 import json
 import shutil
 import sys
@@ -16,7 +22,38 @@ import pandas as pd
 from mtx import adaptadores_kit, config, consultas, ranking
 
 
+def main_v2() -> None:
+    config.DIR_SALIDA_V2.mkdir(parents=True, exist_ok=True)
+    cons = consultas.cargar()
+    stem = ranking.cargar_buscador(verificar_pasajes=True)
+    lema = ranking.cargar_buscador(verificar_pasajes=True, raiz="lema")
+    v = ranking.formatear_ranking(ranking.variantes_v2(stem, lema, cons))
+    ruta = config.DIR_SALIDA_V2 / "ranking_8_variantes.csv"
+    v.to_csv(ruta, index=False, encoding="utf-8")
+    leido = pd.read_csv(ruta, dtype=str, keep_default_na=False)
+    problemas = ranking.validar_ranking(leido, cons, ranking.MODELOS_V2)
+    v1 = pd.read_csv(config.DIR_SALIDA / "ranking.csv", dtype=str, keep_default_na=False)
+    mio = leido[leido["modelo"].isin(ranking.MODELOS_OFICIALES)
+                & leido["query_id"].isin(set(v1["query_id"]))].reset_index(drop=True)
+    if not mio.equals(v1.reset_index(drop=True)):
+        problemas.append("Las variantes de stem no son idénticas a salida/ranking.csv (v1)")
+    if problemas:
+        print("ranking_8_variantes.csv NO es válido:", *problemas, sep="\n- ")
+        sys.exit(1)
+    print(f"ranking_8_variantes.csv: {len(leido)} filas, {leido['query_id'].nunique()} consultas, "
+          f"{leido['modelo'].nunique()} variantes; stem idéntico a v1")
+
+
 def main() -> None:
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--v2", action="store_true")
+    if ap.parse_args().v2:
+        main_v2()
+    else:
+        main_v1()
+
+
+def main_v1() -> None:
     config.DIR_SALIDA.mkdir(exist_ok=True)
     cons = consultas.cargar()
     buscador = ranking.cargar_buscador(verificar_pasajes=True)

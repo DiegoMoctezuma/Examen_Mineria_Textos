@@ -113,8 +113,13 @@ def cargar(ruta_pkl: Path, ruta_meta: Path | None = None, hash_tokens: str | Non
 # --------------------------------------------------------------------------- tokens
 
 
-def tokenizar_pasajes(pasajes: pd.DataFrame) -> list[list[str]]:
+def tokenizar_pasajes(pasajes: pd.DataFrame, raiz: str = "stem",
+                      n_process: int = 1) -> list[list[str]]:
     """Tokens del cuerpo de cada pasaje (D03), en el orden de `pasajes`."""
+    if raiz == "lema":
+        return preproceso.lematizar([t[i:] for t, i in zip(pasajes["texto"],
+                                                           pasajes["inicio_cuerpo"])],
+                                    n_process=n_process)
     return [preproceso.tokenizar_pasaje(t, i)
             for t, i in zip(pasajes["texto"], pasajes["inicio_cuerpo"])]
 

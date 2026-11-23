@@ -20,6 +20,15 @@ INDICE_META = DIR_DATA / "indice_meta.json"
 TFIDF_PKL = DIR_DATA / "tfidf.pkl"
 TFIDF_NPZ = DIR_DATA / "tfidf_X.npz"
 
+# v2 (PRD v2 D26): índice lematizado, aparte del v1, y salidas v2.
+DIR_DATA_V2 = DIR_DATA / "v2"
+DIR_SALIDA_V2 = DIR_SALIDA / "v2"
+TOKENS_LEMA_PARQUET = DIR_DATA_V2 / "tokens_lema.parquet"
+INDICE_LEMA_PKL = DIR_DATA_V2 / "indice_lema.pkl"
+INDICE_LEMA_META = DIR_DATA_V2 / "indice_lema_meta.json"
+TFIDF_LEMA_PKL = DIR_DATA_V2 / "tfidf_lema.pkl"
+TFIDF_LEMA_NPZ = DIR_DATA_V2 / "tfidf_lema_X.npz"
+
 SEMILLA = 42
 """Semilla única del proyecto (muestreo del gold, PRD D10)."""
 

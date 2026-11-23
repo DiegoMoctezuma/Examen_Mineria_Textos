@@ -9,6 +9,10 @@ __pycache__/
 data/*.parquet
 data/*.pkl
 data/*.npz
+data/v2/*.parquet
+data/v2/*.pkl
+data/v2/*.npz
+data/v2/indice_lema_meta.json
 kit/data/
 .nltk_data/
 
@@ -37,3 +41,6 @@ laminas/~$*
 laminas/_vista/
 anotaciones/juicios_v2/*.tmp
 anotaciones/juicios_v2/*.bak
+
+# Material del profesor (repo de FECHA, PRD v2 D33): se cita, no se redistribuye
+extra/
