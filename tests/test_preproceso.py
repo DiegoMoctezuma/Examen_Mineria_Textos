@@ -89,3 +89,9 @@ def test_con_pasajes_reales_la_marca_nunca_aporta_tokens():
     p = pd.read_parquet(preproceso.config.PASAJES_PARQUET).sample(300, random_state=42)
     for r in p.itertuples():
         assert tokenizar_pasaje(r.texto, r.inicio_cuerpo) == tokenizar(r.texto[r.inicio_cuerpo:])
+
+
+def test_caminos_v1_solo_con_q1_a_q10():
+    """Agregar Q11 a Q15 (PRD v2 D25) no cambia lo que leen ranking, pool, evaluación y entrega v1."""
+    cons = pd.DataFrame({"query_id": ["Q1", "Q10", "Q11", "Q15"], "consulta": ["a", "b", "c", "d"]})
+    assert list(consultas.solo_v1(cons)["query_id"]) == ["Q1", "Q10"]

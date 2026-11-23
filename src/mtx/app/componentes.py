@@ -479,7 +479,7 @@ def estados_artefactos(r: Rutas | None = None, hash_pasajes_actual: str | None =
         fila("Rankings (ranking.csv)", PENDIENTE_TECNICO, "No existe", "make ranking")
     else:
         prob = _ranking.validar_ranking(pd.read_csv(rk, dtype=str, keep_default_na=False),
-                                        _consultas.cargar())
+                                        _consultas.cargar_v1())
         raiz_igual = sha256_ruta(config.RAIZ / "ranking.csv") == sha256_ruta(rk)
         if prob:
             fila("Rankings (ranking.csv)", ERROR, "; ".join(prob), "make ranking")
@@ -625,7 +625,7 @@ def _estado_resultados_ir(fila) -> None:
         fila(nombre, PENDIENTE_TECNICO, "Aún no existe", sig)
         return
     res = pd.read_csv(ruta)
-    problemas = _evaluacion.validar_resultados_ir(res, _consultas.cargar())
+    problemas = _evaluacion.validar_resultados_ir(res, _consultas.cargar_v1())
     copia = config.DIR_SALIDA / "resultados_ir.csv"
     if copia.exists() and _sha256(copia) != _sha256(ruta):
         problemas.append("La copia en salida/ difiere de la raíz")

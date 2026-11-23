@@ -181,7 +181,7 @@ def main_stem() -> None:
         "segundos": {"tokenizar": round(t1 - t0, 1), "total": None},
     }
 
-    cons = consultas.cargar()
+    cons = consultas.cargar_v1()
     (config.DIR_SALIDA / "02_tokens_consultas.md").write_text(
         md_tokens_consultas(cons, ind) + "\n", encoding="utf-8")
     muestras = []

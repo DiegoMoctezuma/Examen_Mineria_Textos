@@ -26,6 +26,7 @@ import pandas as pd
 import regex
 
 from mtx import adaptadores_kit, config, pool
+from mtx import consultas as consultas_mod
 from mtx import indice as mod_indice
 from mtx.app import componentes
 from mtx.preproceso import tokenizar
@@ -380,7 +381,7 @@ def ejecutar_ir(rp: RutasIR | None = None, pasajes: pd.DataFrame | None = None,
     """Todo H4. No escribe nada si los juicios o el ranking no son válidos."""
     rp = rp or rutas_ir()
     inf = InformeIR()
-    cons = pd.read_csv(rp.app.consultas, dtype=str, keep_default_na=False)
+    cons = consultas_mod.solo_v1(pd.read_csv(rp.app.consultas, dtype=str, keep_default_na=False))
 
     if not rp.ranking.exists():
         inf.errores.append("Falta ranking.csv en la raíz: corre `make ranking`")

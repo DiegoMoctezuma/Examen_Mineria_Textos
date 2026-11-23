@@ -24,7 +24,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from mtx import adaptadores_kit, config, evaluacion, pool
+from mtx import adaptadores_kit, config, consultas, evaluacion, pool
 from mtx.ranking import COLUMNAS_RANKING, validar_ranking
 
 OK, PENDIENTE, FALLA, AVISO = "OK", "PENDIENTE", "FALLA", "AVISO"
@@ -70,7 +70,10 @@ def _cabecera(ruta: Path) -> list[str]:
 def c01_kit_y_consultas(cx: Contexto) -> Resultado:
     det = adaptadores_kit.verificar_hashes()
     kit = pd.read_csv(adaptadores_kit.DIR_KIT / "consultas.csv", dtype=str, keep_default_na=False)
-    cons = pd.read_csv(cx.rp.app.consultas, dtype=str, keep_default_na=False)
+    todas = pd.read_csv(cx.rp.app.consultas, dtype=str, keep_default_na=False)
+    cons = consultas.solo_v1(todas)
+    if list(todas["query_id"][len(cons):]) not in ([], [f"Q{i}" for i in range(11, 16)]):
+        det.append("Después de Q10 solo caben Q11 a Q15 (PRD v2 D25)")
     if not cons.head(len(kit)).reset_index(drop=True).equals(kit):
         det.append("Q1 a Q8 de data/consultas.csv no coinciden con kit/consultas.csv")
     if list(cons["query_id"]) != [f"Q{i}" for i in range(1, 11)]:
@@ -122,7 +125,7 @@ def c03_ranking(cx: Contexto) -> Resultado:
     if not ruta.exists():
         return Resultado(3, "ranking.csv", PENDIENTE, ["falta: `make ranking`"])
     r = pd.read_csv(ruta, dtype=str, keep_default_na=False)
-    cons = pd.read_csv(cx.rp.app.consultas, dtype=str, keep_default_na=False)
+    cons = consultas.solo_v1(pd.read_csv(cx.rp.app.consultas, dtype=str, keep_default_na=False))
     det = validar_ranking(r, cons)
     if len(r) != 400:
         det.append(f"{len(r)} filas; se esperan 400 (10 × 4 × 10) o excepciones registradas")
@@ -160,7 +163,7 @@ def c05_resultados_ir(cx: Contexto) -> Resultado:
         if nuevo.read_bytes() != rp.resultados_raiz.read_bytes():
             det.append("El kit no reproduce resultados_ir.csv: corre `make evaluar-ir`")
     res = evaluacion.leer_resultados(rp.resultados_raiz)
-    cons = pd.read_csv(rp.app.consultas, dtype=str, keep_default_na=False)
+    cons = consultas.solo_v1(pd.read_csv(rp.app.consultas, dtype=str, keep_default_na=False))
     det += evaluacion.validar_resultados_ir(res, cons)
     if not rp.mejor_modelo.exists():
         det.append("Falta data/mejor_modelo.json")

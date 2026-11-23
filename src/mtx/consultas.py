@@ -23,6 +23,19 @@ def construir(extra: list[dict], dir_kit=adaptadores_kit.DIR_KIT) -> pd.DataFram
     return todas
 
 
+CONSULTAS_V1 = tuple(f"Q{i}" for i in range(1, 11))
+
+
 def cargar() -> pd.DataFrame:
-    """Lee `data/consultas.csv` (con Q9 y Q10)."""
+    """Lee `data/consultas.csv`: Q1 a Q10 y, desde WP-04 de v2, también Q11 a Q15."""
     return pd.read_csv(config.CONSULTAS_CSV, dtype=str, keep_default_na=False)
+
+
+def solo_v1(cons: pd.DataFrame) -> pd.DataFrame:
+    """Q1 a Q10, las consultas de v1. Los caminos v1 (ranking, pool, evaluación y entrega v1) las
+    usan para que agregar Q11 a Q15 no reescriba ni invalide ningún artefacto v1."""
+    return cons[cons["query_id"].isin(CONSULTAS_V1)].reset_index(drop=True)
+
+
+def cargar_v1() -> pd.DataFrame:
+    return solo_v1(cargar())

@@ -108,7 +108,7 @@ def main() -> None:
 def main_v1() -> None:
     ruta_ranking = config.DIR_SALIDA / "ranking.csv"
     ranking = pd.read_csv(ruta_ranking, dtype=str, keep_default_na=False)
-    cons = consultas.cargar()
+    cons = consultas.cargar_v1()
     pasajes = pd.read_parquet(config.PASAJES_PARQUET,
                               columns=["passage_id", "doc_id", "fecha", "texto", "texto_sha256"])
 

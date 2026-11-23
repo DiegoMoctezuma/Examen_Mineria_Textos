@@ -407,7 +407,7 @@ DETALLE = config.DIR_SALIDA / "03_ranking_detalle.csv"
 def test_ranking_real_valido_y_evaluable_por_el_kit(tmp_path):
     from mtx import adaptadores_kit, consultas
     r = pd.read_csv(RANKING_RAIZ, dtype=str, keep_default_na=False)
-    assert ranking.validar_ranking(r, consultas.cargar()) == []
+    assert ranking.validar_ranking(r, consultas.cargar_v1()) == []
     assert len(r) == 400
     # Juicios sintéticos (no son juicios humanos): solo prueban que el evaluador no revienta.
     sint = r.drop_duplicates("passage_id").groupby("query_id").head(3)

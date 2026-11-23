@@ -55,7 +55,7 @@ def main() -> None:
 
 def main_v1() -> None:
     config.DIR_SALIDA.mkdir(exist_ok=True)
-    cons = consultas.cargar()
+    cons = consultas.cargar_v1()
     buscador = ranking.cargar_buscador(verificar_pasajes=True)
 
     estados: dict = {}
