@@ -1,31 +1,35 @@
 # Q11 a Q15 (PRD v2 D25, WP-04). Las eligen y redactan Diego y Arturo a partir de
 # salida/v2/00_candidatos_q11q15.md: temas distintos entre sí y de Q1 a Q10, al menos una con nombre
 # alterno. `[VALIDAR]`: mientras `estado` no empiece con "aprobadas", `make consultas-v2` no escribe.
-# Al aprobar: estado: aprobadas_AAAA-MM-DD, registro en docs/decisiones.md y después `make consultas-v2`.
-estado: pendiente
+# Al aprobar: # Temas elegidos por Diego el 2026-11-23 (Guardia Nacional, Insabi, reforma eléctrica y CFE, Jóvenes
+# Construyendo el Futuro y huracán Otis). Redacción, ventanas y preguntas: borrador de Claude Code
+# sobre las sugerencias de config/v2/candidatos_q11q15.yaml, corregido y aprobado por Diego y Arturo
+# el 2026-11-23 (Q12 con IMSS-Bienestar, Q15 desde el 20 de octubre, Q11 con la ventana completa).
+# Nombre alterno (D25): Q12 nombra el IMSS-Bienestar; hasta 2023 los pasajes lo llaman Insabi.
+estado: aprobadas_2026-11-23
 consultas:
   - query_id: Q11
-    consulta: ""
-    desde: ""
-    hasta: ""
-    pregunta_extraccion: ""
+    consulta: despliegue de la Guardia Nacional en los estados
+    desde: "2019-01-01"
+    hasta: "2024-09-30"
+    pregunta_extraccion: "Qué dependencias la integran, en qué estados se despliega, cuántos elementos y qué fechas"
   - query_id: Q12
-    consulta: ""
-    desde: ""
-    hasta: ""
-    pregunta_extraccion: ""
+    consulta: atención médica gratuita del IMSS-Bienestar
+    desde: "2019-06-01"
+    hasta: "2024-09-30"
+    pregunta_extraccion: "Qué instituciones participan, en qué estados, qué funcionarios, qué montos y qué fechas"
   - query_id: Q13
-    consulta: ""
-    desde: ""
-    hasta: ""
-    pregunta_extraccion: ""
+    consulta: reforma eléctrica y fortalecimiento de la CFE
+    desde: "2021-09-01"
+    hasta: "2022-12-31"
+    pregunta_extraccion: "Qué organizaciones y funcionarios, qué porcentajes de generación y qué montos"
   - query_id: Q14
-    consulta: ""
-    desde: ""
-    hasta: ""
-    pregunta_extraccion: ""
+    consulta: becas para aprendices de Jóvenes Construyendo el Futuro
+    desde: "2019-01-01"
+    hasta: "2024-09-30"
+    pregunta_extraccion: "Qué dependencias y empresas, cuántos jóvenes, qué montos de beca y en qué estados"
   - query_id: Q15
-    consulta: ""
-    desde: ""
-    hasta: ""
-    pregunta_extraccion: ""
+    consulta: daños y reconstrucción de Acapulco tras el huracán Otis
+    desde: "2023-10-20"
+    hasta: "2024-06-30"
+    pregunta_extraccion: "Qué dependencias, qué lugares, qué montos de apoyo y qué fechas"
