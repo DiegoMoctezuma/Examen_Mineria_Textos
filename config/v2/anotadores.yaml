@@ -33,7 +33,9 @@ lotes:
 # registrado en docs/decisiones.md. Leo no anota ni adjudica gold: escribe las reglas FECHA.
 gold:
   no_anotan: [leo]
-  pasada_2_sin_etiqueta: false
+  # Recorte 3 de D33 (2026-11-23): el repo del profesor llegó el sáb 21, después del jue 19; la
+  # pasada 2 usa el criterio FECHA v1 y no espera la etiqueta. Ver docs/decisiones.md.
+  pasada_2_sin_etiqueta: true
   partes:
     seleccion:
       nombre: Selección
@@ -53,9 +55,6 @@ gold:
       anotadores: [gonzalo, arturo]  # Arturo en lugar de Bruno (2026-11-22)
       adjudicador: diego
       pasadas: [1, 2]
-    v1:
-      nombre: FECHA del gold v1
-      manifiesto: muestra_gold.csv
-      anotadores: [diego]
-      adjudicador: null
-      pasadas: [2]
+    # Parte B: 5 pasajes, 1 por consulta de Q11 a Q15 (recorte 2, 2026-11-23, antes de sortearla).
+    # Sin parte `v1`: con el recorte 3 el criterio FECHA no cambia y la FECHA del gold v1 ya está
+    # anotada con él por su autor; el gold v1 completo se usa tal cual (2026-11-23).

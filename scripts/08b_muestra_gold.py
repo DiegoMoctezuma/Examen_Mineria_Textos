@@ -47,7 +47,8 @@ def _escribir(df: pd.DataFrame, ruta) -> str:
 ETIQUETA_V1 = "v1.0-entrega"
 CONSULTAS_AB = [f"Q{i}" for i in range(1, 11)]
 CONSULTAS_B = [f"Q{i}" for i in range(11, 16)]
-ESPERADO_V2 = {"seleccion": (CONSULTAS_AB, 1), "a": (CONSULTAS_AB, 1), "b": (CONSULTAS_B, 2)}
+# Parte B: 1 por consulta (5 pasajes) desde el recorte 2 del 2026-11-23; antes, 2 (10 pasajes).
+ESPERADO_V2 = {"seleccion": (CONSULTAS_AB, 1), "a": (CONSULTAS_AB, 1), "b": (CONSULTAS_B, 1)}
 
 
 def _git_show(ruta: str, etiqueta: str = ETIQUETA_V1) -> str:

@@ -103,8 +103,9 @@ def test_config_real_cumple_d31():
     assert {p: (c.anotadores, c.adjudicador) for p, c in cfg.partes.items() if c.doble} == {
         "seleccion": (("diego", "arturo"), "gonzalo"), "a": (("diego", "gonzalo"), "luis"),
         "b": (("gonzalo", "arturo"), "diego")}
-    assert cfg.partes["v1"].anotadores == ("diego",) and cfg.partes["v1"].pasadas == (2,)
-    assert "leo" in cfg.no_anotan and not cfg.pasada_2_sin_etiqueta
+    # Recortes 2 y 3 (2026-11-23): sin reanotar la FECHA del gold v1 y pasada 2 sin etiqueta.
+    assert "v1" not in cfg.partes
+    assert "leo" in cfg.no_anotan and cfg.pasada_2_sin_etiqueta
 
 
 # --------------------------------------------------------------------------- anotación por pasadas

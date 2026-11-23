@@ -184,7 +184,7 @@ def sortear(amb: pd.DataFrame, pasajes: pd.DataFrame, semilla: int = config.SEMI
 # (el ámbito IE de v1, 99 pasajes, que contiene al gold v1):
 #   - selección: 1 por consulta de Q1 a Q10;
 #   - parte A:   1 por consulta de Q1 a Q10;
-#   - parte B:   2 por consulta de Q11 a Q15 (se sortea el dom 15, con el pool v2).
+#   - parte B:   1 por consulta de Q11 a Q15 (recorte 2 del 2026-11-23), con el pool v2.
 # Universo: pares del pool que aportó alguna variante con filtro (`*_con_filtro`), nunca el top-10
 # del ganador, para no esperar a los juicios. Semilla 42 y emparejamiento global (Kuhn) como en v1;
 # sin estratos de rango (con 1 plaza por consulta no aplican y en B el universo ya excluye el top-10
