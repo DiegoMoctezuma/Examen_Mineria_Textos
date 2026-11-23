@@ -35,7 +35,9 @@ def main_v2() -> None:
     config.DIR_SALIDA_V2.mkdir(parents=True, exist_ok=True)
     ruta = config.DIR_SALIDA_V2 / "00_candidatos_q11q15.md"
     ruta.write_text(descubrimiento.a_markdown(res, actuales.head(10), "Candidatos para Q11 a Q15",
-                                              al_azar=True), encoding="utf-8")
+                                              al_azar=True, que_decide=(
+        "cinco temas distintos entre sí y de Q1 a Q10, con al menos uno de nombre alterno (D25)")),
+                    encoding="utf-8")
     print(f"Escrito {ruta.relative_to(config.RAIZ)} ({len(cands)} candidatos, "
           f"{len(excl)} pasajes del gold fuera de los ejemplos)")
 

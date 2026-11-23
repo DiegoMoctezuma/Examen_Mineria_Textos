@@ -60,13 +60,14 @@ def _ejemplos(pasajes: pd.DataFrame, n_terminos: pd.Series, mascara: pd.Series,
 
 
 def a_markdown(resultados: list[dict], consultas_obligatorias: pd.DataFrame,
-               titulo: str = "Candidatos para Q9 y Q10", al_azar: bool = False) -> str:
+               titulo: str = "Candidatos para Q9 y Q10", al_azar: bool = False,
+               que_decide: str = "dos temas distintos entre sí y de Q1 a Q8") -> str:
     """Informe `salida/00_candidatos_q9q10.md` (v2: `salida/v2/00_candidatos_q11q15.md`)."""
     L = [f"# {titulo}", "",
          ("Señal calculada sobre `data/pasajes.parquet` (127 mil pasajes, cuerpo sin la marca de "
           "interlocutor, búsqueda sin acentos ni mayúsculas). **Esto no elige nada**: el alumno "
-          "decide dos temas distintos entre sí y de Q1 a Q8, y redacta consulta, ventana y "
-          "pregunta. La redacción final queda `[VALIDAR]`."), "",
+          f"decide {que_decide}, y redacta consulta, ventana y pregunta. La redacción final "
+          "queda `[VALIDAR]`."), "",
          "## Consultas obligatorias (no se tocan)", ""]
     for r in consultas_obligatorias.itertuples():
         L.append(f"- {r.query_id}: {r.consulta} ({r.desde} a {r.hasta})")
