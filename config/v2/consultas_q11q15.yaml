@@ -1,0 +1,31 @@
+# Q11 a Q15 (PRD v2 D25, WP-04). Las eligen y redactan Diego y Arturo a partir de
+# salida/v2/00_candidatos_q11q15.md: temas distintos entre sí y de Q1 a Q10, al menos una con nombre
+# alterno. `[VALIDAR]`: mientras `estado` no empiece con "aprobadas", `make consultas-v2` no escribe.
+# Al aprobar: estado: aprobadas_AAAA-MM-DD, registro en docs/decisiones.md y después `make consultas-v2`.
+estado: pendiente
+consultas:
+  - query_id: Q11
+    consulta: ""
+    desde: ""
+    hasta: ""
+    pregunta_extraccion: ""
+  - query_id: Q12
+    consulta: ""
+    desde: ""
+    hasta: ""
+    pregunta_extraccion: ""
+  - query_id: Q13
+    consulta: ""
+    desde: ""
+    hasta: ""
+    pregunta_extraccion: ""
+  - query_id: Q14
+    consulta: ""
+    desde: ""
+    hasta: ""
+    pregunta_extraccion: ""
+  - query_id: Q15
+    consulta: ""
+    desde: ""
+    hasta: ""
+    pregunta_extraccion: ""

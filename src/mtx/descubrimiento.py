@@ -15,8 +15,12 @@ def cuerpo_normalizado(pasajes: pd.DataFrame) -> pd.Series:
     return pd.Series([corpus.sin_acentos(c).lower() for c in cuerpos], index=pasajes.index)
 
 
-def analizar_candidato(pasajes: pd.DataFrame, norm: pd.Series, cand: dict) -> dict:
-    """Conteos de un candidato, en todo el corpus y dentro de su ventana sugerida."""
+def analizar_candidato(pasajes: pd.DataFrame, norm: pd.Series, cand: dict,
+                       excluir: frozenset[str] = frozenset(), semilla: int | None = None) -> dict:
+    """Conteos de un candidato, en todo el corpus y dentro de su ventana sugerida.
+
+    v2 (WP-04, D32): con `semilla`, los ejemplos son pasajes al azar de la ventana, no los de más
+    términos (eso ya sería un ranking), y nunca uno de `excluir` (las muestras del gold)."""
     terminos = [corpus.sin_acentos(t).lower() for t in cand["terminos"]]
     coincide = pd.DataFrame({t: norm.str.contains(t, regex=False) for t in terminos})
     n_terminos = coincide.sum(axis=1)
@@ -32,25 +36,33 @@ def analizar_candidato(pasajes: pd.DataFrame, norm: pd.Series, cand: dict) -> di
         "discursos_ventana": int(pasajes.loc[alguno & en_ventana, "doc_id"].nunique()),
         "por_termino": {t: int(coincide[t].sum()) for t in terminos},
         "por_anio": pasajes.loc[alguno, "fecha"].dt.year.value_counts().sort_index().to_dict(),
-        "ejemplos": _ejemplos(pasajes, n_terminos, alguno & en_ventana),
+        "ejemplos": _ejemplos(pasajes, n_terminos, alguno & en_ventana, excluir=excluir,
+                              semilla=semilla),
     }
 
 
 def _ejemplos(pasajes: pd.DataFrame, n_terminos: pd.Series, mascara: pd.Series,
-              k: int = 3, largo: int = 300) -> list[dict]:
-    """Tres pasajes de la ventana con más términos distintos; desempate por orden de id."""
+              k: int = 3, largo: int = 300, excluir: frozenset[str] = frozenset(),
+              semilla: int | None = None) -> list[dict]:
+    """Tres pasajes de la ventana con más términos distintos (desempate por orden de id) o, con
+    `semilla`, tres al azar mostrados en orden cronológico."""
+    mascara = mascara & ~pasajes["passage_id"].isin(excluir)
     sel = pasajes[mascara].assign(_n=n_terminos[mascara]).copy()
     sel["_doc"] = sel["doc_id"]
     sel["_pos"] = sel["posicion"]
-    sel = sel.sort_values(["_n", "_doc", "_pos"], ascending=[False, True, True]).head(k)
+    if semilla is not None:
+        sel = sel.sample(n=min(k, len(sel)), random_state=semilla).sort_values(["_doc", "_pos"])
+    else:
+        sel = sel.sort_values(["_n", "_doc", "_pos"], ascending=[False, True, True]).head(k)
     return [{"passage_id": r.passage_id, "fecha": r.fecha.date().isoformat(),
              "texto": r.texto[r.inicio_cuerpo:r.inicio_cuerpo + largo]}
             for r in sel.itertuples()]
 
 
-def a_markdown(resultados: list[dict], consultas_obligatorias: pd.DataFrame) -> str:
-    """Informe `salida/00_candidatos_q9q10.md`."""
-    L = ["# Candidatos para Q9 y Q10", "",
+def a_markdown(resultados: list[dict], consultas_obligatorias: pd.DataFrame,
+               titulo: str = "Candidatos para Q9 y Q10", al_azar: bool = False) -> str:
+    """Informe `salida/00_candidatos_q9q10.md` (v2: `salida/v2/00_candidatos_q11q15.md`)."""
+    L = [f"# {titulo}", "",
          ("Señal calculada sobre `data/pasajes.parquet` (127 mil pasajes, cuerpo sin la marca de "
           "interlocutor, búsqueda sin acentos ni mayúsculas). **Esto no elige nada**: el alumno "
           "decide dos temas distintos entre sí y de Q1 a Q8, y redacta consulta, ventana y "
@@ -76,7 +88,8 @@ def a_markdown(resultados: list[dict], consultas_obligatorias: pd.DataFrame) -> 
               (f"- Discursos distintos: {r['discursos_total']:,} en todo el corpus, "
                f"{r['discursos_ventana']:,} en la ventana"),
               "- Pasajes por año: " + ", ".join(f"{a}: {n:,}" for a, n in r["por_anio"].items()),
-              "", "Ejemplos (primeros 300 caracteres del cuerpo):", ""]
+              "", ("Ejemplos al azar de la ventana, sin pasajes del gold (primeros 300 caracteres):"
+                   if al_azar else "Ejemplos (primeros 300 caracteres del cuerpo):"), ""]
         for e in r["ejemplos"]:
             L.append(f"- `{e['passage_id']}` ({e['fecha']}): {e['texto']}")
         if not r["ejemplos"]:

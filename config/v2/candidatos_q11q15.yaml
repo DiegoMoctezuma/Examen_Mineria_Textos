@@ -1,0 +1,78 @@
+# Sugerencias para Q11 a Q15 (PRD v2 D25, WP-04). Son candidatas, no consultas elegidas: Diego y
+# Arturo eligen 5, distintas entre sí y de Q1 a Q10, con al menos una de nombre alterno (como Dos
+# Bocas y refinería Olmeca), y redactan consulta, ventana y pregunta en
+# config/v2/consultas_q11q15.yaml. `[VALIDAR]`. Los términos se buscan sin acentos ni mayúsculas.
+# Editable: agreguen o quiten candidatos y corran `make explorar-v2`.
+candidatos:
+  - id: guardia_nacional
+    tema: Guardia Nacional
+    terminos: ["guardia nacional", "despliegue", "elementos"]
+    desde: "2019-01-01"
+    hasta: "2020-12-31"
+    pregunta: "Qué dependencias la integran, en qué estados se despliega, cuántos elementos y qué fechas"
+  - id: imss_bienestar
+    tema: Insabi e IMSS-Bienestar (nombre alterno)
+    terminos: ["insabi", "imss-bienestar", "imss bienestar", "seguro popular"]
+    desde: "2019-06-01"
+    hasta: "2024-09-30"
+    pregunta: "Qué instituciones participan, en qué estados, qué funcionarios, qué montos y qué fechas"
+  - id: avion_presidencial
+    tema: Rifa y venta del avión presidencial (TP-01, "José María Morelos y Pavón")
+    terminos: ["avion presidencial", "rifa", "tp-01", "jose maria morelos"]
+    desde: "2018-12-01"
+    hasta: "2023-06-30"
+    pregunta: "Qué dependencias y compradores, qué montos, qué fechas y dónde estuvo el avión"
+  - id: segalmex
+    tema: Segalmex (Seguridad Alimentaria Mexicana), Diconsa y Liconsa
+    terminos: ["segalmex", "seguridad alimentaria mexicana", "diconsa", "liconsa"]
+    desde: "2019-01-01"
+    hasta: "2024-09-30"
+    pregunta: "Qué organismos y funcionarios, qué montos del desfalco, qué fechas y qué lugares"
+  - id: ayotzinapa
+    tema: Caso Ayotzinapa (43 normalistas de Iguala)
+    terminos: ["ayotzinapa", "normalistas", "comision de la verdad", "iguala"]
+    desde: "2018-12-01"
+    hasta: "2024-09-30"
+    pregunta: "Qué organismos y funcionarios, qué fechas y qué lugares"
+  - id: litio
+    tema: Nacionalización del litio (LitioMx)
+    terminos: ["litio", "litiomx", "sonora"]
+    desde: "2021-10-01"
+    hasta: "2023-12-31"
+    pregunta: "Qué organismos y empresas, en qué estados, qué montos y qué fechas"
+  - id: reforma_electrica
+    tema: Reforma eléctrica y CFE
+    terminos: ["reforma electrica", "cfe", "comision federal de electricidad", "generacion"]
+    desde: "2021-09-01"
+    hasta: "2022-12-31"
+    pregunta: "Qué organizaciones, qué funcionarios, qué porcentajes y montos"
+  - id: aranceles_migracion
+    tema: Aranceles y acuerdo migratorio con Estados Unidos (2019)
+    terminos: ["aranceles", "trump", "migrantes", "acuerdo migratorio"]
+    desde: "2019-05-01"
+    hasta: "2019-07-31"
+    pregunta: "Qué países y funcionarios, qué porcentajes, qué fechas y cifras de migrantes"
+  - id: jovenes_construyendo
+    tema: Jóvenes Construyendo el Futuro
+    terminos: ["jovenes construyendo el futuro", "aprendices", "becarios"]
+    desde: "2019-01-01"
+    hasta: "2024-09-30"
+    pregunta: "Qué dependencias y empresas, cuántos jóvenes, qué montos de beca y en qué estados"
+  - id: otis_acapulco
+    tema: Huracán Otis en Acapulco
+    terminos: ["otis", "acapulco", "huracan"]
+    desde: "2023-10-20"
+    hasta: "2024-06-30"
+    pregunta: "Qué dependencias, qué lugares, qué montos de apoyo y qué fechas"
+  - id: mexicana_aviacion
+    tema: Mexicana de Aviación
+    terminos: ["mexicana de aviacion", "aerolinea", "mexicana"]
+    desde: "2023-01-01"
+    hasta: "2024-09-30"
+    pregunta: "Qué dependencias, qué montos de compra, qué fechas y qué rutas"
+  - id: culiacanazo
+    tema: Operativo de Culiacán y Ovidio Guzmán ("culiacanazo", nombre alterno)
+    terminos: ["culiacan", "ovidio", "culiacanazo"]
+    desde: "2019-10-17"
+    hasta: "2023-06-30"
+    pregunta: "Qué fuerzas y funcionarios, qué lugares, qué fechas y cuántos elementos"

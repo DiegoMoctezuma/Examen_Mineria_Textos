@@ -43,3 +43,15 @@ def test_la_busqueda_ignora_acentos_mayusculas_y_la_marca():
     p.loc[3, "texto"] = "Guardia Nacional: nada"
     p.loc[3, "inicio_cuerpo"] = len("Guardia Nacional: ")
     assert descubrimiento.analizar_candidato(p, descubrimiento.cuerpo_normalizado(p), CAND)["pasajes_total"] == 2
+
+
+def test_v2_ejemplos_al_azar_sin_pasajes_del_gold():
+    """WP-04 (D32): los ejemplos no salen de las muestras del gold y no se ordenan por señal."""
+    p = pasajes_demo()
+    cand = CAND | {"hasta": "2023-12-31"}
+    norm = descubrimiento.cuerpo_normalizado(p)
+    r = descubrimiento.analizar_candidato(p, norm, cand, excluir=frozenset({"1_0"}), semilla=42)
+    assert [e["passage_id"] for e in r["ejemplos"]] == ["2_0"]
+    assert r["pasajes_ventana"] == 2  # los conteos no excluyen nada
+    otra = descubrimiento.analizar_candidato(p, norm, cand, semilla=42)
+    assert [e["passage_id"] for e in otra["ejemplos"]] == ["1_0", "2_0"]  # orden cronológico
