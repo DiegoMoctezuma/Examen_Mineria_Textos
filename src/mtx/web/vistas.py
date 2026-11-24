@@ -1,6 +1,9 @@
 """Páginas de la demo web. La lógica de datos está en `datos.py` y el HTML en `componentes.py`."""
 from __future__ import annotations
 
+import time
+from datetime import date
+
 import pandas as pd
 import streamlit as st
 
@@ -8,6 +11,7 @@ from mtx import presentacion as P
 from mtx.respuestas import MAX_VALORES
 from mtx.web import componentes as C
 from mtx.web import datos as D
+from mtx.web import libre as libre_mod
 
 EJEMPLO = "Q3"   # refinería de Dos Bocas (D36: ejemplo guiado precargado)
 EXPLICA_MODELOS = (
@@ -227,26 +231,150 @@ def comparacion(a: D.Artefactos, q: str) -> None:
          f'una precisión promedio (MAP) de {k["map"]["bm25"]:.2f} contra {k["map"]["tfidf"]:.2f} '
          f'de TF-IDF; de cada 10 fragmentos, en promedio {k["p10"]["bm25"] * 10:.1f} fueron '
          f'relevantes con BM25 y {k["p10"]["tfidf"] * 10:.1f} con TF-IDF.</p>')
-    tops = {m: a.top(q, m) for m in D.MODELOS}
+    lado_a_lado({m: a.top(q, m) for m in D.MODELOS}, a.pasajes, a.contexto, a.mejor)
+
+
+def lado_a_lado(tops: dict[str, pd.DataFrame], pasajes: pd.DataFrame, contexto_fn,
+                ganador: str) -> None:
+    """Las dos listas de 10 en columnas; los fragmentos que aparecen en ambas, en dorado."""
     comunes = set(tops["tfidf"]["passage_id"]) & set(tops["bm25"]["passage_id"])
-    st.caption(f"{len(comunes)} de 10 fragmentos aparecen en los dos; están marcados en dorado.")
+    n = max(len(t) for t in tops.values())
+    st.caption(f"{len(comunes)} de {n} fragmentos aparecen en los dos; están marcados en dorado.")
     cols = st.columns(2, gap="medium")
     for col, m in zip(cols, D.MODELOS):
         with col:
-            gana = '<span class="gana">ganador</span>' if m == a.mejor else ""
+            gana = '<span class="gana">ganador</span>' if m == ganador else ""
             html(f'<div class="col-tit">{D.NOMBRE_MODELO[m]}{gana}</div>')
             for r in tops[m].itertuples():
-                html(C.tarjeta_mini(a.pasajes.loc[r.passage_id], r.rango,
-                                    r.passage_id in comunes, a.contexto(r.passage_id)))
+                html(C.tarjeta_mini(pasajes.loc[r.passage_id], r.rango,
+                                    r.passage_id in comunes, contexto_fn(r.passage_id)))
 
 
-# --------------------------------------------------------------------------- otras
+# --------------------------------------------------------------------------- consulta libre
+
+FECHA_MIN, FECHA_MAX = date(2018, 12, 1), date(2024, 9, 30)
+IDEAS = ["precio de la gasolina", "vacunas contra el COVID en Oaxaca",
+         "seguridad en Culiacán", "becas para estudiantes", "litio y su nacionalización"]
+
+
+@st.cache_resource(show_spinner="Cargando el índice de búsqueda (solo la primera vez)…")
+def buscador_completo():
+    from mtx import ranking
+    b = ranking.cargar_buscador()
+    return b, b.pasajes.set_index("passage_id", drop=False), D.indice_vecinos()
+
+
+@st.cache_resource(show_spinner="Cargando el modelo de lenguaje (solo la primera vez)…")
+def modelo_ner():
+    return libre_mod.modelo_ner()
+
+
+@st.cache_data(show_spinner=False, max_entries=500)
+def entidades_en_caliente(passage_id: str, version: str) -> pd.DataFrame:
+    _, pasajes, _ = buscador_completo()
+    f = pasajes.loc[passage_id]
+    return libre_mod.entidades_pasaje(passage_id, str(f["texto"]), int(f["inicio_cuerpo"]),
+                                      libre_mod.extractor_reglas(version), modelo_ner())
+
+
+def _fecha_qp(nombre_: str) -> date | None:
+    try:
+        return date.fromisoformat(st.query_params.get(nombre_, ""))
+    except ValueError:
+        return None
 
 
 def libre() -> None:
     html(C.migas(["Inicio", "Consulta libre"]))
-    html(C.etiqueta("En construcción"))
-    st.info("Esta sección se arma en el bloque B5.")
+    texto = st.query_params.get("texto", "").strip()
+    desde_qp, hasta_qp = _fecha_qp("desde"), _fecha_qp("hasta")
+    if not texto:
+        html(C.titulo("Haz tu propia búsqueda",
+                      "Escribe un tema y el buscador encuentra los fragmentos de las conferencias "
+                      "que mejor lo tratan, con los dos métodos, y marca en ellos personas, "
+                      "organizaciones, lugares, fechas y montos."))
+    periodo = st.toggle("Limitar a un periodo", value=bool(desde_qp or hasta_qp))
+    with st.form("libre"):
+        nuevo = st.text_input("¿Qué quieres buscar?", value=texto,
+                              placeholder="Por ejemplo: precio de la gasolina")
+        d = h = None
+        if periodo:
+            c1, c2 = st.columns(2)
+            d = c1.date_input("Desde", value=desde_qp or FECHA_MIN, min_value=FECHA_MIN,
+                              max_value=FECHA_MAX, format="DD/MM/YYYY")
+            h = c2.date_input("Hasta", value=hasta_qp or FECHA_MAX, min_value=FECHA_MIN,
+                              max_value=FECHA_MAX, format="DD/MM/YYYY")
+        enviar = st.form_submit_button("Buscar", type="primary")
+    if enviar:
+        st.query_params.clear()
+        if nuevo.strip():
+            st.query_params["texto"] = nuevo.strip()
+            if periodo and d and h:
+                st.query_params.update({"desde": d.isoformat(), "hasta": h.isoformat()})
+        st.rerun()
+    if not texto:
+        if "libre" in PAGINAS:
+            html('<p class="meta">Ideas para empezar:</p>')
+            with st.container(horizontal=True):
+                for idea in IDEAS:
+                    st.page_link(PAGINAS["libre"], label=idea, query_params={"texto": idea})
+        return
+    if desde_qp and hasta_qp and desde_qp > hasta_qp:
+        st.error("La fecha «desde» es posterior a «hasta».")
+        return
+    resultado_libre(texto, desde_qp, hasta_qp)
+
+
+def resultado_libre(texto: str, desde: date | None, hasta: date | None) -> None:
+    t0 = time.perf_counter()
+    buscador, pasajes, vecinos = buscador_completo()
+    version = D.version_datos()
+    res = libre_mod.buscar(buscador, texto, desde.isoformat() if desde else None,
+                           hasta.isoformat() if hasta else None, D.pasajes_bloqueados())
+    periodo = (f"del {P.fecha_larga(desde)} al {P.fecha_larga(hasta)}" if desde
+               else "todo el periodo, de diciembre de 2018 a septiembre de 2024")
+    html(C.titulo(f"«{texto}»", None,
+                  f"Búsqueda libre | {periodo} | {res.elegibles:,} fragmentos en el periodo"))
+    for aviso in res.avisos:
+        st.warning(aviso)
+    if not res.tokens or res.tops["bm25"].empty:
+        return
+    html(f'<p>Raíces que se buscan: {C.raices(res.tokens)}</p>')
+    if res.ocultos:
+        n = res.ocultos
+        st.caption(f"Se {'omitió' if n == 1 else 'omitieron'} {n} "
+                   f"{'fragmento reservado' if n == 1 else 'fragmentos reservados'} para una "
+                   "evaluación en curso; en su lugar aparecen los siguientes.")
+    t1 = time.perf_counter()
+    with st.status("Extrayendo los datos de los 10 fragmentos con reglas y un modelo de "
+                   "lenguaje. Esto se calcula en este momento y puede tardar unos segundos…",
+                   expanded=False) as estado:
+        ents = {pid: entidades_en_caliente(pid, version) for pid in res.tops["bm25"]["passage_id"]}
+        estado.update(label="Datos extraídos en este momento con reglas y un modelo de lenguaje",
+                      state="complete")
+    t2 = time.perf_counter()
+    html(f'<p class="meta">Tiempo de respuesta: búsqueda {t1 - t0:.1f} s · extracción de datos '
+         f'{t2 - t1:.1f} s · total {t2 - t0:.1f} s</p>')
+    html('<p class="explica">Esta búsqueda queda fuera del experimento: no tiene juicios humanos, '
+         'así que no hay medición de calidad ni tabla de respuesta con citas. Esas solo existen '
+         'para las consultas del experimento.</p>')
+
+    def contexto_fn(pid: str):
+        return D.contexto(pid, vecinos, pasajes)
+
+    t_pas, t_comp = st.tabs(["Fragmentos y datos", "TF-IDF frente a BM25"])
+    with t_pas:
+        html(C.leyenda())
+        st.caption("Los 10 mejores fragmentos según BM25, el método que ganó en la evaluación.")
+        for r in res.tops["bm25"].itertuples():
+            html(C.tarjeta_pasaje(pasajes.loc[r.passage_id], ents[r.passage_id], rango=r.rango,
+                                  contexto=contexto_fn(r.passage_id)))
+    with t_comp:
+        html(f'<p class="explica">{EXPLICA_MODELOS}</p>')
+        lado_a_lado(res.tops, pasajes, contexto_fn, artefactos().mejor)
+
+
+# --------------------------------------------------------------------------- otras
 
 
 def como_funciona() -> None:

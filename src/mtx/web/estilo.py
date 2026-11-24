@@ -175,7 +175,10 @@ mark.ent, span.ent {{ color:#1a1a1a; padding:.03em .2em; border-radius:3px;
 .pie strong {{ color:#fff; }}
 
 .stButton button[kind="primary"], .stFormSubmitButton button {{ background:var(--guinda);
-  border-color:var(--guinda); color:#fff; }}
+  border-color:var(--guinda); color:#fff; padding:.35rem 1.6rem; }}
+.stFormSubmitButton button p, .stButton button[kind="primary"] p {{ color:#fff !important;
+  font-weight:600; }}
+[data-testid="InputInstructions"] {{ display:none; }}
 
 @media (max-width: 700px) {{
   .titulo {{ font-size:1.9rem; }} .entrada {{ font-size:1.12rem; }}

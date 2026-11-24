@@ -179,3 +179,64 @@ def test_paginas_sin_ids_ni_rutas():
         visible = _visible(at.run())
         assert not ID_VISIBLE.search(visible), ID_VISIBLE.search(visible)
         assert "salida/" not in visible and ".csv" not in visible
+
+
+# --------------------------------------------------------------------------- consulta libre
+
+class BuscadorFalso:
+    """Devuelve 15 pasajes ordenados; los de puntaje 0 al final."""
+
+    def __init__(self, ceros: int = 0, tokens=("gasolin",)):
+        self.ceros, self.tokens = ceros, list(tokens)
+
+    def buscar(self, consulta, desde, hasta, modelo, k):
+        n = 15
+        punt = [float(n - i) if i < n - self.ceros else 0.0 for i in range(n)]
+        tabla = pd.DataFrame({"rango": range(1, n + 1),
+                              "passage_id": [f"{i}_0" for i in range(n)],
+                              "puntaje": punt, "sin_senal_lexica": [int(p == 0) for p in punt]})
+        return tabla.head(k), {"tokens": self.tokens, "elegibles": 500}
+
+
+def test_libre_salta_bloqueados_y_rellena():
+    from mtx.web import libre as L
+
+    r = L.buscar(BuscadorFalso(), "gasolina", bloqueados=frozenset({"1_0", "3_0", "14_0"}))
+    for m in ("tfidf", "bm25"):
+        ids = list(r.tops[m]["passage_id"])
+        assert len(ids) == 10 and not {"1_0", "3_0"} & set(ids)
+        assert list(r.tops[m]["rango"]) == list(range(1, 11))
+    assert r.ocultos == 2 and r.avisos == []        # 14_0 no habría salido entre los 10
+
+
+def test_libre_sin_coincidencias_y_sin_terminos():
+    from mtx.web import libre as L
+
+    r = L.buscar(BuscadorFalso(ceros=15), "xyzzy")
+    assert r.tops["bm25"].empty and r.avisos == [L.AVISOS["nada"]]
+    r = L.buscar(BuscadorFalso(ceros=11), "algo raro")
+    assert len(r.tops["bm25"]) == 4 and "Solo 4 fragmentos" in r.avisos[0]
+    r = L.buscar(BuscadorFalso(tokens=()), "de la")
+    assert r.avisos == [L.AVISOS["sin_terminos"]]
+
+
+def test_libre_une_reglas_y_modelo_por_span():
+    from types import SimpleNamespace
+
+    from mtx.web import libre as L
+
+    texto = "VOZ: Pemex invirtió en Tabasco."
+    i, j = texto.index("Pemex"), texto.index("Tabasco")
+
+    def reglas(t, ic):
+        return [SimpleNamespace(tipo="ORG", inicio=i, fin=i + 5),
+                SimpleNamespace(tipo="LOC", inicio=j, fin=j + 7)]
+
+    def modelo(t, pid):
+        return [{"tipo": "ORG", "inicio": i, "fin": i + 5}, {"tipo": "PER", "inicio": 0, "fin": 3}]
+
+    e = L.entidades_pasaje("9_1", texto, 5, reglas, modelo)
+    assert dict(zip(e["texto"], e["metodo"])) == {"VOZ": "modelo", "Pemex": "ambos",
+                                                  "Tabasco": "regla"}
+    assert C.spans_entidades(e, 5) == [(i - 5, i, "ent e-ORG"), (j - 5, j + 2, "ent e-LOC")]
+    assert list(L.entidades_pasaje("9_1", texto, 5, reglas)["metodo"]) == ["regla", "regla"]
