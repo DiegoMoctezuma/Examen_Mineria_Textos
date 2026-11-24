@@ -89,12 +89,13 @@ def entidades_pasaje(passage_id: str, texto: str, inicio_cuerpo: int, reglas_fn,
     return pd.DataFrame(filas, columns=COLUMNAS_ENT)
 
 
-def modelo_ner():
-    """Carga el NER principal de `config/ner.yaml` (revisión fija) y devuelve una función
+def modelo_ner(slug: str | None = None):
+    """Carga un NER de `config/ner.yaml` con su revisión fija (por omisión, el principal; con
+    datos v2, el ganador de `data/modelo_ner.json`, que puede ser de spaCy) y devuelve una función
     `(texto, passage_id) → entidades posprocesadas`."""
     from mtx import ner_modelo as N
     principal, cfgs = N.cargar_config()
-    cfg = cfgs[principal]
+    cfg = cfgs[slug or principal]
     pipe, tok = N.construir_pipeline(cfg)
 
     def inferir(texto: str, passage_id: str) -> list[dict]:

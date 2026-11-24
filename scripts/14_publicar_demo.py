@@ -20,6 +20,18 @@ from mtx.web import datos as D
 
 ARCHIVOS = ["data/pasajes.parquet", "data/indice.pkl", "data/tokens.parquet", "data/tfidf.pkl",
             "data/tfidf_X.npz"]
+# Con datos v2 y un ganador con lemas, la consulta libre usa el índice lematizado (fuera de git).
+ARCHIVOS_LEMA = ["data/v2/indice_lema.pkl", "data/v2/indice_lema_meta.json",
+                 "data/v2/tokens_lema.parquet", "data/v2/tfidf_lema.pkl",
+                 "data/v2/tfidf_lema_X.npz"]
+
+
+def archivos() -> list[str]:
+    if D.version_datos() == "v2":
+        mejor = json.loads((config.DIR_DATA_V2 / "mejor_modelo.json").read_text(encoding="utf-8"))
+        if mejor.get("preprocesamiento") == "lema":
+            return ARCHIVOS + ARCHIVOS_LEMA
+    return list(ARCHIVOS)
 
 
 def verificar() -> list[str]:
@@ -28,7 +40,7 @@ def verificar() -> list[str]:
 
     meta = json.loads(config.INDICE_META.read_text(encoding="utf-8"))
     errores = []
-    for ruta in ARCHIVOS:
+    for ruta in archivos():
         if not (config.RAIZ / ruta).exists():
             errores.append(f"Falta {ruta}: correr `make corpus indice`")
     if errores:
@@ -39,8 +51,9 @@ def verificar() -> list[str]:
         errores.append("data/tfidf.pkl no corresponde a indice_meta.json")
     if corpus.hash_pasajes(pd.read_parquet(config.PASAJES_PARQUET)) != meta["sha256_pasajes"]:
         errores.append("data/pasajes.parquet no corresponde a indice_meta.json")
-    # tokens: lo verifica `cargar_buscador` al arrancar; tfidf_X.npz: el zip guarda fechas y su
-    # sha256 cambia en cada `make indice`, así que se fija el de la copia subida.
+    # tokens (y el índice con lemas): los verifica `cargar_buscador` al arrancar; los .npz guardan
+    # fechas en el zip y su sha256 cambia en cada `make indice`, así que se fija el de la copia
+    # subida.
     return errores
 
 
@@ -57,8 +70,9 @@ def main() -> int:
         print(f"ERROR: {e}")
     if errores:
         return 1
-    hashes = {r: arranque.sha256(config.RAIZ / r) for r in ARCHIVOS}
-    total = sum((config.RAIZ / r).stat().st_size for r in ARCHIVOS) / 1e6
+    lista = archivos()
+    hashes = {r: arranque.sha256(config.RAIZ / r) for r in lista}
+    total = sum((config.RAIZ / r).stat().st_size for r in lista) / 1e6
     print(f"Versión de datos de la demo: {D.version_datos()}")
     print(f"Archivos ({total:.0f} MB) → dataset {a.repo} "
           f"({'público' if a.publico else 'privado'}):")
@@ -72,7 +86,7 @@ def main() -> int:
     api = HfApi()
     api.create_repo(a.repo, repo_type="dataset", private=not a.publico, exist_ok=True)
     info = api.upload_folder(repo_id=a.repo, repo_type="dataset", folder_path=config.RAIZ,
-                             allow_patterns=ARCHIVOS,
+                             allow_patterns=lista,
                              commit_message="Artefactos de la demo web (WP-15)")
     revision = info.oid
     manifiesto = {"repo_id": a.repo, "revision": revision, "version_datos": D.version_datos(),

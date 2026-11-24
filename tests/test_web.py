@@ -279,3 +279,85 @@ def test_arranque_descarga_lo_que_falta_y_verifica(tmp_path, monkeypatch):
         arranque.asegurar_artefactos(tmp_path, man)
     assert not (tmp_path / "data/a.bin").exists()
     assert arranque.asegurar_artefactos(tmp_path, tmp_path / "no_existe.json") == []
+
+
+# --------------------------------------------------------------------------- v2 y D32 en el contexto
+
+
+def test_contexto_oculta_vecinos_bloqueados():
+    vec = pd.DataFrame({"anterior": [None, "1_0", "1_1"], "siguiente": ["1_1", "1_2", None]},
+                       index=["1_0", "1_1", "1_2"])
+    pas = pd.DataFrame({"passage_id": ["1_0", "1_1", "1_2"]}).set_index("passage_id", drop=False)
+    antes, despues = D.contexto("1_1", vec, pas)
+    assert antes["passage_id"] == "1_0" and despues["passage_id"] == "1_2"
+    antes, despues = D.contexto("1_1", vec, pas, frozenset({"1_2"}))
+    assert antes["passage_id"] == "1_0" and despues is None
+
+
+def _repo_v2(tmp_path, preprocesamiento="lema"):
+    """Repo mínimo con las salidas v2 que lee la demo (contenido sintético)."""
+    import json
+
+    r = tmp_path
+    for d in ("data/v2", "salida/v2", "anotaciones/v2"):
+        (r / d).mkdir(parents=True, exist_ok=True)
+    pd.DataFrame({"passage_id": ["1_0", "1_1", "2_0"], "doc_id": [1, 1, 2],
+                  "fecha": pd.to_datetime(["2020-01-01"] * 3), "titulo": ["t"] * 3,
+                  "url": [""] * 3, "posicion": [0, 1, 0], "interlocutor": ["X"] * 3,
+                  "es_reportero": [False] * 3, "texto": ["X: hola mundo"] * 3,
+                  "inicio_cuerpo": [3] * 3}).to_parquet(r / "data/pasajes.parquet")
+    (r / "data/consultas.csv").write_text(
+        "query_id,consulta,desde,hasta,pregunta_extraccion\n"
+        + "".join(f"Q{i},tema {i},2019-01-01,2020-12-31,qué\n" for i in range(1, 16)),
+        encoding="utf-8")
+    (r / "data/v2/mejor_modelo.json").write_text(json.dumps(
+        {"modelo": "bm25_con_filtro", "preprocesamiento": preprocesamiento}), encoding="utf-8")
+    (r / "data/modelo_ner.json").write_text(json.dumps({"slug": "spacy_es_lg"}), encoding="utf-8")
+    filas = [{"query_id": "Q11", "modelo": f"{m}_con_filtro", "variante": "con_filtro",
+              "rango": 1, "passage_id": "1_0", "puntaje": 1.0} for m in ("tfidf", "bm25")]
+    pd.DataFrame(filas).to_csv(r / "salida/v2/ranking.csv", index=False)
+    pd.DataFrame(columns=["query_id", "passage_id", "tipo", "texto", "inicio", "fin", "metodo"]
+                 ).to_csv(r / "salida/v2/entidades.csv", index=False)
+    pd.DataFrame({"query_id": ["Q11"], "campo_respuesta": ["c"], "passage_id": ["1_0"]}
+                 ).to_csv(r / "salida/v2/respuestas.csv", index=False)
+    pd.DataFrame({"query_id": ["Q11"]}).to_csv(r / "salida/v2/10_evidencias.csv", index=False)
+    ir = pd.DataFrame({"query_id": ["PROMEDIO (MAP = AP)"] * 2,
+                       "modelo": ["tfidf_con_filtro", "bm25_con_filtro"],
+                       "P@10": [0.4, 0.6], "AP": [0.3, 0.5]})
+    ir.to_csv(r / "salida/v2/resultados_ir.csv", index=False)
+    ie = pd.DataFrame({"metodo": ["regla", "modelo", "combinado"], "tipo": ["TODOS"] * 3,
+                       "precision": [0.9] * 3, "recall": [0.6, 0.5, 0.8], "f1": [0.7, 0.6, 0.8]})
+    ie.to_csv(r / "salida/v2/resultados_ie.csv", index=False)
+    (r / "salida/01_limpieza.json").write_text(json.dumps(
+        {"discursos": 3, "pasajes": 3, "palabras_por_pasaje_media": 2.0,
+         "pasajes_de_reporteros_pct": 0.0}), encoding="utf-8")
+    (r / "anotaciones/v2/muestra_gold_b.csv").write_text("query_id,passage_id\nQ11,1_1\n",
+                                                         encoding="utf-8")
+    return r
+
+
+def test_cargar_v2_lee_salida_v2(tmp_path):
+    r = _repo_v2(tmp_path)
+    a = D.cargar_v2(r)
+    assert a.version == "v2" and len(a.consultas) == 15
+    assert a.mejor == "bm25" and a.raiz_indice == "lema" and a.ner_slug == "spacy_es_lg"
+    assert a.bloqueados == {"1_1"}                     # sin cierre del gold todavía
+    assert a.contexto("1_0") == (None, None)           # su vecino 1_1 está bloqueado
+    k = D.cifras(r, "v2")
+    assert k["map"] == {"tfidf": 0.3, "bm25": 0.5} and k["f1"]["combinado"] == 0.8
+
+
+def test_cargar_v2_avisa_lo_que_falta(tmp_path):
+    r = _repo_v2(tmp_path)
+    (r / "salida/v2/entidades.csv").unlink()
+    with pytest.raises(FileNotFoundError, match="salida/v2/entidades.csv"):
+        D.cargar_v2(r)
+
+
+def test_version_v2_con_los_dos_cierres(tmp_path):
+    r = _repo_v2(tmp_path, "stem")
+    assert D.version_datos(r) == "v1"
+    for nombre in ("cierre_juicios_v2.json", "cierre_gold_v2.json"):
+        (r / "anotaciones" / nombre).write_text("{}", encoding="utf-8")
+    a = D.cargar_artefactos(r)
+    assert a.version == "v2" and a.raiz_indice == "stem" and a.bloqueados == frozenset()

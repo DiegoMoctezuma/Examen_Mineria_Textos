@@ -105,11 +105,14 @@ def inicio() -> None:
 
         # 2 · La búsqueda
         en_ventana, total = conteo_ventana(c["desde"], c["hasta"])
-        tokens = preproceso.tokenizar(consulta, "stem")
+        tokens = preproceso.tokenizar(consulta, a.raiz_indice)
+        forma = ("su raíz, para que «refinería», «refinerías» y «refinar» cuenten igual"
+                 if a.raiz_indice == "stem" else
+                 "su forma de diccionario (lema), para que «refinerías» cuente como «refinería»")
         top = a.top(EJEMPLO, a.mejor)
         html(C.paso(2, "La búsqueda",
                     '<p>Se quitan las palabras vacías como «de» o «en», y cada palabra se reduce a '
-                    'su raíz, para que «refinería», «refinerías» y «refinar» cuenten igual:</p>'
+                    f'{forma}:</p>'
                     f'<div>{C.raices(tokens)}</div>'
                     '<div class="embudo">'
                     f'<div><strong>{total:,}</strong><span>fragmentos en total</span></div>'
@@ -260,13 +263,13 @@ IDEAS = ["precio de la gasolina", "vacunas contra el COVID en Oaxaca",
 @st.cache_resource(show_spinner="Cargando el índice de búsqueda (solo la primera vez)…")
 def buscador_completo():
     from mtx import ranking
-    b = ranking.cargar_buscador()
+    b = ranking.cargar_buscador(raiz=artefactos().raiz_indice)
     return b, b.pasajes.set_index("passage_id", drop=False), D.indice_vecinos()
 
 
 @st.cache_resource(show_spinner="Cargando el modelo de lenguaje (solo la primera vez)…")
 def modelo_ner():
-    return libre_mod.modelo_ner()
+    return libre_mod.modelo_ner(artefactos().ner_slug)
 
 
 @st.cache_data(show_spinner=False, max_entries=500)
@@ -379,8 +382,10 @@ def resultado_libre(texto: str, desde: date | None, hasta: date | None) -> None:
          'así que no hay medición de calidad ni tabla de respuesta con citas. Esas solo existen '
          'para las consultas del experimento.</p>')
 
+    bloqueados = artefactos().bloqueados
+
     def contexto_fn(pid: str):
-        return D.contexto(pid, vecinos, pasajes)
+        return D.contexto(pid, vecinos, pasajes, bloqueados)
 
     t_pas, t_comp = st.tabs(["Fragmentos y datos", "TF-IDF frente a BM25"])
     with t_pas:

@@ -71,6 +71,9 @@ class Artefactos:
     evidencias: pd.DataFrame    # salida/10_evidencias.csv (conteos por valor)
     pasajes: pd.DataFrame       # pasajes de `ranking` y sus vecinos, indexados por passage_id
     vecinos: pd.DataFrame       # anterior y siguiente de cada pasaje del mismo discurso
+    raiz_indice: str = "stem"   # preprocesamiento del ganador ("stem" o "lema")
+    ner_slug: str | None = None  # NER de la consulta libre (None: el principal de config/ner.yaml)
+    bloqueados: frozenset[str] = frozenset()  # D32: no se muestran, ni como contexto
 
     def consulta(self, query_id: str) -> dict:
         return self.consultas.set_index("query_id").loc[query_id].to_dict()
@@ -84,7 +87,7 @@ class Artefactos:
         return e[(e["query_id"] == query_id) & (e["passage_id"] == passage_id)]
 
     def contexto(self, passage_id: str) -> tuple[pd.Series | None, pd.Series | None]:
-        return contexto(passage_id, self.vecinos, self.pasajes)
+        return contexto(passage_id, self.vecinos, self.pasajes, self.bloqueados)
 
 
 def _modelo_corto(nombre: str) -> str:
@@ -92,32 +95,67 @@ def _modelo_corto(nombre: str) -> str:
     return nombre.split("_", 1)[0]
 
 
-def cargar_v1(r: Path | None = None) -> Artefactos:
-    r = r or raiz()
-    cons = consultas.solo_v1(pd.read_csv(r / "data" / "consultas.csv", dtype=str,
-                                         keep_default_na=False))
-    rk = pd.read_csv(r / "ranking.csv", dtype={"passage_id": str, "query_id": str})
+def _ranking_con_filtro(ruta: Path) -> pd.DataFrame:
+    rk = pd.read_csv(ruta, dtype={"passage_id": str, "query_id": str})
     rk = rk[rk["variante"] == "con_filtro"].copy()
     rk["modelo"] = rk["modelo"].map(_modelo_corto)
-    rk = rk[["query_id", "modelo", "rango", "passage_id", "puntaje"]].reset_index(drop=True)
-    mejor = _modelo_corto(json.loads((r / "data" / "mejor_modelo.json").read_text(
-        encoding="utf-8"))["modelo"])
-    ent = pd.read_csv(r / "entidades.csv", dtype={"passage_id": str}, keep_default_na=False)
-    res = pd.read_csv(r / "salida" / "respuestas.csv", dtype=str, keep_default_na=False)
-    evi = pd.read_csv(r / "salida" / "10_evidencias.csv", dtype=str, keep_default_na=False)
-    ids = set(rk["passage_id"]) | set(ent["passage_id"]) | set(res["passage_id"]) - {""}
+    return rk[["query_id", "modelo", "rango", "passage_id", "puntaje"]].reset_index(drop=True)
+
+
+def _ensamblar(r: Path, version: str, cons: pd.DataFrame, rk: pd.DataFrame, mejor: str,
+               ent: pd.DataFrame, res: pd.DataFrame, evi: pd.DataFrame, **extra) -> Artefactos:
+    """Carga solo los pasajes que se muestran (ranking, entidades, respuestas y sus vecinos)."""
+    ids = set(rk["passage_id"]) | set(ent["passage_id"]) | (set(res["passage_id"]) - {""})
     vec = indice_vecinos(r)
     vec = vec[vec.index.isin(ids)]
     ids |= set(vec["anterior"].dropna()) | set(vec["siguiente"].dropna())
-    return Artefactos("v1", cons, rk, mejor, ent, res, evi, cargar_pasajes(ids, r), vec)
+    return Artefactos(version, cons, rk, mejor, ent, res, evi, cargar_pasajes(ids, r), vec,
+                      bloqueados=pasajes_bloqueados(r), **extra)
+
+
+def _csv(ruta: Path, **kw) -> pd.DataFrame:
+    return pd.read_csv(ruta, dtype=str, keep_default_na=False, **kw)
+
+
+def cargar_v1(r: Path | None = None) -> Artefactos:
+    r = r or raiz()
+    cons = consultas.solo_v1(_csv(r / "data" / "consultas.csv"))
+    mejor = _modelo_corto(json.loads((r / "data" / "mejor_modelo.json").read_text(
+        encoding="utf-8"))["modelo"])
+    ent = pd.read_csv(r / "entidades.csv", dtype={"passage_id": str}, keep_default_na=False)
+    return _ensamblar(r, "v1", cons, _ranking_con_filtro(r / "ranking.csv"), mejor, ent,
+                      _csv(r / "salida" / "respuestas.csv"),
+                      _csv(r / "salida" / "10_evidencias.csv"))
+
+
+ARCHIVOS_V2 = ["data/v2/mejor_modelo.json", "data/modelo_ner.json", "salida/v2/ranking.csv",
+               "salida/v2/entidades.csv", "salida/v2/respuestas.csv",
+               "salida/v2/10_evidencias.csv", "salida/v2/resultados_ir.csv",
+               "salida/v2/resultados_ie.csv"]
+
+
+def cargar_v2(r: Path | None = None) -> Artefactos:
+    """Q1 a Q15 con las salidas v2 de WP-06, WP-12 y WP-13. Nunca los CSV de la raíz, que siguen
+    siendo v1 hasta que el equipo decida pasarlos."""
+    r = r or raiz()
+    faltan = [a for a in ARCHIVOS_V2 if not (r / a).exists()]
+    if faltan:
+        raise FileNotFoundError("Faltan artefactos v2 para la demo: " + ", ".join(faltan))
+    mejor = json.loads((r / "data" / "v2" / "mejor_modelo.json").read_text(encoding="utf-8"))
+    ner = json.loads((r / "data" / "modelo_ner.json").read_text(encoding="utf-8"))
+    ent = pd.read_csv(r / "salida" / "v2" / "entidades.csv", dtype={"passage_id": str},
+                      keep_default_na=False)
+    return _ensamblar(r, "v2", _csv(r / "data" / "consultas.csv"),
+                      _ranking_con_filtro(r / "salida" / "v2" / "ranking.csv"),
+                      _modelo_corto(mejor["modelo"]), ent,
+                      _csv(r / "salida" / "v2" / "respuestas.csv"),
+                      _csv(r / "salida" / "v2" / "10_evidencias.csv"),
+                      raiz_indice=mejor.get("preprocesamiento", "stem"),
+                      ner_slug=ner.get("slug"))
 
 
 def cargar_artefactos(r: Path | None = None) -> Artefactos:
-    version = version_datos(r)
-    if version == "v1":
-        return cargar_v1(r)
-    raise NotImplementedError("Los artefactos v2 de la demo se conectan después de los cierres "
-                              "(WP-12 y WP-13); mientras, `MTX_DEMO_VERSION=v1`.")
+    return cargar_v2(r) if version_datos(r) == "v2" else cargar_v1(r)
 
 
 def indice_vecinos(r: Path | None = None) -> pd.DataFrame:
@@ -131,13 +169,16 @@ def indice_vecinos(r: Path | None = None) -> pd.DataFrame:
                         ).set_index(p["passage_id"])
 
 
-def contexto(passage_id: str, vecinos: pd.DataFrame, pasajes: pd.DataFrame
+def contexto(passage_id: str, vecinos: pd.DataFrame, pasajes: pd.DataFrame,
+             bloqueados: frozenset[str] = frozenset()
              ) -> tuple[pd.Series | None, pd.Series | None]:
-    """Filas del pasaje anterior y del siguiente, si existen y están cargadas."""
+    """Filas del pasaje anterior y del siguiente, si existen y están cargadas. Un vecino de la
+    muestra del gold v2 no se muestra antes de su cierre (D32), aunque sea solo texto."""
     if passage_id not in vecinos.index:
         return None, None
     v = vecinos.loc[passage_id]
-    return tuple(pasajes.loc[x] if isinstance(x, str) and x in pasajes.index else None
+    return tuple(pasajes.loc[x] if isinstance(x, str) and x in pasajes.index
+                 and x not in bloqueados else None
                  for x in (v["anterior"], v["siguiente"]))
 
 
@@ -149,20 +190,24 @@ def cargar_pasajes(ids: set[str] | None = None, r: Path | None = None) -> pd.Dat
     return p.set_index("passage_id", drop=False)
 
 
-def cifras(r: Path | None = None) -> dict:
+def cifras(r: Path | None = None, version: str | None = None) -> dict:
     """Cifras que la demo cita, leídas de los archivos oficiales (nunca escritas a mano):
-    MAP por modelo con filtro, F1 de la extracción combinada y datos del corpus (v1)."""
+    MAP y P@10 por modelo con filtro, F1 y recall de la extracción y datos del corpus. Con datos
+    v2, las de `salida/v2/`."""
     r = r or raiz()
-    ir = pd.read_csv(r / "resultados_ir.csv", dtype={"query_id": str})
+    version = version or version_datos(r)
+    base = r / "salida" / "v2" if version == "v2" else r
+    ir = pd.read_csv(base / "resultados_ir.csv", dtype={"query_id": str})
     prom = ir[ir["query_id"].str.startswith("PROMEDIO")].set_index("modelo")
-    ie = pd.read_csv(r / "resultados_ie.csv").set_index(["metodo", "tipo"])
+    ie = pd.read_csv(base / "resultados_ie.csv").set_index(["metodo", "tipo"])
     lim = json.loads((r / "salida" / "01_limpieza.json").read_text(encoding="utf-8"))
+    metodos = ("regla", "modelo", "combinado")
     return {
+        "version": version,
         "map": {m: float(prom.at[f"{m}_con_filtro", "AP"]) for m in MODELOS},
         "p10": {m: float(prom.at[f"{m}_con_filtro", "P@10"]) for m in MODELOS},
-        "f1": {m: float(ie.at[(m, "TODOS"), "f1"]) for m in ("regla", "modelo", "combinado")},
-        "recall": {m: float(ie.at[(m, "TODOS"), "recall"])
-                   for m in ("regla", "modelo", "combinado")},
+        "f1": {m: float(ie.at[(m, "TODOS"), "f1"]) for m in metodos},
+        "recall": {m: float(ie.at[(m, "TODOS"), "recall"]) for m in metodos},
         "discursos": int(lim["discursos"]),
         "pasajes": int(lim["pasajes"]),
         "palabras_por_pasaje": float(lim["palabras_por_pasaje_media"]),
