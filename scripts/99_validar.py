@@ -1,6 +1,6 @@
-"""99 · Condiciones de entrega (PRD §13.2). `make validar`.
+"""99 · Condiciones de entrega (PRD §13.2 y PRD v2 §9). `make validar`.
 
-Imprime las 15 condiciones con estado y causa. Si los juicios pasan la validación, los copia a la
+Imprime las 15 condiciones de v1 y las 6 de v2 (16 a 21) con estado y causa. Si los juicios pasan la validación, los copia a la
 raíz (condición 4); no escribe nada más.
 
 Opciones:

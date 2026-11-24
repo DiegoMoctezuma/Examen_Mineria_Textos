@@ -1,4 +1,5 @@
-"""Las 15 condiciones de entrega de PRD §13.2 (`make validar`, `scripts/99_validar.py`).
+"""Las 15 condiciones de entrega de PRD §13.2 (`make validar`, `scripts/99_validar.py`); las 6 de
+v2 (PRD v2 §9) están en `entrega_v2.py` y corren después.
 
 Cada condición devuelve un estado:
 
@@ -401,11 +402,15 @@ CONDICIONES: list[Callable[[Contexto], Resultado]] = [
 
 def validar(cx: Contexto, solo: set[int] | None = None) -> list[Resultado]:
     """Corre las condiciones en orden; una excepción se reporta como FALLA de esa condición.
-    La 4 va antes que la 2 para que la exportación de juicios cuente en la comprobación de copias."""
-    orden = [3, 0, 1, 2, *range(4, len(CONDICIONES))]
+    La 4 va antes que la 2 para que la exportación de juicios cuente en la comprobación de copias.
+    Después de las 15 de v1 corren las 6 de v2 (16 a 21, `entrega_v2.py`)."""
+    from mtx import entrega_v2
+
+    condiciones = [*CONDICIONES, *entrega_v2.CONDICIONES_V2]
+    orden = [3, 0, 1, 2, *range(4, len(condiciones))]
     out = {}
     for i in orden:
-        f = CONDICIONES[i]
+        f = condiciones[i]
         if solo and i + 1 not in solo:
             continue
         try:

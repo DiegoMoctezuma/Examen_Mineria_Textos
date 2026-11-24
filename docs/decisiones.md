@@ -173,3 +173,12 @@
   - **`make tablas` de v1:** vuelve a leer solo Q1 a Q10. Desde que `data/consultas.csv` trae Q11 a Q15 (el día 23) se detenía sin generar nada. Ya reproduce las tablas v1 sin cambios y las valoraciones v1 siguen vigentes.
   - **Valoraciones v2:** cada persona escribe solo `anotaciones/valoraciones_v2/<anotador>.yaml` desde la pestaña Valoraciones (selector v1/v2), para que tres personas valoren en tres computadoras sin chocar. Si dos personas valoran la misma consulta, esa consulta queda pendiente.
   - **`fecha_v2_vigente`:** ahora exige que las reglas v1 sigan como en `reglas-congeladas` y que `fecha_v2.py` no haya cambiado desde `reglas-fecha-v2`. Editar las tablas de respuesta ya no marca la extracción v2 como exploratoria.
+- (2026-11-24, Diego, WP-14) **Condiciones v2 de `make validar` y `make all-v2`.** `make validar` corre, después de las 15 de v1, las condiciones 16 a 21 (`src/mtx/entrega_v2.py`):
+  - **16:** juicios v2 cerrados, agregados y con el acuerdo calculado.
+  - **17:** etiquetas y cierres en orden (`v2-inicio` → `reglas-fecha-v2` → `modelo_ner.json` v2 → `cierre_gold_v2.json`).
+  - **18:** muestras v2 disjuntas entre sí y del gold y el ámbito IE de v1.
+  - **19:** IR v2 reproducible con el kit, con ganador D28 y robustez.
+  - **20:** IE v2 reproducible con el kit, con techo humano y línea base.
+  - **21:** las 15 tablas v2 y sus valoraciones vigentes.
+
+  `make all-v2` encadena `ranking-v2`, `agregar-juicios`, `evaluar-ir-v2`, `acuerdo-gold`, `ner-v2`, `extraer-v2`, `evaluar-ie-v2` y `tablas-v2`, y termina con `validar --parcial`. Los cierres y `fijar-ner-v2` se corren una sola vez y quedan fuera de la cadena. `requirements.txt` se regeneró con `uv export --no-dev --frozen`: no se había actualizado cuando WP-03 agregó spaCy el día 23 y la condición 14 fallaba; el grupo `ner-v2` no entra. La condición 12 (tiempo medido en el guion) ya fallaba en v1 y se cumple con el ensayo cronometrado de v2. Pasar los seis CSV v2 a la raíz y adaptar las condiciones 2 a 9 queda para el 25, con las cifras reales.

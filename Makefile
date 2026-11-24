@@ -2,7 +2,7 @@
 PY := uv run python
 .PHONY: consultas consultas-v2 setup contratos corpus explorar explorar-v2 indice indice-lema ranking ranking-v2 pool pool-v2 app app-cli asignar-juicios importar-juicios evaluar-ir agregar-juicios evaluar-ir-v2 reglas congelar ner \
         muestra-gold muestra-gold-v2 acuerdo-gold revisar-cierres-v2 cierre-juicios-v2 cierre-gold-v2 verificar-ner-v2 inferir-seleccion comparacion-ner fijar-ner-v2 ner-v2 extraer-v2 evaluar-ie-v2 extraer evaluar-ie tablas tablas-v2 resultados reporte laminas demo test test-lento \
-        validar entrega all limpiar
+        validar entrega all all-v2 limpiar
 
 setup:
 	uv sync
@@ -124,6 +124,10 @@ validar:
 
 entrega: contratos resultados reporte laminas validar
 	@echo "Copia de los seis CSV a la raíz: la hace scripts/99_validar.py tras validar."
+# WP-14: cadena v2 desde los insumos congelados, después de los dos cierres y de fijar el NER v2
+# (los cierres y `make fijar-ner-v2` se corren una sola vez y no forman parte de la cadena).
+all-v2: ranking-v2 agregar-juicios evaluar-ir-v2 acuerdo-gold ner-v2 extraer-v2 evaluar-ie-v2 tablas-v2
+	$(PY) scripts/99_validar.py --parcial --sin-pruebas
 all: entrega
 
 # Borra solo artefactos regenerables; nunca anotaciones/ ni data/cache_ner/.
