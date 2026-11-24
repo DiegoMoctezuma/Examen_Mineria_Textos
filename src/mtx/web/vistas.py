@@ -284,6 +284,25 @@ def _fecha_qp(nombre_: str) -> date | None:
         return None
 
 
+def resumen_extraccion(ents: dict[str, pd.DataFrame], pasajes: pd.DataFrame) -> str:
+    """Qué se extrajo de los fragmentos: cuántas entidades por tipo y de qué método salieron
+    (solo del cuerpo; la marca del interlocutor no se cuenta)."""
+    filas = [e[e["inicio"] >= int(pasajes.loc[pid, "inicio_cuerpo"])] for pid, e in ents.items()]
+    todas = pd.concat(filas) if filas else pd.DataFrame(columns=libre_mod.COLUMNAS_ENT)
+    if todas.empty:
+        return (f'<p>Se analizaron {len(ents)} fragmentos y no se encontraron personas, '
+                'organizaciones, lugares, fechas ni montos.</p>')
+    por_tipo = todas["tipo"].value_counts()
+    chips = "".join(f'<span class="ent e-{t}">{C.e(C.TIPOS[t])}: {por_tipo[t]}</span> '
+                    for t in C.TIPOS if t in por_tipo)
+    m = todas["metodo"].value_counts()
+    return (f'<p>Se analizaron {len(ents)} fragmentos y se encontraron <strong>{len(todas)} '
+            f'entidades</strong>:</p><div class="leyenda">{chips}</div>'
+            f'<p class="nota">{m.get("ambos", 0)} las encontraron las reglas y el modelo a la vez, '
+            f'{m.get("regla", 0)} solo las reglas (fechas, montos y listas de nombres conocidos) y '
+            f'{m.get("modelo", 0)} solo el modelo de lenguaje.</p>')
+
+
 def libre() -> None:
     html(C.migas(["Inicio", "Consulta libre"]))
     texto = st.query_params.get("texto", "").strip()
@@ -350,8 +369,9 @@ def resultado_libre(texto: str, desde: date | None, hasta: date | None) -> None:
                    "lenguaje. Esto se calcula en este momento y puede tardar unos segundos…",
                    expanded=False) as estado:
         ents = {pid: entidades_en_caliente(pid, version) for pid in res.tops["bm25"]["passage_id"]}
-        estado.update(label="Datos extraídos en este momento con reglas y un modelo de lenguaje",
-                      state="complete")
+        html(resumen_extraccion(ents, pasajes))
+        estado.update(label="Datos extraídos en este momento con reglas y un modelo de lenguaje "
+                      "(ver detalle)", state="complete")
     t2 = time.perf_counter()
     html(f'<p class="meta">Tiempo de respuesta: búsqueda {t1 - t0:.1f} s · extracción de datos '
          f'{t2 - t1:.1f} s · total {t2 - t0:.1f} s</p>')
