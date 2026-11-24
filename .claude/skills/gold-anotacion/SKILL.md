@@ -161,3 +161,8 @@ Nunca se retoca el gold para optimizar métricas, ni para "alinear" convenciones
   `make acuerdo-gold` → `salida/v2/09_acuerdo_gold.csv`. El adjudicador solo incluye o excluye lo
   propuesto; no agrega entidades. Pruebas: `tests/test_gold_v2.py` y la parte v2 de
   `tests/test_muestreo.py`.
+- **Cierres (23 nov):** `src/mtx/cierres_v2.py` y `scripts/09d_cierres_v2.py`. `make revisar-cierres-v2`
+  solo revisa (conteos e IDs); `make cierre-juicios-v2` (3 juicios válidos por par;
+  `INCOMPLETOS=1` lista los pares sin cerrar) y `make cierre-gold-v2` (dos pasadas adjudicadas,
+  `reglas-fecha-v2` y `modelo_ner.json` v2 ya commiteados) exigen insumos commiteados y no se
+  reescriben. `gold_cerrado()` y `juicios_cerrados()` son la comprobación de D32 para demo y app.

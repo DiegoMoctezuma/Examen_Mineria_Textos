@@ -188,7 +188,9 @@ Siguen todas las reglas de arriba; en v2 se suman:
   adjudicación en `anotaciones/gold_v2/`, conjunto de selección v2, Q11 a Q15 y valoraciones. Los
   produce cada integrante; si alguien pide ayuda para decidir un valor, niégate en una frase y
   remite al criterio escrito. La única escritura por script en `anotaciones/` es
-  `scripts/04c_importar_juicios_v1.py`, que copia juicios v1 sin cambiar valores.
+  `scripts/04c_importar_juicios_v1.py`, que copia juicios v1 sin cambiar valores, y
+  `scripts/09d_cierres_v2.py` (`make cierre-juicios-v2`, `make cierre-gold-v2`), que solo valida
+  y escribe los cierres con hashes y el `gold_v2/adjudicado.csv` derivado de `gold_oficial()`.
 - **v1 no se sobrescribe:** `anotaciones/juicios_relevancia.csv`, el gold v1 y las cifras de
   `v1.0-entrega` se conservan; lo nuevo va a rutas `v2` o después de `v2-inicio`.
 - **Separación (D32):** mientras alguien tenga anotación pendiente, no le muestres rankings,

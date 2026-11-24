@@ -65,7 +65,7 @@ Las skills de v1 traen al final una sección **v2** con lo que cambia (juicios c
 
 ## Convenciones de este repo
 
-- **No tocar**: `kit/` (hashes en `docs/contratos_kit.md`), `anotaciones/` (solo la app escribe ahí; en v2 también `scripts/04c_importar_juicios_v1.py`, que copia juicios v1 sin cambiarlos), `data/cache_ner/`, `config/criterios_relevancia.md` y `config/criterios_anotacion.md` (los escribe el alumno), `reporte/reporte.md` una vez aprobado.
+- **No tocar**: `kit/` (hashes en `docs/contratos_kit.md`), `anotaciones/` (solo la app escribe ahí; en v2 también `scripts/04c_importar_juicios_v1.py`, que copia juicios v1 sin cambiarlos, y `scripts/09d_cierres_v2.py`, que escribe los dos cierres y el `adjudicado.csv` consolidado sin cambiar ningún valor humano), `data/cache_ner/`, `config/criterios_relevancia.md` y `config/criterios_anotacion.md` (los escribe el alumno), `reporte/reporte.md` una vez aprobado.
 - **Trabajo humano que el asistente jamás produce ni sugiere**: juicios de relevancia, gold, conjunto de selección, revisión de siglas, valoraciones. Construye la herramienta y valida formatos.
 - **Orden**: hitos H0 → H9 del PRD §12.2; ningún P1 antes de cerrar los P0; recortes solo en el orden de PRD §12.4 y avisando.
 - **Código**: Python 3.11 con `uv`; lógica en `src/mtx/`, orquestación en `scripts/NN_*.py`; identificadores en español sin acentos; docstrings, mensajes y docs en español; `make test` sin red.

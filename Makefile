@@ -1,7 +1,7 @@
 # Objetivos del PRD §10. Los que dependen de insumos humanos se detienen con un mensaje claro.
 PY := uv run python
 .PHONY: consultas consultas-v2 setup contratos corpus explorar explorar-v2 indice indice-lema ranking ranking-v2 pool pool-v2 app app-cli asignar-juicios importar-juicios evaluar-ir reglas congelar ner \
-        muestra-gold muestra-gold-v2 acuerdo-gold extraer evaluar-ie tablas resultados reporte laminas demo test test-lento \
+        muestra-gold muestra-gold-v2 acuerdo-gold revisar-cierres-v2 cierre-juicios-v2 cierre-gold-v2 extraer evaluar-ie tablas resultados reporte laminas demo test test-lento \
         validar entrega all limpiar
 
 setup:
@@ -62,6 +62,13 @@ muestra-gold-v2:
 	$(PY) scripts/08b_muestra_gold.py --v2 --partes $(PARTES)
 acuerdo-gold:
 	$(PY) scripts/09c_acuerdo_gold.py
+# Cierres humanos v2 (PRD v2 §4): con todas las ramas de anotación integradas y commiteadas.
+revisar-cierres-v2:
+	$(PY) scripts/09d_cierres_v2.py revisar
+cierre-juicios-v2:
+	$(PY) scripts/09d_cierres_v2.py juicios $(if $(INCOMPLETOS),--aceptar-incompletos)
+cierre-gold-v2:
+	$(PY) scripts/09d_cierres_v2.py gold
 extraer:
 	$(PY) scripts/08_extraer.py
 evaluar-ie:
