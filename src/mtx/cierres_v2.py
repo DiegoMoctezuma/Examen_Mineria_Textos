@@ -292,6 +292,20 @@ def revisar_gold_v2(cfg: V.ConfigGold, pasajes: pd.DataFrame, dir_anot: Path | N
     return rev
 
 
+def pasajes_bloqueados_v2(dir_anot: Path | None = None) -> set[str]:
+    """D32: los pasajes de la muestra v2 (selección, A y B) mientras no exista
+    `cierre_gold_v2.json`; vacío después. La demo no les muestra texto ni predicciones."""
+    if gold_cerrado(dir_anot):
+        return set()
+    cfg = V.cargar_config(dir_anot=dir_anot)
+    ids: set[str] = set()
+    for parte in cfg.partes.values():
+        m = V.manifiesto(parte)
+        if m is not None:
+            ids |= set(m["passage_id"])
+    return ids
+
+
 def adjudicado_consolidado(cfg: V.ConfigGold, dir_anot: Path | None = None) -> pd.DataFrame:
     """El gold oficial de las partes v2 en un solo archivo (`parte` + columnas del gold)."""
     of = V.gold_oficial(cfg, dir_anot)

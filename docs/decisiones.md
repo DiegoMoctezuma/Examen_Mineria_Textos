@@ -166,3 +166,4 @@
   - **Intervalo:** IC95 bootstrap del F1 micro sobre los pasajes con gold (10,000 remuestreos, semilla 42).
   - **F1 parcial (complementaria):** solape de al menos un carácter y mismo tipo.
   - **FECHA v1 frente a v2:** F1 de FECHA con las reglas v1 y con las v2 sobre el mismo gold (criterio v1), como evaluación exploratoria.
+- (2026-11-24, Diego) **D32 en la demo de terminal.** Mientras no exista `cierre_gold_v2.json`, `make demo` no muestra el texto ni las entidades de los 25 pasajes de la muestra v2 (selección 10, A 10, B 5) y no les corre el NER en la consulta libre; en su lugar imprime «oculto hasta el cierre del gold». La lista la da `cierres_v2.pasajes_bloqueados_v2()`, que queda vacía después del cierre. La pestaña Demo de la app sigue siendo un aviso (P2). La demo web (WP-15, Leo) debe usar la misma función si muestra pasajes antes del cierre.

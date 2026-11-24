@@ -5,6 +5,9 @@ entidades.csv, respuestas.csv); no recalcula índices, métricas ni NER.
 Consulta libre (`--consulta`, opcional `--desde/--hasta`): recupera con el índice guardado y
 ejecuta reglas y NER en caliente sobre los 10 pasajes; lo avisa y no le atribuye MAP ni F1.
 Sin red cuando el modelo NER ya está en la caché local de Hugging Face.
+
+D32: mientras no exista `cierre_gold_v2.json`, los pasajes de la muestra v2 (selección, A y B) no
+se muestran ni pasan por el NER; en su lugar sale una fila «oculto hasta el cierre del gold v2».
 """
 from __future__ import annotations
 
@@ -32,6 +35,14 @@ def recorte(t: str, n: int = 100) -> str:
     return t if len(t) <= n else t[: n - 1] + "…"
 
 
+OCULTO = "[dim]pasaje de la muestra gold v2: oculto hasta el cierre del gold (D32)[/]"
+
+
+def bloqueados() -> set[str]:
+    from mtx import cierres_v2
+    return cierres_v2.pasajes_bloqueados_v2()
+
+
 def tabla_lado_a_lado(tf: pd.DataFrame, bm: pd.DataFrame, pas: pd.DataFrame) -> Table:
     t = Table(title="Top-10 TF-IDF y BM25 (con filtro de fecha)", show_lines=False)
     for c in ("#", "TF-IDF pasaje", "fecha", "pos", "puntaje", "BM25 pasaje", "fecha", "pos",
@@ -52,7 +63,11 @@ def tabla_lado_a_lado(tf: pd.DataFrame, bm: pd.DataFrame, pas: pd.DataFrame) -> 
 
 def mostrar_pasajes(ids: list[str], pas: pd.DataFrame, ents: pd.DataFrame, titulo: str) -> None:
     con.rule(titulo)
+    ocultos = bloqueados()
     for pid in ids:
+        if pid in ocultos:
+            con.print(OCULTO)
+            continue
         r = pas.loc[pid]
         e = ents[ents["passage_id"] == pid].sort_values("inicio")
         con.print(f"[bold]{pid}[/] · {str(r['fecha'])[:10]} · {recorte(r['interlocutor'], 60)}")
@@ -127,7 +142,10 @@ def demo_libre(texto: str, desde, hasta, pas: pd.DataFrame) -> None:
     cfg = cfgs[principal]
     pipe, tok = N.construir_pipeline(cfg)
     filas = []
+    ocultos = bloqueados()
     for pid in bm["passage_id"]:
+        if pid in ocultos:
+            continue
         r = pas.loc[pid]
         reg = {(e.tipo, e.inicio, e.fin): e for e in R.extraer_reglas(r["texto"],
                                                                       int(r["inicio_cuerpo"]))}
