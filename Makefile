@@ -1,6 +1,6 @@
 # Objetivos del PRD §10. Los que dependen de insumos humanos se detienen con un mensaje claro.
 PY := uv run python
-.PHONY: consultas consultas-v2 setup contratos corpus explorar explorar-v2 indice indice-lema ranking ranking-v2 pool pool-v2 app app-cli asignar-juicios importar-juicios evaluar-ir agregar-juicios reglas congelar ner \
+.PHONY: consultas consultas-v2 setup contratos corpus explorar explorar-v2 indice indice-lema ranking ranking-v2 pool pool-v2 app app-cli asignar-juicios importar-juicios evaluar-ir agregar-juicios evaluar-ir-v2 reglas congelar ner \
         muestra-gold muestra-gold-v2 acuerdo-gold revisar-cierres-v2 cierre-juicios-v2 cierre-gold-v2 verificar-ner-v2 inferir-seleccion comparacion-ner fijar-ner-v2 extraer evaluar-ie tablas resultados reporte laminas demo test test-lento \
         validar entrega all limpiar
 
@@ -47,6 +47,9 @@ importar-juicios:
 # WP-02 (D24): mayoría y acuerdo de los juicios v2, después de `make cierre-juicios-v2`.
 agregar-juicios:
 	$(PY) scripts/05a_agregar_juicios.py
+# WP-06 (D28, D29): evaluación IR v2 sobre los juicios agregados; no toca la raíz.
+evaluar-ir-v2:
+	$(PY) scripts/05_evaluar_ir.py --v2
 evaluar-ir:
 	$(PY) scripts/05_evaluar_ir.py
 reglas:
