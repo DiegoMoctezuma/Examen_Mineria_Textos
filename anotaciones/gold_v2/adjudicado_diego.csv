@@ -1,0 +1,34 @@
+passage_id,pasada,tipo,texto,inicio,fin,propuesta,decision
+1697_76,1,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos,incluir
+1697_76,1,ORG,IMSS-Bienestar,94,108,ambos,incluir
+1949_72,1,PER,MARCERO EBRARD CASAUBON,0,23,gonzalo,incluir
+1949_72,1,LOC,México,278,284,ambos,incluir
+1949_72,1,LOC,México,311,317,ambos,incluir
+1949_72,1,MONTO,100 millones de dólares,332,355,ambos,incluir
+1949_72,1,LOC,Unión Europea,387,400,gonzalo,excluir
+1949_72,1,ORG,Unión Europea,387,400,arturo,incluir
+1949_72,1,LOC,Estados Unidos,453,467,ambos,incluir
+1949_72,1,ORG,Guardia Nacional,728,744,ambos,incluir
+1949_72,1,ORG,Guardia Nacional,817,833,ambos,incluir
+307_1,1,PER,JORGE ALCOCER VARELA,0,20,ambos,incluir
+307_1,1,PER,Zoé Robledo,286,297,ambos,incluir
+307_1,1,ORG,IMSS-Bienestar,328,342,ambos,incluir
+307_1,1,ORG,IMSS-Bienestar,482,496,ambos,incluir
+307_1,1,LOC,Acapulco,609,617,ambos,incluir
+307_1,1,LOC,Coyuca de Benítez,620,637,ambos,incluir
+307_1,1,LOC,Acapulco,863,871,ambos,incluir
+307_1,1,LOC,Coyuca de Benítez,874,891,ambos,incluir
+307_1,2,FECHA,7 de noviembre,186,200,arturo,incluir
+798_5,1,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos,incluir
+798_5,1,LOC,Etchojoa,179,187,ambos,incluir
+798_5,1,LOC,Etchojoa,331,339,ambos,incluir
+798_5,1,LOC,Etchojoa,685,693,ambos,incluir
+798_5,1,MONTO,cuatro mil 900 pesos,832,852,ambos,incluir
+798_5,1,ORG,Jóvenes Construyendo el Futuro,969,999,ambos,incluir
+798_5,1,PER,Marath Baruch Bolaños López,1021,1048,ambos,incluir
+798_5,1,ORG,Jóvenes Construyendo el Futuro,1107,1137,ambos,incluir
+798_5,1,PER,Abraham Vázquez Piceno,1183,1205,ambos,incluir
+907_68,1,ORG,Cámara de Diputados,196,215,ambos,incluir
+907_68,1,ORG,CFE,300,303,ambos,incluir
+907_68,1,ORG,CFE,448,451,ambos,incluir
+907_68,1,ORG,CFE,580,583,ambos,incluir
