@@ -1,0 +1,45 @@
+passage_id,pasada,tipo,texto,inicio,fin,propuesta,decision
+1053_25,1,LOC,Istmo de Tehuantepec,102,122,ambos,incluir
+1053_25,1,LOC,Corredor Interoceánico,572,594,ambos,incluir
+1053_25,1,LOC,Istmo de Tehuantepec,667,687,ambos,incluir
+1184_54,1,PER,INTERLOCUTORA,0,13,arturo,excluir
+1655_20,1,PER,PRESIDENTE ANDRÉS MANUEL LÓPEZ OBRADOR,0,38,arturo,excluir
+1655_20,1,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,diego,incluir
+1655_20,1,LOC,aeropuerto de Santa Lucía,138,163,arturo,incluir
+1655_20,1,LOC,Santa Lucía,152,163,diego,excluir
+1655_20,1,LOC,Tren Maya,203,212,arturo,incluir
+1655_20,1,PER,Tren Maya,203,212,diego,excluir
+1655_20,1,LOC,Tren Maya,409,418,arturo,incluir
+1655_20,1,PER,Tren Maya,409,418,diego,excluir
+1683_5,1,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos,incluir
+1683_5,1,MONTO,tres mil 600 pesos,780,798,ambos,incluir
+1683_5,1,MONTO,dos mil 700,972,983,ambos,incluir
+1759_60,1,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,diego,incluir
+1759_60,1,PER,ANDRÉS MANUEL LÓPEZ OBRADOR:,11,39,arturo,excluir
+1759_60,1,LOC,refinería de Dos Bocas,113,135,arturo,incluir
+1759_60,1,LOC,Dos Bocas,126,135,diego,excluir
+1759_60,1,LOC,refinería de Dos Bocas,633,655,arturo,incluir
+1759_60,1,LOC,Dos Bocas,646,655,diego,excluir
+2086_11,1,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos,incluir
+2086_11,1,LOC,Felipe Ángeles,48,62,arturo,incluir
+2086_11,1,PER,Felipe Ángeles,48,62,diego,excluir
+2086_11,1,LOC,aeropuerto de Santa Lucía,149,174,arturo,incluir
+2086_11,1,LOC,Santa Lucía,163,174,diego,excluir
+2086_11,1,LOC,México,349,355,ambos,incluir
+2086_11,1,ORG,Ejército Nacional,436,453,diego,incluir
+2086_11,1,LOC,Felipe Ángeles,465,479,arturo,incluir
+2086_11,1,PER,Felipe Ángeles,465,479,diego,excluir
+2086_11,1,LOC,México,487,493,ambos,incluir
+2086_11,1,LOC,México,501,507,ambos,incluir
+2086_11,1,LOC,México,515,521,ambos,incluir
+2239_4,1,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos,incluir
+2239_4,1,LOC,Acambay,670,677,ambos,incluir
+2239_4,1,LOC,Acambay,969,976,ambos,incluir
+2239_4,1,LOC,México,1001,1007,ambos,incluir
+673_15,1,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos,incluir
+673_15,1,ORG,Banco del Bienestar,188,207,ambos,incluir
+673_15,1,ORG,Banco del Bienestar,413,432,ambos,incluir
+90_78,1,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos,incluir
+90_78,1,ORG,Producción para el Bienestar,185,213,arturo,incluir
+90_78,1,ORG,Sembrando Vida,440,454,arturo,incluir
+941_19,1,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos,incluir
