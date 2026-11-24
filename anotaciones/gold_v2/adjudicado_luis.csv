@@ -1,0 +1,54 @@
+passage_id,pasada,tipo,texto,inicio,fin,propuesta,decision
+1104_49,1,ORG,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,gonzalo,excluir
+1104_49,1,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,diego,incluir
+1104_49,1,MONTO,130 mil millones de pesos,201,226,ambos,incluir
+1104_49,1,MONTO,250 mil,268,275,diego,excluir
+1104_49,1,MONTO,350 mil millones,337,353,diego,excluir
+1372_40,1,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos,incluir
+1777_18,1,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos,incluir
+1777_18,1,LOC,Oaxaca,141,147,ambos,incluir
+1777_18,1,MONTO,16 millones,174,185,diego,excluir
+1777_18,1,LOC,Santa Lucía,384,395,ambos,incluir
+1777_18,1,LOC,aeropuerto de Santa Lucía,436,461,gonzalo,incluir
+1777_18,1,LOC,Santa Lucía,450,461,diego,excluir
+1777_18,1,LOC,AEROPUERTO CIVIL/MILITAR GENERAL FELIPE ÁNGELES,515,562,ambos,incluir
+1777_18,1,LOC,A.I.C.M.,588,596,ambos,incluir
+2283_0,1,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos,incluir
+2283_0,1,MONTO,10 mil millones de pesos,113,137,ambos,incluir
+2283_0,1,MONTO,dos mil 400 pesos,284,301,ambos,incluir
+2283_0,1,MONTO,10 mil millones,326,341,diego,excluir
+2283_0,1,MONTO,mil millones,367,379,diego,excluir
+2283_0,1,MONTO,60 y 80 mil millones de pesos,830,859,diego,incluir
+2283_0,1,MONTO,80 mil millones de pesos,835,859,gonzalo,excluir
+2283_0,1,ORG,Pemex,959,964,ambos,incluir
+277_0,1,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos,incluir
+277_0,1,LOC,Tren Maya,203,212,ambos,incluir
+277_0,1,LOC,Tren Maya,248,257,ambos,incluir
+564_101,1,PER,Rocío Nahle,48,59,ambos,incluir
+564_101,1,LOC,refinería Dos Bocas,108,127,ambos,incluir
+564_101,1,LOC,Dos Bocas,141,150,ambos,incluir
+686_14,1,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos,incluir
+686_14,1,PER,Bartlett,74,82,ambos,incluir
+686_14,1,PER,Sandoval,103,111,diego,incluir
+686_14,1,ORG,Banco del Bienestar,155,174,ambos,incluir
+686_14,1,ORG,Banco del Bienestar,277,296,ambos,incluir
+686_14,1,ORG,Banco del Bienestar,335,354,ambos,incluir
+686_14,1,MONTO,Cuatrocientos mil millones de pesos,356,391,ambos,incluir
+686_14,1,MONTO,600 mil millones de pesos,425,450,ambos,incluir
+686_14,1,ORG,Banco del Bienestar,537,556,ambos,incluir
+686_14,1,ORG,Banco del Bienestar,627,646,ambos,incluir
+686_14,1,ORG,Banco del Bienestar,732,751,ambos,incluir
+686_14,2,FECHA,2024,401,405,diego,incluir
+788_15,1,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos,incluir
+788_15,1,ORG,Sembrando Vida,162,176,gonzalo,incluir
+788_15,1,LOC,Estados Unidos,259,273,ambos,incluir
+788_15,1,MONTO,mil 300 millones de dólares,294,321,diego,incluir
+788_15,1,ORG,Sembrando Vida,367,381,gonzalo,incluir
+788_15,1,LOC,Estados Unidos,416,430,ambos,incluir
+788_15,1,LOC,Canadá,438,444,ambos,incluir
+788_15,1,LOC,Europa,468,474,ambos,incluir
+788_15,1,ORG,Sembrando Vida,524,538,gonzalo,incluir
+788_15,1,ORG,Secretaría de la Defensa,585,609,gonzalo,incluir
+982_72,1,LOC,Istmo de Tehuantepec,75,95,ambos,incluir
+982_72,1,LOC,Corredor Interoceánico,183,205,ambos,incluir
+982_72,1,ORG,Guardia Nacional,229,245,ambos,incluir
