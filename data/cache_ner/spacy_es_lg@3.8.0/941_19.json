@@ -1,0 +1,68 @@
+{
+ "clave": "f82097745ff87b7d27d15e153d9ea4f9890a633dcde964f2a6fe0ae52bf0bf6f",
+ "entidades_crudas": [
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 38,
+   "inicio": 31,
+   "texto": "OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 68,
+   "inicio": 53,
+   "texto": "Y si me invitan",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 342,
+   "inicio": 274,
+   "texto": "Luego, sí tenemos una reunión entre todos para buscar que la pensión",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 758,
+   "inicio": 750,
+   "texto": "Entonces",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 803,
+   "inicio": 801,
+   "texto": "Ya",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "motor": "spacy",
+  "repo_id": "es_core_news_lg",
+  "revision": "3.8.0"
+ },
+ "passage_id": "941_19",
+ "segundos": 0.021,
+ "texto_sha256": "96bcc47914b3b644372f997aa18a77a6c98f995694948464ae207bf2e2c594b7",
+ "version_spacy": "3.8.18"
+}

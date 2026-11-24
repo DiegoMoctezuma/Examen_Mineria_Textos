@@ -1,0 +1,45 @@
+{
+ "clave": "fe9999dc64c104fd2463e1c223ddcfb6f85ae088ad37186609dcbe7027c02c14",
+ "entidades_crudas": [
+  {
+   "confianza": 0.958835,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999613,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 207,
+   "inicio": 188,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99978,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 432,
+   "inicio": 413,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-base-ner-hrl",
+  "revision": "253f557bd8249b8515114cfd7f71974fe5fa4d2f",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-base-ner-hrl@253f557bd8249b8515114cfd7f71974fe5fa4d2f",
+  "ventana": 480
+ },
+ "passage_id": "673_15",
+ "segundos": 0.049,
+ "texto_sha256": "14c8ca1a05be52d5340e74c8b1dc37c4a6f7befb44b0e2093825bbbeb42efa72",
+ "version_transformers": "5.22.1"
+}

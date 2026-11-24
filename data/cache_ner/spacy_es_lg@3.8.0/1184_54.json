@@ -1,0 +1,32 @@
+{
+ "clave": "f5721be7005de6272d17b7cae5cded93bf1cad077f4eef7a6927b2d9f8a82590",
+ "entidades_crudas": [
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 263,
+   "inicio": 254,
+   "texto": "… Sabemos",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 387,
+   "inicio": 379,
+   "texto": "COVID-19",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "motor": "spacy",
+  "repo_id": "es_core_news_lg",
+  "revision": "3.8.0"
+ },
+ "passage_id": "1184_54",
+ "segundos": 0.019,
+ "texto_sha256": "7a986c18c46e8073c15a4eb5b43f5093405dad8a26aa6996fea97f92c913ca25",
+ "version_spacy": "3.8.18"
+}

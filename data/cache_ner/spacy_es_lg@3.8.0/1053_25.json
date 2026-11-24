@@ -1,0 +1,50 @@
+{
+ "clave": "a21b248e2f69ecba30bb09044a57ba217a34855925f629ea59ae1fb347d9e80a",
+ "entidades_crudas": [
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 122,
+   "inicio": 86,
+   "texto": "Ferrocarril del Istmo de Tehuantepec",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 558,
+   "inicio": 544,
+   "texto": "Programa Istmo",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 594,
+   "inicio": 572,
+   "texto": "Corredor Interoceánico",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 687,
+   "inicio": 667,
+   "texto": "Istmo de Tehuantepec",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "motor": "spacy",
+  "repo_id": "es_core_news_lg",
+  "revision": "3.8.0"
+ },
+ "passage_id": "1053_25",
+ "segundos": 0.013,
+ "texto_sha256": "e2133fca903909817abf08bddce840961e1c4f362675f61fdfc4d530e1538b44",
+ "version_spacy": "3.8.18"
+}

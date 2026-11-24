@@ -1,0 +1,54 @@
+{
+ "clave": "3bdc8c78338ab3d3fa8a516134be3c5545ae64b416f98627a3475cfed64d7a15",
+ "entidades_crudas": [
+  {
+   "confianza": 0.984276,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999935,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 677,
+   "inicio": 670,
+   "texto": "Acambay",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999897,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 976,
+   "inicio": 969,
+   "texto": "Acambay",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999957,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1007,
+   "inicio": 1001,
+   "texto": "México",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "2239_4",
+ "segundos": 0.295,
+ "texto_sha256": "0552d57af4460486c657f0f75cc44ca2f1bd5a83cbf48b3c6d90c4b6186f4a72",
+ "version_transformers": "5.22.1"
+}

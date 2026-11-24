@@ -1,0 +1,95 @@
+{
+ "clave": "093243889bb7a41c2d22a8d8bb88939762d4dabdba0cb84528da1d74a8b5ce8c",
+ "entidades_crudas": [
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 62,
+   "inicio": 48,
+   "texto": "Felipe Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 66,
+   "inicio": 64,
+   "texto": "Me",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 174,
+   "inicio": 149,
+   "texto": "aeropuerto de Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 179,
+   "inicio": 176,
+   "texto": "Nos",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 355,
+   "inicio": 349,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 459,
+   "inicio": 436,
+   "texto": "Ejército Nacional! ¡Que",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 479,
+   "inicio": 465,
+   "texto": "Felipe Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 528,
+   "inicio": 482,
+   "texto": "Viva México! ¡Viva México! ¡Viva México! +++++",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "motor": "spacy",
+  "repo_id": "es_core_news_lg",
+  "revision": "3.8.0"
+ },
+ "passage_id": "2086_11",
+ "segundos": 0.011,
+ "texto_sha256": "469bba2719d0d7c4e0cdb8ab990e40bc4d7b0308a7c2a92a387a6ddb83dc2463",
+ "version_spacy": "3.8.18"
+}

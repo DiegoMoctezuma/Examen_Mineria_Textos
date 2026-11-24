@@ -1,0 +1,45 @@
+{
+ "clave": "22fa16190a41fc8cfcef827eceee8704e35bb92e8b69739f9bfbd1d03ee64f8e",
+ "entidades_crudas": [
+  {
+   "confianza": 0.634304,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 97,
+   "inicio": 86,
+   "texto": "Ferrocarril",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.984403,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 122,
+   "inicio": 111,
+   "texto": "Tehuantepec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.986205,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 687,
+   "inicio": 667,
+   "texto": "Istmo de Tehuantepec",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-base-ner-hrl",
+  "revision": "253f557bd8249b8515114cfd7f71974fe5fa4d2f",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-base-ner-hrl@253f557bd8249b8515114cfd7f71974fe5fa4d2f",
+  "ventana": 480
+ },
+ "passage_id": "1053_25",
+ "segundos": 0.063,
+ "texto_sha256": "e2133fca903909817abf08bddce840961e1c4f362675f61fdfc4d530e1538b44",
+ "version_transformers": "5.22.1"
+}

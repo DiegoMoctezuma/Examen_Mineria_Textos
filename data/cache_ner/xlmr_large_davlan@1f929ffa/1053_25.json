@@ -1,0 +1,36 @@
+{
+ "clave": "4ff62925f891571f7ef0a5005e520772b7136f5cee8eefadd2896fab43880659",
+ "entidades_crudas": [
+  {
+   "confianza": 0.996309,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 122,
+   "inicio": 86,
+   "texto": "Ferrocarril del Istmo de Tehuantepec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999909,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 687,
+   "inicio": 667,
+   "texto": "Istmo de Tehuantepec",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1053_25",
+ "segundos": 0.207,
+ "texto_sha256": "e2133fca903909817abf08bddce840961e1c4f362675f61fdfc4d530e1538b44",
+ "version_transformers": "5.22.1"
+}

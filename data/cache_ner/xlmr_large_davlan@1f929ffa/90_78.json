@@ -1,0 +1,36 @@
+{
+ "clave": "38f25dd06d2cc2c5231c0db58dd5b65e23acb189c47e17d0d403b5e4d33644df",
+ "entidades_crudas": [
+  {
+   "confianza": 0.975524,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.983671,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 454,
+   "inicio": 440,
+   "texto": "Sembrando Vida",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "90_78",
+ "segundos": 0.189,
+ "texto_sha256": "f0dc89edac6dbebd1b5234758e4e5104a0d1b16f7cc72054d8cb7d5eb470883e",
+ "version_transformers": "5.22.1"
+}
