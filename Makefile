@@ -1,7 +1,7 @@
 # Objetivos del PRD §10. Los que dependen de insumos humanos se detienen con un mensaje claro.
 PY := uv run python
 .PHONY: consultas consultas-v2 setup contratos corpus explorar explorar-v2 indice indice-lema ranking ranking-v2 pool pool-v2 app app-cli asignar-juicios importar-juicios evaluar-ir agregar-juicios evaluar-ir-v2 reglas congelar ner \
-        muestra-gold muestra-gold-v2 acuerdo-gold revisar-cierres-v2 cierre-juicios-v2 cierre-gold-v2 verificar-ner-v2 inferir-seleccion comparacion-ner fijar-ner-v2 ner-v2 extraer-v2 evaluar-ie-v2 extraer evaluar-ie tablas tablas-v2 resultados reporte laminas demo test test-lento \
+        muestra-gold muestra-gold-v2 acuerdo-gold revisar-cierres-v2 cierre-juicios-v2 cierre-gold-v2 verificar-ner-v2 inferir-seleccion comparacion-ner fijar-ner-v2 ner-v2 extraer-v2 evaluar-ie-v2 extraer evaluar-ie tablas tablas-v2 resultados reporte laminas demo demo-web test test-lento \
         validar entrega all all-v2 limpiar
 
 setup:
@@ -111,6 +111,9 @@ laminas:
 	@echo "La presentación final (laminas/Presentacion_Mineria_de_Textos.pptx) y el guion los hizo el equipo a mano; no se regeneran."
 laminas-generadas:
 	$(PY) scripts/12_laminas.py  # deck automático anterior; escribe laminas/laminas.pptx
+demo-web:
+	uv run streamlit run src/mtx/web/app.py --server.port 8502 --theme.base light --theme.primaryColor "#591932"
+
 demo:
 	$(PY) scripts/13_demo.py $(if $(Q),--q $(Q),) $(if $(CONSULTA),--consulta "$(CONSULTA)",) $(if $(DESDE),--desde $(DESDE),) $(if $(HASTA),--hasta $(HASTA),)
 
