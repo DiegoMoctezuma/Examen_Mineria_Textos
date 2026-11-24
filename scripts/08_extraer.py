@@ -50,12 +50,13 @@ def reglas_congeladas_vigentes() -> bool:
 
 
 def fecha_v2_vigente() -> bool:
-    """`fecha_v2.py`, `reglas.py`, `normalizacion.py` y `config/` como en `reglas-fecha-v2`."""
-    if not manifiesto.git("tag", "-l", "reglas-fecha-v2"):
+    """Las reglas v1 siguen como en `reglas-congeladas` (misma regla que v1) y `fecha_v2.py` como
+    en `reglas-fecha-v2`. Lo agregado a `config/` después de `reglas-congeladas` (tablas de
+    respuesta, v2/) no es parte de las reglas y no cuenta."""
+    if not manifiesto.git("tag", "-l", "reglas-fecha-v2") or not reglas_congeladas_vigentes():
         return False
     r = manifiesto.git("diff", "--name-only", "--diff-filter=MDRT", "reglas-fecha-v2", "--",
-                       "src/mtx/fecha_v2.py", "src/mtx/reglas.py", "src/mtx/normalizacion.py",
-                       "config/", *EXCLUIDOS_DE_REGLAS)
+                       "src/mtx/fecha_v2.py")
     return r == ""
 
 

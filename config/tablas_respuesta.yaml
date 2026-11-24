@@ -216,3 +216,134 @@ Q10:
     tipo: FECHA
     patrones_contexto: ["inaugur|arranc|inicio de operacion|empez|comenz|termin|conclu"]
     relacion: fecha de inauguración, arranque o terminación
+
+# ---------------------------------------------------------------------------------------------
+# v2 (WP-13, 2026-11-24): Q11 a Q15. Propuesta de Claude Code a partir de `pregunta_extraccion`
+# de data/consultas.csv, con la misma estructura que Q1 a Q10. [VALIDAR] Diego la revisa antes de
+# generar las tablas v2 (`make tablas-v2`). Limitación: `reglas.UNIDADES_CANTIDAD` está congelada
+# y no tiene "jóvenes" ni "aprendices"; el campo de Q14 usa `beneficiarios`.
+
+Q11:
+  - campo: dependencias que la integran
+    fuente: entidad
+    tipo: ORG
+    patrones_contexto: ["guardia nacional|guardia", "integr|conform|form|particip|adscri|coordin|mando|traslad|incorpor"]
+    relacion: dependencia o corporación que integra o coordina a la Guardia Nacional
+  - campo: estados
+    fuente: entidad
+    tipo: LOC
+    filtro: entidades_federativas
+    patrones_contexto: ["guardia nacional|guardia|despleg|elementos|cuartel|compania|efectivos"]
+    relacion: estado donde se despliega la Guardia Nacional
+  - campo: elementos
+    fuente: auxiliar
+    tipo: CANTIDAD
+    unidades: [elementos]
+    unidad: elementos
+    patrones_contexto: ["guardia|despleg|efectivos|elementos"]
+    relacion: número de elementos desplegados o integrados
+  - campo: fechas
+    fuente: entidad
+    tipo: FECHA
+    patrones_contexto: ["guardia nacional|guardia", "despleg|cre|inici|arranc|aprob|reforma|incorpor|lleg|inaugur"]
+    relacion: fecha de creación, aprobación o despliegue
+
+Q12:
+  - campo: instituciones
+    fuente: entidad
+    tipo: ORG
+    patrones_contexto: ["imss|bienestar|salud|hospital|clinica|medic", "particip|opera|atien|coordin|federaliz|convenio|adhier|integr|transfer"]
+    relacion: institución que participa en la atención del IMSS-Bienestar
+  - campo: estados
+    fuente: entidad
+    tipo: LOC
+    filtro: entidades_federativas
+    patrones_contexto: ["imss|bienestar|federaliz|convenio|adhier|hospital|atencion"]
+    relacion: estado que se adhiere o donde opera el IMSS-Bienestar
+  - campo: funcionarios
+    fuente: entidad
+    tipo: PER
+    patrones_contexto: ["imss|bienestar|salud|hospital", "director|secretari|gobernador|coordin|titular|encarg"]
+    relacion: funcionario a cargo o que informa sobre el IMSS-Bienestar
+  - campo: montos
+    fuente: entidad
+    tipo: MONTO
+    patrones_contexto: ["imss|bienestar|salud|hospital|medic", "invers|presupuest|destin|cost|gast|recurs"]
+    relacion: inversión o presupuesto vinculado a la atención del IMSS-Bienestar
+  - campo: fechas
+    fuente: entidad
+    tipo: FECHA
+    patrones_contexto: ["imss|bienestar|federaliz|convenio|hospital", "inici|arranc|firm|inaugur|conclu|termin|incorpor"]
+    relacion: fecha de firma, arranque o inauguración
+
+Q13:
+  - campo: organizaciones
+    fuente: entidad
+    tipo: ORG
+    patrones_contexto: ["reforma|electric|energia|cfe|generacion|luz"]
+    relacion: organización que participa en o se menciona respecto a la reforma eléctrica
+  - campo: funcionarios
+    fuente: entidad
+    tipo: PER
+    patrones_contexto: ["reforma|electric|energia|cfe", "director|secretari|senador|diputad|titular|encarg"]
+    relacion: funcionario o legislador vinculado a la reforma o a la CFE
+  - campo: porcentajes de generación
+    fuente: auxiliar
+    tipo: PORCENTAJE
+    unidades: [porcentaje]
+    unidad: "%"
+    patrones_contexto: ["generacion|genera|electric|energia|mercado|cfe|privad"]
+    relacion: porcentaje de generación o de mercado eléctrico (distinguir CFE y privados)
+  - campo: montos
+    fuente: entidad
+    tipo: MONTO
+    patrones_contexto: ["cfe|electric|energia|luz|reforma", "invers|subsidi|cost|tarifa|perd|ahorr|deuda|gast"]
+    relacion: inversión, subsidio, costo o pérdida vinculados a la CFE o la reforma
+
+Q14:
+  - campo: dependencias y empresas
+    fuente: entidad
+    tipo: ORG
+    patrones_contexto: ["jovenes construyendo|aprendic|becari|capacit|tutor", "empresa|centro de trabajo|particip|recib|capacit|opera|secretaria|vincul"]
+    relacion: dependencia que opera el programa o empresa que recibe aprendices
+  - campo: jóvenes
+    fuente: auxiliar
+    tipo: CANTIDAD
+    unidades: [beneficiarios]
+    unidad: beneficiarios
+    patrones_contexto: ["jovenes|aprendic|becari|construyendo"]
+    relacion: número de jóvenes beneficiarios del programa
+  - campo: montos de beca
+    fuente: entidad
+    tipo: MONTO
+    unidad: MXN mensual
+    patrones_contexto: ["beca|mensual|al mes|aprendic|becari"]
+    relacion: monto de la beca por aprendiz, distinto del presupuesto total
+  - campo: estados
+    fuente: entidad
+    tipo: LOC
+    filtro: entidades_federativas
+    patrones_contexto: ["jovenes construyendo|aprendic|becari|beca"]
+    relacion: estado donde participan aprendices del programa
+
+Q15:
+  - campo: dependencias
+    fuente: entidad
+    tipo: ORG
+    patrones_contexto: ["otis|huracan|acapulco|guerrero|damnific|reconstru", "apoy|atien|reconstru|limpi|entreg|despleg|censo|particip|ayud"]
+    relacion: dependencia que atiende la emergencia o la reconstrucción
+  - campo: lugares
+    fuente: entidad
+    tipo: LOC
+    patrones_contexto: ["otis|huracan|damnific|reconstru|dano|afectad"]
+    relacion: lugar dañado o atendido tras el huracán Otis
+  - campo: montos de apoyo
+    fuente: entidad
+    tipo: MONTO
+    patrones_contexto: ["otis|huracan|acapulco|damnific|reconstru", "apoy|invers|destin|entreg|recurs|presupuest|cost|ayud"]
+    relacion: monto de apoyo, inversión o costo de la reconstrucción
+  - campo: fechas
+    fuente: entidad
+    tipo: FECHA
+    patrones_contexto: ["otis|huracan|acapulco|damnific|reconstru", "lleg|toc|impact|inici|entreg|termin|conclu|reabr"]
+    relacion: fecha del impacto, de entregas o de la reconstrucción

@@ -1,6 +1,10 @@
 """Pestaña Valoraciones (PRD §6.13.5, H8): el alumno lee cada tabla de respuesta y escribe 2 a 3
 líneas (¿es creíble?, ¿qué le falta?, ¿qué está mal?). La app guarda el texto con la huella de la
-tabla; si `make tablas` cambia la tabla, la valoración queda invalidada. Nunca precarga texto."""
+tabla; si `make tablas` cambia la tabla, la valoración queda invalidada. Nunca precarga texto.
+
+v2 (WP-13): si existen las tablas de `make tablas-v2`, se elige v1 o v2. En v2 cada persona escribe
+solo su archivo, `anotaciones/valoraciones_v2/<anotador>.yaml`, para que tres personas valoren en
+tres computadoras sin chocar."""
 from __future__ import annotations
 
 import json
@@ -10,12 +14,18 @@ import streamlit as st
 from mtx import config
 from mtx import respuestas as RS
 from mtx.app import componentes as C
+from mtx.app import sesion
 
 DIR_TABLAS = config.DIR_SALIDA / "tablas_respuesta"
 HASHES = config.DIR_SALIDA / "10_hashes_tablas.json"
+DIR_TABLAS_V2 = config.DIR_SALIDA_V2 / "tablas_respuesta"
+HASHES_V2 = config.DIR_SALIDA_V2 / "10_hashes_tablas.json"
 
 
 def _ruta():
+    ss = st.session_state
+    if ss.get("val_version") == "v2" and ss.get("anotador"):
+        return C.rutas().anotaciones / "valoraciones_v2" / f"{ss.anotador}.yaml"
     return C.rutas().anotaciones / "valoraciones.yaml"
 
 
@@ -32,11 +42,25 @@ def _guardar(q: str, h: str) -> None:
 
 def mostrar() -> None:
     st.header("Valoraciones de las tablas de respuesta")
-    if not HASHES.exists():
+    ss = st.session_state
+    version = "v1"
+    if HASHES_V2.exists():
+        version = st.sidebar.radio("Tablas", ["v2", "v1"], key="val_version", horizontal=True)
+    hashes_ruta, dir_tablas = (HASHES_V2, DIR_TABLAS_V2) if version == "v2" else (HASHES,
+                                                                                DIR_TABLAS)
+    if version == "v2" and not sesion.anotador(
+            "¿Quién valora?", "valoraciones v2",
+            "Cada quien guarda solo sus valoraciones en su propio archivo."):
+        return
+    if not hashes_ruta.exists():
         st.info("Faltan las tablas: corre `make tablas`.")
         return
-    hashes = json.loads(HASHES.read_text(encoding="utf-8"))
-    ss = st.session_state
+    hashes = json.loads(hashes_ruta.read_text(encoding="utf-8"))
+    if ss.get("val_ruta") != str(_ruta()):
+        ss.val_ruta = str(_ruta())
+        ss.pop("token_val", None)
+        for k in [k for k in ss if str(k).startswith("val_Q")]:
+            del ss[k]
     if "token_val" not in ss or st.sidebar.button("Recargar desde disco"):
         ss.token_val = C.sha256_ruta(_ruta())
     datos = RS.leer_valoraciones(_ruta())
@@ -60,7 +84,7 @@ def mostrar() -> None:
     if m := ss.pop("msg_val", None):
         st.error(m)
 
-    md = (DIR_TABLAS / f"{q}.md").read_text(encoding="utf-8")
+    md = (dir_tablas / f"{q}.md").read_text(encoding="utf-8")
     cuerpo = md.split("\n## Valoración del alumno")[0]
     st.markdown(cuerpo)
     st.divider()
