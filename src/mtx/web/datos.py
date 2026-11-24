@@ -168,3 +168,11 @@ def cifras(r: Path | None = None) -> dict:
         "palabras_por_pasaje": float(lim["palabras_por_pasaje_media"]),
         "pct_reporteros": float(lim["pasajes_de_reporteros_pct"]),
     }
+
+
+def conteo_ventana(desde, hasta, r: Path | None = None) -> tuple[int, int]:
+    """(fragmentos dentro de la ventana de fechas, fragmentos totales)."""
+    from mtx import ranking
+    f = pd.read_parquet((r or raiz()) / "data" / "pasajes.parquet", columns=["fecha"])
+    m = ranking.mascara_fecha(f["fecha"].to_numpy(dtype="datetime64[ns]"), desde, hasta)
+    return int(m.sum()), len(m)

@@ -46,38 +46,100 @@ def meta_consulta(c: dict) -> str:
 # --------------------------------------------------------------------------- inicio
 
 
+@st.cache_data(show_spinner=False)
+def conteo_ventana(desde: str, hasta: str) -> tuple[int, int]:
+    return D.conteo_ventana(desde, hasta)
+
+
+def fragmento_ilustrativo(a: D.Artefactos, q: str) -> tuple:
+    """Del top-10 del ganador, el fragmento con más tipos de entidad en el cuerpo (desempate: el
+    mejor rango). Solo elige qué mostrar; no cambia ningún resultado."""
+    mejor = None
+    for r in a.top(q, a.mejor).itertuples():
+        fila = a.pasajes.loc[r.passage_id]
+        ents = a.entidades_de(q, r.passage_id)
+        tipos = ents[ents["inicio"] >= int(fila["inicio_cuerpo"])]["tipo"].nunique()
+        if mejor is None or tipos > mejor[0]:
+            mejor = (tipos, r.rango, fila, ents)
+    return mejor
+
+
 def inicio() -> None:
+    from mtx import preproceso
+
     a = artefactos()
-    k = cifras()
+    cifras()
     c = a.consulta(EJEMPLO)
+    consulta = c["consulta"]
     html(C.migas(["Inicio"]))
     html(C.etiqueta("Ejemplo guiado"))
     principal, lateral = st.columns([2.1, 1], gap="large")
-    with principal:
-        html(C.titulo(
-            nombre(c["consulta"]),
-            f"Buscamos en {k['discursos']:,} versiones estenográficas presidenciales los "
-            "fragmentos que mejor responden a una pregunta, y marcamos en ellos personas, "
-            "organizaciones, lugares, fechas y montos.",
-            meta_consulta(c)))
-        html(C.leyenda())
-        for r in a.top(EJEMPLO, a.mejor).head(3).itertuples():
-            html(C.tarjeta_pasaje(a.pasajes.loc[r.passage_id],
-                                  a.entidades_de(EJEMPLO, r.passage_id), rango=r.rango,
-                                  contexto=a.contexto(r.passage_id)))
-        if "consultas" in PAGINAS:
-            st.page_link(PAGINAS["consultas"], label="Ver la respuesta completa de esta consulta →",
-                         query_params={"q": EJEMPLO})
     with lateral:
         html(C.tarjeta_guinda(
             "¿Qué hace este buscador?",
-            "<p>Lee las versiones estenográficas de las mañaneras y otros eventos públicos, de "
-            f"diciembre de 2018 a septiembre de 2024, partidas en {k['pasajes']:,} fragmentos "
-            "por intervención.</p>"
-            "<p>Para cada pregunta ordena los fragmentos con dos métodos clásicos, "
-            "<strong>TF-IDF</strong> y <strong>BM25</strong>, y extrae de los mejores las "
-            "entidades con reglas y un modelo de lenguaje.</p>"
-            "<p>Con eso arma una respuesta en la que cada dato lleva la cita que lo respalda.</p>"))
+            "<p>Busca en las versiones estenográficas de las mañaneras y otros eventos públicos, "
+            "de diciembre de 2018 a septiembre de 2024, los fragmentos que responden a una "
+            "pregunta, y arma una respuesta en la que cada dato lleva la cita que lo respalda."
+            "</p><p>A la izquierda, paso a paso, lo que pasa con una pregunta real.</p>"))
+        if PAGINAS:
+            st.write("")
+            st.page_link(PAGINAS["libre"], label="Hacer mi propia búsqueda →")
+            st.page_link(PAGINAS["consultas"], label="Ver las consultas del experimento →")
+    with principal:
+        html(C.titulo("Así responde el buscador una pregunta",
+                      "Seguimos una consulta del experimento de principio a fin: qué se busca, "
+                      "qué fragmentos encuentra, qué datos extrae de ellos y cómo los junta en una "
+                      "respuesta."))
+
+        # 1 · La pregunta
+        filtro = f"{P.fecha_larga(c['desde'])} – {P.fecha_larga(c['hasta'])}"
+        html(C.paso(1, "La pregunta",
+                    C.buscador(nombre(consulta), filtro)
+                    + f'<p>Queremos saber <strong>{C.e(c["pregunta_extraccion"].lower())}</strong>'
+                    '. Cada consulta del experimento trae su propia ventana de fechas, y solo se '
+                    'busca dentro de ella.</p>'))
+
+        # 2 · La búsqueda
+        en_ventana, total = conteo_ventana(c["desde"], c["hasta"])
+        tokens = preproceso.tokenizar(consulta, "stem")
+        top = a.top(EJEMPLO, a.mejor)
+        html(C.paso(2, "La búsqueda",
+                    '<p>Se quitan las palabras vacías como «de» o «en», y cada palabra se reduce a '
+                    'su raíz, para que «refinería», «refinerías» y «refinar» cuenten igual:</p>'
+                    f'<div>{C.raices(tokens)}</div>'
+                    '<div class="embudo">'
+                    f'<div><strong>{total:,}</strong><span>fragmentos en total</span></div>'
+                    f'<div><strong>{en_ventana:,}</strong><span>dentro de las fechas</span></div>'
+                    f'<div><strong>10</strong><span>mejores según {D.NOMBRE_MODELO[a.mejor]}'
+                    '</span></div></div>'
+                    f'<p>{D.NOMBRE_MODELO[a.mejor]} puntúa cada fragmento por cuántas de esas '
+                    'raíces contiene y qué tan raras son en el corpus. Estos son los tres primeros; '
+                    'en amarillo, las palabras que coinciden:</p>'))
+        for r in top.head(3).itertuples():
+            html(C.tarjeta_pasaje(a.pasajes.loc[r.passage_id], rango=r.rango,
+                                  contexto=a.contexto(r.passage_id), consulta=consulta))
+
+        # 3 · Las entidades
+        _, rango, fila, ents = fragmento_ilustrativo(a, EJEMPLO)
+        html(C.paso(3, "Los datos de cada fragmento",
+                    '<p>En cada uno de los 10 fragmentos, reglas escritas a mano y un modelo de '
+                    'lenguaje marcan personas, organizaciones, lugares, fechas y montos. Así se '
+                    f've el fragmento número {rango}:</p>{C.leyenda()}'))
+        html(C.tarjeta_pasaje(fila, ents, rango=rango, contexto=a.contexto(fila["passage_id"])))
+
+        # 4 · La respuesta
+        muestra = []
+        for campo, renglones in renglones_respuesta(a, EJEMPLO).items():
+            ok = [x for est, x in renglones if est == "respaldado_en_texto"]
+            if ok:
+                muestra.append(C.tarjeta_campo(campo, ok[:1]))
+        html(C.paso(4, "La respuesta",
+                    '<p>Las entidades se ordenan según la pregunta (organizaciones, responsables, '
+                    'montos) y cada una se muestra con la oración que la contiene. '
+                    f'{EXPLICA_ESTADOS} Un dato por campo:</p>' + "".join(muestra)))
+        if PAGINAS:
+            st.page_link(PAGINAS["consultas"], label="Ver la respuesta completa y la comparación "
+                         "TF-IDF frente a BM25 →", query_params={"q": EJEMPLO})
 
 
 # --------------------------------------------------------------------------- consultas
@@ -113,21 +175,16 @@ def consultas() -> None:
         comparacion(a, q)
 
 
-def respuesta(a: D.Artefactos, q: str) -> None:
+def renglones_respuesta(a: D.Artefactos, q: str) -> dict[str, list[tuple[str, str]]]:
+    """Por campo, los renglones de la respuesta como (estado, html). Los valores que salen de la
+    misma cita van juntos en un solo renglón."""
     res = a.respuestas[a.respuestas["query_id"] == q]
     evi = a.evidencias[a.evidencias["query_id"] == q]
     veces = (evi.assign(n=pd.to_numeric(evi["n_discursos"], errors="coerce"))
              .groupby(["campo_respuesta", "valor"])["n"].max())
-    html('<p class="explica">Cada dato sale de los 10 mejores fragmentos y lleva su cita. '
-         '<strong>Respaldado en el texto</strong>: la misma oración liga el dato con el tema (por '
-         'ejemplo, habla de construir, invertir o participar). Es lo que dice el texto, no una '
-         'verificación de que sea verdad. <strong>Ambiguo</strong>: el dato aparece, pero la '
-         'oración no lo liga con el tema, o lo dice un reportero al preguntar.</p>')
-    campos = list(dict.fromkeys(res["campo_respuesta"]))
-    cols = st.columns(2, gap="medium")
-    for i, campo in enumerate(campos):
+    salida: dict[str, list[tuple[str, str]]] = {}
+    for campo in dict.fromkeys(res["campo_respuesta"]):
         g = res[(res["campo_respuesta"] == campo) & (res["estado"] != "no_encontrado")]
-        # Los valores que salen de la misma cita van juntos en un solo renglón.
         grupos: dict[tuple, list[dict]] = {}
         for f in g.to_dict("records"):
             grupos.setdefault((f["estado"], f["passage_id"], f["cita"], f["unidad"]), []).append(f)
@@ -138,13 +195,30 @@ def respuesta(a: D.Artefactos, q: str) -> None:
             ficha = P.ficha(fila) if fila is not None else None
             ns = [veces.get((campo, v)) for v in valores]
             ns = [int(n) for n in ns if n is not None and pd.notna(n)]
-            renglones.append(C.renglon_respuesta(
+            renglones.append((estado, C.renglon_respuesta(
                 valores, unidad, estado, cita,
                 ficha.titulo if ficha else P.fecha_larga(fs[0]["fecha_documento"]),
                 ficha.habla if ficha else P.quien_habla(fs[0]["interlocutor"]),
-                max(ns) if ns else None))
+                max(ns) if ns else None)))
+        salida[campo] = renglones
+    return salida
+
+
+EXPLICA_ESTADOS = (
+    '<strong>Respaldado en el texto</strong>: la misma oración liga el dato con el tema (por '
+    'ejemplo, habla de construir, invertir o participar). Es lo que dice el texto, no una '
+    'verificación de que sea verdad. <strong>Ambiguo</strong>: el dato aparece, pero la oración '
+    'no lo liga con el tema, o lo dice un reportero al preguntar.')
+
+
+def respuesta(a: D.Artefactos, q: str) -> None:
+    html(f'<p class="explica">Cada dato sale de los 10 mejores fragmentos y lleva su cita. '
+         f'{EXPLICA_ESTADOS}</p>')
+    cols = st.columns(2, gap="medium")
+    for i, (campo, renglones) in enumerate(renglones_respuesta(a, q).items()):
+        h = [x for _, x in renglones]
         with cols[i % 2]:
-            html(C.tarjeta_campo(campo, renglones[:MAX_VALORES], renglones[MAX_VALORES:]))
+            html(C.tarjeta_campo(campo, h[:MAX_VALORES], h[MAX_VALORES:]))
 
 
 def comparacion(a: D.Artefactos, q: str) -> None:

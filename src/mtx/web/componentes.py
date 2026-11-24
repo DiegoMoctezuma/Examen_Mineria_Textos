@@ -10,7 +10,7 @@ import html
 import pandas as pd
 
 from mtx import presentacion as P
-from mtx.app.componentes import html_desde_spans
+from mtx.app.componentes import html_desde_spans, spans_terminos
 
 TIPOS = {"PER": "Persona", "ORG": "Organización", "LOC": "Lugar", "FECHA": "Fecha",
          "MONTO": "Monto"}
@@ -47,6 +47,30 @@ def html_cuerpo(texto: str, inicio_cuerpo: int, ents: pd.DataFrame | None = None
     spans = spans_entidades(ents, inicio_cuerpo) if ents is not None else []
     spans = [(a, b, c) for a, b, c in spans if b <= len(cuerpo)]
     return html_desde_spans(cuerpo, spans)
+
+
+def html_cuerpo_terminos(texto: str, inicio_cuerpo: int, consulta: str) -> str:
+    """Cuerpo del pasaje con las palabras que coinciden con la consulta resaltadas (misma raíz
+    que usa el índice)."""
+    spans = [(a - inicio_cuerpo, b - inicio_cuerpo, "termino")
+             for a, b, _ in spans_terminos(texto, inicio_cuerpo, consulta)]
+    return html_desde_spans(texto[inicio_cuerpo:], spans)
+
+
+def buscador(consulta: str, filtro: str) -> str:
+    """Caja de búsqueda ilustrativa (no editable) con la consulta y su filtro de fechas."""
+    return (f'<div class="buscador"><span class="lupa">⌕</span><span class="q">{e(consulta)}'
+            f'</span><span class="filtro">{e(filtro)}</span></div>')
+
+
+def raices(tokens: list[str]) -> str:
+    return "".join(f'<span class="raiz">{e(t)}</span>' for t in tokens)
+
+
+def paso(n: int, titulo_: str, cuerpo: str) -> str:
+    """Un paso del recorrido guiado. `cuerpo` ya es HTML."""
+    return (f'<section class="paso"><div class="paso-num">{n}</div><div class="paso-cuerpo">'
+            f'<h2>{e(titulo_)}</h2>{cuerpo}</div></section>')
 
 
 def leyenda() -> str:
@@ -113,12 +137,17 @@ def _cabeza(f: P.Ficha, rango: int | None, extra: str = "") -> str:
 
 
 def tarjeta_pasaje(fila, ents: pd.DataFrame | None = None, rango: int | None = None,
-                   nota: str | None = None, contexto: tuple | None = None) -> str:
+                   nota: str | None = None, contexto: tuple | None = None,
+                   consulta: str | None = None) -> str:
     """Tarjeta de un pasaje: título legible, quién habla, lugar, texto con entidades resaltadas
-    y el contexto del discurso. `fila` trae las columnas de `pasajes.parquet`."""
+    (o, con `consulta`, con las palabras de la consulta) y el contexto del discurso. `fila` trae
+    las columnas de `pasajes.parquet`."""
     f = P.ficha(fila)
     nota_html = f'<p class="nota">{e(nota)}</p>' if nota else ""
-    cuerpo = html_cuerpo(str(fila["texto"]), int(fila["inicio_cuerpo"]), ents)
+    if consulta is not None:
+        cuerpo = html_cuerpo_terminos(str(fila["texto"]), int(fila["inicio_cuerpo"]), consulta)
+    else:
+        cuerpo = html_cuerpo(str(fila["texto"]), int(fila["inicio_cuerpo"]), ents)
     return (f'<article class="pasaje-tarjeta">{_cabeza(f, rango)}{nota_html}'
             f'<div class="pasaje-texto">{cuerpo}</div>{html_contexto(contexto)}</article>')
 

@@ -72,6 +72,31 @@ header[data-testid="stHeader"], [data-testid="stToolbar"], #MainMenu, footer
 .nota {{ font-size:.9rem; color:var(--gris) !important; margin:.2rem 0 .4rem; }}
 .pasaje-texto {{ line-height:1.7; font-size:1.02rem; max-height:15em; overflow:auto;
   padding-right:.4rem; white-space:pre-wrap; }}
+mark.termino {{ background:#FFE08A; color:#1a1a1a; font-weight:700; padding:.02em .15em;
+  border-radius:3px; }}
+.paso {{ display:flex; gap:1.1rem; position:relative; padding-bottom:1.6rem; }}
+.paso::before {{ content:""; position:absolute; left:1.05rem; top:2.4rem; bottom:0;
+  border-left:2px solid #e3d5da; }}
+.paso:last-of-type::before {{ display:none; }}
+.paso-num {{ flex:0 0 auto; width:2.2rem; height:2.2rem; border-radius:50%;
+  background:var(--guinda); color:#fff; font-weight:700; display:flex; align-items:center;
+  justify-content:center; font-size:1.05rem; z-index:1; }}
+.paso-cuerpo {{ flex:1; min-width:0; }}
+.paso-cuerpo h2 {{ font-family:'Noto Serif', Georgia, serif; font-size:1.45rem; margin:.1rem 0 .5rem;
+  padding:0; color:var(--texto); }}
+.paso-cuerpo > p {{ line-height:1.6; }}
+.buscador {{ display:flex; align-items:center; gap:.7rem; flex-wrap:wrap; border:2px solid
+  var(--guinda); border-radius:999px; padding:.55rem 1rem; margin:.4rem 0 .6rem; }}
+.buscador .lupa {{ color:var(--guinda); font-size:1.3rem; line-height:1; }}
+.buscador .q {{ flex:1; font-size:1.1rem; font-weight:600; min-width:12rem; }}
+.buscador .filtro {{ font-size:.85rem; background:var(--suave); border-radius:999px;
+  padding:.15rem .7rem; color:var(--texto); }}
+.raiz {{ display:inline-block; font-family:ui-monospace, Menlo, monospace; background:#FFE08A;
+  border-radius:4px; padding:.05rem .45rem; margin:0 .3rem .3rem 0; font-size:.92rem; }}
+.embudo {{ display:flex; gap:.6rem; flex-wrap:wrap; margin:.4rem 0 .8rem; }}
+.embudo div {{ background:var(--suave); border-radius:8px; padding:.5rem .8rem; min-width:9rem; }}
+.embudo strong {{ display:block; font-size:1.3rem; color:var(--guinda); }}
+.embudo span {{ font-size:.85rem; color:var(--gris); }}
 details.contexto, details.mas {{ margin-top:.6rem; }}
 details.contexto > summary, details.mas > summary {{ cursor:pointer; color:var(--guinda);
   font-weight:600; font-size:.93rem; }}
