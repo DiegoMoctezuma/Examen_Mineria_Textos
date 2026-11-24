@@ -4,14 +4,31 @@ Solo arma el encabezado, el menú y el pie; cada página vive en `vistas.py`.
 """
 from __future__ import annotations
 
+import sys
+from pathlib import Path
+
+# En Streamlit Community Cloud el paquete no se instala: se agrega `src/` al camino de importación.
+_SRC = Path(__file__).resolve().parents[2]
+if str(_SRC) not in sys.path:
+    sys.path.insert(0, str(_SRC))
+
 import streamlit as st
 
+from mtx import config
+from mtx.web import arranque, estilo, vistas
 from mtx.web import componentes as C
-from mtx.web import estilo, vistas
 
 st.set_page_config(page_title="Datisa · Buscador de conferencias", page_icon="🔎",
                    layout="wide", initial_sidebar_state="collapsed")
 estilo.aplicar()
+
+
+@st.cache_resource(show_spinner="Preparando los datos de la demo (solo la primera vez)…")
+def _preparar_datos() -> list[str]:
+    return arranque.asegurar_artefactos(config.RAIZ)
+
+
+_preparar_datos()
 
 paginas = [
     st.Page(vistas.inicio, title="Inicio", url_path="inicio", default=True),

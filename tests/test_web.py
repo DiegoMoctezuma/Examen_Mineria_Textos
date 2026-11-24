@@ -240,3 +240,42 @@ def test_libre_une_reglas_y_modelo_por_span():
                                                   "Tabasco": "regla"}
     assert C.spans_entidades(e, 5) == [(i - 5, i, "ent e-ORG"), (j - 5, j + 2, "ent e-LOC")]
     assert list(L.entidades_pasaje("9_1", texto, 5, reglas)["metodo"]) == ["regla", "regla"]
+
+
+# --------------------------------------------------------------------------- arranque
+
+
+def test_arranque_descarga_lo_que_falta_y_verifica(tmp_path, monkeypatch):
+    import json
+    import sys
+    import types
+
+    from mtx.web import arranque
+
+    contenido = b"datos de prueba"
+    import hashlib
+    m = {"repo_id": "u/x", "revision": "abc", "archivos": {
+        "data/a.bin": hashlib.sha256(contenido).hexdigest()}}
+    man = tmp_path / "artefactos_demo.json"
+    man.write_text(json.dumps(m), encoding="utf-8")
+    llamadas = []
+
+    def falso(repo_id, filename, repo_type, revision, local_dir):
+        llamadas.append((repo_id, filename, repo_type, revision))
+        destino = local_dir / filename
+        destino.parent.mkdir(parents=True, exist_ok=True)
+        destino.write_bytes(contenido if revision == "abc" else b"otro")
+        return str(destino)
+
+    monkeypatch.setitem(sys.modules, "huggingface_hub",
+                        types.SimpleNamespace(hf_hub_download=falso))
+    assert arranque.asegurar_artefactos(tmp_path, man) == ["data/a.bin"]
+    assert llamadas == [("u/x", "data/a.bin", "dataset", "abc")]
+    assert arranque.asegurar_artefactos(tmp_path, man) == []          # ya existe: no baja
+    (tmp_path / "data/a.bin").unlink()
+    m["revision"] = "malo"
+    man.write_text(json.dumps(m), encoding="utf-8")
+    with pytest.raises(RuntimeError, match="sha256"):
+        arranque.asegurar_artefactos(tmp_path, man)
+    assert not (tmp_path / "data/a.bin").exists()
+    assert arranque.asegurar_artefactos(tmp_path, tmp_path / "no_existe.json") == []
