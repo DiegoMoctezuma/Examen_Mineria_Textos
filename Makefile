@@ -1,7 +1,7 @@
 # Objetivos del PRD §10. Los que dependen de insumos humanos se detienen con un mensaje claro.
 PY := uv run python
 .PHONY: consultas consultas-v2 setup contratos corpus explorar explorar-v2 indice indice-lema ranking ranking-v2 pool pool-v2 app app-cli asignar-juicios importar-juicios evaluar-ir reglas congelar ner \
-        muestra-gold muestra-gold-v2 acuerdo-gold revisar-cierres-v2 cierre-juicios-v2 cierre-gold-v2 extraer evaluar-ie tablas resultados reporte laminas demo test test-lento \
+        muestra-gold muestra-gold-v2 acuerdo-gold revisar-cierres-v2 cierre-juicios-v2 cierre-gold-v2 verificar-ner-v2 inferir-seleccion comparacion-ner fijar-ner-v2 extraer evaluar-ie tablas resultados reporte laminas demo test test-lento \
         validar entrega all limpiar
 
 setup:
@@ -69,6 +69,16 @@ cierre-juicios-v2:
 	$(PY) scripts/09d_cierres_v2.py juicios $(if $(INCOMPLETOS),--aceptar-incompletos)
 cierre-gold-v2:
 	$(PY) scripts/09d_cierres_v2.py gold
+# WP-10 (D34): candidatos NER sobre la selección v2; el grupo ner-v2 trae XLM-R y spaCy lg.
+PY_NER := uv run --group ner-v2 python
+verificar-ner-v2:
+	$(PY_NER) scripts/09_comparacion_ner.py verificar
+inferir-seleccion:
+	$(PY_NER) scripts/09_comparacion_ner.py inferir
+comparacion-ner:
+	$(PY_NER) scripts/09_comparacion_ner.py comparar
+fijar-ner-v2:
+	$(PY_NER) scripts/09_comparacion_ner.py comparar --fijar
 extraer:
 	$(PY) scripts/08_extraer.py
 evaluar-ie:

@@ -2,10 +2,18 @@
 # primera descarga exitosa (2026-11-08); nunca "main". Cambiar cualquier parámetro de inferencia o
 # fragmentación cambia la clave de caché y obliga a reinferir; cambiar `version_posproceso` no.
 principal: bert_es_mrm8488
+# v2 (WP-10, D34): candidatos que se comparan sobre la selección adjudicada, con el principal v1
+# primero porque gana los empates. Verificación de cada uno en salida/v2/07_candidatos_ner.md.
+# Descartados al verificar (2026-11-24): PlanTL-GOB-ES/roberta-base-bne-capitel-ner (ya no está
+# publicado; solo quedan copias de terceros) y MMG/xlm-roberta-large-ner-spanish (sin licencia).
+candidatos_v2: [bert_es_mrm8488, xlmr_base_davlan, xlmr_large_davlan, spacy_es_lg]
 modelos:
   bert_es_mrm8488:
     repo_id: mrm8488/bert-spanish-cased-finetuned-ner
     revision: b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7
+    # Ni este modelo ni su base (BETO) declaran licencia en Hugging Face (verificado el 2026-11-24).
+    # Entra igual: es el modelo de v1 y D34 lo nombra como candidato obligatorio.
+    licencia: no declarada (candidato obligatorio de D34)
     # 512 posiciones menos [CLS] y [SEP], verificado en model.config y el tokenizador (P06).
     max_length_real: 510
     # Ventana en subtokens (margen de 30 para la retokenización de la subcadena) y solapamiento.
@@ -15,6 +23,46 @@ modelos:
     aggregation_strategy: simple
     device: -1
     # Etiquetas reales del modelo (id2label): B/I-PER, B/I-ORG, B/I-LOC, B/I-MISC.
+    mapa_etiquetas: {PER: PER, ORG: ORG, LOC: LOC}
+    descartadas: [MISC]
+    version_posproceso: 1
+
+  # XLM-R multilingüe (10 idiomas de alto recurso, incluido el español). Etiquetas reales
+  # (id2label): B/I-PER, B/I-ORG, B/I-LOC, B/I-DATE; DATE se descarta (FECHA es de reglas).
+  # Límite: min(max_position_embeddings 514, model_max_length 512) − 2 especiales = 510.
+  xlmr_base_davlan:
+    repo_id: Davlan/xlm-roberta-base-ner-hrl
+    revision: 253f557bd8249b8515114cfd7f71974fe5fa4d2f
+    licencia: afl-3.0
+    max_length_real: 510
+    ventana: 480
+    solape: 64
+    lote: 8
+    aggregation_strategy: simple
+    device: -1
+    mapa_etiquetas: {PER: PER, ORG: ORG, LOC: LOC}
+    descartadas: [DATE]
+    version_posproceso: 1
+  xlmr_large_davlan:
+    repo_id: Davlan/xlm-roberta-large-ner-hrl
+    revision: 1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e
+    licencia: afl-3.0
+    max_length_real: 510
+    ventana: 480
+    solape: 64
+    lote: 4
+    aggregation_strategy: simple
+    device: -1
+    mapa_etiquetas: {PER: PER, ORG: ORG, LOC: LOC}
+    descartadas: [DATE]
+    version_posproceso: 1
+  # spaCy: la revisión es la versión del paquete, instalado desde el release 3.8.0 (grupo `ner-v2`
+  # de pyproject; uv.lock guarda su hash). Etiquetas: PER, ORG, LOC, MISC.
+  spacy_es_lg:
+    motor: spacy
+    repo_id: es_core_news_lg
+    revision: "3.8.0"
+    licencia: gpl-3.0
     mapa_etiquetas: {PER: PER, ORG: ORG, LOC: LOC}
     descartadas: [MISC]
     version_posproceso: 1

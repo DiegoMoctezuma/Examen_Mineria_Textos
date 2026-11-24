@@ -7,6 +7,10 @@ se recalcula siempre desde lo crudo con su propia versión: cambiarlo nunca obli
 
 Offsets: índices de carácter Python sobre el `texto` completo; se verifica
 `texto[inicio:fin] == texto_entidad` tras cada etapa.
+
+Motores (v2, D34): `transformers` (por defecto, el flujo de arriba) y `spacy` (paquete de modelo
+instalado con versión fija; spaCy da offsets de carácter y no necesita ventanas ni puntaje). El
+posproceso y la caché son los mismos para los dos.
 """
 from __future__ import annotations
 
@@ -29,6 +33,7 @@ COLUMNAS_ENTIDADES = ["query_id", "doc_id", "passage_id", "tipo", "texto", "inic
                       "metodo"]
 COLUMNAS_UNIONES = ["passage_id", "tipo", "inicio_1", "fin_1", "inicio_2", "fin_2",
                     "inicio_union", "fin_union", "texto_union", "confianza_1", "confianza_2"]
+MOTORES = ("transformers", "spacy")
 RECORTABLES = set(" \t\n\r.,;:!?¿¡()[]{}\"'«»“”‘’-–—…/*")
 """Caracteres que se quitan de los extremos de un span. `$`, dígitos y letras nunca se quitan."""
 
@@ -38,15 +43,17 @@ class ConfigModelo:
     slug: str
     repo_id: str
     revision: str
-    max_length_real: int
-    ventana: int
-    solape: int
+    max_length_real: int = 0
+    ventana: int = 0
+    solape: int = 0
     lote: int = 8
     aggregation_strategy: str = "simple"
     device: int = -1
     mapa_etiquetas: dict = field(default_factory=dict)
     descartadas: tuple = ()
     version_posproceso: int = 1
+    motor: str = "transformers"
+    licencia: str = ""
 
     @property
     def revision_corta(self) -> str:
@@ -54,7 +61,10 @@ class ConfigModelo:
 
     def parametros_inferencia(self) -> dict:
         """Lo que entra en la clave de caché: modelo, revisión, tokenizador, fragmentación e
-        inferencia. El lote y el posproceso no cambian lo crudo y quedan fuera."""
+        inferencia. El lote y el posproceso no cambian lo crudo y quedan fuera. Para
+        `transformers` las claves son las de v1, así que su caché sigue vigente."""
+        if self.motor == "spacy":
+            return {"motor": "spacy", "repo_id": self.repo_id, "revision": self.revision}
         return {"repo_id": self.repo_id, "revision": self.revision,
                 "tokenizador": f"{self.repo_id}@{self.revision}",
                 "max_length_real": self.max_length_real, "ventana": self.ventana,
@@ -67,12 +77,30 @@ def cargar_config(ruta: Path = RUTA_CONFIG) -> tuple[str, dict[str, ConfigModelo
     for slug, d in datos["modelos"].items():
         d = dict(d)
         d["descartadas"] = tuple(d.get("descartadas", ()))
-        if not d.get("revision") or d["revision"] in ("main", "master"):
+        d["revision"] = str(d.get("revision") or "")
+        motor = d.get("motor", "transformers")
+        if motor not in MOTORES:
+            raise ValueError(f"{slug}: motor desconocido {motor!r}; válidos: {MOTORES}")
+        if not d["revision"] or d["revision"] in ("main", "master", "latest"):
             raise ValueError(f"{slug}: la revisión debe ser un commit fijo, no '{d.get('revision')}'")
-        if d["ventana"] > d["max_length_real"] or d["solape"] >= d["ventana"]:
+        if motor == "transformers" and (d["ventana"] > d["max_length_real"]
+                                        or d["solape"] >= d["ventana"]):
             raise ValueError(f"{slug}: ventana y solape incoherentes con max_length_real")
         modelos[slug] = ConfigModelo(slug=slug, **d)
     return datos["principal"], modelos
+
+
+def candidatos_v2(ruta: Path = RUTA_CONFIG) -> list[str]:
+    """Slugs que compara WP-10 (D34), en el orden de `config/ner.yaml`; el principal v1 primero."""
+    principal, modelos = cargar_config(ruta)
+    datos = yaml.safe_load(Path(ruta).read_text(encoding="utf-8"))
+    lista = [str(s) for s in datos.get("candidatos_v2") or []]
+    desconocidos = sorted(set(lista) - set(modelos))
+    if desconocidos:
+        raise ValueError(f"candidatos_v2 sin entrada en `modelos`: {desconocidos}")
+    if not lista or lista[0] != principal:
+        raise ValueError("candidatos_v2 debe empezar por el principal v1 (gana los empates, D34)")
+    return lista
 
 
 # =========================================================================== ventanas
@@ -135,8 +163,16 @@ def leer_cache(cfg: ConfigModelo, passage_id: str, texto_sha256: str,
 
 
 def construir_pipeline(cfg: ConfigModelo):
-    """Pipeline HF y tokenizador con la revisión fija. Se importa aquí para que el resto del
-    módulo (posproceso, caché) no dependa de transformers ni de la red."""
+    """Pipeline HF y tokenizador con la revisión fija (o el `nlp` de spaCy y `None`). Se importa
+    aquí para que el resto del módulo (posproceso, caché) no dependa de transformers ni de la red."""
+    if cfg.motor == "spacy":
+        import spacy
+
+        nlp = spacy.load(cfg.repo_id)
+        if nlp.meta.get("version") != cfg.revision:
+            raise ValueError(f"{cfg.repo_id}: instalado {nlp.meta.get('version')}, "
+                             f"config/ner.yaml pide {cfg.revision}")
+        return nlp, None
     from transformers import AutoTokenizer, pipeline
 
     tok = AutoTokenizer.from_pretrained(cfg.repo_id, revision=cfg.revision)
@@ -152,6 +188,8 @@ def inferir_pasaje(texto: str, pipe, tok, cfg: ConfigModelo) -> list[dict]:
     """Entidades crudas (etiqueta original del modelo) con offsets sobre `texto`. En el traslape
     de ventanas se deduplica por span; ante conflicto gana la no cortada por un borde y después
     la de mayor confianza (un puntaje, no una probabilidad calibrada)."""
+    if cfg.motor == "spacy":
+        return inferir_spacy(texto, pipe)
     enc = tok(texto, add_special_tokens=False, return_offsets_mapping=True)
     tramos = ventanas([tuple(o) for o in enc["offset_mapping"]], len(texto), cfg.ventana,
                       cfg.solape)
@@ -173,6 +211,14 @@ def inferir_pasaje(texto: str, pipe, tok, cfg: ConfigModelo) -> list[dict]:
                          "texto": texto[ini:fin], "confianza": round(float(e["score"]), 6),
                          "ventana": k, "cortada": cortada})
     return deduplicar(cand)
+
+
+def inferir_spacy(texto: str, nlp) -> list[dict]:
+    """Entidades crudas de spaCy sobre el texto completo. spaCy no da puntaje: `confianza` = 1."""
+    doc = nlp(texto)
+    return [{"etiqueta": str(e.label_), "inicio": int(e.start_char), "fin": int(e.end_char),
+             "texto": texto[e.start_char:e.end_char], "confianza": 1.0, "ventana": 0,
+             "cortada": False} for e in doc.ents]
 
 
 def deduplicar(cand: list[dict]) -> list[dict]:
@@ -210,8 +256,11 @@ def ejecutar(cfg: ConfigModelo, pasajes, forzar: bool = False, raiz: Path = DIR_
     pipe, tok = constructor(cfg)
     reg.segundos_carga = round(time.perf_counter() - t0, 2)
     try:
-        import transformers
-        version_tf = transformers.__version__
+        if cfg.motor == "spacy":
+            import spacy as motor
+        else:
+            import transformers as motor
+        version_tf = motor.__version__
     except ImportError:
         version_tf = ""
     destino = dir_cache(cfg, raiz)
@@ -222,7 +271,7 @@ def ejecutar(cfg: ConfigModelo, pasajes, forzar: bool = False, raiz: Path = DIR_
         dur = round(time.perf_counter() - t1, 3)
         datos = {"clave": clave_cache(cfg, sha), "passage_id": pid, "texto_sha256": sha,
                  "parametros": cfg.parametros_inferencia(), "entidades_crudas": ents,
-                 "segundos": dur, "version_transformers": version_tf}
+                 "segundos": dur, f"version_{cfg.motor}": version_tf}
         (destino / f"{pid}.json").write_text(
             json.dumps(datos, ensure_ascii=False, indent=1, sort_keys=True) + "\n",
             encoding="utf-8")

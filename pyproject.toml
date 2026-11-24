@@ -31,6 +31,12 @@ dev = [
     "rank_bm25",
     "ruff",
 ]
+# Candidatos NER de v2 (WP-10, D34): tokenizador SentencePiece de XLM-R y spaCy lg. Solo los usa
+# `make comparacion-ner`; `uv run --group ner-v2 ...` los instala sin tocar el resto del entorno.
+ner-v2 = [
+    "sentencepiece",
+    "es-core-news-lg",
+]
 
 [build-system]
 requires = ["hatchling"]
@@ -49,6 +55,7 @@ explicit = true
 torch = [
     { index = "pytorch-cpu", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
 ]
+es-core-news-lg = { url = "https://github.com/explosion/spacy-models/releases/download/es_core_news_lg-3.8.0/es_core_news_lg-3.8.0-py3-none-any.whl" }
 es-core-news-md = { url = "https://github.com/explosion/spacy-models/releases/download/es_core_news_md-3.8.0/es_core_news_md-3.8.0-py3-none-any.whl" }
 
 [tool.pytest.ini_options]

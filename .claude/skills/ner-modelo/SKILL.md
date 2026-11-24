@@ -120,7 +120,7 @@ Comando: `uv run pytest tests/test_ner_posproceso.py`. El módulo no se da por t
 - `fusion-normalizacion`: consume la salida del NER y la fusiona con reglas en `entidades.csv` (D12, D16).
 - `evaluacion-ie`: `kit/evaluar.py ie`, `salida/09_comparacion_ner.csv`, análisis de errores por método y tipo.
 
-## v2: comparación de candidatos (PRD v2 D34; WP-10, dueño Luis)
+## v2: comparación de candidatos (PRD v2 D34; WP-10, dueño Diego desde el 21)
 
 - Candidatos: `mrm8488` (principal v1) y 3 o 4 más, por ejemplo RoBERTa BNE o CAPITEL, spaCy
   `es_core_news_lg`, XLM-R y GLiNER, cada uno con revisión fija en `config/ner.yaml`. Verificar
@@ -129,3 +129,7 @@ Comando: `uv run pytest tests/test_ner_posproceso.py`. El módulo no se da por t
   empate → `mrm8488`. Luis anota la selección **antes** de inferir sobre esos pasajes.
 - `data/modelo_ner.json` v2 se escribe el jueves 19, con commit anterior a `cierre_gold_v2.json`.
 - Cachés por modelo y revisión en `data/cache_ner/`; nunca se reutiliza la caché de otro modelo.
+- Implementado el 24: `candidatos_v2` en `config/ner.yaml`, motor `spacy` en `ner_modelo.py`,
+  `comparacion_ner.py` y `scripts/09_comparacion_ner.py` (`make verificar-ner-v2`,
+  `inferir-seleccion`, `comparacion-ner`, `fijar-ner-v2`, todos con el grupo `ner-v2` de uv).
+  Las predicciones de la selección no se commitean hasta que el adjudicador la cierre.

@@ -1,0 +1,34 @@
+{
+  "bert_es_mrm8488": {
+    "pasajes": 10,
+    "inferidos": 10,
+    "cacheados": 0,
+    "segundos_carga": 3.74,
+    "segundos_inferencia": 0.68,
+    "ventanas": 10
+  },
+  "xlmr_base_davlan": {
+    "pasajes": 10,
+    "inferidos": 10,
+    "cacheados": 0,
+    "segundos_carga": 0.73,
+    "segundos_inferencia": 1.48,
+    "ventanas": 10
+  },
+  "xlmr_large_davlan": {
+    "pasajes": 10,
+    "inferidos": 10,
+    "cacheados": 0,
+    "segundos_carga": 0.72,
+    "segundos_inferencia": 4.76,
+    "ventanas": 10
+  },
+  "spacy_es_lg": {
+    "pasajes": 10,
+    "inferidos": 10,
+    "cacheados": 0,
+    "segundos_carga": 1.46,
+    "segundos_inferencia": 0.16,
+    "ventanas": 10
+  }
+}
