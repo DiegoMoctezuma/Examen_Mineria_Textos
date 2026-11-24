@@ -11,6 +11,7 @@ import pandas as pd
 
 from mtx import presentacion as P
 from mtx.app.componentes import html_desde_spans, spans_terminos
+from mtx.web import resumen
 
 TIPOS = {"PER": "Persona", "ORG": "Organización", "LOC": "Lugar", "FECHA": "Fecha",
          "MONTO": "Monto"}
@@ -106,10 +107,15 @@ def titulo(texto: str, entrada: str | None = None, meta: str | None = None) -> s
 
 
 def _fragmento_contexto(rotulo: str, fila) -> str:
+    """Un vecino del contexto: quién habla, su frase representativa (cita textual elegida por
+    `resumen.py`) y el texto completo en un desplegable."""
     f = P.ficha(fila)
-    cuerpo = e(str(fila["texto"])[int(fila["inicio_cuerpo"]):])
+    texto, ic = str(fila["texto"]), int(fila["inicio_cuerpo"])
+    frase = resumen.frase_representativa(texto, ic)
     return (f'<div class="ctx"><p class="ctx-tit">{e(rotulo)} · fragmento {f.fragmento} · '
-            f'{e(f.habla)}</p><div class="ctx-texto">{cuerpo}</div></div>')
+            f'{e(f.habla)}</p><p class="ctx-frase"><span>Frase representativa</span>'
+            f'«{e(frase)}»</p><details class="ctx-completo"><summary>Leer completo</summary>'
+            f'<div class="ctx-texto">{e(texto[ic:])}</div></details></div>')
 
 
 def html_contexto(contexto: tuple | None) -> str:

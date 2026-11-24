@@ -106,6 +106,13 @@ details.contexto > summary, details.mas > summary {{ cursor:pointer; color:var(-
   font-weight:600; }}
 .ctx-texto {{ font-size:.95rem; line-height:1.65; white-space:pre-wrap; max-height:13em;
   overflow:auto; }}
+.stMarkdown .ctx-frase {{ font-family:'Noto Serif', Georgia, serif; font-style:italic;
+  font-size:1rem !important; line-height:1.55; margin:.1rem 0 .3rem !important; }}
+.ctx-frase span {{ display:block; font-family:'Noto Sans', sans-serif; font-style:normal;
+  font-size:.75rem; text-transform:uppercase; letter-spacing:.04em; color:var(--gris);
+  margin-bottom:.1rem; }}
+details.ctx-completo > summary {{ cursor:pointer; color:var(--guinda); font-size:.85rem; }}
+details.ctx-completo .ctx-texto {{ margin-top:.3rem; }}
 .ctx-aqui {{ text-align:center; font-size:.8rem; color:var(--gris); margin:.2rem 0; }}
 
 .pasaje-tarjeta.mini {{ padding:.75rem 1rem .8rem; margin-bottom:.7rem; }}

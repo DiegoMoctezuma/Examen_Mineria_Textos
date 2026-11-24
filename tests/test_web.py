@@ -10,6 +10,7 @@ import pytest
 from mtx import config
 from mtx.web import componentes as C
 from mtx.web import datos as D
+from mtx.web import resumen
 
 ID_VISIBLE = re.compile(r"\b\d+_\d+\b")
 
@@ -57,7 +58,8 @@ def test_spans_solapados_se_resuelven_sin_error():
     C.html_cuerpo(t, 3, e)                                    # no lanza
 
 
-def test_tarjeta_sin_ids_y_con_contexto():
+def test_tarjeta_sin_ids_y_con_contexto(monkeypatch):
+    monkeypatch.setattr(resumen, "idf_indice", dict)
     antes = fila(texto="VOZ: antes 12_3 no", ic=5, passage_id="77_3", posicion=3,
                  interlocutor="VOZ MUJER")
     h = C.tarjeta_pasaje(fila(), contexto=(antes, None))
@@ -66,6 +68,27 @@ def test_tarjeta_sin_ids_y_con_contexto():
     assert "Mañanera del 1 de febrero de 2021 · fragmento 5" in visible
     assert "Antes · fragmento 4 · Participante sin identificar" in visible
     assert "Ver contexto" in visible and "Después" not in visible
+    assert "Frase representativa" in visible and "Leer completo" in visible
+
+
+def test_frase_representativa_elige_la_oracion_central():
+    from mtx import preproceso
+
+    texto = ("VOZ: Buenos días a todos los presentes en este lugar tan bonito hoy. "
+             "La refinería de Dos Bocas procesará petróleo crudo para producir gasolinas. "
+             "El petróleo crudo y las gasolinas son la base de la refinería nueva. Gracias.")
+    idf = {t: 1.0 for t in preproceso.tokenizar(texto, "stem")}
+    frase = resumen.frase_representativa(texto, 5, idf)
+    assert frase.startswith("La refinería de Dos Bocas")
+    assert frase in " ".join(texto.split())            # cita textual
+
+
+def test_frase_representativa_recorta_y_tiene_respaldo():
+    largo = "VOZ: " + " ".join(f"palabra{i}" for i in range(60)) + "."
+    frase = resumen.frase_representativa(largo, 5, {})
+    assert frase.endswith("…") and len(frase.split()) == resumen.MAX_PALABRAS
+    corto = "VOZ: Sí, claro."
+    assert resumen.frase_representativa(corto, 5, {}) == "Sí, claro."
 
 
 def test_tarjeta_mini_y_renglon_respuesta():
