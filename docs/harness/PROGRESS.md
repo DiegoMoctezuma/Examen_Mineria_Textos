@@ -8,27 +8,36 @@
 Mera Montiel Gonzalo Sebastian, Moctezuma Ramirez Diego Rafael, Ramirez Maza Luis). `make validar`:
 14 OK, 1 falla (condición 12: el guion no registra «Tiempo medido: m:ss»).
 
-## Fase v2 (desde 2026-11-14)
+## Fase v2 (desde 2026-11-14) · estado al 2026-11-23 en la noche
 
-Proyecto final en equipo de 6; entrega el 2026-11-25 antes de las 18:00. Plan en
-`PRD_v2_proyecto_final.md`; progreso por paquete en `docs/harness/progreso/<wp>.md`.
+Proyecto final en equipo; entrega el 2026-11-25 antes de las 18:00. Plan en
+`PRD_v2_proyecto_final.md` (calendario §7 replanificado el 23); progreso por paquete en
+`docs/harness/progreso/<wp>.md`. Rama `proyecto-final` en GitHub (`07d99f8`); `main` intacto.
 
-- WP-00 (arnés v2) y WP-01 (app multianotador y asignación del lote 1) hechos y en la rama
-  `proyecto-final`, subida a GitHub el 14 (`d03f3c0`). `main` intacto en `84ab69d` hasta el merge final.
-- Lote 1 completo: juicios v1 de Diego, Luis y Arturo importados (3 por par, 103 unánimes y 73
-  por 2 a 1); PV12 cerrado. `make test`: 446 en verde.
-- Roles del PRD v2 aprobados el 14. Reparto por integrante entregado al alumno para el equipo.
+Equipo de 5: Bruno dejó el equipo el 22. Recortes 1, 2 y 3 aplicados el 23 (parte B de 5, FECHA
+con criterio v1 y pasada 2 sin etiqueta, sin reanotar la FECHA del gold v1; nada P2).
 
-Pendiente, en orden:
-1. WP-08 y WP-09 (muestreo y app de gold doble): urgente, Luis solo anota la selección el dom 15.
-2. Aprobación de las reglas de PRD v2 §3 (D23 a D36) y etiqueta `v2-inicio`.
-3. Agregar a los 5 integrantes como colaboradores en GitHub (lo hace Diego).
-4. Dom 15: WP-03 (lematización), WP-04 (Q11 a Q15 con Arturo a mediodía), WP-05 (pool v2 y
-   asignación del lote 2 en la noche), calibración de 20 min antes del lote 2.
-5. PV7 (repo de FECHA del profesor), PV8 (manual de paleta), PV9 (límites de HF), PV10 (candidatos
-   NER), PV11 (spaCy en las 6 máquinas).
+Hecho:
+- WP-00, WP-01, WP-08 y WP-09 (app multianotador, muestreo y gold doble); lote 1 completo.
+- WP-03 (lemas y 8 variantes), WP-04 (Q11 a Q15 aprobadas), WP-05 (pool v2: 320 pares, lote 2 de
+  144 asignado a Arturo, Gonzalo y Leo) y parte B sorteada (5).
+- Diego cerró la Selección y la parte A (dos pasadas) en `anotacion/diego`; aún no se integra a
+  `proyecto-final` por el modo ciego.
+- `make test`: 489 en verde.
 
-Bloqueos v2: el repo de FECHA depende del profesor (PV7); WP-11 espera hasta el jue 19 como máximo.
+Pendiente, en orden (mar 24):
+1. Recibir e integrar las ramas de Arturo (Selección, B, lote 2), Gonzalo (A, B, lote 2) y Leo
+   (lote 2), con la regla de modo ciego de `docs/decisiones.md` (2026-11-23).
+2. Adjudicación de la Selección (Gonzalo) → WP-10: comparar NER sobre la Selección y fijar
+   `modelo_ner.json` v2 (13:00).
+3. Leo: reglas FECHA v2 y `reglas-fecha-v2` (15:00), sin ver el gold.
+4. **Escribir el cierre** (`cierre_juicios_v2.json`, `cierre_gold_v2.json` con `adjudicado.csv`
+   consolidado): todavía no existe el script. Cierres a las 20:00.
+5. Noche: WP-02 (agregación de juicios), WP-06 oficial, WP-12 y WP-13; luego WP-14 el mié 25.
+6. Subir `salida/v2/04_pool*.csv` y `ranking_8_variantes.csv` tras `cierre_juicios_v2` (D32).
+
+Bloqueos v2: la Selección de Arturo (la necesita Gonzalo para adjudicar y el NER v2). Nadie más ha
+subido anotaciones todavía.
 
 ## Completado
 
