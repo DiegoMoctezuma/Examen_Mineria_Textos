@@ -377,5 +377,14 @@ def modelo_ner_json(cfg: ConfigModelo, criterio: str = "tecnico", f1: float | No
             "f1_seleccion": f1, "f1_seleccion_alternativa": f1_alt, "criterio": criterio}
 
 
+def elegido_v1(ruta: Path, cfgs: dict[str, ConfigModelo], principal: str) -> dict:
+    """Modelo NER de v1. Desde `make fijar-ner-v2`, `data/modelo_ner.json` guarda el elegido v2
+    (D34); v1 sigue con el principal de `config/ner.yaml` por criterio técnico (D09), que es
+    exactamente lo que el archivo decía antes de v2. Así `make extraer` y `make evaluar-ie` no
+    cambian las cifras v1."""
+    elegido = json.loads(ruta.read_text(encoding="utf-8"))
+    return modelo_ner_json(cfgs[principal]) if elegido.get("version") == 2 else elegido
+
+
 def registro_dict(reg: Registro) -> dict:
     return asdict(reg)

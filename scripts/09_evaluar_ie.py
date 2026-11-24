@@ -32,6 +32,7 @@ import pandas as pd
 from mtx import adaptadores_kit, config, manifiesto
 from mtx import evaluacion_ie as E
 from mtx import gold as G
+from mtx import ner_modelo as N
 from mtx import reglas as R
 from mtx.fusion import CLAVE, sin_acentos
 
@@ -63,7 +64,8 @@ def prerrequisitos(rg: G.RutasGold, pasajes: pd.DataFrame) -> list[str]:
                    "(D09).")
     man = json.loads(manifiesto.MANIFIESTO.read_text()) if manifiesto.MANIFIESTO.exists() else {}
     ext = man.get("08_extraer", {})
-    elegido = json.loads((config.DIR_DATA / "modelo_ner.json").read_text())
+    principal, cfgs = N.cargar_config()
+    elegido = N.elegido_v1(config.DIR_DATA / "modelo_ner.json", cfgs, principal)
     ent = config.RAIZ / "entidades.csv"
     if not ent.exists():
         err.append("Falta entidades.csv: corre `make extraer`.")

@@ -2,6 +2,7 @@
 simulados y frases inventadas."""
 from __future__ import annotations
 
+import json
 import re
 from types import SimpleNamespace
 
@@ -179,3 +180,16 @@ def test_modelo_ner_v2_conserva_las_claves_que_leen_08_y_09():
     assert {"modelo", "slug", "revision", "f1_seleccion", "criterio"} <= set(d)
     assert d["version"] == 2 and d["f1_seleccion"] == 1.0 and set(d["candidatos"]) == {"v1",
                                                                                         "otro"}
+
+
+def test_v1_sigue_con_el_principal_aunque_modelo_ner_sea_v2(tmp_path):
+    from mtx import ner_modelo as N
+
+    principal, cfgs = N.cargar_config()
+    v1 = N.modelo_ner_json(cfgs[principal])
+    ruta = tmp_path / "modelo_ner.json"
+    ruta.write_text(json.dumps(v1))
+    assert N.elegido_v1(ruta, cfgs, principal) == v1
+    otro = next(s for s in cfgs if s != principal)
+    ruta.write_text(json.dumps({**N.modelo_ner_json(cfgs[otro], "f1_seleccion_v2"), "version": 2}))
+    assert N.elegido_v1(ruta, cfgs, principal) == v1
