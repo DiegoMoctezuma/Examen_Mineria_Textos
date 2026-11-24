@@ -11,6 +11,12 @@ válido, `data/modelo_ner.json` versionado antes del gold (D09) y `entidades.csv
 3. `salida/09_evaluacion_20_ids.csv`: lo mismo sobre los 20 IDs del manifiesto (P04).
 4. `salida/09_analisis_errores.csv` y `salida/09_resumen_errores.csv` (método combinado).
 5. Figuras `reporte/figuras/ie_f1_por_tipo_metodo.png` e `ie_errores_por_categoria.png`.
+
+`--v2` (PRD v2 D31, D35; WP-12, `make evaluar-ie-v2`): después de `cierre_gold_v2.json` y
+`make extraer-v2`. Gold oficial v2 (gold v1 + A + B adjudicados) en `salida/v2/gold_entidades.csv`,
+kit → `salida/v2/resultados_ie.csv`, detalle verificado contra el kit, referencias del F1 (techo
+humano, línea base de solo gazetteer, IC95 bootstrap, F1 parcial y FECHA con reglas v1) en
+`salida/v2/09_referencias_f1.csv` y análisis de errores. No toca la raíz.
 """
 from __future__ import annotations
 
@@ -79,7 +85,76 @@ def obras() -> set[str]:
     return nombres
 
 
+def _reglas_v1(pas: pd.DataFrame, fuentes: set[str] | None = None,
+               tipos: set[str] | None = None) -> pd.DataFrame:
+    gaz = R.gazetteer_por_defecto()
+    filas = []
+    for pid, texto, ic in zip(pas["passage_id"], pas["texto"], pas["inicio_cuerpo"]):
+        for e in R.extraer_reglas_detalle(texto, int(ic), gaz).entidades:
+            if (fuentes is None or e.fuente in fuentes) and (tipos is None or e.tipo in tipos):
+                filas.append({"passage_id": pid, "tipo": e.tipo, "texto": e.texto,
+                              "inicio": e.inicio, "fin": e.fin, "metodo": "regla"})
+    return pd.DataFrame(filas, columns=["passage_id", "tipo", "texto", "inicio", "fin", "metodo"])
+
+
+def main_v2() -> int:
+    from mtx import cierres_v2, ie_v2
+    from mtx import gold_v2 as V
+
+    if not cierres_v2.gold_cerrado():
+        print("El gold v2 no está cerrado: no se evalúa (D32).", file=sys.stderr)
+        return 1
+    r = ie_v2.rutas_v2()
+    if not r["entidades"].exists() or not r["resumen"].exists():
+        print("Falta salida/v2/entidades.csv: corre `make extraer-v2`.", file=sys.stderr)
+        return 1
+    cfg = V.cargar_config()
+    gold = ie_v2.gold_v2(cfg, r["gold_v1"])
+    R.escribir_csv(gold, r["gold"])
+    with tempfile.TemporaryDirectory() as tmp:
+        oficial = adaptadores_kit.ejecutar_evaluador("ie", r["gold"], r["entidades"],
+                                                     Path(tmp)).read_bytes()
+    r["resultados"].write_bytes(oficial)
+    kit = pd.read_csv(r["resultados"])
+    ent = pd.read_csv(r["entidades"], dtype={"passage_id": str, "query_id": str})
+    ids = set(gold["passage_id"])
+    det = E.detalle(gold, ent, ids)
+    distinto = E.coincide_con_kit(det, kit)
+    if distinto:
+        print("El detalle no reproduce al kit (revisar antes de reportar):", *distinto,
+              sep="\n- ")
+        return 1
+    R.escribir_csv(det, r["detalle"])
+
+    pas = pd.read_parquet(config.PASAJES_PARQUET,
+                          columns=["passage_id", "texto", "texto_sha256", "inicio_cuerpo"])
+    pas_gold = pas[pas["passage_id"].isin(ids)].reset_index(drop=True)
+    linea_base = _reglas_v1(pas_gold, fuentes={"gazetteer_org", "gazetteer_loc"})
+    fecha_v1 = _reglas_v1(pas_gold, tipos={"FECHA"})
+    acuerdo, pendientes = V.acuerdo(cfg)
+    R.escribir_csv(acuerdo, r["acuerdo"])
+    refs = ie_v2.referencias(gold, ent, linea_base, fecha_v1, acuerdo)
+    R.escribir_csv(refs, r["referencias"])
+
+    enr = pd.read_csv(r["enriquecidas"], dtype={"passage_id": str}, keep_default_na=False)
+    pred = enr.drop_duplicates(CLAVE)[[*CLAVE, "texto", "metodo", "fuentes"]]
+    errores = E.analizar_errores(gold, pred, pas, obras())
+    R.escribir_csv(errores, r["errores"])
+    R.escribir_csv(E.resumen_errores(errores), r["resumen_errores"])
+
+    print(kit[kit["tipo"] == "TODOS"].to_string(index=False))
+    print(f"\nPasajes del gold v2 con entidades (los que evalúa el kit): {len(ids)}")
+    for x in refs.itertuples():
+        ic = f" [{x.ic95_inf}, {x.ic95_sup}]" if pd.notna(x.ic95_inf) else ""
+        print(f"  {x.referencia:<22} {x.metodo or '':<9} {x.tipo:<6} F1 {x.f1}{ic}")
+    for a in [*E.alertas_u19(det), *pendientes]:
+        print("AVISO:", a)
+    return 0
+
+
 def main() -> int:
+    if "--v2" in sys.argv[1:]:
+        return main_v2()
     t0 = time.perf_counter()
     rg = G.rutas_gold()
     pas = pd.read_parquet(config.PASAJES_PARQUET,

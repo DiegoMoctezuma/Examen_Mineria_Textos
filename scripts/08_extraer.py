@@ -11,6 +11,11 @@ Sobre los pasajes únicos del top-10 con filtro del mejor modelo de IR:
 Salidas: `entidades.csv` (raíz y `salida/`, 8 columnas), `salida/entidades_unicas.csv`,
 `salida/entidades_enriquecidas.csv`, `salida/08_solapes_parciales.csv`,
 `salida/08_resumen_extraccion.json` y la entrada `08_extraer` del manifiesto de ejecución.
+
+`--v2` (PRD v2 D33, D34; WP-12, `make extraer-v2`): después de `cierre_gold_v2.json`, con FECHA
+v2 (`fecha_v2.extraer_reglas_v2_detalle`, etiqueta `reglas-fecha-v2`), el NER de
+`data/modelo_ner.json` v2 y el ámbito v2 (top-10 del ganador v2 ∪ gold v2). Mismos archivos, en
+`salida/v2/`; la raíz conserva los de v1 hasta WP-14.
 """
 from __future__ import annotations
 
@@ -27,26 +32,41 @@ from mtx import reglas as R
 
 SALIDA = config.DIR_SALIDA
 RUTA_MODELO_NER = config.DIR_DATA / "modelo_ner.json"
+EXCLUIDOS_DE_REGLAS = (":(exclude)config/ner.yaml",)
 
 
 def reglas_congeladas_vigentes() -> bool:
     """Ningún archivo que existía en `reglas-congeladas` (reglas, normalización, `config/`) se
     modificó, renombró ni borró. Los archivos agregados después (p. ej. la configuración de las
-    tablas de H8) no forman parte de lo congelado y no cuentan."""
+    tablas de H8) no forman parte de lo congelado y no cuentan. `config/ner.yaml` tampoco: el NER
+    se congela aparte (D09, D34: `data/modelo_ner.json` y la clave de caché), y en v2 solo se le
+    agregaron candidatos (2026-11-24, ver docs/decisiones.md)."""
     if not manifiesto.git("tag", "-l", "reglas-congeladas"):
         return False
     r = manifiesto.git("diff", "--name-only", "--diff-filter=MDRT", "reglas-congeladas", "--",
                        "src/mtx/reglas.py",
-                       "src/mtx/normalizacion.py", "config/")
+                       "src/mtx/normalizacion.py", "config/", *EXCLUIDOS_DE_REGLAS)
     return r == ""
 
 
-def entidades_reglas(pasajes: pd.DataFrame) -> pd.DataFrame:
+def fecha_v2_vigente() -> bool:
+    """`fecha_v2.py`, `reglas.py`, `normalizacion.py` y `config/` como en `reglas-fecha-v2`."""
+    if not manifiesto.git("tag", "-l", "reglas-fecha-v2"):
+        return False
+    r = manifiesto.git("diff", "--name-only", "--diff-filter=MDRT", "reglas-fecha-v2", "--",
+                       "src/mtx/fecha_v2.py", "src/mtx/reglas.py", "src/mtx/normalizacion.py",
+                       "config/", *EXCLUIDOS_DE_REGLAS)
+    return r == ""
+
+
+def entidades_reglas(pasajes: pd.DataFrame, extractor=None) -> pd.DataFrame:
+    """`extractor`: `reglas.extraer_reglas_detalle` (v1, por defecto) o el de FECHA v2."""
+    extractor = extractor or R.extraer_reglas_detalle
     R.gazetteer_por_defecto.cache_clear()
     gaz = R.gazetteer_por_defecto()
     filas = []
     for pid, texto, ic in zip(pasajes["passage_id"], pasajes["texto"], pasajes["inicio_cuerpo"]):
-        for e in R.extraer_reglas_detalle(texto, int(ic), gaz).entidades:
+        for e in extractor(texto, int(ic), gaz).entidades:
             filas.append({"passage_id": pid, "tipo": e.tipo, "texto": e.texto,
                           "inicio": e.inicio, "fin": e.fin, "fuente": e.fuente,
                           "en_marca": e.en_marca, "puntaje_modelo": None})
@@ -72,7 +92,80 @@ def entidades_modelo(pasajes: pd.DataFrame, cfg: N.ConfigModelo) -> pd.DataFrame
     return pd.DataFrame(filas, columns=fusion.COLUMNAS_FUENTE)
 
 
+def main_v2() -> int:
+    from mtx import cierres_v2, fecha_v2, ie_v2
+    from mtx import gold_v2 as V
+
+    t0 = time.perf_counter()
+    if not cierres_v2.gold_cerrado():
+        print("El gold v2 no está cerrado: no se extrae sobre sus pasajes (D32).", file=sys.stderr)
+        return 1
+    r = ie_v2.rutas_v2()
+    elegido = json.loads(RUTA_MODELO_NER.read_text(encoding="utf-8"))
+    if elegido.get("version") != 2 or not r["mejor"].exists():
+        print("Faltan data/modelo_ner.json v2 o data/v2/mejor_modelo.json.", file=sys.stderr)
+        return 1
+    _, cfgs = N.cargar_config()
+    cfg = cfgs[elegido["slug"]]
+    if (cfg.repo_id, cfg.revision) != (elegido["modelo"], elegido["revision"]):
+        raise SystemExit("config/ner.yaml no coincide con data/modelo_ner.json.")
+    vigente = fecha_v2_vigente()
+    if not vigente:
+        print("AVISO: reglas o config/ difieren de `reglas-fecha-v2`: corrida EXPLORATORIA.")
+
+    amb = ie_v2.ambito_ie_v2(r["ranking"], r["mejor"],
+                             ie_v2.pasajes_gold_v2(V.cargar_config(), r["muestra_v1"]))
+    pas = pd.read_parquet(config.PASAJES_PARQUET,
+                          columns=["passage_id", "texto", "texto_sha256", "inicio_cuerpo",
+                                   "fecha"])
+    pas = pas[pas["passage_id"].isin(set(amb["passage_id"]))].reset_index(drop=True)
+    textos = dict(zip(pas["passage_id"], pas["texto"]))
+
+    reg = entidades_reglas(pas, fecha_v2.extraer_reglas_v2_detalle)
+    mod = entidades_modelo(pas, cfg)
+    unicas, solapes = fusion.fusionar_unicas(reg, mod)
+    ent = fusion.asociar_consultas(unicas, amb)[fusion.COLUMNAS_ENTIDADES]
+    errores = fusion.validar_entidades(ent, textos)
+    if errores:
+        print("entidades.csv v2 no cumple el contrato:", *errores, sep="\n- ")
+        return 1
+    doc = amb.drop_duplicates("passage_id").set_index("passage_id")["doc_id"]
+    unicas_out = unicas.assign(doc_id=unicas["passage_id"].map(doc).astype(int))
+    unicas_out = unicas_out.sort_values(["passage_id", "inicio", "fin", "tipo"])
+    gaz = [R.leer_gazetteer(R.GAZ_EXTENDIDO), R.leer_gazetteer(R.GAZ_LOC)]
+    version = (f"reglas-fecha-v2@{manifiesto.git('rev-parse', '--short', 'reglas-fecha-v2^{}')}"
+               f"+{cfg.slug}+posproceso{cfg.version_posproceso}"
+               + ("" if vigente else "+exploratorio"))
+    enr = fusion.enriquecer(ent, unicas, dict(zip(pas["passage_id"], pas["fecha"])),
+                            fusion.mapa_canonico(gaz), cfg.repo_id, cfg.revision, version,
+                            normalizador_fecha=fecha_v2.normalizar_fecha_v2)
+    config.DIR_SALIDA_V2.mkdir(parents=True, exist_ok=True)
+    R.escribir_csv(amb, r["ambito"])
+    R.escribir_csv(ent, r["entidades"])
+    R.escribir_csv(unicas_out[fusion.COLUMNAS_UNICAS], r["unicas"])
+    R.escribir_csv(enr, r["enriquecidas"])
+    R.escribir_csv(solapes, r["solapes"])
+    resumen = {
+        "modelo": cfg.repo_id, "slug": cfg.slug, "revision": cfg.revision,
+        "reglas_fecha_v2_vigentes": vigente, "version_extractor": version,
+        "pasajes": len(pas), "pares_consulta_pasaje": len(amb),
+        "pasajes_por_origen": amb.drop_duplicates("passage_id")["origen"].value_counts().to_dict(),
+        "filas_entidades": len(ent), "entidades_unicas": len(unicas),
+        "unicas_por_tipo_y_metodo": {t: g["metodo"].value_counts().to_dict()
+                                     for t, g in unicas.groupby("tipo")},
+        "solapes_parciales": solapes["clase"].value_counts().to_dict(),
+        "segundos": round(time.perf_counter() - t0, 2),
+    }
+    r["resumen"].write_text(json.dumps(resumen, ensure_ascii=False, indent=2) + "\n",
+                            encoding="utf-8")
+    print(json.dumps({k: v for k, v in resumen.items() if k != "unicas_por_tipo_y_metodo"},
+                     ensure_ascii=False, indent=2))
+    return 0
+
+
 def main() -> int:
+    if "--v2" in sys.argv[1:]:
+        return main_v2()
     t0 = time.perf_counter()
     elegido = json.loads(RUTA_MODELO_NER.read_text(encoding="utf-8"))
     _, cfgs = N.cargar_config()

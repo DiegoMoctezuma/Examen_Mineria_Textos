@@ -167,9 +167,11 @@ VACIO_MONTO = dict.fromkeys(["valor_num", "valor_min", "valor_max", "moneda", "e
 
 def enriquecer(ent: pd.DataFrame, unicas: pd.DataFrame, fechas: dict[str, object],
                canonico: dict[str, str], modelo_id: str, modelo_revision: str,
-               version_extractor: str) -> pd.DataFrame:
+               version_extractor: str, normalizador_fecha=None) -> pd.DataFrame:
     """`entidades_enriquecidas.csv`: las 8 columnas intactas + procedencia, identidad, tiempo y
-    dinero. `fechas` es passage_id → fecha del discurso (ancla de fechas relativas)."""
+    dinero. `fechas` es passage_id → fecha del discurso (ancla de fechas relativas).
+    `normalizador_fecha` (v2: `fecha_v2.normalizar_fecha_v2`) sustituye al de v1 si se da."""
+    normalizar = normalizador_fecha or normalizar_fecha
     proc = unicas.set_index(CLAVE)[["fuentes", "en_marca", "puntaje_modelo"]]
     filas = []
     for f in ent.to_dict("records"):
@@ -190,7 +192,7 @@ def enriquecer(ent: pd.DataFrame, unicas: pd.DataFrame, fechas: dict[str, object
         elif f["tipo"] == "PER":
             extra["estado_identidad"] = "sin_vincular"  # vínculo de personas: P2, recortado
         elif f["tipo"] == "FECHA":
-            nf = normalizar_fecha(f["texto"], _ancla(fechas.get(f["passage_id"])))
+            nf = normalizar(f["texto"], _ancla(fechas.get(f["passage_id"])))
             extra.update({k: ("" if v is None else str(v)) for k, v in nf.items()})
         elif f["tipo"] == "MONTO":
             extra.update({k: str(v) for k, v in normalizar_monto(f["texto"]).items()})

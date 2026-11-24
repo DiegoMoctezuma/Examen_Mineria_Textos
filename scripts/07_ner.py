@@ -10,6 +10,10 @@ interpalabra, para medir su efecto), `salida/07_uniones_spans.csv`, `salida/07_r
 si no existe, `data/modelo_ner.json` provisional (`criterio: tecnico`, D09).
 
 Las predicciones no se muestran en la app mientras el gold esté abierto (modo ciego).
+
+`--v2` (PRD v2 D32, D34; WP-12, `make ner-v2`): el modelo de `data/modelo_ner.json` v2 sobre el
+ámbito IE v2 (top-10 del ganador v2 ∪ gold v2). Solo después de `cierre_gold_v2.json`; escribe
+la caché y `salida/v2/07_registro_ner_v2.json` (conteos), nunca entidades a la vista.
 """
 from __future__ import annotations
 
@@ -83,12 +87,48 @@ def verificar(cfg: N.ConfigModelo) -> list[str]:
     return fallas
 
 
+def main_v2(forzar: bool) -> int:
+    from mtx import cierres_v2, ie_v2
+    from mtx import gold_v2 as V
+
+    if not cierres_v2.gold_cerrado():
+        print("El gold v2 no está cerrado: antes de cierre_gold_v2.json no se infiere sobre los "
+              "pasajes nuevos (D32).", file=sys.stderr)
+        return 1
+    elegido = json.loads(RUTA_MODELO_NER.read_text(encoding="utf-8"))
+    if elegido.get("version") != 2:
+        print("data/modelo_ner.json no es v2: corre `make fijar-ner-v2`.", file=sys.stderr)
+        return 1
+    _, cfgs = N.cargar_config()
+    cfg = cfgs[elegido["slug"]]
+    r = ie_v2.rutas_v2()
+    amb = ie_v2.ambito_ie_v2(r["ranking"], r["mejor"],
+                             ie_v2.pasajes_gold_v2(V.cargar_config(), r["muestra_v1"]))
+    pasajes = pd.read_parquet(config.PASAJES_PARQUET,
+                              columns=["passage_id", "texto", "texto_sha256"])
+    unicos = pasajes[pasajes["passage_id"].isin(set(amb["passage_id"]))].reset_index(drop=True)
+    t0 = time.perf_counter()
+    _, reg = N.ejecutar(cfg, unicos, forzar=forzar)
+    registro = {"modelo": cfg.repo_id, "slug": cfg.slug, "revision": cfg.revision,
+                "pasajes": len(unicos), **N.registro_dict(reg),
+                "segundos_totales": round(time.perf_counter() - t0, 2)}
+    destino = config.DIR_SALIDA_V2 / "07_registro_ner_v2.json"
+    destino.parent.mkdir(parents=True, exist_ok=True)
+    destino.write_text(json.dumps(registro, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"{cfg.slug}: {len(unicos)} pasajes, {reg.inferidos} inferidos, {reg.cacheados} de "
+          f"caché → {destino.relative_to(config.RAIZ)}")
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--modelo")
     ap.add_argument("--forzar", action="store_true")
     ap.add_argument("--verificar", action="store_true")
+    ap.add_argument("--v2", action="store_true")
     a = ap.parse_args(argv)
+    if a.v2:
+        return main_v2(a.forzar)
     principal, cfgs = N.cargar_config()
     slug = a.modelo or principal
     cfg = cfgs[slug]
