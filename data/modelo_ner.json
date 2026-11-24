@@ -1,8 +1,35 @@
 {
-  "modelo": "mrm8488/bert-spanish-cased-finetuned-ner",
-  "slug": "bert_es_mrm8488",
-  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
-  "f1_seleccion": null,
+  "modelo": "Davlan/xlm-roberta-large-ner-hrl",
+  "slug": "xlmr_large_davlan",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "f1_seleccion": 0.678,
   "f1_seleccion_alternativa": null,
-  "criterio": "tecnico"
+  "criterio": "f1_seleccion_v2",
+  "version": 2,
+  "fecha": "2026-11-24T17:49:53",
+  "regla": "F1 micro exacto PER, ORG y LOC del modelo solo sobre la selección v2 adjudicada; empate a 3 decimales gana mrm8488 (D34)",
+  "pasajes_seleccion": 10,
+  "candidatos": {
+    "bert_es_mrm8488": {
+      "modelo": "mrm8488/bert-spanish-cased-finetuned-ner",
+      "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+      "f1": 0.2712
+    },
+    "xlmr_base_davlan": {
+      "modelo": "Davlan/xlm-roberta-base-ner-hrl",
+      "revision": "253f557bd8249b8515114cfd7f71974fe5fa4d2f",
+      "f1": 0.6129
+    },
+    "xlmr_large_davlan": {
+      "modelo": "Davlan/xlm-roberta-large-ner-hrl",
+      "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+      "f1": 0.678
+    },
+    "spacy_es_lg": {
+      "modelo": "es_core_news_lg",
+      "revision": "3.8.0",
+      "f1": 0.2623
+    }
+  },
+  "comparacion": "salida/v2/09_comparacion_ner.csv"
 }

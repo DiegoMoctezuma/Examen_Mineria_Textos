@@ -1,0 +1,50 @@
+{
+ "clave": "3a012cd11afd5e572285b651bab328cc613501cad8b71535d77ffc2e85da20ac",
+ "entidades_crudas": [
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 163,
+   "inicio": 102,
+   "texto": "A diferencia de la construcción del aeropuerto de Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 212,
+   "inicio": 203,
+   "texto": "Tren Maya",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 418,
+   "inicio": 402,
+   "texto": "Lo del Tren Maya",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "motor": "spacy",
+  "repo_id": "es_core_news_lg",
+  "revision": "3.8.0"
+ },
+ "passage_id": "1655_20",
+ "segundos": 0.021,
+ "texto_sha256": "4540f6d6c32de9f1e78d88783005b2cc21349e4f799f567b2d8031fe154d1f06",
+ "version_spacy": "3.8.18"
+}

@@ -1,0 +1,59 @@
+{
+ "clave": "85f9c8e3040db9c9813e38c2168a37e6f15bdee8dfaf7a1d440b1493f9db302a",
+ "entidades_crudas": [
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 38,
+   "inicio": 31,
+   "texto": "OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 179,
+   "inicio": 157,
+   "texto": "Lo mismo los programas",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 213,
+   "inicio": 185,
+   "texto": "Producción para el Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 454,
+   "inicio": 435,
+   "texto": "Y el Sembrando Vida",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "motor": "spacy",
+  "repo_id": "es_core_news_lg",
+  "revision": "3.8.0"
+ },
+ "passage_id": "90_78",
+ "segundos": 0.015,
+ "texto_sha256": "f0dc89edac6dbebd1b5234758e4e5104a0d1b16f7cc72054d8cb7d5eb470883e",
+ "version_spacy": "3.8.18"
+}

@@ -1,0 +1,63 @@
+{
+ "clave": "2bcbd2005401fb45008778393f2579137120b024947a31abff0a1b42e3b12d15",
+ "entidades_crudas": [
+  {
+   "confianza": 0.798813,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 105,
+   "inicio": 86,
+   "texto": "Ferrocarril del Ist",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.747716,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 122,
+   "inicio": 105,
+   "texto": "mo de Tehuantepec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999231,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 558,
+   "inicio": 544,
+   "texto": "Programa Istmo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.984426,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 594,
+   "inicio": 572,
+   "texto": "Corredor Interoceánico",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.976404,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 687,
+   "inicio": 667,
+   "texto": "Istmo de Tehuantepec",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "1053_25",
+ "segundos": 0.055,
+ "texto_sha256": "e2133fca903909817abf08bddce840961e1c4f362675f61fdfc4d530e1538b44",
+ "version_transformers": "5.22.1"
+}

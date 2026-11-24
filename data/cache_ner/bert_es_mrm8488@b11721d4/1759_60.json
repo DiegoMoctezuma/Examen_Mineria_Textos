@@ -1,0 +1,63 @@
+{
+ "clave": "586c07e17ebe297bab50e8ea6a92391df463d1a76af15a7bd289f3435a00c1db",
+ "entidades_crudas": [
+  {
+   "confianza": 0.861541,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 21,
+   "inicio": 18,
+   "texto": "MAN",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.64291,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 23,
+   "inicio": 21,
+   "texto": "UE",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.51985,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 23,
+   "texto": "L LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999059,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 135,
+   "inicio": 126,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998928,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 655,
+   "inicio": 646,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "1759_60",
+ "segundos": 0.072,
+ "texto_sha256": "d8d936461f96088cf1b7ecaa87d94f1e39f4a16cdfb16b76061ad0db7b7d8538",
+ "version_transformers": "5.22.1"
+}

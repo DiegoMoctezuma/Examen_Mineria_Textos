@@ -1,0 +1,45 @@
+{
+ "clave": "b9369aafab26e696a83e29127826f832e09d4955c8fb94e91d9f7b5651aa98bc",
+ "entidades_crudas": [
+  {
+   "confianza": 0.52944,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 8,
+   "inicio": 0,
+   "texto": "PRESIDEN",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.973807,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999692,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 532,
+   "inicio": 526,
+   "texto": "México",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-base-ner-hrl",
+  "revision": "253f557bd8249b8515114cfd7f71974fe5fa4d2f",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-base-ner-hrl@253f557bd8249b8515114cfd7f71974fe5fa4d2f",
+  "ventana": 480
+ },
+ "passage_id": "1683_5",
+ "segundos": 0.08,
+ "texto_sha256": "bf7f4f8aa40645490c3f77b815c51961f3c3852b7e54f78887ecd68130a40b25",
+ "version_transformers": "5.22.1"
+}

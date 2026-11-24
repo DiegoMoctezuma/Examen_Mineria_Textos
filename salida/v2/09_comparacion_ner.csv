@@ -1,0 +1,17 @@
+slug,modelo,revision,motor,tipo,precision,recall,f1,tp,fp,fn,soporte,predichas,elegido
+bert_es_mrm8488,mrm8488/bert-spanish-cased-finetuned-ner,b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7,transformers,PER,0.0,0.0,0.0,0,11,8,8,11,False
+bert_es_mrm8488,mrm8488/bert-spanish-cased-finetuned-ner,b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7,transformers,ORG,0.5,0.6,0.5455,3,3,2,5,6,False
+bert_es_mrm8488,mrm8488/bert-spanish-cased-finetuned-ner,b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7,transformers,LOC,0.4545,0.2778,0.3448,5,6,13,18,11,False
+bert_es_mrm8488,mrm8488/bert-spanish-cased-finetuned-ner,b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7,transformers,TODOS,0.2857,0.2581,0.2712,8,20,23,31,28,False
+xlmr_base_davlan,Davlan/xlm-roberta-base-ner-hrl,253f557bd8249b8515114cfd7f71974fe5fa4d2f,transformers,PER,0.5833,0.875,0.7,7,5,1,8,12,False
+xlmr_base_davlan,Davlan/xlm-roberta-base-ner-hrl,253f557bd8249b8515114cfd7f71974fe5fa4d2f,transformers,ORG,1.0,0.8,0.8889,4,0,1,5,4,False
+xlmr_base_davlan,Davlan/xlm-roberta-base-ner-hrl,253f557bd8249b8515114cfd7f71974fe5fa4d2f,transformers,LOC,0.5333,0.4444,0.4848,8,7,10,18,15,False
+xlmr_base_davlan,Davlan/xlm-roberta-base-ner-hrl,253f557bd8249b8515114cfd7f71974fe5fa4d2f,transformers,TODOS,0.6129,0.6129,0.6129,19,12,12,31,31,False
+xlmr_large_davlan,Davlan/xlm-roberta-large-ner-hrl,1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e,transformers,PER,0.8,1.0,0.8889,8,2,0,8,10,True
+xlmr_large_davlan,Davlan/xlm-roberta-large-ner-hrl,1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e,transformers,ORG,1.0,0.8,0.8889,4,0,1,5,4,True
+xlmr_large_davlan,Davlan/xlm-roberta-large-ner-hrl,1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e,transformers,LOC,0.5714,0.4444,0.5,8,6,10,18,14,True
+xlmr_large_davlan,Davlan/xlm-roberta-large-ner-hrl,1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e,transformers,TODOS,0.7143,0.6452,0.678,20,8,11,31,28,True
+spacy_es_lg,es_core_news_lg,3.8.0,spacy,PER,0.0,0.0,0.0,0,11,8,8,11,False
+spacy_es_lg,es_core_news_lg,3.8.0,spacy,ORG,0.2857,0.4,0.3333,2,5,3,5,7,False
+spacy_es_lg,es_core_news_lg,3.8.0,spacy,LOC,0.5,0.3333,0.4,6,6,12,18,12,False
+spacy_es_lg,es_core_news_lg,3.8.0,spacy,TODOS,0.2667,0.2581,0.2623,8,22,23,31,30,False

@@ -1,0 +1,50 @@
+{
+ "clave": "8c232826230c754f5a4d79355baa0ed8a19c9c7521f143ffb2be8e6aa1cea734",
+ "entidades_crudas": [
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 64,
+   "inicio": 53,
+   "texto": "Esta semana",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 207,
+   "inicio": 188,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 432,
+   "inicio": 413,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "motor": "spacy",
+  "repo_id": "es_core_news_lg",
+  "revision": "3.8.0"
+ },
+ "passage_id": "673_15",
+ "segundos": 0.009,
+ "texto_sha256": "14c8ca1a05be52d5340e74c8b1dc37c4a6f7befb44b0e2093825bbbeb42efa72",
+ "version_spacy": "3.8.18"
+}

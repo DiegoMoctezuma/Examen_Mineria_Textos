@@ -1,0 +1,17 @@
+{
+ "clave": "5dde522f6f90a0aba8f95975616b225f8c35e7f088387f6862039b0b574fa5e0",
+ "entidades_crudas": [],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-base-ner-hrl",
+  "revision": "253f557bd8249b8515114cfd7f71974fe5fa4d2f",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-base-ner-hrl@253f557bd8249b8515114cfd7f71974fe5fa4d2f",
+  "ventana": 480
+ },
+ "passage_id": "1184_54",
+ "segundos": 0.078,
+ "texto_sha256": "7a986c18c46e8073c15a4eb5b43f5093405dad8a26aa6996fea97f92c913ca25",
+ "version_transformers": "5.22.1"
+}

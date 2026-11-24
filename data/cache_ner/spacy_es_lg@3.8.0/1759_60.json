@@ -1,0 +1,41 @@
+{
+ "clave": "493bcf5b3ab6f1f8f8bd34aebca82c00b0c52471909296ee951048a86b7a972c",
+ "entidades_crudas": [
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 135,
+   "inicio": 126,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 655,
+   "inicio": 646,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "motor": "spacy",
+  "repo_id": "es_core_news_lg",
+  "revision": "3.8.0"
+ },
+ "passage_id": "1759_60",
+ "segundos": 0.013,
+ "texto_sha256": "d8d936461f96088cf1b7ecaa87d94f1e39f4a16cdfb16b76061ad0db7b7d8538",
+ "version_spacy": "3.8.18"
+}

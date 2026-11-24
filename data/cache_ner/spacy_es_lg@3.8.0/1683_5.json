@@ -1,0 +1,50 @@
+{
+ "clave": "09d9307190d0519670b1d09baa8cb82da22a578a43911340ba93d173ad29f52b",
+ "entidades_crudas": [
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 38,
+   "inicio": 31,
+   "texto": "OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 532,
+   "inicio": 526,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 705,
+   "inicio": 700,
+   "texto": "Bueno",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "motor": "spacy",
+  "repo_id": "es_core_news_lg",
+  "revision": "3.8.0"
+ },
+ "passage_id": "1683_5",
+ "segundos": 0.018,
+ "texto_sha256": "bf7f4f8aa40645490c3f77b815c51961f3c3852b7e54f78887ecd68130a40b25",
+ "version_spacy": "3.8.18"
+}

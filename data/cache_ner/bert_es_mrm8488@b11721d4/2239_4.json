@@ -1,0 +1,81 @@
+{
+ "clave": "8c2f185c7e05e361596cd2cbdd75c2ec1aff2172e47fdcaf43a357e40d2d7efa",
+ "entidades_crudas": [
+  {
+   "confianza": 0.835662,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 21,
+   "inicio": 18,
+   "texto": "MAN",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.489913,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 23,
+   "texto": "L LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998366,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 673,
+   "inicio": 670,
+   "texto": "Aca",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.686337,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 677,
+   "inicio": 673,
+   "texto": "mbay",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99889,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 972,
+   "inicio": 969,
+   "texto": "Aca",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.706097,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 976,
+   "inicio": 972,
+   "texto": "mbay",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999593,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1007,
+   "inicio": 1001,
+   "texto": "México",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "2239_4",
+ "segundos": 0.083,
+ "texto_sha256": "0552d57af4460486c657f0f75cc44ca2f1bd5a83cbf48b3c6d90c4b6186f4a72",
+ "version_transformers": "5.22.1"
+}

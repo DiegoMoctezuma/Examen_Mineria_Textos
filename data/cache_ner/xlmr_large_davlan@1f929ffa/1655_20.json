@@ -1,0 +1,36 @@
+{
+ "clave": "1fa2575e4cbbe77fce3cffe8fb68575c94c6dcbe0f98407ecb4b9ae4aacc2ca7",
+ "entidades_crudas": [
+  {
+   "confianza": 0.993744,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999886,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 163,
+   "inicio": 152,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1655_20",
+ "segundos": 2.729,
+ "texto_sha256": "4540f6d6c32de9f1e78d88783005b2cc21349e4f799f567b2d8031fe154d1f06",
+ "version_transformers": "5.22.1"
+}

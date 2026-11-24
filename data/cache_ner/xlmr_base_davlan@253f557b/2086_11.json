@@ -1,0 +1,99 @@
+{
+ "clave": "1e7509c9b5836bc182bc94f1a734f8baf300bd26b73010e8aaae6c3a4abe48d9",
+ "entidades_crudas": [
+  {
+   "confianza": 0.98369,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.989511,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 62,
+   "inicio": 48,
+   "texto": "Felipe Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.852405,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 174,
+   "inicio": 163,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999063,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 355,
+   "inicio": 349,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998444,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 453,
+   "inicio": 436,
+   "texto": "Ejército Nacional",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997505,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 479,
+   "inicio": 465,
+   "texto": "Felipe Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.996526,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 493,
+   "inicio": 487,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.995129,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 507,
+   "inicio": 501,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.990491,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 521,
+   "inicio": 515,
+   "texto": "México",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-base-ner-hrl",
+  "revision": "253f557bd8249b8515114cfd7f71974fe5fa4d2f",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-base-ner-hrl@253f557bd8249b8515114cfd7f71974fe5fa4d2f",
+  "ventana": 480
+ },
+ "passage_id": "2086_11",
+ "segundos": 0.055,
+ "texto_sha256": "469bba2719d0d7c4e0cdb8ab990e40bc4d7b0308a7c2a92a387a6ddb83dc2463",
+ "version_transformers": "5.22.1"
+}

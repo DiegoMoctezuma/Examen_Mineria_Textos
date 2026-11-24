@@ -1,0 +1,45 @@
+{
+ "clave": "f2c8c195a7b07a53d93c79e1b1213c1d985f2e3cea9f3851bf5efeb6c2e7624c",
+ "entidades_crudas": [
+  {
+   "confianza": 0.799195,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 8,
+   "inicio": 0,
+   "texto": "PRESIDEN",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.944728,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.987093,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 454,
+   "inicio": 440,
+   "texto": "Sembrando Vida",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-base-ner-hrl",
+  "revision": "253f557bd8249b8515114cfd7f71974fe5fa4d2f",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-base-ner-hrl@253f557bd8249b8515114cfd7f71974fe5fa4d2f",
+  "ventana": 480
+ },
+ "passage_id": "90_78",
+ "segundos": 0.061,
+ "texto_sha256": "f0dc89edac6dbebd1b5234758e4e5104a0d1b16f7cc72054d8cb7d5eb470883e",
+ "version_transformers": "5.22.1"
+}

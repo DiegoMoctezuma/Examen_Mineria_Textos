@@ -168,8 +168,8 @@ def main() -> int:
     if "--v2" in sys.argv[1:]:
         return main_v2()
     t0 = time.perf_counter()
-    elegido = json.loads(RUTA_MODELO_NER.read_text(encoding="utf-8"))
-    _, cfgs = N.cargar_config()
+    principal, cfgs = N.cargar_config()
+    elegido = N.elegido_v1(RUTA_MODELO_NER, cfgs, principal)
     cfg = cfgs[elegido["slug"]]
     if (cfg.repo_id, cfg.revision) != (elegido["modelo"], elegido["revision"]):
         raise SystemExit("config/ner.yaml no coincide con data/modelo_ner.json.")

@@ -1,0 +1,45 @@
+{
+ "clave": "db20b05b3a64ed1abe90aa347f410bef9efb5a1c5b5837261e53d725d2a1cef3",
+ "entidades_crudas": [
+  {
+   "confianza": 0.965797,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 263,
+   "inicio": 254,
+   "texto": "… Sabemos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.962289,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 381,
+   "inicio": 379,
+   "texto": "CO",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.934412,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 387,
+   "inicio": 381,
+   "texto": "VID-19",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "mrm8488/bert-spanish-cased-finetuned-ner",
+  "revision": "b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "solape": 64,
+  "tokenizador": "mrm8488/bert-spanish-cased-finetuned-ner@b11721d41d9e948da32fcdabeeef4fb0f3ebcdf7",
+  "ventana": 480
+ },
+ "passage_id": "1184_54",
+ "segundos": 0.104,
+ "texto_sha256": "7a986c18c46e8073c15a4eb5b43f5093405dad8a26aa6996fea97f92c913ca25",
+ "version_transformers": "5.22.1"
+}

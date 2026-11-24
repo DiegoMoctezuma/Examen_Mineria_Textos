@@ -1,0 +1,68 @@
+{
+ "clave": "f6a1072a96b7d66de71786a3deef1ff133960ed270f5ddef0ccdc7b9b7f41aeb",
+ "entidades_crudas": [
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 38,
+   "inicio": 31,
+   "texto": "OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 523,
+   "inicio": 518,
+   "texto": "Ahora",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 677,
+   "inicio": 656,
+   "texto": "A eso vengo a Acambay",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "MISC",
+   "fin": 976,
+   "inicio": 949,
+   "texto": "Porque el pueblo de Acambay",
+   "ventana": 0
+  },
+  {
+   "confianza": 1.0,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1007,
+   "inicio": 1001,
+   "texto": "México",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "motor": "spacy",
+  "repo_id": "es_core_news_lg",
+  "revision": "3.8.0"
+ },
+ "passage_id": "2239_4",
+ "segundos": 0.021,
+ "texto_sha256": "0552d57af4460486c657f0f75cc44ca2f1bd5a83cbf48b3c6d90c4b6186f4a72",
+ "version_spacy": "3.8.18"
+}

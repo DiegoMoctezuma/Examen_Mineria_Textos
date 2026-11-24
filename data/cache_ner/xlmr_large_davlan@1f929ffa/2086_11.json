@@ -1,0 +1,99 @@
+{
+ "clave": "cb4231ec4c7fd81e48c50c96290ab98f06b2f6b8af5bd23eea847116758740da",
+ "entidades_crudas": [
+  {
+   "confianza": 0.993747,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999054,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 62,
+   "inicio": 48,
+   "texto": "Felipe Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.973862,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 174,
+   "inicio": 163,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99997,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 355,
+   "inicio": 349,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999905,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 453,
+   "inicio": 436,
+   "texto": "Ejército Nacional",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999896,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 479,
+   "inicio": 465,
+   "texto": "Felipe Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999835,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 493,
+   "inicio": 487,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999715,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 507,
+   "inicio": 501,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999796,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 521,
+   "inicio": 515,
+   "texto": "México",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "2086_11",
+ "segundos": 0.184,
+ "texto_sha256": "469bba2719d0d7c4e0cdb8ab990e40bc4d7b0308a7c2a92a387a6ddb83dc2463",
+ "version_transformers": "5.22.1"
+}
