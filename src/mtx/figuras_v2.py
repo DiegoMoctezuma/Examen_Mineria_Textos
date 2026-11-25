@@ -342,7 +342,7 @@ def fig_map(maps: pd.DataFrame, ganador: str, est: Estilo, version: str = "v2"):
                            marker_color=[pal["guinda"] if x == ganador else pal["gris"]
                                          for x in m["modelo"]],
                            text=[pct(x) for x in m["map"]], textposition="inside",
-                           textfont={"color": "white"}))
+                           insidetextanchor="start", textfont={"color": "white"}))
     sub = ("Barras: intervalo de confianza del 95 % (bootstrap sobre las preguntas)" if con_ic
            else "Promedio del AP de las preguntas con juicios")
     return _base(fig, est, f"{nombre_modelo(ganador)} recupera mejor: MAP de "
@@ -401,17 +401,26 @@ def fig_prf(res: pd.DataFrame, est: Estilo, version: str = "v2"):
     return fig
 
 
-def fig_f1_referencias(ref: pd.DataFrame, est: Estilo, version: str = "v2"):
-    """S7a (D35): F1 combinado por tipo con su intervalo, el techo humano y la línea base."""
+def fig_f1_referencias(ref: pd.DataFrame, res: pd.DataFrame, est: Estilo, version: str = "v2"):
+    """S7a (D35): F1 combinado por tipo (`resultados_ie.csv`), con el intervalo del total, el
+    techo humano y la línea base (`09_referencias_f1.csv`)."""
     go, pal = _go(), est.paleta
-    sis = ref[(ref["referencia"] == "sistema_exacto") & (ref["metodo"] == "combinado")]
-    tipos = [t for t in (*TIPOS, "TODOS") if t in set(sis["tipo"])]
-    s = sis.set_index("tipo").reindex(tipos)
+    comb = res[res["metodo"] == "combinado"].set_index("tipo")
+    tipos = [t for t in (*TIPOS, "TODOS") if t in comb.index]
+    f1 = comb.reindex(tipos)["f1"].astype(float)
+    tot = ref[(ref["referencia"] == "sistema_exacto") & (ref["metodo"] == "combinado")
+              & (ref["tipo"] == "TODOS")]
+    sup = [float(tot["ic95_sup"].iloc[0]) - f1["TODOS"] if t == "TODOS" and len(tot) else 0
+           for t in tipos]
+    inf = [f1["TODOS"] - float(tot["ic95_inf"].iloc[0]) if t == "TODOS" and len(tot) else 0
+           for t in tipos]
     fig = go.Figure(go.Bar(
-        name="Sistema (combinado)", x=[NOMBRE_TIPO[t] for t in tipos], y=100 * s["f1"],
-        marker_color=pal["guinda"],
-        error_y={"type": "data", "symmetric": False, "array": 100 * (s["ic95_sup"] - s["f1"]),
-                 "arrayminus": 100 * (s["f1"] - s["ic95_inf"]), "color": pal["texto"]}))
+        name="Sistema (combinado)", x=[NOMBRE_TIPO[t] for t in tipos], y=100 * f1,
+        marker_color=[pal["guinda_oscuro"] if t == "TODOS" else pal["guinda"] for t in tipos],
+        text=[pct(v, 0) for v in f1], textposition="inside", insidetextanchor="start",
+        textfont={"color": "white"},
+        error_y={"type": "data", "symmetric": False, "array": [100 * v for v in sup],
+                 "arrayminus": [100 * v for v in inf], "color": pal["texto"]}))
     for nombre, clave, simbolo, color in (("Acuerdo entre dos personas (techo)", "techo_humano",
                                            "diamond", pal["dorado"]),
                                           ("Solo diccionario (línea base)", "linea_base_gazetteer",
@@ -423,10 +432,12 @@ def fig_f1_referencias(ref: pd.DataFrame, est: Estilo, version: str = "v2"):
                                  marker={"symbol": simbolo, "size": 16, "color": color,
                                          "line": {"width": 1, "color": pal["texto"]}}))
     fig.update_yaxes(range=[0, 105])
+    sub = "Barra de error en «Todas»: intervalo del 95 % (bootstrap sobre los pasajes del gold)"
+    if "FECHA" in comb.index:
+        sub += (f". Fechas: evaluación exploratoria, solo {int(comb.at['FECHA', 'gold'])} en el "
+                "gold")
     return _base(fig, est, "¿Está bien el F1? Comparado con lo que logran dos personas",
-                 "Tipo de entidad", "F1 (%)", version,
-                 "Barras de error: intervalo del 95 % (bootstrap sobre los pasajes del gold)",
-                 alto=560)
+                 "Tipo de entidad", "F1 (%)", version, sub, alto=560)
 
 
 def fig_errores(resumen: pd.DataFrame, est: Estilo, version: str = "v2"):

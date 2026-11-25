@@ -252,7 +252,11 @@ def f_f1_referencias(cx):
     ref = _csv(fe["referencias"]).replace("", float("nan"))
     for c in ("f1", "ic95_inf", "ic95_sup"):
         ref[c] = ref[c].astype(float)
-    return F.fig_f1_referencias(ref, cx.est, "v2"), "v2", [fe["referencias"]]
+    res = _csv(fe["resultados"])
+    for c in ("f1", "gold"):
+        res[c] = res[c].astype(float)
+    return F.fig_f1_referencias(ref, res, cx.est, "v2"), "v2", [fe["referencias"],
+                                                                 fe["resultados"]]
 
 
 def f_errores(cx):

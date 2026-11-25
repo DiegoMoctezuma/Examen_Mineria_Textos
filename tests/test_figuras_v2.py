@@ -132,9 +132,13 @@ def test_ie(est):
          "ic95_inf": None, "ic95_sup": None},
         {"referencia": "linea_base_gazetteer", "metodo": "regla", "tipo": "PER", "f1": 0.3,
          "ic95_inf": None, "ic95_sup": None}])
-    fig = F.fig_f1_referencias(ref, est)
+    res_c = pd.DataFrame([{"metodo": "combinado", "tipo": t, "f1": f, "gold": g}
+                          for t, f, g in (("PER", 0.7, 10), ("FECHA", 0.5, 8), ("TODOS", 0.65, 18))])
+    fig = F.fig_f1_referencias(ref, res_c, est)
     _ok(fig)
-    assert list(fig.data[0].x) == ["Personas", "Todas"] and len(fig.data) == 3
+    assert list(fig.data[0].x) == ["Personas", "Fechas", "Todas"] and len(fig.data) == 3
+    assert list(fig.data[0].error_y.array)[:2] == [0, 0] and fig.data[0].error_y.array[2] > 0
+    assert "solo 8 en el gold" in fig.layout.title.subtitle.text
     err = pd.DataFrame({"error": ["FP", "FN", "FN"], "categoria": ["frontera", "omision",
                                                                     "frontera:entidad_partida"],
                         "tipo": ["LOC"] * 3, "metodo": ["modelo"] * 3, "n": [3, 2, 1]})
