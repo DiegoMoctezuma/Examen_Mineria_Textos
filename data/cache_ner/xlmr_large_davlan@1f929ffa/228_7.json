@@ -1,0 +1,207 @@
+{
+ "clave": "09f20e2e42c812799d5ebcf9f96085459dcf8776e170660f8f34e0073079c8d8",
+ "entidades_crudas": [
+  {
+   "confianza": 0.99896,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 33,
+   "inicio": 27,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999895,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 235,
+   "inicio": 208,
+   "texto": "Andrés Manuel López Obrador",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997461,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 294,
+   "inicio": 270,
+   "texto": "Estados Unidos Mexicanos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998844,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 338,
+   "inicio": 323,
+   "texto": "Fuerzas Armadas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.932665,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 387,
+   "inicio": 376,
+   "texto": "Tehuantepec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999915,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 411,
+   "inicio": 405,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99996,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 520,
+   "inicio": 500,
+   "texto": "Secretaría de Marina",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.984016,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 570,
+   "inicio": 537,
+   "texto": "Empresa Multimodal Interoceánica,",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.922805,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 583,
+   "inicio": 571,
+   "texto": "S.A. de C.V.",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.742494,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 650,
+   "inicio": 624,
+   "texto": "Sistema Portuario Nacional",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.996113,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 681,
+   "inicio": 673,
+   "texto": "Asiponas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999773,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 697,
+   "inicio": 686,
+   "texto": "Salina Cruz",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999749,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 712,
+   "inicio": 699,
+   "texto": "Coatzacoalcos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999967,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 723,
+   "inicio": 714,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999982,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 740,
+   "inicio": 726,
+   "texto": "Puerto Chiapas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.961069,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 789,
+   "inicio": 753,
+   "texto": "ferrocarril del Istmo de Tehuantepec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.990562,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 859,
+   "inicio": 844,
+   "texto": "Océano Pacífico",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999943,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 883,
+   "inicio": 867,
+   "texto": "Océano Atlántico",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999031,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 912,
+   "inicio": 897,
+   "texto": "golfo de México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999933,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1157,
+   "inicio": 1144,
+   "texto": "Coatzacoalcos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999621,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1258,
+   "inicio": 1247,
+   "texto": "Salina Cruz",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "228_7",
+ "segundos": 0.329,
+ "texto_sha256": "48411b87a07b4ff0040beb24a4f6bc1476f83341ba8c1e8cb27f02d31187d6cc",
+ "version_transformers": "5.22.1"
+}

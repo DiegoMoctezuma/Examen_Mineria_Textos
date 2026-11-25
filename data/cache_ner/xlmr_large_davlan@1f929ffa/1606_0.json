@@ -1,0 +1,171 @@
+{
+ "clave": "1b7a40172fd3a2d30ebbdaafa335c7b318b168e9083257e781aeabaa4c3a29f8",
+ "entidades_crudas": [
+  {
+   "confianza": 0.988073,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99933,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 152,
+   "inicio": 141,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.90967,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 182,
+   "inicio": 157,
+   "texto": "aeropuerto Felipe Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999964,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 231,
+   "inicio": 208,
+   "texto": "Luis Cresencio Sandoval",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999971,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 295,
+   "inicio": 272,
+   "texto": "José Rafael Ojeda Durán",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999952,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 353,
+   "inicio": 332,
+   "texto": "Javier Jiménez Espriú",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99998,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 445,
+   "inicio": 423,
+   "texto": "Ricardo Vallejo Suárez",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999951,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 497,
+   "inicio": 486,
+   "texto": "Román Meyer",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999645,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 584,
+   "inicio": 577,
+   "texto": "Hidalgo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999974,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 596,
+   "inicio": 586,
+   "texto": "Omar Fayad",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999328,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 965,
+   "inicio": 958,
+   "texto": "Texcoco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.632422,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1005,
+   "inicio": 995,
+   "texto": "aeropuerto",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.899688,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1035,
+   "inicio": 1009,
+   "texto": "Santa Lucía Felipe Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.897108,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1092,
+   "inicio": 1078,
+   "texto": "Felipe Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.832388,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1119,
+   "inicio": 1117,
+   "texto": "AM",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.634884,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1121,
+   "inicio": 1119,
+   "texto": "LO",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999909,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1269,
+   "inicio": 1242,
+   "texto": "Andrés Manuel López Obrador",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1606_0",
+ "segundos": 0.308,
+ "texto_sha256": "44b48161acdde10a3ef1e6727eea9a14d6aa23697a7517897d7f83e40b47b0cb",
+ "version_transformers": "5.22.1"
+}

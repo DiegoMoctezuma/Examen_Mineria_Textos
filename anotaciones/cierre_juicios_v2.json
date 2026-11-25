@@ -1,0 +1,72 @@
+{
+  "fecha": "2026-11-24T19:27:04",
+  "commit": "c3de5e0fffcf8f06bee7020f88c0b938beea66b6",
+  "sha256_asignacion": "72cd143b3b4efa6c1aa1c1d5a38cc91483bbdc1d7d194bde07d1517d51ef7ef6",
+  "sha256_anotadores": "4ee8a52092a8673d33ae3c88b6117e1925220b9d4a5673a85d73045691bb4d53",
+  "sha256_criterios_relevancia": "e846775fafc6c1587f2e5f5e3f946e37963739f7cb3dae0f51471e415856018c",
+  "sha256_pool_v2": "97e9986ae480694288e058731f062f102e7a085591e69d4351dfe25bbcf2569f",
+  "sha256_pool_v2_csv": "1965a2f86bcf349b132024eef01fd0bf732e62c30ac62e2ae8d9d2dc148fd94b",
+  "aceptar_incompletos": false,
+  "pares": 320,
+  "pares_por_lote": {
+    "1": 176,
+    "2": 144
+  },
+  "pares_cerrados": 320,
+  "pares_sin_cerrar": [],
+  "juicios_por_par": 3,
+  "jueces": {
+    "arturo": {
+      "archivo": "anotaciones/juicios_v2/arturo.csv",
+      "sha256": "1ebaf7016880a962fede87349d83ce22fa723e9cb23b706043a44a8aeb0f20e3",
+      "lotes": [
+        "1",
+        "2"
+      ],
+      "asignados": 320,
+      "juzgados": 320,
+      "sin_juicio": 0
+    },
+    "diego": {
+      "archivo": "anotaciones/juicios_v2/diego.csv",
+      "sha256": "ef68db565626bde13a2dc0cc2db6f3f59f55e0c34d78325666d63f81e8c01c35",
+      "lotes": [
+        "1"
+      ],
+      "asignados": 176,
+      "juzgados": 176,
+      "sin_juicio": 0
+    },
+    "gonzalo": {
+      "archivo": "anotaciones/juicios_v2/gonzalo.csv",
+      "sha256": "063dbaaca16ae657eb0da5f2dd5861b174e729c57e25c65184048f140ea22ef0",
+      "lotes": [
+        "2"
+      ],
+      "asignados": 144,
+      "juzgados": 144,
+      "sin_juicio": 0
+    },
+    "leo": {
+      "archivo": "anotaciones/juicios_v2/leo.csv",
+      "sha256": "3b8157c7011cedef093f72ec2717518c10346386fb7ae498fed85c9230212f62",
+      "lotes": [
+        "2"
+      ],
+      "asignados": 144,
+      "juzgados": 144,
+      "sin_juicio": 0
+    },
+    "luis": {
+      "archivo": "anotaciones/juicios_v2/luis.csv",
+      "sha256": "d72ac90b69c3c9d24e6f1b088f00f478ce82302c88b1c2ee0cfee15f74c556e2",
+      "lotes": [
+        "1"
+      ],
+      "asignados": 176,
+      "juzgados": 176,
+      "sin_juicio": 0
+    }
+  },
+  "avisos": []
+}

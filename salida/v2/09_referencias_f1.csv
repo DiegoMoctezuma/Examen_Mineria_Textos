@@ -1,0 +1,18 @@
+referencia,metodo,tipo,precision,recall,f1,ic95_inf,ic95_sup,pasajes,nota
+sistema_exacto,regla,TODOS,0.9006,0.6792,0.7743,0.6955,0.8517,34,"cifra del kit; IC95 bootstrap sobre 34 pasajes, 10000 remuestreos, semilla 42"
+sistema_parcial,regla,TODOS,0.9945,0.7458,0.8524,,,34,complementaria: solape de al menos un carácter y mismo tipo
+sistema_exacto,modelo,TODOS,0.803,0.6792,0.7359,0.6717,0.7974,34,"cifra del kit; IC95 bootstrap sobre 34 pasajes, 10000 remuestreos, semilla 42"
+sistema_parcial,modelo,TODOS,0.9015,0.75,0.8188,,,34,complementaria: solape de al menos un carácter y mismo tipo
+sistema_exacto,combinado,TODOS,0.7984,0.8583,0.8273,0.7714,0.8818,34,"cifra del kit; IC95 bootstrap sobre 34 pasajes, 10000 remuestreos, semilla 42"
+sistema_parcial,combinado,TODOS,0.9186,0.9333,0.9259,,,34,complementaria: solape de al menos un carácter y mismo tipo
+linea_base_gazetteer,regla,ORG,0.907,0.6393,0.75,,,34,"solo gazetteer ORG y LOC, sin regex ni modelo (D35)"
+linea_base_gazetteer,regla,LOC,0.9032,0.6829,0.7778,,,34,"solo gazetteer ORG y LOC, sin regex ni modelo (D35)"
+linea_base_gazetteer,regla,TODOS,0.9044,0.5125,0.6543,,,34,"solo gazetteer ORG y LOC, sin regex ni modelo (D35)"
+fecha_reglas_v1,regla,FECHA,0.5714,0.5,0.5333,,,34,exploratoria (recorte 3 de D33): gold FECHA con criterio v1
+fecha_reglas_v2,regla,FECHA,0.5714,0.5,0.5333,,,34,exploratoria (recorte 3 de D33): gold FECHA con criterio v1
+techo_humano,,FECHA,,,0.0,,,15,"F1 exacto entre los dos anotadores antes de adjudicar, partes A y B"
+techo_humano,,LOC,,,0.9412,,,15,"F1 exacto entre los dos anotadores antes de adjudicar, partes A y B"
+techo_humano,,MONTO,,,0.6364,,,15,"F1 exacto entre los dos anotadores antes de adjudicar, partes A y B"
+techo_humano,,ORG,,,0.8636,,,15,"F1 exacto entre los dos anotadores antes de adjudicar, partes A y B"
+techo_humano,,PER,,,0.9032,,,15,"F1 exacto entre los dos anotadores antes de adjudicar, partes A y B"
+techo_humano,,TODOS,,,0.8533,,,15,"F1 exacto entre los dos anotadores antes de adjudicar, partes A y B"

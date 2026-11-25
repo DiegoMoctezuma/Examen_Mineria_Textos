@@ -1,0 +1,72 @@
+{
+ "clave": "70628c45e62ce24c29482da078367268c0aa8f2014e67b12d996caf5a2da0764",
+ "entidades_crudas": [
+  {
+   "confianza": 0.985188,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999646,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 667,
+   "inicio": 662,
+   "texto": "Pemex",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999879,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 693,
+   "inicio": 685,
+   "texto": "Ejército",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999967,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 745,
+   "inicio": 713,
+   "texto": "Comisión Federal de Electricidad",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999964,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 873,
+   "inicio": 867,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997764,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 958,
+   "inicio": 953,
+   "texto": "Istmo",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "2088_3",
+ "segundos": 0.289,
+ "texto_sha256": "15e6122bca95d89427ca2a058bff7c66f894aa06d01e2937e3c61c7b94c0200f",
+ "version_transformers": "5.22.1"
+}

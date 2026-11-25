@@ -1,0 +1,144 @@
+{
+ "clave": "e9595069a9380a3e29514b30c64bbe3f283b6fbcc1f44d76e8bc60c1db705205",
+ "entidades_crudas": [
+  {
+   "confianza": 0.836479,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 3,
+   "inicio": 0,
+   "texto": "ROC",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.9997,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 63,
+   "inicio": 57,
+   "texto": "Estado",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99959,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 383,
+   "inicio": 380,
+   "texto": "CFE",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999786,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 431,
+   "inicio": 425,
+   "texto": "Estado",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999693,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 457,
+   "inicio": 451,
+   "texto": "Estado",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997772,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 550,
+   "inicio": 540,
+   "texto": "Peña Nieto",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999911,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 594,
+   "inicio": 588,
+   "texto": "Estado",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999909,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 603,
+   "inicio": 600,
+   "texto": "CFE",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999887,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 938,
+   "inicio": 932,
+   "texto": "Estado",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99962,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 972,
+   "inicio": 969,
+   "texto": "CFE",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999859,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1241,
+   "inicio": 1219,
+   "texto": "CFE Telecomunicaciones",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999887,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1263,
+   "inicio": 1244,
+   "texto": "Internet para Todos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.941645,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1276,
+   "inicio": 1265,
+   "texto": "CFE Energía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999857,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1295,
+   "inicio": 1278,
+   "texto": "CFE Internacional",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1011_31",
+ "segundos": 0.305,
+ "texto_sha256": "f5e8771f2b28479c752960437dec0306b1dda608190a81298e6202df75ca5bee",
+ "version_transformers": "5.22.1"
+}

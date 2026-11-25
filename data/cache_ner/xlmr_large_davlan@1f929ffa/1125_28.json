@@ -1,0 +1,36 @@
+{
+ "clave": "e0073cea7fa94fb80ef0c86678435cb193b90a1f065659ceef64770e22d7ee22",
+ "entidades_crudas": [
+  {
+   "confianza": 0.991385,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999834,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 603,
+   "inicio": 594,
+   "texto": "Monterrey",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1125_28",
+ "segundos": 0.317,
+ "texto_sha256": "10c130f305880b59eed95ff29fdad0c8dc43adcf10d3a86f2e86e7bbfe24c218",
+ "version_transformers": "5.22.1"
+}

@@ -1,0 +1,81 @@
+{
+ "clave": "8224f1c5d073061dae9b2815a2bcfbd944482779b08b6aed3a0348952088eac2",
+ "entidades_crudas": [
+  {
+   "confianza": 0.979084,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999955,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 419,
+   "inicio": 400,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99986,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 450,
+   "inicio": 443,
+   "texto": "Jalisco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999838,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 520,
+   "inicio": 501,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999399,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 655,
+   "inicio": 636,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999945,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 980,
+   "inicio": 961,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999838,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1172,
+   "inicio": 1148,
+   "texto": "Secretaría de la Defensa",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "525_29",
+ "segundos": 0.288,
+ "texto_sha256": "bcf01a5bc9d9cdf827e876c796080308564f8f81c1890fff76eaea840ca079b5",
+ "version_transformers": "5.22.1"
+}

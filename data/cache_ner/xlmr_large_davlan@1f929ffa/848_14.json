@@ -1,0 +1,108 @@
+{
+ "clave": "2e4e357555dd716237471bd8ca68761860b7ae839f3c2453fb10fe0b2f3c30e7",
+ "entidades_crudas": [
+  {
+   "confianza": 0.846144,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 13,
+   "inicio": 0,
+   "texto": "INTERLOCUTORA",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.973787,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 82,
+   "inicio": 57,
+   "texto": "Suprema Corte de Justicia",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99997,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 261,
+   "inicio": 242,
+   "texto": "Cámara de Diputados",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999979,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 298,
+   "inicio": 279,
+   "texto": "Cámara de Senadores",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999966,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 395,
+   "inicio": 363,
+   "texto": "Comisión Federal de Electricidad",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999474,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 579,
+   "inicio": 573,
+   "texto": "Cofece",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.995386,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 635,
+   "inicio": 629,
+   "texto": "Colima",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998774,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 782,
+   "inicio": 769,
+   "texto": "Suprema Corte",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999965,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 830,
+   "inicio": 812,
+   "texto": "Loretta Ortiz Ahlf",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999824,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1133,
+   "inicio": 1130,
+   "texto": "CFE",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "848_14",
+ "segundos": 0.298,
+ "texto_sha256": "3fddddd3c4bd200e1d8bc11cca76a5d05e36b40e2fb8bc21067c42cfeed3bdc4",
+ "version_transformers": "5.22.1"
+}

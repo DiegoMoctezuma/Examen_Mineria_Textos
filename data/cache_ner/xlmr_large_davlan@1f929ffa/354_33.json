@@ -1,0 +1,162 @@
+{
+ "clave": "40b164577d83468818a08ea7fce507ad5113e1dce72604f7a5b0c6a7df2f43c0",
+ "entidades_crudas": [
+  {
+   "confianza": 0.991051,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 16,
+   "inicio": 0,
+   "texto": "RAYMUNDO MORALES",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.996228,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 24,
+   "inicio": 17,
+   "texto": "ÁNGELES",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.838757,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 94,
+   "inicio": 47,
+   "texto": "CORREDOR INTEROCEÁNICO DEL ISTMO DE TEHUANTEPEC",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999731,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 100,
+   "inicio": 96,
+   "texto": "CIIT",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.888153,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 229,
+   "inicio": 218,
+   "texto": "Tehuantepec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999455,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 279,
+   "inicio": 261,
+   "texto": "Gobierno de México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.989986,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 478,
+   "inicio": 442,
+   "texto": "Ferrocarril del Istmo de Tehuantepec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999916,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 540,
+   "inicio": 529,
+   "texto": "Salina Cruz",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999684,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 555,
+   "inicio": 542,
+   "texto": "Coatzacoalcos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999943,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 571,
+   "inicio": 557,
+   "texto": "Puerto Chiapas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999953,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 583,
+   "inicio": 574,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999884,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 866,
+   "inicio": 846,
+   "texto": "Istmo de Tehuantepec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999791,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 949,
+   "inicio": 936,
+   "texto": "Coatzacoalcos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999971,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 963,
+   "inicio": 952,
+   "texto": "Salina Cruz",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999528,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1302,
+   "inicio": 1289,
+   "texto": "Coatzacoalcos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999613,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1313,
+   "inicio": 1305,
+   "texto": "Palenque",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "354_33",
+ "segundos": 0.368,
+ "texto_sha256": "0d18c9213d175d9a915e2e9da06a20d5d80290fa3464f7e5a54fe9218abfaa9d",
+ "version_transformers": "5.22.1"
+}

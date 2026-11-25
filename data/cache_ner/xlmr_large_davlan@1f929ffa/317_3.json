@@ -1,0 +1,189 @@
+{
+ "clave": "0f14d4dd4ea8830fd93e2bb4b81b6b7fe4d43eaef823b63d233c1761f70fcaff",
+ "entidades_crudas": [
+  {
+   "confianza": 0.852496,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1,
+   "inicio": 0,
+   "texto": "R",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.780327,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 10,
+   "inicio": 5,
+   "texto": "ICELA",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.965866,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 11,
+   "texto": "RODRÍGUEZ VELÁZQUEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999003,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 123,
+   "inicio": 115,
+   "texto": "Acapulco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999918,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 222,
+   "inicio": 204,
+   "texto": "Gobierno de México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999768,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 335,
+   "inicio": 308,
+   "texto": "Andrés Manuel López Obrador",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999946,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 494,
+   "inicio": 461,
+   "texto": "Secretaría de la Defensa Nacional",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999968,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 522,
+   "inicio": 502,
+   "texto": "Secretaría de Marina",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998247,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 589,
+   "inicio": 530,
+   "texto": "Secretaría de Infraestructura, Comunicaciones y Transportes",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.995699,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 645,
+   "inicio": 599,
+   "texto": "Secretaría de Seguridad y Protección Ciudadana",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999934,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 716,
+   "inicio": 675,
+   "texto": "Coordinación Nacional de Protección Civil",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.724587,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1162,
+   "inicio": 1157,
+   "texto": "capul",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.928799,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1201,
+   "inicio": 1193,
+   "texto": "Papagayo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.715043,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1230,
+   "inicio": 1222,
+   "texto": "lpancing",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.839457,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1238,
+   "inicio": 1233,
+   "texto": "capul",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.668462,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1310,
+   "inicio": 1303,
+   "texto": "pancing",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.865739,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1320,
+   "inicio": 1313,
+   "texto": "capulco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.987399,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1330,
+   "inicio": 1324,
+   "texto": "Juárez",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.919005,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1367,
+   "inicio": 1359,
+   "texto": "Papagayo",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "317_3",
+ "segundos": 0.823,
+ "texto_sha256": "6499e96db25e4b1a835100d5787a8e293d27049aa7c52bbada8a39e03cd19416",
+ "version_transformers": "5.22.1"
+}

@@ -1,0 +1,72 @@
+{
+ "clave": "362a59a73c77a98711a4b7e29455f0970f2d498dda340997763b3a5e6138f430",
+ "entidades_crudas": [
+  {
+   "confianza": 0.970867,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.834143,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 273,
+   "inicio": 259,
+   "texto": "Estados Unidos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.601445,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 430,
+   "inicio": 416,
+   "texto": "Estados Unidos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999922,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 444,
+   "inicio": 438,
+   "texto": "Canadá",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999745,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 474,
+   "inicio": 468,
+   "texto": "Europa",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999947,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 609,
+   "inicio": 585,
+   "texto": "Secretaría de la Defensa",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "788_15",
+ "segundos": 0.205,
+ "texto_sha256": "1c94d9285bd310b5cc764e7e987ba078ed6a9ae54471e66a81ca60711db542ca",
+ "version_transformers": "5.22.1"
+}

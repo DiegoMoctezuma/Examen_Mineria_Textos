@@ -1,0 +1,72 @@
+{
+ "clave": "e7d541f5b83554b988fe856a9c03e03051f67b6139aa3fc23a9f40d0e3e19cfd",
+ "entidades_crudas": [
+  {
+   "confianza": 0.996668,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999959,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 147,
+   "inicio": 141,
+   "texto": "Oaxaca",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999905,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 395,
+   "inicio": 384,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99981,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 461,
+   "inicio": 450,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.876116,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 554,
+   "inicio": 551,
+   "texto": "IPE",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.983484,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 562,
+   "inicio": 555,
+   "texto": "ÁNGELES",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1777_18",
+ "segundos": 0.219,
+ "texto_sha256": "82a10590e0f251387b457c5c7b1ab8b0ccab83d0b36d2f41df51f16c1b394dac",
+ "version_transformers": "5.22.1"
+}

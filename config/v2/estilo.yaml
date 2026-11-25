@@ -1,0 +1,65 @@
+# Estilo de las figuras v2 (PRD v2 WP-16, D36, R02, R10, S3, S6). Lo leen `src/mtx/figuras_v2.py`
+# y `scripts/11b_figuras_v2.py`. Dueño: Gonzalo (con Diego).
+#
+# [VALIDAR] PV8 (Gonzalo): la paleta y la tipografía son las de D36. Leo midió en gob.mx (24 nov) un
+# guinda #591932 y una franja #350F1E para la demo web; si el equipo prefiere ese, se cambia aquí y
+# todas las figuras se regeneran igual.
+paleta:
+  guinda: "#9F2241"
+  guinda_oscuro: "#691C32"
+  dorado: "#BC955C"
+  dorado_claro: "#DDC9A3"
+  gris: "#98989A"
+  texto: "#404041"
+  fondo: "#FFFFFF"
+tipografia:
+  titulos: "Montserrat, Arial, sans-serif"
+  texto: "Noto Sans, Arial, sans-serif"
+
+# Nombres de consulta en vez de Qn (S3). [VALIDAR] Gonzalo y Arturo: los mismos de las láminas.
+nombres_consulta:
+  Q1: Tren Maya
+  Q2: Vacunas COVID-19
+  Q3: Dos Bocas
+  Q4: Aeropuerto Felipe Ángeles
+  Q5: Sembrando Vida
+  Q6: Huachicol
+  Q7: Pensión de adultos mayores
+  Q8: Salario mínimo
+  Q9: Banco del Bienestar
+  Q10: Tren Interoceánico
+  Q11: Guardia Nacional
+  Q12: IMSS-Bienestar
+  Q13: Reforma eléctrica
+  Q14: Jóvenes Construyendo el Futuro
+  Q15: Acapulco tras Otis
+
+# Ejemplos reales de cada figura (R03). Solo eligen qué mostrar; las cifras salen de salida/.
+ejemplos:
+  ap_consulta: Q3              # consulta del "AP explicado" (S5a)
+  idf_consulta: Q6             # términos de la barra de idf (S4d)
+  tokenizacion_consulta: Q3    # la oración sale del pasaje 1 del ganador en esta consulta (S4c)
+  postings: [huachicol, refinería, programa]   # índice invertido (R09); raro, medio y común
+  stem_lema: [maya, mayo, vacunas, vacuna, refinería, refinerías, programa, programas]
+
+# Lectura de los patrones de error (S8): nombre para el público. La causa y el arreglo van en el
+# guion y en la lámina (WP-17).
+patrones_error:
+  en_marca: Dentro de la marca de quien habla
+  frontera: Límites del nombre distintos
+  omision: Entidad que nadie detectó
+  tipo: Tipo equivocado
+  espuria: Detección que no es entidad
+
+# Estados de las tablas de respuesta (S9), con su definición para la leyenda. [VALIDAR] Gonzalo:
+# que coincida con la definición del guion y del reporte.
+estados:
+  respaldado_en_texto: "Respaldado: una cita textual de quien declara lo sostiene"
+  ambiguo: "Ambiguo: lo dice un reportero o la cita no basta para afirmarlo"
+  contradictorio: "Contradictorio: dos citas dicen cosas distintas"
+  no_encontrado: "Sin evidencia: ningún pasaje lo menciona"
+
+metodos:
+  regla: Reglas y gazetteer
+  modelo: Modelo NER
+  combinado: Combinado

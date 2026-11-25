@@ -1,0 +1,45 @@
+{
+ "clave": "e4df06122861932951ad4efa7f49c88a947480dd240b68d4a3571c09e929afb7",
+ "entidades_crudas": [
+  {
+   "confianza": 0.999899,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1,
+   "inicio": 0,
+   "texto": "J",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.995134,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 20,
+   "inicio": 1,
+   "texto": "ORGE ALCOCER VARELA",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.970771,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 246,
+   "inicio": 240,
+   "texto": "Pfizer",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1290_77",
+ "segundos": 0.29,
+ "texto_sha256": "2a387a5a8f5f77104090437dc9f356876769588babbfb4572ee225df22c61385",
+ "version_transformers": "5.22.1"
+}

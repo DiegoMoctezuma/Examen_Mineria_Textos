@@ -1,0 +1,108 @@
+{
+ "clave": "f3cb0b71f106290da85cffc93ea37b5935ea65ea26729daba4728ea5751a6ea1",
+ "entidades_crudas": [
+  {
+   "confianza": 0.98833,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 25,
+   "inicio": 0,
+   "texto": "ÓSCAR DAVID LOZANO ÁGUILA",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997545,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 629,
+   "inicio": 609,
+   "texto": "Istmo de Tehuantepec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998279,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 682,
+   "inicio": 674,
+   "texto": "Palenque",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998798,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 831,
+   "inicio": 823,
+   "texto": "Palenque",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.988155,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 918,
+   "inicio": 909,
+   "texto": "Escárcega",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999524,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1006,
+   "inicio": 998,
+   "texto": "Campeche",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999623,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1028,
+   "inicio": 1022,
+   "texto": "Pomuch",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998517,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1039,
+   "inicio": 1033,
+   "texto": "Pomuch",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997023,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1126,
+   "inicio": 1120,
+   "texto": "Poxilá",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999883,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1155,
+   "inicio": 1149,
+   "texto": "Mérida",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "216_81",
+ "segundos": 0.312,
+ "texto_sha256": "07b702fb41d40e6b34b43136fb1b201fd2c642728fcd82217f632b649fa90aad",
+ "version_transformers": "5.22.1"
+}

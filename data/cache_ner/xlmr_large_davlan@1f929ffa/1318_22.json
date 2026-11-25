@@ -1,0 +1,63 @@
+{
+ "clave": "b2a4889bf250b062eab056baad6366cea21ceb91172b95292be48376eac6349e",
+ "entidades_crudas": [
+  {
+   "confianza": 0.965805,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999984,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 434,
+   "inicio": 428,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99996,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 510,
+   "inicio": 496,
+   "texto": "América Latina",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999975,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 562,
+   "inicio": 556,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.96796,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1012,
+   "inicio": 1000,
+   "texto": "Carlos Pozos",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1318_22",
+ "segundos": 0.254,
+ "texto_sha256": "489bcd876f2a47ff3831c868d499f078b729a9f50fbf3e5ea68565e939c12ae5",
+ "version_transformers": "5.22.1"
+}

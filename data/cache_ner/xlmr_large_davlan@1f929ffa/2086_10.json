@@ -1,0 +1,126 @@
+{
+ "clave": "09f5e103d786b1304cb1a91f98da92a8d93d21128aea675ce8fe68463fd93070",
+ "entidades_crudas": [
+  {
+   "confianza": 0.977735,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999837,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 125,
+   "inicio": 111,
+   "texto": "Felipe Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999189,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 196,
+   "inicio": 182,
+   "texto": "Felipe Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.848118,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 212,
+   "inicio": 207,
+   "texto": "Villa",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999799,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 299,
+   "inicio": 292,
+   "texto": "Morelos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999512,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 510,
+   "inicio": 503,
+   "texto": "Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.755268,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 651,
+   "inicio": 644,
+   "texto": "Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999752,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 813,
+   "inicio": 799,
+   "texto": "Felipe Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999957,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 834,
+   "inicio": 823,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.995142,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 881,
+   "inicio": 874,
+   "texto": "Hidalgo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999058,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 931,
+   "inicio": 917,
+   "texto": "Felipe Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.98286,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1043,
+   "inicio": 1032,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "2086_10",
+ "segundos": 0.292,
+ "texto_sha256": "85bc0f5669d7352bc77ed5d16c30cf769b748ff2e2320fe910f3013b2f97e1eb",
+ "version_transformers": "5.22.1"
+}

@@ -1,0 +1,36 @@
+{
+ "clave": "396e7c71d8b8b473ad4214894c77e819f848676b085a03dfee8d70beff8818bd",
+ "entidades_crudas": [
+  {
+   "confianza": 0.716985,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1,
+   "inicio": 0,
+   "texto": "V",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.561168,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 6,
+   "inicio": 4,
+   "texto": "MU",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "865_14",
+ "segundos": 0.184,
+ "texto_sha256": "44de831be5bd09374fb85ddc5a2315d6e40056ccd9d7e040a657f623d4ede40d",
+ "version_transformers": "5.22.1"
+}

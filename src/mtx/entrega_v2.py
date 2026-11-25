@@ -7,6 +7,8 @@
 19. IR v2 reproducible con el kit, ganador D28 y robustez D29.
 20. IE v2 reproducible con el kit sobre el gold oficial v2, con techo humano y línea base (D35).
 21. Tablas de respuesta v2 de las 15 consultas y sus valoraciones vigentes.
+22. Guion v2 con ensayo cronometrado entre 15:00 y 20:00 y revisión ciega registrada (§9, criterios
+    7 y 9; WP-17 y WP-18).
 
 Mismos estados que `entrega.py`; nunca escribe datos humanos ni salidas.
 """
@@ -20,7 +22,7 @@ from pathlib import Path
 import pandas as pd
 
 from mtx import adaptadores_kit, config
-from mtx.entrega import FALLA, OK, PENDIENTE, Contexto, Resultado
+from mtx.entrega import FALLA, OK, PENDIENTE, RE_TIEMPO, Contexto, Resultado
 
 S2 = "salida/v2"
 
@@ -227,4 +229,26 @@ def c21_tablas_v2(cx: Contexto) -> Resultado:
     return Resultado(21, titulo, OK, ["15 tablas y 15 valoraciones vigentes"])
 
 
-CONDICIONES_V2 = [c16_juicios_v2, c17_orden, c18_muestras, c19_ir_v2, c20_ie_v2, c21_tablas_v2]
+def c22_presentacion_v2(cx: Contexto) -> Resultado:
+    titulo = "Guion v2 con tiempo medido de 15:00 a 20:00 y revisión ciega registrada"
+    guion = cx.raiz / "laminas" / "guion_v2.md"
+    if not guion.exists():
+        return Resultado(22, titulo, PENDIENTE, ["falta laminas/guion_v2.md (WP-17)"])
+    pend, det = [], []
+    m = RE_TIEMPO.search(guion.read_text(encoding="utf-8"))
+    if not m:
+        pend.append("el guion v2 no registra «Tiempo medido: m:ss» (ensayo cronometrado)")
+    elif not 15 * 60 <= int(m.group(1)) * 60 + int(m.group(2)) <= 20 * 60:
+        det.append(f"tiempo medido {m.group(1)}:{m.group(2)} fuera de 15:00 a 20:00 (PV6)")
+    if not (cx.raiz / "docs" / "revision_ciega_respuesta.md").exists():
+        pend.append("falta docs/revision_ciega_respuesta.md (WP-18)")
+    if det:
+        return Resultado(22, titulo, FALLA, det + pend)
+    if pend:
+        return Resultado(22, titulo, PENDIENTE, pend)
+    return Resultado(22, titulo, OK, [(f"tiempo medido {m.group(1)}:{m.group(2)}; revisión ciega "
+                                      "registrada")])
+
+
+CONDICIONES_V2 = [c16_juicios_v2, c17_orden, c18_muestras, c19_ir_v2, c20_ie_v2, c21_tablas_v2,
+                  c22_presentacion_v2]

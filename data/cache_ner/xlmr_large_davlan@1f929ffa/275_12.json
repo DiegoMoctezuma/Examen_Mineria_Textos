@@ -1,0 +1,126 @@
+{
+ "clave": "0723c5d19ab3c741a64f3b8497c99df22f09bbbecabadadc042f13dde8b46157",
+ "entidades_crudas": [
+  {
+   "confianza": 0.80582,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1,
+   "inicio": 0,
+   "texto": "V",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.610984,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 10,
+   "inicio": 4,
+   "texto": "HOMBRE",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.989128,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 108,
+   "inicio": 100,
+   "texto": "Acapulco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999916,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 305,
+   "inicio": 297,
+   "texto": "Acapulco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99989,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 330,
+   "inicio": 307,
+   "texto": "Abelina López Rodríguez",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999911,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 612,
+   "inicio": 596,
+   "texto": "Fiscalía General",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.868425,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 634,
+   "inicio": 627,
+   "texto": "Gurrero",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99968,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 784,
+   "inicio": 776,
+   "texto": "Acapulco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999918,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 939,
+   "inicio": 931,
+   "texto": "Acapulco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999936,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1034,
+   "inicio": 1026,
+   "texto": "Acapulco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999866,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1198,
+   "inicio": 1190,
+   "texto": "Acapulco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999893,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1223,
+   "inicio": 1200,
+   "texto": "Abelina López Rodríguez",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "275_12",
+ "segundos": 0.44,
+ "texto_sha256": "42be569844d639c8a074d7658375ba94590c94782b2eed0e1b0af49f97e372de",
+ "version_transformers": "5.22.1"
+}

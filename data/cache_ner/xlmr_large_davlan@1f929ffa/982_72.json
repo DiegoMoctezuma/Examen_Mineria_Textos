@@ -1,0 +1,54 @@
+{
+ "clave": "45a2e6d58e096f4d87d2620748aff4626920740f3a996747fda272ef9ccf7dcd",
+ "entidades_crudas": [
+  {
+   "confianza": 0.678271,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 78,
+   "inicio": 75,
+   "texto": "Ist",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.74221,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 80,
+   "inicio": 78,
+   "texto": "mo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.91692,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 95,
+   "inicio": 84,
+   "texto": "Tehuantepec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999965,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 245,
+   "inicio": 229,
+   "texto": "Guardia Nacional",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "982_72",
+ "segundos": 0.157,
+ "texto_sha256": "c647f7d0219d48227af67de63ac99c62de204a7db387e991363c9a6a64014f1c",
+ "version_transformers": "5.22.1"
+}

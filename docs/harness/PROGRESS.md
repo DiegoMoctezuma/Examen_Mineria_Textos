@@ -4,40 +4,40 @@
 
 **Entregado.** H0 a H9 cerrados. Repo público en GitHub
 (`https://github.com/DiegoMoctezuma/Examen_Mineria_Textos`), etiqueta `v1.0-entrega` en `431f1c0`
-(2026-11-11, antes de las 20:00 CDMX). Entrega en equipo (equipo Datisa: Carpio Angeles Leo Yair,
+(2026-11-11, antes de las 20:00 CDMX). Entrega en equipo (equipo Datisa: Carpio Angeles Leo Yahir,
 Mera Montiel Gonzalo Sebastian, Moctezuma Ramirez Diego Rafael, Ramirez Maza Luis). `make validar`:
 14 OK, 1 falla (condición 12: el guion no registra «Tiempo medido: m:ss»).
 
-## Fase v2 (desde 2026-11-14) · estado al 2026-11-23 en la noche
+## Fase v2 (desde 2026-11-14) · estado al 2026-11-24, 18:15
 
 Proyecto final en equipo; entrega el 2026-11-25 antes de las 18:00. Plan en
-`PRD_v2_proyecto_final.md` (calendario §7 replanificado el 23); progreso por paquete en
-`docs/harness/progreso/<wp>.md`. Rama `proyecto-final` en GitHub (`07d99f8`); `main` intacto.
-
-Equipo de 5: Bruno dejó el equipo el 22. Recortes 1, 2 y 3 aplicados el 23 (parte B de 5, FECHA
-con criterio v1 y pasada 2 sin etiqueta, sin reanotar la FECHA del gold v1; nada P2).
+`PRD_v2_proyecto_final.md`; progreso por paquete en `docs/harness/progreso/<wp>.md`. Rama
+`proyecto-final` en GitHub; `main` intacto. Equipo de 5 (Bruno salió el 22); recortes 1, 2 y 3
+aplicados el 23.
 
 Hecho:
-- WP-00, WP-01, WP-08 y WP-09 (app multianotador, muestreo y gold doble); lote 1 completo.
-- WP-03 (lemas y 8 variantes), WP-04 (Q11 a Q15 aprobadas), WP-05 (pool v2: 320 pares, lote 2 de
-  144 asignado a Arturo, Gonzalo y Leo) y parte B sorteada (5).
-- Diego cerró la Selección y la parte A (dos pasadas) en `anotacion/diego`; aún no se integra a
-  `proyecto-final` por el modo ciego.
-- `make test`: 489 en verde.
+- Anotación: lote 1 de juicios; gold v2 cerrado por persona en la Selección, A y B; adjudicación de
+  A (Luis), B (Diego) y Selección (Gonzalo), integradas.
+- WP-10: NER v2 fijado y con commit antes del cierre del gold: XLM-R large de Davlan (F1 0.678 en
+  la Selección). v1 sigue con mrm8488 (`ner_modelo.elegido_v1`).
+- WP-11: `reglas-fecha-v2` (Leo) en `51f894a`.
+- Código listo y probado, esperando los cierres: WP-02 (agregación y acuerdo), WP-06 (IR v2 y
+  robustez), WP-12 (IE v2 y referencias), WP-13 (tablas v2 y valoraciones por persona), WP-14
+  (condiciones 16 a 22 y `make all-v2`), bloqueo D32 en la demo de terminal.
+- WP-07 (booleano), WP-16 (13 figuras con v1 hasta tener v2), borradores de WP-17 (guion v2 y guía
+  de defensa) y WP-18 (instrucción de la revisión ciega).
+- PR #4 de Leo (demo web, WP-15) revisado: integrable, en borrador hasta conectar v2.
+- `make test`: 682 en verde.
 
-Pendiente, en orden (mar 24):
-1. Recibir e integrar las ramas de Arturo (Selección, B, lote 2), Gonzalo (A, B, lote 2) y Leo
-   (lote 2), con la regla de modo ciego de `docs/decisiones.md` (2026-11-23).
-2. Adjudicación de la Selección (Gonzalo) → WP-10: comparar NER sobre la Selección y fijar
-   `modelo_ner.json` v2 (13:00).
-3. Leo: reglas FECHA v2 y `reglas-fecha-v2` (15:00), sin ver el gold.
-4. **Escribir el cierre** (`cierre_juicios_v2.json`, `cierre_gold_v2.json` con `adjudicado.csv`
-   consolidado): todavía no existe el script. Cierres a las 20:00.
-5. Noche: WP-02 (agregación de juicios), WP-06 oficial, WP-12 y WP-13; luego WP-14 el mié 25.
-6. Subir `salida/v2/04_pool*.csv` y `ranking_8_variantes.csv` tras `cierre_juicios_v2` (D32).
+Pendiente, en orden:
+1. Juicios del lote 2 de Gonzalo → integrar los de Arturo (`0c10863`), Leo (`c3080c4`) y Gonzalo.
+2. `make revisar-cierres-v2` → `make cierre-juicios-v2` → `make cierre-gold-v2` → `make all-v2`;
+   commits de cada paso (orden en `docs/harness/progreso/wp14.md`).
+3. Llenar los ⟦v2⟧ de `laminas/guion_v2.md` y `docs/guia_defensa_v2.md`.
+4. Mié 25: valoraciones v2 (Gonzalo, Arturo y Luis), láminas, revisión ciega, reporte y README v2,
+   promoción de los CSV v2 a la raíz, ensayo cronometrado, `v2.0-entrega` desde clon limpio.
 
-Bloqueos v2: la Selección de Arturo (la necesita Gonzalo para adjudicar y el NER v2). Nadie más ha
-subido anotaciones todavía.
+Bloqueos v2: los juicios del lote 2 de Gonzalo (sin ellos no hay cierres).
 
 ## Completado
 

@@ -1,0 +1,45 @@
+{
+ "clave": "ece3850b5d1583b7d1f8e9d1d4fb3667938e5a4fc8ce084075ab956da8c47121",
+ "entidades_crudas": [
+  {
+   "confianza": 0.9823,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999984,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 877,
+   "inicio": 861,
+   "texto": "Ciudad de México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999884,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1017,
+   "inicio": 1010,
+   "texto": "Hidalgo",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "2191_4",
+ "segundos": 0.305,
+ "texto_sha256": "8ec26830b1947dcc1a81856e978ddd96c8c39647c54cc550d4a712f8019dd7eb",
+ "version_transformers": "5.22.1"
+}

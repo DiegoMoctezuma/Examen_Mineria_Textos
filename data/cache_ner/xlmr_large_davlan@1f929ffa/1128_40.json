@@ -1,0 +1,117 @@
+{
+ "clave": "9d2bedf651280103ae1b35acb8d3531b124a0bc66a47f30c9bba11e86c2788a6",
+ "entidades_crudas": [
+  {
+   "confianza": 0.928796,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 17,
+   "inicio": 0,
+   "texto": "JOSÉ RAFAEL OJEDA",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.973881,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 23,
+   "inicio": 18,
+   "texto": "DURÁN",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99995,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 118,
+   "inicio": 101,
+   "texto": "Ejército Nacional",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999866,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 185,
+   "inicio": 174,
+   "texto": "El Vizcaíno",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999986,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 209,
+   "inicio": 190,
+   "texto": "Baja California Sur",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.97833,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 307,
+   "inicio": 260,
+   "texto": "Corredor Interoceánico del Istmo de Tehuantepec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999941,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 712,
+   "inicio": 692,
+   "texto": "Secretaría de Marina",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999424,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 733,
+   "inicio": 717,
+   "texto": "Fiscalía General",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.990476,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 754,
+   "inicio": 748,
+   "texto": "Oaxaca",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999949,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 813,
+   "inicio": 793,
+   "texto": "Istmo de Tehuantepec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.91632,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1168,
+   "inicio": 1163,
+   "texto": "COVID",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1128_40",
+ "segundos": 0.305,
+ "texto_sha256": "3109dc786f2f2e078df9c6dfe3a87f6afa622cdc9baa46c6ed6d190c3faa7b4f",
+ "version_transformers": "5.22.1"
+}

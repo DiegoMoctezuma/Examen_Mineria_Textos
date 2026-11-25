@@ -1,0 +1,99 @@
+{
+ "clave": "f4cf97c3cfd6e606a956646cf4ad79544dfa7812f5288d3e49b824ac97e977cf",
+ "entidades_crudas": [
+  {
+   "confianza": 0.999959,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 60,
+   "inicio": 45,
+   "texto": "Yesenia Peralta",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998761,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 80,
+   "inicio": 65,
+   "texto": "Business Energy",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999974,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 89,
+   "inicio": 82,
+   "texto": "Tabasco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.876177,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 241,
+   "inicio": 232,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99986,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 395,
+   "inicio": 388,
+   "texto": "Tabasco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999942,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 546,
+   "inicio": 537,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999775,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 680,
+   "inicio": 671,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999902,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 791,
+   "inicio": 784,
+   "texto": "Paraíso",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999972,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 884,
+   "inicio": 877,
+   "texto": "Tabasco",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "657_54",
+ "segundos": 0.255,
+ "texto_sha256": "1497bd310a20b6d74cdbb8e3526c5453404399771dda93e4852e1682607fd5d9",
+ "version_transformers": "5.22.1"
+}

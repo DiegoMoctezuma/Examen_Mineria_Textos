@@ -1,0 +1,63 @@
+{
+ "clave": "99022c34f566a1242949664d205c54656c493d0987e6fa3c2ba121947019932f",
+ "entidades_crudas": [
+  {
+   "confianza": 0.980632,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999267,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 50,
+   "inicio": 43,
+   "texto": "Nayarit",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999418,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 953,
+   "inicio": 944,
+   "texto": "Dinamarca",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999842,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 964,
+   "inicio": 958,
+   "texto": "Suecia",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.793594,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1004,
+   "inicio": 995,
+   "texto": "Estado de",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "947_16",
+ "segundos": 0.302,
+ "texto_sha256": "b7def935ed42f54f988de686b4ca1f94249348c69c3d85b35182d5d16bea7d72",
+ "version_transformers": "5.22.1"
+}

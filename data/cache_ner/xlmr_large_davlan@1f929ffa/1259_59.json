@@ -1,0 +1,126 @@
+{
+ "clave": "c30b3910cb57282faa8c2d54b3638aafe7d50b2f0d975fb5d63beb35d1fcdf5f",
+ "entidades_crudas": [
+  {
+   "confianza": 0.977312,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999964,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 62,
+   "inicio": 46,
+   "texto": "Ciudad de México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999944,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 82,
+   "inicio": 71,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999976,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 179,
+   "inicio": 163,
+   "texto": "Ciudad de México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999984,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 210,
+   "inicio": 185,
+   "texto": "Base Aérea de Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999928,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 241,
+   "inicio": 230,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.995272,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 527,
+   "inicio": 522,
+   "texto": "Mitre",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.836986,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 671,
+   "inicio": 657,
+   "texto": "Felipe Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.772363,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 761,
+   "inicio": 760,
+   "texto": "‘",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.881864,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 775,
+   "inicio": 761,
+   "texto": "Felipe Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99978,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 819,
+   "inicio": 813,
+   "texto": "Toluca",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.996316,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1152,
+   "inicio": 1137,
+   "texto": "lago de Texcoco",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1259_59",
+ "segundos": 0.305,
+ "texto_sha256": "58d36d7f564449c752510e17928ba11d103ca5c2e8c16bb0335318cee0f694cc",
+ "version_transformers": "5.22.1"
+}

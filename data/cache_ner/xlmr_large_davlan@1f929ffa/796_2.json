@@ -1,0 +1,72 @@
+{
+ "clave": "2acf9fe9ed2a0cbfb2ac310d5e7d9c2cd5e414dc7bedf6a6aed2af7914dea275",
+ "entidades_crudas": [
+  {
+   "confianza": 0.98871,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999892,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 153,
+   "inicio": 144,
+   "texto": "Chihuahua",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999535,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 165,
+   "inicio": 159,
+   "texto": "Sonora",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999989,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 200,
+   "inicio": 194,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99939,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 732,
+   "inicio": 723,
+   "texto": "Chihuahua",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999897,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 744,
+   "inicio": 738,
+   "texto": "Sonora",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "796_2",
+ "segundos": 0.287,
+ "texto_sha256": "5d596b1162fdbb46fe41d745e08da0a0d5e698c24d254f5eddb9dbcdb0f9b7be",
+ "version_transformers": "5.22.1"
+}

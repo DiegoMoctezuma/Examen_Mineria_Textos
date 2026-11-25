@@ -1,0 +1,99 @@
+{
+ "clave": "ca0f81727b76046261fc96b48ded9f907200d219607580931020294e247230be",
+ "entidades_crudas": [
+  {
+   "confianza": 0.996563,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 22,
+   "inicio": 0,
+   "texto": "DIEGO PRIETO HERNÁNDEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.975168,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 90,
+   "inicio": 45,
+   "texto": "INSTITUTO NACIONAL DE ANTROPOLOGÍA E HISTORIA",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999834,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 96,
+   "inicio": 92,
+   "texto": "INAH",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999614,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 381,
+   "inicio": 367,
+   "texto": "Museo del Puuc",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.996936,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 548,
+   "inicio": 542,
+   "texto": "Mérida",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999655,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 557,
+   "inicio": 550,
+   "texto": "Yucatán",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999082,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 575,
+   "inicio": 562,
+   "texto": "Dzibilchaltún",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.954651,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 902,
+   "inicio": 893,
+   "texto": "Tren Maya",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999859,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1004,
+   "inicio": 973,
+   "texto": "Centro de Atención a Visitantes",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "476_28",
+ "segundos": 0.28,
+ "texto_sha256": "b1c43401fe7c4eb5a9cfaa59da04f88e35e5fa5fadee7957a86d039e0affad89",
+ "version_transformers": "5.22.1"
+}

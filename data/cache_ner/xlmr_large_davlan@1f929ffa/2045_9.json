@@ -1,0 +1,117 @@
+{
+ "clave": "99bb34718f67701b9e0bfea9a50c25fc571e04fc98e2ec75922eb21eb0ba5263",
+ "entidades_crudas": [
+  {
+   "confianza": 0.988778,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.982702,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 50,
+   "inicio": 40,
+   "texto": "California",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999713,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 323,
+   "inicio": 318,
+   "texto": "Pemex",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999749,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 375,
+   "inicio": 370,
+   "texto": "Pemex",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999901,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 964,
+   "inicio": 955,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999472,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 973,
+   "inicio": 966,
+   "texto": "Paraíso",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999894,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 982,
+   "inicio": 975,
+   "texto": "Tabasco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99983,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1043,
+   "inicio": 1034,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999824,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1141,
+   "inicio": 1133,
+   "texto": "Campeche",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999817,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1164,
+   "inicio": 1157,
+   "texto": "Tabasco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999937,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1219,
+   "inicio": 1210,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "2045_9",
+ "segundos": 0.314,
+ "texto_sha256": "37ccf0e6cb94d4b25df088ba418db5e5017d3b085d39fc27aa3b4e213b456378",
+ "version_transformers": "5.22.1"
+}

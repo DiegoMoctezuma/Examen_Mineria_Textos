@@ -1,0 +1,54 @@
+{
+ "clave": "9098b44612e0f2aa4e5ad07f1add121e8560649929979951ab62e32c11288c34",
+ "entidades_crudas": [
+  {
+   "confianza": 0.999287,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 215,
+   "inicio": 196,
+   "texto": "Cámara de Diputados",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99997,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 303,
+   "inicio": 300,
+   "texto": "CFE",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999969,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 451,
+   "inicio": 448,
+   "texto": "CFE",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999951,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 583,
+   "inicio": 580,
+   "texto": "CFE",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "907_68",
+ "segundos": 0.186,
+ "texto_sha256": "23ecfe6c27134bd9cce5e98b1543a57f7d02b3d0f25b26cf7a18a2efce8bcd26",
+ "version_transformers": "5.22.1"
+}

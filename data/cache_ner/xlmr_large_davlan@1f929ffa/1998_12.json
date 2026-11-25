@@ -1,0 +1,108 @@
+{
+ "clave": "9ae56008df1050b712d3dc058b67be13acf9961d74e2db10dbe301eae21f953d",
+ "entidades_crudas": [
+  {
+   "confianza": 0.965726,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.990979,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 31,
+   "texto": "OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999992,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 255,
+   "inicio": 249,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999909,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 523,
+   "inicio": 511,
+   "texto": "Quintana Roo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999977,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 916,
+   "inicio": 904,
+   "texto": "Quintana Roo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999814,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 928,
+   "inicio": 921,
+   "texto": "Yucatán",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999927,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 941,
+   "inicio": 933,
+   "texto": "Campeche",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999948,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 953,
+   "inicio": 946,
+   "texto": "Chiapas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.9997,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 965,
+   "inicio": 958,
+   "texto": "Tabasco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999958,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 978,
+   "inicio": 970,
+   "texto": "Veracruz",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1998_12",
+ "segundos": 0.309,
+ "texto_sha256": "3df1e8c5384fe0eaa823ad750f24b1e56e01a6dc1986e3e5ed1e770a1002507d",
+ "version_transformers": "5.22.1"
+}

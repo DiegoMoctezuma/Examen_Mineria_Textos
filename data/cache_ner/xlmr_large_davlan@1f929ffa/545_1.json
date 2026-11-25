@@ -1,0 +1,54 @@
+{
+ "clave": "f674acbc83c37928d095a4345df41e60c445751466c9fbd409a16dfcd294763f",
+ "entidades_crudas": [
+  {
+   "confianza": 0.982587,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.952716,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 82,
+   "inicio": 69,
+   "texto": "Seguro Social",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.689124,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 356,
+   "inicio": 344,
+   "texto": "SS-Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999485,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 390,
+   "inicio": 387,
+   "texto": "Zoé",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "545_1",
+ "segundos": 0.189,
+ "texto_sha256": "f089f5e59b2ea020fec104740af7764c04a8602859c96b1d82812d99795ad547",
+ "version_transformers": "5.22.1"
+}

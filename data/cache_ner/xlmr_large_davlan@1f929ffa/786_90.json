@@ -1,0 +1,36 @@
+{
+ "clave": "2d1980a271bc9a12697bdd2ac6dc583a96ec0a28bb0fe0209542b76c9a2efcb7",
+ "entidades_crudas": [
+  {
+   "confianza": 0.99734,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.91666,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 426,
+   "inicio": 416,
+   "texto": "Jacinto Po",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "786_90",
+ "segundos": 0.162,
+ "texto_sha256": "127137dcff6a562fb2704b67d27c70d1c59e6f0e506a9f4747679b33d253fd07",
+ "version_transformers": "5.22.1"
+}

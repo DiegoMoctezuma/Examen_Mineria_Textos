@@ -1,0 +1,63 @@
+{
+ "clave": "47d7d2840309abffec5e70808a26110ccb6762dc4a55192350e7470ec72cdcca",
+ "entidades_crudas": [
+  {
+   "confianza": 0.999977,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 191,
+   "inicio": 183,
+   "texto": "Veracruz",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999879,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 288,
+   "inicio": 279,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999955,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 359,
+   "inicio": 347,
+   "texto": "Grupo Cantón",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999895,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 752,
+   "inicio": 743,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999945,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 764,
+   "inicio": 757,
+   "texto": "Tabasco",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "834_74",
+ "segundos": 0.212,
+ "texto_sha256": "567290e9ca4053b33dcd00d80f190dcfc609a133ce9f996179069c7a63f23562",
+ "version_transformers": "5.22.1"
+}

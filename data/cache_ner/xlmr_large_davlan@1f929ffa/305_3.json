@@ -1,0 +1,81 @@
+{
+ "clave": "115c89eb62333c8e2cc67054fa1ae680582b021cdc96e543ba62c52d48780ef6",
+ "entidades_crudas": [
+  {
+   "confianza": 0.998064,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1,
+   "inicio": 0,
+   "texto": "A",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998933,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 302,
+   "inicio": 284,
+   "texto": "Gobierno de México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998716,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 446,
+   "inicio": 438,
+   "texto": "Acapulco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997912,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 456,
+   "inicio": 448,
+   "texto": "Guerrero",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999948,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 556,
+   "inicio": 543,
+   "texto": "López Obrador",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.956233,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 977,
+   "inicio": 940,
+   "texto": "Centro de Huracanes de Estados Unidos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999821,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1081,
+   "inicio": 1073,
+   "texto": "Pacífico",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "305_3",
+ "segundos": 0.356,
+ "texto_sha256": "d29755dfbf3388887a8adce34b8796ce2637cf9f0b7f09a56e023c843dcd3c8a",
+ "version_transformers": "5.22.1"
+}

@@ -1,0 +1,90 @@
+{
+ "clave": "987f8334e46558c5694a35d70db43e2dc376b426b0284288a75830f9e3323e1b",
+ "entidades_crudas": [
+  {
+   "confianza": 0.999472,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 56,
+   "inicio": 44,
+   "texto": "Armando Gama",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.686566,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 66,
+   "inicio": 62,
+   "texto": "Once",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999914,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 113,
+   "inicio": 105,
+   "texto": "Acapulco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99982,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 157,
+   "inicio": 149,
+   "texto": "Acapulco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999868,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 177,
+   "inicio": 160,
+   "texto": "Coyuca de Benítez",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999318,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 383,
+   "inicio": 375,
+   "texto": "Acapulco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99992,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 403,
+   "inicio": 386,
+   "texto": "Coyuca de Benítez",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999972,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 468,
+   "inicio": 453,
+   "texto": "Tierra Caliente",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "309_36",
+ "segundos": 0.204,
+ "texto_sha256": "271e7bfaa95c6073432f56b06ca86235e20297a61db5a10af3b1c62be7486eb8",
+ "version_transformers": "5.22.1"
+}

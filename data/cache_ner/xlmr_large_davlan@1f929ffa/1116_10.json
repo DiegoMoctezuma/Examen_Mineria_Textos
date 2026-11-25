@@ -1,0 +1,45 @@
+{
+ "clave": "3749e8d5a0f6fa274c388c4dba3571b5dfede6b302c885c8b27d0e4c6b7254e1",
+ "entidades_crudas": [
+  {
+   "confianza": 0.974607,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 25,
+   "inicio": 0,
+   "texto": "HUGO LÓPEZ-GATELL RAMÍREZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999968,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 407,
+   "inicio": 384,
+   "texto": "Luis Cresencio Sandoval",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99997,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1270,
+   "inicio": 1264,
+   "texto": "México",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1116_10",
+ "segundos": 0.319,
+ "texto_sha256": "e2af0302201173d240c4a4d5846d9d5bf62181b896342761eef4ea85f935a7ac",
+ "version_transformers": "5.22.1"
+}

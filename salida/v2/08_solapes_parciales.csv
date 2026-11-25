@@ -1,0 +1,99 @@
+passage_id,clase,tipo_regla,inicio_regla,fin_regla,texto_regla,fuente_regla,tipo_modelo,inicio_modelo,fin_modelo,texto_modelo,longitud_solape
+1011_31,solape_parcial,ORG,1219,1222,CFE,gazetteer_org,ORG,1219,1241,CFE Telecomunicaciones,3
+1011_31,solape_parcial,ORG,1265,1268,CFE,gazetteer_org,ORG,1265,1276,CFE Energía,3
+1011_31,solape_parcial,ORG,1278,1281,CFE,gazetteer_org,ORG,1278,1295,CFE Internacional,3
+1011_31,solape_parcial,PER,0,18,ROCÍO NAHLE GARCÍA,marca,PER,0,3,ROC,3
+1011_33,solape_parcial,PER,0,18,ROCÍO NAHLE GARCÍA,marca,PER,0,1,R,1
+1011_34,solape_parcial,PER,0,18,ROCÍO NAHLE GARCÍA,marca,PER,0,3,ROC,3
+1011_43,solape_parcial,PER,0,18,ROCÍO NAHLE GARCÍA,marca,PER,0,1,R,1
+1188_80,tipo_distinto,LOC,282,296,Estados Unidos,gazetteer_loc,ORG,282,296,Estados Unidos,14
+1188_80,solape_parcial,ORG,680,686,Pfizer,gazetteer_org,ORG,680,695,Pfizer-BioNTech,6
+1188_80,solape_parcial,ORG,687,695,BioNTech,gazetteer_org,ORG,680,695,Pfizer-BioNTech,8
+1188_80,solape_parcial,ORG,800,808,Gamaleya,gazetteer_org,ORG,734,808,Centro Nacional de Investigación de Epidemiología e Microbiología Gamaleya,8
+1219_83,solape_parcial,LOC,327,334,Jalisco,gazetteer_loc,LOC,314,334,Los Altos de Jalisco,7
+123_14,solape_parcial,LOC,606,614,Acapulco,gazetteer_loc,LOC,592,614,Base Naval de Acapulco,8
+1253_5,solape_parcial,LOC,70,76,México,gazetteer_loc,ORG,58,76,Gobierno de México,6
+1259_59,solape_parcial,LOC,199,210,Santa Lucía,gazetteer_loc,LOC,185,210,Base Aérea de Santa Lucía,11
+1259_59,solape_parcial,LOC,1145,1152,Texcoco,gazetteer_loc,LOC,1137,1152,lago de Texcoco,7
+1272_17,solape_parcial,LOC,109,129,Istmo de Tehuantepec,gazetteer_loc,LOC,93,129,Ferrocarril del Istmo de Tehuantepec,20
+1272_17,solape_parcial,LOC,339,359,Istmo de Tehuantepec,gazetteer_loc,LOC,345,359,de Tehuantepec,14
+1272_17,solape_parcial,LOC,444,450,México,gazetteer_loc,ORG,432,450,Gobierno de México,6
+1342_19,tipo_distinto,LOC,14,61,Corredor Interoceánico del Istmo de Tehuantepec,gazetteer_loc,ORG,14,61,Corredor Interoceánico del Istmo de Tehuantepec,47
+1342_19,solape_parcial,LOC,964,984,Istmo de Tehuantepec,gazetteer_loc,LOC,948,984,Ferrocarril del Istmo de Tehuantepec,20
+1395_0,solape_parcial,ORG,1129,1132,ICA,gazetteer_org,ORG,1123,1132,Grupo ICA,3
+1458_12,solape_parcial,LOC,377,397,Istmo de Tehuantepec,gazetteer_loc,LOC,383,397,de Tehuantepec,14
+1527_0,solape_parcial,LOC,816,825,Dos Bocas,gazetteer_loc,LOC,816,824,Dos Boca,8
+1606_0,solape_parcial,LOC,1009,1020,Santa Lucía,gazetteer_loc,LOC,1009,1035,Santa Lucía Felipe Ángeles,11
+1606_1,solape_parcial,LOC,67,78,Santa Lucía,gazetteer_loc,LOC,53,93,aeropuerto de Santa Lucía Felipe Ángeles,11
+1606_2,tipo_distinto,LOC,471,487,Estado de México,gazetteer_loc,ORG,471,487,Estado de México,16
+1812_0,solape_parcial,LOC,196,207,Santa Lucía,gazetteer_loc,LOC,174,207,Base Aérea Militar de Santa Lucía,11
+1812_0,solape_parcial,LOC,326,337,Santa Lucía,gazetteer_loc,LOC,304,337,Base Aérea Militar de Santa Lucía,11
+1812_0,solape_parcial,LOC,779,786,Texcoco,gazetteer_loc,LOC,776,786,de Texcoco,7
+1812_0,solape_parcial,LOC,995,1006,Santa Lucía,gazetteer_loc,LOC,976,1006,Base Aérea Militar Santa Lucía,11
+1812_0,tipo_distinto,LOC,1013,1029,Estado de México,gazetteer_loc,ORG,1013,1029,Estado de México,16
+1949_72,tipo_distinto,LOC,278,284,México,gazetteer_loc,ORG,278,284,México,6
+1949_72,tipo_distinto,LOC,453,467,Estados Unidos,gazetteer_loc,ORG,453,467,Estados Unidos,14
+1949_72,solape_parcial,PER,0,23,MARCERO EBRARD CASAUBON,marca,PER,0,4,MARC,4
+1949_72,solape_parcial,PER,0,23,MARCERO EBRARD CASAUBON,marca,PER,8,23,EBRARD CASAUBON,15
+2115_5,solape_parcial,ORG,379,384,Pemex,gazetteer_org,LOC,370,384,Torre de Pemex,5
+2149_27,solape_parcial,LOC,619,627,Campeche,gazetteer_loc,LOC,610,627,Sonda de Campeche,8
+216_81,solape_parcial,LOC,582,629,corredor interoceánico del Istmo de Tehuantepec,gazetteer_loc,LOC,609,629,Istmo de Tehuantepec,20
+228_7,solape_parcial,LOC,270,284,Estados Unidos,gazetteer_loc,ORG,270,294,Estados Unidos Mexicanos,14
+228_7,solape_parcial,LOC,340,387,Corredor Interoceánico del Istmo de Tehuantepec,gazetteer_loc,LOC,376,387,Tehuantepec,11
+228_7,solape_parcial,LOC,733,740,Chiapas,gazetteer_loc,LOC,726,740,Puerto Chiapas,7
+228_7,solape_parcial,LOC,769,789,Istmo de Tehuantepec,gazetteer_loc,LOC,753,789,ferrocarril del Istmo de Tehuantepec,20
+228_7,solape_parcial,LOC,906,912,México,gazetteer_loc,LOC,897,912,golfo de México,6
+256_14,solape_parcial,LOC,242,248,México,gazetteer_loc,ORG,230,248,Gobierno de México,6
+256_14,solape_parcial,LOC,820,840,Istmo de Tehuantepec,gazetteer_loc,LOC,832,837,uante,5
+256_14,solape_parcial,LOC,1094,1114,Istmo de Tehuantepec,gazetteer_loc,LOC,1106,1114,uantepec,8
+293_16,solape_parcial,LOC,642,650,Guerrero,gazetteer_loc,ORG,624,650,Agencia Quadratín Guerrero,8
+305_3,solape_parcial,LOC,296,302,México,gazetteer_loc,ORG,284,302,Gobierno de México,6
+305_3,solape_parcial,LOC,963,977,Estados Unidos,gazetteer_loc,ORG,940,977,Centro de Huracanes de Estados Unidos,14
+305_3,solape_parcial,PER,0,28,ANA ELIZABETH GARCÍA VILCHIS,marca,PER,0,1,A,1
+317_3,solape_parcial,LOC,216,222,México,gazetteer_loc,ORG,204,222,Gobierno de México,6
+317_3,solape_parcial,LOC,1156,1164,Acapulco,gazetteer_loc,LOC,1157,1162,capul,5
+317_3,solape_parcial,LOC,1232,1240,Acapulco,gazetteer_loc,LOC,1233,1238,capul,5
+317_3,solape_parcial,LOC,1312,1320,Acapulco,gazetteer_loc,LOC,1313,1320,capulco,7
+317_3,solape_parcial,PER,0,30,ROSA ICELA RODRÍGUEZ VELÁZQUEZ,marca,PER,0,1,R,1
+317_3,solape_parcial,PER,0,30,ROSA ICELA RODRÍGUEZ VELÁZQUEZ,marca,PER,5,30,ICELA RODRÍGUEZ VELÁZQUEZ,25
+343_2,tipo_distinto,LOC,121,137,Estado de México,gazetteer_loc,ORG,121,137,Estado de México,16
+343_2,tipo_distinto,LOC,397,413,Estado de México,gazetteer_loc,ORG,397,413,Estado de México,16
+354_33,tipo_distinto,LOC,47,94,CORREDOR INTEROCEÁNICO DEL ISTMO DE TEHUANTEPEC,gazetteer_loc,ORG,47,94,CORREDOR INTEROCEÁNICO DEL ISTMO DE TEHUANTEPEC,47
+354_33,tipo_distinto,LOC,96,100,CIIT,gazetteer_loc,ORG,96,100,CIIT,4
+354_33,solape_parcial,LOC,182,229,Corredor Interoceánico del Istmo de Tehuantepec,gazetteer_loc,LOC,218,229,Tehuantepec,11
+354_33,solape_parcial,LOC,273,279,México,gazetteer_loc,ORG,261,279,Gobierno de México,6
+354_33,solape_parcial,LOC,458,478,Istmo de Tehuantepec,gazetteer_loc,ORG,442,478,Ferrocarril del Istmo de Tehuantepec,20
+354_33,solape_parcial,LOC,564,571,Chiapas,gazetteer_loc,LOC,557,571,Puerto Chiapas,7
+396_23,tipo_distinto,LOC,1155,1164,Tren Maya,gazetteer_loc,ORG,1155,1164,Tren Maya,9
+396_24,tipo_distinto,LOC,309,318,Tren Maya,gazetteer_loc,ORG,309,318,Tren Maya,9
+484_19,solape_parcial,LOC,908,917,Tren Maya,gazetteer_loc,LOC,913,917,Maya,4
+504_31,tipo_distinto,LOC,663,710,Corredor Interoceánico del Istmo de Tehuantepec,gazetteer_loc,ORG,663,710,Corredor Interoceánico del Istmo de Tehuantepec,47
+504_31,solape_parcial,LOC,948,970,Corredor Interoceánico,gazetteer_loc,ORG,953,956,dor,3
+504_31,solape_parcial,LOC,948,970,Corredor Interoceánico,gazetteer_loc,ORG,962,970,oceánico,8
+545_1,solape_parcial,ORG,342,356,IMSS-Bienestar,gazetteer_org,ORG,344,356,SS-Bienestar,12
+745_5,solape_parcial,LOC,400,416,refinería Olmeca,gazetteer_loc,LOC,400,403,ref,3
+745_5,solape_parcial,LOC,400,416,refinería Olmeca,gazetteer_loc,LOC,410,416,Olmeca,6
+745_5,solape_parcial,PER,0,28,ANA ELIZABETH GARCÍA VILCHIS,marca,PER,0,1,A,1
+745_5,solape_parcial,PER,0,28,ANA ELIZABETH GARCÍA VILCHIS,marca,PER,21,24,VIL,3
+788_15,tipo_distinto,LOC,259,273,Estados Unidos,gazetteer_loc,ORG,259,273,Estados Unidos,14
+788_15,tipo_distinto,LOC,416,430,Estados Unidos,gazetteer_loc,ORG,416,430,Estados Unidos,14
+90_3,solape_parcial,PER,0,18,ZOÉ ROBLEDO ABURTO,marca,PER,0,1,Z,1
+917_1,solape_parcial,LOC,696,703,Yucatán,gazetteer_loc,ORG,686,703,Diario de Yucatán,7
+917_1,solape_parcial,PER,0,28,ANA ELIZABETH GARCÍA VILCHIS,marca,PER,0,1,A,1
+928_1,solape_parcial,PER,0,28,ANA ELIZABETH GARCÍA VILCHIS,marca,PER,0,1,A,1
+928_2,solape_parcial,LOC,601,612,Santa Lucía,gazetteer_loc,LOC,587,612,aeropuerto de Santa Lucía,11
+928_2,solape_parcial,LOC,978,989,Santa Lucía,gazetteer_loc,LOC,964,989,aeropuerto de Santa Lucía,11
+928_2,solape_parcial,PER,0,28,ANA ELIZABETH GARCÍA VILCHIS,marca,PER,0,1,A,1
+978_7,solape_parcial,LOC,1073,1087,Estados Unidos,gazetteer_loc,ORG,1073,1080,Estados,7
+978_7,solape_parcial,LOC,1073,1087,Estados Unidos,gazetteer_loc,LOC,1081,1087,Unidos,6
+978_7,solape_parcial,PER,0,28,ANA ELIZABETH GARCÍA VILCHIS,marca,ORG,0,1,A,1
+978_8,tipo_distinto,LOC,180,194,Estados Unidos,gazetteer_loc,ORG,180,194,Estados Unidos,14
+978_8,solape_parcial,LOC,1019,1033,Estados Unidos,gazetteer_loc,LOC,1019,1026,Estados,7
+978_8,solape_parcial,LOC,1019,1033,Estados Unidos,gazetteer_loc,ORG,1027,1033,Unidos,6
+978_8,solape_parcial,PER,0,28,ANA ELIZABETH GARCÍA VILCHIS,marca,PER,0,1,A,1
+978_8,solape_parcial,PER,0,28,ANA ELIZABETH GARCÍA VILCHIS,marca,PER,21,27,VILCHI,6
+982_72,solape_parcial,LOC,75,95,Istmo de Tehuantepec,gazetteer_loc,LOC,75,78,Ist,3
+982_72,solape_parcial,LOC,75,95,Istmo de Tehuantepec,gazetteer_loc,ORG,78,80,mo,2
+982_72,solape_parcial,LOC,75,95,Istmo de Tehuantepec,gazetteer_loc,LOC,84,95,Tehuantepec,11
+9_23,solape_parcial,PER,0,18,ZOÉ ROBLEDO ABURTO,marca,PER,0,1,Z,1
+9_23,solape_parcial,PER,0,18,ZOÉ ROBLEDO ABURTO,marca,PER,6,9,BLE,3

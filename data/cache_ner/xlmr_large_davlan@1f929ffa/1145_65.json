@@ -1,0 +1,36 @@
+{
+ "clave": "490f3399e4f820de66d5aa9f86881d61c9415b76fc52b814e667d428fbefce13",
+ "entidades_crudas": [
+  {
+   "confianza": 0.999951,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 208,
+   "inicio": 196,
+   "texto": "Quintana Roo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999804,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 323,
+   "inicio": 311,
+   "texto": "Quintana Roo",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1145_65",
+ "segundos": 0.155,
+ "texto_sha256": "f46fb0ae0fbb0a024645e937efac79b0ccee9d9ca7ac9b2e724deb5579a13330",
+ "version_transformers": "5.22.1"
+}

@@ -1,0 +1,54 @@
+{
+ "clave": "663f1b481aea9dc6b720fea5bb3d2906505c9e839b12b3866467587801a7be22",
+ "entidades_crudas": [
+  {
+   "confianza": 0.9537,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.991415,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 31,
+   "texto": "OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998493,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 632,
+   "inicio": 622,
+   "texto": "Peña Nieto",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.996745,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1006,
+   "inicio": 999,
+   "texto": "Abraham",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "338_4",
+ "segundos": 0.345,
+ "texto_sha256": "6f1556d467c83a7c4245f3bac2c3bca5261af2a05f5672daf40c8739dcacbb64",
+ "version_transformers": "5.22.1"
+}

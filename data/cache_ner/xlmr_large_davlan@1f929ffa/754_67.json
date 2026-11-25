@@ -1,0 +1,63 @@
+{
+ "clave": "15c374942693c9b94a2eb78f15264c8fd9d31e7ee6d739926318514268dfd210",
+ "entidades_crudas": [
+  {
+   "confianza": 0.996446,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999837,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 112,
+   "inicio": 105,
+   "texto": "Tabasco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999799,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 182,
+   "inicio": 173,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.512296,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 223,
+   "inicio": 216,
+   "texto": "uhtémoc",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99995,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 236,
+   "inicio": 227,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "754_67",
+ "segundos": 0.138,
+ "texto_sha256": "d1821813069d0aa4f4406c4e13e9e159fb7207e6560269f26fd0457b8283709a",
+ "version_transformers": "5.22.1"
+}

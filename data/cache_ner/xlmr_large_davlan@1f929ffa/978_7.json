@@ -1,0 +1,90 @@
+{
+ "clave": "766e2c158bdf0637c021d14962f4db04f43d018a14e8d576565bb7ff08c25a1a",
+ "entidades_crudas": [
+  {
+   "confianza": 0.9098,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1,
+   "inicio": 0,
+   "texto": "A",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99994,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 373,
+   "inicio": 370,
+   "texto": "CFE",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999721,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 829,
+   "inicio": 793,
+   "texto": "Gabinete de Comunicación Estratégica",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999888,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 898,
+   "inicio": 895,
+   "texto": "CFE",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999861,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 994,
+   "inicio": 991,
+   "texto": "CFE",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.6299,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1080,
+   "inicio": 1073,
+   "texto": "Estados",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.738158,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1087,
+   "inicio": 1081,
+   "texto": "Unidos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999568,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1113,
+   "inicio": 1110,
+   "texto": "CFE",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "978_7",
+ "segundos": 0.291,
+ "texto_sha256": "caf84d2475578df7e46fff7c5c5dc3b24e0a39665c472d63bf6f7eb41791a761",
+ "version_transformers": "5.22.1"
+}

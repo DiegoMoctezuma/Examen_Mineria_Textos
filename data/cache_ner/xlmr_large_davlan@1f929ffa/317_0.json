@@ -1,0 +1,99 @@
+{
+ "clave": "e06482351be12a242082fe5ef78486a08dba4959a21e61dc1f1b024a2f168edf",
+ "entidades_crudas": [
+  {
+   "confianza": 0.989778,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999857,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 217,
+   "inicio": 209,
+   "texto": "Acapulco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999474,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 247,
+   "inicio": 230,
+   "texto": "Coyuca de Benítez",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998627,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 319,
+   "inicio": 311,
+   "texto": "Acapulco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999927,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 404,
+   "inicio": 384,
+   "texto": "Rosa Icela Rodríguez",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999866,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 484,
+   "inicio": 476,
+   "texto": "Guerrero",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999928,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 500,
+   "inicio": 486,
+   "texto": "Evelyn Salgado",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999906,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 581,
+   "inicio": 573,
+   "texto": "Acapulco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999813,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 677,
+   "inicio": 667,
+   "texto": "Rosa Icela",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "317_0",
+ "segundos": 0.226,
+ "texto_sha256": "3f68263218c08a7354c5f2170a284bb42375544517c51926937ee9bbe90be7f7",
+ "version_transformers": "5.22.1"
+}

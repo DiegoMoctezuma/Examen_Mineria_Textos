@@ -1,0 +1,63 @@
+{
+ "clave": "9c5ca634ba2ee6b8c33cb330c8909b33c9dbe201e417651d1f8adb22cf1af892",
+ "entidades_crudas": [
+  {
+   "confianza": 0.986113,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 129,
+   "inicio": 93,
+   "texto": "Ferrocarril del Istmo de Tehuantepec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999822,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 179,
+   "inicio": 167,
+   "texto": "Medias Aguas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999839,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 193,
+   "inicio": 182,
+   "texto": "Salina Cruz",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.806635,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 359,
+   "inicio": 345,
+   "texto": "de Tehuantepec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999963,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 450,
+   "inicio": 432,
+   "texto": "Gobierno de México",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1272_17",
+ "segundos": 0.181,
+ "texto_sha256": "5be10e527df6a9367f052b75f6e5cfbe861b1bc012dee2bacf9728cc60a34889",
+ "version_transformers": "5.22.1"
+}

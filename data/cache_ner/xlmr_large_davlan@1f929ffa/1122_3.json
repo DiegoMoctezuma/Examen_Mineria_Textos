@@ -1,0 +1,90 @@
+{
+ "clave": "bf7b1ffc50d19ed74c293b57b91a34b53cdb537161c953c8335a8121d70ab3fb",
+ "entidades_crudas": [
+  {
+   "confianza": 0.955323,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.981202,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 31,
+   "texto": "OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999975,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 101,
+   "inicio": 95,
+   "texto": "Tecate",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999943,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 281,
+   "inicio": 275,
+   "texto": "Tecate",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999976,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 504,
+   "inicio": 490,
+   "texto": "América Latina",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999977,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 746,
+   "inicio": 737,
+   "texto": "Guatemala",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999984,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 762,
+   "inicio": 751,
+   "texto": "El Salvador",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999973,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 775,
+   "inicio": 767,
+   "texto": "Honduras",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1122_3",
+ "segundos": 0.291,
+ "texto_sha256": "8d97570239a8a2acd5e5b92ed0e4fa06cd2ef9435a37a3f74060ba66547bdf74",
+ "version_transformers": "5.22.1"
+}

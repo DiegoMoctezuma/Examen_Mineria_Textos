@@ -1,0 +1,54 @@
+{
+ "clave": "5da01a5787789dd64d02b08652c2f2d7806f2cd4f1bb8e7bca4d6e4eae25681d",
+ "entidades_crudas": [
+  {
+   "confianza": 0.968395,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999751,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 685,
+   "inicio": 671,
+   "texto": "IMSS-Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999856,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 806,
+   "inicio": 792,
+   "texto": "IMSS-Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99903,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 937,
+   "inicio": 934,
+   "texto": "Zoé",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "629_2",
+ "segundos": 0.268,
+ "texto_sha256": "41b3a26a86c0cf5eeba438885bb9d498210c970ee4693ca0ca8dd645c2db46f3",
+ "version_transformers": "5.22.1"
+}

@@ -1,0 +1,54 @@
+{
+ "clave": "01722f07b2a0dbd6cae345267b0f349bfe8ac170bd4f0f09162d0bf3c333a691",
+ "entidades_crudas": [
+  {
+   "confianza": 0.78964,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1,
+   "inicio": 0,
+   "texto": "V",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.558017,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 9,
+   "inicio": 4,
+   "texto": "MUJER",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999583,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 292,
+   "inicio": 288,
+   "texto": "INAH",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.825868,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 980,
+   "inicio": 974,
+   "texto": "Cuxtal",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1298_13",
+ "segundos": 0.362,
+ "texto_sha256": "68db134c0035f81cb7e68633dcc873d6739f6bc7a663dd017655cf60625e589a",
+ "version_transformers": "5.22.1"
+}

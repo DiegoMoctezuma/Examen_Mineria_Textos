@@ -1,0 +1,126 @@
+{
+ "clave": "3ddf33baa908c3e89d9e44956d321a01592a1dc5ce1aac6b6863b79cbdd7560a",
+ "entidades_crudas": [
+  {
+   "confianza": 0.999756,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1,
+   "inicio": 0,
+   "texto": "A",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999919,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 142,
+   "inicio": 133,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999888,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 283,
+   "inicio": 274,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999848,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 292,
+   "inicio": 285,
+   "texto": "Tabasco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999964,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 407,
+   "inicio": 400,
+   "texto": "Reforma",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999978,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 424,
+   "inicio": 409,
+   "texto": "Animal Político",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99998,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 438,
+   "inicio": 426,
+   "texto": "El Universal",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.912301,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 548,
+   "inicio": 539,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998555,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 664,
+   "inicio": 657,
+   "texto": "Reforma",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.988437,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 684,
+   "inicio": 677,
+   "texto": "Proceso",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999923,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 703,
+   "inicio": 686,
+   "texto": "Diario de Yucatán",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998948,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 945,
+   "inicio": 934,
+   "texto": "Rocío Nahle",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "917_1",
+ "segundos": 0.306,
+ "texto_sha256": "ae0b7c24e57964378300e9e5129a27c60bb8527d81691a0d0a8dd8b5f52d85d3",
+ "version_transformers": "5.22.1"
+}

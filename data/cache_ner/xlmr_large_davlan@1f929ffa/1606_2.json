@@ -1,0 +1,162 @@
+{
+ "clave": "13f2762437e8166b8fdaeaad6f239337ca6c90b09813a0b2bb8293b3076ed418",
+ "entidades_crudas": [
+  {
+   "confianza": 0.956323,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999975,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 78,
+   "inicio": 67,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999961,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 125,
+   "inicio": 114,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999852,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 152,
+   "inicio": 146,
+   "texto": "Toluca",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999961,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 211,
+   "inicio": 200,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999941,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 376,
+   "inicio": 359,
+   "texto": "Claudia Sheinbaum",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999892,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 465,
+   "inicio": 449,
+   "texto": "Alfredo del Mazo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999907,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 487,
+   "inicio": 471,
+   "texto": "Estado de México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999661,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 766,
+   "inicio": 755,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999907,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 933,
+   "inicio": 927,
+   "texto": "Toluca",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999974,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 951,
+   "inicio": 935,
+   "texto": "Ciudad de México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999968,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 965,
+   "inicio": 954,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999963,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1111,
+   "inicio": 1089,
+   "texto": "Ricardo Vallejo Suárez",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.896233,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1163,
+   "inicio": 1138,
+   "texto": "aeropuerto Felipe Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.87697,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1185,
+   "inicio": 1173,
+   "texto": "Felipe Ángel",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.98101,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1187,
+   "inicio": 1185,
+   "texto": "es",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1606_2",
+ "segundos": 0.287,
+ "texto_sha256": "7a8df7e2cb00e0df7ef51a5ddc17133499e6b6226a42359b0c6a28b7e8607859",
+ "version_transformers": "5.22.1"
+}

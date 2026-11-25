@@ -1,0 +1,45 @@
+{
+ "clave": "83f3ce2254d9c44146a65ee1ca26a9d57a37a9d0827e51fcc781a14df4833dc3",
+ "entidades_crudas": [
+  {
+   "confianza": 0.943243,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 31,
+   "inicio": 0,
+   "texto": "DIRECCIÓN GENERAL DE INGENIEROS",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.991311,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 71,
+   "inicio": 38,
+   "texto": "SECRETARÍA DE LA DEFENSA NACIONAL",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998598,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 79,
+   "inicio": 73,
+   "texto": "SEDENA",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "326_25",
+ "segundos": 0.278,
+ "texto_sha256": "bdd09434ee85e8b3025ad52fb02bc7c43cc3b5d2969bb3b39f8b43eace03b627",
+ "version_transformers": "5.22.1"
+}

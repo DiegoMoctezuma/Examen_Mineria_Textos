@@ -1,0 +1,117 @@
+{
+ "clave": "76ba4b37be2587ebb486b1de56f9751b8a212bfe1884d80ea3f2bb37f228462a",
+ "entidades_crudas": [
+  {
+   "confianza": 0.99606,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999666,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 65,
+   "inicio": 58,
+   "texto": "Yucatán",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999837,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 665,
+   "inicio": 658,
+   "texto": "Yucatán",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.967165,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 694,
+   "inicio": 689,
+   "texto": "Tinum",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999667,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 705,
+   "inicio": 700,
+   "texto": "Uayma",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.972093,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 753,
+   "inicio": 748,
+   "texto": "Tinum",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999591,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 762,
+   "inicio": 755,
+   "texto": "Yucatán",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.995508,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 771,
+   "inicio": 766,
+   "texto": "Tinum",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999727,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 780,
+   "inicio": 773,
+   "texto": "Yucatán",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999837,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1132,
+   "inicio": 1123,
+   "texto": "Grupo ICA",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999886,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1272,
+   "inicio": 1253,
+   "texto": "Andrés Manuel López",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1395_0",
+ "segundos": 0.311,
+ "texto_sha256": "389b9fe66b47618ae9c0a852ca59908b9bd786b74a153aff9673c2120d094215",
+ "version_transformers": "5.22.1"
+}

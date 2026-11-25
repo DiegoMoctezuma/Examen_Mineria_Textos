@@ -1,0 +1,90 @@
+{
+ "clave": "660545606b794bb977bba465a9b5df36965e8bd74b7973058f493dcb4fa75e0b",
+ "entidades_crudas": [
+  {
+   "confianza": 0.989152,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1,
+   "inicio": 0,
+   "texto": "Z",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.58758,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 9,
+   "inicio": 6,
+   "texto": "BLE",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999969,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 132,
+   "inicio": 125,
+   "texto": "Durango",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99943,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 145,
+   "inicio": 137,
+   "texto": "Coahuila",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999087,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 166,
+   "inicio": 159,
+   "texto": "Yucatán",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.918644,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 187,
+   "inicio": 178,
+   "texto": "Chihuahua",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.989267,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 840,
+   "inicio": 833,
+   "texto": "Estados",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.989258,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 909,
+   "inicio": 903,
+   "texto": "Estado",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "9_23",
+ "segundos": 3.541,
+ "texto_sha256": "6c546af6f4840e1c0c147fa98e79786774a07f3c912311df775c89042c2ba023",
+ "version_transformers": "5.22.1"
+}

@@ -1,0 +1,1345 @@
+passage_id,doc_id,tipo,texto,inicio,fin,metodo
+1011_31,1011,PER,ROC,0,3,modelo
+1011_31,1011,PER,ROCÍO NAHLE GARCÍA,0,18,regla
+1011_31,1011,ORG,Estado,57,63,modelo
+1011_31,1011,ORG,CFE,380,383,ambos
+1011_31,1011,ORG,Estado,425,431,modelo
+1011_31,1011,ORG,Estado,451,457,modelo
+1011_31,1011,FECHA,2013,497,501,regla
+1011_31,1011,PER,Peña Nieto,540,550,modelo
+1011_31,1011,ORG,Estado,588,594,modelo
+1011_31,1011,ORG,CFE,600,603,ambos
+1011_31,1011,ORG,Estado,932,938,modelo
+1011_31,1011,ORG,CFE,969,972,ambos
+1011_31,1011,ORG,CFE,1219,1222,regla
+1011_31,1011,ORG,CFE Telecomunicaciones,1219,1241,modelo
+1011_31,1011,ORG,Internet para Todos,1244,1263,modelo
+1011_31,1011,ORG,CFE,1265,1268,regla
+1011_31,1011,ORG,CFE Energía,1265,1276,modelo
+1011_31,1011,ORG,CFE,1278,1281,regla
+1011_31,1011,ORG,CFE Internacional,1278,1295,modelo
+1011_33,1011,PER,R,0,1,modelo
+1011_33,1011,PER,ROCÍO NAHLE GARCÍA,0,18,regla
+1011_33,1011,ORG,Cenace,349,355,modelo
+1011_33,1011,ORG,Centro Nacional de Control de Energía,368,405,modelo
+1011_33,1011,LOC,Chiapas,562,569,ambos
+1011_33,1011,LOC,Chihuahua,602,611,ambos
+1011_33,1011,ORG,Cenace,628,634,modelo
+1011_33,1011,ORG,CFE,661,664,ambos
+1011_33,1011,ORG,CFE,684,687,ambos
+1011_33,1011,FECHA,2013,695,699,regla
+1011_33,1011,ORG,CFE,812,815,ambos
+1011_33,1011,ORG,CFE,1098,1101,ambos
+1011_33,1011,ORG,CFE,1108,1111,ambos
+1011_34,1011,PER,ROC,0,3,modelo
+1011_34,1011,PER,ROCÍO NAHLE GARCÍA,0,18,regla
+1011_34,1011,ORG,SEC,20,23,modelo
+1011_34,1011,ORG,ARIA,26,30,modelo
+1011_34,1011,ORG,CFE,277,280,ambos
+1011_34,1011,ORG,CFE,287,290,ambos
+1011_34,1011,ORG,CFE,432,435,ambos
+1011_34,1011,PER,Andrés Manuel López Obrador,592,619,modelo
+1011_34,1011,FECHA,2013,714,718,regla
+1011_34,1011,ORG,Secretaría de Energía,740,761,ambos
+1011_34,1011,ORG,CFE,922,925,ambos
+1011_43,1011,PER,R,0,1,modelo
+1011_43,1011,PER,ROCÍO NAHLE GARCÍA,0,18,regla
+1011_43,1011,ORG,CFE,76,79,ambos
+1011_43,1011,ORG,CRE,495,498,ambos
+1011_43,1011,ORG,CFE,673,676,ambos
+1011_43,1011,FECHA,2013,801,805,regla
+1011_43,1011,ORG,CFE,826,829,ambos
+1011_43,1011,ORG,Comisión Federal de Electricidad,1110,1142,ambos
+1011_43,1011,MONTO,seis mil millones de pesos,1160,1186,regla
+1054_11,1054,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+1054_11,1054,FECHA,2024,418,422,regla
+1054_11,1054,ORG,IMSS-Bienestar,648,662,ambos
+1082_11,1082,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+1082_11,1082,LOC,Los Cabos,218,227,modelo
+1082_11,1082,LOC,Baja California,443,458,ambos
+1082_11,1082,LOC,Baja California Sur,616,635,ambos
+1082_11,1082,MONTO,cuatro mil 800 pesos,696,716,regla
+1104_49,1104,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+1104_49,1104,MONTO,130 mil millones de pesos,201,226,regla
+1116_10,1116,PER,HUGO LÓPEZ-GATELL RAMÍREZ,0,25,ambos
+1116_10,1116,PER,Luis Cresencio Sandoval,384,407,modelo
+1116_10,1116,LOC,México,1264,1270,ambos
+1122_3,1122,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+1122_3,1122,LOC,Tecate,95,101,modelo
+1122_3,1122,LOC,Tecate,275,281,modelo
+1122_3,1122,LOC,América Latina,490,504,modelo
+1122_3,1122,LOC,Guatemala,737,746,ambos
+1122_3,1122,LOC,El Salvador,751,762,ambos
+1122_3,1122,LOC,Honduras,767,775,ambos
+1125_28,1125,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+1125_28,1125,LOC,Monterrey,594,603,ambos
+1128_40,1128,PER,JOSÉ RAFAEL OJEDA DURÁN,0,23,ambos
+1128_40,1128,ORG,Ejército Nacional,101,118,modelo
+1128_40,1128,LOC,El Vizcaíno,174,185,modelo
+1128_40,1128,LOC,Baja California Sur,190,209,ambos
+1128_40,1128,LOC,Corredor Interoceánico del Istmo de Tehuantepec,260,307,ambos
+1128_40,1128,ORG,Secretaría de Marina,692,712,ambos
+1128_40,1128,ORG,Fiscalía General,717,733,modelo
+1128_40,1128,LOC,Oaxaca,748,754,ambos
+1128_40,1128,LOC,Istmo de Tehuantepec,793,813,ambos
+1128_40,1128,LOC,tren interoceánico,880,898,regla
+1128_40,1128,ORG,Guardia Nacional,1104,1120,regla
+1128_40,1128,LOC,COVID,1163,1168,modelo
+1133_87,1133,PER,MELINA VEGA,0,11,ambos
+1133_87,1133,PER,MELINA VEGA,133,144,modelo
+1145_65,1145,LOC,Quintana Roo,196,208,ambos
+1145_65,1145,LOC,Quintana Roo,311,323,ambos
+1188_80,1188,ORG,VOZ MUJER,0,9,modelo
+1188_80,1188,FECHA,28 de marzo,24,35,regla
+1188_80,1188,LOC,México,36,42,ambos
+1188_80,1188,ORG,AstraZeneca,91,102,regla
+1188_80,1188,LOC,México,240,246,ambos
+1188_80,1188,PER,Andrés Manuel López Obrador,248,275,modelo
+1188_80,1188,LOC,Estados Unidos,282,296,regla
+1188_80,1188,ORG,Estados Unidos,282,296,modelo
+1188_80,1188,PER,Joseph Biden,298,310,modelo
+1188_80,1188,FECHA,27 de marzo,445,456,regla
+1188_80,1188,ORG,CanSino Biologics,476,493,ambos
+1188_80,1188,ORG,Pfizer,680,686,regla
+1188_80,1188,ORG,Pfizer-BioNTech,680,695,modelo
+1188_80,1188,ORG,BioNTech,687,695,regla
+1188_80,1188,ORG,AstraZeneca,697,708,ambos
+1188_80,1188,ORG,SinoVac,710,717,modelo
+1188_80,1188,ORG,Sputnik V,719,728,ambos
+1188_80,1188,ORG,Centro Nacional de Investigación de Epidemiología e Microbiología Gamaleya,734,808,modelo
+1188_80,1188,ORG,Gamaleya,800,808,regla
+1188_80,1188,ORG,CanSino Biologics,814,831,ambos
+1188_80,1188,ORG,CanSino,899,906,regla
+1188_80,1188,ORG,Drugme,930,936,modelo
+1188_80,1188,LOC,Querétaro,941,950,ambos
+1188_80,1188,LOC,México,1186,1192,ambos
+1216_44,1216,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+1216_44,1216,ORG,UMAS,437,441,modelo
+1216_44,1216,ORG,Estado,611,617,modelo
+1219_83,1219,PER,HUMBERTO ORTIZ CASTAÑEDA,0,24,ambos
+1219_83,1219,LOC,Jalisco,98,105,ambos
+1219_83,1219,LOC,Tlaquepaque,182,193,modelo
+1219_83,1219,LOC,Tonalá,224,230,modelo
+1219_83,1219,ORG,AstraZeneca,270,281,regla
+1219_83,1219,LOC,Los Altos de Jalisco,314,334,modelo
+1219_83,1219,LOC,Jalisco,327,334,regla
+1219_83,1219,ORG,Sinovac,349,356,regla
+123_14,123,PER,LUISA MARÍA ALCALDE LUJÁN,0,25,modelo
+123_14,123,LOC,Acapulco,169,177,ambos
+123_14,123,FECHA,25 de octubre,195,208,regla
+123_14,123,LOC,Acapulco,243,251,ambos
+123_14,123,LOC,Coyuca de Benítez,254,271,modelo
+123_14,123,LOC,Base Naval de Acapulco,592,614,modelo
+123_14,123,LOC,Acapulco,606,614,regla
+123_14,123,LOC,Acapulco,694,702,ambos
+123_14,123,LOC,Coyuca de Benítez,708,725,modelo
+123_14,123,LOC,Acapulco,1001,1009,ambos
+123_14,123,LOC,Acapulco,1096,1104,ambos
+123_14,123,LOC,Coyuca de Benítez,1124,1141,modelo
+123_14,123,LOC,México,1236,1242,ambos
+1253_5,1253,PER,JORGE ALCOCER VARELA,0,20,ambos
+1253_5,1253,ORG,Gobierno de México,58,76,modelo
+1253_5,1253,LOC,México,70,76,regla
+1253_5,1253,FECHA,14 de febrero de 2021,256,277,regla
+1253_5,1253,LOC,México,418,424,ambos
+1259_59,1259,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+1259_59,1259,LOC,Ciudad de México,46,62,ambos
+1259_59,1259,LOC,Santa Lucía,71,82,ambos
+1259_59,1259,LOC,Ciudad de México,163,179,ambos
+1259_59,1259,LOC,Base Aérea de Santa Lucía,185,210,modelo
+1259_59,1259,LOC,Santa Lucía,199,210,regla
+1259_59,1259,LOC,Santa Lucía,230,241,ambos
+1259_59,1259,ORG,Mitre,522,527,modelo
+1259_59,1259,LOC,Felipe Ángeles,657,671,modelo
+1259_59,1259,LOC,Felipe Ángeles,761,775,modelo
+1259_59,1259,LOC,Toluca,813,819,ambos
+1259_59,1259,LOC,lago de Texcoco,1137,1152,modelo
+1259_59,1259,LOC,Texcoco,1145,1152,regla
+1272_17,1272,LOC,Ferrocarril del Istmo de Tehuantepec,93,129,modelo
+1272_17,1272,LOC,Istmo de Tehuantepec,109,129,regla
+1272_17,1272,LOC,Medias Aguas,167,179,modelo
+1272_17,1272,LOC,Salina Cruz,182,193,ambos
+1272_17,1272,LOC,Istmo de Tehuantepec,339,359,regla
+1272_17,1272,LOC,de Tehuantepec,345,359,modelo
+1272_17,1272,ORG,Gobierno de México,432,450,modelo
+1272_17,1272,LOC,México,444,450,regla
+1277_28,1277,PER,CAROLINA VARGAS,0,15,ambos
+1277_28,1277,ORG,Brigada Correcaminos,137,157,modelo
+1277_28,1277,PER,Edgar Jesús Zitle García,663,687,modelo
+1277_28,1277,ORG,IMSS,722,726,ambos
+1277_28,1277,LOC,Sonora,730,736,ambos
+1290_42,1290,PER,Shaila Rosagel,63,77,modelo
+1290_42,1290,ORG,Grupo Healy,95,106,modelo
+1290_42,1290,ORG,El Imparcial,108,120,modelo
+1290_42,1290,LOC,Sonora,125,131,ambos
+1290_42,1290,ORG,La Crónica,133,143,modelo
+1290_42,1290,LOC,Mexicali,148,156,modelo
+1290_42,1290,ORG,Frontera,160,168,modelo
+1290_42,1290,LOC,Tijuana,173,180,ambos
+1290_42,1290,LOC,Baja California,258,273,ambos
+1290_42,1290,LOC,Sonora,278,284,ambos
+1290_77,1290,PER,JORGE ALCOCER VARELA,0,20,ambos
+1290_77,1290,ORG,Pfizer,240,246,ambos
+1290_77,1290,ORG,Pfizer,430,436,regla
+1290_77,1290,ORG,BioNTech,437,445,regla
+1293_76,1293,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+1293_76,1293,ORG,Banco de Bienestar,303,321,modelo
+1293_76,1293,LOC,México,346,352,ambos
+1293_76,1293,ORG,Banco del Bienestar,938,957,ambos
+1297_31,1297,PER,Gatell,267,273,modelo
+1297_31,1297,ORG,Pfizer,733,739,ambos
+1297_31,1297,ORG,AstraZeneca,751,762,ambos
+1298_13,1298,ORG,V,0,1,modelo
+1298_13,1298,ORG,MUJER,4,9,modelo
+1298_13,1298,LOC,Tren Maya,11,20,regla
+1298_13,1298,ORG,INAH,288,292,ambos
+1298_13,1298,LOC,Tren Maya,615,624,regla
+1298_13,1298,LOC,Tren Maya,781,790,regla
+1298_13,1298,LOC,Tren Maya,825,834,regla
+1298_13,1298,PER,Cuxtal,974,980,modelo
+1298_13,1298,LOC,Tren Maya,1144,1153,regla
+1310_37,1310,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+1310_37,1310,LOC,Guerrero,254,262,ambos
+1316_37,1316,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+1316_37,1316,LOC,Texcoco,54,61,ambos
+1316_37,1316,LOC,Texcoco,181,188,ambos
+1316_37,1316,LOC,Santa Lucía,245,256,ambos
+1316_37,1316,LOC,Felipe Ángeles,407,421,modelo
+1316_37,1316,LOC,Toluca,441,447,ambos
+1316_37,1316,LOC,Ciudad de México,470,486,ambos
+1318_22,1318,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+1318_22,1318,LOC,México,428,434,ambos
+1318_22,1318,LOC,América Latina,496,510,modelo
+1318_22,1318,LOC,México,556,562,ambos
+1318_22,1318,PER,Carlos Pozos,1000,1012,modelo
+1342_19,1342,LOC,Corredor Interoceánico del Istmo de Tehuantepec,14,61,regla
+1342_19,1342,ORG,Corredor Interoceánico del Istmo de Tehuantepec,14,61,modelo
+1342_19,1342,FECHA,23 de noviembre de 2020,92,115,regla
+1342_19,1342,LOC,Coatzacoalcos,133,146,ambos
+1342_19,1342,LOC,Laguna de Pajaritos,522,541,modelo
+1342_19,1342,LOC,Salina Cruz,593,604,ambos
+1342_19,1342,LOC,Ferrocarril del Istmo de Tehuantepec,948,984,modelo
+1342_19,1342,LOC,Istmo de Tehuantepec,964,984,regla
+1342_19,1342,MONTO,tres mil millones de pesos,1014,1040,regla
+1372_40,1372,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+1395_0,1395,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+1395_0,1395,LOC,Yucatán,58,65,ambos
+1395_0,1395,LOC,Tren Maya,144,153,regla
+1395_0,1395,LOC,Tren Maya,402,411,regla
+1395_0,1395,LOC,Yucatán,658,665,ambos
+1395_0,1395,LOC,Tinum,689,694,modelo
+1395_0,1395,LOC,Uayma,700,705,modelo
+1395_0,1395,LOC,Tren Maya,731,740,regla
+1395_0,1395,LOC,Tinum,748,753,modelo
+1395_0,1395,LOC,Yucatán,755,762,ambos
+1395_0,1395,LOC,Tinum,766,771,modelo
+1395_0,1395,LOC,Yucatán,773,780,ambos
+1395_0,1395,LOC,Tren Maya,874,883,regla
+1395_0,1395,FECHA,2023,1024,1028,regla
+1395_0,1395,ORG,Grupo ICA,1123,1132,modelo
+1395_0,1395,ORG,ICA,1129,1132,regla
+1395_0,1395,PER,Andrés Manuel López,1253,1272,modelo
+1415_16,1415,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+1415_16,1415,MONTO,tres mil millones de pesos,205,231,regla
+1415_16,1415,LOC,Veracruz,250,258,ambos
+1415_16,1415,LOC,Veracruz,276,284,ambos
+1415_16,1415,MONTO,cinco mil pesos,748,763,regla
+1415_16,1415,LOC,Veracruz,943,951,ambos
+1415_16,1415,LOC,Veracruz,983,991,ambos
+1458_12,1458,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+1458_12,1458,LOC,Tren Maya,148,157,regla
+1458_12,1458,LOC,aeropuerto ‘Felipe Ángeles,305,331,modelo
+1458_12,1458,LOC,Tren Maya,351,360,regla
+1458_12,1458,LOC,Istmo de Tehuantepec,377,397,regla
+1458_12,1458,LOC,de Tehuantepec,383,397,modelo
+1527_0,1527,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+1527_0,1527,LOC,México,249,255,ambos
+1527_0,1527,LOC,Salina Cruz,318,329,ambos
+1527_0,1527,LOC,Dos Boca,816,824,modelo
+1527_0,1527,LOC,Dos Bocas,816,825,regla
+1527_0,1527,LOC,Paraíso,833,840,ambos
+1527_0,1527,LOC,Tabasco,842,849,ambos
+1527_0,1527,LOC,Paraíso,853,860,ambos
+1527_0,1527,LOC,Tabasco,862,869,ambos
+1527_0,1527,LOC,Refin,913,918,modelo
+1527_0,1527,LOC,Dos Bocas,923,932,ambos
+1606_0,1606,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+1606_0,1606,LOC,Santa Lucía,141,152,ambos
+1606_0,1606,LOC,aeropuerto Felipe Ángeles,157,182,modelo
+1606_0,1606,PER,Luis Cresencio Sandoval,208,231,modelo
+1606_0,1606,PER,José Rafael Ojeda Durán,272,295,modelo
+1606_0,1606,PER,Javier Jiménez Espriú,332,353,modelo
+1606_0,1606,PER,Ricardo Vallejo Suárez,423,445,modelo
+1606_0,1606,PER,Román Meyer,486,497,modelo
+1606_0,1606,LOC,Hidalgo,577,584,ambos
+1606_0,1606,PER,Omar Fayad,586,596,modelo
+1606_0,1606,LOC,Texcoco,958,965,ambos
+1606_0,1606,LOC,aeropuerto,995,1005,modelo
+1606_0,1606,LOC,Santa Lucía,1009,1020,regla
+1606_0,1606,LOC,Santa Lucía Felipe Ángeles,1009,1035,modelo
+1606_0,1606,LOC,Felipe Ángeles,1078,1092,modelo
+1606_0,1606,ORG,AM,1117,1119,modelo
+1606_0,1606,PER,LO,1119,1121,modelo
+1606_0,1606,FECHA,18 de marzo de 1938,1125,1144,regla
+1606_0,1606,PER,Andrés Manuel López Obrador,1242,1269,modelo
+1606_1,1606,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+1606_1,1606,LOC,aeropuerto de Santa Lucía Felipe Ángeles,53,93,modelo
+1606_1,1606,LOC,Santa Lucía,67,78,regla
+1606_1,1606,LOC,aeropuerto Felipe Ángeles,125,150,modelo
+1606_1,1606,ORG,AMLO,175,179,modelo
+1606_1,1606,FECHA,18 de marzo de 1938,183,202,regla
+1606_1,1606,PER,Andrés Manuel López Obrador,300,327,modelo
+1606_1,1606,FECHA,18 de marzo de 2020,342,361,regla
+1606_1,1606,ORG,Secretaría de la Defensa,463,487,modelo
+1606_1,1606,ORG,Secretaría de la Defensa,550,574,modelo
+1606_1,1606,ORG,Secretaría de la Defensa,746,770,modelo
+1606_1,1606,LOC,Santa Lucía,915,926,ambos
+1606_1,1606,LOC,Santa Lucía,962,973,ambos
+1606_1,1606,LOC,Toluca,994,1000,ambos
+1606_1,1606,LOC,Santa Lucía,1048,1059,ambos
+1606_2,1606,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+1606_2,1606,LOC,Santa Lucía,67,78,ambos
+1606_2,1606,LOC,Santa Lucía,114,125,ambos
+1606_2,1606,LOC,Toluca,146,152,ambos
+1606_2,1606,LOC,Santa Lucía,200,211,ambos
+1606_2,1606,PER,Claudia Sheinbaum,359,376,modelo
+1606_2,1606,PER,Alfredo del Mazo,449,465,modelo
+1606_2,1606,LOC,Estado de México,471,487,regla
+1606_2,1606,ORG,Estado de México,471,487,modelo
+1606_2,1606,LOC,Santa Lucía,755,766,ambos
+1606_2,1606,LOC,Toluca,927,933,ambos
+1606_2,1606,LOC,Ciudad de México,935,951,ambos
+1606_2,1606,LOC,Santa Lucía,954,965,ambos
+1606_2,1606,PER,Ricardo Vallejo Suárez,1089,1111,modelo
+1606_2,1606,LOC,aeropuerto Felipe Ángeles,1138,1163,modelo
+1606_2,1606,PER,Felipe Ángel,1173,1185,modelo
+1606_2,1606,LOC,es,1185,1187,modelo
+1626_3,1626,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+1640_5,1640,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+1640_5,1640,LOC,México,413,419,ambos
+1640_5,1640,ORG,Congreso,601,609,modelo
+1640_5,1640,LOC,Tamazula,1038,1046,modelo
+1685_4,1685,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+1685_4,1685,MONTO,tres mil 600 pesos,156,174,regla
+1685_4,1685,LOC,México,460,466,ambos
+1687_71,1687,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+1691_3,1691,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+1691_3,1691,ORG,Organización Campesina Independiente Emiliano Zapata,416,468,modelo
+1691_3,1691,LOC,Xagacía,993,1000,modelo
+1697_76,1697,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+1697_76,1697,ORG,IMSS-Bienestar,94,108,regla
+1698_100,1698,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+1698_100,1698,LOC,Yucatán,619,626,ambos
+1698_100,1698,LOC,Yucatán,694,701,ambos
+1698_100,1698,ORG,IMSS-Bienestar,737,751,regla
+1698_100,1698,ORG,IMSS-Bienestar,861,875,regla
+1698_100,1698,ORG,IMSS-Bienestar,1023,1037,regla
+1719_37,1719,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+1719_37,1719,MONTO,200 pesos,1072,1081,regla
+1733_3,1733,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+1777_18,1777,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+1777_18,1777,LOC,Oaxaca,141,147,ambos
+1777_18,1777,LOC,Santa Lucía,384,395,ambos
+1777_18,1777,LOC,Santa Lucía,450,461,ambos
+1777_18,1777,LOC,IPE ÁNGELES,551,562,modelo
+1782_43,1782,ORG,Guardia Nacional,79,95,ambos
+1782_43,1782,LOC,Sonora,116,122,ambos
+1782_43,1782,LOC,Chihuahua,125,134,ambos
+1782_43,1782,LOC,Ciudad de México,243,259,ambos
+1786_15,1786,PER,ALFONSO DURAZO MONTAÑO,0,22,ambos
+1786_15,1786,ORG,Guardia Nacional,140,156,ambos
+1786_15,1786,LOC,Casas Grandes,210,223,modelo
+1786_15,1786,ORG,Guardia Nacional,250,266,ambos
+1786_15,1786,LOC,Janos,293,298,modelo
+1786_15,1786,LOC,Zaragoza,301,309,modelo
+1786_15,1786,ORG,Guardia Nacional,335,351,ambos
+1786_15,1786,ORG,Ejército,667,675,modelo
+1787_11,1787,ORG,V,0,1,modelo
+1787_11,1787,ORG,HOM,7,10,modelo
+1787_11,1787,PER,Rocío Nahle,86,97,modelo
+1787_11,1787,LOC,Dos Bocas,186,195,ambos
+1787_11,1787,LOC,Tabasco,197,204,ambos
+1812_0,1812,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+1812_0,1812,LOC,Base Aérea Militar de Santa Lucía,174,207,modelo
+1812_0,1812,LOC,Santa Lucía,196,207,regla
+1812_0,1812,LOC,Felipe Ángeles,282,296,modelo
+1812_0,1812,LOC,Base Aérea Militar de Santa Lucía,304,337,modelo
+1812_0,1812,LOC,Santa Lucía,326,337,regla
+1812_0,1812,LOC,Ciudad de México,466,482,ambos
+1812_0,1812,LOC,Ciudad de México,535,551,ambos
+1812_0,1812,MONTO,100 mil millones de pesos,681,706,regla
+1812_0,1812,LOC,de Texcoco,776,786,modelo
+1812_0,1812,LOC,Texcoco,779,786,regla
+1812_0,1812,LOC,Aeropuerto Internacional 'General Felipe Ángeles,920,968,modelo
+1812_0,1812,LOC,Base Aérea Militar Santa Lucía,976,1006,modelo
+1812_0,1812,LOC,Santa Lucía,995,1006,regla
+1812_0,1812,LOC,Estado de México,1013,1029,regla
+1812_0,1812,ORG,Estado de México,1013,1029,modelo
+1812_0,1812,FECHA,2021,1042,1046,regla
+1812_0,1812,LOC,Ciudad de México,1126,1142,ambos
+1812_0,1812,LOC,Toluca,1167,1173,ambos
+1850_6,1850,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+1850_6,1850,ORG,Asociación Campesina Independiente Emiliano,295,338,modelo
+1850_6,1850,PER,Zapata,339,345,modelo
+1850_6,1850,ORG,Secretaría de la Defensa,971,995,modelo
+1850_6,1850,MONTO,cinco mil pesos,1082,1097,regla
+1870_19,1870,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+1870_19,1870,MONTO,cinco mil pesos,777,792,regla
+1870_19,1870,LOC,Tamaulipas,998,1008,ambos
+1870_19,1870,LOC,Tamaulipas,1094,1104,ambos
+1911_22,1911,PER,LUIS RODRÍGUEZ BUCIO,0,20,ambos
+1911_22,1911,ORG,GUARDIA NACIONAL,39,55,regla
+1911_22,1911,LOC,Sinaloa,83,90,ambos
+1911_22,1911,ORG,Guardia Nacional,235,251,ambos
+1911_22,1911,LOC,Sinaloa,255,262,ambos
+1911_22,1911,ORG,Sedena,334,340,ambos
+1911_22,1911,ORG,Semar,345,350,ambos
+1911_22,1911,ORG,Policía Federal,353,368,modelo
+1911_22,1911,LOC,Sonora,406,412,ambos
+1911_22,1911,ORG,Guardia Nacional,495,511,ambos
+1911_22,1911,ORG,Sedena,553,559,ambos
+1911_22,1911,ORG,Semar,561,566,ambos
+1911_22,1911,ORG,Policía Federal,569,584,modelo
+1911_22,1911,LOC,Sonora,647,653,ambos
+1911_22,1911,LOC,Tabasco,655,662,ambos
+1911_22,1911,ORG,Guardia Nacional,730,746,ambos
+1911_22,1911,ORG,Sedena,794,800,ambos
+1911_22,1911,ORG,Semar,802,807,ambos
+1911_22,1911,ORG,Policía Federal,810,825,modelo
+1911_22,1911,LOC,Tabasco,889,896,ambos
+1911_22,1911,LOC,Tamaulipas,898,908,ambos
+1911_22,1911,ORG,Guardia Nacional,988,1004,ambos
+1911_22,1911,ORG,Sedena,1045,1051,ambos
+1911_22,1911,ORG,Semar,1053,1058,ambos
+1911_22,1911,ORG,Policía Federal,1061,1076,modelo
+1911_22,1911,LOC,Tamaulipas,1139,1149,ambos
+1911_22,1911,LOC,Tlaxcala,1151,1159,ambos
+1911_22,1911,ORG,Guardia Nacional,1226,1242,ambos
+1911_23,1911,PER,LUIS RODRÍGUEZ BUCIO,0,20,ambos
+1911_23,1911,ORG,GUARDIA NACIONAL,39,55,regla
+1911_23,1911,ORG,Guardia Nacional,73,89,ambos
+1911_23,1911,ORG,Sedena,130,136,ambos
+1911_23,1911,ORG,Semar,138,143,ambos
+1911_23,1911,ORG,Policía Federal,146,161,modelo
+1911_23,1911,LOC,Tamaulipas,224,234,ambos
+1911_23,1911,LOC,Tlaxcala,236,244,ambos
+1911_23,1911,ORG,Guardia Nacional,311,327,ambos
+1911_23,1911,ORG,Sedena,373,379,ambos
+1911_23,1911,ORG,Policía Federal,382,397,modelo
+1911_23,1911,LOC,Tlaxcala,459,467,ambos
+1911_23,1911,LOC,Veracruz,469,477,ambos
+1911_23,1911,ORG,Sedena,581,587,ambos
+1911_23,1911,ORG,Semar,592,597,ambos
+1911_23,1911,ORG,Policía Federal,600,615,modelo
+1911_23,1911,LOC,Veracruz,676,684,ambos
+1911_23,1911,LOC,Yucatán,701,708,ambos
+1911_23,1911,ORG,Guardia Nacional,771,787,ambos
+1911_23,1911,ORG,Sedena,834,840,ambos
+1911_23,1911,ORG,Semar,877,882,ambos
+1911_23,1911,ORG,Policía Federal,892,907,modelo
+1911_23,1911,LOC,Yucatán,970,977,ambos
+1911_23,1911,LOC,Zacatecas,1005,1014,ambos
+1911_23,1911,ORG,Guardia Nacional,1084,1100,ambos
+1911_23,1911,ORG,Sedena,1153,1159,ambos
+1911_23,1911,ORG,Policía Federal,1165,1180,modelo
+1943_6,1943,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+1943_6,1943,MONTO,mil 160 pesos,114,127,regla
+1943_6,1943,MONTO,diez mil millones de pesos,407,433,regla
+1943_6,1943,LOC,Ciudad de México,541,557,ambos
+1943_6,1943,PER,Fox,560,563,modelo
+1943_6,1943,LOC,Ciudad de México,944,960,ambos
+1949_72,1949,PER,MARC,0,4,modelo
+1949_72,1949,PER,MARCERO EBRARD CASAUBON,0,23,regla
+1949_72,1949,PER,EBRARD CASAUBON,8,23,modelo
+1949_72,1949,LOC,México,278,284,regla
+1949_72,1949,ORG,México,278,284,modelo
+1949_72,1949,LOC,México,311,317,ambos
+1949_72,1949,MONTO,100 millones de dólares,332,355,regla
+1949_72,1949,ORG,Unión Europea,387,400,modelo
+1949_72,1949,LOC,Estados Unidos,453,467,regla
+1949_72,1949,ORG,Estados Unidos,453,467,modelo
+1949_72,1949,ORG,Guardia Nacional,728,744,ambos
+1949_72,1949,ORG,Guardia Nacional,817,833,ambos
+1998_12,1998,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+1998_12,1998,LOC,México,249,255,ambos
+1998_12,1998,LOC,Quintana Roo,511,523,ambos
+1998_12,1998,LOC,Quintana Roo,904,916,ambos
+1998_12,1998,LOC,Yucatán,921,928,ambos
+1998_12,1998,LOC,Campeche,933,941,ambos
+1998_12,1998,LOC,Chiapas,946,953,ambos
+1998_12,1998,LOC,Tabasco,958,965,ambos
+1998_12,1998,LOC,Veracruz,970,978,ambos
+2008_2,2008,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+2008_2,2008,MONTO,65 mil millones de pesos,81,105,regla
+2030_1,2030,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+2030_1,2030,LOC,México,43,49,ambos
+2030_1,2030,LOC,Colima,340,346,ambos
+2030_1,2030,MONTO,dos mil 550 pesos,530,547,regla
+2030_1,2030,MONTO,dos mil 550 pesos,911,928,regla
+2033_3,2033,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+2033_3,2033,LOC,Dos Bocas,620,629,ambos
+2033_3,2033,LOC,Tabasco,650,657,ambos
+2033_3,2033,LOC,Dos Bocas,786,795,ambos
+2033_3,2033,LOC,Campeche,877,885,ambos
+2033_3,2033,LOC,Tabasco,891,898,ambos
+2033_3,2033,LOC,Dos Bocas,946,955,ambos
+2045_9,2045,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+2045_9,2045,LOC,California,40,50,modelo
+2045_9,2045,ORG,Pemex,318,323,ambos
+2045_9,2045,ORG,Pemex,370,375,ambos
+2045_9,2045,LOC,Dos Bocas,955,964,ambos
+2045_9,2045,LOC,Paraíso,966,973,ambos
+2045_9,2045,LOC,Tabasco,975,982,ambos
+2045_9,2045,LOC,Dos Bocas,1034,1043,ambos
+2045_9,2045,LOC,Campeche,1133,1141,ambos
+2045_9,2045,LOC,Tabasco,1157,1164,ambos
+2045_9,2045,LOC,Dos Bocas,1210,1219,ambos
+2086_10,2086,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+2086_10,2086,PER,Felipe Ángeles,111,125,modelo
+2086_10,2086,PER,Felipe Ángeles,182,196,modelo
+2086_10,2086,LOC,Villa,207,212,modelo
+2086_10,2086,LOC,Morelos,292,299,ambos
+2086_10,2086,PER,Ángeles,503,510,modelo
+2086_10,2086,PER,Ángeles,644,651,modelo
+2086_10,2086,FECHA,noviembre de 1919,735,752,regla
+2086_10,2086,PER,Felipe Ángeles,799,813,modelo
+2086_10,2086,LOC,Santa Lucía,823,834,ambos
+2086_10,2086,LOC,Hidalgo,874,881,ambos
+2086_10,2086,PER,Felipe Ángeles,917,931,modelo
+2086_10,2086,LOC,Santa Lucía,1032,1043,ambos
+2088_3,2088,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+2088_3,2088,MONTO,mil 160 pesos,245,258,regla
+2088_3,2088,MONTO,dos mil 550 pesos,265,282,regla
+2088_3,2088,ORG,Pemex,662,667,ambos
+2088_3,2088,ORG,Ejército,685,693,modelo
+2088_3,2088,ORG,Comisión Federal de Electricidad,713,745,ambos
+2088_3,2088,MONTO,120 mil millones de pesos,808,833,regla
+2088_3,2088,LOC,México,867,873,ambos
+2088_3,2088,LOC,Istmo,953,958,modelo
+2088_3,2088,MONTO,mil 600 pesos,1167,1180,regla
+209_7,209,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+209_7,209,LOC,Guerrero,733,741,ambos
+209_7,209,LOC,Guerrero,800,808,ambos
+2115_4,2115,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+2115_4,2115,MONTO,65 mil millones de pesos,840,864,regla
+2115_4,2115,LOC,Michoacán,896,905,ambos
+2115_4,2115,LOC,Michoacán,999,1008,ambos
+2115_5,2115,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+2115_5,2115,LOC,Michoacán,132,141,ambos
+2115_5,2115,LOC,Torre de Pemex,370,384,modelo
+2115_5,2115,ORG,Pemex,379,384,regla
+2149_27,2149,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+2149_27,2149,LOC,Dos Bocas,398,407,ambos
+2149_27,2149,MONTO,50 mil millones de pesos,447,471,regla
+2149_27,2149,LOC,Sonda de Campeche,610,627,modelo
+2149_27,2149,LOC,Campeche,619,627,regla
+2149_27,2149,LOC,Tabasco,668,675,ambos
+2149_27,2149,LOC,Veracruz,680,688,ambos
+2149_27,2149,LOC,Dos Bocas,716,725,ambos
+2149_27,2149,LOC,Dos Bocas,738,747,ambos
+2149_27,2149,LOC,Dos Bocas,908,917,ambos
+216_81,216,PER,ÓSCAR DAVID LOZANO ÁGUILA,0,25,ambos
+216_81,216,LOC,Tren Maya,125,134,regla
+216_81,216,LOC,corredor interoceánico del Istmo de Tehuantepec,582,629,regla
+216_81,216,LOC,Istmo de Tehuantepec,609,629,modelo
+216_81,216,LOC,Tren Maya,637,646,regla
+216_81,216,LOC,Palenque,674,682,ambos
+216_81,216,LOC,Palenque,823,831,ambos
+216_81,216,LOC,Escárcega,909,918,ambos
+216_81,216,LOC,Campeche,998,1006,ambos
+216_81,216,LOC,Pomuch,1022,1028,modelo
+216_81,216,LOC,Pomuch,1033,1039,modelo
+216_81,216,LOC,Poxilá,1120,1126,modelo
+216_81,216,LOC,Mérida,1149,1155,ambos
+2170_1,2170,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+2171_28,2171,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+2190_6,2190,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+2190_6,2190,MONTO,mil millones de pesos,40,61,regla
+2190_6,2190,ORG,Corte,84,89,modelo
+2190_6,2190,MONTO,35 mil millones de pesos,347,371,regla
+2190_6,2190,MONTO,56 mil millones de pesos,540,564,regla
+2190_6,2190,LOC,Ciudad de México,983,999,ambos
+2191_4,2191,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+2191_4,2191,MONTO,65 mil millones de pesos,443,467,regla
+2191_4,2191,LOC,Ciudad de México,861,877,ambos
+2191_4,2191,LOC,Hidalgo,1010,1017,ambos
+2199_29,2199,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+2199_29,2199,LOC,Hidalgo,71,78,ambos
+2199_29,2199,LOC,México,288,294,ambos
+2202_5,2202,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+2202_5,2202,LOC,Santa Lucía,109,120,ambos
+2202_5,2202,FECHA,1978,280,284,regla
+2202_5,2202,ORG,Fuerzas Armadas,479,494,modelo
+2202_5,2202,PER,Luis Cresencio,684,698,modelo
+2202_5,2202,LOC,Santa Lucía,750,761,ambos
+2202_5,2202,LOC,Santa Lucía,815,826,ambos
+2202_5,2202,PER,Salinas Carranza,861,877,modelo
+2202_5,2202,ORG,Fuerza Aérea,929,941,modelo
+2202_5,2202,LOC,Santa Lucía,972,983,ambos
+2202_5,2202,PER,Felipe Ángeles,1014,1028,modelo
+2202_5,2202,PER,Felipe Ángeles,1039,1053,modelo
+2202_5,2202,ORG,Colegio Militar,1112,1127,modelo
+2202_5,2202,ORG,Colegio Militar,1157,1172,modelo
+2208_8,2208,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+2208_8,2208,ORG,Corte,120,125,modelo
+2208_8,2208,MONTO,35 mil millones de pesos,224,248,regla
+2208_8,2208,MONTO,65 mil millones de pesos,443,467,regla
+2209_3,2209,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+2209_3,2209,MONTO,dos mil 550 pesos,87,104,regla
+2209_3,2209,ORG,Issste,233,239,modelo
+2209_3,2209,ORG,Seguro,245,251,modelo
+2209_3,2209,ORG,Pemex,256,261,ambos
+2209_3,2209,ORG,Fuerzas Armadas,270,285,modelo
+2209_3,2209,LOC,Europa,1079,1085,modelo
+2209_3,2209,ORG,Estado,1112,1118,modelo
+2250_60,2250,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+2250_60,2250,LOC,Dos Bocas,78,87,ambos
+2250_60,2250,MONTO,80 mil millones de pesos,345,369,regla
+2259_13,2259,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+2265_8,2265,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+2265_8,2265,LOC,España,544,550,ambos
+2265_8,2265,LOC,México,634,640,ambos
+2265_8,2265,LOC,España,674,680,ambos
+2265_8,2265,LOC,España,719,725,ambos
+2265_8,2265,LOC,Ciudad Juárez,1058,1071,ambos
+2274_1,2274,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+2274_1,2274,LOC,México,368,374,ambos
+2274_1,2274,ORG,Pemex,884,889,ambos
+2274_1,2274,ORG,Pemex,906,911,ambos
+2274_1,2274,PER,Octavio Romero Oropeza,913,935,modelo
+2274_1,2274,PER,Luis Crescencio Sandoval,979,1003,modelo
+2274_1,2274,PER,Alejandro Gertz Manero,1032,1054,modelo
+2283_0,2283,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+2283_0,2283,MONTO,10 mil millones de pesos,113,137,regla
+2283_0,2283,MONTO,dos mil 400 pesos,284,301,regla
+2283_0,2283,MONTO,80 mil millones de pesos,835,859,regla
+2283_0,2283,ORG,Pemex,959,964,ambos
+228_7,228,LOC,México,27,33,ambos
+228_7,228,PER,Andrés Manuel López Obrador,208,235,modelo
+228_7,228,LOC,Estados Unidos,270,284,regla
+228_7,228,ORG,Estados Unidos Mexicanos,270,294,modelo
+228_7,228,ORG,Fuerzas Armadas,323,338,modelo
+228_7,228,LOC,Corredor Interoceánico del Istmo de Tehuantepec,340,387,regla
+228_7,228,LOC,Tehuantepec,376,387,modelo
+228_7,228,LOC,México,405,411,ambos
+228_7,228,LOC,Corredor Interoceánico del Istmo de Tehuantepec,435,482,regla
+228_7,228,ORG,Secretaría de Marina,500,520,ambos
+228_7,228,ORG,Empresa Multimodal Interoceánica,537,569,modelo
+228_7,228,ORG,S.A. de C.V,571,582,modelo
+228_7,228,ORG,Sistema Portuario Nacional,624,650,modelo
+228_7,228,LOC,Asiponas,673,681,modelo
+228_7,228,LOC,Salina Cruz,686,697,ambos
+228_7,228,LOC,Coatzacoalcos,699,712,ambos
+228_7,228,LOC,Dos Bocas,714,723,ambos
+228_7,228,LOC,Puerto Chiapas,726,740,modelo
+228_7,228,LOC,Chiapas,733,740,regla
+228_7,228,LOC,ferrocarril del Istmo de Tehuantepec,753,789,modelo
+228_7,228,LOC,Istmo de Tehuantepec,769,789,regla
+228_7,228,LOC,Océano Pacífico,844,859,modelo
+228_7,228,LOC,Océano Atlántico,867,883,modelo
+228_7,228,LOC,golfo de México,897,912,modelo
+228_7,228,LOC,México,906,912,regla
+228_7,228,LOC,Coatzacoalcos,1144,1157,ambos
+228_7,228,LOC,Salina Cruz,1247,1258,ambos
+239_64,239,PER,Andrés García,41,54,modelo
+239_64,239,ORG,Códice 21,90,99,modelo
+239_64,239,LOC,Acapulco,281,289,ambos
+239_64,239,ORG,Secretaría del Bienestar,548,572,ambos
+256_14,256,PER,JOSÉ RAFAEL OJEDA DURÁN,0,23,ambos
+256_14,256,LOC,Salina Cruz,50,61,ambos
+256_14,256,ORG,Gobierno de México,230,248,modelo
+256_14,256,LOC,México,242,248,regla
+256_14,256,LOC,Coatzacoalcos,442,455,ambos
+256_14,256,LOC,Salina Cruz,458,469,ambos
+256_14,256,LOC,Istmo de Tehuantepec,820,840,regla
+256_14,256,LOC,uante,832,837,modelo
+256_14,256,LOC,Istmo de Tehuantepec,930,950,ambos
+256_14,256,LOC,Istmo de Tehuantepec,1094,1114,regla
+256_14,256,LOC,uantepec,1106,1114,modelo
+256_14,256,PER,Morales Ángeles,1129,1144,modelo
+259_24,259,PER,GERMÁN MARTÍNEZ SANTOYO,0,23,ambos
+259_24,259,ORG,COMISIÓN NACIONAL DEL AGUA,48,74,ambos
+259_24,259,ORG,CONAGUA,76,83,ambos
+259_24,259,LOC,Acapulco,211,219,ambos
+259_24,259,LOC,Acapulco,1128,1136,ambos
+259_24,259,LOC,Coyuca,1161,1167,modelo
+275_12,275,ORG,V,0,1,modelo
+275_12,275,ORG,HOMBRE,4,10,modelo
+275_12,275,LOC,Acapulco,100,108,ambos
+275_12,275,LOC,Acapulco,297,305,ambos
+275_12,275,PER,Abelina López Rodríguez,307,330,modelo
+275_12,275,ORG,Fiscalía General,596,612,modelo
+275_12,275,LOC,Gurrero,627,634,modelo
+275_12,275,LOC,Acapulco,776,784,ambos
+275_12,275,LOC,Acapulco,931,939,ambos
+275_12,275,LOC,Acapulco,1026,1034,ambos
+275_12,275,LOC,Acapulco,1190,1198,ambos
+275_12,275,PER,Abelina López Rodríguez,1200,1223,modelo
+277_0,277,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+277_0,277,LOC,Tren Maya,203,212,regla
+277_0,277,LOC,Tren Maya,248,257,regla
+278_3,278,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+278_3,278,MONTO,350 mil millones de pesos,578,603,regla
+278_3,278,ORG,Banco del Bienestar,682,701,ambos
+278_3,278,LOC,Sinaloa,857,864,ambos
+278_3,278,PER,Rubén,878,883,modelo
+278_3,278,LOC,Sinaloa,1014,1021,ambos
+278_3,278,LOC,Sinaloa,1102,1109,ambos
+293_16,293,ORG,VOZ HOMBRE,0,10,modelo
+293_16,293,LOC,Acapulco,81,89,ambos
+293_16,293,FECHA,10 de noviembre,438,453,regla
+293_16,293,PER,Ricardo Castillo,591,607,modelo
+293_16,293,ORG,Agencia Quadratín Guerrero,624,650,modelo
+293_16,293,LOC,Guerrero,642,650,regla
+293_16,293,ORG,Uno,652,655,modelo
+293_16,293,FECHA,10 de noviembre,660,675,regla
+293_16,293,PER,Óscar Olguín,694,706,modelo
+293_16,293,PER,José Cárdenas,724,737,modelo
+293_16,293,ORG,Radio Fórmula,742,755,modelo
+293_16,293,PER,Ricardo Castillo,757,773,modelo
+305_3,305,PER,A,0,1,modelo
+305_3,305,PER,ANA ELIZABETH GARCÍA VILCHIS,0,28,regla
+305_3,305,FECHA,25 de octubre,239,252,regla
+305_3,305,ORG,Gobierno de México,284,302,modelo
+305_3,305,LOC,México,296,302,regla
+305_3,305,LOC,Acapulco,438,446,ambos
+305_3,305,LOC,Guerrero,448,456,ambos
+305_3,305,PER,López Obrador,543,556,modelo
+305_3,305,ORG,Centro de Huracanes de Estados Unidos,940,977,modelo
+305_3,305,LOC,Estados Unidos,963,977,regla
+305_3,305,LOC,Pacífico,1073,1081,modelo
+305_3,305,FECHA,2005,1248,1252,regla
+307_1,307,PER,JORGE ALCOCER VARELA,0,20,ambos
+307_1,307,FECHA,7 de noviembre,186,200,regla
+307_1,307,PER,Zoé Robledo,286,297,modelo
+307_1,307,ORG,IMSS-Bienestar,328,342,regla
+307_1,307,ORG,IMSS-Bienestar,482,496,regla
+307_1,307,LOC,Acapulco,609,617,ambos
+307_1,307,LOC,Coyuca de Benítez,620,637,modelo
+307_1,307,LOC,Acapulco,863,871,ambos
+307_1,307,LOC,Coyuca de Benítez,874,891,modelo
+309_36,309,PER,Armando Gama,44,56,modelo
+309_36,309,ORG,Once,62,66,modelo
+309_36,309,LOC,Acapulco,105,113,ambos
+309_36,309,LOC,Acapulco,149,157,ambos
+309_36,309,LOC,Coyuca de Benítez,160,177,modelo
+309_36,309,LOC,Acapulco,375,383,ambos
+309_36,309,LOC,Coyuca de Benítez,386,403,modelo
+309_36,309,LOC,Tierra Caliente,453,468,modelo
+316_0,316,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+316_0,316,LOC,Acapulco,172,180,ambos
+316_0,316,PER,Luis Cresencio Sandoval González,417,449,modelo
+316_0,316,PER,Ojeda,529,534,modelo
+316_0,316,LOC,Acapulco,610,618,ambos
+316_0,316,LOC,Acapulco,636,644,ambos
+317_0,317,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+317_0,317,LOC,Acapulco,209,217,ambos
+317_0,317,LOC,Coyuca de Benítez,230,247,modelo
+317_0,317,LOC,Acapulco,311,319,ambos
+317_0,317,PER,Rosa Icela Rodríguez,384,404,modelo
+317_0,317,LOC,Guerrero,476,484,ambos
+317_0,317,PER,Evelyn Salgado,486,500,modelo
+317_0,317,LOC,Acapulco,573,581,ambos
+317_0,317,PER,Rosa Icela,667,677,modelo
+317_3,317,PER,R,0,1,modelo
+317_3,317,PER,ROSA ICELA RODRÍGUEZ VELÁZQUEZ,0,30,regla
+317_3,317,PER,ICELA RODRÍGUEZ VELÁZQUEZ,5,30,modelo
+317_3,317,LOC,Acapulco,115,123,ambos
+317_3,317,ORG,Gobierno de México,204,222,modelo
+317_3,317,LOC,México,216,222,regla
+317_3,317,PER,Andrés Manuel López Obrador,308,335,modelo
+317_3,317,ORG,Secretaría de la Defensa Nacional,461,494,ambos
+317_3,317,ORG,Secretaría de Marina,502,522,ambos
+317_3,317,ORG,"Secretaría de Infraestructura, Comunicaciones y Transportes",530,589,ambos
+317_3,317,ORG,Secretaría de Seguridad y Protección Ciudadana,599,645,ambos
+317_3,317,ORG,Coordinación Nacional de Protección Civil,675,716,modelo
+317_3,317,LOC,México,1149,1155,regla
+317_3,317,LOC,Acapulco,1156,1164,regla
+317_3,317,LOC,capul,1157,1162,modelo
+317_3,317,LOC,Papagayo,1193,1201,modelo
+317_3,317,LOC,lpancing,1222,1230,modelo
+317_3,317,LOC,Acapulco,1232,1240,regla
+317_3,317,LOC,capul,1233,1238,modelo
+317_3,317,LOC,pancing,1303,1310,modelo
+317_3,317,LOC,Acapulco,1312,1320,regla
+317_3,317,LOC,capulco,1313,1320,modelo
+317_3,317,LOC,Juárez,1324,1330,modelo
+317_3,317,LOC,Papagayo,1359,1367,modelo
+326_25,326,ORG,DIRECCIÓN GENERAL DE INGENIEROS,0,31,modelo
+326_25,326,ORG,SECRETARÍA DE LA DEFENSA NACIONAL,38,71,ambos
+326_25,326,ORG,SEDENA,73,79,ambos
+326_25,326,LOC,Tren Maya,94,103,regla
+338_4,338,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+338_4,338,PER,Peña Nieto,622,632,modelo
+338_4,338,MONTO,100 mil millones de pesos,881,906,regla
+338_4,338,PER,Abraham,999,1006,modelo
+341_1,341,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+341_1,341,ORG,Social,278,284,modelo
+341_1,341,LOC,Chimalhuacán,1094,1106,modelo
+343_2,343,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+343_2,343,LOC,Ecatepec,100,108,modelo
+343_2,343,LOC,Estado de México,121,137,regla
+343_2,343,ORG,Estado de México,121,137,modelo
+343_2,343,PER,Delfina Gómez Álvarez,339,360,modelo
+343_2,343,LOC,Estado de México,397,413,regla
+343_2,343,ORG,Estado de México,397,413,modelo
+343_2,343,PER,Delfina,473,480,modelo
+343_2,343,LOC,Ecatepec,678,686,modelo
+343_2,343,FECHA,enero,870,875,regla
+347_71,347,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+347_71,347,ORG,Banco del Bienestar,737,756,ambos
+354_33,354,PER,RAYMUNDO MORALES ÁNGELES,0,24,ambos
+354_33,354,LOC,CORREDOR INTEROCEÁNICO DEL ISTMO DE TEHUANTEPEC,47,94,regla
+354_33,354,ORG,CORREDOR INTEROCEÁNICO DEL ISTMO DE TEHUANTEPEC,47,94,modelo
+354_33,354,LOC,CIIT,96,100,regla
+354_33,354,ORG,CIIT,96,100,modelo
+354_33,354,LOC,Corredor Interoceánico del Istmo de Tehuantepec,182,229,regla
+354_33,354,LOC,Tehuantepec,218,229,modelo
+354_33,354,ORG,Gobierno de México,261,279,modelo
+354_33,354,LOC,México,273,279,regla
+354_33,354,ORG,Ferrocarril del Istmo de Tehuantepec,442,478,modelo
+354_33,354,LOC,Istmo de Tehuantepec,458,478,regla
+354_33,354,LOC,Corredor Interoceánico,483,505,regla
+354_33,354,LOC,Salina Cruz,529,540,ambos
+354_33,354,LOC,Coatzacoalcos,542,555,ambos
+354_33,354,LOC,Puerto Chiapas,557,571,modelo
+354_33,354,LOC,Chiapas,564,571,regla
+354_33,354,LOC,Dos Bocas,574,583,ambos
+354_33,354,LOC,Istmo de Tehuantepec,846,866,ambos
+354_33,354,LOC,Coatzacoalcos,936,949,ambos
+354_33,354,LOC,Salina Cruz,952,963,ambos
+354_33,354,FECHA,diciembre de este año,1178,1199,regla
+354_33,354,LOC,Coatzacoalcos,1289,1302,ambos
+354_33,354,LOC,Palenque,1305,1313,ambos
+354_38,354,LOC,Istmo de Tehuantepec,43,63,ambos
+354_38,354,LOC,Corredor Interoceánico,151,173,regla
+354_38,354,LOC,Coatzacoalcos,236,249,ambos
+354_38,354,LOC,Salina Cruz,252,263,ambos
+354_38,354,LOC,Ferrocarril del Istmo,276,297,modelo
+354_38,354,LOC,océano Pacífico,568,583,modelo
+354_38,354,LOC,Atlántico,591,600,modelo
+354_38,354,LOC,Corredor Interoceánico,605,627,regla
+354_38,354,LOC,Asia,784,788,modelo
+354_38,354,LOC,Estados Unidos,848,862,ambos
+354_38,354,LOC,Centro,921,927,modelo
+354_38,354,LOC,Sudamérica,930,940,modelo
+354_38,354,LOC,Istmo de Tehuantepec,986,1006,ambos
+354_38,354,LOC,Corredor Interoceánico,1030,1052,regla
+369_8,369,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+369_8,369,FECHA,septiembre,228,238,regla
+369_8,369,FECHA,septiembre,349,359,regla
+369_8,369,FECHA,septiembre,390,400,regla
+369_8,369,LOC,Cuaji,585,590,modelo
+369_8,369,LOC,Cuaji,1187,1192,modelo
+396_23,396,ORG,DIRECCIÓN GENERAL DE INGENIEROS,0,31,modelo
+396_23,396,ORG,SECRETARÍA DE LA DEFENSA NACIONAL,38,71,ambos
+396_23,396,ORG,SEDENA,73,79,ambos
+396_23,396,LOC,Mérida,409,415,ambos
+396_23,396,LOC,La Plancha,467,477,modelo
+396_23,396,LOC,Tren Maya,534,543,regla
+396_23,396,LOC,Umán,666,670,modelo
+396_23,396,LOC,Teya,673,677,modelo
+396_23,396,FECHA,noviembre del presente año,769,795,regla
+396_23,396,LOC,Tren Maya,1031,1040,regla
+396_23,396,LOC,Mérida,1068,1074,ambos
+396_23,396,LOC,Tren Maya,1155,1164,regla
+396_23,396,ORG,Tren Maya,1155,1164,modelo
+396_24,396,ORG,DIRECCIÓN GENERAL DE INGENIEROS,0,31,modelo
+396_24,396,ORG,SECRETARÍA DE LA DEFENSA NACIONAL,38,71,ambos
+396_24,396,ORG,SEDENA,73,79,ambos
+396_24,396,LOC,Tren Maya,185,194,regla
+396_24,396,LOC,Mérida,222,228,ambos
+396_24,396,LOC,Tren Maya,309,318,regla
+396_24,396,ORG,Tren Maya,309,318,modelo
+419_11,419,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+419_11,419,ORG,Banco del Bienestar,720,739,ambos
+419_11,419,LOC,Puebla,776,782,ambos
+419_11,419,ORG,Banco del Bienestar,815,834,ambos
+419_11,419,ORG,Banco del Bienestar,1034,1053,ambos
+419_11,419,LOC,Puebla,1093,1099,ambos
+419_11,419,ORG,Banco del Bienestar,1128,1147,ambos
+419_11,419,ORG,Banco del Bienestar,1212,1231,ambos
+420_10,420,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+420_10,420,ORG,Banco del Bienestar,97,116,ambos
+420_10,420,ORG,Banco del Bienestar,452,471,ambos
+420_10,420,ORG,Banco del Bienestar,554,573,ambos
+420_10,420,LOC,Álamo,583,588,modelo
+420_10,420,PER,Víctor,607,613,modelo
+420_10,420,ORG,Banco del Bienestar,717,736,ambos
+420_10,420,LOC,México,845,851,ambos
+420_10,420,ORG,Banco del Bienestar,856,875,ambos
+463_29,463,PER,LUIS CRESENCIO SANDOVAL GONZÁLEZ,0,32,ambos
+463_29,463,ORG,Guardia Nacional,185,201,ambos
+463_29,463,ORG,Fuerzas Armadas,211,226,modelo
+463_29,463,ORG,Guardia Nacional,254,270,ambos
+463_29,463,ORG,Ejército,276,284,modelo
+463_29,463,ORG,Fuerza Aérea,292,304,modelo
+463_29,463,ORG,Secretaría de Marina,313,333,ambos
+463_29,463,LOC,Tren Maya,810,819,regla
+463_29,463,ORG,Guardia Nacional,962,978,ambos
+463_29,463,ORG,Guardia,1035,1042,modelo
+463_29,463,ORG,Ejército,1100,1108,modelo
+463_29,463,ORG,Guardia Nacional,1196,1212,ambos
+463_29,463,ORG,Armada,1237,1243,modelo
+475_12,475,PER,LUIS CRESENCIO SANDOVAL GONZÁLEZ,0,32,ambos
+475_12,475,ORG,Guardia Nacional,69,85,ambos
+475_12,475,ORG,Guardia Nacional,222,238,ambos
+475_12,475,ORG,Guardia Nacional,313,329,ambos
+475_12,475,ORG,Ejército,393,401,modelo
+475_12,475,ORG,Armada,481,487,modelo
+475_12,475,ORG,Fuerza Aérea,562,574,modelo
+475_12,475,ORG,Guardia Nacional,744,760,ambos
+475_12,475,FECHA,2024,805,809,regla
+475_12,475,FECHA,2024,997,1001,regla
+475_12,475,ORG,Guardia,1037,1044,modelo
+475_12,475,ORG,Guardia Nacional,1126,1142,ambos
+476_28,476,PER,DIEGO PRIETO HERNÁNDEZ,0,22,ambos
+476_28,476,ORG,INSTITUTO NACIONAL DE ANTROPOLOGÍA E HISTORIA,45,90,ambos
+476_28,476,ORG,INAH,92,96,ambos
+476_28,476,LOC,Museo del Puuc,367,381,modelo
+476_28,476,LOC,Mérida,542,548,ambos
+476_28,476,LOC,Yucatán,550,557,ambos
+476_28,476,LOC,Dzibilchaltún,562,575,modelo
+476_28,476,LOC,Tren Maya,893,902,ambos
+476_28,476,LOC,Centro de Atención a Visitantes,973,1004,modelo
+476_28,476,LOC,Tren Maya,1075,1084,regla
+478_44,478,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+478_44,478,PER,Francisco,411,420,modelo
+478_44,478,LOC,Europa,1092,1098,modelo
+478_44,478,LOC,Rusia,1168,1173,regla
+478_44,478,LOC,Ucrania,1174,1181,regla
+484_19,484,PER,LUIS CRESENCIO SANDOVAL GONZÁLEZ,0,32,ambos
+484_19,484,ORG,Guardia Nacional,247,263,ambos
+484_19,484,ORG,Ejército,269,277,modelo
+484_19,484,ORG,Fuerza Aérea,285,297,modelo
+484_19,484,ORG,Secretaría de Marina,306,326,ambos
+484_19,484,ORG,Estado,389,395,modelo
+484_19,484,LOC,Tren Maya,908,917,regla
+484_19,484,LOC,Maya,913,917,modelo
+484_19,484,ORG,Guardia Nacional,956,972,ambos
+484_19,484,ORG,Guardia Nacional,1029,1045,ambos
+484_19,484,ORG,Guardia Nacional,1074,1090,ambos
+484_19,484,ORG,Guardia Nacional,1178,1194,ambos
+484_19,484,ORG,Fuerzas Armadas,1231,1246,modelo
+484_19,484,ORG,Guardia Nacional,1288,1304,ambos
+484_20,484,PER,LUIS CRESENCIO SANDOVAL GONZÁLEZ,0,32,ambos
+484_20,484,ORG,Guardia Nacional,75,91,ambos
+484_20,484,ORG,Guardia Nacional,120,136,ambos
+484_20,484,ORG,Guardia Nacional,224,240,ambos
+484_20,484,ORG,Fuerzas Armadas,277,292,modelo
+484_20,484,ORG,Guardia Nacional,334,350,ambos
+484_20,484,ORG,Ejército,424,432,modelo
+484_20,484,ORG,Armada,526,532,modelo
+484_20,484,ORG,Fuerza Aérea,604,616,modelo
+484_20,484,ORG,Guardia,834,841,modelo
+484_20,484,FECHA,2024,890,894,regla
+484_20,484,ORG,Guardia,970,977,modelo
+484_20,484,FECHA,2024,1168,1172,regla
+487_29,487,PER,JOAO PEDRO PARREIRA,0,19,ambos
+487_29,487,ORG,MOTA-ENGIL LATINOAMÉRICA,56,80,modelo
+487_29,487,LOC,Chiapas,162,169,ambos
+487_29,487,LOC,Palenque,197,205,ambos
+487_29,487,LOC,Chiapas,207,214,ambos
+487_29,487,LOC,Tren Maya,250,259,regla
+487_29,487,LOC,Palenque,275,283,ambos
+487_29,487,LOC,Tren Maya,468,477,regla
+487_29,487,LOC,Tren Maya,730,739,regla
+487_29,487,LOC,El Triunfo,925,935,modelo
+487_29,487,LOC,Triunfo,1152,1159,modelo
+487_29,487,LOC,Tabasco,1161,1168,ambos
+490_61,490,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+490_61,490,LOC,Tuxtla,93,99,modelo
+490_61,490,LOC,Tuxtla Gutiérrez,167,183,modelo
+490_61,490,LOC,Chiapas,185,192,ambos
+490_61,490,LOC,Tuxtla Gutiérrez,212,228,modelo
+490_61,490,LOC,Chiapas,230,237,ambos
+490_61,490,ORG,Bancos del Bienestar,303,323,modelo
+490_61,490,ORG,Banco del Bienestar,329,348,ambos
+490_61,490,ORG,Banco,472,477,modelo
+490_61,490,ORG,del Bienestar,479,492,modelo
+490_61,490,LOC,Chiapas,497,504,ambos
+490_61,490,ORG,Banco,544,549,modelo
+490_61,490,ORG,del Bienestar,551,564,modelo
+490_61,490,LOC,Oaxaca,606,612,ambos
+490_61,490,LOC,Oaxaca,633,639,ambos
+490_61,490,ORG,Banco del Bienestar,719,738,ambos
+490_61,490,ORG,Banco del Bienestar,778,797,ambos
+490_61,490,LOC,Chiapas,812,819,ambos
+490_61,490,ORG,Banco del Bienestar,1115,1134,ambos
+490_61,490,LOC,Oaxaca,1161,1167,ambos
+499_68,499,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+499_68,499,PER,Rosa Icela,121,131,modelo
+499_68,499,ORG,Banco del Bienestar,257,276,ambos
+499_68,499,ORG,Banco del Bienestar,412,431,ambos
+499_68,499,ORG,Banco del Bienestar,451,470,ambos
+499_68,499,LOC,Zacatecas,487,496,ambos
+499_68,499,ORG,Banco del Bienestar,685,704,ambos
+499_68,499,ORG,Azteca,1029,1035,modelo
+499_68,499,ORG,Azteca,1174,1180,modelo
+499_68,499,FECHA,julio,1186,1191,regla
+504_31,504,ORG,SECRETARÍA DE LA DEFENSA NACIONAL,0,33,ambos
+504_31,504,ORG,SEDENA,35,41,ambos
+504_31,504,ORG,INAH,143,147,ambos
+504_31,504,LOC,Tren Maya,604,613,regla
+504_31,504,LOC,Corredor Interoceánico del Istmo de Tehuantepec,663,710,regla
+504_31,504,ORG,Corredor Interoceánico del Istmo de Tehuantepec,663,710,modelo
+504_31,504,ORG,Secretaría de Marina,730,750,ambos
+504_31,504,LOC,Palenque,904,912,ambos
+504_31,504,LOC,Corredor Interoceánico,948,970,regla
+504_31,504,ORG,dor,953,956,modelo
+504_31,504,ORG,oceánico,962,970,modelo
+504_31,504,LOC,Tren Maya,976,985,regla
+504_31,504,LOC,Campeche,1033,1041,ambos
+504_31,504,LOC,Progreso,1046,1054,modelo
+504_31,504,LOC,Mérida,1059,1065,ambos
+504_31,504,LOC,Cancún,1070,1076,ambos
+504_31,504,LOC,Chetumal,1082,1090,ambos
+504_31,504,ORG,Petróleos Mexicanos,1218,1237,ambos
+504_31,504,ORG,Pemex,1257,1262,ambos
+504_31,504,LOC,Tren Maya,1293,1302,regla
+507_44,507,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+507_44,507,FECHA,julio,223,228,regla
+507_44,507,ORG,Banco del Bienestar,261,280,ambos
+507_44,507,LOC,México,325,331,ambos
+507_44,507,ORG,Banco del Bienestar,440,459,ambos
+507_44,507,FECHA,julio,718,723,regla
+507_44,507,ORG,Banco del Bienestar,851,870,ambos
+507_44,507,MONTO,600 mil millones de pesos,871,896,regla
+507_44,507,ORG,Hacienda,1078,1086,modelo
+525_29,525,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+525_29,525,ORG,Banco del Bienestar,400,419,ambos
+525_29,525,LOC,Jalisco,443,450,ambos
+525_29,525,ORG,Banco del Bienestar,501,520,ambos
+525_29,525,ORG,Banco del Bienestar,636,655,ambos
+525_29,525,MONTO,600 mil millones de pesos,701,726,regla
+525_29,525,ORG,Banco del Bienestar,961,980,ambos
+525_29,525,ORG,Secretaría de la Defensa,1148,1172,modelo
+545_1,545,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+545_1,545,ORG,Seguro Social,69,82,modelo
+545_1,545,ORG,IMSS-Bienestar,342,356,regla
+545_1,545,ORG,SS-Bienestar,344,356,modelo
+545_1,545,PER,Zoé,387,390,modelo
+549_11,549,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+549_11,549,ORG,Banco del Bienestar,162,181,ambos
+549_11,549,LOC,Oaxaca,200,206,ambos
+549_11,549,LOC,Oaxaca,291,297,ambos
+549_11,549,LOC,México,303,309,ambos
+549_11,549,ORG,Banco del Bienestar,313,332,ambos
+549_11,549,LOC,Rusia,793,798,ambos
+549_11,549,LOC,Ucrania,801,808,ambos
+549_11,549,FECHA,julio,999,1004,regla
+549_11,549,ORG,Banco del Bienestar,1052,1071,ambos
+549_11,549,LOC,Oaxaca,1075,1081,ambos
+557_19,557,PER,LUIS CRESENCIO SANDOVAL GONZÁLEZ,0,32,ambos
+557_19,557,ORG,Guardia,273,280,modelo
+557_19,557,ORG,Guardia,324,331,modelo
+557_19,557,FECHA,marzo del 24,547,559,regla
+557_19,557,ORG,Guardia Nacional,599,615,ambos
+557_19,557,ORG,Ejército,758,766,modelo
+557_19,557,ORG,Guardia Nacional,811,827,ambos
+557_19,557,ORG,Fuerza Aérea,869,881,modelo
+557_19,557,ORG,Marina,932,938,modelo
+557_19,557,ORG,Guardia Nacional,1128,1144,ambos
+557_19,557,ORG,Guardia,1178,1185,modelo
+564_101,564,PER,Rocío Nahle,48,59,modelo
+564_101,564,LOC,Dos Bocas,118,127,ambos
+564_101,564,LOC,Dos Bocas,141,150,ambos
+578_0,578,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+578_0,578,PER,Ricardo Mejía,274,287,modelo
+578_0,578,PER,Diego Prieto,311,323,modelo
+578_0,578,ORG,Instituto Nacional de Antropología e Historia,338,383,ambos
+578_0,578,LOC,Tren Maya,529,538,regla
+578_0,578,LOC,Tren Maya,654,663,regla
+578_0,578,LOC,Tren Maya,824,833,regla
+578_0,578,PER,Ricardo,1022,1029,modelo
+629_2,629,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+629_2,629,ORG,IMSS-Bienestar,671,685,ambos
+629_2,629,ORG,IMSS-Bienestar,792,806,ambos
+629_2,629,PER,Zoé,934,937,modelo
+630_73,630,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+630_73,630,ORG,Banco del Bienestar,93,112,ambos
+630_73,630,FECHA,noviembre,117,126,regla
+630_73,630,LOC,Ciudad de México,229,245,ambos
+630_73,630,ORG,Gobierno,413,421,modelo
+630_73,630,PER,Claudia Sheinbaum,423,440,modelo
+630_73,630,PER,Sandoval,457,465,modelo
+630_73,630,LOC,Ciudad Deportiva,477,493,modelo
+630_73,630,LOC,Iztacalco,497,506,modelo
+630_73,630,ORG,del Bienestar,731,744,modelo
+630_73,630,ORG,Banco del Bienestar,921,940,ambos
+657_54,657,PER,Yesenia Peralta,45,60,modelo
+657_54,657,ORG,Business Energy,65,80,modelo
+657_54,657,LOC,Tabasco,82,89,ambos
+657_54,657,LOC,Dos Bocas,232,241,ambos
+657_54,657,LOC,Tabasco,388,395,ambos
+657_54,657,LOC,Dos Bocas,537,546,ambos
+657_54,657,LOC,Dos Bocas,671,680,ambos
+657_54,657,LOC,Paraíso,784,791,ambos
+657_54,657,LOC,Tabasco,877,884,ambos
+686_14,686,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+686_14,686,PER,Bartlett,74,82,modelo
+686_14,686,PER,Sandoval,103,111,modelo
+686_14,686,ORG,Banco del Bienestar,155,174,ambos
+686_14,686,ORG,Banco del Bienestar,277,296,ambos
+686_14,686,ORG,Banco del Bienestar,335,354,ambos
+686_14,686,MONTO,mil millones de pesos,370,391,regla
+686_14,686,FECHA,2024,401,405,regla
+686_14,686,MONTO,600 mil millones de pesos,425,450,regla
+686_14,686,ORG,Banco del Bienestar,537,556,ambos
+686_14,686,ORG,Banco del Bienestar,627,646,ambos
+686_14,686,ORG,Banco del Bienestar,732,751,ambos
+744_69,744,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+744_69,744,FECHA,2024,202,206,regla
+745_5,745,PER,A,0,1,modelo
+745_5,745,PER,ANA ELIZABETH GARCÍA VILCHIS,0,28,regla
+745_5,745,PER,VIL,21,24,modelo
+745_5,745,ORG,República,70,79,modelo
+745_5,745,LOC,México,151,157,ambos
+745_5,745,PER,Carlos Loret de Mola,188,208,modelo
+745_5,745,LOC,Dos Bocas,295,304,ambos
+745_5,745,LOC,ref,400,403,modelo
+745_5,745,LOC,refinería Olmeca,400,416,regla
+745_5,745,LOC,Olmeca,410,416,modelo
+745_5,745,LOC,Dos Bocas,433,442,ambos
+745_5,745,LOC,Paraíso,444,451,ambos
+745_5,745,LOC,Tabasco,453,460,ambos
+745_5,745,PER,Carlos Loret de Mola,462,482,modelo
+745_5,745,ORG,Latinus,552,559,modelo
+745_5,745,ORG,Twitter,584,591,modelo
+745_5,745,LOC,Dos Bocas,710,719,ambos
+745_5,745,ORG,W Radio,771,778,modelo
+745_5,745,PER,Loret,794,799,modelo
+745_5,745,LOC,Dos Bocas,829,838,ambos
+745_5,745,FECHA,2024,1131,1135,regla
+745_5,745,PER,Loret,1155,1160,modelo
+754_67,754,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+754_67,754,LOC,Tabasco,105,112,ambos
+754_67,754,LOC,Dos Bocas,173,182,ambos
+754_67,754,PER,uhtémoc,216,223,modelo
+754_67,754,LOC,Dos Bocas,227,236,ambos
+771_54,771,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+771_54,771,ORG,Agricultura,587,598,modelo
+771_54,771,MONTO,cinco mil pesos,673,688,regla
+771_54,771,MONTO,29 mil millones de pesos,797,821,regla
+771_54,771,LOC,Guerrero,937,945,ambos
+771_54,771,LOC,Morelos,1009,1016,ambos
+771_54,771,LOC,Puebla,1020,1026,ambos
+771_54,771,LOC,Oaxaca,1028,1034,ambos
+771_54,771,LOC,Chiapas,1036,1043,ambos
+771_54,771,LOC,Zacatecas,1045,1054,ambos
+771_54,771,LOC,Durango,1056,1063,ambos
+771_54,771,LOC,Nayarit,1065,1072,ambos
+771_54,771,LOC,Veracruz,1085,1093,ambos
+776_72,776,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+776_72,776,LOC,Tabasco,541,548,ambos
+776_72,776,LOC,Chiapas,554,561,ambos
+786_90,786,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+786_90,786,PER,Jacinto Po,416,426,modelo
+788_15,788,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+788_15,788,LOC,Estados Unidos,259,273,regla
+788_15,788,ORG,Estados Unidos,259,273,modelo
+788_15,788,MONTO,mil 300 millones de dólares,294,321,regla
+788_15,788,LOC,Estados Unidos,416,430,regla
+788_15,788,ORG,Estados Unidos,416,430,modelo
+788_15,788,LOC,Canadá,438,444,ambos
+788_15,788,LOC,Europa,468,474,modelo
+788_15,788,ORG,Secretaría de la Defensa,585,609,modelo
+788_16,788,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+788_16,788,ORG,Secretaría de la Defensa,139,163,modelo
+788_16,788,LOC,Guadalupe,306,315,modelo
+788_16,788,LOC,Calvo,318,323,modelo
+788_16,788,PER,Ariadna,977,984,modelo
+796_2,796,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+796_2,796,LOC,Chihuahua,144,153,ambos
+796_2,796,LOC,Sonora,159,165,ambos
+796_2,796,LOC,México,194,200,ambos
+796_2,796,FECHA,enero del 24,457,469,regla
+796_2,796,LOC,Chihuahua,723,732,ambos
+796_2,796,LOC,Sonora,738,744,ambos
+798_5,798,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+798_5,798,LOC,Etchojoa,179,187,modelo
+798_5,798,LOC,Etchojoa,331,339,modelo
+798_5,798,LOC,Etchojoa,685,693,modelo
+798_5,798,MONTO,cuatro mil 900 pesos,832,852,regla
+798_5,798,PER,Marath Baruch Bolaños López,1021,1048,modelo
+798_5,798,ORG,Jóvenes Construyendo el Futur,1107,1136,modelo
+798_5,798,PER,Abraham Vázquez Piceno,1183,1205,modelo
+834_74,834,LOC,Veracruz,183,191,ambos
+834_74,834,LOC,Dos Bocas,279,288,ambos
+834_74,834,FECHA,junio,312,317,regla
+834_74,834,ORG,Grupo Cantón,347,359,modelo
+834_74,834,LOC,Dos Bocas,743,752,ambos
+834_74,834,LOC,Tabasco,757,764,ambos
+845_12,845,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+848_14,848,ORG,INTERLOCUTORA,0,13,modelo
+848_14,848,FECHA,próximo 5 de abril,32,50,regla
+848_14,848,ORG,Suprema Corte de Justicia,57,82,modelo
+848_14,848,FECHA,2021,211,215,regla
+848_14,848,ORG,Cámara de Diputados,242,261,modelo
+848_14,848,ORG,Cámara de Senadores,279,298,modelo
+848_14,848,ORG,Comisión Federal de Electricidad,363,395,ambos
+848_14,848,ORG,Cofece,573,579,modelo
+848_14,848,LOC,Colima,629,635,ambos
+848_14,848,ORG,Suprema Corte,769,782,modelo
+848_14,848,PER,Loretta Ortiz Ahlf,812,830,modelo
+848_14,848,ORG,CFE,1130,1133,ambos
+865_14,865,ORG,V,0,1,modelo
+865_14,865,ORG,MU,4,6,modelo
+865_14,865,ORG,IMSS-Bienestar,166,180,regla
+907_68,907,ORG,Cámara de Diputados,196,215,modelo
+907_68,907,ORG,CFE,300,303,ambos
+907_68,907,ORG,CFE,448,451,ambos
+907_68,907,ORG,CFE,580,583,ambos
+90_3,90,PER,Z,0,1,modelo
+90_3,90,PER,ZOÉ ROBLEDO ABURTO,0,18,regla
+90_3,90,ORG,INSTITUTO MEXICANO DEL SEGURO SOCIAL,41,77,ambos
+90_3,90,ORG,IMSS,79,83,ambos
+90_3,90,ORG,IMSS-Bienestar,187,201,ambos
+90_3,90,PER,Andrés Manuel López Obrador,281,308,modelo
+90_3,90,ORG,Secretaría de Salud,573,592,ambos
+90_3,90,ORG,IMSS-Bienestar,658,672,ambos
+90_3,90,ORG,IMSS-Bienestar,1078,1092,ambos
+90_3,90,FECHA,2021,1103,1107,regla
+910_30,910,PER,MIGUEL SANTIAGO REYES HERNÁNDEZ,0,31,ambos
+910_30,910,ORG,CFE,807,810,ambos
+910_30,910,ORG,CFE,885,888,ambos
+910_30,910,ORG,CFE,1062,1065,ambos
+917_1,917,PER,A,0,1,modelo
+917_1,917,PER,ANA ELIZABETH GARCÍA VILCHIS,0,28,regla
+917_1,917,LOC,Dos Bocas,133,142,ambos
+917_1,917,LOC,Dos Bocas,274,283,ambos
+917_1,917,LOC,Tabasco,285,292,ambos
+917_1,917,ORG,Reforma,400,407,modelo
+917_1,917,ORG,Animal Político,409,424,modelo
+917_1,917,ORG,El Universal,426,438,modelo
+917_1,917,LOC,Dos Bocas,539,548,ambos
+917_1,917,ORG,Reforma,657,664,modelo
+917_1,917,ORG,Proceso,677,684,modelo
+917_1,917,ORG,Diario de Yucatán,686,703,modelo
+917_1,917,LOC,Yucatán,696,703,regla
+917_1,917,PER,Rocío Nahle,934,945,modelo
+928_1,928,PER,A,0,1,modelo
+928_1,928,PER,ANA ELIZABETH GARCÍA VILCHIS,0,28,regla
+928_1,928,LOC,México,232,238,ambos
+928_1,928,LOC,Santa Lucía,604,615,ambos
+928_1,928,LOC,Santa Lucía,717,728,ambos
+928_1,928,LOC,Santa Lucía,932,943,ambos
+928_1,928,FECHA,20 de septiembre,948,964,regla
+928_1,928,LOC,Felipe Ángeles,1042,1056,modelo
+928_1,928,LOC,Torre de Pisa,1102,1115,modelo
+928_1,928,LOC,Italia,1120,1126,ambos
+928_1,928,LOC,Felipe ‘Ángeles,1163,1178,modelo
+928_2,928,PER,A,0,1,modelo
+928_2,928,PER,ANA ELIZABETH GARCÍA VILCHIS,0,28,regla
+928_2,928,LOC,Santa Lucía,75,86,ambos
+928_2,928,FECHA,20 de septiembre,91,107,regla
+928_2,928,LOC,Felipe Ángeles,185,199,modelo
+928_2,928,LOC,Torre de Pisa,245,258,modelo
+928_2,928,LOC,Italia,263,269,ambos
+928_2,928,LOC,Felipe ‘Ángeles,306,321,modelo
+928_2,928,LOC,aeropuerto de Santa Lucía,587,612,modelo
+928_2,928,LOC,Santa Lucía,601,612,regla
+928_2,928,LOC,aeropuerto de Santa Lucía,964,989,modelo
+928_2,928,LOC,Santa Lucía,978,989,regla
+928_2,928,PER,Felipe Calderón,1052,1067,modelo
+928_2,928,PER,Emilio Álvarez Icaza,1080,1100,modelo
+928_2,928,PER,Paola Migoya,1103,1115,modelo
+928_2,928,ORG,Frente Cívico Nacional,1131,1153,modelo
+933_33,933,ORG,Comisión Federal de Electricidad,193,225,ambos
+933_33,933,ORG,Pemex,259,264,ambos
+933_33,933,ORG,CFE,273,276,ambos
+947_16,947,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+947_16,947,LOC,Nayarit,43,50,ambos
+947_16,947,ORG,IMSS-Bienestar,83,97,regla
+947_16,947,LOC,Dinamarca,944,953,modelo
+947_16,947,LOC,Suecia,958,964,modelo
+947_16,947,ORG,Estado de,995,1004,modelo
+951_7,951,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+951_7,951,LOC,Zitácuaro,271,280,modelo
+951_7,951,LOC,Zitácuaro,410,419,modelo
+951_7,951,MONTO,100 millones de pesos,623,644,regla
+951_7,951,LOC,Zitácuaro,655,664,modelo
+951_7,951,MONTO,141 pesos,828,837,regla
+951_7,951,MONTO,170 pesos,929,938,regla
+952_53,952,PER,ANDRÉS MANUEL LÓPEZ OBRADOR,11,38,ambos
+952_53,952,ORG,IMSS-Bienestar,210,224,regla
+952_53,952,ORG,IMSS,342,346,regla
+952_53,952,ORG,IMSS,609,613,regla
+952_53,952,ORG,IMSS,630,634,regla
+952_53,952,ORG,IMSS,648,652,regla
+952_53,952,ORG,IMSS,668,672,regla
+952_53,952,ORG,IMSS-Bienestar,693,707,regla
+952_53,952,ORG,IMSS-Bienestar,970,984,regla
+969_31,969,PER,LUIS CRESENCIO SANDOVAL GONZÁLEZ,0,32,ambos
+969_31,969,LOC,Tulum,307,312,ambos
+969_31,969,ORG,Guardia Nacional,445,461,ambos
+969_31,969,LOC,Tulum,490,495,ambos
+969_31,969,ORG,Marina,530,536,modelo
+969_31,969,LOC,Tulum,576,581,ambos
+969_31,969,LOC,Tulum,734,739,ambos
+969_31,969,LOC,Riviera Maya,890,902,modelo
+969_31,969,ORG,Ejército,1054,1062,modelo
+969_31,969,ORG,Guardia Nacional,1079,1095,ambos
+969_31,969,ORG,Guardia,1141,1148,modelo
+969_31,969,ORG,Guardia,1273,1280,modelo
+972_21,972,ORG,V,0,1,modelo
+972_21,972,LOC,Tren Maya,11,20,regla
+972_21,972,LOC,San Pedro,167,176,modelo
+972_21,972,LOC,El Triunfo,179,189,modelo
+972_21,972,LOC,El Triunfo,219,229,modelo
+972_21,972,LOC,Poc Boc,340,347,modelo
+972_21,972,LOC,Hampolol,473,481,modelo
+972_21,972,LOC,Becal,550,555,modelo
+972_21,972,LOC,Campeche,557,565,ambos
+972_21,972,LOC,Umán,784,788,modelo
+972_21,972,LOC,Yucatán,790,797,ambos
+972_21,972,LOC,Tren Maya,958,967,regla
+972_21,972,LOC,Tren Maya,1009,1018,regla
+978_7,978,ORG,A,0,1,modelo
+978_7,978,PER,ANA ELIZABETH GARCÍA VILCHIS,0,28,regla
+978_7,978,ORG,CFE,370,373,ambos
+978_7,978,ORG,Gabinete de Comunicación Estratégica,793,829,modelo
+978_7,978,ORG,CFE,895,898,ambos
+978_7,978,ORG,CFE,991,994,ambos
+978_7,978,ORG,Estados,1073,1080,modelo
+978_7,978,LOC,Estados Unidos,1073,1087,regla
+978_7,978,LOC,Unidos,1081,1087,modelo
+978_7,978,FECHA,2021,1102,1106,regla
+978_7,978,ORG,CFE,1110,1113,ambos
+978_8,978,PER,A,0,1,modelo
+978_8,978,PER,ANA ELIZABETH GARCÍA VILCHIS,0,28,regla
+978_8,978,PER,VILCHI,21,27,modelo
+978_8,978,ORG,CFE,98,101,ambos
+978_8,978,LOC,Estados Unidos,180,194,regla
+978_8,978,ORG,Estados Unidos,180,194,modelo
+978_8,978,FECHA,2021,209,213,regla
+978_8,978,ORG,CFE,217,220,ambos
+978_8,978,ORG,CFE,365,368,ambos
+978_8,978,LOC,Puerto Peñasco,411,425,modelo
+978_8,978,LOC,Sonora,427,433,ambos
+978_8,978,FECHA,4 de noviembre,763,777,regla
+978_8,978,ORG,Reforma,791,798,modelo
+978_8,978,LOC,Estados,1019,1026,modelo
+978_8,978,LOC,Estados Unidos,1019,1033,regla
+978_8,978,ORG,Unidos,1027,1033,modelo
+978_8,978,ORG,Estado,1051,1057,modelo
+978_8,978,PER,Antony Blinken,1058,1072,modelo
+978_8,978,PER,Ken Salazar,1184,1195,modelo
+982_72,982,LOC,Ist,75,78,modelo
+982_72,982,LOC,Istmo de Tehuantepec,75,95,regla
+982_72,982,ORG,mo,78,80,modelo
+982_72,982,LOC,Tehuantepec,84,95,modelo
+982_72,982,LOC,Corredor Interoceánico,183,205,regla
+982_72,982,ORG,Guardia Nacional,229,245,ambos
+9_23,9,PER,Z,0,1,modelo
+9_23,9,PER,ZOÉ ROBLEDO ABURTO,0,18,regla
+9_23,9,PER,BLE,6,9,modelo
+9_23,9,ORG,IMSS-Bienestar,63,77,regla
+9_23,9,LOC,Durango,125,132,ambos
+9_23,9,LOC,Coahuila,137,145,ambos
+9_23,9,LOC,Yucatán,159,166,ambos
+9_23,9,LOC,Chihuahua,178,187,ambos
+9_23,9,ORG,IMSS-Bienestar,284,298,regla
+9_23,9,FECHA,agosto de 2022,326,340,regla
+9_23,9,ORG,Estados,833,840,modelo
+9_23,9,ORG,Estado,903,909,modelo

@@ -1,0 +1,117 @@
+{
+ "clave": "ee7e09ee685e03e0c5576a6f333fad1f87f0b9e8bdcc75c59310f2b367499cd3",
+ "entidades_crudas": [
+  {
+   "confianza": 0.994757,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 32,
+   "inicio": 0,
+   "texto": "LUIS CRESENCIO SANDOVAL GONZÁLEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.994377,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 91,
+   "inicio": 75,
+   "texto": "Guardia Nacional",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999849,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 136,
+   "inicio": 120,
+   "texto": "Guardia Nacional",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99981,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 240,
+   "inicio": 224,
+   "texto": "Guardia Nacional",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999868,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 292,
+   "inicio": 277,
+   "texto": "Fuerzas Armadas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999887,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 350,
+   "inicio": 334,
+   "texto": "Guardia Nacional",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999867,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 432,
+   "inicio": 424,
+   "texto": "Ejército",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999713,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 532,
+   "inicio": 526,
+   "texto": "Armada",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999926,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 616,
+   "inicio": 604,
+   "texto": "Fuerza Aérea",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.996337,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 841,
+   "inicio": 834,
+   "texto": "Guardia",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99877,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 977,
+   "inicio": 970,
+   "texto": "Guardia",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "484_20",
+ "segundos": 0.325,
+ "texto_sha256": "d4e1caf7665c743df126691312ff2480fde2f6718a124c3712c4aafc9814d284",
+ "version_transformers": "5.22.1"
+}

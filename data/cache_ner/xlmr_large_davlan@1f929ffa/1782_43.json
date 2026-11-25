@@ -1,0 +1,63 @@
+{
+ "clave": "cc5d748afb55945a3404b6e7c6f84bb57d4df4eadb6bf024fad0a26a10e332ca",
+ "entidades_crudas": [
+  {
+   "confianza": 0.999552,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 95,
+   "inicio": 79,
+   "texto": "Guardia Nacional",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999966,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 120,
+   "inicio": 116,
+   "texto": "Sono",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.790078,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 122,
+   "inicio": 120,
+   "texto": "ra",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999207,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 134,
+   "inicio": 125,
+   "texto": "Chihuahua",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999983,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 259,
+   "inicio": 243,
+   "texto": "Ciudad de México",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1782_43",
+ "segundos": 0.116,
+ "texto_sha256": "8d77d266208e720f9b9313eb9f5309e30c1859822f98a7b70e466e9a760688f4",
+ "version_transformers": "5.22.1"
+}

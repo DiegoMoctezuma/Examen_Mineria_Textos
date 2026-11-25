@@ -1,0 +1,162 @@
+{
+ "clave": "e6c6bc3eb215a426a4e3d225051d933bf93465082e8e9b6311f7c2720dd6fd0c",
+ "entidades_crudas": [
+  {
+   "confianza": 0.9937,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 9,
+   "inicio": 0,
+   "texto": "VOZ MUJER",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999762,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 42,
+   "inicio": 36,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997116,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 246,
+   "inicio": 240,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999855,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 275,
+   "inicio": 248,
+   "texto": "Andrés Manuel López Obrador",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.696072,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 296,
+   "inicio": 282,
+   "texto": "Estados Unidos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999987,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 310,
+   "inicio": 298,
+   "texto": "Joseph Biden",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999957,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 493,
+   "inicio": 476,
+   "texto": "CanSino Biologics",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999889,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 695,
+   "inicio": 680,
+   "texto": "Pfizer-BioNTech",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999936,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 708,
+   "inicio": 697,
+   "texto": "AstraZeneca",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999968,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 717,
+   "inicio": 710,
+   "texto": "SinoVac",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999958,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 728,
+   "inicio": 719,
+   "texto": "Sputnik V",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99997,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 808,
+   "inicio": 734,
+   "texto": "Centro Nacional de Investigación de Epidemiología e Microbiología Gamaleya",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999966,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 831,
+   "inicio": 814,
+   "texto": "CanSino Biologics",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.796831,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 936,
+   "inicio": 930,
+   "texto": "Drugme",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999902,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 950,
+   "inicio": 941,
+   "texto": "Querétaro",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999972,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1192,
+   "inicio": 1186,
+   "texto": "México",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1188_80",
+ "segundos": 0.345,
+ "texto_sha256": "466284575fcaf565f6a197f8ae1774dd730eae62c1ac1d11d4346b52d9d3d3b6",
+ "version_transformers": "5.22.1"
+}

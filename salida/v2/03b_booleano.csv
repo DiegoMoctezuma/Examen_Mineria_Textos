@@ -1,0 +1,31 @@
+query_id,consulta,operador,terminos,n_terminos,pasajes,en_ventana,elegibles_ventana
+Q1,avances en la construcción del Tren Maya,AND,avanc construccion tren may,4,208,189,87003
+Q1,avances en la construcción del Tren Maya,OR,avanc construccion tren may,4,15772,11427,87003
+Q2,llegada y aplicación de vacunas contra el COVID-19,AND,lleg aplic vacun covid-19,4,21,14,21741
+Q2,llegada y aplicación de vacunas contra el COVID-19,OR,lleg aplic vacun covid-19,4,29760,6809,21741
+Q3,refinería de Dos Bocas en Tabasco,AND,refin dos boc tabasc,4,162,135,88740
+Q3,refinería de Dos Bocas en Tabasco,OR,refin dos boc tabasc,4,29157,20205,88740
+Q4,aeropuerto Felipe Ángeles en Santa Lucía,AND,aeropuert felip angel sant luc,5,162,116,76549
+Q4,aeropuerto Felipe Ángeles en Santa Lucía,OR,aeropuert felip angel sant luc,5,7840,4187,76549
+Q5,programa Sembrando Vida y apoyo a campesinos,AND,program sembr vid apoy campesin,5,156,156,126986
+Q5,programa Sembrando Vida y apoyo a campesinos,OR,program sembr vid apoy campesin,5,35303,35078,126986
+Q6,combate al huachicol y robo de combustible,AND,combat huachicol rob combust,4,52,14,11120
+Q6,combate al huachicol y robo de combustible,OR,combat huachicol rob combust,4,10686,1485,11120
+Q7,pensión universal para adultos mayores,AND,pension universal adult mayor,4,391,391,127739
+Q7,pensión universal para adultos mayores,OR,pension universal adult mayor,4,18519,18519,127739
+Q8,aumento al salario mínimo y acuerdo con empresarios,AND,aument salari minim acuerd empresari,5,26,26,113132
+Q8,aumento al salario mínimo y acuerdo con empresarios,OR,aument salari minim acuerd empresari,5,23506,21182,113132
+Q9,operación y apertura de sucursales del Banco del Bienestar,AND,oper apertur sucursal banc bienest,5,0,0,110214
+Q9,operación y apertura de sucursales del Banco del Bienestar,OR,oper apertur sucursal banc bienest,5,18099,15700,110214
+Q10,construcción y operación del Tren Interoceánico del Istmo de Tehuantepec,AND,construccion oper tren interocean istmo tehuantepec,6,2,2,96923
+Q10,construcción y operación del Tren Interoceánico del Istmo de Tehuantepec,OR,construccion oper tren interocean istmo tehuantepec,6,17054,13812,96923
+Q11,despliegue de la Guardia Nacional en los estados,AND,desplieg guardi nacional,3,357,357,126986
+Q11,despliegue de la Guardia Nacional en los estados,OR,desplieg guardi nacional,3,18838,18751,126986
+Q12,atención médica gratuita del IMSS-Bienestar,AND,atencion medic gratuit imss-bienest,4,117,117,118546
+Q12,atención médica gratuita del IMSS-Bienestar,OR,atencion medic gratuit imss-bienest,4,14277,13613,118546
+Q13,reforma eléctrica y fortalecimiento de la CFE,AND,reform electr fortalec cfe,4,3,1,29577
+Q13,reforma eléctrica y fortalecimiento de la CFE,OR,reform electr fortalec cfe,4,15897,3887,29577
+Q14,becas para aprendices de Jóvenes Construyendo el Futuro,AND,bec aprendic joven constru futur,5,190,190,126986
+Q14,becas para aprendices de Jóvenes Construyendo el Futuro,OR,bec aprendic joven constru futur,5,15698,15581,126986
+Q15,daños y reconstrucción de Acapulco tras el huracán Otis,AND,dañ reconstruccion acapulc tras huracan otis,6,0,0,14423
+Q15,daños y reconstrucción de Acapulco tras el huracán Otis,OR,dañ reconstruccion acapulc tras huracan otis,6,6392,1441,14423

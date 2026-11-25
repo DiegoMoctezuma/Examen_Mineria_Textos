@@ -1,0 +1,126 @@
+{
+ "clave": "f66a4695883bd54d36a3ba58f3d73258c71f56f917036924ae7a34b5d57a7342",
+ "entidades_crudas": [
+  {
+   "confianza": 0.99787,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 32,
+   "inicio": 0,
+   "texto": "LUIS CRESENCIO SANDOVAL GONZÁLEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999862,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 201,
+   "inicio": 185,
+   "texto": "Guardia Nacional",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999923,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 226,
+   "inicio": 211,
+   "texto": "Fuerzas Armadas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999954,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 270,
+   "inicio": 254,
+   "texto": "Guardia Nacional",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999783,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 284,
+   "inicio": 276,
+   "texto": "Ejército",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999969,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 304,
+   "inicio": 292,
+   "texto": "Fuerza Aérea",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999974,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 333,
+   "inicio": 313,
+   "texto": "Secretaría de Marina",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999587,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 978,
+   "inicio": 962,
+   "texto": "Guardia Nacional",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.996326,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1042,
+   "inicio": 1035,
+   "texto": "Guardia",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999933,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1108,
+   "inicio": 1100,
+   "texto": "Ejército",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999953,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1212,
+   "inicio": 1196,
+   "texto": "Guardia Nacional",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999906,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1243,
+   "inicio": 1237,
+   "texto": "Armada",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "463_29",
+ "segundos": 0.338,
+ "texto_sha256": "6c63be43fae4bc5711016cf8bb61e13c8ca9528ede16536c32ed95d8402cec7c",
+ "version_transformers": "5.22.1"
+}

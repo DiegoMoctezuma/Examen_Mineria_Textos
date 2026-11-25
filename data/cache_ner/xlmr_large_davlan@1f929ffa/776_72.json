@@ -1,0 +1,45 @@
+{
+ "clave": "f0fe1310fdfaded3a4500eb999efbd4ed13eab5480362b860326b22f7db77837",
+ "entidades_crudas": [
+  {
+   "confianza": 0.966291,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999859,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 548,
+   "inicio": 541,
+   "texto": "Tabasco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999944,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 561,
+   "inicio": 554,
+   "texto": "Chiapas",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "776_72",
+ "segundos": 0.19,
+ "texto_sha256": "c2657d391afef90339052593538ced715157c4f29311d424609bfa902945d9ec",
+ "version_transformers": "5.22.1"
+}

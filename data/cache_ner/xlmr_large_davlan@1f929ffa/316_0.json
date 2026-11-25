@@ -1,0 +1,72 @@
+{
+ "clave": "e9bc1484d35ab853df8a7fa570d7b33dc9fb10c984e318e819d51ee65904cd41",
+ "entidades_crudas": [
+  {
+   "confianza": 0.9893,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997007,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 180,
+   "inicio": 172,
+   "texto": "Acapulco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999981,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 449,
+   "inicio": 417,
+   "texto": "Luis Cresencio Sandoval González",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99762,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 534,
+   "inicio": 529,
+   "texto": "Ojeda",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999005,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 618,
+   "inicio": 610,
+   "texto": "Acapulco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.991165,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 644,
+   "inicio": 636,
+   "texto": "Acapulco",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "316_0",
+ "segundos": 0.29,
+ "texto_sha256": "59a4f271a96fe8f8e0e4bb99da6b0781919f260afab4f21dd07689c67a6e7565",
+ "version_transformers": "5.22.1"
+}

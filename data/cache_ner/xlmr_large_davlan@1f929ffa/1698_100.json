@@ -1,0 +1,45 @@
+{
+ "clave": "447401c8ab6cdec8644fb5147ce30579661e61851776fb4e94e988452ff3952d",
+ "entidades_crudas": [
+  {
+   "confianza": 0.975265,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999941,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 626,
+   "inicio": 619,
+   "texto": "Yucatán",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999969,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 701,
+   "inicio": 694,
+   "texto": "Yucatán",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1698_100",
+ "segundos": 0.289,
+ "texto_sha256": "a0e54921ee20cae6b980914519be6c035dbbcd4ba32fef4f10b0fe25d7c2df3c",
+ "version_transformers": "5.22.1"
+}

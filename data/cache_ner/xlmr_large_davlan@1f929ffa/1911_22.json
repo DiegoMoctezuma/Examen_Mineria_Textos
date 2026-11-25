@@ -1,0 +1,270 @@
+{
+ "clave": "2d57e091a974d345f318ecdf18ea1cf02ecbf9ca6061ee06a9057f326fcc48ac",
+ "entidades_crudas": [
+  {
+   "confianza": 0.989688,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 4,
+   "inicio": 0,
+   "texto": "LUIS",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997928,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 20,
+   "inicio": 5,
+   "texto": "RODRÍGUEZ BUCIO",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999836,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 90,
+   "inicio": 83,
+   "texto": "Sinaloa",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999611,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 251,
+   "inicio": 235,
+   "texto": "Guardia Nacional",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999668,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 262,
+   "inicio": 255,
+   "texto": "Sinaloa",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999828,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 340,
+   "inicio": 334,
+   "texto": "Sedena",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999881,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 350,
+   "inicio": 345,
+   "texto": "Semar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999966,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 368,
+   "inicio": 353,
+   "texto": "Policía Federal",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.934423,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 412,
+   "inicio": 406,
+   "texto": "Sonora",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999383,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 511,
+   "inicio": 495,
+   "texto": "Guardia Nacional",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999788,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 559,
+   "inicio": 553,
+   "texto": "Sedena",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999895,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 566,
+   "inicio": 561,
+   "texto": "Semar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999965,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 584,
+   "inicio": 569,
+   "texto": "Policía Federal",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997749,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 653,
+   "inicio": 647,
+   "texto": "Sonora",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999764,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 662,
+   "inicio": 655,
+   "texto": "Tabasco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999548,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 746,
+   "inicio": 730,
+   "texto": "Guardia Nacional",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999848,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 800,
+   "inicio": 794,
+   "texto": "Sedena",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999939,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 807,
+   "inicio": 802,
+   "texto": "Semar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999968,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 825,
+   "inicio": 810,
+   "texto": "Policía Federal",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999901,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 896,
+   "inicio": 889,
+   "texto": "Tabasco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999836,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 908,
+   "inicio": 898,
+   "texto": "Tamaulipas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999318,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1004,
+   "inicio": 988,
+   "texto": "Guardia Nacional",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999845,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1051,
+   "inicio": 1045,
+   "texto": "Sedena",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999912,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1058,
+   "inicio": 1053,
+   "texto": "Semar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999967,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1076,
+   "inicio": 1061,
+   "texto": "Policía Federal",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999755,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1149,
+   "inicio": 1139,
+   "texto": "Tamaulipas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997502,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1159,
+   "inicio": 1151,
+   "texto": "Tlaxcala",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999765,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1242,
+   "inicio": 1226,
+   "texto": "Guardia Nacional",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1911_22",
+ "segundos": 0.321,
+ "texto_sha256": "66c2026cd590280874a8b9ac2088e2fbf8acdd9d8d6a386b289f708d77e4771b",
+ "version_transformers": "5.22.1"
+}

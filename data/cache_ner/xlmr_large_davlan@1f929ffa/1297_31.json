@@ -1,0 +1,45 @@
+{
+ "clave": "9970becedfa14580dc4c39a3e749eb0c3593e6196f5bae1265e925400bd0d687",
+ "entidades_crudas": [
+  {
+   "confianza": 0.998317,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 273,
+   "inicio": 267,
+   "texto": "Gatell",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999699,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 739,
+   "inicio": 733,
+   "texto": "Pfizer",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999896,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 762,
+   "inicio": 751,
+   "texto": "AstraZeneca",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1297_31",
+ "segundos": 0.254,
+ "texto_sha256": "29b06742c4019c7458efa70437cdbc455a35b96f790dcc3e6b05acf40d0ea7d0",
+ "version_transformers": "5.22.1"
+}

@@ -1,0 +1,99 @@
+{
+ "clave": "9c6efc46c0cbf9fe4dc870785f36be7c4d5210333c7054f66acb271c3f8b9d95",
+ "entidades_crudas": [
+  {
+   "confianza": 0.942277,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.996556,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 116,
+   "inicio": 97,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.680765,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 471,
+   "inicio": 452,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999882,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 573,
+   "inicio": 554,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999713,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 588,
+   "inicio": 583,
+   "texto": "Álamo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.896963,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 613,
+   "inicio": 607,
+   "texto": "Víctor",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999683,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 736,
+   "inicio": 717,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99996,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 851,
+   "inicio": 845,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999856,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 875,
+   "inicio": 856,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "420_10",
+ "segundos": 0.315,
+ "texto_sha256": "f3e7ca08291bea3dcbc4021183e21efd0fa5c658eb14561f5eaa24e8617d38df",
+ "version_transformers": "5.22.1"
+}

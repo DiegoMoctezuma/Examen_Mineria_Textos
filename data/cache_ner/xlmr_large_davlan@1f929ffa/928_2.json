@@ -1,0 +1,126 @@
+{
+ "clave": "91edeed15cc80d17fcd0836142664f735312b5bcf11e02a7803f1c2e4fad4241",
+ "entidades_crudas": [
+  {
+   "confianza": 0.999659,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1,
+   "inicio": 0,
+   "texto": "A",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.922874,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 86,
+   "inicio": 75,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.979829,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 200,
+   "inicio": 184,
+   "texto": "‘Felipe Ángeles’",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999898,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 258,
+   "inicio": 245,
+   "texto": "Torre de Pisa",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99999,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 269,
+   "inicio": 263,
+   "texto": "Italia",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.992189,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 322,
+   "inicio": 305,
+   "texto": "‘Felipe ‘Ángeles’",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.958032,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 612,
+   "inicio": 587,
+   "texto": "aeropuerto de Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.993981,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 989,
+   "inicio": 964,
+   "texto": "aeropuerto de Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999675,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1067,
+   "inicio": 1052,
+   "texto": "Felipe Calderón",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999965,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1100,
+   "inicio": 1080,
+   "texto": "Emilio Álvarez Icaza",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.993074,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1115,
+   "inicio": 1103,
+   "texto": "Paola Migoya",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.9999,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1153,
+   "inicio": 1131,
+   "texto": "Frente Cívico Nacional",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "928_2",
+ "segundos": 0.305,
+ "texto_sha256": "79eb0deb9b81f4c84fef9e3e4bb3803fa2bb8541bbeaf7924b21b4e519d64a03",
+ "version_transformers": "5.22.1"
+}

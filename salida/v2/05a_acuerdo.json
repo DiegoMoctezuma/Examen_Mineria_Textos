@@ -1,0 +1,63 @@
+{
+  "fecha": "2026-11-24T19:27:31",
+  "cierre": {
+    "commit": "c3de5e0fffcf8f06bee7020f88c0b938beea66b6",
+    "fecha": "2026-11-24T19:27:04",
+    "sha256": "f183e40e98b3a7c2a3d056b9e957c9872ec55cd97bd939f4caf76ecea677d331"
+  },
+  "regla": "relevante = al menos 2 de 3 juicios válidos; omitidos no cuentan (D24)",
+  "pares": 320,
+  "pares_cerrados": 320,
+  "pares_sin_cerrar": [],
+  "relevantes": 196,
+  "unanimes": 199,
+  "fleiss_global": {
+    "pares": 320,
+    "acuerdo_observado": 0.7479,
+    "kappa": 0.4753
+  },
+  "fleiss_por_lote": {
+    "1": {
+      "jueces": "arturo,diego,luis",
+      "pares": 176,
+      "kappa": 0.4228
+    },
+    "2": {
+      "jueces": "arturo,gonzalo,leo",
+      "pares": 144,
+      "kappa": 0.5389
+    }
+  },
+  "cohen_por_pareja": {
+    "arturo-diego": {
+      "pares": 176,
+      "kappa": 0.6054
+    },
+    "arturo-gonzalo": {
+      "pares": 144,
+      "kappa": 0.4952
+    },
+    "arturo-leo": {
+      "pares": 144,
+      "kappa": 0.5964
+    },
+    "arturo-luis": {
+      "pares": 176,
+      "kappa": 0.3686
+    },
+    "diego-luis": {
+      "pares": 176,
+      "kappa": 0.3113
+    },
+    "gonzalo-leo": {
+      "pares": 144,
+      "kappa": 0.5387
+    }
+  },
+  "avisos": [],
+  "sha256": {
+    "05a_juicios_agregados.csv": "b91fd8117af8003b5333fc28626a8e48566150ac78b018c77489df1b37391d11",
+    "juicios_relevancia.csv": "1200e2cec5bcc614b7ab6589d314869135a4b06bbdb849ec9b620de2fa217078",
+    "05a_acuerdo.csv": "9c44e2cf96f4a426b034fea8dd16f3b5c2d6918a0e3674373a95d4f1eb4ec47f"
+  }
+}

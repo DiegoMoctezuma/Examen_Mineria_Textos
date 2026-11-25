@@ -1,0 +1,63 @@
+{
+ "clave": "c1e8cd478bd351b6c5b905a70ed7b3babd0e460339dcc6df123683f2a3537bb2",
+ "entidades_crudas": [
+  {
+   "confianza": 0.80209,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1,
+   "inicio": 0,
+   "texto": "V",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.580089,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 10,
+   "inicio": 7,
+   "texto": "HOM",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997965,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 97,
+   "inicio": 86,
+   "texto": "Rocío Nahle",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999436,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 195,
+   "inicio": 186,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999855,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 204,
+   "inicio": 197,
+   "texto": "Tabasco",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1787_11",
+ "segundos": 0.133,
+ "texto_sha256": "1a50fcb7a6bf6d1469ee6d6e386f7da0924a3d83584b73daeb3911afd24f8160",
+ "version_transformers": "5.22.1"
+}

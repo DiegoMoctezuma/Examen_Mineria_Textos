@@ -1,0 +1,90 @@
+{
+ "clave": "082179be120c26150de1fd9bd33ca129844a8b090db50f70a6bfaa8f179a722f",
+ "entidades_crudas": [
+  {
+   "confianza": 0.99981,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 3,
+   "inicio": 0,
+   "texto": "GER",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.547917,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 4,
+   "inicio": 3,
+   "texto": "M",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.931107,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 23,
+   "inicio": 4,
+   "texto": "ÁN MARTÍNEZ SANTOYO",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.971859,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 74,
+   "inicio": 48,
+   "texto": "COMISIÓN NACIONAL DEL AGUA",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999906,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 83,
+   "inicio": 76,
+   "texto": "CONAGUA",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999946,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 219,
+   "inicio": 211,
+   "texto": "Acapulco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999769,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1136,
+   "inicio": 1128,
+   "texto": "Acapulco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999733,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1167,
+   "inicio": 1161,
+   "texto": "Coyuca",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "259_24",
+ "segundos": 0.448,
+ "texto_sha256": "a754bf5d8110906be975987479a6e954441b3f392e1f3e8569e9596053f3be8f",
+ "version_transformers": "5.22.1"
+}
