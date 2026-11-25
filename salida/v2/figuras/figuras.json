@@ -18,9 +18,9 @@
   "s4c_tokenizacion": {
     "archivo": "salida/v2/figuras/s4c_tokenizacion.png",
     "titulo": "Cómo se convierte una oración en términos del índice",
-    "datos": "v1",
+    "datos": "v2",
     "fuentes": {
-      "ranking.csv": "37ffa3e4367faf8d48f069afd3570ea44a44b4016a33cd1e9da8d92a88ec7f10",
+      "salida/v2/ranking.csv": "61924ce302cd213466ab00d7fc1d59041db6edd5856d045bbec925b19b24f0bc",
       "data/pasajes.parquet": "766859a1ab322a449b6ce3ef9e25d15b95f275d140804f3935db7c1de632af0d"
     }
   },
@@ -54,56 +54,62 @@
   "s5a_ap_explicado": {
     "archivo": "salida/v2/figuras/s5a_ap_explicado.png",
     "titulo": "Cómo se calcula el AP: «Pregunta 3 · Dos Bocas»",
-    "datos": "v1",
+    "datos": "v2",
     "fuentes": {
-      "ranking.csv": "37ffa3e4367faf8d48f069afd3570ea44a44b4016a33cd1e9da8d92a88ec7f10",
-      "juicios_relevancia.csv": "ef68db565626bde13a2dc0cc2db6f3f59f55e0c34d78325666d63f81e8c01c35",
-      "resultados_ir.csv": "edf51c066c7fac2d4f2c8638ac95b7a896f76f3ea5ba50932153d784905c0db4"
+      "salida/v2/ranking.csv": "61924ce302cd213466ab00d7fc1d59041db6edd5856d045bbec925b19b24f0bc",
+      "salida/v2/juicios_relevancia.csv": "1200e2cec5bcc614b7ab6589d314869135a4b06bbdb849ec9b620de2fa217078",
+      "salida/v2/resultados_ir.csv": "7a088e641a26831a4c200753190425a7e9a1dd8a65e4e1922a1ca8bb2d29be8b"
     }
   },
   "s5a_map_por_modelo": {
     "archivo": "salida/v2/figuras/s5a_map_por_modelo.png",
-    "titulo": "BM25 · raíz · con filtro de fecha recupera mejor: MAP de 48.4 %",
-    "datos": "v1",
+    "titulo": "BM25 · raíz · con filtro de fecha recupera mejor: MAP de 53.6 %",
+    "datos": "v2",
     "fuentes": {
-      "resultados_ir.csv": "edf51c066c7fac2d4f2c8638ac95b7a896f76f3ea5ba50932153d784905c0db4"
+      "salida/v2/resultados_ir.csv": "7a088e641a26831a4c200753190425a7e9a1dd8a65e4e1922a1ca8bb2d29be8b",
+      "salida/v2/05_ir_8_variantes.csv": "ec93fb05177b6190cc16c72b110e47cc120cbcab6f470aa9e0de642959dda9da",
+      "salida/v2/05_robustez.csv": "aa0b8ae03d8ad9c3c5b68bf3719a0457271e9541f2c804eca4afd98dbb627483"
     }
   },
   "s6_ap_por_consulta": {
     "archivo": "salida/v2/figuras/s6_ap_por_consulta.png",
     "titulo": "Precisión promedio (AP) por pregunta",
-    "datos": "v1",
+    "datos": "v2",
     "fuentes": {
-      "resultados_ir.csv": "edf51c066c7fac2d4f2c8638ac95b7a896f76f3ea5ba50932153d784905c0db4"
+      "salida/v2/05_ir_8_variantes.csv": "ec93fb05177b6190cc16c72b110e47cc120cbcab6f470aa9e0de642959dda9da"
     }
   },
   "s7c_prf_por_tipo": {
     "archivo": "salida/v2/figuras/s7c_prf_por_tipo.png",
     "titulo": "Qué tan bien se extrae cada tipo de entidad",
-    "datos": "v1",
+    "datos": "v2",
     "fuentes": {
-      "resultados_ie.csv": "6ecf82b48d04ab04ca31f5dd1b6d955282ccdc26a6ef402091d3c42445e9054d"
+      "salida/v2/resultados_ie.csv": "e910559c75d0db3018f7e5f0c1c1c27c500e9d54c15093b6da245287cc874cc6"
     }
   },
   "s7a_f1_con_referencias": {
-    "archivo": null,
-    "datos": "v1",
-    "nota": "pendiente: necesita las referencias v2 (make all-v2)"
+    "archivo": "salida/v2/figuras/s7a_f1_con_referencias.png",
+    "titulo": "¿Está bien el F1? Comparado con lo que logran dos personas",
+    "datos": "v2",
+    "fuentes": {
+      "salida/v2/09_referencias_f1.csv": "1de61900acb8f84ab01a04a45a006462605d62aae2ab534019fd42a0a581fb4c",
+      "salida/v2/resultados_ie.csv": "e910559c75d0db3018f7e5f0c1c1c27c500e9d54c15093b6da245287cc874cc6"
+    }
   },
   "s8_errores_patrones": {
     "archivo": "salida/v2/figuras/s8_errores_patrones.png",
     "titulo": "Los errores se concentran en pocos patrones",
-    "datos": "v1",
+    "datos": "v2",
     "fuentes": {
-      "salida/09_resumen_errores.csv": "3c0bb4f695fba611f263e9da1b790be5ee2328ce46fa4857817012ade75c6796"
+      "salida/v2/09_resumen_errores.csv": "e66c9172c59b8255b03fc457ced8c4c60b32cc1eb8090dec393d6b062e84b289"
     }
   },
   "s9_estados_respuesta": {
     "archivo": "salida/v2/figuras/s9_estados_respuesta.png",
     "titulo": "Qué tan respaldada está cada respuesta",
-    "datos": "v1",
+    "datos": "v2",
     "fuentes": {
-      "salida/respuestas.csv": "6505e1910dd088533466997c3ca54c233d6cba1fc38dd2ba9fa6da09100e811e"
+      "salida/v2/respuestas.csv": "f2327cc095cf971c93bea525cc563cc88ac60ab3df39c30342ff2ca93f36f497"
     }
   },
   "r07_booleano": {
