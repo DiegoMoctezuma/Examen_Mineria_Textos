@@ -147,7 +147,7 @@ Las láminas técnicas que **no tienen ejemplo concreto (o lo tienen incompleto)
 Deck regenerado sobre el de 773cc39 con los cambios de Arturo (`laminas/` es de Gonzalo y Arturo, PRD v2 §6.2). Lo que toca la demo (Leo) o el guion aprobado (Diego y el equipo) no se cambió aquí: se les avisa. Las figuras (`figuras_v2.py`) las corrigió Gonzalo en 3f73f42; se regeneraron con las mismas fuentes en ff53959 y el deck las usa desde b8fdac5.
 
 **Seriedad (§6, §8.1)**
-- Caricatura del cierre (20) → tomada: se quitó.
+- Caricatura del cierre (20) → no tomada (Diego, 25 de noviembre): el equipo la conserva como cierre relajado para el profesor. Regresa solo en la última lámina de la versión HTML (`laminas/v2/`), sin círculo; el deck PowerPoint de Arturo sigue sin ella.
 - «MINERÍA DE TEXTOS» y «Proyecto final» en 01, 18 y 20 → tomada: dicen «DATISA» y ya no hay etiqueta arriba a la derecha.
 - Portada con jerga académica (01) → tomada: subtítulo «Un buscador con respuestas y citas para equipos de comunicación».
 - «BERT en español · el del examen» (14) → tomada: «el de la versión anterior».

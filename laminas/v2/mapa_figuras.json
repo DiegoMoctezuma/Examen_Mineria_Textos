@@ -1,0 +1,50 @@
+[
+  {
+    "slide": 2,
+    "figure": "s2a_corpus.png"
+  },
+  {
+    "slide": 4,
+    "figure": "s2b_acotaciones.png"
+  },
+  {
+    "slide": 6,
+    "figure": "s4c_tokenizacion.png"
+  },
+  {
+    "slide": 7,
+    "figure": "stem_lema.png"
+  },
+  {
+    "slide": 8,
+    "figure": "r09_indice_invertido.png"
+  },
+  {
+    "slide": 9,
+    "figure": "s4d_idf.png"
+  },
+  {
+    "slide": 10,
+    "figure": "r07_booleano.png"
+  },
+  {
+    "slide": 12,
+    "figure": "s5a_ap_explicado.png"
+  },
+  {
+    "slide": 13,
+    "figure": "s6_ap_por_consulta.png"
+  },
+  {
+    "slide": 15,
+    "figure": "s7a_f1_con_referencias.png"
+  },
+  {
+    "slide": 16,
+    "figure": "s8_errores_patrones.png"
+  },
+  {
+    "slide": 17,
+    "figure": "s9_estados_respuesta.png"
+  }
+]

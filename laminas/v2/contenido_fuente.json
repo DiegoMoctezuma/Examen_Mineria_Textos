@@ -1,0 +1,361 @@
+[
+  {
+    "slide": 1,
+    "paragraphs": [
+      "DATISA",
+      "01",
+      "Encontrar en segundos lo que se dijo en seis años de mañaneras",
+      "Un buscador con respuestas y citas para equipos de comunicación",
+      "Datisa",
+      "Carpio Angeles Leo Yahir",
+      "Jaramillo Salmerón Arturo",
+      "Mera Montiel Gonzalo Sebastian",
+      "Moctezuma Ramirez Diego Rafael",
+      "Ramirez Maza Luis",
+      "25 de noviembre de 2026"
+    ]
+  },
+  {
+    "slide": 2,
+    "paragraphs": [
+      "EL PROBLEMA",
+      "Miles de horas de conferencias que nadie relee",
+      "02",
+      "Para saber qué se dijo de Dos Bocas habría que leer cientos de conferencias",
+      "2,294",
+      "versiones estenográficas",
+      "De diciembre de 2018 a septiembre de 2024",
+      "8,502",
+      "palabras",
+      "Tiene la conferencia típica (mediana)"
+    ]
+  },
+  {
+    "slide": 3,
+    "paragraphs": [
+      "LA SOLUCIÓN",
+      "De la pregunta a la respuesta, con su cita",
+      "03",
+      "Lo probamos con 15 preguntas sobre obras y programas del gobierno",
+      "1",
+      "Divide",
+      "Cada conferencia, en fragmentos que se entienden solos: 127,739 en total",
+      "Ejemplo con Dos Bocas",
+      "Mañanera del 27 de junio de 2022, fragmento 68",
+      "2",
+      "Busca",
+      "Los 10 fragmentos más útiles para la pregunta y el periodo",
+      "Ejemplo con Dos Bocas",
+      "«refinería de Dos Bocas en Tabasco», 2019 a 2022",
+      "3",
+      "Marca",
+      "Personas, organizaciones, lugares, fechas y montos",
+      "Ejemplo con Dos Bocas",
+      "Persona: Rocío Nahle",
+      "Monto: 50 mil millones de pesos",
+      "4",
+      "Responde",
+      "Reglas arman la tabla con lo extraído, sin IA generativa; cada dato lleva su frase",
+      "Ejemplo con Dos Bocas",
+      "«50 mil millones de pesos están presupuestados con ese propósito» · 13 de marzo de 2019"
+    ]
+  },
+  {
+    "slide": 4,
+    "paragraphs": [
+      "DEL DISCURSO AL TEXTO QUE SE BUSCA",
+      "Primero se limpia: las acotaciones no son de nadie",
+      "04",
+      "7,338",
+      "acotaciones eliminadas",
+      "Notas del transcriptor que nadie dijo",
+      "3,471",
+      "veces «inaudible»",
+      "La acotación más común",
+      "Nadie las dijo, así que no cuentan en la búsqueda"
+    ]
+  },
+  {
+    "slide": 5,
+    "paragraphs": [
+      "DEL DISCURSO AL TEXTO QUE SE BUSCA",
+      "Fragmentos que se entienden solos",
+      "05",
+      "200",
+      "palabras por fragmento",
+      "Cada conferencia se divide en trozos",
+      "40",
+      "palabras como mínimo",
+      "Lo más corto se descarta, sea de quien sea",
+      "15.5 %",
+      "del índice son preguntas de la prensa",
+      "Sirven porque nombran el tema",
+      "127,739",
+      "fragmentos en total",
+      "Lo que el sistema puede encontrar",
+      "Lo que dice un reportero nunca respalda una respuesta: queda como «ambiguo»"
+    ]
+  },
+  {
+    "slide": 6,
+    "paragraphs": [
+      "DEL DISCURSO AL TEXTO QUE SE BUSCA",
+      "Cómo una oración se vuelve términos de búsqueda",
+      "06",
+      "«Refinería» y «refinerías» quedan como el mismo término: «refin»"
+    ]
+  },
+  {
+    "slide": 7,
+    "paragraphs": [
+      "DEL DISCURSO AL TEXTO QUE SE BUSCA",
+      "Raíz o lema: el lema no confunde «maya» con «mayo»",
+      "07",
+      "53.6 %",
+      "MAP con raíz",
+      "Calidad de búsqueda · ganó",
+      "50.7 %",
+      "MAP con lema",
+      "Calidad de búsqueda · alternativa",
+      "La diferencia no es significativa (p = 0.07): las dos formas buscan casi igual"
+    ]
+  },
+  {
+    "slide": 8,
+    "paragraphs": [
+      "CÓMO SE BUSCA",
+      "El índice invertido: buscar es leer unas listas",
+      "08",
+      "«Huachicol» aparece en 714 fragmentos y «programa» en 12,803: solo se leen esas listas"
+    ]
+  },
+  {
+    "slide": 9,
+    "paragraphs": [
+      "CÓMO SE BUSCA",
+      "La unidad es el idf: entre más raro, más pesa",
+      "09",
+      "Un fragmento con «huachicol» casi seguro trata del tema; uno con «robo», de cualquier cosa",
+      "5.19",
+      "idf de «huachicol»",
+      "Está en el 0.56 % de los fragmentos",
+      "3.06",
+      "idf de «robo»",
+      "Está en el 4.68 % de los fragmentos"
+    ]
+  },
+  {
+    "slide": 10,
+    "paragraphs": [
+      "CÓMO SE BUSCA",
+      "¿Por qué no una búsqueda booleana?",
+      "10",
+      "El booleano solo dice sí o no: nunca dice cuál leer primero",
+      "0",
+      "con «Y», todas las palabras",
+      "En Banco del Bienestar y en Acapulco tras Otis, dentro del periodo",
+      "1,485",
+      "con «O», cualquier palabra",
+      "En huachicol; 1,261 ni siquiera dicen «huachicol»",
+      "10",
+      "con BM25, nuestro buscador",
+      "Siempre ordenados, y los 10 de huachicol sí dicen «huachicol»"
+    ]
+  },
+  {
+    "slide": 11,
+    "paragraphs": [
+      "CÓMO MEDIMOS LA BÚSQUEDA",
+      "Tres personas juzgan cada resultado",
+      "11",
+      "Un fragmento es relevante si al menos dos de tres dicen que sí",
+      "320",
+      "pares de pregunta y fragmento",
+      "Los 10 mejores de 8 variantes del buscador",
+      "3",
+      "personas por par",
+      "Cada una por separado, sin ver el modelo ni el lugar",
+      "74.8 %",
+      "de acuerdo entre dos jueces",
+      "En promedio, para cualquier pareja",
+      "0.48",
+      "kappa de Fleiss",
+      "Acuerdo moderado: va de 0 (azar) a 1 (acuerdo total)"
+    ]
+  },
+  {
+    "slide": 12,
+    "paragraphs": [
+      "CÓMO MEDIMOS LA BÚSQUEDA",
+      "Cómo se calcula la calidad: el caso Dos Bocas",
+      "12",
+      "El promedio de las 15 preguntas es el MAP: 53.6 %, con intervalo del 95 % de 43.3 % a 64.1 %",
+      "MAP: calidad promedio",
+      "BM25 · raíz",
+      "53.6 %",
+      "BM25 · lema",
+      "50.7 %",
+      "TF-IDF · raíz",
+      "35.2 %",
+      "TF-IDF · lema",
+      "34.9 %",
+      "BM25 y TF-IDF: dos fórmulas para ordenar fragmentos",
+      "Ganó BM25 con raíz y filtro de fecha"
+    ]
+  },
+  {
+    "slide": 13,
+    "paragraphs": [
+      "CÓMO MEDIMOS LA BÚSQUEDA",
+      "Pregunta por pregunta",
+      "13",
+      "BM25 supera a TF-IDF y la diferencia no es casualidad (p = 0.014); entre raíz y lema puede ser azar (p = 0.07)",
+      "90 %",
+      "en Tren Maya",
+      "9 de los 10 primeros son relevantes",
+      "25.8 %",
+      "en Dos Bocas",
+      "Solo 4 de los 10 primeros"
+    ]
+  },
+  {
+    "slide": 14,
+    "paragraphs": [
+      "EXTRACCIÓN DE ENTIDADES",
+      "Extraer quién, qué, dónde, cuándo y cuánto",
+      "14",
+      "Elegimos el modelo con diez fragmentos anotados por dos personas, antes de ver los resultados finales",
+      "Cómo se reconoce cada tipo",
+      "Fechas y montos",
+      "Reglas",
+      "«50 mil millones de pesos»",
+      "Personas, organizaciones y lugares",
+      "Diccionarios, marca de quien habla y un modelo de lenguaje",
+      "«Rocío Nahle», persona",
+      "F1 de cuatro modelos de lenguaje",
+      "F1 combina qué tanto acierta y qué tanto encuentra; 100 % es perfecto",
+      "XLM-RoBERTa large · elegido",
+      "67.8 %",
+      "XLM-RoBERTa base",
+      "61.3 %",
+      "BERT en español · el de la versión anterior",
+      "27.1 %",
+      "spaCy en español",
+      "26.2 %"
+    ]
+  },
+  {
+    "slide": 15,
+    "paragraphs": [
+      "EXTRACCIÓN DE ENTIDADES",
+      "Qué tan bien se extrae, y comparado con qué",
+      "15",
+      "Más fuerte: personas, 94.7 %, sin dejar ninguna fuera. Más débil: fechas, 53.3 %, con solo 8 anotadas",
+      "82.7 %",
+      "F1 del sistema",
+      "Intervalo de 77.1 % a 88.2 %",
+      "85.3 %",
+      "dos personas entre sí",
+      "Lo que logra una persona contra otra",
+      "65.4 %",
+      "solo diccionarios",
+      "La línea base más simple"
+    ]
+  },
+  {
+    "slide": 16,
+    "paragraphs": [
+      "EXTRACCIÓN DE ENTIDADES",
+      "Cada patrón de error tiene su arreglo",
+      "16",
+      "Arreglo: el nombre completo de cada obra e institución en los diccionarios",
+      "66 de 103",
+      "son de límites",
+      "«Santa Lucía» donde la anotación manual dice «Base Aérea Militar de Santa Lucía»",
+      "92.6 %",
+      "F1 si se acepta el traslape",
+      "Sube desde 82.7 %"
+    ]
+  },
+  {
+    "slide": 17,
+    "paragraphs": [
+      "RESPUESTAS CON EVIDENCIA",
+      "Respaldado, ambiguo o sin evidencia",
+      "17",
+      "El sistema clasifica con reglas: respaldado si lo sostiene una cita textual de quien declara",
+      "248",
+      "de 375 datos, respaldados",
+      "Dos de cada tres",
+      "Respaldado · Banco del Bienestar",
+      "262 sucursales en Oaxaca",
+      "«Ya en el caso de Oaxaca son 262 sucursales»",
+      "Presidente, 14 de enero de 2023",
+      "Ambiguo · Dos Bocas",
+      "Lo dice un reportero, no quien declara",
+      "«Soy Yesenia Peralta, de Business Energy, Tabasco»",
+      "Pregunta en la conferencia, 27 de septiembre de 2022",
+      "Sin evidencia · Tren Maya",
+      "Montos de la obra",
+      "Ningún fragmento encontrado menciona un monto",
+      "La tabla lo deja vacío y lo marca, en vez de inventarlo"
+    ]
+  },
+  {
+    "slide": 18,
+    "paragraphs": [
+      "DATISA · DEMOSTRACIÓN",
+      "18",
+      "El sistema en vivo",
+      "1",
+      "Recorrido guiado",
+      "Dos Bocas, de la pregunta a la respuesta con su cita",
+      "2",
+      "Una de las quince preguntas",
+      "Con su tabla de respuesta y la frase que respalda cada dato",
+      "3",
+      "Su pregunta",
+      "Una consulta libre con fechas, propuesta por ustedes"
+    ]
+  },
+  {
+    "slide": 19,
+    "paragraphs": [
+      "SIGUIENTES PASOS",
+      "Siguientes pasos",
+      "19",
+      "Cada límite que encontramos ya tiene su mejora",
+      "1",
+      "Preguntas difíciles",
+      "Dos Bocas y vacunas, con precisión promedio de 25.8 % y 28.6 %",
+      "Siguiente paso",
+      "Ampliar la pregunta con sinónimos y nombres alternos",
+      "2",
+      "Límites de los nombres",
+      "66 de 103 diferencias con la anotación manual son de límites",
+      "Siguiente paso",
+      "Diccionarios con el nombre completo de obras e instituciones",
+      "3",
+      "Fechas",
+      "Solo 8 fechas en la anotación manual: la medida es exploratoria",
+      "Siguiente paso",
+      "Más ejemplos anotados para medirlas con confianza"
+    ]
+  },
+  {
+    "slide": 20,
+    "paragraphs": [
+      "DATISA",
+      "20",
+      "Gracias",
+      "Pruébenlo con sus propias preguntas",
+      "Datisa",
+      "Carpio Angeles Leo Yahir",
+      "Jaramillo Salmerón Arturo",
+      "Mera Montiel Gonzalo Sebastian",
+      "Moctezuma Ramirez Diego Rafael",
+      "Ramirez Maza Luis",
+      "https://examenmineriatextos-pccjbzo754exhckj6rb75v.streamlit.app/"
+    ]
+  }
+]

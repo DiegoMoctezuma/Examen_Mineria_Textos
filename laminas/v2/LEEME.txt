@@ -1,0 +1,43 @@
+DATISA · Versión para proyección — 25 de noviembre de 2026
+
+ABRIR Y EXPONER
+Abre Presentacion_Datisa_v2.html en Chrome o Edge. Contiene todos los recursos y funciona sin red.
+Flechas / Espacio: avanzar. Flecha izquierda: volver. Inicio / Fin: primera / última lámina.
+F: pantalla completa. El botón de impresión permite guardar todas las páginas en PDF.
+La liga de la demo requiere internet. El visor integrado de Codex no ofrece pantalla completa.
+
+PANTALLA Y TEXTO
+Composición preparada para una pantalla de 40–50 pulgadas y público a 3–5 metros.
+Títulos de 40–58 px; texto principal de 25–31; ejemplos de 23–24; tablas y etiquetas de 22–26.
+La tipografía nunca se encoge automáticamente para hacerla caber.
+Se separaron las páginas densas: ahora hay 26, con el contenido aprobado de las 20 originales.
+MAPA_LAMINAS.txt permite encontrar cada parte usando la numeración anterior.
+Las gráficas son SVG y las tablas son HTML: letras y números mantienen nitidez al ampliarse.
+
+CINTA E ILUSTRACIONES
+La cinta utiliza un solo trazado compartido y una máscara común. No sobresalen segmentos.
+El SVG independiente está en formas/cinta_corregida.svg.
+P1–P10 son las ilustraciones originales. P11–P15 se generaron con ImageGen integrado;
+los cinco PNG con transparencia y los prompts completos están en img/.
+AMLO con corazón se conserva únicamente en el cierre, sin círculo.
+
+EDITAR Y REGENERAR
+laminas/v2/index.html, estilos.css y presentacion.js son la versión modular.
+Mantén la estructura de carpetas al abrir la versión modular.
+La fuente de la nueva composición está en laminas/v2/herramientas/proyeccion.py, .css y .js.
+Las series de las gráficas están en figuras/datos_figuras.json, exportadas de los generadores
+existentes. No se calcularon métricas nuevas ni se modificaron anotaciones.
+Desde el repositorio completo:
+  uv run --with pillow --with lxml python laminas/v2/herramientas/exportar_html.py .
+  python3 laminas/v2/herramientas/archivo_unico.py laminas/v2/index.html
+  uv run --with pillow --with lxml python laminas/v2/herramientas/validar_proyeccion.py .
+Para reexportar los datos visuales de las salidas aprobadas:
+  PYTHONPATH=src uv run python laminas/v2/herramientas/exportar_datos_figuras.py
+
+VALIDACIÓN
+Se conserva cada párrafo aprobado, con las dos excepciones previamente acordadas:
+recorrido Tren Maya → Dos Bocas y https://datisa.streamlit.app.
+Se renumeraron las láminas y se repitieron algunos encabezados al dividir contenido.
+validacion.json registra el control de texto, hashes de fuentes, recursos y geometría.
+Los PowerPoint y el guion se conservan intactos; esta entrega es HTML + PDF.
+Montserrat y Noto Sans son locales, con Arial de respaldo; licencias y avisos en fonts/.

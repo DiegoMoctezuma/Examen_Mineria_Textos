@@ -1,0 +1,47 @@
+{
+  "tool": "image_gen.imagegen (built-in)",
+  "prompts": [
+    {
+      "id": 11,
+      "prompt": "Use case: illustration-story. Asset type: one square circular illustrated topic medallion for a Spanish university presentation, matching a cheerful Mexican public-program cartoon sticker set. Style: confident thick dark charcoal outlines, clean hand-drawn vector-like 2D illustration, flat clear color fills, a few simple shadows, rounded friendly forms; visually detailed enough to identify the topic but large simple silhouettes readable at thumbnail size. NOT photorealistic, NOT 3D, no glow, no gradients, no stock pictogram. Composition: one centered circular scene almost filling the square, thin burgundy #611232 and muted gold #A57F2C rim; warm pale cream or pale sky backdrop INSIDE circle; absolutely transparent OUTSIDE circle. Keep important subjects safely within inner 85% of the circle. Palette: burgundy, muted gold, cream, black outlines, natural accents appropriate to scene. No writing, no numbers, no watermark, no realistic portraits, no flags or complex official seals. Subject: Guardia Nacional de México: two approachable adult Mexican public safety officers, one woman and one man, in light gray uniforms and peaked or baseball service caps, standing before a white patrol pickup and simplified city street. No guns, no tactical combat, no threat. Their public safety service should be recognizable through uniforms, patrol pickup and small simple blank shield emblem."
+    },
+    {
+      "id": 12,
+      "prompt": "Use case: illustration-story. Asset type: one square circular illustrated topic medallion for a Spanish university presentation, matching a cheerful Mexican public-program cartoon sticker set. Style: confident thick dark charcoal outlines, clean hand-drawn vector-like 2D illustration, flat clear color fills, a few simple shadows, rounded friendly forms; visually detailed enough to identify the topic but large simple silhouettes readable at thumbnail size. NOT photorealistic, NOT 3D, no glow, no gradients, no stock pictogram. Composition: one centered circular scene almost filling the square, thin burgundy #611232 and muted gold #A57F2C rim; warm pale cream or pale sky backdrop INSIDE circle; absolutely transparent OUTSIDE circle. Keep important subjects safely within inner 85% of the circle. Palette: burgundy, muted gold, cream, black outlines, natural accents appropriate to scene. No writing, no numbers, no watermark, no realistic portraits, no flags or complex official seals. Subject: IMSS-Bienestar: Mexican public healthcare. A friendly female doctor with a stethoscope and white coat beside a male nurse in teal scrubs, in front of a modest cream public health clinic, small simple medical cross above entrance. Convey accessible community health care. No patient suffering, no text or official seals."
+    },
+    {
+      "id": 13,
+      "prompt": "Use case: illustration-story. Asset type: one square circular illustrated topic medallion for a Spanish university presentation, matching a cheerful Mexican public-program cartoon sticker set. Style: confident thick dark charcoal outlines, clean hand-drawn vector-like 2D illustration, flat clear color fills, a few simple shadows, rounded friendly forms; visually detailed enough to identify the topic but large simple silhouettes readable at thumbnail size. NOT photorealistic, NOT 3D, no glow, no gradients, no stock pictogram. Composition: one centered circular scene almost filling the square, thin burgundy #611232 and muted gold #A57F2C rim; warm pale cream or pale sky backdrop INSIDE circle; absolutely transparent OUTSIDE circle. Keep important subjects safely within inner 85% of the circle. Palette: burgundy, muted gold, cream, black outlines, natural accents appropriate to scene. No writing, no numbers, no watermark, no realistic portraits, no flags or complex official seals. Subject: Reforma eléctrica de México: electricity generation and power distribution. A tall steel electricity transmission pylon on the left, simplified power plant and cable lines in the middle distance, and one large glowing-looking but flat yellow lightbulb on the right. Practical electrical infrastructure, clean illustrative composition; no lightning storms or abstract cyber effects."
+    },
+    {
+      "id": 14,
+      "prompt": "Use case: illustration-story. Asset type: one square circular illustrated topic medallion for a Spanish university presentation, matching a cheerful Mexican public-program cartoon sticker set. Style: confident thick dark charcoal outlines, clean hand-drawn vector-like 2D illustration, flat clear color fills, a few simple shadows, rounded friendly forms; visually detailed enough to identify the topic but large simple silhouettes readable at thumbnail size. NOT photorealistic, NOT 3D, no glow, no gradients, no stock pictogram. Composition: one centered circular scene almost filling the square, thin burgundy #611232 and muted gold #A57F2C rim; warm pale cream or pale sky backdrop INSIDE circle; absolutely transparent OUTSIDE circle. Keep important subjects safely within inner 85% of the circle. Palette: burgundy, muted gold, cream, black outlines, natural accents appropriate to scene. No writing, no numbers, no watermark, no realistic portraits, no flags or complex official seals. Subject: Jóvenes Construyendo el Futuro: two young adult Mexican apprentices learning alongside an older adult instructor in a small workshop. One young woman holding a technical notebook, one young man at a simple workbench with laptop and a couple tools, mentor guiding them. Friendly faces in the same Mexican community-program cartoon style, half-body composition, no tiny writing."
+    },
+    {
+      "id": 15,
+      "prompt": "Use case: illustration-story. Asset type: one square circular illustrated topic medallion for a Spanish university presentation, matching a cheerful Mexican public-program cartoon sticker set. Style: confident thick dark charcoal outlines, clean hand-drawn vector-like 2D illustration, flat clear color fills, a few simple shadows, rounded friendly forms; visually detailed enough to identify the topic but large simple silhouettes readable at thumbnail size. NOT photorealistic, NOT 3D, no glow, no gradients, no stock pictogram. Composition: one centered circular scene almost filling the square, thin burgundy #611232 and muted gold #A57F2C rim; warm pale cream or pale sky backdrop INSIDE circle; absolutely transparent OUTSIDE circle. Keep important subjects safely within inner 85% of the circle. Palette: burgundy, muted gold, cream, black outlines, natural accents appropriate to scene. No writing, no numbers, no watermark, no realistic portraits, no flags or complex official seals. Subject: Acapulco tras Otis: recognizable Acapulco bay with curved shoreline, sea, hills and coastal hotel buildings, a gently bent palm, foreground two adult community workers repairing a small roof after the hurricane. Respectful hopeful reconstruction scene, no victims, no rubble clutter, no storm swirl, no text. Clearly Acapulco coastal recovery, not a generic beach vacation."
+    }
+  ],
+  "assets": [
+    {
+      "id": 11,
+      "path": "img/p11.png"
+    },
+    {
+      "id": 12,
+      "path": "img/p12.png"
+    },
+    {
+      "id": 13,
+      "path": "img/p13.png"
+    },
+    {
+      "id": 14,
+      "path": "img/p14.png"
+    },
+    {
+      "id": 15,
+      "path": "img/p15.png"
+    }
+  ]
+}

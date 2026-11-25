@@ -1,0 +1,216 @@
+{
+  "fecha": "2026-11-25",
+  "operador": "Diego",
+  "paquete": "WP-17",
+  "laminas": 26,
+  "fuente": {
+    "laminas_originales": 20,
+    "parrafos_identificados": 239,
+    "perdidos": [],
+    "alterados": [],
+    "numeracion": "Se renumera de 1 a 26 al separar contenido denso",
+    "excepciones_previas": [
+      "Recorrido Tren Maya → Dos Bocas",
+      "https://datisa.streamlit.app"
+    ]
+  },
+  "proyeccion": {
+    "pantalla_pulgadas": [
+      40,
+      50
+    ],
+    "distancia_metros": [
+      3,
+      5
+    ],
+    "titulo_px": "40–58 (96 en Gracias)",
+    "cuerpo_px": "25–31",
+    "ejemplos_y_notas_px": "23–24",
+    "tablas_y_etiquetas_px": "22–26",
+    "metadatos_px": "17–18",
+    "reduccion_automatica_de_fuente": false,
+    "graficas": "SVG vectorial con las mismas series que las figuras originales"
+  },
+  "cinta": "Una única trayectoria compartida y una máscara común para todos los segmentos: no hay salientes entre colores",
+  "cifras": {
+    "fuentes_comprobadas": 15,
+    "hashes_correctos": true,
+    "metricas_y_datos_sin_cambios": true,
+    "anotaciones": "Sin modificaciones"
+  },
+  "ilustraciones": {
+    "modo": "image_gen.imagegen integrado",
+    "prompts": "img/generacion_p11_p15.json",
+    "imagenes": [
+      {
+        "tema": 11,
+        "archivo": "img/p11.png",
+        "dimensiones": [
+          1254,
+          1254
+        ],
+        "sha256": "2564ce775d199547b528de31e371a4024bfc79986be27ea2b3d62e180528e3b8"
+      },
+      {
+        "tema": 12,
+        "archivo": "img/p12.png",
+        "dimensiones": [
+          1254,
+          1254
+        ],
+        "sha256": "ce10b8b8c479e5fbfbd1e9e5c77cd8dacc73c67a79522407f94e9367f1295828"
+      },
+      {
+        "tema": 13,
+        "archivo": "img/p13.png",
+        "dimensiones": [
+          1254,
+          1254
+        ],
+        "sha256": "e6bcd358678fff902fc56f9eed1e6b9b86fe247f17c737e495c79e6c3d5ded4b"
+      },
+      {
+        "tema": 14,
+        "archivo": "img/p14.png",
+        "dimensiones": [
+          1254,
+          1254
+        ],
+        "sha256": "49f45ae6a2d941dfa03ac84efae09e96cbcc0496507561e621493be8c0728e1d"
+      },
+      {
+        "tema": 15,
+        "archivo": "img/p15.png",
+        "dimensiones": [
+          1254,
+          1254
+        ],
+        "sha256": "475b2d5d75a31a959d1b8074e2dd3762b19abae1ed0d82eac1fc6c70b7d561c4"
+      }
+    ],
+    "p1_p10_y_amlo": "Originales conservados; AMLO solo en la última lámina, sin círculo"
+  },
+  "mapa": [
+    {
+      "lamina": 1,
+      "origen": 1
+    },
+    {
+      "lamina": 2,
+      "origen": 2
+    },
+    {
+      "lamina": 3,
+      "origen": 3
+    },
+    {
+      "lamina": 4,
+      "origen": 3
+    },
+    {
+      "lamina": 5,
+      "origen": 4
+    },
+    {
+      "lamina": 6,
+      "origen": 5
+    },
+    {
+      "lamina": 7,
+      "origen": 6
+    },
+    {
+      "lamina": 8,
+      "origen": 6
+    },
+    {
+      "lamina": 9,
+      "origen": 7
+    },
+    {
+      "lamina": 10,
+      "origen": 8
+    },
+    {
+      "lamina": 11,
+      "origen": 9
+    },
+    {
+      "lamina": 12,
+      "origen": 10
+    },
+    {
+      "lamina": 13,
+      "origen": 10
+    },
+    {
+      "lamina": 14,
+      "origen": 11
+    },
+    {
+      "lamina": 15,
+      "origen": 12
+    },
+    {
+      "lamina": 16,
+      "origen": 13
+    },
+    {
+      "lamina": 17,
+      "origen": 13
+    },
+    {
+      "lamina": 18,
+      "origen": 14
+    },
+    {
+      "lamina": 19,
+      "origen": 15
+    },
+    {
+      "lamina": 20,
+      "origen": 15
+    },
+    {
+      "lamina": 21,
+      "origen": 16
+    },
+    {
+      "lamina": 22,
+      "origen": 17
+    },
+    {
+      "lamina": 23,
+      "origen": 17
+    },
+    {
+      "lamina": 24,
+      "origen": 18
+    },
+    {
+      "lamina": 25,
+      "origen": 19
+    },
+    {
+      "lamina": 26,
+      "origen": 20
+    }
+  ],
+  "pdf": {
+    "paginas": 26,
+    "revision_visual": "26 páginas revisadas, sin texto cortado"
+  },
+  "navegador": {
+    "recursos_rotos": 0,
+    "texto_fuera_de_lamina_o_pie": 0,
+    "teclado": "Flechas, Espacio, Inicio y Fin",
+    "pantalla_completa": "F y botón, Chrome/Edge; aviso de compatibilidad en el visor de Codex",
+    "html_autonomo": true,
+    "recursos_externos": 0,
+    "pantallas_comprobadas": [
+      "1280×720",
+      "390×844"
+    ],
+    "imagen_alpha": "Cinco PNG de 1254×1254, RGBA, alpha 0–255"
+  }
+}
