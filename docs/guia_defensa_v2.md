@@ -141,8 +141,6 @@ cierres. La demo de terminal y la web ocultan esos pasajes hasta el cierre del g
 anotación se integraron solo cuando las dos personas de cada parte habían terminado.
 
 **¿Cómo usaron la IA?**
-*Borrador del 25 (Claude Code) con los hechos registrados; debe decir lo mismo que la sección «Uso
-de IA» del README v2 de Luis.*
 En tres papeles distintos, y nunca para producir los datos con que se evalúa:
 - **Para construir:** Claude Code escribió o coescribió el código, las pruebas, la app de anotación,
   la demo web, las figuras y los borradores del reporte, el guion y esta guía, a partir de los
@@ -150,12 +148,21 @@ En tres papeles distintos, y nunca para producir los datos con que se evalúa:
 - **Para proponer, no para decidir:** Claude Code propuso 12 temas candidatos y Diego y Arturo
   eligieron y redactaron Q11 a Q15 (`config/v2/candidatos_q11q15.yaml`). Las reglas de decisión
   (mayoría, ganador, modelo NER) se fijaron por escrito antes de medir.
-- **Para revisar desde fuera:** un modelo sin contexto del proyecto revisó la presentación como si
-  fuera el cliente (revisión ciega, `docs/revision_ciega_respuesta.md`).
-  ⟦qué cambios tomamos de la revisión ciega⟧
+- **Para revisar desde fuera:** Gemini, en una conversación nueva y sin archivos del equipo,
+  revisó la presentación como si fuera el cliente (revisión ciega, `docs/revision_ciega_respuesta.md`).
+  Tomamos casi todo lo de seriedad, jerga y contraste: «DATISA» en vez de «Proyecto final», cada
+  término (BM25, MAP, kappa, F1, gold) explicado en palabras, ejemplos de «ambiguo» y «sin
+  evidencia», figuras más legibles (las corrigió Gonzalo) y una demo que abre con Tren Maya y deja
+  Dos Bocas como caso difícil, en una dirección limpia (Leo). No tomamos dos cosas: mover la teoría a
+  un anexo, porque cambiaba el guion aprobado, y quitar la caricatura del cierre, que el equipo
+  conserva como final relajado.
+- **Para la presentación:** Codex pasó el deck de Arturo a la versión HTML final (`laminas/v2/`)
+  sin cambiar texto ni cifras, y generó las ilustraciones de P11 a P15; las de P1 a P10 son las del
+  examen.
 
 Lo que ningún asistente generó ni sugirió: los 960 juicios de relevancia (3 por par), la
 anotación del conjunto de selección y del gold, las adjudicaciones, la revisión de siglas y las 15
-valoraciones de las tablas. El código se verifica con 742 pruebas automáticas y `make validar`
-(22 condiciones). ⟦otras herramientas de IA que declare cada integrante en el README⟧
+valoraciones de las tablas. El código se verifica con 743 pruebas automáticas y `make validar`
+(22 condiciones). Las herramientas son las que declara el README: Claude Code, Codex y Gemini (en
+v1, Diego también usó Gemini como tutor para dudas de criterio, sin que redactara anotaciones).
 Fuentes: README v2 (sección «Uso de IA»), `docs/decisiones.md`, `salida/v2/04_pool_meta.json`.
