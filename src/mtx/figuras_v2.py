@@ -276,6 +276,34 @@ def fig_indice(postings: list[dict], N: int, est: Estilo, version: str = "v2"):
                  "Buscar es leer solo las listas de los términos de la consulta", alto=520)
 
 
+def fig_booleano(t: pd.DataFrame, est: Estilo, version: str = "v2"):
+    """R07 (D30): fragmentos que devuelve el booleano por pregunta dentro de su ventana, frente a
+    los 10 ordenados de BM25. Escala logarítmica: AND va de 0 a cientos y OR a decenas de miles."""
+    go, pal = _go(), est.paleta
+    qs = sorted(t["query_id"].unique(), key=lambda q: -int(q.lstrip("Q")))
+    piv = t.pivot(index="query_id", columns="operador", values="en_ventana").reindex(qs)
+    nombres = [nombre_consulta(est, q, True) for q in qs]
+    # log no admite 0: los vacíos se dibujan en 0.8 y la etiqueta dice 0
+    barras = [go.Bar(name=nombre, y=nombres, x=[max(v, 0.8) for v in piv[op]], orientation="h",
+                     marker_color=color, text=[miles(v) for v in piv[op]],
+                     textposition="outside", cliponaxis=False)
+              for op, nombre, color in (("AND", "Y: todas las palabras", pal["dorado"]),
+                                        ("OR", "O: cualquier palabra", pal["gris"]))]
+    fig = go.Figure(barras)
+    fig.add_vline(x=10, line={"color": pal["guinda"], "width": 3, "dash": "dash"})
+    fig.add_annotation(x=1, xref="x", y=1.0, yref="paper", yanchor="bottom", xanchor="left",
+                       text="BM25: siempre 10, ordenados", showarrow=False,
+                       font={"color": pal["guinda"], "size": 14})
+    fig.update_xaxes(type="log", range=[-0.2, 5.2], dtick=1)
+    fig.update_layout(barmode="group")
+    vacias = int((piv["AND"] == 0).sum())
+    cuantas = "1 pregunta no devuelve" if vacias == 1 else f"{vacias} preguntas no devuelven"
+    sub = ("El booleano no ordena ni usa el idf" + (f"; con Y, {cuantas} nada" if vacias else ""))
+    return _base(fig, est, "Con Y casi nada, con O miles, y ninguno dice cuál leer primero",
+                 "Fragmentos devueltos dentro del periodo (escala logarítmica)", "Pregunta", version,
+                 sub, alto=200 + 46 * len(qs), ancho=1200)
+
+
 # --------------------------------------------------------------------------- IR (S5a, S6)
 
 

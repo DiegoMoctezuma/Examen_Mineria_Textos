@@ -174,6 +174,15 @@ def f_indice(cx):
     return F.fig_indice(postings, cx.ind.N, cx.est), "corpus", []
 
 
+def f_booleano(cx):
+    ruta = S2 / "03b_booleano.csv"
+    if not ruta.exists():
+        return None, "v2", []
+    t = _csv(ruta)
+    t["en_ventana"] = t["en_ventana"].astype(int)
+    return F.fig_booleano(t, cx.est), "v2", [ruta]
+
+
 def f_ap(cx):
     fi = fuentes_ir()
     q = cx.est.ejemplos.get("ap_consulta", "Q3")
@@ -262,6 +271,7 @@ def f_estados(cx):
 FIGURAS = {
     "s2a_corpus": f_corpus, "s2b_acotaciones": f_acotaciones, "s4c_tokenizacion": f_tokenizacion,
     "s4d_idf": f_idf, "stem_lema": f_stem_lema, "r09_indice_invertido": f_indice,
+    "r07_booleano": f_booleano,
     "s5a_ap_explicado": f_ap, "s5a_map_por_modelo": f_map, "s6_ap_por_consulta": f_ap_consulta,
     "s7c_prf_por_tipo": f_prf, "s7a_f1_con_referencias": f_f1_referencias,
     "s8_errores_patrones": f_errores, "s9_estados_respuesta": f_estados,
@@ -294,7 +304,7 @@ def main() -> int:
         fig, version, usadas = FIGURAS[nombre](cx)
         if fig is None:
             registro[nombre] = {"archivo": None, "datos": version,
-                                "nota": "pendiente: necesita las referencias v2 (make all-v2)"}
+                                "nota": "pendiente: faltan sus salidas (make all-v2 o make booleano)"}
             print(f"  pendiente  {nombre}: necesita datos v2")
             continue
         if F.tiene_id_o_ruta(fig):

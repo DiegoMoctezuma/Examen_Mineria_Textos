@@ -42,9 +42,12 @@ después de `make all-v2`, desde el archivo indicado. Ninguna cifra se escribe a
 **¿Por qué no un modelo booleano si el idf de «huachicol» es tan alto? (R07)**
 Porque el booleano no ordena: devuelve un conjunto sin decir qué fragmento es mejor, trata igual a
 «huachicol» (714 fragmentos, idf 5.19) que a «programa» (12,803 fragmentos, idf 2.30) y no usa
-cuántas veces aparece cada palabra. Con «Y», una pregunta larga casi no devuelve nada; con «O»,
-devuelve miles. ⟦pendiente WP-07: fragmentos que devuelve cada operador⟧.
-Fuentes: `salida/02_postings.md`; ⟦v2⟧ `salida/v2/03b_booleano.csv`.
+cuántas veces aparece cada palabra. Con «Y», dentro del periodo de cada pregunta, Banco del
+Bienestar y Acapulco tras Otis no devuelven nada, y Reforma eléctrica y Tren Interoceánico, 1 y 2
+fragmentos. Con «O» salen entre 1,441 y 35,078. En huachicol, «O» trae 1,485 fragmentos y 1,261 no
+dicen «huachicol»; los 10 primeros de BM25 sí lo dicen.
+Fuentes: `salida/02_postings.md`, `salida/v2/03b_booleano.csv`,
+`salida/v2/03b_ejemplo_huachicol.md`.
 
 **¿Qué ganaron con el lema? (S4e)**
 Separa palabras que la raíz junta: «maya» y «mayo» son «may» con raíz (6,504 fragmentos), y con

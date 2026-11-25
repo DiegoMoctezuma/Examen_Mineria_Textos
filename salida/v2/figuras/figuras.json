@@ -105,5 +105,13 @@
     "fuentes": {
       "salida/respuestas.csv": "6505e1910dd088533466997c3ca54c233d6cba1fc38dd2ba9fa6da09100e811e"
     }
+  },
+  "r07_booleano": {
+    "archivo": "salida/v2/figuras/r07_booleano.png",
+    "titulo": "Con Y casi nada, con O miles, y ninguno dice cuál leer primero",
+    "datos": "v2",
+    "fuentes": {
+      "salida/v2/03b_booleano.csv": "533157901e262c75d11fee66c9944167fecfdbf24e895155265209849200f8dc"
+    }
   }
 }

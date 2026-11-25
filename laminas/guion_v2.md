@@ -157,14 +157,15 @@ Fuente: `salida/v2/figuras/figuras.json` (`s4d_idf`); `salida/02_tokens_consulta
 
 **Expone: Diego. Tiempo: 0:45. Acumulado: 7:20.**
 
-⟦pendiente WP-07: si no se corre el experimento booleano, esta lámina se quita y el tiempo pasa a
-la demo⟧. Una búsqueda booleana solo dice sí o no: con «Y» exige todas las palabras y con «O»
-acepta cualquiera. No ordena, no distingue «huachicol» de «programa» y con preguntas largas «Y»
-devuelve muy poco. ⟦v2: fragmentos que devuelve cada operador⟧.
+Una búsqueda booleana solo dice sí o no. Con «Y» exige todas las palabras: en Banco del Bienestar
+y en Acapulco tras Otis no devuelve ningún fragmento dentro del periodo. Con «O» acepta cualquiera
+y devuelve miles: 1,485 para huachicol, y 1,261 de ellos ni siquiera dicen «huachicol», porque
+para el booleano «robo» vale lo mismo. Y en ningún caso dice cuál leer primero. BM25 siempre
+entrega diez, ordenados, y los diez de huachicol sí hablan de huachicol.
 
-*R07. Figura del booleano contra BM25 cuando exista.*
+*R07. Figura `r07_booleano.png`; el ejemplo de huachicol va en voz.*
 
-Fuente: ⟦v2⟧ `salida/v2/03b_booleano.csv`, `salida/v2/03b_ejemplo_huachicol.md`.
+Fuentes: `salida/v2/03b_booleano.csv` (`en_ventana`), `salida/v2/03b_ejemplo_huachicol.md`.
 
 ## 11. Cómo sabemos que la búsqueda funciona: tres personas juzgan cada resultado
 

@@ -1,7 +1,7 @@
 # Objetivos del PRD §10. Los que dependen de insumos humanos se detienen con un mensaje claro.
 PY := uv run python
 .PHONY: consultas consultas-v2 setup contratos corpus explorar explorar-v2 indice indice-lema ranking ranking-v2 pool pool-v2 app app-cli asignar-juicios importar-juicios evaluar-ir agregar-juicios evaluar-ir-v2 reglas congelar ner \
-        muestra-gold muestra-gold-v2 acuerdo-gold revisar-cierres-v2 cierre-juicios-v2 cierre-gold-v2 verificar-ner-v2 inferir-seleccion comparacion-ner fijar-ner-v2 ner-v2 extraer-v2 evaluar-ie-v2 extraer evaluar-ie tablas tablas-v2 figuras-v2 resultados reporte laminas demo test test-lento \
+        muestra-gold muestra-gold-v2 acuerdo-gold revisar-cierres-v2 cierre-juicios-v2 cierre-gold-v2 verificar-ner-v2 inferir-seleccion comparacion-ner fijar-ner-v2 ner-v2 extraer-v2 evaluar-ie-v2 extraer evaluar-ie tablas tablas-v2 booleano figuras-v2 resultados reporte laminas demo test test-lento \
         validar entrega all all-v2 limpiar
 
 setup:
@@ -109,6 +109,9 @@ reporte:
 	$(PY) scripts/11_reporte.py
 laminas:
 	@echo "La presentación final (laminas/Presentacion_Mineria_de_Textos.pptx) y el guion los hizo el equipo a mano; no se regeneran."
+# WP-07 (D30): booleano AND/OR exploratorio; no entra al pool ni al ganador.
+booleano:
+	$(PY) scripts/03b_booleano.py
 # WP-16: figuras v2 para láminas y reporte; v1 hasta que existan las salidas v2 (lo dicen en el subtítulo).
 figuras-v2:
 	$(PY) scripts/11b_figuras_v2.py $(if $(SOLO),--solo $(SOLO),)
@@ -129,7 +132,7 @@ entrega: contratos resultados reporte laminas validar
 	@echo "Copia de los seis CSV a la raíz: la hace scripts/99_validar.py tras validar."
 # WP-14: cadena v2 desde los insumos congelados, después de los dos cierres y de fijar el NER v2
 # (los cierres y `make fijar-ner-v2` se corren una sola vez y no forman parte de la cadena).
-all-v2: ranking-v2 agregar-juicios evaluar-ir-v2 acuerdo-gold ner-v2 extraer-v2 evaluar-ie-v2 tablas-v2 figuras-v2
+all-v2: ranking-v2 agregar-juicios evaluar-ir-v2 acuerdo-gold ner-v2 extraer-v2 evaluar-ie-v2 tablas-v2 booleano figuras-v2
 	$(PY) scripts/99_validar.py --parcial --sin-pruebas
 all: entrega
 
