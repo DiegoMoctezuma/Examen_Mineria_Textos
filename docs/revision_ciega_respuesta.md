@@ -144,14 +144,14 @@ Las láminas técnicas que **no tienen ejemplo concreto (o lo tienen incompleto)
 
 ## Qué tomamos y qué no
 
-Deck regenerado sobre el de 773cc39 con los cambios de Arturo (`laminas/` es de Gonzalo y Arturo, PRD v2 §6.2). Lo que toca figuras (`figuras_v2.py`, Gonzalo), la demo (Leo) o el guion aprobado (Diego y el equipo) no se cambió aquí: se les avisa.
+Deck regenerado sobre el de 773cc39 con los cambios de Arturo (`laminas/` es de Gonzalo y Arturo, PRD v2 §6.2). Lo que toca la demo (Leo) o el guion aprobado (Diego y el equipo) no se cambió aquí: se les avisa. Las figuras (`figuras_v2.py`) las corrigió Gonzalo en 3f73f42; se regeneraron con las mismas fuentes en ff53959 y el deck las usa desde b8fdac5.
 
 **Seriedad (§6, §8.1)**
 - Caricatura del cierre (20) → tomada: se quitó.
 - «MINERÍA DE TEXTOS» y «Proyecto final» en 01, 18 y 20 → tomada: dicen «DATISA» y ya no hay etiqueta arriba a la derecha.
 - Portada con jerga académica (01) → tomada: subtítulo «Un buscador con respuestas y citas para equipos de comunicación».
 - «BERT en español · el del examen» (14) → tomada: «el de la versión anterior».
-- `(stemming, examen)` y `(proyecto final)` en 06 y 07 → de Gonzalo: van dentro de las figuras `s4c` y `stem_lema`.
+- `(stemming, examen)` y `(proyecto final)` en 06 y 07 → tomada por Gonzalo: `s4c` y `stem_lema` dicen solo «Raíz» y «Lema».
 - URL con «examen» (20) → de Leo: es la dirección de la demo.
 
 **Datos y orden**
@@ -174,17 +174,18 @@ Deck regenerado sobre el de 773cc39 con los cambios de Arturo (`laminas/` es de 
 - `MAP` sin decir qué mide (12) → tomada: el panel se llama «MAP: calidad promedio».
 - p = 0.014 sin explicar (13) → tomada: «la diferencia no es casualidad (p = 0.014)».
 - `F1` sin definir (14) → tomada: «combina qué tanto acierta y qué tanto encuentra; 100 % es perfecto».
-- `gold` (15, 16, 19) → tomada en el texto de las láminas: «anotación manual». El subtítulo de la figura `s7a` (15) todavía dice «gold» → de Gonzalo.
+- `gold` (15, 16, 19) → tomada en el texto de las láminas: «anotación manual». El subtítulo de la figura `s7a` (15) también, corregido por Gonzalo: «pasajes anotados a mano».
 - `vacunas (28.6 %)` sin métrica (19) → tomada: «precisión promedio de 25.8 % y 28.6 %».
 
 **Contraste y legibilidad (§5)**
 - Barras grises de los modelos descartados (12, 14) → tomada: más oscuras (`6E9482`).
 - Etiqueta izquierda pegada al borde (02) → tomada: las figuras llevan margen blanco.
-- Barras de la 02 casi iguales → de Gonzalo (figura `s2a`).
-- `3,47` recortado (04) → de Gonzalo (figura `s2b`).
-- Dos rojos parecidos y etiqueta `Pregunta` recortada (13) → de Gonzalo (figura `s6`).
-- Barra de error invisible y rombo contra el eje (15) → de Gonzalo (figura `s7a`).
-- 30 barras en escala logarítmica (10) y leyenda chica (17) → de Gonzalo (figuras `r07` y `s9`).
+- Barras de la 02 casi iguales → abierto, de Gonzalo (figura `s2a`, opcional: lo ve en el ensayo).
+- `3,47` recortado (04) → tomada por Gonzalo: `s2b` muestra 3,471 completo.
+- Dos rojos parecidos y etiqueta `Pregunta` recortada (13) → tomada por Gonzalo: `s6` con un color por modelo y el eje completo.
+- Barra de error invisible y rombo contra el eje (15) → tomada por Gonzalo: `s7a` con la barra visible solo en «Todas» y sin rombo en Fechas (no hay referencia humana para fechas).
+- Leyenda chica (17) → tomada por Gonzalo: `s9` con la leyenda más grande, abajo.
+- 30 barras en escala logarítmica (10) → abierto, de Gonzalo (figura `r07`, opcional: lo ve en el ensayo).
 - Tabla de 06 y columna de 08 con letra chica → no: las figuras se quedan como están.
 
 **Estructura y demo (§2, §8.2, §8.5)**
