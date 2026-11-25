@@ -62,10 +62,8 @@ Bloqueos v2: los juicios del lote 2 de Gonzalo (sin ellos no hay cierres).
    El alumno pidió no tocar la presentación ni el guion: solo agregar esa línea si él da el tiempo.
 2. Decidir si `v1.0-entrega` se mueve a `f9cc3ee` (ajustes del equipo a la presentación, subidos
    el 2026-11-12, después de la etiqueta). Por defecto no se mueve.
-3. Revisar el guion: menciona a "Jaramillo Salmerón, Arturo", que no está en la lista de
-   integrantes que dio el alumno.
-4. Confirmar con el alumno que sí consultó a Gemini (así lo declaran el README y el reporte).
-5. Opcional: usar los juicios del otro integrante como segundo anotador (acuerdo 115 de 176,
+3. Confirmar con el alumno que sí consultó a Gemini (así lo declaran el README y el reporte).
+4. Opcional: usar los juicios del otro integrante como segundo anotador (acuerdo 115 de 176,
    kappa ≈ 0.31) sin cambiar las cifras oficiales.
 
 ## Decisiones

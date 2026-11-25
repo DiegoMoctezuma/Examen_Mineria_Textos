@@ -3,7 +3,7 @@
 **Borrador del 24 de noviembre (Claude Code, WP-17), con las cifras v2 de los cierres del 24 en la
 noche.** Las láminas las diseñan Gonzalo y Arturo en PowerPoint con las figuras de
 `salida/v2/figuras/`. Este guion propone qué dice cada lámina, quién la expone y cuánto dura. Toda
-cifra sale del archivo que se cita en la lámina. Lo marcado `[VALIDAR]` lo decide el equipo.
+cifra sale del archivo que se cita en la lámina. Diego aprobó el guion y el reparto el 24.
 
 - **Público:** el equipo de comunicación de una dependencia de gobierno (R01). Problema → solución
   → evidencia → demo.
@@ -17,18 +17,17 @@ cifra sale del archivo que se cita en la lámina. Lo marcado `[VALIDAR]` lo deci
 
 Tiempo medido: pendiente (ensayo cronometrado del 25 a las 14:00; aquí se anota «m:ss»).
 
-## Reparto propuesto `[VALIDAR]` equipo
+## Reparto
 
 | Integrante | Láminas | Bloque | Tiempo |
 | --- | --- | --- | --- |
 | Carpio Angeles, Leo Yahir | 1 a 3 y 18 | Problema, solución y demo | 5:30 |
-| Arturo | 4 a 7 | Del discurso al texto que se busca | 3:10 |
+| Jaramillo Salmerón, Arturo | 4 a 7 | Del discurso al texto que se busca | 3:10 |
 | Moctezuma Ramirez, Diego Rafael | 8 a 10 y 17 | Índice, idf, booleano y respuestas | 3:00 |
 | Mera Montiel, Gonzalo Sebastian | 11 a 13, 19 y 20 | Cómo medimos la búsqueda y cierre | 3:35 |
 | Ramirez Maza, Luis | 14 a 16 | Extracción de entidades | 2:45 |
 
-*Falta el apellido completo de Arturo, igual que en la portada. PV3: «Leo Yahir» en portada y
-créditos.*
+*PV3: «Leo Yahir» en portada y créditos.*
 
 ## 1. Encontrar en segundos lo que se dijo en seis años de mañaneras
 
@@ -258,7 +257,7 @@ cada obra e institución. El segundo patrón son 12 entidades que nadie detectó
 Vida» como organización; se corrigen agregándolas al diccionario de programas.
 
 *Figura `s8_errores_patrones.png`. S8a: no decir «el modelo falló». Causa y arreglo son
-propuesta de Claude Code a partir de los ejemplos; `[VALIDAR]` Luis.*
+propuesta de Claude Code a partir de los ejemplos, aprobada por Diego.*
 
 Fuentes: `salida/v2/09_resumen_errores.csv` (`frontera` 66, `omision` 12),
 `salida/v2/09_analisis_errores.csv` (ejemplos), `salida/v2/09_referencias_f1.csv`
@@ -295,7 +294,7 @@ la búsqueda trae menos relevantes, se mejoran ampliando la pregunta con sinóni
 alternos. Dos: los límites de los nombres se corrigen con diccionarios de nombres completos de obras
 e instituciones. Tres: las fechas necesitan más ejemplos anotados para medirlas con confianza.
 
-*`[VALIDAR]` equipo: propuestas de Claude Code a partir de las láminas 13, 15 y 16.*
+*Propuestas de Claude Code a partir de las láminas 13, 15 y 16, aprobadas por Diego.*
 
 Fuentes: `salida/v2/resultados_ir.csv` (AP de Q2 y Q3), `salida/v2/09_resumen_errores.csv`,
 `salida/v2/resultados_ie.csv` (FECHA, `gold` = 8).

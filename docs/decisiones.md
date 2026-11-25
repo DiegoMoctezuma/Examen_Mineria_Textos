@@ -193,3 +193,4 @@
   - **IE (D35):** F1 combinado 0.8273 (IC95 0.7714 a 0.8818), parcial 0.9259, techo humano 0.8533, línea base de gazetteer 0.6543. FECHA (exploratoria, 8 en el gold): 0.5333 con reglas v1 y con reglas v2; su techo humano sale en 0 porque cada anotador marcó una sola fecha.
   - **Tablas:** 375 datos; 248 respaldados, 122 ambiguos y 5 sin evidencia.
   - Se corrigió la figura de F1 con referencias, que mostraba solo el total, y una prueba de la pestaña Valoraciones que suponía que no había tablas v2.
+- (2026-11-24, Diego) **Aprobados el mapa de Q11 a Q15 y el guion v2.** El mapa de campos de Q11 a Q15 (`config/tablas_respuesta.yaml`, WP-13) queda sin cambios, con la limitación ya anotada de Q14 (cuenta `beneficiarios`). El guion v2 queda aprobado con su reparto, incluidas la causa y el arreglo de los errores (lámina 16) y los siguientes pasos (lámina 19). Arturo Jaramillo Salmerón es integrante del equipo v2; su nombre va en el guion y la portada.
