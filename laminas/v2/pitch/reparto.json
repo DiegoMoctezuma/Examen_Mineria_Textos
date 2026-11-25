@@ -1,0 +1,92 @@
+{
+  "seed": 3761047628,
+  "feasible_partitions": 11,
+  "total_seconds": 1130,
+  "slide_seconds": [
+    20,
+    50,
+    50,
+    20,
+    45,
+    50,
+    30,
+    35,
+    45,
+    45,
+    40,
+    30,
+    35,
+    50,
+    60,
+    30,
+    30,
+    55,
+    40,
+    30,
+    50,
+    30,
+    50,
+    150,
+    45,
+    15
+  ],
+  "roles": [
+    {
+      "slides": [
+        1,
+        4,
+        20,
+        24,
+        26
+      ],
+      "seconds": 235,
+      "name": "Leo Yahir Carpio Angeles"
+    },
+    {
+      "slides": [
+        2,
+        3,
+        21,
+        22,
+        23
+      ],
+      "seconds": 230,
+      "name": "Diego Rafael Moctezuma Ramirez"
+    },
+    {
+      "slides": [
+        5,
+        6,
+        18,
+        19,
+        25
+      ],
+      "seconds": 235,
+      "name": "Luis Ramirez Maza"
+    },
+    {
+      "slides": [
+        7,
+        8,
+        9,
+        14,
+        15
+      ],
+      "seconds": 220,
+      "name": "Gonzalo Sebastian Mera Montiel"
+    },
+    {
+      "slides": [
+        10,
+        11,
+        12,
+        13,
+        16,
+        17
+      ],
+      "seconds": 210,
+      "name": "Arturo Jaramillo Salmerón"
+    }
+  ],
+  "method": "Selección aleatoria de partición de bloques con 5/6 láminas y 210–235 s; permutación aleatoria de integrantes. La demo incluye 150 s."
+}

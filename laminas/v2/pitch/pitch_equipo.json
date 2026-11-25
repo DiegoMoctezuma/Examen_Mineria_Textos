@@ -1,0 +1,338 @@
+{
+  "reparto": {
+    "seed": 3761047628,
+    "feasible_partitions": 11,
+    "total_seconds": 1130,
+    "slide_seconds": [
+      20,
+      50,
+      50,
+      20,
+      45,
+      50,
+      30,
+      35,
+      45,
+      45,
+      40,
+      30,
+      35,
+      50,
+      60,
+      30,
+      30,
+      55,
+      40,
+      30,
+      50,
+      30,
+      50,
+      150,
+      45,
+      15
+    ],
+    "roles": [
+      {
+        "slides": [
+          1,
+          4,
+          20,
+          24,
+          26
+        ],
+        "seconds": 235,
+        "name": "Leo Yahir Carpio Angeles"
+      },
+      {
+        "slides": [
+          2,
+          3,
+          21,
+          22,
+          23
+        ],
+        "seconds": 230,
+        "name": "Diego Rafael Moctezuma Ramirez"
+      },
+      {
+        "slides": [
+          5,
+          6,
+          18,
+          19,
+          25
+        ],
+        "seconds": 235,
+        "name": "Luis Ramirez Maza"
+      },
+      {
+        "slides": [
+          7,
+          8,
+          9,
+          14,
+          15
+        ],
+        "seconds": 220,
+        "name": "Gonzalo Sebastian Mera Montiel"
+      },
+      {
+        "slides": [
+          10,
+          11,
+          12,
+          13,
+          16,
+          17
+        ],
+        "seconds": 210,
+        "name": "Arturo Jaramillo Salmerón"
+      }
+    ],
+    "method": "Selección aleatoria de partición de bloques con 5/6 láminas y 210–235 s; permutación aleatoria de integrantes. La demo incluye 150 s."
+  },
+  "diapositivas": {
+    "1": {
+      "titulo": "Encontrar en segundos lo que se dijo en seis años de mañaneras",
+      "integrante": "Leo Yahir Carpio Angeles",
+      "segundos": 20,
+      "voz": "Buenas tardes. Somos Datisa. Nuestro sistema ayuda a encontrar en segundos lo que se dijo en seis años de mañaneras y presenta cada respuesta con su cita. Está pensado para equipos de comunicación que necesitan verificar información sin releer cientos de conferencias.",
+      "senalar": "El problema que resuelve el título; después, el nombre del equipo.",
+      "clave": "Presenta el beneficio antes de nombrar modelos o métricas."
+    },
+    "2": {
+      "titulo": "Miles de horas de conferencias que nadie relee",
+      "integrante": "Diego Rafael Moctezuma Ramirez",
+      "segundos": 50,
+      "voz": "El punto de partida son 2,294 versiones estenográficas, de diciembre de 2018 a septiembre de 2024. Una conferencia típica tiene alrededor de 8,502 palabras. Si queremos saber qué se dijo sobre Dos Bocas, buscar a mano significa revisar muchísimo texto. Quitamos cuatro duplicados exactos y uno casi duplicado: quedaron 2,289 discursos, y 2,288 tienen al menos un fragmento útil. El reto es convertir todo ese material en información que se pueda localizar y comprobar.",
+      "senalar": "Recorre las tres barras y termina en el tamaño de una conferencia típica.",
+      "clave": "La cifra 8,502 es la mediana mostrada en la lámina, no un promedio."
+    },
+    "3": {
+      "titulo": "De la pregunta a la respuesta, con su cita",
+      "integrante": "Diego Rafael Moctezuma Ramirez",
+      "segundos": 50,
+      "voz": "La solución tiene cuatro pasos. Primero dividimos las conferencias en fragmentos que se entienden solos. Después buscamos los diez más útiles para una pregunta y un periodo. En ellos identificamos personas, organizaciones, lugares, fechas y montos. Finalmente armamos una tabla donde cada dato conserva la frase que lo sostiene. En Dos Bocas, por ejemplo, no basta con mostrar un monto: también mostramos la cita y la fecha de donde salió. Las respuestas se construyen con reglas, sin IA generativa.",
+      "senalar": "Sigue Divide, Busca, Marca y Responde; termina en la cita del monto.",
+      "clave": "El modelo reconoce entidades; no redacta respuestas con un modelo generativo."
+    },
+    "4": {
+      "titulo": "Lo probamos con 15 preguntas sobre obras y programas del gobierno",
+      "integrante": "Leo Yahir Carpio Angeles",
+      "segundos": 20,
+      "voz": "Probamos el sistema con quince preguntas sobre obras y programas. Aquí están los temas: desde Tren Maya y Dos Bocas hasta Guardia Nacional, IMSS-Bienestar y Acapulco tras Otis. Esta variedad nos permite observar cómo cambia el resultado según la pregunta.",
+      "senalar": "Muestra el conjunto de temas y solo dos o tres ejemplos.",
+      "clave": "No leas los quince nombres. Son preguntas evaluadas, no quince modelos distintos."
+    },
+    "5": {
+      "titulo": "Primero se limpia: las acotaciones no son de nadie",
+      "integrante": "Luis Ramirez Maza",
+      "segundos": 45,
+      "voz": "Antes de buscar, limpiamos las notas del transcriptor. Expresiones como «inaudible», «inicia video» o «falla de transmisión» describen lo que ocurrió durante la conferencia, pero no son palabras que alguien haya pronunciado. Eliminamos 7,338 acotaciones. La más frecuente fue «inaudible», con 3,471 apariciones. Al quitarlas evitamos que estas notas contaminen los términos de búsqueda y aparezcan como si fueran parte del discurso.",
+      "senalar": "Señala «inaudible» y contrasta 3,471 con las 7,338 acotaciones totales.",
+      "clave": "Eliminar acotaciones limpia ruido; no significa quitar intervenciones completas."
+    },
+    "6": {
+      "titulo": "Fragmentos que se entienden solos",
+      "integrante": "Luis Ramirez Maza",
+      "segundos": 50,
+      "voz": "La unidad de búsqueda es un fragmento, no una conferencia completa. Dividimos el texto en fragmentos de hasta 200 palabras y descartamos los de menos de 40 porque resultan demasiado cortos para entenderse solos. Quedan 127,739 fragmentos. El 15.5 % son preguntas de la prensa: sí se indexan porque ayudan a nombrar el tema. Pero, al responder, una afirmación de un reportero no cuenta como respaldo; se clasifica como ambigua.",
+      "senalar": "200 palabras, mínimo de 40, 127,739 fragmentos y la distinción sobre la prensa.",
+      "clave": "No digas que se eliminaron todas las preguntas de reporteros."
+    },
+    "7": {
+      "titulo": "Cómo una oración se vuelve términos de búsqueda 1 de 2",
+      "integrante": "Gonzalo Sebastian Mera Montiel",
+      "segundos": 30,
+      "voz": "Veamos cómo entra una oración real al buscador. Este ejemplo habla de iniciar la etapa de prueba de la refinería de Dos Bocas. Primero pasamos el texto a minúsculas y lo separamos en palabras. En esta vista todavía están palabras como «de», «la» o «a»: es una etapa intermedia, todavía no la representación final con la que buscamos.",
+      "senalar": "Compara una parte corta de la oración con la fila de palabras en minúsculas.",
+      "clave": "No leas toda la oración ni toda la lista de tokens."
+    },
+    "8": {
+      "titulo": "Cómo una oración se vuelve términos de búsqueda 2 de 2",
+      "integrante": "Gonzalo Sebastian Mera Montiel",
+      "segundos": 35,
+      "voz": "Después quitamos las palabras vacías que no distinguen temas. Conservamos términos como «Tabasco», «prueba» y «refinería». Luego podemos usar una raíz o un lema. La raíz recorta la palabra: «refinería» y «refinerías» quedan como «refin». El lema busca una forma de diccionario, como «refinería». Las dos opciones reducen variantes, pero agrupan las palabras de manera diferente.",
+      "senalar": "Las tres etapas; contrasta «refin» con «refinería».",
+      "clave": "Raíz y lema son alternativas de preprocesamiento, no dos pasos que siempre se aplican juntos."
+    },
+    "9": {
+      "titulo": "Raíz o lema: el lema no confunde «maya» con «mayo»",
+      "integrante": "Gonzalo Sebastian Mera Montiel",
+      "segundos": 45,
+      "voz": "La raíz tiene un costo: «maya» y «mayo» se convierten en «may». El lema los conserva separados: «maya» aparece en 4,344 fragmentos y «mayo» en 2,151. Aun así, la evaluación favoreció a BM25 con raíz: 53.6 % de MAP frente a 50.7 % con lema. La diferencia no fue estadísticamente significativa, con p igual a 0.07. Elegimos la raíz por la regla de selección que ya estaba fijada; no afirmamos que siempre vaya a superar al lema.",
+      "senalar": "Las filas maya/mayo, sus frecuencias separadas y los dos valores de MAP.",
+      "clave": "Una diferencia no significativa no demuestra que los métodos sean idénticos."
+    },
+    "10": {
+      "titulo": "El índice invertido: buscar es leer unas listas",
+      "integrante": "Arturo Jaramillo Salmerón",
+      "segundos": 45,
+      "voz": "Para no leer los 127,739 fragmentos en cada consulta, construimos un índice invertido. Funciona como el índice de un libro: cada término apunta a los fragmentos donde aparece y guarda cuántas veces se menciona. «Huachicol» aparece en 714 fragmentos; «programa», en 12,803. Al buscar, consultamos esas listas. Las fechas, los números de fragmento y las frecuencias de la derecha muestran ejemplos reales de lo que contiene cada lista.",
+      "senalar": "Recorre la fila de huachicol de izquierda a derecha y compárala con programa.",
+      "clave": "El índice facilita localizar candidatos; todavía hace falta ordenarlos por relevancia."
+    },
+    "11": {
+      "titulo": "La unidad es el idf: entre más raro, más pesa",
+      "integrante": "Arturo Jaramillo Salmerón",
+      "segundos": 40,
+      "voz": "El idf mide qué tan poco común es un término dentro del corpus. «Huachicol» aparece en el 0.56 % de los fragmentos y tiene idf de 5.19. «Robo» aparece en el 4.68 % y tiene idf de 3.06. Por eso, encontrar «huachicol» aporta una señal más específica que encontrar «robo». Esta rareza ayuda a dar más peso a los términos que distinguen el tema de la pregunta.",
+      "senalar": "Compara los porcentajes y después los dos idf.",
+      "clave": "Un idf alto significa mayor rareza, no garantía de que un fragmento sea relevante."
+    },
+    "12": {
+      "titulo": "¿Por qué no una búsqueda booleana?",
+      "integrante": "Arturo Jaramillo Salmerón",
+      "segundos": 30,
+      "voz": "Probamos también una búsqueda booleana. La columna «Y» exige todas las palabras; la columna «O» acepta cualquiera. Los conteos cambian mucho según el tema: a veces no encontramos nada y otras veces aparecen miles de candidatos. Estas búsquedas sirven para filtrar, pero por sí solas no indican cuál resultado conviene leer primero. En la siguiente lámina vemos tres ejemplos concretos.",
+      "senalar": "Una fila con cero en «Y» y otra con muchos resultados en «O».",
+      "clave": "Los conteos corresponden a la ventana de fechas; no leas las quince filas."
+    },
+    "13": {
+      "titulo": "¿Por qué no una búsqueda booleana?",
+      "integrante": "Arturo Jaramillo Salmerón",
+      "segundos": 35,
+      "voz": "Con «Y», Banco del Bienestar y Acapulco tras Otis quedan sin resultados dentro del periodo. Con «O», huachicol devuelve 1,485 fragmentos, pero 1,261 ni siquiera dicen «huachicol». En cambio, BM25 ordena los candidatos y entrega los diez primeros; en esta consulta, los diez sí mencionan huachicol. La diferencia práctica es pasar de una lista de coincidencias a una lista priorizada para revisar.",
+      "senalar": "Los tres números grandes: 0, 1,485 y 10.",
+      "clave": "Que los diez mencionen huachicol no sustituye la evaluación humana de relevancia."
+    },
+    "14": {
+      "titulo": "Tres personas juzgan cada resultado",
+      "integrante": "Gonzalo Sebastian Mera Montiel",
+      "segundos": 50,
+      "voz": "Para evaluar la búsqueda reunimos 320 pares de pregunta y fragmento, a partir de los diez primeros resultados de ocho variantes. Tres personas juzgaron cada par por separado, sin ver el modelo ni la posición. La decisión final fue por mayoría: al menos dos votos positivos. El acuerdo observado entre dos jueces fue 74.8 % y el kappa de Fleiss fue 0.48, un acuerdo moderado. Esto muestra que la relevancia requiere criterio humano y que conviene combinar varias opiniones.",
+      "senalar": "320 pares, tres personas y la diferencia entre acuerdo observado y kappa.",
+      "clave": "Kappa 0.48 no es 48 % de precisión del buscador."
+    },
+    "15": {
+      "titulo": "Cómo se calcula la calidad: el caso Dos Bocas",
+      "integrante": "Gonzalo Sebastian Mera Montiel",
+      "segundos": 60,
+      "voz": "En Dos Bocas encontramos resultados relevantes en las posiciones 2, 3, 6 y 10. En cada acierto calculamos la precisión acumulada: un medio, dos tercios, tres sextos y cuatro décimos. Sumamos esas fracciones y dividimos entre los ocho relevantes conocidos: así obtenemos AP de 25.8 %. El MAP es el promedio del AP de las quince preguntas. El ganador fue BM25 con raíz y filtro de fecha, con 53.6 %; su intervalo del 95 % va de 43.3 % a 64.1 %. TF-IDF con raíz obtuvo 35.2 %.",
+      "senalar": "Posiciones 2, 3, 6 y 10; divisor 8; después AP y MAP.",
+      "clave": "AP 25.8 % no es P@10: cuatro de diez equivalen a 40 % en P@10."
+    },
+    "16": {
+      "titulo": "Pregunta por pregunta 1–8 de 15",
+      "integrante": "Arturo Jaramillo Salmerón",
+      "segundos": 30,
+      "voz": "Al separar las preguntas vemos que la calidad no es uniforme. En Tren Maya, BM25 con raíz alcanza 90 % de precisión promedio y nueve de los diez primeros resultados son relevantes. Aquí comparamos las cuatro variantes con filtro de fecha sobre las primeras ocho preguntas. La idea es comprobar en qué temas una variante mejora y en cuáles la diferencia es pequeña.",
+      "senalar": "Tren Maya y la leyenda de las cuatro variantes.",
+      "clave": "En Tren Maya AP y P@10 coinciden en 90 %, pero son métricas diferentes."
+    },
+    "17": {
+      "titulo": "Pregunta por pregunta 9–15 de 15",
+      "integrante": "Arturo Jaramillo Salmerón",
+      "segundos": 30,
+      "voz": "Estas son las siete preguntas restantes. En el conjunto de quince preguntas, la comparación pareada favorece a BM25 frente a TF-IDF, con p igual a 0.014. Entre raíz y lema, la diferencia puede deberse al azar, con p igual a 0.07. Dos Bocas sigue siendo un caso difícil: solo cuatro de los diez primeros son relevantes y su AP es 25.8 %. Por eso también lo mostraremos en la demo.",
+      "senalar": "La comparación global del pie y el recuadro de Dos Bocas.",
+      "clave": "El contraste resume estas quince preguntas; no garantiza que BM25 gane en cualquier consulta nueva."
+    },
+    "18": {
+      "titulo": "Extraer quién, qué, dónde, cuándo y cuánto",
+      "integrante": "Luis Ramirez Maza",
+      "segundos": 55,
+      "voz": "Después de recuperar los fragmentos, extraemos quién participa, qué organización se menciona, dónde, cuándo y cuánto. Las fechas y los montos se reconocen con reglas. Para personas, organizaciones y lugares combinamos diccionarios, la marca de quien habla y un modelo de lenguaje. Elegimos el modelo con diez fragmentos anotados por dos personas, antes de revisar la evaluación final. XLM-RoBERTa large obtuvo 67.8 % de F1 en esa selección y superó a las otras alternativas. Ese 67.8 % mide el modelo solo en selección; todavía no es el resultado del sistema combinado.",
+      "senalar": "Los dos tipos de reconocimiento y las cuatro alternativas de modelo.",
+      "clave": "Si ambas fuentes coinciden en tipo y límites exactos se conserva una entidad; los solapes parciales no se fusionan automáticamente."
+    },
+    "19": {
+      "titulo": "Qué tan bien se extrae, y comparado con qué 1 de 2",
+      "integrante": "Luis Ramirez Maza",
+      "segundos": 40,
+      "voz": "En la evaluación final, la barra representa el F1 del sistema combinado para cada tipo de entidad. F1 equilibra lo que el sistema acierta entre sus detecciones y lo que logra recuperar de las entidades reales. Las personas son el resultado más fuerte, con 94.7 % de F1 y sin omisiones. Las fechas son el más débil, con 53.3 %, pero solo hay ocho anotadas, así que esa parte se interpreta como exploratoria. Los marcadores muestran las referencias humana y de diccionario; la barra de error se muestra para el total.",
+      "senalar": "Personas, fechas y la barra de error en «Todas».",
+      "clave": "«Todas» agrega aciertos y errores de los tipos: no es un promedio simple de sus F1."
+    },
+    "20": {
+      "titulo": "Qué tan bien se extrae, y comparado con qué 2 de 2",
+      "integrante": "Leo Yahir Carpio Angeles",
+      "segundos": 30,
+      "voz": "Para poner el resultado en contexto, el sistema combinado alcanza 82.7 % de F1, con intervalo de 77.1 % a 88.2 %. La comparación entre dos personas da 85.3 % y usar solo diccionarios da 65.4 %. Son referencias para entender la cifra, no una afirmación de que el sistema ya sustituya la revisión humana.",
+      "senalar": "82.7 %, 85.3 % y 65.4 %, en ese orden.",
+      "clave": "La referencia humana usa 15 pasajes; el sistema, 34. La comparación es orientativa, no una prueba de equivalencia."
+    },
+    "21": {
+      "titulo": "Cada patrón de error tiene su arreglo",
+      "integrante": "Diego Rafael Moctezuma Ramirez",
+      "segundos": 50,
+      "voz": "Los errores se concentran en patrones concretos. De 103 diferencias con la anotación manual, 66 son de límites. Por ejemplo, el sistema marca «Santa Lucía», pero la referencia incluye «Base Aérea Militar de Santa Lucía». Hay una coincidencia de contenido, aunque los límites no son exactos. Si aceptamos traslapes, el F1 sube a 92.6 %. Esto apunta a una mejora concreta: incorporar nombres completos de obras e instituciones a los diccionarios, sin cambiar la evaluación ya realizada.",
+      "senalar": "La barra de límites, el ejemplo y la diferencia entre 82.7 % y 92.6 %.",
+      "clave": "92.6 % es una medida complementaria; el F1 estricto oficial sigue siendo 82.7 %."
+    },
+    "22": {
+      "titulo": "Respaldado, ambiguo o sin evidencia",
+      "integrante": "Diego Rafael Moctezuma Ramirez",
+      "segundos": 30,
+      "voz": "No todos los valores de una respuesta tienen el mismo respaldo. Clasificamos cada uno como respaldado, ambiguo o sin evidencia. La gráfica muestra cuántos hay de cada estado por pregunta. La regla es exigir una cita textual de quien declara para considerar un dato respaldado. Así, el sistema permite distinguir lo que sí se puede sostener del contenido que necesita una revisión adicional.",
+      "senalar": "La leyenda de los tres estados y una barra con mezcla de colores.",
+      "clave": "La gráfica cuenta valores de las tablas de respuesta, no discursos ni entidades evaluadas para F1."
+    },
+    "23": {
+      "titulo": "Respaldado, ambiguo o sin evidencia",
+      "integrante": "Diego Rafael Moctezuma Ramirez",
+      "segundos": 50,
+      "voz": "En total, 248 de los 375 datos están respaldados: aproximadamente dos de cada tres. Banco del Bienestar tiene el ejemplo de 262 sucursales en Oaxaca, sostenido por una cita del presidente del 14 de enero de 2023. En Dos Bocas, un dato procedente de una pregunta de prensa queda como ambiguo. Para los montos del Tren Maya, si los fragmentos recuperados no mencionan un monto, la tabla lo deja vacío y lo marca sin evidencia. Esa distinción permite revisar cada respuesta y evita inventar el dato que falta.",
+      "senalar": "El total 248/375 y un ejemplo de cada tarjeta.",
+      "clave": "«Sin evidencia» significa que no se halló en los fragmentos recuperados, no que nunca se haya dicho."
+    },
+    "24": {
+      "titulo": "El sistema en vivo",
+      "integrante": "Leo Yahir Carpio Angeles",
+      "segundos": 150,
+      "voz": "Ahora veremos el sistema en vivo. Empezaremos con Tren Maya, después revisaremos Dos Bocas como caso difícil, abriremos una pregunta predefinida con su cita y haremos una consulta libre con fechas. En cada paso nos interesa comprobar de dónde salió la respuesta, no solo ver una lista de resultados.",
+      "senalar": "Cambiar a la demo ya abierta y seguir el recorrido de 2:30 del final del PDF.",
+      "clave": "La consulta libre de la versión pública usa reglas. No le atribuyas el F1 del NER combinado evaluado."
+    },
+    "25": {
+      "titulo": "Siguientes pasos",
+      "integrante": "Luis Ramirez Maza",
+      "segundos": 45,
+      "voz": "Los siguientes pasos salen de los resultados que acabamos de ver. Primero, ampliar preguntas difíciles, como Dos Bocas o vacunas, con sinónimos y nombres alternos. Segundo, incorporar los nombres completos de obras e instituciones para reducir errores de límites. Tercero, reunir más ejemplos de fechas anotadas para medirlas con mayor confianza. Cada mejora responde a una limitación identificada; no presentamos estos cambios como si ya estuvieran implementados o evaluados.",
+      "senalar": "Una mejora por cada columna, de izquierda a derecha.",
+      "clave": "Son propuestas de trabajo futuro; las cifras mostradas no se modificaron para prometer mejoras."
+    },
+    "26": {
+      "titulo": "Gracias",
+      "integrante": "Leo Yahir Carpio Angeles",
+      "segundos": 15,
+      "voz": "Gracias por escucharnos. Datisa queda disponible en la dirección que ven en pantalla. Pueden probarlo con sus propias preguntas y revisar las citas de cada respuesta.",
+      "senalar": "La dirección de la demo.",
+      "clave": "Dejar la dirección visible para las preguntas del público."
+    }
+  },
+  "demo": [
+    [
+      "0:00 a 0:10",
+      "Presentar el recorrido",
+      "«Vamos a revisar el dato y la frase que lo respalda». Cambiar a la demo ya abierta."
+    ],
+    [
+      "0:10 a 0:45",
+      "Tren Maya",
+      "Abrir el recorrido guiado. Señalar una respuesta y la cita que permite verificarla. No leer todos los resultados."
+    ],
+    [
+      "0:45 a 1:15",
+      "Dos Bocas",
+      "Mostrar el caso difícil. Recordar que el AP fue 25.8 % y revisar qué respaldo ofrece la respuesta, sin prometer que todas sean completas."
+    ],
+    [
+      "1:15 a 1:45",
+      "Una pregunta predefinida",
+      "Abrir, por ejemplo, Banco del Bienestar. Mostrar la tabla de respuesta y la frase que sostiene uno de sus datos."
+    ],
+    [
+      "1:45 a 2:15",
+      "Consulta libre con fechas",
+      "Pedir una consulta breve o usar la ya preparada si nadie propone. Fijar el periodo y mostrar el resultado. Esta vista pública utiliza reglas."
+    ],
+    [
+      "2:15 a 2:30",
+      "Cerrar y volver a las láminas",
+      "«Lo útil es poder revisar tanto la respuesta como su evidencia». Volver a la lámina 25 y pasar la palabra a Luis."
+    ]
+  ],
+  "paginas_pdf": 18,
+  "ensayo": "pendiente; todos los tiempos son objetivos estimados"
+}

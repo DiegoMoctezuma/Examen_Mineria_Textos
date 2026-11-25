@@ -1,0 +1,15 @@
+PITCH DATISA · 26 DIAPOSITIVAS
+
+El PDF contiene reparto, orden de intervención, guion por integrante y recorrido de demo.
+Los tiempos son estimaciones para ensayar, no una medición real. Total previsto: 18:50.
+El reparto se sorteó por bloques; cuatro integrantes tienen 5 láminas y uno tiene 6.
+Se eligió una de 11 particiones válidas y se permutaron los nombres con la semilla 3761047628.
+La diferencia entre el menor y el mayor tiempo por integrante es de 25 segundos.
+
+Fuentes: laminas/v2/index.html, laminas/guion_v2.md, data/modelo_ner.json,
+data/v2/mejor_modelo.json, salida/v2/resultados_ie.csv y salida/v2/09_referencias_f1.csv.
+No se modificaron las diapositivas, el guion anterior ni los datos del proyecto.
+
+Regeneración desde el repositorio completo, sin volver a sortear:
+uv run --with reportlab --with pypdf --with lxml python laminas/v2/pitch/crear_pdf.py
+El contenido editable está en contenido.py; el sorteo y sus restricciones, en reparto.json.
