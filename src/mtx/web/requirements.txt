@@ -1,0 +1,20 @@
+# Dependencias de la demo web en Streamlit Community Cloud (PRD v2 WP-15).
+# Streamlit Cloud usa primero el archivo de dependencias de la carpeta de la app, así que este
+# archivo manda sobre el uv.lock de la raíz. Solo lo que importa la demo; versiones iguales a uv.lock.
+# torch va en su rueda de CPU para Linux (la de PyPI arrastra CUDA, varios GB).
+streamlit==1.66.1
+pandas==3.1.1
+numpy==2.4.6
+scipy==1.17.1
+scikit-learn==1.9.1
+pyarrow==26.0.1
+nltk==3.10.4
+regex==2026.9.29
+pyyaml==6.0.3
+transformers==5.22.1
+tokenizers==0.23.3
+safetensors==0.8.0
+huggingface-hub==2.4.0
+torch @ https://download.pytorch.org/whl/cpu/torch-2.15.0%2Bcpu-cp311-cp311-manylinux_2_28_x86_64.whl ; sys_platform == "linux" and python_version == "3.11"
+torch @ https://download.pytorch.org/whl/cpu/torch-2.15.0%2Bcpu-cp312-cp312-manylinux_2_28_x86_64.whl ; sys_platform == "linux" and python_version == "3.12"
+torch==2.15.0 ; sys_platform != "linux"

@@ -1,0 +1,12 @@
+{
+  "repo_id": "leocarpio16/datisa-demo-datos",
+  "revision": "1a731c88db14e6d6e4a56a240ff1d707dbd17333",
+  "version_datos": "v1",
+  "archivos": {
+    "data/pasajes.parquet": "766859a1ab322a449b6ce3ef9e25d15b95f275d140804f3935db7c1de632af0d",
+    "data/indice.pkl": "0945fd295b8eff68928efdda56f267da56482d10badc54ad90a23d141f00d765",
+    "data/tokens.parquet": "a8c2c32e059e64cd09f4bf875107478dd543dda77450312db8215cd103120339",
+    "data/tfidf.pkl": "273c38ccd122458e25c9c157cfbc99005f8718d781bf85b76f409ab029bc11a1",
+    "data/tfidf_X.npz": "10e645b8928aabae722ba53998be5f2fede7298329bd02ed3dec0db5cccd78a2"
+  }
+}
