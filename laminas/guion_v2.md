@@ -1,10 +1,9 @@
 # Guion de la presentación final · Recuperación y extracción de información en las mañaneras
 
-**Borrador del 24 de noviembre (Claude Code, WP-17).** Las láminas las diseñan Gonzalo y Arturo en
-PowerPoint con las figuras de `salida/v2/figuras/`. Este guion propone qué dice cada lámina, quién
-la expone y cuánto dura. Las cifras marcadas con ⟦v2⟧ todavía no existen: salen de los cierres del
-24 en la noche (`make all-v2`) y se llenan aquí desde el archivo que indica cada una. Ninguna cifra
-se escribe a mano.
+**Borrador del 24 de noviembre (Claude Code, WP-17), con las cifras v2 de los cierres del 24 en la
+noche.** Las láminas las diseñan Gonzalo y Arturo en PowerPoint con las figuras de
+`salida/v2/figuras/`. Este guion propone qué dice cada lámina, quién la expone y cuánto dura. Toda
+cifra sale del archivo que se cita en la lámina. Lo marcado `[VALIDAR]` lo decide el equipo.
 
 - **Público:** el equipo de comunicación de una dependencia de gobierno (R01). Problema → solución
   → evidencia → demo.
@@ -120,12 +119,14 @@ Cortar palabras a su raíz tiene un costo: «maya» y «mayo» quedan las dos co
 del Tren Maya se mezcla con todo lo que pasó en mayo. Por eso agregamos una segunda forma, el lema,
 que lleva cada palabra a su forma de diccionario: «maya» aparece en 4,344 fragmentos y «mayo» en
 2,151, por separado. Probamos las dos formas en todos los modelos y el resultado decide cuál
-queda. ⟦v2: ganó «raíz» o «lema»⟧.
+queda. Ganó la raíz: 53.6 % de MAP contra 50.7 % del lema, una diferencia que no es
+significativa (p = 0.07). El lema queda como alternativa.
 
 *Figura `stem_lema.png`.*
 
-Fuentes: `salida/v2/02_comparacion_stem_lema.md`; ⟦v2⟧ `data/v2/mejor_modelo.json`
-(`preprocesamiento`).
+Fuentes: `salida/v2/02_comparacion_stem_lema.md`; `data/v2/mejor_modelo.json`
+(`preprocesamiento`, `map_con_filtro`); `salida/v2/05_robustez.csv` (`permutacion_pareada` contra
+`bm25_lema_con_filtro`).
 
 ## 8. El índice invertido: buscar es leer solo unas listas
 
@@ -174,40 +175,46 @@ Fuentes: `salida/v2/03b_booleano.csv` (`en_ventana`), `salida/v2/03b_ejemplo_hua
 Para medir, juntamos los diez mejores resultados de ocho variantes del buscador: 320 pares de
 pregunta y fragmento. Tres personas del equipo juzgaron por separado cada par, sin ver de qué
 modelo venía ni en qué lugar quedó. Un fragmento es relevante si al menos dos de tres dicen que sí.
-El acuerdo entre jueces fue ⟦v2: kappa de Fleiss y su lectura⟧.
+Dos jueces cualesquiera coinciden, en promedio, en el 74.8 % de los pares; descontando el
+azar, el kappa de Fleiss es 0.48, un acuerdo moderado, y por eso usamos la mayoría de tres en vez de una sola
+opinión.
 
 *S5b. Sin figura generada; basta una frase con el número de pares y el kappa.*
 
-Fuentes: `salida/v2/04_pool_meta.json` (`pares` = 320); ⟦v2⟧ `salida/v2/05a_acuerdo.json`.
+Fuentes: `salida/v2/04_pool_meta.json` (`pares` = 320); `salida/v2/05a_acuerdo.csv` (Fleiss
+global 0.4753, acuerdo observado 0.7479).
 
 ## 12. Cómo se calcula la calidad: un ejemplo con Dos Bocas
 
 **Expone: Gonzalo. Tiempo: 1:00. Acumulado: 9:10.**
 
-En la pregunta de Dos Bocas, el mejor modelo pone fragmentos relevantes en los lugares
-⟦v2: posiciones⟧. En cada acierto medimos qué proporción de lo visto hasta ahí era relevante, y
-promediamos: eso es la precisión promedio, ⟦v2: AP en %⟧ en esta pregunta. El promedio de las
-quince preguntas es el MAP: ⟦v2: MAP del ganador en %⟧, con un intervalo de confianza del 95 % de
-⟦v2: intervalo⟧. ⟦v2: nombre legible del ganador⟧ fue el mejor de los cuatro modelos con filtro de
-fecha.
+En la pregunta de Dos Bocas, el mejor modelo pone fragmentos relevantes en los lugares 2, 3, 6 y 10.
+En cada acierto medimos qué proporción de lo visto hasta ahí era relevante: 1 de 2, 2 de 3, 3 de
+6 y 4 de 10. Sumamos y dividimos entre los 8 relevantes que conocemos: eso es la precisión
+promedio, 25.8 % en esta pregunta. El promedio de las quince preguntas es el MAP: 53.6 %, con un
+intervalo de confianza del 95 % de 43.3 % a 64.1 %. BM25 con raíz y filtro de fecha fue el mejor de
+los cuatro modelos con filtro.
 
-*Figuras `s5a_ap_explicado.png` y `s5a_map_por_modelo.png`. S5a: decir los porcentajes.*
+*Figuras `s5a_ap_explicado.png` y `s5a_map_por_modelo.png`. S5a: decir los porcentajes. Dos Bocas
+es de las preguntas más difíciles; se eligió para explicar el cálculo, no para lucirse.*
 
-Fuentes: ⟦v2⟧ `salida/v2/resultados_ir.csv`, `salida/v2/05_ir_8_variantes.csv`,
-`salida/v2/05_robustez.csv` (`map_ic95_bootstrap`), `data/v2/mejor_modelo.json`.
+Fuentes: `salida/v2/resultados_ir.csv` (Q3, `bm25_con_filtro`: AP 0.2583, 8 relevantes),
+`salida/v2/05_robustez.csv` (`map_ic95_bootstrap`), `data/v2/mejor_modelo.json` (MAP 0.5356).
 
 ## 13. Pregunta por pregunta
 
 **Expone: Gonzalo. Tiempo: 0:40. Acumulado: 9:50.**
 
-La calidad cambia con la pregunta. ⟦v2: la pregunta con mayor AP y por qué⟧. ⟦v2: la de menor AP y
-por qué⟧. Comparar modelos en las mismas preguntas nos dice si la diferencia es real:
-⟦v2: p-valor de la prueba pareada del ganador contra el segundo⟧.
+La calidad cambia con la pregunta. En Tren Maya, 9 de los 10 primeros son relevantes y la precisión
+promedio llega a 90 %; en Dos Bocas, solo 4 de 10, y se queda en 25.8 %. Comparar modelos en las
+mismas preguntas nos dice si una diferencia es real: BM25 supera a TF-IDF con claridad (p = 0.014),
+mientras que entre raíz y lema la diferencia puede ser azar (p = 0.07). Y si en vez de mayoría
+pedimos unanimidad o basta un voto, BM25 con raíz sigue siendo el mejor de los modelos con filtro.
 
 *Figura `s6_ap_por_consulta.png`. S6: nombres de pregunta en el eje, no Qn.*
 
-Fuentes: ⟦v2⟧ `salida/v2/05_ir_8_variantes.csv`, `salida/v2/05_robustez.csv`
-(`permutacion_pareada`).
+Fuentes: `salida/v2/resultados_ir.csv` (`AP`, `P@10` de Q1 y Q3), `salida/v2/05_robustez.csv`
+(`permutacion_pareada`, `sensibilidad_unanimidad`, `sensibilidad_al_menos_1_de_3`).
 
 ## 14. Extraer quién, qué, dónde, cuándo y cuánto
 
@@ -227,26 +234,35 @@ Fuentes: `salida/v2/09_comparacion_ner.csv` (filas `TODOS`), `data/modelo_ner.js
 
 **Expone: Luis. Tiempo: 1:00. Acumulado: 11:45.**
 
-Combinando reglas y modelo, el F1 total es ⟦v2: F1 combinado TODOS en %⟧. Para saber si eso es
-bueno, lo comparamos con dos referencias: dos personas anotando el mismo texto coinciden en
-⟦v2: techo humano TODOS en %⟧, y usar solo diccionarios da ⟦v2: línea base TODOS en %⟧.
-⟦v2: el tipo más fuerte y el más débil, con precisión y recall⟧.
+Combinando reglas y modelo, el F1 total es 82.7 %, con un intervalo de 77.1 % a 88.2 %. Para saber
+si eso es bueno, lo comparamos con dos referencias: dos personas anotando el mismo texto coinciden
+en 85.3 %, y usar solo diccionarios da 65.4 %. El sistema queda muy cerca de lo que logran dos
+personas. Lo más fuerte son las personas: 94.7 % de F1, sin dejar ninguna fuera. Lo más débil son
+las fechas, con 53.3 %, que evaluamos como exploratorias porque en el gold solo hay ocho.
 
-*Figuras `s7a_f1_con_referencias.png` (S7a) y `s7c_prf_por_tipo.png` (S7c).*
+*Figuras `s7a_f1_con_referencias.png` (S7a) y `s7c_prf_por_tipo.png` (S7c). La línea base usa solo
+los diccionarios de organizaciones y lugares.*
 
-Fuentes: ⟦v2⟧ `salida/v2/09_referencias_f1.csv`, `salida/v2/resultados_ie.csv`.
+Fuentes: `salida/v2/09_referencias_f1.csv` (`sistema_exacto` combinado TODOS, `techo_humano`
+TODOS, `linea_base_gazetteer` TODOS), `salida/v2/resultados_ie.csv` (combinado por tipo).
 
 ## 16. Los errores tienen patrones, y cada patrón tiene arreglo
 
 **Expone: Luis. Tiempo: 0:50. Acumulado: 12:35.**
 
-⟦v2: el patrón más frecuente y cuántos errores explica⟧. Su causa es ⟦v2: causa⟧ y se corrige con
-⟦v2: arreglo⟧. ⟦v2: segundo patrón, causa y arreglo⟧.
+De 103 diferencias con el gold, 66 son de límites: el sistema encuentra la entidad correcta pero la
+corta o la alarga distinto. Marca «Santa Lucía» donde el gold dice «Base Aérea Militar de Santa
+Lucía», o «Dos Bocas» donde dice «refinería Dos Bocas». Con una medida que acepta el traslape, el
+F1 sube de 82.7 % a 92.6 %. El arreglo propuesto: incluir en los diccionarios el nombre completo de
+cada obra e institución. El segundo patrón son 12 entidades que nadie detectó, como «Sembrando
+Vida» como organización; se corrigen agregándolas al diccionario de programas.
 
-*Figura `s8_errores_patrones.png`. S8a: no decir «el modelo falló»; cada patrón con su causa y su
-arreglo, sacados de `salida/v2/09_analisis_errores.csv`.*
+*Figura `s8_errores_patrones.png`. S8a: no decir «el modelo falló». Causa y arreglo son
+propuesta de Claude Code a partir de los ejemplos; `[VALIDAR]` Luis.*
 
-Fuentes: ⟦v2⟧ `salida/v2/09_resumen_errores.csv`, `salida/v2/09_analisis_errores.csv`.
+Fuentes: `salida/v2/09_resumen_errores.csv` (`frontera` 66, `omision` 12),
+`salida/v2/09_analisis_errores.csv` (ejemplos), `salida/v2/09_referencias_f1.csv`
+(`sistema_parcial` combinado 0.9259).
 
 ## 17. Respuestas con evidencia: respaldado, ambiguo o sin evidencia
 
@@ -254,12 +270,13 @@ Fuentes: ⟦v2⟧ `salida/v2/09_resumen_errores.csv`, `salida/v2/09_analisis_err
 
 Cada dato de una tabla de respuesta tiene un estado. «Respaldado» quiere decir que una cita
 textual de quien declara lo sostiene. «Ambiguo», que lo dijo un reportero o que la cita no basta.
-«Sin evidencia», que ningún fragmento lo menciona. ⟦v2: porcentaje respaldado del total y un
-ejemplo con su cita⟧.
+«Sin evidencia», que ningún fragmento lo menciona. De 375 datos, 248 están respaldados: dos de cada
+tres. Por ejemplo, en Banco del Bienestar, «262 sucursales» se respalda con la frase «Ya en el caso
+de Oaxaca son 262 sucursales», del 14 de enero de 2023.
 
 *Figura `s9_estados_respuesta.png`. S9: leer la definición de cada estado.*
 
-Fuentes: ⟦v2⟧ `salida/v2/respuestas.csv`, `salida/v2/tablas_respuesta/`.
+Fuentes: `salida/v2/respuestas.csv` (`estado`; Q9, `sucursales`), `salida/v2/tablas_respuesta/`.
 
 ## 18. Demo: el sistema en vivo
 
@@ -273,7 +290,15 @@ Tener abierta la versión local (`make demo-web`) por si falla la red; no mostra
 
 **Expone: Gonzalo. Tiempo: 0:50. Acumulado: 17:45.**
 
-⟦v2: tres limitaciones con su mejora, tomadas de los resultados de las láminas 13, 15 y 16⟧.
+Tres siguientes pasos, cada uno con su mejora. Uno: preguntas como Dos Bocas o vacunas, donde
+la búsqueda trae menos relevantes, se mejoran ampliando la pregunta con sinónimos y nombres
+alternos. Dos: los límites de los nombres se corrigen con diccionarios de nombres completos de obras
+e instituciones. Tres: las fechas necesitan más ejemplos anotados para medirlas con confianza.
+
+*`[VALIDAR]` equipo: propuestas de Claude Code a partir de las láminas 13, 15 y 16.*
+
+Fuentes: `salida/v2/resultados_ir.csv` (AP de Q2 y Q3), `salida/v2/09_resumen_errores.csv`,
+`salida/v2/resultados_ie.csv` (FECHA, `gold` = 8).
 
 *R05 y S11a: cada limitación se dice como siguiente paso con su mejora, nunca como falla.*
 

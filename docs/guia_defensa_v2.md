@@ -4,8 +4,8 @@ Para estudiar antes de la presentación final. Complementa `docs/guia_defensa.md
 valiendo para TF-IDF, BM25, el filtro de fecha, las reglas y la fusión. Aquí está solo lo que
 cambió en v2 y las preguntas que deja la retroalimentación del profesor (PRD v2 §1.3).
 
-**Borrador del 24 de noviembre (Claude Code, WP-17).** Las cifras marcadas con ⟦v2⟧ se llenan
-después de `make all-v2`, desde el archivo indicado. Ninguna cifra se escribe a mano.
+**Borrador del 24 de noviembre (Claude Code, WP-17), con las cifras v2 de los cierres del 24.**
+Toda cifra sale del archivo citado.
 
 ## Qué cambió de v1 a v2
 
@@ -13,11 +13,11 @@ después de `make all-v2`, desde el archivo indicado. Ninguna cifra se escribe a
 | --- | --- | --- | --- |
 | Preguntas | 10 | 15 (Q11 a Q15: Guardia Nacional, IMSS-Bienestar, reforma eléctrica, Jóvenes Construyendo el Futuro, Acapulco tras Otis) | `data/consultas.csv` |
 | Variantes de búsqueda | 4 (TF-IDF y BM25, con y sin filtro) | 8 (las mismas con raíz y con lema) | `salida/v2/ranking_8_variantes.csv` |
-| Juicios de relevancia | 1 persona, 176 pares | 3 personas por par, mayoría, 320 pares | `salida/v2/04_pool_meta.json`, ⟦v2⟧ `salida/v2/05a_acuerdo.json` |
-| Ganador IR | BM25 con filtro, MAP 48.4 % | ⟦v2: ganador y MAP con intervalo⟧ | `data/mejor_modelo.json`, ⟦v2⟧ `data/v2/mejor_modelo.json` |
+| Juicios de relevancia | 1 persona, 176 pares | 3 personas por par, mayoría, 320 pares | `salida/v2/04_pool_meta.json`, `salida/v2/05a_acuerdo.csv` (κ de Fleiss 0.4753) |
+| Ganador IR | BM25 con filtro, MAP 48.4 % | BM25 con raíz y filtro, MAP 53.6 % (IC95 43.3 % a 64.1 %), 15 preguntas | `data/mejor_modelo.json`, `data/v2/mejor_modelo.json`, `salida/v2/05_robustez.csv` |
 | Modelo NER | mrm8488 (criterio técnico) | XLM-RoBERTa large de Davlan, elegido por F1 sobre la selección | `data/modelo_ner.json`, `salida/v2/09_comparacion_ner.csv` |
 | Gold de entidades | 20 pasajes, 1 persona | 35 pasajes: los 20 de v1 más 15 nuevos con doble anotación y adjudicación | `docs/decisiones.md` (WP-12) |
-| Lectura del F1 | solo el F1 | F1 con intervalo, techo humano, línea base y F1 parcial | ⟦v2⟧ `salida/v2/09_referencias_f1.csv` |
+| Lectura del F1 | solo el F1 | F1 con intervalo, techo humano, línea base y F1 parcial | `salida/v2/09_referencias_f1.csv` |
 | FECHA | reglas v1 | reglas v2 congeladas antes del gold, evaluación exploratoria | etiqueta `reglas-fecha-v2`, D33 |
 
 ## Fórmulas nuevas
@@ -52,8 +52,10 @@ Fuentes: `salida/02_postings.md`, `salida/v2/03b_booleano.csv`,
 **¿Qué ganaron con el lema? (S4e)**
 Separa palabras que la raíz junta: «maya» y «mayo» son «may» con raíz (6,504 fragmentos), y con
 lema son «maya» (4,344) y «mayo» (2,151). El vocabulario pasa de 35,891 a 68,482 términos.
-⟦v2: MAP de raíz contra lema con filtro, y si la diferencia es significativa⟧.
-Fuentes: `salida/v2/02_comparacion_stem_lema.md`; ⟦v2⟧ `salida/v2/05_robustez.csv`.
+Pero en MAP no ganó: con filtro, la raíz da 53.6 % y el lema 50.7 %, y la diferencia no es
+significativa (prueba pareada, p = 0.07). Por la regla de D28 queda la raíz.
+Fuentes: `salida/v2/02_comparacion_stem_lema.md`; `data/v2/mejor_modelo.json`;
+`salida/v2/05_robustez.csv` (`permutacion_pareada`).
 
 **¿Por qué el ganador se elige solo entre las variantes con filtro? (D28)**
 Porque cada pregunta trae un periodo y el sistema siempre lo usa; las variantes sin filtro sirven
@@ -63,25 +65,29 @@ raíz, el ganador de v1. La regla se fijó antes de ver los juicios (etiqueta `v
 **¿El MAP de v2 es comparable con el de v1?**
 No directamente: cambiaron los juicios (tres personas en vez de una) y el pool creció de 176 a 320
 pares, así que hay más relevantes conocidos y el AP de una misma lista puede bajar.
-⟦v2: MAP de Q1 a Q10 solo con el pool v1 contra con el pool v2 (inflación por pool)⟧.
-Fuente: ⟦v2⟧ `salida/v2/05_robustez.csv` (`inflacion_pool_v1`, `inflacion_pool_v2`).
+En Q1 a Q10, con los mismos juicios agregados, BM25 con filtro da 63.5 % si solo cuentan los pares
+del pool v1 y 53.3 % con todo el pool v2: el pool más grande hace más estricta la medida.
+Fuente: `salida/v2/05_robustez.csv` (`inflacion_pool_v1`, `inflacion_pool_v2`).
 
 **¿Qué pasa si se cambia la regla de mayoría? (D29)**
-Lo probamos con unanimidad (3 de 3) y con al menos uno (1 de 3). ⟦v2: si el ganador cambia o no⟧.
-Fuente: ⟦v2⟧ `salida/v2/05_robustez.csv` (`sensibilidad_*`).
+Lo probamos con unanimidad (3 de 3) y con al menos uno (1 de 3). El ganador entre los modelos con filtro no cambia: BM25 con raíz da
+35.5 % con unanimidad y 56.3 % con al menos uno.
+Fuente: `salida/v2/05_robustez.csv` (`sensibilidad_*`).
 
 **¿Los jueces vieron qué modelo trajo cada fragmento? (D32)**
 No. La app de juicios no muestra modelo, rango ni puntaje, y cada persona juzgó en su propio
-archivo sin ver los juicios de los demás. El acuerdo fue ⟦v2: kappa de Fleiss⟧.
+archivo sin ver los juicios de los demás. El acuerdo fue κ = 0.48 (Fleiss, moderado): en lote 1, 0.42;
+en lote 2, 0.54.
 
 ### Extracción
 
-**¿Está bien un F1 de ⟦v2⟧? (S7a)**
+**¿Está bien un F1 de 82.7 %? (S7a)**
 Hay que leerlo contra dos referencias: dos personas anotando el mismo texto coinciden en
-⟦v2: techo humano⟧, y solo con diccionarios se obtiene ⟦v2: línea base⟧. El intervalo del 95 % es
-⟦v2⟧. Con coincidencia parcial (basta con solapar), el F1 sube a ⟦v2⟧: buena parte de los errores
+85.3 %, y solo con diccionarios (organizaciones y lugares) se obtiene 65.4 %. El intervalo del 95 %
+es de 77.1 % a 88.2 %. Con coincidencia parcial (basta con solapar), el F1 sube a 92.6 %: buena
+parte de los errores
 son de límites, no de entidades que falten.
-Fuente: ⟦v2⟧ `salida/v2/09_referencias_f1.csv`.
+Fuente: `salida/v2/09_referencias_f1.csv`.
 
 **¿Por qué cambiaron de modelo NER? (S8c, D34)**
 Comparamos cuatro modelos sobre la selección: diez fragmentos anotados por dos personas y
@@ -104,7 +110,9 @@ lo que puede pedirse.
 **¿Por qué FECHA es exploratoria? (D33)**
 El repositorio de referencia del profesor llegó después del plazo, así que las reglas v2 se
 escribieron y congelaron (`reglas-fecha-v2`) antes del cierre del gold, sin verlo, y se evalúan
-contra un gold con el criterio de fecha de v1. ⟦v2: F1 de FECHA con reglas v1 y con reglas v2⟧.
+contra un gold con el criterio de fecha de v1. Con reglas v1 y con reglas v2 el F1 de FECHA es el mismo,
+53.3 %, sobre solo 8 fechas en el gold; el techo humano de FECHA sale en 0 porque cada anotador
+marcó una sola fecha y no coincidieron, así que no se puede leer.
 
 ### Respuestas y reporteros
 
@@ -119,8 +127,11 @@ Fuentes: `salida/01_limpieza.json` (`pasajes_de_reporteros_pct`), `src/mtx/corpu
 
 **¿Qué diferencia hay entre «respaldado» y «ambiguo»? (S9)**
 Respaldado: una cita textual de quien declara sostiene el dato. Ambiguo: el dato aparece, pero lo
-dice un reportero o la cita no basta para afirmarlo. ⟦v2: un ejemplo de cada uno con su cita⟧.
-Fuente: ⟦v2⟧ `salida/v2/respuestas.csv`.
+dice un reportero o la cita no basta para afirmarlo. Respaldado: en Banco del Bienestar, «262 sucursales» con la frase «Ya en el caso de Oaxaca son 262
+sucursales» (14 de enero de 2023). Ambiguo: en Huachicol, «Michoacán» sale de una pregunta de la
+prensa, «¿Cuánto era el presupuesto de Michoacán?» (6 de abril de 2019). De 375 datos, 248 están
+respaldados, 122 son ambiguos y 5 no tienen evidencia.
+Fuente: `salida/v2/respuestas.csv`.
 
 ### Proceso
 
