@@ -1,9 +1,8 @@
 # Estilo de las figuras v2 (PRD v2 WP-16, D36, R02, R10, S3, S6). Lo leen `src/mtx/figuras_v2.py`
 # y `scripts/11b_figuras_v2.py`. Dueño: Gonzalo (con Diego).
 #
-# [VALIDAR] PV8 (Gonzalo): la paleta y la tipografía son las de D36. Leo midió en gob.mx (24 nov) un
-# guinda #591932 y una franja #350F1E para la demo web; si el equipo prefiere ese, se cambia aquí y
-# todas las figuras se regeneran igual.
+# PV8: paleta y tipografía de D36, aprobadas por Gonzalo el 24 de noviembre. La demo web usa la
+# identidad vigente de gob.mx (guinda #591932, decisión de Leo); las figuras y las láminas, D36.
 paleta:
   guinda: "#9F2241"
   guinda_oscuro: "#691C32"
@@ -16,7 +15,7 @@ tipografia:
   titulos: "Montserrat, Arial, sans-serif"
   texto: "Noto Sans, Arial, sans-serif"
 
-# Nombres de consulta en vez de Qn (S3). [VALIDAR] Gonzalo y Arturo: los mismos de las láminas.
+# Nombres de consulta en vez de Qn (S3), aprobados por Gonzalo; los mismos de las láminas.
 nombres_consulta:
   Q1: Tren Maya
   Q2: Vacunas COVID-19
@@ -51,8 +50,8 @@ patrones_error:
   tipo: Tipo equivocado
   espuria: Detección que no es entidad
 
-# Estados de las tablas de respuesta (S9), con su definición para la leyenda. [VALIDAR] Gonzalo:
-# que coincida con la definición del guion y del reporte.
+# Estados de las tablas de respuesta (S9), con su definición para la leyenda; aprobados por Gonzalo
+# y coinciden con el guion y el reporte.
 estados:
   respaldado_en_texto: "Respaldado: una cita textual de quien declara lo sostiene"
   ambiguo: "Ambiguo: lo dice un reportero o la cita no basta para afirmarlo"
