@@ -13,7 +13,8 @@ from mtx.web import componentes as C
 from mtx.web import datos as D
 from mtx.web import libre as libre_mod
 
-EJEMPLO = "Q3"   # refinería de Dos Bocas (D36: ejemplo guiado precargado)
+EJEMPLO = "Q1"   # Tren Maya, un caso fuerte (D36: ejemplo guiado precargado)
+DIFICIL = "Q3"   # refinería de Dos Bocas: caso difícil al final del recorrido
 EXPLICA_MODELOS = (
     "Los dos métodos puntúan cada fragmento por las palabras que comparte con la consulta. "
     "<strong>TF-IDF</strong> premia las palabras raras en el corpus y compara la consulta con el "
@@ -72,7 +73,7 @@ def inicio() -> None:
     from mtx import preproceso
 
     a = artefactos()
-    cifras()
+    k = cifras()
     c = a.consulta(EJEMPLO)
     consulta = c["consulta"]
     html(C.migas(["Inicio"]))
@@ -106,9 +107,10 @@ def inicio() -> None:
         # 2 · La búsqueda
         en_ventana, total = conteo_ventana(c["desde"], c["hasta"])
         tokens = preproceso.tokenizar(consulta, a.raiz_indice)
-        forma = ("su raíz, para que «refinería», «refinerías» y «refinar» cuenten igual"
+        forma = ("su raíz, para que «construcción» y «construcciones» cuenten igual"
                  if a.raiz_indice == "stem" else
-                 "su forma de diccionario (lema), para que «refinerías» cuente como «refinería»")
+                 "su forma de diccionario (lema), para que «construcciones» cuente como "
+                 "«construcción»")
         top = a.top(EJEMPLO, a.mejor)
         html(C.paso(2, "La búsqueda",
                     '<p>Se quitan las palabras vacías como «de» o «en», y cada palabra se reduce a '
@@ -147,6 +149,33 @@ def inicio() -> None:
         if PAGINAS:
             st.page_link(PAGINAS["consultas"], label="Ver la respuesta completa y la comparación "
                          "TF-IDF frente a BM25 →", query_params={"q": EJEMPLO})
+
+        # Un caso difícil
+        html(caso_dificil(a, k))
+        if PAGINAS:
+            st.page_link(PAGINAS["consultas"], label="Ver el caso difícil →",
+                         query_params={"q": DIFICIL})
+
+
+def caso_dificil(a: D.Artefactos, k: dict) -> str:
+    """Contraste del ejemplo guiado con una consulta difícil, con cifras de los archivos
+    oficiales: P@10 del ganador en las dos y estados de la respuesta de la difícil."""
+    p10 = k.get("p10_consulta", {}).get(a.mejor, {})  # sin la cifra, se omite la frase
+    res = a.respuestas[a.respuestas["query_id"] == DIFICIL]
+    tema = nombre(a.consulta(DIFICIL)["consulta"])
+    partes = []
+    if EJEMPLO in p10 and DIFICIL in p10:
+        partes.append(
+            f"En el ejemplo, {p10[EJEMPLO] * 10:.0f} de los 10 primeros fragmentos son "
+            f"relevantes según los juicios de personas; en «{C.e(tema)}», solo "
+            f"{p10[DIFICIL] * 10:.0f}.")
+    if len(res):
+        amb = int((res["estado"] == "ambiguo").sum())
+        partes.append(
+            f"Ahí la respuesta no da todo por bueno: {amb} de sus {len(res)} datos quedan como "
+            "«ambiguo» para que una persona los revise.")
+    return ('<section class="campo-tarjeta"><h3>Un caso difícil</h3><p>No todas las preguntas '
+            f'salen igual de bien. {" ".join(partes)}</p></section>')
 
 
 # --------------------------------------------------------------------------- consultas
