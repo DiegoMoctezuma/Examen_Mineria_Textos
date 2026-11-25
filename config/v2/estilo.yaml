@@ -1,12 +1,12 @@
 # Estilo de las figuras v2 (PRD v2 WP-16, D36, R02, R10, S3, S6). Lo leen `src/mtx/figuras_v2.py`
 # y `scripts/11b_figuras_v2.py`. Dueño: Gonzalo (con Diego).
 #
-# PV8: paleta y tipografía de D36, aprobadas por Gonzalo el 24 de noviembre. La demo web usa la
-# identidad vigente de gob.mx (guinda #591932, decisión de Leo); las figuras y las láminas, D36.
+# WP-17 (25 nov): Diego autoriza unificar HTML y figuras con la paleta guinda/dorado
+# de la guía gob.mx v3. Cambio solo visual: no modifica datos, modelos ni métricas.
 paleta:
-  guinda: "#9F2241"
-  guinda_oscuro: "#691C32"
-  dorado: "#BC955C"
+  guinda: "#9D2449"
+  guinda_oscuro: "#611232"
+  dorado: "#A57F2C"
   dorado_claro: "#DDC9A3"
   gris: "#98989A"
   texto: "#404041"

@@ -1,0 +1,263 @@
+{
+  "fecha": "2026-11-25",
+  "operador": "Diego",
+  "paquete": "WP-17",
+  "estado": "verificado",
+  "laminas": 20,
+  "figuras_regeneradas": 14,
+  "fuentes_y_cifras_sin_cambios": true,
+  "figuras_completas_sin_recortes": true,
+  "texto": [
+    {
+      "lamina": 1,
+      "texto_identico": true
+    },
+    {
+      "lamina": 2,
+      "texto_identico": true
+    },
+    {
+      "lamina": 3,
+      "texto_identico": true
+    },
+    {
+      "lamina": 4,
+      "texto_identico": true
+    },
+    {
+      "lamina": 5,
+      "texto_identico": true
+    },
+    {
+      "lamina": 6,
+      "texto_identico": true
+    },
+    {
+      "lamina": 7,
+      "texto_identico": true
+    },
+    {
+      "lamina": 8,
+      "texto_identico": true
+    },
+    {
+      "lamina": 9,
+      "texto_identico": true
+    },
+    {
+      "lamina": 10,
+      "texto_identico": true
+    },
+    {
+      "lamina": 11,
+      "texto_identico": true
+    },
+    {
+      "lamina": 12,
+      "texto_identico": true
+    },
+    {
+      "lamina": 13,
+      "texto_identico": true
+    },
+    {
+      "lamina": 14,
+      "texto_identico": true
+    },
+    {
+      "lamina": 15,
+      "texto_identico": true
+    },
+    {
+      "lamina": 16,
+      "texto_identico": true
+    },
+    {
+      "lamina": 17,
+      "texto_identico": true
+    },
+    {
+      "lamina": 18,
+      "texto_identico": true
+    },
+    {
+      "lamina": 19,
+      "texto_identico": true
+    },
+    {
+      "lamina": 20,
+      "texto_identico": true
+    }
+  ],
+  "excepciones_de_texto": {
+    "18": "De Tren Maya a Dos Bocas, el caso difícil, con su cita",
+    "20": "https://datisa.streamlit.app"
+  },
+  "sustituciones": [
+    {
+      "origen": "#075638",
+      "destino": "611232",
+      "apariciones_en_xml_origen": 388
+    },
+    {
+      "origen": "#17251E",
+      "destino": "404041 / 611232 en titulares",
+      "apariciones_en_xml_origen": 353
+    },
+    {
+      "origen": "#68766D",
+      "destino": "6B6B6D",
+      "apariciones_en_xml_origen": 334
+    },
+    {
+      "origen": "#E5F0BD",
+      "destino": "DDC9A3",
+      "apariciones_en_xml_origen": 80
+    },
+    {
+      "origen": "#BCD6C6",
+      "destino": "DDC9A3",
+      "apariciones_en_xml_origen": 66
+    },
+    {
+      "origen": "#F8DC87",
+      "destino": "A57F2C / F3ECE0 en fondos amplios",
+      "apariciones_en_xml_origen": 31
+    },
+    {
+      "origen": "#BFD5CA",
+      "destino": "DDC9A3",
+      "apariciones_en_xml_origen": 29
+    },
+    {
+      "origen": "#FFF8F0",
+      "destino": "F3ECE0",
+      "apariciones_en_xml_origen": 28
+    },
+    {
+      "origen": "#BDD6C5",
+      "destino": "F3ECE0",
+      "apariciones_en_xml_origen": 12
+    },
+    {
+      "origen": "#DDE2DC",
+      "destino": "E8E8E8",
+      "apariciones_en_xml_origen": 12
+    },
+    {
+      "origen": "#6E9482",
+      "destino": "A57F2C",
+      "apariciones_en_xml_origen": 4
+    },
+    {
+      "origen": "#4F8A6E",
+      "destino": "9D2449",
+      "apariciones_en_xml_origen": 2
+    }
+  ],
+  "nota_conteos": "Se cuentan nodos srgbClr en las 20 láminas de origen, incluidos estilos repetidos; el PPTX permanece intacto. No son sustituciones en un PPTX nuevo.",
+  "disposicion_ajustada": {
+    "1": "Título y subtítulo reservan la columna de la cinta",
+    "2": "Figura completa con espacio para título y ejes",
+    "3": "Catálogo 5 × 3 y cuatro pasos, sin eliminar texto; miniatura Dos Bocas junto al ejemplo",
+    "12": "Figura completa y círculo Dos Bocas",
+    "13": "Círculos Tren Maya y Dos Bocas",
+    "17": "Círculo Banco del Bienestar",
+    "20": "AMLO grande, sin círculo, solo en el cierre"
+  },
+  "cambios_globales": "Paleta, tipografía, cintas SVG y tintes de tarjetas. Las figuras completas se ajustan dentro de sus cajas con object-fit:contain.",
+  "ilustraciones": {
+    "p1_p10": "originales extraídos de v1, marcos CSS alternados",
+    "p11_p15": "círculos numerados; sustitución automática al añadir img/p11.png a img/p15.png",
+    "amlo": "original image13.png, solo cierre"
+  },
+  "verificacion_navegador": {
+    "texto_desbordado": 0,
+    "imagenes_rotas": 0,
+    "teclado": "Home, flecha derecha y espacio llevan a 3/20; End/Home y flechas comprobados",
+    "pantallas": "1280×720 y 390×844, centradas",
+    "pantalla_completa": "API estándar conectada a F y botón; el visor WKWebView de Codex no expone esta API. Usar Chrome/Edge para exponer."
+  },
+  "figuras": [
+    {
+      "archivo": "r07_booleano.png",
+      "sha256": "542fb7315127cf3d87e5bd547d0aa4fffc3909c1579171dc22bc261f2f98353d",
+      "fuentes_sin_cambios": true
+    },
+    {
+      "archivo": "r09_indice_invertido.png",
+      "sha256": "33368eab4372e5867ad3e0e45370d38b505ba84acd9eda8404713e0d633a7f48",
+      "fuentes_sin_cambios": true
+    },
+    {
+      "archivo": "s2a_corpus.png",
+      "sha256": "81310dad805ee644d19904efcdb42f41a1ce83d3997361067d53ba4073c25e18",
+      "fuentes_sin_cambios": true
+    },
+    {
+      "archivo": "s2b_acotaciones.png",
+      "sha256": "5920c4acbb1e6f7c9004854ce9a417f2ae26be9ede14f8e014d99a8912dee18c",
+      "fuentes_sin_cambios": true
+    },
+    {
+      "archivo": "s4c_tokenizacion.png",
+      "sha256": "736181203ce3acd1791513920d088bbd9f515b2131442b2091c11a4d9131bedc",
+      "fuentes_sin_cambios": true
+    },
+    {
+      "archivo": "s4d_idf.png",
+      "sha256": "92db8e99591c84a06eec55821ddeb705b7ad57b09efdefd2c6a5c89ec5e3b97d",
+      "fuentes_sin_cambios": true
+    },
+    {
+      "archivo": "s5a_ap_explicado.png",
+      "sha256": "efcdf1e75470f3e7b6613f7cb7e56cfaec9b938dfeac1059dd2544af97bb644d",
+      "fuentes_sin_cambios": true
+    },
+    {
+      "archivo": "s5a_map_por_modelo.png",
+      "sha256": "fcaabefb646fbb0d2a8df261a25ab3473047b13a40b4a0aa0408b04f88378ae0",
+      "fuentes_sin_cambios": true
+    },
+    {
+      "archivo": "s6_ap_por_consulta.png",
+      "sha256": "3c355d34766f93e9416b09b8b186a59634088983a2eb098a032583b5bb7ba96d",
+      "fuentes_sin_cambios": true
+    },
+    {
+      "archivo": "s7a_f1_con_referencias.png",
+      "sha256": "351d65228f6d49b4308300f84f53505897ef2eda28f6647ac00a87d4b4a4fb26",
+      "fuentes_sin_cambios": true
+    },
+    {
+      "archivo": "s7c_prf_por_tipo.png",
+      "sha256": "66b787e098c5585c7b2ed1f31b18ff87f98f4cab6296d5d1ff4c14650154445c",
+      "fuentes_sin_cambios": true
+    },
+    {
+      "archivo": "s8_errores_patrones.png",
+      "sha256": "bec9e4bf683bce7dffd557fa2f64051cc038bf76eb4aa3312203219fcb2d549e",
+      "fuentes_sin_cambios": true
+    },
+    {
+      "archivo": "s9_estados_respuesta.png",
+      "sha256": "d473473acf95b0dc152a084640d2e31e1a742939f4926b3e7986ba6802a2866e",
+      "fuentes_sin_cambios": true
+    },
+    {
+      "archivo": "stem_lema.png",
+      "sha256": "cd1b41cd176c39fa72884a42e73414dafbd7fc456b2fcac1d0059af79263c659",
+      "fuentes_sin_cambios": true
+    }
+  ],
+  "pptx_y_guion": "Conservados sin modificaciones",
+  "red": "HTML de archivo único sin dependencias de red; la liga de la demo requiere internet",
+  "pdf": {
+    "paginas": 20,
+    "tamano_puntos": [
+      960,
+      540
+    ],
+    "revision_visual": "20 páginas renderizadas y revisadas; sin cortes ni desbordamientos"
+  }
+}

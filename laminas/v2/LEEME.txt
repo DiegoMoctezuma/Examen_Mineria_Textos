@@ -1,0 +1,37 @@
+DATISA · Presentación v2 — 25 de noviembre de 2026
+
+ABRIR Y EXPONER
+Abre Presentacion_Datisa_v2.html con Chrome o Edge. Contiene todos los recursos y funciona sin conexión.
+Flechas o Espacio: avanzar. Flecha izquierda: volver. Inicio/Fin: primera/última lámina.
+F: pantalla completa (en Chrome/Edge; el visor integrado de Codex no tiene esa función).
+El botón de impresión permite guardar las 20 láminas en PDF. La liga de la demo requiere internet.
+
+EDITAR
+laminas/v2/index.html: texto y disposición.
+laminas/v2/estilos.css: paleta, tipografía, impresión y formas SVG en el HTML.
+laminas/v2/presentacion.js: controles y ajuste de pantalla.
+salida/v2/figuras/: las 14 figuras regeneradas con la paleta nueva y los datos originales.
+config/v2/estilo.yaml: estilo central de las figuras.
+Para la versión modular, conserva la estructura de carpetas y abre laminas/v2/index.html.
+
+IMÁGENES
+Se restauraron P1–P10 del PowerPoint original. Las ilustraciones conservan sus colores internos;
+los marcos alternan guinda y dorado. P11–P15 son marcadores numerados según el prompt.
+Al añadir img/p11.png … p15.png y recargar, sustituyen automáticamente al marcador.
+En el HTML de archivo único también se pueden añadir esos archivos en una carpeta img/ junto al HTML.
+AMLO con corazón aparece solo al final y no tiene círculo.
+
+DATOS Y TEXTO
+20 láminas. Los datos, métricas, modelos y anotaciones no se modificaron.
+Texto idéntico al PowerPoint aprobado, salvo el recorrido de la lámina 18 y la URL de la 20.
+Las 14 figuras conservan exactamente el registro y hashes de sus fuentes; no se recortaron.
+validacion.json incluye la comprobación y el conteo de colores del XML fuente.
+Los PowerPoint y el guion se conservan intactos. Esta entrega corresponde a HTML + PDF.
+
+FUENTES
+Montserrat y Noto Sans locales, con Arial de respaldo. Licencias y avisos en fonts/.
+
+REGENERAR DESDE EL REPOSITORIO COMPLETO
+uv run --with lxml python laminas/v2/herramientas/exportar_html.py .
+python3 laminas/v2/herramientas/archivo_unico.py laminas/v2/index.html
+Las figuras se regeneran con make figuras-v2; solo cambió config/v2/estilo.yaml.
