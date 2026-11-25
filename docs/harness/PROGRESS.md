@@ -8,46 +8,27 @@
 Mera Montiel Gonzalo Sebastian, Moctezuma Ramirez Diego Rafael, Ramirez Maza Luis). `make validar`:
 14 OK, 1 falla (condición 12: el guion no registra «Tiempo medido: m:ss»).
 
-## Fase v2 (desde 2026-11-14) · estado al 2026-11-24, 21:05
+## Fase v2 · entregada el 2026-11-25
 
-Proyecto final en equipo; entrega el 2026-11-25 antes de las 18:00. Plan en
-`PRD_v2_proyecto_final.md`; progreso por paquete en `docs/harness/progreso/<wp>.md`. Rama
-`proyecto-final` en GitHub; `main` intacto. Equipo de 5: Leo Yahir Carpio Angeles, Arturo
-Jaramillo Salmerón, Gonzalo Sebastian Mera Montiel, Diego Rafael Moctezuma Ramirez y Luis Ramirez
-Maza (Bruno salió el 22). Recortes 1, 2 y 3 aplicados el 23.
+Etiqueta `v2.0-entrega` en `proyecto-final`, con `main` avanzado a la misma versión (antes de las
+16:00 CDMX). Equipo Datisa de 5: Leo Yahir Carpio Angeles, Arturo Jaramillo Salmerón, Gonzalo
+Sebastian Mera Montiel, Diego Rafael Moctezuma Ramirez y Luis Ramirez Maza. `make validar`: 21 OK y
+1 pendiente (condición 22: no hubo ensayo cronometrado, registrado en `docs/decisiones.md`).
+743 pruebas.
 
-Hecho el 24 (todo lo del calendario del 24 y parte del 25):
-- **Cierres:** gold v2 a las 19:26 (`b61ae3d`) y juicios v2 a las 19:27 (`6709211`, 320 pares con
-  3 juicios válidos). Orden verificado por la condición 17: `v2-inicio` → `reglas-fecha-v2` → NER v2
-  (`3287efb`) → cierre del gold.
-- **Cifras v2 (`make all-v2`):** κ de Fleiss 0.4753; ganador BM25 con raíz y filtro, MAP 0.5356
-  (IC95 0.4329 a 0.6407), lema 0.5070 (p = 0.07); F1 combinado 0.8273 (IC95 0.7714 a 0.8818),
-  techo humano 0.8533, línea base 0.6543, parcial 0.9259; 248 de 375 datos respaldados. Detalle
-  en `docs/decisiones.md`.
-- **Raíz promovida a v2** (`make promover-v2`, D28); condiciones 2 a 8 contra fuentes v2; objetivos
-  v1 que escriben en la raíz bloqueados (v1 vive en `salida/`, `anotaciones/` y `v1.0-entrega`).
-  Excepción registrada para la condición 12.
-- **Reconstrucción v2 desde clon limpio:** 18 min 33 s, todo byte a byte
-  (`docs/reproducibilidad.md`).
-- WP-07 (booleano), WP-16 (14 figuras v2), guion v2 y guía de defensa con cifras (aprobados por
-  Diego), instrucción de la revisión ciega, mapa de Q11 a Q15 aprobado.
-- PR #4 de Leo (demo web) integrado; reporte v2 de Gonzalo integrado con correcciones;
-  `make reporte-v2` compila a 6 páginas con 6 pendientes ⟦…⟧.
-- `make validar --parcial --sin-pruebas`: 19 OK, 3 pendientes (13, 21 y 22). `make test`: 742.
+Cerrado el 25:
+- Valoraciones v2: las 15 son de Luis (condición 21).
+- Presentación final en HTML de 26 láminas (`laminas/v2/`, Codex), con ilustraciones P1 a P15 y la
+  caricatura al cierre; paleta de figuras cambiada a guinda y dorado de gob.mx v3 y figuras
+  regeneradas sin diferencias de datos.
+- Demo web en https://datisa.streamlit.app (Leo), con recorrido de Tren Maya a Dos Bocas.
+- Revisión ciega con Gemini (Arturo) y qué se tomó en `docs/revision_ciega_respuesta.md`.
+- README v2 (de Luis, corregido), guía de defensa v2 sin pendientes y reporte v2 de Gonzalo a 6
+  páginas, sin pendientes. El reporte alternativo de Luis (`v2/wp19-reporte-final`) no se integró.
 
-Pendiente, en orden (mié 25):
-1. Temprano: Gonzalo confirma los `[VALIDAR]` de `config/v2/estilo.yaml` → `make figuras-v2` si
-   cambia algo. Leo reinicia la demo publicada (si no lo hizo el 24) y pasa la dirección.
-2. 9:00 a 11:00: valoraciones v2 (Gonzalo, Arturo y Luis) → integrar sus ramas → condición 21.
-3. Láminas (Gonzalo y Arturo) con `salida/v2/figuras/` → revisión ciega (Arturo,
-   `docs/revision_ciega_prompt.md`) → `docs/revision_ciega_respuesta.md`.
-4. Reporte v2: cerrar los ⟦…⟧ con las valoraciones, la revisión ciega y la cifra de `make test`
-   (Gonzalo) → `make reporte-v2` → commit del PDF. README v2 (Luis): equipo con «Leo Yahir»,
-   cifras v2, demo web y Uso de IA; Luis valida la lámina 16 y las secciones 4 y 5 del reporte.
-5. 14:00: ensayo cronometrado → `Tiempo medido: m:ss` en `laminas/guion_v2.md` → condición 22.
-6. 16:00: `make validar` completo, `v2.0-entrega` desde clon limpio, merge a `main`.
-
-Bloqueos v2: ninguno técnico; todo lo que falta es trabajo humano del 25.
+Pendiente después de la entrega:
+1. Si el equipo ensaya, agregar `Tiempo medido: m:ss` a `laminas/guion_v2.md` (no mueve la etiqueta).
+2. Los cuatro `.bak` sin versionar de `anotaciones/gold_v2/` quedan fuera del repo.
 
 ## Completado
 
