@@ -7,6 +7,11 @@
 3. Compila `reporte.md` → HTML (pandoc, MathML, `reporte/estilo.css`) → PDF con Chrome sin
    ventana (el de kaleido). Ruta alternativa a XeLaTeX documentada en `docs/decisiones.md`.
 4. Cuenta páginas con `pypdf` y falla si no quedan entre 4 y 6.
+
+`--v2` (PRD v2 WP-19, `make reporte-v2`): compila `reporte/reporte_v2.md` con
+`reporte/estilo_v2.css` a `reporte/reporte_v2.html` y `reporte/reporte_v2.pdf`, por la misma ruta
+(pandoc y Chrome). No rellena tablas ni toca el README: el reporte v2 lo escribe el equipo con las
+cifras de `salida/v2/`. Avisa cuántos pendientes ⟦…⟧ quedan y corre `scripts/lint_estilo.py`.
 """
 from __future__ import annotations
 
@@ -162,6 +167,8 @@ def chrome() -> str | None:
 
 
 def main() -> int:
+    if "--v2" in sys.argv[1:]:
+        return main_v2()
     hashes = json.loads((SAL / "10_hashes_tablas.json").read_text())
     pend = RS.validar_valoraciones(config.DIR_ANOTACIONES / "valoraciones.yaml", hashes)
     if pend:
@@ -175,24 +182,46 @@ def main() -> int:
     readme.write_text(rellenar(readme.read_text(encoding="utf-8"), "readme", t_readme(),
                                "<!-- resultados:inicio -->", "<!-- resultados:fin -->"),
                       encoding="utf-8")
+    return compilar(MD, HTML, PDF, CSS)
+
+
+def compilar(md: Path, html: Path, pdf: Path, css: Path) -> int:
+    """md → HTML (pandoc, MathML, CSS embebido) → PDF (Chrome sin ventana); 4 a 6 páginas."""
     PANDOC = next((p for p in ("/opt/homebrew/bin/pandoc", shutil.which("pandoc")) if p and Path(p).exists()), None)
     if not PANDOC:
-        print("Falta pandoc: tablas actualizadas, PDF no generado.")
+        print("Falta pandoc: PDF no generado.")
         return 1
-    subprocess.run([PANDOC, str(MD.name), "-o", str(HTML.name), "--standalone", "--math-method=mathml",
-                    "--css", CSS.name, "--embed-resources", "--metadata", "lang=es-MX"],
-                   cwd=DIR_REP, check=True)
+    subprocess.run([PANDOC, str(md.name), "-o", str(html.name), "--standalone", "--math-method=mathml",
+                    "--css", css.name, "--embed-resources", "--metadata", "lang=es-MX"],
+                   cwd=md.parent, check=True)
     nav = chrome()
     if not nav:
         print("No se encontró Chrome: `make setup` lo instala (plotly_get_chrome).")
         return 1
     subprocess.run([nav, "--headless", "--disable-gpu", "--no-pdf-header-footer",
-                    f"--print-to-pdf={PDF}", HTML.as_uri()], check=True, capture_output=True)
+                    f"--print-to-pdf={pdf}", html.as_uri()], check=True, capture_output=True)
     from pypdf import PdfReader
-    n = len(PdfReader(PDF).pages)
-    print(f"reporte/reporte.pdf: {n} páginas")
+    n = len(PdfReader(pdf).pages)
+    print(f"{pdf.relative_to(RAIZ)}: {n} páginas")
     return 0 if 4 <= n <= 6 else 1
 
+
+def main_v2() -> int:
+    md = DIR_REP / "reporte_v2.md"
+    if not md.exists():
+        print("Falta reporte/reporte_v2.md (WP-19).")
+        return 1
+    pendientes = re.findall(r"⟦[^⟧]*⟧", md.read_text(encoding="utf-8"))
+    if pendientes:
+        print(f"AVISO: quedan {len(pendientes)} pendientes ⟦…⟧ en reporte_v2.md.")
+    lint = RAIZ / "scripts" / "lint_estilo.py"
+    if lint.exists():
+        p = subprocess.run([sys.executable, str(lint), str(md)], capture_output=True, text=True,
+                           check=False)
+        if p.returncode != 0:
+            print("AVISO: lint_estilo.py tiene hallazgos:", p.stdout.strip()[-2000:], sep="\n")
+    return compilar(md, DIR_REP / "reporte_v2.html", DIR_REP / "reporte_v2.pdf",
+                    DIR_REP / "estilo_v2.css")
 
 if __name__ == "__main__":
     sys.exit(main())
