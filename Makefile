@@ -1,8 +1,8 @@
 # Objetivos del PRD §10. Los que dependen de insumos humanos se detienen con un mensaje claro.
 PY := uv run python
 .PHONY: consultas consultas-v2 setup contratos corpus explorar explorar-v2 indice indice-lema ranking ranking-v2 pool pool-v2 app app-cli asignar-juicios importar-juicios evaluar-ir agregar-juicios evaluar-ir-v2 reglas congelar ner \
-        muestra-gold muestra-gold-v2 acuerdo-gold revisar-cierres-v2 cierre-juicios-v2 cierre-gold-v2 verificar-ner-v2 inferir-seleccion comparacion-ner fijar-ner-v2 ner-v2 extraer-v2 evaluar-ie-v2 extraer evaluar-ie tablas tablas-v2 booleano figuras-v2 resultados reporte laminas demo test test-lento \
-        validar entrega all all-v2 limpiar
+        muestra-gold muestra-gold-v2 acuerdo-gold revisar-cierres-v2 cierre-juicios-v2 cierre-gold-v2 verificar-ner-v2 inferir-seleccion comparacion-ner fijar-ner-v2 ner-v2 extraer-v2 evaluar-ie-v2 extraer evaluar-ie tablas tablas-v2 booleano figuras-v2 promover-v2 resultados reporte laminas demo test test-lento \
+        validar entrega entrega-v1 all all-v2 limpiar
 
 setup:
 	uv sync
@@ -109,6 +109,10 @@ reporte:
 	$(PY) scripts/11_reporte.py
 laminas:
 	@echo "La presentación final (laminas/Presentacion_Mineria_de_Textos.pptx) y el guion los hizo el equipo a mano; no se regeneran."
+# WP-14 (D28): copia los seis CSV de salida/v2/ a la raíz; desde ahí los objetivos v1 que escriben en
+# la raíz se niegan (v1 vive en salida/, anotaciones/ y la etiqueta v1.0-entrega).
+promover-v2:
+	$(PY) scripts/14b_promover_v2.py
 # WP-07 (D30): booleano AND/OR exploratorio; no entra al pool ni al ganador.
 booleano:
 	$(PY) scripts/03b_booleano.py
@@ -128,11 +132,14 @@ test-lento:
 validar:
 	$(PY) scripts/99_validar.py
 
-entrega: contratos resultados reporte laminas validar
+# Entrega v2 (D28): la cadena v2 termina con la promoción de los seis CSV a la raíz. La de v1 se
+# conserva como entrega-v1 para reconstruir v1 desde su etiqueta (`v1.0-entrega`).
+entrega: contratos all-v2 validar
+entrega-v1: contratos resultados reporte laminas validar
 	@echo "Copia de los seis CSV a la raíz: la hace scripts/99_validar.py tras validar."
 # WP-14: cadena v2 desde los insumos congelados, después de los dos cierres y de fijar el NER v2
 # (los cierres y `make fijar-ner-v2` se corren una sola vez y no forman parte de la cadena).
-all-v2: ranking-v2 agregar-juicios evaluar-ir-v2 acuerdo-gold ner-v2 extraer-v2 evaluar-ie-v2 tablas-v2 booleano figuras-v2
+all-v2: ranking-v2 agregar-juicios evaluar-ir-v2 acuerdo-gold ner-v2 extraer-v2 evaluar-ie-v2 tablas-v2 booleano figuras-v2 promover-v2
 	$(PY) scripts/99_validar.py --parcial --sin-pruebas
 all: entrega
 

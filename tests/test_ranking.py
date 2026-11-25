@@ -405,10 +405,12 @@ DETALLE = config.DIR_SALIDA / "03_ranking_detalle.csv"
 
 @pytest.mark.skipif(not RANKING_RAIZ.exists(), reason="requiere make ranking")
 def test_ranking_real_valido_y_evaluable_por_el_kit(tmp_path):
-    from mtx import adaptadores_kit, consultas
+    from mtx import adaptadores_kit, consultas, promocion
     r = pd.read_csv(RANKING_RAIZ, dtype=str, keep_default_na=False)
-    assert ranking.validar_ranking(r, consultas.cargar_v1()) == []
-    assert len(r) == 400
+    # Desde la promoción (D28) la raíz lleva el ranking v2 de las 15 consultas; antes, el de v1.
+    cons = consultas.cargar() if promocion.raiz_es_v2() else consultas.cargar_v1()
+    assert ranking.validar_ranking(r, cons) == []
+    assert len(r) == len(cons) * 4 * 10
     # Juicios sintéticos (no son juicios humanos): solo prueban que el evaluador no revienta.
     sint = r.drop_duplicates("passage_id").groupby("query_id").head(3)
     juicios = sint.assign(relevante=[i % 2 for i in range(len(sint))])[

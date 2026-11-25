@@ -54,6 +54,8 @@ def main() -> None:
 
 
 def main_v1() -> None:
+    from mtx import promocion
+    promocion.bloquear_v1("ranking")
     config.DIR_SALIDA.mkdir(exist_ok=True)
     cons = consultas.cargar_v1()
     buscador = ranking.cargar_buscador(verificar_pasajes=True)

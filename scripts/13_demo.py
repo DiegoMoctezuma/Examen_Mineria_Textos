@@ -118,7 +118,7 @@ def demo_consulta(q: str, pas: pd.DataFrame) -> None:
     tf = rk[rk["modelo"] == "tfidf_con_filtro"].sort_values("rango")
     bm = rk[rk["modelo"] == "bm25_con_filtro"].sort_values("rango")
     con.print(tabla_lado_a_lado(tf, bm, pas))
-    ent = pd.read_csv(config.RAIZ / "entidades.csv", dtype={"passage_id": str},
+    ent = pd.read_csv(config.DIR_SALIDA / "entidades.csv", dtype={"passage_id": str},
                       keep_default_na=False)
     ids = list(rk[rk["modelo"] == mejor].sort_values("rango")["passage_id"])
     mostrar_pasajes(ids, pas, ent[ent["query_id"] == q],

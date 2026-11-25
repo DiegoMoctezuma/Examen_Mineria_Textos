@@ -167,6 +167,8 @@ def main_v2() -> int:
 def main() -> int:
     if "--v2" in sys.argv[1:]:
         return main_v2()
+    from mtx import promocion
+    promocion.bloquear_v1("extraer")
     t0 = time.perf_counter()
     principal, cfgs = N.cargar_config()
     elegido = N.elegido_v1(RUTA_MODELO_NER, cfgs, principal)

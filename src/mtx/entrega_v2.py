@@ -10,6 +10,9 @@
 22. Guion v2 con ensayo cronometrado entre 15:00 y 20:00 y revisión ciega registrada (§9, criterios
     7 y 9; WP-17 y WP-18).
 
+Además, `raiz_c02` a `raiz_c08` sustituyen a las condiciones 2 a 8 de v1 cuando la raíz ya tiene
+los seis CSV v2 (`make promover-v2`, D28): mismo contrato de columnas, contra las fuentes v2.
+
 Mismos estados que `entrega.py`; nunca escribe datos humanos ni salidas.
 """
 from __future__ import annotations
@@ -248,6 +251,177 @@ def c22_presentacion_v2(cx: Contexto) -> Resultado:
         return Resultado(22, titulo, PENDIENTE, pend)
     return Resultado(22, titulo, OK, [(f"tiempo medido {m.group(1)}:{m.group(2)}; revisión ciega "
                                       "registrada")])
+
+
+# --------------------------------------------------------------------------- raíz promovida (D28)
+
+
+def _rutas_ir_v2(cx: Contexto):
+    from mtx import evaluacion_v2 as E
+
+    s2, a = cx.raiz / S2, cx.raiz / "anotaciones"
+    return E.RutasV2(juicios=s2 / "juicios_relevancia.csv",
+                     agregados=s2 / "05a_juicios_agregados.csv",
+                     acuerdo_json=s2 / "05a_acuerdo.json",
+                     cierre_juicios=a / "cierre_juicios_v2.json",
+                     ranking8=s2 / "ranking_8_variantes.csv", consultas=cx.rp.app.consultas,
+                     dir_salida=s2, mejor_modelo=cx.raiz / "data" / "v2" / "mejor_modelo.json")
+
+
+def _consultas(cx: Contexto) -> pd.DataFrame:
+    return pd.read_csv(cx.rp.app.consultas, dtype=str, keep_default_na=False)
+
+
+def raiz_c02(cx: Contexto) -> Resultado:
+    from mtx import evaluacion, pool, promocion
+    from mtx.entrega import COLUMNAS_ENTIDADES, COLUMNAS_GOLD, COLUMNAS_RESULTADOS_IE, _cabecera
+    from mtx.ranking import COLUMNAS_RANKING
+
+    titulo = "Seis CSV v2 en la raíz, con columnas exactas y copia de salida/v2 (D28)"
+    det = promocion.verificar(cx.raiz)
+    columnas = dict(zip(promocion.NOMBRES, (COLUMNAS_RANKING, pool.COLUMNAS_JUICIOS,
+                                            evaluacion.COLUMNAS_RESULTADOS_IR, COLUMNAS_ENTIDADES,
+                                            COLUMNAS_GOLD, COLUMNAS_RESULTADOS_IE)))
+    for n, cols in columnas.items():
+        ruta = cx.raiz / n
+        if not ruta.exists():
+            continue
+        if ruta.read_bytes().startswith(b"\xef\xbb\xbf"):
+            det.append(f"{n}: tiene BOM")
+        if _cabecera(ruta) != cols:
+            det.append(f"{n}: columnas {_cabecera(ruta)}; se esperan {cols}")
+    return Resultado(2, titulo, FALLA if det else OK,
+                     det or ["los seis son copia de salida/v2 y coinciden con el registro"])
+
+
+def raiz_c03(cx: Contexto) -> Resultado:
+    from mtx.ranking import validar_ranking
+
+    titulo = "ranking.csv v2: 15 × 4 × 10, preprocesamiento ganador, rangos, pasajes y ventanas"
+    r = pd.read_csv(cx.raiz / "ranking.csv", dtype=str, keep_default_na=False)
+    cons = _consultas(cx)
+    det = validar_ranking(r, cons)
+    esperado = len(cons) * 4 * 10
+    if len(r) != esperado:
+        det.append(f"{len(r)} filas; se esperan {esperado} ({len(cons)} × 4 × 10)")
+    if not pd.to_numeric(r["puntaje"], errors="coerce").map(pd.notna).all():
+        det.append("Hay puntajes no finitos")
+    faltan = set(r["passage_id"]) - set(cx.pasajes()["passage_id"])
+    if faltan:
+        det.append(f"{len(faltan)} passage_id no existen en data/pasajes.parquet")
+    return Resultado(3, titulo, FALLA if det else OK, det or [f"{len(r)} filas válidas"])
+
+
+def raiz_c04(cx: Contexto) -> Resultado:
+    from mtx import evaluacion_v2 as E
+
+    titulo = "juicios_relevancia.csv v2: mayoría de 3 sobre el 100 % del pool v2, {0, 1}"
+    det = E.validar_insumos(_rutas_ir_v2(cx))
+    j = pd.read_csv(cx.raiz / "juicios_relevancia.csv", dtype=str, keep_default_na=False)
+    pool_v2 = pd.read_csv(cx.raiz / S2 / "04_pool.csv", dtype=str, keep_default_na=False)
+    if set(zip(j["query_id"], j["passage_id"])) != set(zip(pool_v2["query_id"],
+                                                         pool_v2["passage_id"])):
+        det.append("los juicios no cubren exactamente los pares de salida/v2/04_pool.csv")
+    if len(j) != len(pool_v2):
+        det.append(f"{len(j)} juicios para {len(pool_v2)} pares del pool")
+    if not set(j["relevante"]) <= {"0", "1"}:
+        det.append("hay valores de relevante fuera de {0, 1}")
+    return Resultado(4, titulo, FALLA if det else OK,
+                     det or [f"{len(j)} juicios agregados del cierre v2 (D24)"])
+
+
+def raiz_c05(cx: Contexto) -> Resultado:
+    from mtx import evaluacion
+    from mtx import evaluacion_v2 as E
+
+    titulo = "resultados_ir.csv v2 se regenera con el kit; ganador por D28"
+    rk, ju, res_r = (cx.raiz / n for n in ("ranking.csv", "juicios_relevancia.csv",
+                                           "resultados_ir.csv"))
+    det = []
+    with tempfile.TemporaryDirectory() as tmp:
+        nuevo = adaptadores_kit.ejecutar_evaluador("ir", ju, rk, Path(tmp))
+        if nuevo.read_bytes() != res_r.read_bytes():
+            det.append("El kit no reproduce resultados_ir.csv: `make evaluar-ir-v2` y "
+                       "`make promover-v2`")
+    det += evaluacion.validar_resultados_ir(evaluacion.leer_resultados(res_r), _consultas(cx))
+    ruta_m = cx.raiz / "data" / "v2" / "mejor_modelo.json"
+    m = json.loads(ruta_m.read_text(encoding="utf-8"))
+    ocho = evaluacion.leer_resultados(cx.raiz / S2 / "05_ir_8_variantes.csv")
+    if m.get("modelo") != E.elegir_ganador_v2(ocho)["modelo"]:
+        det.append("data/v2/mejor_modelo.json no sigue la regla D28")
+    for clave, ruta in (("sha256_ranking_csv_v2", rk), ("sha256_juicios_relevancia_csv_v2", ju)):
+        if m.get(clave) != adaptadores_kit.sha256_archivo(ruta):
+            det.append(f"data/v2/mejor_modelo.json: {clave} ya no corresponde a {ruta.name}")
+    return Resultado(5, titulo, FALLA if det else OK,
+                     det or [(f"el kit reproduce la raíz; ganador {m.get('modelo')} (MAP "
+                             f"{m.get('MAP')})")])
+
+
+def raiz_c06(cx: Contexto) -> Resultado:
+    from mtx import fusion
+
+    titulo = "entidades.csv v2: método, offsets, claves, reglas FECHA v2 congeladas"
+    ent = pd.read_csv(cx.raiz / "entidades.csv", dtype={"passage_id": str, "query_id": str},
+                      keep_default_na=False)
+    det = fusion.validar_entidades(ent, dict(zip(cx.pasajes()["passage_id"],
+                                                 cx.pasajes()["texto"])))
+    resumen = cx.raiz / S2 / "08_resumen_extraccion.json"
+    if not resumen.exists():
+        det.append("falta salida/v2/08_resumen_extraccion.json")
+    elif not json.loads(resumen.read_text(encoding="utf-8")).get("reglas_fecha_v2_vigentes"):
+        det.append("la extracción v2 se corrió con reglas distintas de `reglas-fecha-v2`")
+    return Resultado(6, titulo, FALLA if det else OK,
+                     det or [f"{len(ent)} filas; contrato de 8 columnas y offsets en verde"])
+
+
+def raiz_c07(cx: Contexto) -> Resultado:
+    titulo = "gold_entidades.csv v2: gold v1 más partes A y B, cierre v2, offsets"
+    if not (cx.raiz / "anotaciones" / "cierre_gold_v2.json").exists():
+        return Resultado(7, titulo, FALLA, ["la raíz es v2 pero no existe cierre_gold_v2.json"])
+    g = pd.read_csv(cx.raiz / "gold_entidades.csv", dtype={"passage_id": str},
+                    keep_default_na=False)
+    textos = dict(zip(cx.pasajes()["passage_id"], cx.pasajes()["texto"]))
+    det = []
+    for r in g.itertuples(index=False):
+        t = textos.get(r.passage_id)
+        if t is None:
+            det.append(f"{r.passage_id}: no existe en data/pasajes.parquet")
+        elif t[int(r.inicio):int(r.fin)] != r.texto:
+            det.append(f"{r.passage_id} {r.inicio}-{r.fin}: el texto no coincide con el pasaje")
+    if g.duplicated(["passage_id", "tipo", "inicio", "fin"]).any():
+        det.append("hay entidades repetidas")
+    return Resultado(7, titulo, FALLA if det else OK,
+                     det[:10] or [(f"{len(g)} entidades en {g['passage_id'].nunique()} pasajes; "
+                                  "offsets en verde")])
+
+
+def raiz_c08(cx: Contexto) -> Resultado:
+    from mtx.entrega import COLUMNAS_RESULTADOS_IE
+
+    titulo = "resultados_ie.csv v2 reproducible con el kit sobre el gold v2"
+    ruta = cx.raiz / "resultados_ie.csv"
+    det = []
+    with tempfile.TemporaryDirectory() as tmp:
+        nuevo = adaptadores_kit.ejecutar_evaluador("ie", cx.raiz / "gold_entidades.csv",
+                                                    cx.raiz / "entidades.csv", Path(tmp))
+        if nuevo.read_bytes() != ruta.read_bytes():
+            det.append("El kit no reproduce resultados_ie.csv: `make evaluar-ie-v2` y "
+                       "`make promover-v2`")
+    res = pd.read_csv(ruta)
+    if list(res.columns) != COLUMNAS_RESULTADOS_IE:
+        det.append(f"columnas de resultados_ie.csv: {list(res.columns)}")
+    faltan = [m for m in ("regla", "modelo", "combinado")
+              if not ((res["metodo"] == m) & (res["tipo"] == "TODOS")).any()]
+    if faltan:
+        det.append(f"faltan filas TODOS de {faltan}")
+    if not (cx.raiz / S2 / "09_referencias_f1.csv").exists():
+        det.append("falta salida/v2/09_referencias_f1.csv")
+    return Resultado(8, titulo, FALLA if det else OK,
+                     det or ["el kit reproduce la raíz; referencias del F1 presentes"])
+
+
+RAIZ_V2 = {2: raiz_c02, 3: raiz_c03, 4: raiz_c04, 5: raiz_c05, 6: raiz_c06, 7: raiz_c07,
+           8: raiz_c08}
 
 
 CONDICIONES_V2 = [c16_juicios_v2, c17_orden, c18_muestras, c19_ir_v2, c20_ie_v2, c21_tablas_v2,

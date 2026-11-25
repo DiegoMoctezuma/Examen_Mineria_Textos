@@ -157,6 +157,8 @@ def main_v2() -> int:
 def main() -> int:
     if "--v2" in sys.argv[1:]:
         return main_v2()
+    from mtx import promocion
+    promocion.bloquear_v1("evaluar-ie")
     t0 = time.perf_counter()
     rg = G.rutas_gold()
     pas = pd.read_parquet(config.PASAJES_PARQUET,

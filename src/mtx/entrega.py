@@ -1,5 +1,6 @@
-"""Las 15 condiciones de entrega de PRD §13.2 (`make validar`, `scripts/99_validar.py`); las 6 de
-v2 (PRD v2 §9) están en `entrega_v2.py` y corren después.
+"""Las 15 condiciones de entrega de PRD §13.2 (`make validar`, `scripts/99_validar.py`); las 7 de
+v2 (PRD v2 §9) están en `entrega_v2.py` y corren después. Con la raíz promovida a v2 (D28), las
+condiciones 2 a 8 se revisan con `entrega_v2.RAIZ_V2`.
 
 Cada condición devuelve un estado:
 
@@ -310,6 +311,7 @@ def c11_reporte(cx: Contexto) -> Resultado:
 
 
 RE_TIEMPO = re.compile(r"tiempo medido:\s*(\d+):(\d{2})", re.IGNORECASE)
+EXCEPCION_12 = "Excepción a la condición 12"
 
 
 def c12_laminas(cx: Contexto) -> Resultado:
@@ -328,12 +330,18 @@ def c12_laminas(cx: Contexto) -> Resultado:
     if not 1 <= n <= 5 and not excepcion:
         det.append(f"{n} láminas")
     m = RE_TIEMPO.search(guion.read_text(encoding="utf-8"))
-    if not m:
+    sin_ensayo = dec.exists() and EXCEPCION_12 in dec.read_text(encoding="utf-8")
+    if not m and sin_ensayo:
+        nota_12 = "guion v1 sin cronometrar por excepción registrada (docs/decisiones.md); en v2 "
+        nota_12 += "manda la condición 22"
+    elif not m:
         det.append("el guion no registra «Tiempo medido: m:ss»")
     elif int(m.group(1)) * 60 + int(m.group(2)) > 480:
         det.append(f"tiempo medido {m.group(1)}:{m.group(2)} > 8:00")
     nota = f"{n} láminas" + (" (más de 5 por decisión del alumno, docs/decisiones.md)"
                              if n > 5 and excepcion else "")
+    if not m and sin_ensayo:
+        nota += f"; {nota_12}"
     return Resultado(12, titulo, FALLA if det else OK, det or [nota])
 
 
@@ -403,10 +411,15 @@ CONDICIONES: list[Callable[[Contexto], Resultado]] = [
 def validar(cx: Contexto, solo: set[int] | None = None) -> list[Resultado]:
     """Corre las condiciones en orden; una excepción se reporta como FALLA de esa condición.
     La 4 va antes que la 2 para que la exportación de juicios cuente en la comprobación de copias.
-    Después de las 15 de v1 corren las 6 de v2 (16 a 21, `entrega_v2.py`)."""
-    from mtx import entrega_v2
+    Después de las 15 de v1 corren las 7 de v2 (16 a 22, `entrega_v2.py`). Si la raíz ya tiene los
+    CSV v2 (`make promover-v2`, D28), las condiciones 2 a 8 se revisan contra las fuentes v2
+    (`entrega_v2.RAIZ_V2`) y la 4 ya no exporta los juicios de v1."""
+    from mtx import entrega_v2, promocion
 
     condiciones = [*CONDICIONES, *entrega_v2.CONDICIONES_V2]
+    if promocion.raiz_es_v2(cx.raiz):
+        for n, f in entrega_v2.RAIZ_V2.items():
+            condiciones[n - 1] = f
     orden = [3, 0, 1, 2, *range(4, len(condiciones))]
     out = {}
     for i in orden:
