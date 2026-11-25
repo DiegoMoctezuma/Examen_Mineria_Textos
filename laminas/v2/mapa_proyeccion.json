@@ -1,0 +1,117 @@
+{
+  "laminas": 26,
+  "pantalla_pulgadas": [
+    40,
+    50
+  ],
+  "distancia_metros": [
+    3,
+    5
+  ],
+  "mapa": [
+    {
+      "lamina": 1,
+      "origen": 1
+    },
+    {
+      "lamina": 2,
+      "origen": 2
+    },
+    {
+      "lamina": 3,
+      "origen": 3
+    },
+    {
+      "lamina": 4,
+      "origen": 3
+    },
+    {
+      "lamina": 5,
+      "origen": 4
+    },
+    {
+      "lamina": 6,
+      "origen": 5
+    },
+    {
+      "lamina": 7,
+      "origen": 6
+    },
+    {
+      "lamina": 8,
+      "origen": 6
+    },
+    {
+      "lamina": 9,
+      "origen": 7
+    },
+    {
+      "lamina": 10,
+      "origen": 8
+    },
+    {
+      "lamina": 11,
+      "origen": 9
+    },
+    {
+      "lamina": 12,
+      "origen": 10
+    },
+    {
+      "lamina": 13,
+      "origen": 10
+    },
+    {
+      "lamina": 14,
+      "origen": 11
+    },
+    {
+      "lamina": 15,
+      "origen": 12
+    },
+    {
+      "lamina": 16,
+      "origen": 13
+    },
+    {
+      "lamina": 17,
+      "origen": 13
+    },
+    {
+      "lamina": 18,
+      "origen": 14
+    },
+    {
+      "lamina": 19,
+      "origen": 15
+    },
+    {
+      "lamina": 20,
+      "origen": 15
+    },
+    {
+      "lamina": 21,
+      "origen": 16
+    },
+    {
+      "lamina": 22,
+      "origen": 17
+    },
+    {
+      "lamina": 23,
+      "origen": 17
+    },
+    {
+      "lamina": 24,
+      "origen": 18
+    },
+    {
+      "lamina": 25,
+      "origen": 19
+    },
+    {
+      "lamina": 26,
+      "origen": 20
+    }
+  ]
+}
