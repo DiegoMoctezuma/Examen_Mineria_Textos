@@ -1,0 +1,99 @@
+{
+ "clave": "2bcdcf28d29a7b305ab55d441b9d48b10d7392ae023081f5df7a1f662ecedc6c",
+ "entidades_crudas": [
+  {
+   "confianza": 0.505705,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 3,
+   "inicio": 0,
+   "texto": "ROC",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.910403,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 23,
+   "inicio": 20,
+   "texto": "SEC",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.492386,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 30,
+   "inicio": 26,
+   "texto": "ARIA",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.966654,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 280,
+   "inicio": 277,
+   "texto": "CFE",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997491,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 290,
+   "inicio": 287,
+   "texto": "CFE",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.9999,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 435,
+   "inicio": 432,
+   "texto": "CFE",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99666,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 619,
+   "inicio": 592,
+   "texto": "Andrés Manuel López Obrador",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999896,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 761,
+   "inicio": 740,
+   "texto": "Secretaría de Energía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99967,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 925,
+   "inicio": 922,
+   "texto": "CFE",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1011_34",
+ "segundos": 0.289,
+ "texto_sha256": "8da0deb4798f36125f4a5ebc824b1c65159b126c7f5112e1ba8b6b82ec41c3a6",
+ "version_transformers": "5.22.1"
+}

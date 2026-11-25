@@ -1,0 +1,72 @@
+{
+ "clave": "50d4bb8055eaeedb247c021fb3c2e252d44f2235a8c9dfa9c162f052505e20cb",
+ "entidades_crudas": [
+  {
+   "confianza": 0.956917,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998474,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 550,
+   "inicio": 544,
+   "texto": "España",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999986,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 640,
+   "inicio": 634,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99997,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 680,
+   "inicio": 674,
+   "texto": "España",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999977,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 725,
+   "inicio": 719,
+   "texto": "España",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999983,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1071,
+   "inicio": 1058,
+   "texto": "Ciudad Juárez",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "2265_8",
+ "segundos": 0.281,
+ "texto_sha256": "5416177c3a6d215c75e96932b76d0115cefdaac5601f7b578cece43ca47d25ce",
+ "version_transformers": "5.22.1"
+}

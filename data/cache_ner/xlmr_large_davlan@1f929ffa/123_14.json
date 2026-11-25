@@ -1,0 +1,117 @@
+{
+ "clave": "54145d9e8c11fdf2da8bbc6ebebf390d5042685014ba13e5639a52953498bd66",
+ "entidades_crudas": [
+  {
+   "confianza": 0.994977,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 25,
+   "inicio": 0,
+   "texto": "LUISA MARÍA ALCALDE LUJÁN",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99929,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 177,
+   "inicio": 169,
+   "texto": "Acapulco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999929,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 251,
+   "inicio": 243,
+   "texto": "Acapulco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999961,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 271,
+   "inicio": 254,
+   "texto": "Coyuca de Benítez",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999907,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 614,
+   "inicio": 592,
+   "texto": "Base Naval de Acapulco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999822,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 702,
+   "inicio": 694,
+   "texto": "Acapulco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99996,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 725,
+   "inicio": 708,
+   "texto": "Coyuca de Benítez",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999823,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1009,
+   "inicio": 1001,
+   "texto": "Acapulco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999894,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1104,
+   "inicio": 1096,
+   "texto": "Acapulco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99997,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1141,
+   "inicio": 1124,
+   "texto": "Coyuca de Benítez",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.9998,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1242,
+   "inicio": 1236,
+   "texto": "México",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "123_14",
+ "segundos": 0.517,
+ "texto_sha256": "2024e5879b48841c145dc5e3248fb9f89f0da373b68265e1218a4fbfd8aaf431",
+ "version_transformers": "5.22.1"
+}

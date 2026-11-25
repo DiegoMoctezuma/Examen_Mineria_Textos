@@ -1,0 +1,45 @@
+{
+ "clave": "1525574836b81ba248c9376ae78bd344278e3faa7b07e9f8d5a111a8c2a0c8c6",
+ "entidades_crudas": [
+  {
+   "confianza": 0.99987,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 59,
+   "inicio": 48,
+   "texto": "Rocío Nahle",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997967,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 127,
+   "inicio": 118,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999874,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 150,
+   "inicio": 141,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "564_101",
+ "segundos": 0.139,
+ "texto_sha256": "2b9baaf2fc81b6e97e1ac80d3dc6f80c7d0d1506aa1e45a77bedc011740fa579",
+ "version_transformers": "5.22.1"
+}

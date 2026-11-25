@@ -1,0 +1,81 @@
+{
+ "clave": "e2773866ece7cf6ac2dde35cdf0de188832018c4d0d669c11cdba51c5111f956",
+ "entidades_crudas": [
+  {
+   "confianza": 0.937667,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999925,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 374,
+   "inicio": 368,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999859,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 889,
+   "inicio": 884,
+   "texto": "Pemex",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99982,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 911,
+   "inicio": 906,
+   "texto": "Pemex",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.990944,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 935,
+   "inicio": 913,
+   "texto": "Octavio Romero Oropeza",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999867,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1003,
+   "inicio": 979,
+   "texto": "Luis Crescencio Sandoval",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999911,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1054,
+   "inicio": 1032,
+   "texto": "Alejandro Gertz Manero",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "2274_1",
+ "segundos": 0.289,
+ "texto_sha256": "286a75ded7126f29e6fec4572e0d9e3d7a3d26ba76523cf5a12b931f62f861e6",
+ "version_transformers": "5.22.1"
+}

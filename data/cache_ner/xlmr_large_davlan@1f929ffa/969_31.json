@@ -1,0 +1,126 @@
+{
+ "clave": "4945b6ea17ec54e4a68a64ffdf07bdb667a710430221fbc12e14a1424f27274b",
+ "entidades_crudas": [
+  {
+   "confianza": 0.990238,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 32,
+   "inicio": 0,
+   "texto": "LUIS CRESENCIO SANDOVAL GONZÁLEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999731,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 312,
+   "inicio": 307,
+   "texto": "Tulum",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.9999,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 461,
+   "inicio": 445,
+   "texto": "Guardia Nacional",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99983,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 495,
+   "inicio": 490,
+   "texto": "Tulum",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.770819,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 536,
+   "inicio": 530,
+   "texto": "Marina",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999797,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 581,
+   "inicio": 576,
+   "texto": "Tulum",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999877,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 739,
+   "inicio": 734,
+   "texto": "Tulum",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999965,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 902,
+   "inicio": 890,
+   "texto": "Riviera Maya",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.9999,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1062,
+   "inicio": 1054,
+   "texto": "Ejército",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999933,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1095,
+   "inicio": 1079,
+   "texto": "Guardia Nacional",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999147,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1148,
+   "inicio": 1141,
+   "texto": "Guardia",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999478,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1280,
+   "inicio": 1273,
+   "texto": "Guardia",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "969_31",
+ "segundos": 0.306,
+ "texto_sha256": "6f8ef389357a6b8cf62f90789a71ab425b78739762c827a6bd65a3a0cc795bce",
+ "version_transformers": "5.22.1"
+}

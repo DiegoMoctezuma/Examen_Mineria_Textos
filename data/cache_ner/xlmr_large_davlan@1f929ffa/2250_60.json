@@ -1,0 +1,36 @@
+{
+ "clave": "372a7d02aed307ef357f09a7a1d7ea2aef52f1915be664402386cde19d80fe6a",
+ "entidades_crudas": [
+  {
+   "confianza": 0.99023,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998657,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 87,
+   "inicio": 78,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "2250_60",
+ "segundos": 0.231,
+ "texto_sha256": "af0968d14582afd703365e8a57ca8f6197f2ae118a500d03b8ecbac0b8d259bc",
+ "version_transformers": "5.22.1"
+}

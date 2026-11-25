@@ -1,0 +1,72 @@
+{
+ "clave": "e419a8f18fdf8a74ad865bf94bd230a6fbafe26b5699914cc2b709385891284f",
+ "entidades_crudas": [
+  {
+   "confianza": 0.999917,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1,
+   "inicio": 0,
+   "texto": "H",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.970471,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 24,
+   "inicio": 1,
+   "texto": "UMBERTO ORTIZ CASTAÑEDA",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998068,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 105,
+   "inicio": 98,
+   "texto": "Jalisco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.993312,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 193,
+   "inicio": 182,
+   "texto": "Tlaquepaque",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.995976,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 230,
+   "inicio": 224,
+   "texto": "Tonalá",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998397,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 334,
+   "inicio": 314,
+   "texto": "Los Altos de Jalisco",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1219_83",
+ "segundos": 0.184,
+ "texto_sha256": "aa4abebd6a11d54765076e9b30adda51432b795f44478f7ee498121650f88dc8",
+ "version_transformers": "5.22.1"
+}

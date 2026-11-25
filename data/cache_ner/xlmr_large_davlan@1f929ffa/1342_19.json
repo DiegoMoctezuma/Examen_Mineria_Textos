@@ -1,0 +1,63 @@
+{
+ "clave": "b0e441cd241eae88d865b7b9a0b1ade9b67644f73a84e358082a92d9b8890f79",
+ "entidades_crudas": [
+  {
+   "confianza": 0.976653,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 61,
+   "inicio": 14,
+   "texto": "Corredor Interoceánico del Istmo de Tehuantepec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999698,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 146,
+   "inicio": 133,
+   "texto": "Coatzacoalcos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999937,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 541,
+   "inicio": 522,
+   "texto": "Laguna de Pajaritos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999589,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 604,
+   "inicio": 593,
+   "texto": "Salina Cruz",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.788658,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 984,
+   "inicio": 948,
+   "texto": "Ferrocarril del Istmo de Tehuantepec",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1342_19",
+ "segundos": 0.298,
+ "texto_sha256": "d05bd03c37279bb7cc4d449c0fe5fe06b261af4fa8dc28b73641a77edf94276d",
+ "version_transformers": "5.22.1"
+}

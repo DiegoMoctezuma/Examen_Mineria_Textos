@@ -1,0 +1,135 @@
+{
+ "clave": "414e8523fceaa407eebfc639f1a08a456db3804f3eb2075bb723bf4ace2fbe25",
+ "entidades_crudas": [
+  {
+   "confianza": 0.997367,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 32,
+   "inicio": 0,
+   "texto": "LUIS CRESENCIO SANDOVAL GONZÁLEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999904,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 263,
+   "inicio": 247,
+   "texto": "Guardia Nacional",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999764,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 277,
+   "inicio": 269,
+   "texto": "Ejército",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999968,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 297,
+   "inicio": 285,
+   "texto": "Fuerza Aérea",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999978,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 326,
+   "inicio": 306,
+   "texto": "Secretaría de Marina",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999958,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 395,
+   "inicio": 389,
+   "texto": "Estado",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.501668,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 917,
+   "inicio": 913,
+   "texto": "Maya",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99829,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 972,
+   "inicio": 956,
+   "texto": "Guardia Nacional",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999812,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1045,
+   "inicio": 1029,
+   "texto": "Guardia Nacional",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999889,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1090,
+   "inicio": 1074,
+   "texto": "Guardia Nacional",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999812,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1194,
+   "inicio": 1178,
+   "texto": "Guardia Nacional",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999834,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1246,
+   "inicio": 1231,
+   "texto": "Fuerzas Armadas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99991,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1304,
+   "inicio": 1288,
+   "texto": "Guardia Nacional",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "484_19",
+ "segundos": 0.349,
+ "texto_sha256": "63d27e28881f0b90cc622c2458241be99e14a362db701feaa36d12e3d558c1da",
+ "version_transformers": "5.22.1"
+}

@@ -1,0 +1,63 @@
+{
+ "clave": "61e6f3ae45b330379efb559e218210526f4f837eda730cead4d1ce55d79e169a",
+ "entidades_crudas": [
+  {
+   "confianza": 0.968417,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999979,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 258,
+   "inicio": 250,
+   "texto": "Veracruz",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999965,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 284,
+   "inicio": 276,
+   "texto": "Veracruz",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999979,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 951,
+   "inicio": 943,
+   "texto": "Veracruz",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99997,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 991,
+   "inicio": 983,
+   "texto": "Veracruz",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1415_16",
+ "segundos": 0.303,
+ "texto_sha256": "4224c7ceba5f55466e632deb47f61739535a341dd29a24eec820c493cc5fadd5",
+ "version_transformers": "5.22.1"
+}

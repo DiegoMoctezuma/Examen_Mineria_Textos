@@ -1,0 +1,54 @@
+{
+ "clave": "63221ac69e4041f539697c58a1fd34fdd3bec13a895a093bc40f3295fff82db9",
+ "entidades_crudas": [
+  {
+   "confianza": 0.984032,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 30,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.993588,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 31,
+   "texto": "OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.569903,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 284,
+   "inicio": 278,
+   "texto": "Social",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999955,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1106,
+   "inicio": 1094,
+   "texto": "Chimalhuacán",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "341_1",
+ "segundos": 0.339,
+ "texto_sha256": "838be2db0f1a34b941d8db6e218f9381c13fdce8a5622afc471b6b5fb05914d0",
+ "version_transformers": "5.22.1"
+}

@@ -1,0 +1,99 @@
+{
+ "clave": "a801bdc0728ca93d8d2b3b21d8128732e6cc54ee7a22ea8fb78841b9598c8b21",
+ "entidades_crudas": [
+  {
+   "confianza": 0.893345,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 31,
+   "inicio": 0,
+   "texto": "DIRECCIÓN GENERAL DE INGENIEROS",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.974086,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 71,
+   "inicio": 38,
+   "texto": "SECRETARÍA DE LA DEFENSA NACIONAL",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998197,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 79,
+   "inicio": 73,
+   "texto": "SEDENA",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999614,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 415,
+   "inicio": 409,
+   "texto": "Mérida",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.958721,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 477,
+   "inicio": 467,
+   "texto": "La Plancha",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99291,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 670,
+   "inicio": 666,
+   "texto": "Umán",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.936796,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 677,
+   "inicio": 673,
+   "texto": "Teya",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999313,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1074,
+   "inicio": 1068,
+   "texto": "Mérida",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.977681,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1164,
+   "inicio": 1155,
+   "texto": "Tren Maya",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "396_23",
+ "segundos": 0.297,
+ "texto_sha256": "4bfa4eef11b90438d87ae1f45924825c66964bc3382d6da2bacd8b2fe9b83206",
+ "version_transformers": "5.22.1"
+}

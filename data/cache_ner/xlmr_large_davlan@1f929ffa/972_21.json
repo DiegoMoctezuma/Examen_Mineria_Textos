@@ -1,0 +1,108 @@
+{
+ "clave": "8e5a6df03f39c4d29a9051a826ab293ef916381ba17c4bd3a1b71d394b5c770b",
+ "entidades_crudas": [
+  {
+   "confianza": 0.566644,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1,
+   "inicio": 0,
+   "texto": "V",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999916,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 176,
+   "inicio": 167,
+   "texto": "San Pedro",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999958,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 189,
+   "inicio": 179,
+   "texto": "El Triunfo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999855,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 229,
+   "inicio": 219,
+   "texto": "El Triunfo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998535,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 347,
+   "inicio": 340,
+   "texto": "Poc Boc",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.993222,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 481,
+   "inicio": 473,
+   "texto": "Hampolol",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999303,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 555,
+   "inicio": 550,
+   "texto": "Becal",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.995771,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 565,
+   "inicio": 557,
+   "texto": "Campeche",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.996803,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 788,
+   "inicio": 784,
+   "texto": "Umán",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999207,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 797,
+   "inicio": 790,
+   "texto": "Yucatán",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "972_21",
+ "segundos": 0.281,
+ "texto_sha256": "3c107a95599bcf6c6ea9506766fba3cd09d2ee513219a295102f2203cafc272b",
+ "version_transformers": "5.22.1"
+}

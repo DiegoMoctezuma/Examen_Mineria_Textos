@@ -1,0 +1,63 @@
+{
+ "clave": "e3de85252ef700e79f9868fec204c4079096909201d905a93e72fed528c44ba3",
+ "entidades_crudas": [
+  {
+   "confianza": 0.967916,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 15,
+   "inicio": 0,
+   "texto": "CAROLINA VARGAS",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999932,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 157,
+   "inicio": 137,
+   "texto": "Brigada Correcaminos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999981,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 687,
+   "inicio": 663,
+   "texto": "Edgar Jesús Zitle García",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999934,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 726,
+   "inicio": 722,
+   "texto": "IMSS",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998673,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 736,
+   "inicio": 730,
+   "texto": "Sonora",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1277_28",
+ "segundos": 0.202,
+ "texto_sha256": "36b1c57438962216f80e7aab17766a330b7551250742aed9d39488bdbe2e28a1",
+ "version_transformers": "5.22.1"
+}

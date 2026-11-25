@@ -1,0 +1,108 @@
+{
+ "clave": "ceb5a58181464e36f5f939253d16828d826f18aee612fd400a0483749243afd7",
+ "entidades_crudas": [
+  {
+   "confianza": 0.945434,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999512,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 112,
+   "inicio": 93,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999984,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 245,
+   "inicio": 229,
+   "texto": "Ciudad de México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999824,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 421,
+   "inicio": 413,
+   "texto": "Gobierno",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999967,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 440,
+   "inicio": 423,
+   "texto": "Claudia Sheinbaum",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99763,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 465,
+   "inicio": 457,
+   "texto": "Sandoval",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999921,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 493,
+   "inicio": 477,
+   "texto": "Ciudad Deportiva",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997368,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 506,
+   "inicio": 497,
+   "texto": "Iztacalco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.825223,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 744,
+   "inicio": 731,
+   "texto": "del Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999231,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 940,
+   "inicio": 921,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "630_73",
+ "segundos": 0.28,
+ "texto_sha256": "e63a4504424d54906681727e5c5b045fb336c6355dfecdd0cea2bb5bc54e368c",
+ "version_transformers": "5.22.1"
+}

@@ -1,0 +1,36 @@
+{
+ "clave": "3f8092e01007f4cea3bc28d41130f664283194d6270ce565882323678597e733",
+ "entidades_crudas": [
+  {
+   "confianza": 0.961376,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998868,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 964,
+   "inicio": 959,
+   "texto": "Pemex",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "2283_0",
+ "segundos": 0.281,
+ "texto_sha256": "9b24488eddd39994100e304f11538f4e5793dfc9218086c2550f6976d0fe8c78",
+ "version_transformers": "5.22.1"
+}

@@ -1,0 +1,45 @@
+{
+ "clave": "735a7eb94e4b85a12e30e393da8d112a726f3805b9b5d3b1dacaf26820458d86",
+ "entidades_crudas": [
+  {
+   "confianza": 0.968814,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999974,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 905,
+   "inicio": 896,
+   "texto": "Michoacán",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99996,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1008,
+   "inicio": 999,
+   "texto": "Michoacán",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "2115_4",
+ "segundos": 0.296,
+ "texto_sha256": "41c93320518af51729e83ce13b374b6e51886caab25810bb8c434bfabf848186",
+ "version_transformers": "5.22.1"
+}

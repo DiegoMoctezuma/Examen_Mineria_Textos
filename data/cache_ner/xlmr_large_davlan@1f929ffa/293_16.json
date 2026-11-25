@@ -1,0 +1,99 @@
+{
+ "clave": "d6c6066596a8cc60cd95dd7cb107012e2c2c55d34bea32db2acaee855aa623b5",
+ "entidades_crudas": [
+  {
+   "confianza": 0.991305,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 10,
+   "inicio": 0,
+   "texto": "VOZ HOMBRE",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999465,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 89,
+   "inicio": 81,
+   "texto": "Acapulco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999964,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 607,
+   "inicio": 591,
+   "texto": "Ricardo Castillo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999967,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 650,
+   "inicio": 624,
+   "texto": "Agencia Quadratín Guerrero",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998403,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 655,
+   "inicio": 652,
+   "texto": "Uno",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999981,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 706,
+   "inicio": 694,
+   "texto": "Óscar Olguín",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.996924,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 737,
+   "inicio": 724,
+   "texto": "José Cárdenas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.990685,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 755,
+   "inicio": 742,
+   "texto": "Radio Fórmula",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999899,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 773,
+   "inicio": 757,
+   "texto": "Ricardo Castillo",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "293_16",
+ "segundos": 0.275,
+ "texto_sha256": "90b202878e3764c1d6ecf87f3a4b5eb144c063f1734dc5c236dc995cfc43a044",
+ "version_transformers": "5.22.1"
+}

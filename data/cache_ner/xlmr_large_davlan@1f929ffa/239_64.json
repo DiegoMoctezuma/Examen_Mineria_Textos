@@ -1,0 +1,54 @@
+{
+ "clave": "8d74d2c04cfaaac170975257b95fc0f711bccd59d102db1b954a1123d61ab295",
+ "entidades_crudas": [
+  {
+   "confianza": 0.999585,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 54,
+   "inicio": 41,
+   "texto": "Andrés García",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.897042,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 100,
+   "inicio": 90,
+   "texto": "Códice 21.",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999792,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 289,
+   "inicio": 281,
+   "texto": "Acapulco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999938,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 572,
+   "inicio": 548,
+   "texto": "Secretaría del Bienestar",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "239_64",
+ "segundos": 0.283,
+ "texto_sha256": "a5c54e0083b3ba1150a06932799604db3a11181c716c583930abed5105903bcb",
+ "version_transformers": "5.22.1"
+}

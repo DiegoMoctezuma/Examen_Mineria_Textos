@@ -1,0 +1,81 @@
+{
+ "clave": "158edc12de2f813f32b67ab8cd7e41005cb2b760db9d323706cd256d714b0297",
+ "entidades_crudas": [
+  {
+   "confianza": 0.936273,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.98271,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 61,
+   "inicio": 54,
+   "texto": "Texcoco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.994865,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 188,
+   "inicio": 181,
+   "texto": "Texcoco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.983062,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 256,
+   "inicio": 245,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.906543,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 421,
+   "inicio": 407,
+   "texto": "Felipe Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999837,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 447,
+   "inicio": 441,
+   "texto": "Toluca",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998962,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 486,
+   "inicio": 470,
+   "texto": "Ciudad de México",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1316_37",
+ "segundos": 0.159,
+ "texto_sha256": "84c98934246fb3546d3860bb8648d7dca583fa3168859dd8d97b854cbaeb9eec",
+ "version_transformers": "5.22.1"
+}

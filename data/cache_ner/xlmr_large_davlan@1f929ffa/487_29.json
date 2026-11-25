@@ -1,0 +1,99 @@
+{
+ "clave": "a2de04bd31cb12a2e39a8954bf12db9c1531ef71a270372630a96fc20f26cefd",
+ "entidades_crudas": [
+  {
+   "confianza": 0.988972,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 19,
+   "inicio": 0,
+   "texto": "JOAO PEDRO PARREIRA",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.879913,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 80,
+   "inicio": 56,
+   "texto": "MOTA-ENGIL LATINOAMÉRICA",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999976,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 169,
+   "inicio": 162,
+   "texto": "Chiapas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.9998,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 205,
+   "inicio": 197,
+   "texto": "Palenque",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999949,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 214,
+   "inicio": 207,
+   "texto": "Chiapas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999375,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 283,
+   "inicio": 275,
+   "texto": "Palenque",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999942,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 935,
+   "inicio": 925,
+   "texto": "El Triunfo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997492,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1159,
+   "inicio": 1152,
+   "texto": "Triunfo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999933,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1168,
+   "inicio": 1161,
+   "texto": "Tabasco",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "487_29",
+ "segundos": 0.316,
+ "texto_sha256": "1a4c53adf269cc70ceaccc120e73168680b9ad3cbcbc4e73eceab40b842f49b9",
+ "version_transformers": "5.22.1"
+}

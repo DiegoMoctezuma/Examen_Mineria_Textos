@@ -1,0 +1,99 @@
+{
+ "clave": "70a117da7b1127f601fa57b8cec41d0978975fbe8d57929ecd0ddb79c1e5a4df",
+ "entidades_crudas": [
+  {
+   "confianza": 0.883923,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 3,
+   "inicio": 0,
+   "texto": "MAR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.641859,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 4,
+   "inicio": 3,
+   "texto": "C",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.956987,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 23,
+   "inicio": 8,
+   "texto": "EBRARD CASAUBON",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.530638,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 284,
+   "inicio": 278,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.829538,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 317,
+   "inicio": 311,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999989,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 400,
+   "inicio": 387,
+   "texto": "Unión Europea",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999883,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 467,
+   "inicio": 453,
+   "texto": "Estados Unidos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997885,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 744,
+   "inicio": 728,
+   "texto": "Guardia Nacional",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998933,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 833,
+   "inicio": 817,
+   "texto": "Guardia Nacional",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1949_72",
+ "segundos": 0.264,
+ "texto_sha256": "3acd57913ff6c6a2331812e2340e29b1c925e9471f86e0135414429d95b72b86",
+ "version_transformers": "5.22.1"
+}

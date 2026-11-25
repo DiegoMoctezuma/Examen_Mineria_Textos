@@ -1,0 +1,45 @@
+{
+ "clave": "f9fcc14fc99c9686ecd32dbe941c2d2342a27e2dc4ad7662d511cbb76eef5b83",
+ "entidades_crudas": [
+  {
+   "confianza": 0.954729,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999968,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 741,
+   "inicio": 733,
+   "texto": "Guerrero",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999962,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 808,
+   "inicio": 800,
+   "texto": "Guerrero",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "209_7",
+ "segundos": 0.327,
+ "texto_sha256": "1c1fe072f4cb83e7cf6612c07a9c7ac798296374240b255572d319c30c89297d",
+ "version_transformers": "5.22.1"
+}

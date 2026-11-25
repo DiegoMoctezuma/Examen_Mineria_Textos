@@ -1,0 +1,54 @@
+{
+ "clave": "726fc4c15a47f5a570fcc4a09403845d5f2b62b4e18eaa6e1b49935d3daaf2c3",
+ "entidades_crudas": [
+  {
+   "confianza": 0.945793,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.966103,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 338,
+   "inicio": 295,
+   "texto": "Asociación Campesina Independiente Emiliano",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.588401,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 345,
+   "inicio": 339,
+   "texto": "Zapata",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999902,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 995,
+   "inicio": 971,
+   "texto": "Secretaría de la Defensa",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1850_6",
+ "segundos": 0.304,
+ "texto_sha256": "8fbecf292d2ece53b66bfe016fecceb93b0590bc5bbffb6139889ff266484d40",
+ "version_transformers": "5.22.1"
+}

@@ -1,0 +1,108 @@
+{
+ "clave": "f63e33551e2df0e3cb1e404bc5e43569f4b95abf7647b82fa5f56a0318e0cd30",
+ "entidades_crudas": [
+  {
+   "confianza": 0.999845,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1,
+   "inicio": 0,
+   "texto": "A",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999982,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 238,
+   "inicio": 232,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999787,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 615,
+   "inicio": 604,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.996665,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 728,
+   "inicio": 717,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.992068,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 943,
+   "inicio": 932,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.923177,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1042,
+   "inicio": 1041,
+   "texto": "‘",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.897814,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1057,
+   "inicio": 1042,
+   "texto": "Felipe Ángeles’",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999828,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1115,
+   "inicio": 1102,
+   "texto": "Torre de Pisa",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999988,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1126,
+   "inicio": 1120,
+   "texto": "Italia",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.916036,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1179,
+   "inicio": 1162,
+   "texto": "‘Felipe ‘Ángeles’",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "928_1",
+ "segundos": 0.298,
+ "texto_sha256": "eff9421e18b0649549096aa9e0f2e5e76192b3145951dc5a1941cb4407764df5",
+ "version_transformers": "5.22.1"
+}

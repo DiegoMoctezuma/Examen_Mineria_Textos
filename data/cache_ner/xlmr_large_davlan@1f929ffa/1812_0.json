@@ -1,0 +1,126 @@
+{
+ "clave": "e2df68b4e429060e45409b76a23395b378c8a90af815f3bbaa35a5ae76058d7c",
+ "entidades_crudas": [
+  {
+   "confianza": 0.995796,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999973,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 207,
+   "inicio": 174,
+   "texto": "Base Aérea Militar de Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.914924,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 296,
+   "inicio": 282,
+   "texto": "Felipe Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999985,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 337,
+   "inicio": 304,
+   "texto": "Base Aérea Militar de Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999953,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 482,
+   "inicio": 466,
+   "texto": "Ciudad de México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999924,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 551,
+   "inicio": 535,
+   "texto": "Ciudad de México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.852598,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 786,
+   "inicio": 776,
+   "texto": "de Texcoco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.971454,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 968,
+   "inicio": 920,
+   "texto": "Aeropuerto Internacional 'General Felipe Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999949,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1006,
+   "inicio": 976,
+   "texto": "Base Aérea Militar Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.966132,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1029,
+   "inicio": 1013,
+   "texto": "Estado de México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999485,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1142,
+   "inicio": 1126,
+   "texto": "Ciudad de México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999912,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1173,
+   "inicio": 1167,
+   "texto": "Toluca",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1812_0",
+ "segundos": 0.283,
+ "texto_sha256": "4964bb8ae965faf39aee459e6ce442ee9da05882bb5a520cf760bf1b2ee571dd",
+ "version_transformers": "5.22.1"
+}

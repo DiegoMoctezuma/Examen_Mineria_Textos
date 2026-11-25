@@ -1,0 +1,135 @@
+{
+ "clave": "4e7e97b291e1c59f5518fffdab2af3751f53c3ac688074323d95fa52e97173fc",
+ "entidades_crudas": [
+  {
+   "confianza": 0.99159,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.78531,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 66,
+   "inicio": 53,
+   "texto": "aeropuerto de",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.968828,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 93,
+   "inicio": 67,
+   "texto": "Santa Lucía Felipe Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.851716,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 150,
+   "inicio": 125,
+   "texto": "aeropuerto Felipe Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.720711,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 179,
+   "inicio": 175,
+   "texto": "AMLO",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999483,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 327,
+   "inicio": 300,
+   "texto": "Andrés Manuel López Obrador",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999822,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 487,
+   "inicio": 463,
+   "texto": "Secretaría de la Defensa",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999907,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 574,
+   "inicio": 550,
+   "texto": "Secretaría de la Defensa",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999943,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 770,
+   "inicio": 746,
+   "texto": "Secretaría de la Defensa",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999968,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 926,
+   "inicio": 915,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999949,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 973,
+   "inicio": 962,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999865,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1000,
+   "inicio": 994,
+   "texto": "Toluca",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999961,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1059,
+   "inicio": 1048,
+   "texto": "Santa Lucía",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1606_1",
+ "segundos": 0.287,
+ "texto_sha256": "662b2e17084f6a708de0ac78b46b8ea32c15be6aa51e47a2aab704160fc10049",
+ "version_transformers": "5.22.1"
+}

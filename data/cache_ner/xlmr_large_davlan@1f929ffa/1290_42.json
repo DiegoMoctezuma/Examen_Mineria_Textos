@@ -1,0 +1,108 @@
+{
+ "clave": "67c7e64142bfcc8f2ff2ee5e97c32db6899f549baee228f701959db4f2a83602",
+ "entidades_crudas": [
+  {
+   "confianza": 0.99971,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 77,
+   "inicio": 63,
+   "texto": "Shaila Rosagel",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999926,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 106,
+   "inicio": 95,
+   "texto": "Grupo Healy",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999977,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 120,
+   "inicio": 108,
+   "texto": "El Imparcial",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997363,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 131,
+   "inicio": 125,
+   "texto": "Sonora",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999972,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 143,
+   "inicio": 133,
+   "texto": "La Crónica",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99986,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 156,
+   "inicio": 148,
+   "texto": "Mexicali",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999865,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 168,
+   "inicio": 160,
+   "texto": "Frontera",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999942,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 180,
+   "inicio": 173,
+   "texto": "Tijuana",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999982,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 273,
+   "inicio": 258,
+   "texto": "Baja California",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99989,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 284,
+   "inicio": 278,
+   "texto": "Sonora",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1290_42",
+ "segundos": 0.185,
+ "texto_sha256": "fba6fecd2cf43ea2d7c918ac3de2f32eb6fb02ceee75e24e58a9c9ef42d70657",
+ "version_transformers": "5.22.1"
+}

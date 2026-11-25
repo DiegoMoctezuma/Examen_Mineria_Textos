@@ -1,0 +1,108 @@
+{
+ "clave": "6b903f8a427a997e966bd686f5da74225af3e1d04f9bdb9162388141e0b08d8c",
+ "entidades_crudas": [
+  {
+   "confianza": 0.962397,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999932,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 181,
+   "inicio": 162,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999971,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 206,
+   "inicio": 200,
+   "texto": "Oaxaca",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999969,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 297,
+   "inicio": 291,
+   "texto": "Oaxaca",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999968,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 309,
+   "inicio": 303,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999854,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 332,
+   "inicio": 313,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.974201,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 798,
+   "inicio": 793,
+   "texto": "Rusia",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.914647,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 808,
+   "inicio": 801,
+   "texto": "Ucrania",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99995,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1071,
+   "inicio": 1052,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.9999,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1081,
+   "inicio": 1075,
+   "texto": "Oaxaca",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "549_11",
+ "segundos": 0.403,
+ "texto_sha256": "ca0b5e81bc59394df0beb8b2f74fca1d7d669873e62dda54511da5edb7474200",
+ "version_transformers": "5.22.1"
+}

@@ -1,0 +1,81 @@
+{
+ "clave": "5eff44328a32a9ca0316fe9dbd69bfd44f159944897014811ad53dd4742ca87b",
+ "entidades_crudas": [
+  {
+   "confianza": 0.958315,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999945,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 629,
+   "inicio": 620,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999971,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 657,
+   "inicio": 650,
+   "texto": "Tabasco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999964,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 795,
+   "inicio": 786,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999899,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 885,
+   "inicio": 877,
+   "texto": "Campeche",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999708,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 898,
+   "inicio": 891,
+   "texto": "Tabasco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999918,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 955,
+   "inicio": 946,
+   "texto": "Dos Bocas",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "2033_3",
+ "segundos": 0.303,
+ "texto_sha256": "102e894a08dbc99954295987144467c58f9f1cdf5590b886999b00e28e4bc7a5",
+ "version_transformers": "5.22.1"
+}

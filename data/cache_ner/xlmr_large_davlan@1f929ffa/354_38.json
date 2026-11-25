@@ -1,0 +1,126 @@
+{
+ "clave": "388187c692630dfceceea2006c1493a0201585245d5ac814ea15abcaf77cc112",
+ "entidades_crudas": [
+  {
+   "confianza": 0.994597,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 63,
+   "inicio": 43,
+   "texto": "Istmo de Tehuantepec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999791,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 249,
+   "inicio": 236,
+   "texto": "Coatzacoalcos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999622,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 263,
+   "inicio": 252,
+   "texto": "Salina Cruz",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.995882,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 297,
+   "inicio": 276,
+   "texto": "Ferrocarril del Istmo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999924,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 569,
+   "inicio": 568,
+   "texto": "o",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.996518,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 583,
+   "inicio": 569,
+   "texto": "céano Pacífico",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99996,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 600,
+   "inicio": 591,
+   "texto": "Atlántico",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999954,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 788,
+   "inicio": 784,
+   "texto": "Asia",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.995666,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 862,
+   "inicio": 848,
+   "texto": "Estados Unidos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999974,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 927,
+   "inicio": 921,
+   "texto": "Centro",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999888,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 940,
+   "inicio": 930,
+   "texto": "Sudamérica",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.887997,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1006,
+   "inicio": 986,
+   "texto": "Istmo de Tehuantepec",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "354_38",
+ "segundos": 0.358,
+ "texto_sha256": "fdc8f1767522270bc9c2bcb339d40902706c2fceadab62227c4225e5f27d3005",
+ "version_transformers": "5.22.1"
+}

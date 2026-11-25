@@ -1,0 +1,153 @@
+{
+ "clave": "8a31f78722ba845bc18d37162500cea20a5fa319aab608d95022488b481e64f5",
+ "entidades_crudas": [
+  {
+   "confianza": 0.996542,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 33,
+   "inicio": 0,
+   "texto": "SECRETARÍA DE LA DEFENSA NACIONAL",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.992924,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 41,
+   "inicio": 35,
+   "texto": "SEDENA",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.980141,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 147,
+   "inicio": 143,
+   "texto": "INAH",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.887829,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 710,
+   "inicio": 663,
+   "texto": "Corredor Interoceánico del Istmo de Tehuantepec",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999981,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 750,
+   "inicio": 730,
+   "texto": "Secretaría de Marina",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998652,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 912,
+   "inicio": 904,
+   "texto": "Palenque",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.557022,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 956,
+   "inicio": 953,
+   "texto": "dor",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.561035,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 970,
+   "inicio": 962,
+   "texto": "oceánico",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999754,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1041,
+   "inicio": 1033,
+   "texto": "Campeche",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998829,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1054,
+   "inicio": 1046,
+   "texto": "Progreso",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999363,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1065,
+   "inicio": 1059,
+   "texto": "Mérida",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999706,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1076,
+   "inicio": 1070,
+   "texto": "Cancún",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997967,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1090,
+   "inicio": 1082,
+   "texto": "Chetumal",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999925,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1237,
+   "inicio": 1218,
+   "texto": "Petróleos Mexicanos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999775,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1262,
+   "inicio": 1257,
+   "texto": "Pemex",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "504_31",
+ "segundos": 0.319,
+ "texto_sha256": "55f99a37af07d6f278a11c6f5769fe0b77d77557b11f4e406f854b3edc6cbc00",
+ "version_transformers": "5.22.1"
+}

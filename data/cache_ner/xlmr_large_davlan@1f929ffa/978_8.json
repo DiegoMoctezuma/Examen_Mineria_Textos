@@ -1,0 +1,144 @@
+{
+ "clave": "88dafee14f1b9f6c57aca38c74e76483498f2ee60cf94307d4cbd62630ec9cd3",
+ "entidades_crudas": [
+  {
+   "confianza": 0.997165,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1,
+   "inicio": 0,
+   "texto": "A",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.614973,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 27,
+   "inicio": 21,
+   "texto": "VILCHI",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999812,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 101,
+   "inicio": 98,
+   "texto": "CFE",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.867736,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 194,
+   "inicio": 180,
+   "texto": "Estados Unidos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998313,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 220,
+   "inicio": 217,
+   "texto": "CFE",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999911,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 368,
+   "inicio": 365,
+   "texto": "CFE",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999847,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 425,
+   "inicio": 411,
+   "texto": "Puerto Peñasco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999362,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 433,
+   "inicio": 427,
+   "texto": "Sonora",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999822,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 798,
+   "inicio": 791,
+   "texto": "Reforma",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.567727,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1026,
+   "inicio": 1019,
+   "texto": "Estados",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.694921,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1033,
+   "inicio": 1027,
+   "texto": "Unidos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999669,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1057,
+   "inicio": 1051,
+   "texto": "Estado",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.997625,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1072,
+   "inicio": 1058,
+   "texto": "Antony Blinken",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999988,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1195,
+   "inicio": 1184,
+   "texto": "Ken Salazar",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "978_8",
+ "segundos": 0.32,
+ "texto_sha256": "ca0a1065eb2017e480df44a9b957157cd5d0f7f265fba5dad4a196c152885403",
+ "version_transformers": "5.22.1"
+}

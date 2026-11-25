@@ -1,0 +1,27 @@
+{
+ "clave": "20d70c5ef0fa0c1a448ffa74c92b4ae85eac6c8d4ec14411e2643616e3a3c400",
+ "entidades_crudas": [
+  {
+   "confianza": 0.970743,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "2259_13",
+ "segundos": 0.302,
+ "texto_sha256": "e31552e137688df7e0bb9d14398f0f50d7326e90ba7a468d6f935202a1cf3519",
+ "version_transformers": "5.22.1"
+}

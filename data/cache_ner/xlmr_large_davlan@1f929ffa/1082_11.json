@@ -1,0 +1,54 @@
+{
+ "clave": "564cdad38288137f9c859f43fbe6f026a07f6032831721f999871219ba9c9a49",
+ "entidades_crudas": [
+  {
+   "confianza": 0.976827,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999982,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 227,
+   "inicio": 218,
+   "texto": "Los Cabos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999973,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 458,
+   "inicio": 443,
+   "texto": "Baja California",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999984,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 635,
+   "inicio": 616,
+   "texto": "Baja California Sur",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1082_11",
+ "segundos": 0.301,
+ "texto_sha256": "fadea080ae416291bf0c22c37ba55a3545bc29857fa359466013f924b50d9945",
+ "version_transformers": "5.22.1"
+}

@@ -1,0 +1,81 @@
+{
+ "clave": "922bab3678b437602bca8a4fa0a428b7ec8eaf8ea8492b30de7b92739b90a6a3",
+ "entidades_crudas": [
+  {
+   "confianza": 0.999756,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1,
+   "inicio": 0,
+   "texto": "J",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.985517,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 20,
+   "inicio": 1,
+   "texto": "ORGE ALCOCER VARELA",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999946,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 297,
+   "inicio": 286,
+   "texto": "Zoé Robledo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999935,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 617,
+   "inicio": 609,
+   "texto": "Acapulco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999739,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 637,
+   "inicio": 620,
+   "texto": "Coyuca de Benítez",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999958,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 871,
+   "inicio": 863,
+   "texto": "Acapulco",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999218,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 891,
+   "inicio": 874,
+   "texto": "Coyuca de Benítez",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "307_1",
+ "segundos": 0.457,
+ "texto_sha256": "23edbc5466ea6d9badec4f95b3cf7527334ee4abfe840fef43c0316127842647",
+ "version_transformers": "5.22.1"
+}

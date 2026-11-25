@@ -1,0 +1,72 @@
+{
+ "clave": "4f3828ab8acbf081c4007ffdf3874feb304bb922cf5257a272b776dd8b0a630e",
+ "entidades_crudas": [
+  {
+   "confianza": 0.974947,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999917,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 163,
+   "inicio": 139,
+   "texto": "Secretaría de la Defensa",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999349,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 315,
+   "inicio": 306,
+   "texto": "Guadalupe",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999911,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 321,
+   "inicio": 318,
+   "texto": "Cal",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.645429,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 323,
+   "inicio": 321,
+   "texto": "vo",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999109,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 984,
+   "inicio": 977,
+   "texto": "Ariadna",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "788_16",
+ "segundos": 0.311,
+ "texto_sha256": "6ab2ccc1b8675132818e8527fedabbabf773626c4c709adfc5c3f39f39c86067",
+ "version_transformers": "5.22.1"
+}

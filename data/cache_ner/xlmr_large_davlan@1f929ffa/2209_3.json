@@ -1,0 +1,81 @@
+{
+ "clave": "aabd4e456e1050e6ecb015adc57e5c4a147cc0958ea57bad4701c951a12555af",
+ "entidades_crudas": [
+  {
+   "confianza": 0.98177,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.885888,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 239,
+   "inicio": 233,
+   "texto": "Issste",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.561829,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 251,
+   "inicio": 245,
+   "texto": "Seguro",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.993503,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 261,
+   "inicio": 256,
+   "texto": "Pemex",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999242,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 285,
+   "inicio": 270,
+   "texto": "Fuerzas Armadas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998882,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1085,
+   "inicio": 1079,
+   "texto": "Europa",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.592406,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1118,
+   "inicio": 1112,
+   "texto": "Estado",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "2209_3",
+ "segundos": 0.282,
+ "texto_sha256": "2cb6cb519eb0189859794f30fee6018d9959429b316222e1a6b6a7a9bd794c3a",
+ "version_transformers": "5.22.1"
+}

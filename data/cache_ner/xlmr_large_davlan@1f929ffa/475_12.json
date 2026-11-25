@@ -1,0 +1,108 @@
+{
+ "clave": "e4b8b6c0ac6989f7c84c15488a700fe60dc727dbf5abc72cf209db191e81075c",
+ "entidades_crudas": [
+  {
+   "confianza": 0.994769,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 32,
+   "inicio": 0,
+   "texto": "LUIS CRESENCIO SANDOVAL GONZÁLEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99885,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 85,
+   "inicio": 69,
+   "texto": "Guardia Nacional",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999846,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 238,
+   "inicio": 222,
+   "texto": "Guardia Nacional",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999855,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 329,
+   "inicio": 313,
+   "texto": "Guardia Nacional",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999917,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 401,
+   "inicio": 393,
+   "texto": "Ejército",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999948,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 487,
+   "inicio": 481,
+   "texto": "Armada",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999908,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 574,
+   "inicio": 562,
+   "texto": "Fuerza Aérea",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999665,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 760,
+   "inicio": 744,
+   "texto": "Guardia Nacional",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998977,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1044,
+   "inicio": 1037,
+   "texto": "Guardia",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999763,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1142,
+   "inicio": 1126,
+   "texto": "Guardia Nacional",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "475_12",
+ "segundos": 0.312,
+ "texto_sha256": "51e305db3651d23b01aa44585d5bb7e7ccb64b894b55981803a0d21271fd90be",
+ "version_transformers": "5.22.1"
+}

@@ -1,0 +1,54 @@
+{
+ "clave": "de3146b70914e8eefa3cfc926a1a4bfb8c1cc969288299248cf49cb2f232673e",
+ "entidades_crudas": [
+  {
+   "confianza": 0.992308,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 31,
+   "inicio": 0,
+   "texto": "MIGUEL SANTIAGO REYES HERNÁNDEZ",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998761,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 810,
+   "inicio": 807,
+   "texto": "CFE",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99958,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 888,
+   "inicio": 885,
+   "texto": "CFE",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999842,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 1065,
+   "inicio": 1062,
+   "texto": "CFE",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "910_30",
+ "segundos": 0.297,
+ "texto_sha256": "123a061bd2f8c165b365def4a2fe1f8bc57411111d9cfa870f9921729c64da24",
+ "version_transformers": "5.22.1"
+}

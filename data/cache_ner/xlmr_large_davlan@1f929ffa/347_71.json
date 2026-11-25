@@ -1,0 +1,36 @@
+{
+ "clave": "3de2fe0f2318023985148085ba1198de29b38f57d592a2157f59b93ed27ea314",
+ "entidades_crudas": [
+  {
+   "confianza": 0.950728,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999911,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 756,
+   "inicio": 737,
+   "texto": "Banco del Bienestar",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "347_71",
+ "segundos": 0.263,
+ "texto_sha256": "ebdc0b3c66b1ef94bbf36af18ab1213000df5ccef62e30a6433376f80f3466c7",
+ "version_transformers": "5.22.1"
+}

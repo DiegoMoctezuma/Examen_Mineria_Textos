@@ -1,0 +1,117 @@
+{
+ "clave": "bb2baaec9267438cf35612a02dd3e9c6cae8536494bd9538fd280f5fe72e4d02",
+ "entidades_crudas": [
+  {
+   "confianza": 0.976006,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.890595,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 598,
+   "inicio": 587,
+   "texto": "Agricultura",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.987949,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 945,
+   "inicio": 937,
+   "texto": "Guerrero",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999793,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1016,
+   "inicio": 1009,
+   "texto": "Morelos",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999171,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1026,
+   "inicio": 1020,
+   "texto": "Puebla",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999399,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1034,
+   "inicio": 1028,
+   "texto": "Oaxaca",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999869,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1043,
+   "inicio": 1036,
+   "texto": "Chiapas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999814,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1054,
+   "inicio": 1045,
+   "texto": "Zacatecas",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999967,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1063,
+   "inicio": 1056,
+   "texto": "Durango",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.993037,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1072,
+   "inicio": 1065,
+   "texto": "Nayarit",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.998974,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1093,
+   "inicio": 1085,
+   "texto": "Veracruz",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "771_54",
+ "segundos": 0.317,
+ "texto_sha256": "3642b778e8ad46f144f0ef3e2fb76ba534abbb9c1c69f17366b3950b4c0fe11d",
+ "version_transformers": "5.22.1"
+}

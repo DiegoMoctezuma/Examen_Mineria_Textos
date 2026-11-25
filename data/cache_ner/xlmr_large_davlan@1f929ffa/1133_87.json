@@ -1,0 +1,36 @@
+{
+ "clave": "58888676f8764466fafcc1f5d11f2db6af131f6a8e8d241f9b4ba63101122c99",
+ "entidades_crudas": [
+  {
+   "confianza": 0.998912,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 11,
+   "inicio": 0,
+   "texto": "MELINA VEGA",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999596,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 144,
+   "inicio": 133,
+   "texto": "MELINA VEGA",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1133_87",
+ "segundos": 0.162,
+ "texto_sha256": "4808b3165cfc8f91af86887a49def9e10c8d64336864313e3961b040df75cc46",
+ "version_transformers": "5.22.1"
+}

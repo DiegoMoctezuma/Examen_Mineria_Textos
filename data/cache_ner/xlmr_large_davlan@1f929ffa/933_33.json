@@ -1,0 +1,45 @@
+{
+ "clave": "68be1055570ca5c1f0842a3be7eaf81c826f7630397e1a7de2e84a56fbf2d6db",
+ "entidades_crudas": [
+  {
+   "confianza": 0.999976,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 225,
+   "inicio": 193,
+   "texto": "Comisión Federal de Electricidad",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999928,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 264,
+   "inicio": 259,
+   "texto": "Pemex",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999918,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 276,
+   "inicio": 273,
+   "texto": "CFE",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "933_33",
+ "segundos": 0.136,
+ "texto_sha256": "7b0a547af1c704fc38e3e9f11f91ccdf06e495da52e5525e0847753738c7cb15",
+ "version_transformers": "5.22.1"
+}

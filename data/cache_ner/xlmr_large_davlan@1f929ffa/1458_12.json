@@ -1,0 +1,45 @@
+{
+ "clave": "91f48f232ff5715f27cdf87c62b4718f3a5b5355b47063b5c5850daa9fd7a342",
+ "entidades_crudas": [
+  {
+   "confianza": 0.996187,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.921396,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 331,
+   "inicio": 305,
+   "texto": "aeropuerto ‘Felipe Ángeles",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.821984,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 397,
+   "inicio": 383,
+   "texto": "de Tehuantepec",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1458_12",
+ "segundos": 0.158,
+ "texto_sha256": "09a9be32a584b0ff2c9747b2129fcc89027fcdfe9808728873cf9a9347679842",
+ "version_transformers": "5.22.1"
+}

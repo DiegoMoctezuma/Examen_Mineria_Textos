@@ -1,0 +1,44 @@
+{
+  "modelo": "Davlan/xlm-roberta-large-ner-hrl",
+  "slug": "xlmr_large_davlan",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "reglas_fecha_v2_vigentes": true,
+  "version_extractor": "reglas-fecha-v2@51f894a+xlmr_large_davlan+posproceso1",
+  "pasajes": 161,
+  "pares_consulta_pasaje": 162,
+  "pasajes_por_origen": {
+    "top10": 149,
+    "v2_a": 10,
+    "v2_b": 2
+  },
+  "filas_entidades": 1350,
+  "entidades_unicas": 1344,
+  "unicas_por_tipo_y_metodo": {
+    "FECHA": {
+      "regla": 52
+    },
+    "LOC": {
+      "ambos": 329,
+      "modelo": 153,
+      "regla": 106
+    },
+    "MONTO": {
+      "regla": 47
+    },
+    "ORG": {
+      "modelo": 192,
+      "ambos": 183,
+      "regla": 36
+    },
+    "PER": {
+      "ambos": 116,
+      "modelo": 115,
+      "regla": 15
+    }
+  },
+  "solapes_parciales": {
+    "solape_parcial": 82,
+    "tipo_distinto": 16
+  },
+  "segundos": 0.82
+}

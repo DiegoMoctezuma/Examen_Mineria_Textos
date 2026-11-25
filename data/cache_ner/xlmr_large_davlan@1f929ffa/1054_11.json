@@ -1,0 +1,36 @@
+{
+ "clave": "2d7059176971d362849e0e63f69349da3dff5707653ffbd0cd9366dd196abb06",
+ "entidades_crudas": [
+  {
+   "confianza": 0.958394,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.852836,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 662,
+   "inicio": 648,
+   "texto": "IMSS-Bienestar",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1054_11",
+ "segundos": 0.291,
+ "texto_sha256": "9497a2ecdf4323c04905f2b8d24f09a8175d2094eeeb130870f74822de12b2e5",
+ "version_transformers": "5.22.1"
+}

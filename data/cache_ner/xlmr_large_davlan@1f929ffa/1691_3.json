@@ -1,0 +1,45 @@
+{
+ "clave": "ec7358f4becb83927d573e6a299182095b8cc6399095c553e79bd25b44ca1e8f",
+ "entidades_crudas": [
+  {
+   "confianza": 0.972395,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999219,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 468,
+   "inicio": 416,
+   "texto": "Organización Campesina Independiente Emiliano Zapata",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999694,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 1000,
+   "inicio": 993,
+   "texto": "Xagacía",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "1691_3",
+ "segundos": 0.31,
+ "texto_sha256": "23e840a79c14c42330d0f9920e3bed9906721fc2949cb7d1eeaad0eb89b13064",
+ "version_transformers": "5.22.1"
+}

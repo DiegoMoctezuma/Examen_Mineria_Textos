@@ -1,0 +1,63 @@
+{
+ "clave": "54a59f3f781b4e345ea33d7529eb231d65df6c9ff9e7ea49dd3fea0fe006c6c4",
+ "entidades_crudas": [
+  {
+   "confianza": 0.974912,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999895,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 287,
+   "inicio": 274,
+   "texto": "Ricardo Mejía",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999949,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 323,
+   "inicio": 311,
+   "texto": "Diego Prieto",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999953,
+   "cortada": false,
+   "etiqueta": "ORG",
+   "fin": 383,
+   "inicio": 338,
+   "texto": "Instituto Nacional de Antropología e Historia",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.99949,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 1029,
+   "inicio": 1022,
+   "texto": "Ricardo",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "578_0",
+ "segundos": 0.317,
+ "texto_sha256": "0723031e16b1090fd975539e80c4b8c8df317b315b068e08dfaf912784fa6528",
+ "version_transformers": "5.22.1"
+}

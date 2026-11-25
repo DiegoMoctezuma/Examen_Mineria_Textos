@@ -1,0 +1,12 @@
+{
+  "modelo": "Davlan/xlm-roberta-large-ner-hrl",
+  "slug": "xlmr_large_davlan",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "pasajes": 161,
+  "inferidos": 161,
+  "cacheados": 0,
+  "segundos_carga": 4.47,
+  "segundos_inferencia": 50.48,
+  "ventanas": 161,
+  "segundos_totales": 55.26
+}

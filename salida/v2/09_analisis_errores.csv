@@ -1,0 +1,104 @@
+passage_id,tipo,texto_gold,texto_pred,inicio,fin,metodo,categoria,fuente,contexto,error
+1122_3,ORG,Tecate,Tecate,95,101,modelo,tipo,modelo,"én con el programa de la frontera, porque aquí en [Tecate] los empresarios tienen descuentos en el pago de i",FN
+1122_3,ORG,Tecate,Tecate,275,281,modelo,tipo,modelo,Impuesto Sobre la Renta al 20 por ciento. Aquí en [Tecate] desde que llegamos al gobierno aumentó el salario,FN
+1122_3,LOC,últimos 30 años,,1158,1173,,omision,,"ar, de ganar en poder adquisitivo, perdía, en los [últimos 30 años] se perdieron alrededor del 70",FN
+1122_3,LOC,Tecate,Tecate,95,101,modelo,tipo,modelo,"én con el programa de la frontera, porque aquí en [Tecate] los empresarios tienen descuentos en el pago de i",FP
+1122_3,LOC,Tecate,Tecate,275,281,modelo,tipo,modelo,Impuesto Sobre la Renta al 20 por ciento. Aquí en [Tecate] desde que llegamos al gobierno aumentó el salario,FP
+1188_80,FECHA,domingo 28 de marzo,28 de marzo,16,35,regla,frontera,regex,VOZ MUJER: Este [domingo 28 de marzo] México recibió un millón y medio de dosis de la v,FN
+1188_80,FECHA,sábado 27 de marzo,27 de marzo,438,456,regla,frontera,regex,"tica. Estas vacunas, junto con las recibidas este [sábado 27 de marzo] de la farmacéutica CanSino Biologics, suman un mi",FN
+1188_80,ORG,,VOZ MUJER,0,9,modelo,en_marca,modelo,[VOZ MUJER]: Este domingo 28 de marzo México recibió un milló,FP
+1188_80,ORG,,VOZ MUJER,0,9,modelo,espuria:modelo,modelo,[VOZ MUJER]: Este domingo 28 de marzo México recibió un milló,FP
+1188_80,FECHA,domingo 28 de marzo,28 de marzo,24,35,regla,frontera,regex,VOZ MUJER: Este domingo [28 de marzo] México recibió un millón y medio de dosis de la v,FP
+1188_80,ORG,Estados Unidos,Estados Unidos,282,296,modelo,tipo,modelo,"ntes de México, Andrés Manuel López Obrador, y de [Estados Unidos], Joseph Biden mediante el cual nuestro país recib",FP
+1188_80,FECHA,sábado 27 de marzo,27 de marzo,445,456,regla,frontera,regex,"stas vacunas, junto con las recibidas este sábado [27 de marzo] de la farmacéutica CanSino Biologics, suman un mi",FP
+1188_80,ORG,Pfizer-BioNTech,Pfizer,680,686,regla,frontera,gazetteer,"5 dosis de vacunas envasadas de las farmacéuticas [Pfizer]-BioNTech, AstraZeneca, SinoVac, Sputnik V, del Ce",FP
+1188_80,ORG,Pfizer-BioNTech,Pfizer,680,686,regla,frontera:entidad_partida,gazetteer,"5 dosis de vacunas envasadas de las farmacéuticas [Pfizer]-BioNTech, AstraZeneca, SinoVac, Sputnik V, del Ce",FP
+1188_80,ORG,Pfizer-BioNTech,BioNTech,687,695,regla,frontera,gazetteer," de vacunas envasadas de las farmacéuticas Pfizer-[BioNTech], AstraZeneca, SinoVac, Sputnik V, del Centro Naci",FP
+1188_80,ORG,Pfizer-BioNTech,BioNTech,687,695,regla,frontera:entidad_partida,gazetteer," de vacunas envasadas de las farmacéuticas Pfizer-[BioNTech], AstraZeneca, SinoVac, Sputnik V, del Centro Naci",FP
+1188_80,ORG,Centro Nacional de Investigación de Epidemiología e Microbiología Gamaleya,Gamaleya,800,808,regla,frontera,gazetteer,"de Investigación de Epidemiología e Microbiología [Gamaleya] y de CanSino Biologics. Adicionalmente, fueron en",FP
+1188_80,ORG,Centro Nacional de Investigación de Epidemiología e Microbiología Gamaleya,Gamaleya,800,808,regla,frontera:entidad_partida,gazetteer,"de Investigación de Epidemiología e Microbiología [Gamaleya] y de CanSino Biologics. Adicionalmente, fueron en",FP
+1777_18,LOC,aeropuerto de Santa Lucía,Santa Lucía,436,461,ambos,frontera,gazetteer|modelo,"nta Lucía, así vamos en la construcción del nuevo [aeropuerto de Santa Lucía]. (PROYECCIÓN DE VIDEO ‘AVANCE EN LA CONSTRUCCIÓN ",FN
+1777_18,LOC,AEROPUERTO CIVIL/MILITAR GENERAL FELIPE ÁNGELES,IPE ÁNGELES,515,562,modelo,frontera,modelo,"ROYECCIÓN DE VIDEO ‘AVANCE EN LA CONSTRUCCIÓN DEL [AEROPUERTO CIVIL/MILITAR GENERAL FELIPE ÁNGELES], SU INTERCONEXIÓN CON EL A.I.C.M. Y REUBICACIÓN D",FN
+1777_18,LOC,A.I.C.M.,,588,596,,omision,,"R GENERAL FELIPE ÁNGELES, SU INTERCONEXIÓN CON EL [A.I.C.M.] Y REUBICACIÓN DE INSTALACIONES MILITARES’)",FN
+1777_18,LOC,aeropuerto de Santa Lucía,Santa Lucía,450,461,ambos,frontera,gazetteer|modelo, vamos en la construcción del nuevo aeropuerto de [Santa Lucía]. (PROYECCIÓN DE VIDEO ‘AVANCE EN LA CONSTRUCCIÓN ,FP
+1777_18,LOC,AEROPUERTO CIVIL/MILITAR GENERAL FELIPE ÁNGELES,IPE ÁNGELES,551,562,modelo,frontera,modelo,"STRUCCIÓN DEL AEROPUERTO CIVIL/MILITAR GENERAL FEL[IPE ÁNGELES], SU INTERCONEXIÓN CON EL A.I.C.M. Y REUBICACIÓN D",FP
+1812_0,LOC,aeropuerto de la Ciudad de México,Ciudad de México,449,482,ambos,frontera,gazetteer|modelo,ta manera el problema de la saturación del actual [aeropuerto de la Ciudad de México]. Va a seguir funcionando el actual aeropuerto de ,FN
+1812_0,LOC,aeropuerto de la Ciudad de México,Ciudad de México,518,551,ambos,frontera,gazetteer|modelo,udad de México. Va a seguir funcionando el actual [aeropuerto de la Ciudad de México] y al mismo tiempo se va a crear este aeropuerto m,FN
+1812_0,LOC,lago de Texcoco,de Texcoco,771,786,modelo,frontera,modelo,iba a costar la construcción del aeropuerto en el [lago de Texcoco]. Hoy es un día muy importante. La política es un ,FN
+1812_0,LOC,lago de Texcoco,de Texcoco,771,786,modelo,frontera:entidad_partida,modelo,iba a costar la construcción del aeropuerto en el [lago de Texcoco]. Hoy es un día muy importante. La política es un ,FN
+1812_0,LOC,Aeropuerto Internacional 'General Felipe Ángeles',Aeropuerto Internacional 'General Felipe Ángeles,920,969,modelo,frontera,modelo,tina. Anunciamos el inicio de la construcción del [Aeropuerto Internacional 'General Felipe Ángeles'] en la Base Aérea Militar Santa Lucía en el Estado,FN
+1812_0,LOC,aeropuerto de la Ciudad de México,Ciudad de México,1109,1142,ambos,frontera,gazetteer|modelo,ionamiento. Resolveremos la saturación del actual [aeropuerto de la Ciudad de México] y rehabilitaremos el de Toluca.,FN
+1812_0,LOC,Base Aérea Militar de Santa Lucía,Santa Lucía,196,207,regla,frontera,gazetteer,"mos a estar más tarde en la Base Aérea Militar de [Santa Lucía], porque vamos a iniciar los trabajos para la cons",FP
+1812_0,LOC,Base Aérea Militar de Santa Lucía,Santa Lucía,196,207,regla,frontera:entidad_partida,gazetteer,"mos a estar más tarde en la Base Aérea Militar de [Santa Lucía], porque vamos a iniciar los trabajos para la cons",FP
+1812_0,LOC,Base Aérea Militar de Santa Lucía,Santa Lucía,326,337,regla,frontera,gazetteer,erto ‘Felipe Ángeles’ en la Base Aérea Militar de [Santa Lucía]. Esto es todo un acontecimiento porque vamos a re,FP
+1812_0,LOC,Base Aérea Militar de Santa Lucía,Santa Lucía,326,337,regla,frontera:entidad_partida,gazetteer,erto ‘Felipe Ángeles’ en la Base Aérea Militar de [Santa Lucía]. Esto es todo un acontecimiento porque vamos a re,FP
+1812_0,LOC,aeropuerto de la Ciudad de México,Ciudad de México,466,482,ambos,frontera,gazetteer|modelo,lema de la saturación del actual aeropuerto de la [Ciudad de México]. Va a seguir funcionando el actual aeropuerto de ,FP
+1812_0,LOC,aeropuerto de la Ciudad de México,Ciudad de México,535,551,ambos,frontera,gazetteer|modelo,a a seguir funcionando el actual aeropuerto de la [Ciudad de México] y al mismo tiempo se va a crear este aeropuerto m,FP
+1812_0,LOC,lago de Texcoco,de Texcoco,776,786,modelo,frontera,modelo, costar la construcción del aeropuerto en el lago [de Texcoco]. Hoy es un día muy importante. La política es un ,FP
+1812_0,LOC,lago de Texcoco,de Texcoco,776,786,modelo,frontera:entidad_partida,modelo, costar la construcción del aeropuerto en el lago [de Texcoco]. Hoy es un día muy importante. La política es un ,FP
+1812_0,LOC,lago de Texcoco,Texcoco,779,786,regla,frontera,gazetteer,star la construcción del aeropuerto en el lago de [Texcoco]. Hoy es un día muy importante. La política es un ,FP
+1812_0,LOC,lago de Texcoco,Texcoco,779,786,regla,frontera:entidad_partida,gazetteer,star la construcción del aeropuerto en el lago de [Texcoco]. Hoy es un día muy importante. La política es un ,FP
+1812_0,LOC,Aeropuerto Internacional 'General Felipe Ángeles',Aeropuerto Internacional 'General Felipe Ángeles,920,968,modelo,frontera,modelo,tina. Anunciamos el inicio de la construcción del [Aeropuerto Internacional 'General Felipe Ángeles]' en la Base Aérea Militar Santa Lucía en el Estad,FP
+1812_0,LOC,Base Aérea Militar Santa Lucía,Santa Lucía,995,1006,regla,frontera,gazetteer,'General Felipe Ángeles' en la Base Aérea Militar [Santa Lucía] en el Estado de México para que en 2021 esté en f,FP
+1812_0,LOC,Base Aérea Militar Santa Lucía,Santa Lucía,995,1006,regla,frontera:entidad_partida,gazetteer,'General Felipe Ángeles' en la Base Aérea Militar [Santa Lucía] en el Estado de México para que en 2021 esté en f,FP
+1812_0,ORG,Estado de México,Estado de México,1013,1029,modelo,tipo,modelo,geles' en la Base Aérea Militar Santa Lucía en el [Estado de México] para que en 2021 esté en funcionamiento. Resolver,FP
+1812_0,LOC,aeropuerto de la Ciudad de México,Ciudad de México,1126,1142,ambos,frontera,gazetteer|modelo,veremos la saturación del actual aeropuerto de la [Ciudad de México] y rehabilitaremos el de Toluca.,FP
+1949_72,PER,MARCERO EBRARD CASAUBON,MARC,0,4,modelo,frontera,modelo,"[MARC]ERO EBRARD CASAUBON: Estaría muy bien. Bueno, ya h",FP
+1949_72,PER,MARCERO EBRARD CASAUBON,MARC,0,4,modelo,frontera:entidad_partida,modelo,"[MARC]ERO EBRARD CASAUBON: Estaría muy bien. Bueno, ya h",FP
+1949_72,PER,MARCERO EBRARD CASAUBON,MARC,0,4,modelo,en_marca,modelo,"[MARC]ERO EBRARD CASAUBON: Estaría muy bien. Bueno, ya h",FP
+1949_72,PER,MARCERO EBRARD CASAUBON,EBRARD CASAUBON,8,23,modelo,frontera,modelo,"MARCERO [EBRARD CASAUBON]: Estaría muy bien. Bueno, ya hay algunos, pero no",FP
+1949_72,PER,MARCERO EBRARD CASAUBON,EBRARD CASAUBON,8,23,modelo,frontera:entidad_partida,modelo,"MARCERO [EBRARD CASAUBON]: Estaría muy bien. Bueno, ya hay algunos, pero no",FP
+1949_72,PER,MARCERO EBRARD CASAUBON,EBRARD CASAUBON,8,23,modelo,en_marca,modelo,"MARCERO [EBRARD CASAUBON]: Estaría muy bien. Bueno, ya hay algunos, pero no",FP
+1949_72,ORG,México,México,278,284,modelo,tipo,modelo,"os, pero lo tenemos que traducir en acciones como [México] lo está haciendo ahorita. México va a invertir 10",FP
+1949_72,ORG,Estados Unidos,Estados Unidos,453,467,modelo,tipo,modelo,"desde luego mucho más que lo que está invirtiendo [Estados Unidos], que retiró los apoyos. Entonces, lo que estamos ",FP
+2209_3,ORG,,Seguro,245,251,modelo,espuria:modelo,modelo,"ntregaba a pensionados, jubilados del Issste, del [Seguro], de Pemex, de las Fuerzas Armadas. Ahora todos lo",FP
+2209_3,ORG,,Estado,1112,1118,modelo,espuria:modelo,modelo,"muchos países de Europa, es lo que se conoce como [Estado] de bienestar, que al llegar a una determinad",FP
+2283_0,MONTO,60 y 80 mil millones de pesos,80 mil millones de pesos,830,859,regla,frontera,regex,", que es un problema grave, porque se roban entre [60 y 80 mil millones de pesos] al año de combustible. Y no sólo es el huachicol,",FN
+2283_0,MONTO,60 y 80 mil millones de pesos,80 mil millones de pesos,835,859,regla,frontera,regex," es un problema grave, porque se roban entre 60 y [80 mil millones de pesos] al año de combustible. Y no sólo es el huachicol,",FP
+326_25,ORG,DIRECCIÓN GENERAL DE INGENIEROS DE LA SECRETARÍA DE LA DEFENSA NACIONAL,DIRECCIÓN GENERAL DE INGENIEROS,0,71,modelo,frontera,modelo,"[DIRECCIÓN GENERAL DE INGENIEROS DE LA SECRETARÍA DE LA DEFENSA NACIONAL] (SEDENA): mayoritaria Tren Maya, cuya misión prin",FN
+326_25,ORG,DIRECCIÓN GENERAL DE INGENIEROS DE LA SECRETARÍA DE LA DEFENSA NACIONAL,DIRECCIÓN GENERAL DE INGENIEROS,0,71,modelo,frontera:entidad_partida,modelo,"[DIRECCIÓN GENERAL DE INGENIEROS DE LA SECRETARÍA DE LA DEFENSA NACIONAL] (SEDENA): mayoritaria Tren Maya, cuya misión prin",FN
+326_25,ORG,DIRECCIÓN GENERAL DE INGENIEROS DE LA SECRETARÍA DE LA DEFENSA NACIONAL,DIRECCIÓN GENERAL DE INGENIEROS,0,71,modelo,en_marca,modelo,"[DIRECCIÓN GENERAL DE INGENIEROS DE LA SECRETARÍA DE LA DEFENSA NACIONAL] (SEDENA): mayoritaria Tren Maya, cuya misión prin",FN
+326_25,ORG,DIRECCIÓN GENERAL DE INGENIEROS DE LA SECRETARÍA DE LA DEFENSA NACIONAL,DIRECCIÓN GENERAL DE INGENIEROS,0,31,modelo,frontera,modelo,[DIRECCIÓN GENERAL DE INGENIEROS] DE LA SECRETARÍA DE LA DEFENSA NACIONAL (SEDENA):,FP
+326_25,ORG,DIRECCIÓN GENERAL DE INGENIEROS DE LA SECRETARÍA DE LA DEFENSA NACIONAL,DIRECCIÓN GENERAL DE INGENIEROS,0,31,modelo,frontera:entidad_partida,modelo,[DIRECCIÓN GENERAL DE INGENIEROS] DE LA SECRETARÍA DE LA DEFENSA NACIONAL (SEDENA):,FP
+326_25,ORG,DIRECCIÓN GENERAL DE INGENIEROS DE LA SECRETARÍA DE LA DEFENSA NACIONAL,DIRECCIÓN GENERAL DE INGENIEROS,0,31,modelo,en_marca,modelo,[DIRECCIÓN GENERAL DE INGENIEROS] DE LA SECRETARÍA DE LA DEFENSA NACIONAL (SEDENA):,FP
+326_25,ORG,DIRECCIÓN GENERAL DE INGENIEROS DE LA SECRETARÍA DE LA DEFENSA NACIONAL,SECRETARÍA DE LA DEFENSA NACIONAL,38,71,ambos,frontera,gazetteer|modelo,"DIRECCIÓN GENERAL DE INGENIEROS DE LA [SECRETARÍA DE LA DEFENSA NACIONAL] (SEDENA): mayoritaria Tren Maya, cuya misión prin",FP
+326_25,ORG,DIRECCIÓN GENERAL DE INGENIEROS DE LA SECRETARÍA DE LA DEFENSA NACIONAL,SECRETARÍA DE LA DEFENSA NACIONAL,38,71,ambos,frontera:entidad_partida,gazetteer|modelo,"DIRECCIÓN GENERAL DE INGENIEROS DE LA [SECRETARÍA DE LA DEFENSA NACIONAL] (SEDENA): mayoritaria Tren Maya, cuya misión prin",FP
+326_25,ORG,DIRECCIÓN GENERAL DE INGENIEROS DE LA SECRETARÍA DE LA DEFENSA NACIONAL,SECRETARÍA DE LA DEFENSA NACIONAL,38,71,ambos,en_marca,gazetteer|modelo,"DIRECCIÓN GENERAL DE INGENIEROS DE LA [SECRETARÍA DE LA DEFENSA NACIONAL] (SEDENA): mayoritaria Tren Maya, cuya misión prin",FP
+354_38,LOC,Istmo,Ferrocarril del Istmo,292,297,modelo,frontera,modelo,coalcos y Salina Cruz mediante el Ferrocarril del [Istmo] para facilitar el traslado de personas y mercancí,FN
+354_38,LOC,Línea Z,,1205,1212,,omision,,". La primera línea que reinicia operaciones es la [Línea Z]. Para ello, se rehabilitaron 227 kilómetros de ví",FN
+354_38,LOC,Istmo,Ferrocarril del Istmo,276,297,modelo,frontera,modelo,uertos de Coatzacoalcos y Salina Cruz mediante el [Ferrocarril del Istmo] para facilitar el traslado de personas y mercancí,FP
+354_38,LOC,,Centro,921,927,modelo,espuria:modelo,modelo,"necta, además, con las navegaciones que parten de [Centro] y Sudamérica hacia este mismo destino. El Ferroca",FP
+487_29,FECHA,próximos cinco años,,405,424,,omision,,omo para el futuro mantenimiento del tramo de los [próximos cinco años]. La obra ferroviaria que conocemos como el Tren M,FN
+487_29,FECHA,próximos cinco años,,990,1009,,omision,,"una base de mantenimiento muy importante para los [próximos cinco años], se tuvieron que fabricar 424 mil 760 mil durmien",FN
+504_31,ORG,Corredor Interoceánico del Istmo de Tehuantepec,Corredor Interoceánico del Istmo de Tehuantepec,663,710,modelo,tipo,modelo," también participa en un esfuerzo conjunto con el [Corredor Interoceánico del Istmo de Tehuantepec], que administra la Secretaría de Marina. La suma ",FP
+504_31,ORG,Corredor Interoceánico del Istmo de Tehuantepec,Corredor Interoceánico del Istmo de Tehuantepec,663,710,modelo,tipo:obra_LOC_vs_ORG,modelo," también participa en un esfuerzo conjunto con el [Corredor Interoceánico del Istmo de Tehuantepec], que administra la Secretaría de Marina. La suma ",FP
+564_101,LOC,refinería Dos Bocas,Dos Bocas,108,127,ambos,frontera,gazetteer|modelo,e comentó que hay 50 auditorías para lo que es la [refinería Dos Bocas]. Esto pone a Dos Bocas como una obra bastante obs,FN
+564_101,LOC,refinería Dos Bocas,Dos Bocas,118,127,ambos,frontera,gazetteer|modelo,que hay 50 auditorías para lo que es la refinería [Dos Bocas]. Esto pone a Dos Bocas como una obra bastante obs,FP
+630_73,ORG,Bancos del Bienestar,,202,222,,omision,,"os de inaugurar y de poner en operación todos los [Bancos del Bienestar] en la Ciudad de México, son más de 60 ubicados es",FN
+630_73,ORG,Bancos del Bienestar,,341,361,,omision,,e da gusto porque me dicen que en donde están los [Bancos del Bienestar] hay gente y hay colas. Inauguré uno con la jefa d,FN
+630_73,ORG,Bancos del Bienestar,del Bienestar,724,744,modelo,frontera,modelo,"ios, los estudiantes becarios, y para eso son los [Bancos del Bienestar], ya están operando. Y este año vamos a tener como",FN
+630_73,FECHA,,noviembre,117,126,regla,espuria:regex,regex,"tantas sucursales como el Banco del Bienestar. En [noviembre], por ejemplo, ya terminamos de inaugurar y de pon",FP
+630_73,ORG,,Gobierno,413,421,modelo,espuria:modelo,modelo,"ay gente y hay colas. Inauguré uno con la jefa de [Gobierno], Claudia Sheinbaum, con el general Sandoval, ahí ",FP
+630_73,ORG,Bancos del Bienestar,del Bienestar,731,744,modelo,frontera,modelo,"s estudiantes becarios, y para eso son los Bancos [del Bienestar], ya están operando. Y este año vamos a tener como",FP
+686_14,MONTO,Cuatrocientos mil millones de pesos,mil millones de pesos,356,391,regla,frontera,regex,"se está dispersando ya en el Banco del Bienestar? [Cuatrocientos mil millones de pesos], para el 2024 van a ser cerca de 600 mil millones",FN
+686_14,MONTO,Cuatrocientos mil millones de pesos,mil millones de pesos,370,391,regla,frontera,regex,"sando ya en el Banco del Bienestar? Cuatrocientos [mil millones de pesos], para el 2024 van a ser cerca de 600 mil millones",FP
+776_72,ORG,gobierno federal,,68,84,,omision,,"MANUEL LÓPEZ OBRADOR: Por lo general es apoyo del [gobierno federal]. En esta región hay muchos, miles de campesinos e",FN
+788_15,ORG,Sembrando Vida,,162,176,,omision,,"do que tenga un programa de reforestación como el [Sembrando Vida]? No hay. Con todo respeto a nuestros vecinos, que",FN
+788_15,ORG,Sembrando Vida,,367,381,,omision,,"ares al año, que es lo que se destina al programa [Sembrando Vida]. No, no tienen un programa así en Estados Unidos,",FN
+788_15,ORG,Sembrando Vida,,524,538,,omision,,". Es un orgullo. Entonces, por eso, este programa [Sembrando Vida] hay que fortalecerlo. Nos ha ayudado mucho la Sec",FN
+788_15,ORG,Estados Unidos,Estados Unidos,259,273,modelo,tipo,modelo,"tros vecinos, que somos muy amigos los vecinos de [Estados Unidos], no invierten ellos mil 300 millones de dólares a",FP
+788_15,ORG,Estados Unidos,Estados Unidos,416,430,modelo,tipo,modelo," Sembrando Vida. No, no tienen un programa así en [Estados Unidos], ni en Canadá, ni en ningún lugar de Europa. Es u",FP
+798_5,ORG,Jóvenes Construyendo el Futuro,,969,999,,omision,,"compañero encargado de ese programa, bueno, el de [Jóvenes Construyendo el Futuro], que es el compañero Marath Baruch Bolaños López,",FN
+798_5,ORG,Jóvenes Construyendo el Futuro,Jóvenes Construyendo el Futur,1107,1137,modelo,frontera,modelo,"ero que se pare para que lo conozcan, él es el de [Jóvenes Construyendo el Futuro]. Y el que maneja las becas para estudiantes, Abra",FN
+798_5,ORG,Jóvenes Construyendo el Futuro,Jóvenes Construyendo el Futur,1107,1136,modelo,frontera,modelo,"ero que se pare para que lo conozcan, él es el de [Jóvenes Construyendo el Futur]o. Y el que maneja las becas para estudiantes, Abr",FP
+928_1,LOC,aeropuerto ‘Felipe Ángeles’,Felipe Ángeles,1030,1057,modelo,frontera,modelo,"ción falsa, indicando que la torre de control del [aeropuerto ‘Felipe Ángeles’] estaba chueca, que estaba inclinada como la Torre",FN
+928_1,LOC,aeropuerto ‘Felipe ‘Ángeles’,Felipe ‘Ángeles,1151,1179,modelo,frontera,modelo," Torre de Pisa, en Italia. Es falso, la torre del [aeropuerto ‘Felipe ‘Ángeles’] fue construida bajo altos estándares",FN
+928_1,PER,ANA ELIZABETH GARCÍA VILCHIS,A,0,1,modelo,frontera,modelo,"[A]NA ELIZABETH GARCÍA VILCHIS: Señor presidente, con",FP
+928_1,PER,ANA ELIZABETH GARCÍA VILCHIS,A,0,1,modelo,frontera:entidad_partida,modelo,"[A]NA ELIZABETH GARCÍA VILCHIS: Señor presidente, con",FP
+928_1,PER,ANA ELIZABETH GARCÍA VILCHIS,A,0,1,modelo,en_marca,modelo,"[A]NA ELIZABETH GARCÍA VILCHIS: Señor presidente, con",FP
+928_1,LOC,aeropuerto ‘Felipe Ángeles’,Felipe Ángeles,1042,1056,modelo,frontera,modelo,"indicando que la torre de control del aeropuerto ‘[Felipe Ángeles]’ estaba chueca, que estaba inclinada como la Torr",FP
+928_1,LOC,aeropuerto ‘Felipe ‘Ángeles’,Felipe ‘Ángeles,1163,1178,modelo,frontera,modelo,"sa, en Italia. Es falso, la torre del aeropuerto ‘[Felipe ‘Ángeles]’ fue construida bajo altos estándares",FP
+982_72,LOC,Istmo de Tehuantepec,Ist,75,78,modelo,frontera,modelo,se acaba de referir a lo que tiene que ver con el [Ist]mo de Tehuantepec. Preguntarle si ya tiene program,FP
+982_72,LOC,Istmo de Tehuantepec,Ist,75,78,modelo,frontera:entidad_partida,modelo,se acaba de referir a lo que tiene que ver con el [Ist]mo de Tehuantepec. Preguntarle si ya tiene program,FP
+982_72,LOC,Istmo de Tehuantepec,Tehuantepec,84,95,modelo,frontera,modelo,de referir a lo que tiene que ver con el Istmo de [Tehuantepec]. Preguntarle si ya tiene programado este viaje de,FP
+982_72,LOC,Istmo de Tehuantepec,Tehuantepec,84,95,modelo,frontera:entidad_partida,modelo,de referir a lo que tiene que ver con el Istmo de [Tehuantepec]. Preguntarle si ya tiene programado este viaje de,FP

@@ -1,0 +1,45 @@
+{
+ "clave": "cfd8ddb4de94c17f929862e36c9be9a5d17defa312acec187e7affe223e482e2",
+ "entidades_crudas": [
+  {
+   "confianza": 0.982316,
+   "cortada": false,
+   "etiqueta": "PER",
+   "fin": 38,
+   "inicio": 11,
+   "texto": "ANDRÉS MANUEL LÓPEZ OBRADOR",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999802,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 49,
+   "inicio": 43,
+   "texto": "México",
+   "ventana": 0
+  },
+  {
+   "confianza": 0.999866,
+   "cortada": false,
+   "etiqueta": "LOC",
+   "fin": 346,
+   "inicio": 340,
+   "texto": "Colima",
+   "ventana": 0
+  }
+ ],
+ "parametros": {
+  "aggregation_strategy": "simple",
+  "max_length_real": 510,
+  "repo_id": "Davlan/xlm-roberta-large-ner-hrl",
+  "revision": "1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "solape": 64,
+  "tokenizador": "Davlan/xlm-roberta-large-ner-hrl@1f929ffad9b7353f9c84b0b3f579fc3bb0b3685e",
+  "ventana": 480
+ },
+ "passage_id": "2030_1",
+ "segundos": 0.286,
+ "texto_sha256": "3562e585825ebbf5c6fae76d4a2e9e9211e966f0ae442bc11d0059eba214def7",
+ "version_transformers": "5.22.1"
+}
