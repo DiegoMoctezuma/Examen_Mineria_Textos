@@ -195,13 +195,15 @@ def cargar_pasajes(ids: set[str] | None = None, r: Path | None = None) -> pd.Dat
 
 def cifras(r: Path | None = None, version: str | None = None) -> dict:
     """Cifras que la demo cita, leídas de los archivos oficiales (nunca escritas a mano):
-    MAP y P@10 por modelo con filtro, F1 y recall de la extracción y datos del corpus. Con datos
+    MAP y P@10 por modelo con filtro (P@10 también por consulta), F1 y recall de la extracción y datos del corpus. Con datos
     v2, las de `salida/v2/`."""
     r = r or raiz()
     version = version or version_datos(r)
     base = r / "salida" / "v2" if version == "v2" else r
     ir = pd.read_csv(base / "resultados_ir.csv", dtype={"query_id": str})
-    prom = ir[ir["query_id"].str.startswith("PROMEDIO")].set_index("modelo")
+    es_prom = ir["query_id"].str.startswith("PROMEDIO")
+    prom = ir[es_prom].set_index("modelo")
+    por_consulta = ir[~es_prom]
     ie = pd.read_csv(base / "resultados_ie.csv").set_index(["metodo", "tipo"])
     lim = json.loads((r / "salida" / "01_limpieza.json").read_text(encoding="utf-8"))
     metodos = ("regla", "modelo", "combinado")
@@ -209,6 +211,8 @@ def cifras(r: Path | None = None, version: str | None = None) -> dict:
         "version": version,
         "map": {m: float(prom.at[f"{m}_con_filtro", "AP"]) for m in MODELOS},
         "p10": {m: float(prom.at[f"{m}_con_filtro", "P@10"]) for m in MODELOS},
+        "p10_consulta": {m: por_consulta[por_consulta["modelo"] == f"{m}_con_filtro"]
+                         .set_index("query_id")["P@10"].astype(float).to_dict() for m in MODELOS},
         "f1": {m: float(ie.at[(m, "TODOS"), "f1"]) for m in metodos},
         "recall": {m: float(ie.at[(m, "TODOS"), "recall"]) for m in metodos},
         "discursos": int(lim["discursos"]),

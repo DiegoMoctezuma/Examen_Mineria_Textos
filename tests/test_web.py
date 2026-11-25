@@ -319,12 +319,12 @@ def _repo_v2(tmp_path, preprocesamiento="lema"):
     pd.DataFrame(filas).to_csv(r / "salida/v2/ranking.csv", index=False)
     pd.DataFrame(columns=["query_id", "passage_id", "tipo", "texto", "inicio", "fin", "metodo"]
                  ).to_csv(r / "salida/v2/entidades.csv", index=False)
-    pd.DataFrame({"query_id": ["Q11"], "campo_respuesta": ["c"], "passage_id": ["1_0"]}
-                 ).to_csv(r / "salida/v2/respuestas.csv", index=False)
+    pd.DataFrame({"query_id": ["Q11"], "campo_respuesta": ["c"], "passage_id": ["1_0"],
+                  "estado": ["ambiguo"]}).to_csv(r / "salida/v2/respuestas.csv", index=False)
     pd.DataFrame({"query_id": ["Q11"]}).to_csv(r / "salida/v2/10_evidencias.csv", index=False)
-    ir = pd.DataFrame({"query_id": ["PROMEDIO (MAP = AP)"] * 2,
-                       "modelo": ["tfidf_con_filtro", "bm25_con_filtro"],
-                       "P@10": [0.4, 0.6], "AP": [0.3, 0.5]})
+    ir = pd.DataFrame({"query_id": ["Q1", "Q11"] + ["PROMEDIO (MAP = AP)"] * 2,
+                       "modelo": ["bm25_con_filtro"] * 2 + ["tfidf_con_filtro", "bm25_con_filtro"],
+                       "P@10": [0.9, 0.4, 0.4, 0.6], "AP": [0.8, 0.3, 0.3, 0.5]})
     ir.to_csv(r / "salida/v2/resultados_ir.csv", index=False)
     ie = pd.DataFrame({"metodo": ["regla", "modelo", "combinado"], "tipo": ["TODOS"] * 3,
                        "precision": [0.9] * 3, "recall": [0.6, 0.5, 0.8], "f1": [0.7, 0.6, 0.8]})
@@ -347,6 +347,7 @@ def test_cargar_v2_lee_salida_v2(tmp_path):
     assert a.contexto("1_0") == (None, None)           # su vecino 1_1 está bloqueado
     k = D.cifras(r, "v2")
     assert k["map"] == {"tfidf": 0.3, "bm25": 0.5} and k["f1"]["combinado"] == 0.8
+    assert k["p10_consulta"] == {"tfidf": {}, "bm25": {"Q1": 0.9, "Q11": 0.4}}
 
 
 def test_cargar_v2_avisa_lo_que_falta(tmp_path):
@@ -373,3 +374,13 @@ def test_resumen_de_la_consulta_libre_sin_modelo():
     assert "solo el modelo de lenguaje" in V.resumen_extraccion(e, pas)
     sin = V.resumen_extraccion(e, pas, con_modelo=False)
     assert "Todas salen de las reglas" in sin and "modelo" not in sin
+
+
+def test_caso_dificil_con_cifras_de_los_archivos(tmp_path, monkeypatch):
+    from mtx.web import vistas as V
+
+    r = _repo_v2(tmp_path)
+    monkeypatch.setattr(V, "DIFICIL", "Q11")
+    h = V.caso_dificil(D.cargar_v2(r), D.cifras(r, "v2"))
+    assert "9 de los 10" in h and "solo 4" in h and "1 de sus 1 datos" in h
+    assert not ID_VISIBLE.search(h)
