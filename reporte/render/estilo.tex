@@ -1,0 +1,37 @@
+\usepackage{xcolor,titlesec,microtype,needspace,caption}
+\definecolor{guinda}{HTML}{691C32}
+\definecolor{metadato}{HTML}{46454A}
+\definecolor{separador}{HTML}{D9D0D2}
+\newfontfamily\editorial{Noto Sans}
+\titleformat{\subsection}{\editorial\bfseries\fontsize{12.8}{15.5}\selectfont\color{guinda}}{}{0pt}{}
+\titlespacing*{\subsection}{0pt}{12pt}{6pt}
+\setlength{\parskip}{4.7pt}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.10}
+\setlength{\LTpre}{3pt}
+\setlength{\LTpost}{4.7pt}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{\fill}
+\captionsetup{font=small,skip=5pt}
+\setlength{\intextsep}{8pt}
+\emergencystretch=1.3em
+\widowpenalty=1500
+\clubpenalty=1500
+\newcommand{\cabecera}[9]{%
+  \begingroup\raggedright
+  {\editorial\bfseries\fontsize{9}{11}\selectfont\color{guinda}#1\par}
+  \vspace{3pt}
+  {\bfseries\fontsize{24}{26}\selectfont #2\par}
+  \vspace{7pt}
+  {\editorial\fontsize{9.3}{13}\selectfont
+   \textbf{#3}\par\vspace{2pt}%
+   \begin{tabular}{@{}p{.48\linewidth}p{.48\linewidth}@{}}
+   #4 & #5\\
+   #6 & #7\\
+   #8 &
+   \end{tabular}\par\vspace{4pt}%
+   {\color{metadato}#9}\par}
+  \vspace{4.7pt}{\color{separador}\hrule}\vspace{7pt}
+  \endgroup
+}

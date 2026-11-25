@@ -3,15 +3,23 @@ title: Recuperación y extracción de información sobre discursos presidenciale
 lang: es-MX
 ---
 
-<div class="portada">
-<strong style="font-size:15pt;color:#691C32">Recuperación y extracción de información sobre discursos presidenciales</strong><br>
-Proyecto final · Equipo Datisa: Carpio Angeles Leo Yahir, Jaramillo Salmerón Arturo, Mera Montiel Gonzalo Sebastian, Moctezuma Ramirez Diego Rafael y Ramirez Maza Luis<br>
-Minería de Textos · 25 de noviembre de 2026 · Repositorio: https://github.com/DiegoMoctezuma/Examen_Mineria_Textos
-</div>
-
-<!-- BORRADOR WP-19 (24 nov). Prosa redactada por Claude a partir de salida/v2 y docs/; la revisan Gonzalo (todo), Luis (secciones 4 y 5) y Arturo (lectura final). Las marcas ⟦…⟧ son pendientes humanos. Quitar este comentario al aprobar. -->
+<header class="cabecera-articulo">
+<p class="tipo">Proyecto final · Minería de Textos</p>
+<h1>Recuperación y extracción de información sobre discursos presidenciales</h1>
+<p class="equipo">Equipo Datisa</p>
+<ul class="autores">
+<li>Carpio Angeles Leo Yahir</li>
+<li>Jaramillo Salmerón Arturo</li>
+<li>Mera Montiel Gonzalo Sebastian</li>
+<li>Moctezuma Ramirez Diego Rafael</li>
+<li>Ramirez Maza Luis</li>
+</ul>
+<p class="metadatos"><time datetime="2026-11-25">25 de noviembre de 2026</time> · <a href="https://github.com/DiegoMoctezuma/Examen_Mineria_Textos">Repositorio del proyecto</a></p>
+</header>
 
 Este reporte describe la versión final del sistema. Parte del examen entregado el 11 de noviembre (v1) y atiende la retroalimentación del profesor con más preguntas, juicios de tres personas, un gold más grande con doble anotación, una comparación de modelos NER y referencias para leer el F1. La tabla resume qué cambió; las cifras v1 se conservan en el repositorio y no se sobrescriben.
+
+**Tabla 1. Resumen de los cambios entre versiones**
 
 | Tema | Examen (v1) | Proyecto final (v2) |
 | --- | --- | --- |
@@ -21,13 +29,15 @@ Este reporte describe la versión final del sistema. Parte del examen entregado 
 | Mejor búsqueda | BM25 con filtro, MAP 48.4 % | BM25 con raíz y filtro, MAP 53.6 % (IC95 43.3 % a 64.1 %) |
 | Modelo NER | mrm8488, elegido por criterio técnico | XLM-RoBERTa large, elegido entre 4 por F1 sobre un conjunto de selección |
 | Gold de entidades | 20 pasajes, 1 persona | 35 pasajes: los 20 de v1 más 15 nuevos con doble anotación y adjudicación |
-| F1 combinado | 78.4 % | 82.7 % (IC95 77.1 % a 88.2 %), contra 85.3 % de techo humano y 65.4 % de línea base |
+| F1 combinado | 78.4 % | 82.7 % (IC95 77.1 % a 88.2 %), con 85.3 % como referencia de concordancia humana y 65.4 % como línea base |
 
 <p class="nota">Fuentes: salida/v2/resultados_ir.csv, salida/v2/05_robustez.csv, salida/v2/05a_acuerdo.csv, salida/v2/09_comparacion_ner.csv, salida/v2/resultados_ie.csv, salida/v2/09_referencias_f1.csv; v1 en salida/.</p>
 
 ## 1. Datos, limpieza y segmentación
 
 El corpus son las versiones estenográficas de conferencias y discursos presidenciales de diciembre de 2018 a septiembre de 2024. Esta parte no cambió en v2, porque cambiarla invalidaría los juicios y el gold de v1. De 2,294 discursos descargados se excluyen 4 duplicados exactos y 1 casi duplicado (2,289), y 2,288 producen al menos un pasaje. La limpieza elimina 7,338 acotaciones del transcriptor, que son notas como «inaudible», «inicia video» o «himno nacional» y no palabras de nadie; cada eliminación queda auditada. Las marcas de interlocutor llegan como etiquetas en línea que el reconocedor del kit no detecta en ningún discurso, por lo que la limpieza las canoniza a una intervención por línea antes de segmentar.
+
+**Tabla 2. Corpus y segmentación**
 
 | Concepto | Valor |
 | --- | --- |
@@ -44,6 +54,8 @@ La unidad de recuperación es el pasaje: cada intervención se parte en ventanas
 Los textos se normalizan a NFC y minúsculas; los tokens son secuencias alfanuméricas con un guion interno opcional, lo que conserva covid-19. Se quitan las palabras vacías que no distinguen temas: 336 en total, las de NLTK más una lista propia de la estenográfica (presidente, gracias, pregunta, entonces, pues). En v1 cada palabra se reduce a su raíz con el stemmer Snowball; en v2 se agrega una segunda versión con el lema de spaCy (es_core_news_md), con los mismos tokens, de modo que solo cambia la forma base. El lema separa palabras que la raíz junta: maya y mayo comparten la raíz may (6,504 pasajes), y con lema quedan como maya (4,344) y mayo (2,151). El vocabulario pasa de 35,891 a 68,482 términos.
 
 El índice invertido se escribe a mano: para cada término guarda la lista de pasajes donde aparece con su frecuencia, y la longitud de cada pasaje (72.2 tokens en promedio). La rareza de un término se mide con el idf: entre menos pasajes lo contienen, más pesa.
+
+**Tabla 3. Postings de términos seleccionados**
 
 | Término | Raíz | Pasajes | % de pasajes | idf BM25 |
 | --- | --- | ---: | ---: | ---: |
@@ -62,6 +74,8 @@ TF-IDF usa tf sublineal e idf suavizado, $w = (1+\ln tf)\,(\ln\frac{1+N}{1+df}+1
 
 **Resultados.** El ganador se elige entre las variantes con filtro, porque el sistema siempre usa el periodo de la pregunta (regla fijada antes de ver los juicios). Gana BM25 con raíz y filtro, con MAP de 53.6 %. El intervalo de confianza del 95 % se calcula con 10,000 remuestreos de las preguntas.
 
+**Tabla 4. Evaluación de recuperación v2**
+
 | Variante | P@5 | P@10 | MAP | IC95 |
 | --- | ---: | ---: | ---: | --- |
 | BM25 raíz con filtro | 0.79 | 0.77 | **0.536** | 0.433 a 0.641 |
@@ -73,77 +87,89 @@ TF-IDF usa tf sublineal e idf suavizado, $w = (1+\ln tf)\,(\ln\frac{1+N}{1+df}+1
 | TF-IDF lema sin filtro | 0.61 | 0.59 | 0.337 | 0.259 a 0.412 |
 | TF-IDF raíz sin filtro | 0.57 | 0.55 | 0.331 | 0.232 a 0.434 |
 
-<figure><img src="../salida/v2/figuras/s6_ap_por_consulta.png" style="max-width:92%;max-height:7.2cm"><figcaption>AP por pregunta y variante, 15 preguntas.</figcaption></figure>
+<figure><img src="../salida/v2/figuras/s6_ap_por_consulta.png" style="max-width:92%;max-height:7.2cm"><figcaption>Figura 1. AP por pregunta y variante, 15 preguntas.</figcaption></figure>
 
 <p class="nota">Fuentes: salida/v2/05_ir_8_variantes.csv y salida/v2/05_robustez.csv.</p>
 
-La ventaja de BM25 sobre TF-IDF con filtro (18.4 puntos de MAP) es estable: una prueba de permutación pareada sobre las 15 preguntas da p = 0.014. Por pregunta, BM25 gana en 10, TF-IDF en 4 (Dos Bocas, IMSS-Bienestar, Jóvenes Construyendo el Futuro y Acapulco tras Otis) y hay un empate (Banco del Bienestar). La saturación de tf y la normalización por longitud de BM25 evitan que un término repetido domine; el caso más claro es Tren Maya, con AP de 0.90 en BM25 contra 0.17 en TF-IDF. Dos de las preguntas que gana TF-IDF tienen un nombre alterno que no está en la consulta: Dos Bocas, que el corpus también llama refinería Olmeca, e IMSS-Bienestar, que hasta 2023 aparece como Insabi. En esos casos ningún modelo léxico encuentra el sinónimo, y un modelo de embeddings densos sería el siguiente paso natural.
+La ventaja de BM25 sobre TF-IDF con filtro (18.4 puntos de MAP) es estable: una prueba de permutación pareada sobre las 15 preguntas da p = 0.014. Por pregunta, BM25 gana en 10, TF-IDF en 4 (Dos Bocas, IMSS-Bienestar, Jóvenes Construyendo el Futuro y Acapulco tras Otis) y hay un empate (Banco del Bienestar). La saturación de frecuencias y la normalización por longitud de BM25 pueden contribuir a explicar su mejor desempeño observado. En Tren Maya, el AP fue de 0.90 con BM25 y de 0.17 con TF-IDF. Dos de las preguntas que gana TF-IDF tienen un nombre alterno que no está en la consulta: Dos Bocas, que el corpus también llama refinería Olmeca, e IMSS-Bienestar, que hasta 2023 aparece como Insabi. En esos casos ningún modelo léxico encuentra el sinónimo, y un modelo de embeddings densos sería el siguiente paso natural.
 
-El lema no mejora el MAP: con filtro, la raíz da 53.6 % y el lema 50.7 %, y la diferencia no es significativa (p = 0.07). El filtro de fecha tampoco cambia el MAP de BM25 en esta vista temática (53.6 % frente a 52.7 %, p = 0.81), porque el juicio no toma en cuenta la fecha. La regla de mayoría no decide el ganador: con unanimidad (3 de 3) BM25 con raíz y filtro baja a 35.5 % y con al menos un voto sube a 56.3 %, y en los dos casos sigue primero. El MAP de v2 no se compara directamente con el de v1: en Q1 a Q10 la misma lista de BM25 con filtro obtiene 63.5 % si solo cuentan los pares del pool v1 y 53.3 % con el pool v2, porque un pool más grande conoce más relevantes.
+El lema no mejora el MAP: con filtro, la raíz da 53.6 % y el lema 50.7 %, y la diferencia no es significativa (p = 0.07). No se encontró evidencia de una diferencia significativa en el MAP de BM25 al aplicar el filtro de fecha (53.6 % frente a 52.7 %, p = 0.81), bajo un criterio de relevancia temática que no considera la fecha. La regla de mayoría no decide el ganador: con unanimidad (3 de 3) BM25 con raíz y filtro baja a 35.5 % y con al menos un voto sube a 56.3 %, y en los dos casos sigue primero. El MAP de v2 no se compara directamente con el de v1: en Q1 a Q10 la misma lista de BM25 con filtro obtiene 63.5 % si solo cuentan los pares del pool v1 y 53.3 % con el pool v2, porque un pool más grande conoce más relevantes.
 
 **Contraste con el modelo booleano.** El booleano devuelve un conjunto sin orden y trata igual a todos los términos, aunque su idf sea muy distinto. Dentro del periodo de cada pregunta, la búsqueda con Y no devuelve nada en Banco del Bienestar ni en Acapulco tras Otis y devuelve 1 y 2 pasajes en Reforma eléctrica y Tren Interoceánico; con O devuelve entre 1,441 y 35,078. En Huachicol, la búsqueda con O trae 1,485 pasajes y 1,261 no contienen la palabra huachicol, mientras que los 10 primeros de BM25 sí la contienen (salida/v2/03b_booleano.csv).
 
 ## 4. Extracción con reglas y con modelo
 
-Las reglas trabajan sobre el texto original con mayúsculas y acentos. Las expresiones regulares de MONTO exigen cifra, escala y moneda o símbolo; porcentajes, dosis, litros y sucursales se guardan como cantidades auxiliares. Las reglas de FECHA se reescribieron en v2 tomando como referencia el material del profesor y se congelaron (etiqueta reglas-fecha-v2) antes de cerrar el gold, sin verlo. Como ese material llegó después del plazo previsto, FECHA v2 se evalúa como exploratoria contra el criterio de fecha de v1. El gazetteer de organizaciones tiene 152 entradas (76 del kit, 16 manuales y 60 siglas minadas del corpus y revisadas a mano) y el de lugares 102, con los 32 estados, municipios, países y las obras con nombre propio, que se anotan como lugar. Una regla adicional extrae la persona de la marca de interlocutor quitando el cargo. Las reglas de PER, ORG, LOC y MONTO no cambiaron desde v1.
+Las reglas deterministas detectan fechas y montos a partir de patrones explícitos, consultan gazetteers de organizaciones y lugares e identifican personas en la marca de interlocutor. El gazetteer extendido reúne 152 entradas del kit, adiciones manuales y siglas revisadas. El de lugares tiene 102 entradas. El NER usa el contexto para reconocer menciones de PER, ORG y LOC que las reglas pueden omitir. Los porcentajes y otras cantidades no monetarias se registran como auxiliares.
 
-**Selección del modelo NER.** En v2 se compararon cuatro modelos sobre un conjunto de selección de 10 pasajes, distinto del gold, anotado por dos personas y adjudicado por una tercera (31 entidades de persona, organización y lugar). El modelo se fijó antes de cerrar el gold.
+Se compararon cuatro candidatos en 10 pasajes con doble anotación y adjudicación, separados del gold de evaluación. El criterio fue el F1 micro del modelo solo en PER, ORG y LOC, con coincidencia exacta de pasaje, tipo y límites. XLM-R large se fijó antes del cierre del gold.
 
-| Modelo | F1 total | F1 personas | F1 organizaciones | F1 lugares |
-| --- | ---: | ---: | ---: | ---: |
-| XLM-RoBERTa large (Davlan), elegido | **0.678** | 0.889 | 0.889 | 0.500 |
-| XLM-RoBERTa base (Davlan) | 0.613 | 0.700 | 0.889 | 0.485 |
-| mrm8488 BERT (modelo de v1) | 0.271 | 0.000 | 0.545 | 0.345 |
-| spaCy es_core_news_lg | 0.262 | 0.000 | 0.333 | 0.400 |
+**Tabla 5. Selección del NER**
 
-<p class="nota">Fuente: salida/v2/09_comparacion_ner.csv.</p>
+| Modelo · revisión abreviada | F1 micro |
+|---|---:|
+| XLM-R large (Davlan) · 1f929ffad9b7 | 0.6780 |
+| XLM-R base (Davlan) · 253f557bd824 | 0.6129 |
+| BERT mrm8488 · b11721d41d9e | 0.2712 |
+| spaCy es_core_news_lg · 3.8.0 | 0.2623 |
 
-El modelo de v1 parte en fragmentos los nombres escritos en mayúsculas dentro de la marca de interlocutor (por ejemplo, MANUEL LÓPEZ en lugar de ANDRÉS MANUEL LÓPEZ OBRADOR), y por eso no acierta ninguna de las 8 personas de la selección. El modelo elegido corre sobre los 161 pasajes del ámbito de extracción (el top 10 del ganador en las 15 preguntas más los pasajes del gold) en ventanas con solapamiento y caché versionada. La fusión es por coincidencia exacta de tipo y posición: de 1,344 entidades únicas, 628 las detectan reglas y modelo, 256 solo las reglas y 460 solo el modelo; los 82 solapes parciales se conservan como filas separadas.
+*Fuentes: salida/06_resumen_reglas.json, salida/v2/09_comparacion_ner.csv y data/modelo_ner.json.*
+
+El NER elegido procesa ventanas solapadas y proyecta sus límites sobre el texto original. Si $E_r$ y $E_m$ son las detecciones de reglas y modelo, identificadas por pasaje, tipo, inicio y fin, la fusión entrega $E_r \cup E_m$ y atribuye $E_r \cap E_m$ a ambas fuentes. Conserva por separado los desacuerdos de tipo o límites. La normalización de fechas y montos preserva los tramos evaluados.
+
+Las reglas FECHA v2 amplían formatos e intervalos. Su comparación se considera exploratoria porque la anotación mantuvo el criterio v1. Las cifras escritas íntegramente con letra siguen siendo una limitación de MONTO.
 
 ## 5. Evaluación de IE y análisis de errores
 
-El gold v2 tiene 35 pasajes: los 20 de v1, sin reanotar, y 15 nuevos (10 de Q1 a Q10 y 5 de Q11 a Q15). Cada pasaje nuevo lo anotaron dos personas por separado y en modo ciego, y una tercera resolvió los desacuerdos sin poder agregar entidades. El resultado son 240 entidades (123 lugares, 61 organizaciones, 36 personas, 12 montos y 8 fechas). El kit evalúa los 34 pasajes que tienen al menos una entidad.
+El gold v2 reúne 35 pasajes, incluidos los 20 de v1 y 15 nuevos con doble anotación ciega y adjudicación. El kit evalúa los 34 con entidades y deja fuera los posibles falsos positivos del pasaje sin entidades gold. Un acierto exige coincidencia exacta de pasaje, tipo, inicio y fin. El agregado micro acumula TP, FP y FN antes de calcular las métricas.
 
-| Método | F1 PER | F1 ORG | F1 LOC | F1 FECHA | F1 MONTO | F1 total | P total | R total |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Reglas | 0.84 | 0.75 | 0.78 | 0.53 | 0.83 | 0.77 | 0.90 | 0.68 |
-| Modelo | 0.92 | 0.70 | 0.76 | s/c | s/c | 0.74 | 0.80 | 0.68 |
-| Combinado | **0.95** | 0.74 | **0.86** | 0.53 | 0.83 | **0.83** | 0.80 | 0.86 |
-| Soporte gold | 36 | 61 | 123 | 8 | 12 | 240 | | |
+$$
+P=\frac{\mathrm{TP}}{\mathrm{TP}+\mathrm{FP}},\qquad
+R=\frac{\mathrm{TP}}{\mathrm{TP}+\mathrm{FN}},\qquad
+F_1=\frac{2PR}{P+R}.
+$$
 
-<p class="nota">Fuente: salida/v2/resultados_ie.csv. s/c: el modelo no cubre FECHA ni MONTO.</p>
+**Tabla 6. Evaluación exacta por versión y método (P/R/F1)**
 
-<div class="dos">
-<div>
+| Versión · método | PER | ORG | LOC | FECHA | MONTO | Total |
+|---|---:|---:|---:|---:|---:|---:|
+| v1 · reglas | 1.00/0.79/0.88 | 0.85/0.62/0.72 | 0.91/0.70/0.79 | 0.40/0.33/0.36 | 1.00/1.00/1.00 | 0.89/0.69/0.78 |
+| v1 · modelo | 0.22/0.26/0.24 | 0.66/0.62/0.64 | 0.86/0.72/0.78 | s/c | s/c | 0.70/0.61/0.65 |
+| v1 · combinado | 0.51/1.00/0.68 | 0.67/0.78/0.72 | 0.84/0.87/0.85 | 0.40/0.33/0.36 | 1.00/1.00/1.00 | 0.73/0.85/0.78 |
+| v2 · reglas | 1.00/0.72/0.84 | 0.91/0.64/0.75 | 0.90/0.68/0.78 | 0.57/0.50/0.53 | 0.83/0.83/0.83 | 0.90/0.68/0.77 |
+| v2 · modelo | 0.89/0.94/0.92 | 0.69/0.72/0.70 | 0.84/0.69/0.76 | s/c | s/c | 0.80/0.68/0.74 |
+| v2 · combinado | 0.90/1.00/0.95 | 0.68/0.80/0.74 | 0.84/0.87/0.86 | 0.57/0.50/0.53 | 0.83/0.83/0.83 | **0.80/0.86/0.83** |
+| Soporte v1/v2 | 19/36 | 37/61 | 98/123 | 6/8 | 3/12 | 163/240 |
 
-Un F1 de 82.7 % se lee contra dos referencias. Dos personas que anotan el mismo texto coinciden en 85.3 % antes de adjudicar (techo humano), y solo con los diccionarios de organizaciones y lugares se obtiene 65.4 % (línea base). El sistema queda 2.6 puntos debajo del techo humano y 17.3 arriba de la línea base; su intervalo del 95 % va de 77.1 % a 88.2 %. Si basta con que la predicción se solape con la entidad correcta, el F1 sube a 92.6 %, así que buena parte de los errores son de límites. La mejora más grande frente a v1 está en personas del modelo: F1 de 0.24 con mrm8488 y de 0.92 con XLM-RoBERTa large. Las cifras de v1 y v2 se midieron sobre golds distintos (20 y 35 pasajes), por lo que la comparación es indicativa. FECHA se mantiene en 53.3 % con reglas v1 y con reglas v2, sobre solo 8 fechas, y su techo humano no se puede leer porque cada anotador marcó una sola fecha y no coincidieron.
+*Fuentes: salida/resultados_ie.csv de v1.0-entrega y salida/v2/resultados_ie.csv. s/c: sin cobertura. El kit asigna cero cuando el denominador de la métrica es nulo.*
 
-</div>
-<div>
+En v2, la fusión elevó el recall frente a ambos métodos individuales (0.8583 frente a 0.6792) y redujo la precisión frente a las reglas (0.7984 frente a 0.9006). Obtuvo el mayor F1 micro en la misma muestra (0.8273). Su IC del 95 % (0.7714–0.8818) usa los percentiles 2.5 y 97.5 de 10 000 réplicas bootstrap de los 34 pasajes, con reemplazo y semilla 42. Frente al F1 combinado v1 (0.7841), el contraste es descriptivo por las diferencias de muestra y soporte.
 
-<figure><img src="../salida/v2/figuras/s7a_f1_con_referencias.png" style="max-width:100%"><figcaption>F1 del sistema combinado por tipo, con techo humano y línea base.</figcaption></figure>
+La línea base de solo gazetteer obtuvo 0.6543. La referencia de concordancia humana exacta previa a la adjudicación fue 0.8533 en A y B, con un ámbito distinto al del kit. El F1 parcial del método combinado v2 fue 0.9259. El criterio admite un solape de al menos un carácter entre una predicción y una entidad gold del mismo tipo y pasaje.
 
-</div>
-</div>
+<figure class="figura-ie"><img src="../salida/v2/figuras/s7a_f1_con_referencias_revision.pdf" alt="F1 por tipo con referencias"><figcaption>Figura 2. F1 exacto por tipo con línea base y referencia de concordancia humana.</figcaption></figure>
 
-<p class="nota">Fuentes: salida/v2/09_referencias_f1.csv y salida/v2/09_acuerdo_gold.csv.</p>
+*Fuente: salida/v2/figuras/s7a_f1_con_referencias.png y salida/v2/09_referencias_f1.csv. Concordancia humana: 15 pasajes de A+B. Sistema y línea base: 34 pasajes del kit.*
 
-Los errores del método combinado (35 omisiones y 68 detecciones de más) se concentran en pocos patrones. Los límites del nombre explican 20 omisiones y 46 detecciones de más; el tipo equivocado, 2 y 10; las entidades que nadie detectó, 12 omisiones; la marca de quien habla, 1 y 6; y las detecciones que no son entidad, 6. Cada patrón tiene una causa identificada y un arreglo posible:
+**Tabla 7. FECHA exploratoria sobre el mismo gold con criterio v1**
 
-| Patrón | Caso observado | Causa | Arreglo propuesto |
-| --- | --- | --- | --- |
-| Entidad partida | Pfizer en lugar de Pfizer-BioNTech | el gazetteer tiene la forma corta | variantes compuestas en el gazetteer |
-| Límite de fecha | 28 de marzo en lugar de domingo 28 de marzo | la regla no incluye el día de la semana | ampliar el patrón con el día |
-| Monto con intervalo | 80 mil millones de pesos en lugar de 60 y 80 mil millones de pesos | la regla toma solo el último extremo | patrón de intervalo «entre X y Y» |
-| Monto en letra | mil millones de pesos en lugar de Cuatrocientos mil millones de pesos | las cifras escritas con letra no están cubiertas | convertir números en letra antes de buscar |
-| Obra como organización | Corredor Interoceánico del Istmo de Tehuantepec como ORG | el modelo no conoce la convención de obras | forzar LOC para las obras del gazetteer |
-| Marca genérica | VOZ MUJER detectada como organización | el modelo lee la etiqueta en mayúsculas | excluir marcas genéricas antes del modelo |
+| Reglas | P | R | F1 | Soporte |
+|---|---:|---:|---:|---:|
+| FECHA v1 | 0.5714 | 0.5000 | 0.5333 | 8 |
+| FECHA v2 | 0.5714 | 0.5000 | 0.5333 | 8 |
 
-<p class="nota">Fuente: salida/v2/09_analisis_errores.csv y salida/v2/09_resumen_errores.csv. No se observaron casos de sigla no reconocida.</p>
+*Fuente: salida/v2/09_referencias_f1.csv.*
+
+Se observaron entidades partidas, como «Pfizer-BioNTech» detectada en dos tramos, y errores de tipo, como «Corredor Interoceánico del Istmo de Tehuantepec» marcado como ORG. «VOZ MUJER» se detectó como ORG en la marca. Hubo errores de límite en montos que conservaban la unidad. No se observaron casos de monto sin unidad ni de sigla no reconocida.
+
+La evaluación mide el reconocimiento de entidades en los pasajes evaluados. Responder una consulta también exige recuperar pasajes pertinentes y aportar una cita que respalde la relación solicitada, como se examina en la sección 6.
+
+*Fuente de los ejemplos: salida/v2/09_analisis_errores.csv.*
 
 ## 6. Tablas de respuesta
 
-Para cada pregunta se responde su pregunta de extracción con las entidades del top 10 del ganador, después de quitar las entidades de la marca de interlocutor y las variantes del nombre del presidente en los campos de persona. Cada dato tiene un estado con su evidencia. **Respaldado:** una cita textual de quien declara lo sostiene, por ejemplo «262 sucursales» en Banco del Bienestar, con la frase «Ya en el caso de Oaxaca son 262 sucursales» (14 de enero de 2023). **Ambiguo:** el dato aparece, pero lo dice un reportero o la cita no basta para afirmarlo, como «Michoacán» en Huachicol, que sale de la pregunta de la prensa «¿Cuánto era el presupuesto de Michoacán?» (6 de abril de 2019). **Sin evidencia:** ningún pasaje del top 10 lo menciona. De 375 datos, 248 están respaldados, 122 son ambiguos y 5 no tienen evidencia. Respaldado significa que el texto lo afirma, no que sea verdad.
+Para cada pregunta se responde su pregunta de extracción con las entidades del top 10 del ganador, después de quitar las entidades de la marca de interlocutor y las variantes del nombre del presidente en los campos de persona. Cada dato tiene un estado con su evidencia. **Respaldado:** una cita textual de quien declara lo sostiene, por ejemplo «262 sucursales» en Banco del Bienestar, con la frase «Ya en el caso de Oaxaca son 262 sucursales» (14 de enero de 2023). **Ambiguo:** el dato aparece, pero lo dice un reportero o la cita no basta para afirmarlo, como «Michoacán» en Huachicol, que sale de la pregunta de la prensa «¿Cuánto era el presupuesto de Michoacán?» (6 de abril de 2019). **Sin evidencia:** el sistema no identificó evidencia para el campo solicitado en los diez pasajes recuperados. De 375 datos, 248 están respaldados, 122 son ambiguos y 5 no tienen evidencia. Respaldado significa que el texto lo afirma, no que sea verdad.
+
+**Tabla 8. Estados de respuesta por consulta**
 
 | Pregunta | Resp. | Amb. | Sin ev. | Pregunta | Resp. | Amb. | Sin ev. |
 | --- | ---: | ---: | ---: | --- | ---: | ---: | ---: |
@@ -158,12 +184,12 @@ Para cada pregunta se responde su pregunta de extracción con las entidades del 
 
 <p class="nota">Fuente: salida/v2/respuestas.csv; tablas completas con cita y pasaje en salida/v2/tablas_respuesta.</p>
 
-⟦Pendiente, mié 25 de 9:00 a 11:00: valoraciones v2 de Gonzalo, Arturo y Luis (anotaciones/valoraciones_v2/). Aquí va un resumen de 3 a 5 líneas con lo que dicen las valoraciones, sin cambiar su texto; por ejemplo, en qué preguntas la tabla es creíble y qué errores se repiten. El asistente no redacta las valoraciones.⟧
+Las valoraciones humanas disponibles identificaron errores recurrentes de clasificación, entidades poco pertinentes, ausencia de información solicitada y confusión entre montos individuales y globales. Estas observaciones muestran que el reconocimiento de entidades no garantiza por sí mismo la pertinencia ni la suficiencia de las respuestas.
 
 ## 7. Uso de IA, siguientes pasos y reproducibilidad
 
-El código, las pruebas, la app de anotación, las figuras y el borrador de este reporte los escribieron asistentes de IA (Claude Code y Claude) a partir de los resultados reales y de las especificaciones del equipo; el equipo revisó y corrigió la prosa. ⟦Indicar qué secciones corrigió cada persona.⟧ Los insumos humanos los produjeron personas en la app, en modo ciego, sin que ningún asistente generara ni sugiriera valores: los juicios de relevancia (tres jueces por par), la anotación del conjunto de selección y del gold, las adjudicaciones, la revisión de siglas y las valoraciones de las tablas. Las preguntas Q11 a Q15 las eligieron y redactaron Diego y Arturo a partir de 12 candidatas que propuso Claude Code (config/v2/candidatos_q11q15.yaml). La presentación se revisó con un modelo de lenguaje sin contexto del proyecto (revisión ciega). ⟦Resumir qué cambios se tomaron de docs/revision_ciega_respuesta.md.⟧ El código se verificó con 689 pruebas automáticas ⟦cifra del 24 de noviembre; actualizar con la de make test del 25⟧ y con make validar.
+Los integrantes realizaron los juicios de relevancia, las anotaciones, las adjudicaciones y las valoraciones humanas. La asistencia de IA se empleó en el desarrollo del sistema, la elaboración de pruebas y figuras, la revisión metodológica y la redacción del reporte. Las decisiones metodológicas y la interpretación de los resultados fueron revisadas por el equipo. El proyecto incorpora pruebas automatizadas y mecanismos de validación para favorecer su reproducibilidad.
 
-Los siguientes pasos, cada uno con su mejora concreta: ampliar la pregunta con sinónimos y nombres alternos, y después probar embeddings densos, en las preguntas con menor AP (Dos Bocas, 0.26, y Vacunas COVID-19, 0.29); incluir en los diccionarios el nombre completo de cada obra e institución, que ataca el patrón de límites; un gold de FECHA más grande, porque 8 fechas no bastan para medir; reglas de montos con intervalos y cifras en letra; y fusionar las intervenciones cortas consecutivas para recuperar preguntas de reporteros que hoy quedan bajo 40 palabras.
+Las limitaciones observadas orientan mejoras específicas. Para las consultas con menor AP (Dos Bocas, 0.26, y Vacunas COVID-19, 0.29), se propone incorporar sinónimos y nombres alternos y evaluar representaciones densas. Para la extracción se propone ampliar los diccionarios con nombres completos de obras e instituciones, extender las reglas de montos a intervalos y cifras en letra, y evaluar FECHA sobre una muestra mayor, dado su soporte de 8 entidades. La unión de intervenciones breves consecutivas permitiría evaluar la recuperación de preguntas de reporteros que quedan por debajo de 40 palabras.
 
-Desde un clon limpio, la reconstrucción completa tarda unos 19 minutos en una laptop sin GPU (18 min 33 s, de los cuales 15 min 43 s son la lematización del corpus) y reproduce byte a byte los seis CSV y todas las salidas v2 con los insumos humanos y la caché NER versionados (docs/reproducibilidad.md). make validar comprueba las condiciones de entrega de v1 y v2, incluido el orden de los cierres: el modelo NER y las reglas de fecha v2 (etiqueta reglas-fecha-v2) quedaron fijados antes del cierre del gold. Por el recorte de alcance del 23 de noviembre, la pasada de fechas del gold se abrió sin esperar esa etiqueta.
+En una laptop sin GPU, la reconstrucción desde un clon limpio con insumos humanos y caché NER versionados tomó 18 min 33 s, incluidos 15 min 43 s de lematización. Los seis CSV de entrega, los CSV de salida v2 y las figuras verificadas coincidieron byte por byte (docs/reproducibilidad.md). En la revisión evaluada, `make test` registró 742 pruebas aprobadas y `make validar` verificó 20 de 22 condiciones de entrega. El NER y las reglas de FECHA v2 se fijaron antes del cierre del gold. La segunda pasada de anotación comenzó antes de fijar esas reglas y aplicó el criterio de FECHA v1.
