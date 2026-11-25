@@ -1,7 +1,7 @@
 {
-  "revision": 1,
-  "sha256": "5ecdb448ecc735517c592698c81a14b634914453e6c5a46718aba586e7bdcf6d",
-  "actualizado": "2026-11-14T20:09:49",
+  "revision": 147,
+  "sha256": "1ebaf7016880a962fede87349d83ce22fa723e9cb23b706043a44a8aeb0f20e3",
+  "actualizado": "2026-11-23T22:16:51",
   "origen": "importado_v1",
   "lote": "1",
   "ruta_origen": "juicios_relevancia.csv",
