@@ -136,6 +136,7 @@ def test_artefactos_v1_y_contexto(monkeypatch):
     a = D.cargar_v1()
     assert list(a.consultas["query_id"]) == [f"Q{i}" for i in range(1, 11)]
     assert set(a.ranking["modelo"]) == {"tfidf", "bm25"} and a.mejor in D.MODELOS
+    assert a.ner_libre                                 # v1: mrm8488 en la consulta libre
     for q in a.consultas["query_id"]:
         assert len(a.top(q, "bm25")) == 10 and len(a.top(q, "tfidf")) == 10
     pid = a.top("Q3", a.mejor)["passage_id"].iloc[0]
@@ -312,7 +313,7 @@ def _repo_v2(tmp_path, preprocesamiento="lema"):
         encoding="utf-8")
     (r / "data/v2/mejor_modelo.json").write_text(json.dumps(
         {"modelo": "bm25_con_filtro", "preprocesamiento": preprocesamiento}), encoding="utf-8")
-    (r / "data/modelo_ner.json").write_text(json.dumps({"slug": "spacy_es_lg"}), encoding="utf-8")
+    (r / "data/modelo_ner.json").write_text(json.dumps({"slug": "xlmr_large_davlan"}), encoding="utf-8")
     filas = [{"query_id": "Q11", "modelo": f"{m}_con_filtro", "variante": "con_filtro",
               "rango": 1, "passage_id": "1_0", "puntaje": 1.0} for m in ("tfidf", "bm25")]
     pd.DataFrame(filas).to_csv(r / "salida/v2/ranking.csv", index=False)
@@ -340,7 +341,8 @@ def test_cargar_v2_lee_salida_v2(tmp_path):
     r = _repo_v2(tmp_path)
     a = D.cargar_v2(r)
     assert a.version == "v2" and len(a.consultas) == 15
-    assert a.mejor == "bm25" and a.raiz_indice == "lema" and a.ner_slug == "spacy_es_lg"
+    assert a.mejor == "bm25" and a.raiz_indice == "lema" and a.ner_slug == "xlmr_large_davlan"
+    assert not a.ner_libre                             # XLM-R large no cabe en la nube
     assert a.bloqueados == {"1_1"}                     # sin cierre del gold todavía
     assert a.contexto("1_0") == (None, None)           # su vecino 1_1 está bloqueado
     k = D.cifras(r, "v2")
@@ -361,3 +363,13 @@ def test_version_v2_con_los_dos_cierres(tmp_path):
         (r / "anotaciones" / nombre).write_text("{}", encoding="utf-8")
     a = D.cargar_artefactos(r)
     assert a.version == "v2" and a.raiz_indice == "stem" and a.bloqueados == frozenset()
+
+
+def test_resumen_de_la_consulta_libre_sin_modelo():
+    from mtx.web import vistas as V
+
+    pas = pd.DataFrame({"inicio_cuerpo": [5]}, index=["9_1"])
+    e = {"9_1": ents(("9_1", "ORG", "Pemex", 5, 10, "regla"))}
+    assert "solo el modelo de lenguaje" in V.resumen_extraccion(e, pas)
+    sin = V.resumen_extraccion(e, pas, con_modelo=False)
+    assert "Todas salen de las reglas" in sin and "modelo" not in sin

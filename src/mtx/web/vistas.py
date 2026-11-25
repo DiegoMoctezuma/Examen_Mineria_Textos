@@ -260,6 +260,13 @@ IDEAS = ["precio de la gasolina", "vacunas contra el COVID en Oaxaca",
          "seguridad en Culiacán", "becas para estudiantes", "litio y su nacionalización"]
 
 
+AVISO_SIN_MODELO = (
+    "En la búsqueda libre los datos salen solo de las reglas (fechas, montos y listas de "
+    "organizaciones y lugares conocidos), así que casi no se marcan personas. El modelo de "
+    "lenguaje que ganó la evaluación es demasiado grande para la memoria del servidor gratuito. "
+    "En las consultas del experimento sí aparecen sus resultados, porque se calcularon antes.")
+
+
 @st.cache_resource(show_spinner="Cargando el índice de búsqueda (solo la primera vez)…")
 def buscador_completo():
     from mtx import ranking
@@ -277,7 +284,8 @@ def entidades_en_caliente(passage_id: str, version: str) -> pd.DataFrame:
     _, pasajes, _ = buscador_completo()
     f = pasajes.loc[passage_id]
     return libre_mod.entidades_pasaje(passage_id, str(f["texto"]), int(f["inicio_cuerpo"]),
-                                      libre_mod.extractor_reglas(version), modelo_ner())
+                                      libre_mod.extractor_reglas(version),
+                                      modelo_ner() if artefactos().ner_libre else None)
 
 
 def _fecha_qp(nombre_: str) -> date | None:
@@ -287,7 +295,8 @@ def _fecha_qp(nombre_: str) -> date | None:
         return None
 
 
-def resumen_extraccion(ents: dict[str, pd.DataFrame], pasajes: pd.DataFrame) -> str:
+def resumen_extraccion(ents: dict[str, pd.DataFrame], pasajes: pd.DataFrame,
+                       con_modelo: bool = True) -> str:
     """Qué se extrajo de los fragmentos: cuántas entidades por tipo y de qué método salieron
     (solo del cuerpo; la marca del interlocutor no se cuenta)."""
     filas = [e[e["inicio"] >= int(pasajes.loc[pid, "inicio_cuerpo"])] for pid, e in ents.items()]
@@ -299,8 +308,12 @@ def resumen_extraccion(ents: dict[str, pd.DataFrame], pasajes: pd.DataFrame) -> 
     chips = "".join(f'<span class="ent e-{t}">{C.e(C.TIPOS[t])}: {por_tipo[t]}</span> '
                     for t in C.TIPOS if t in por_tipo)
     m = todas["metodo"].value_counts()
-    return (f'<p>Se analizaron {len(ents)} fragmentos y se encontraron <strong>{len(todas)} '
-            f'entidades</strong>:</p><div class="leyenda">{chips}</div>'
+    inicio = (f'<p>Se analizaron {len(ents)} fragmentos y se encontraron <strong>{len(todas)} '
+              f'entidades</strong>:</p><div class="leyenda">{chips}</div>')
+    if not con_modelo:
+        return inicio + ('<p class="nota">Todas salen de las reglas (fechas, montos y listas de '
+                         'nombres conocidos).</p>')
+    return (inicio +
             f'<p class="nota">{m.get("ambos", 0)} las encontraron las reglas y el modelo a la vez, '
             f'{m.get("regla", 0)} solo las reglas (fechas, montos y listas de nombres conocidos) y '
             f'{m.get("modelo", 0)} solo el modelo de lenguaje.</p>')
@@ -367,14 +380,17 @@ def resultado_libre(texto: str, desde: date | None, hasta: date | None) -> None:
         st.caption(f"Se {'omitió' if n == 1 else 'omitieron'} {n} "
                    f"{'fragmento reservado' if n == 1 else 'fragmentos reservados'} para una "
                    "evaluación en curso; en su lugar aparecen los siguientes.")
+    con_modelo = artefactos().ner_libre
+    metodos = "reglas y un modelo de lenguaje" if con_modelo else "reglas"
+    if not con_modelo:
+        st.info(AVISO_SIN_MODELO)
     t1 = time.perf_counter()
-    with st.status("Extrayendo los datos de los 10 fragmentos con reglas y un modelo de "
-                   "lenguaje. Esto se calcula en este momento y puede tardar unos segundos…",
-                   expanded=False) as estado:
+    with st.status(f"Extrayendo los datos de los 10 fragmentos con {metodos}. Esto se calcula "
+                   "en este momento y puede tardar unos segundos…", expanded=False) as estado:
         ents = {pid: entidades_en_caliente(pid, version) for pid in res.tops["bm25"]["passage_id"]}
-        html(resumen_extraccion(ents, pasajes))
-        estado.update(label="Datos extraídos en este momento con reglas y un modelo de lenguaje "
-                      "(ver detalle)", state="complete")
+        html(resumen_extraccion(ents, pasajes, con_modelo))
+        estado.update(label=f"Datos extraídos en este momento con {metodos} (ver detalle)",
+                      state="complete")
     t2 = time.perf_counter()
     html(f'<p class="meta">Tiempo de respuesta: búsqueda {t1 - t0:.1f} s · extracción de datos '
          f'{t2 - t1:.1f} s · total {t2 - t0:.1f} s</p>')

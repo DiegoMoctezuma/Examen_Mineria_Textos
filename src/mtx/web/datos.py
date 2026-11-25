@@ -73,6 +73,9 @@ class Artefactos:
     vecinos: pd.DataFrame       # anterior y siguiente de cada pasaje del mismo discurso
     raiz_indice: str = "stem"   # preprocesamiento del ganador ("stem" o "lema")
     ner_slug: str | None = None  # NER de la consulta libre (None: el principal de config/ner.yaml)
+    # v2: el NER ganador (XLM-R large) no cabe en Streamlit Community Cloud y la consulta libre
+    # usa solo reglas, con aviso (docs/decisiones.md, 2026-11-24)
+    ner_libre: bool = True
     bloqueados: frozenset[str] = frozenset()  # D32: no se muestran, ni como contexto
 
     def consulta(self, query_id: str) -> dict:
@@ -151,7 +154,7 @@ def cargar_v2(r: Path | None = None) -> Artefactos:
                       _csv(r / "salida" / "v2" / "respuestas.csv"),
                       _csv(r / "salida" / "v2" / "10_evidencias.csv"),
                       raiz_indice=mejor.get("preprocesamiento", "stem"),
-                      ner_slug=ner.get("slug"))
+                      ner_slug=ner.get("slug"), ner_libre=False)
 
 
 def cargar_artefactos(r: Path | None = None) -> Artefactos:
