@@ -281,11 +281,11 @@ Fuentes: `salida/v2/respuestas.csv` (`estado`; Q9, `sucursales`), `salida/v2/tab
 
 **Expone: Leo. Tiempo: 3:30. Acumulado: 16:55.**
 
-*Demo web pública (R11, S10). Orden sugerido: el recorrido guiado de Dos Bocas; una de las quince
+*Demo web pública (R11, S10). Orden sugerido: el recorrido guiado, que abre con Tren Maya y cierra con Dos Bocas como caso difícil; una de las quince
 preguntas con su respuesta y su cita; una consulta libre con fechas propuesta por el público.
 Tener abierta la versión local (`make demo-web`) por si falla la red; no mostrar la terminal.*
 
-Dirección: https://examenmineriatextos-pccjbzo754exhckj6rb75v.streamlit.app/ (Streamlit Community Cloud, datos v2; la consulta libre usa solo reglas porque
+Dirección: https://datisa.streamlit.app (Streamlit Community Cloud, datos v2; la consulta libre usa solo reglas porque
 el NER v2 no cabe en la nube). Streamlit duerme las apps sin uso y la primera carga tarda: abrir
 la página y hacer una consulta antes de empezar la presentación.
 
@@ -313,4 +313,4 @@ Gracias. La demo queda abierta para que la prueben con sus propias preguntas.
 
 *Créditos con «Leo Yahir» (PV3) y la dirección de la demo web.*
 
-Demo: https://examenmineriatextos-pccjbzo754exhckj6rb75v.streamlit.app/
+Demo: https://datisa.streamlit.app

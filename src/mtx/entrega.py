@@ -353,7 +353,10 @@ def c13_pruebas(cx: Contexto) -> Resultado:
                            text=True, check=False)
         ultima = (p.stdout.strip().splitlines() or ["sin salida"])[-1]
         if p.returncode != 0:
-            return Resultado(13, titulo, FALLA, [f"pytest: {ultima}"])
+            # Sin salida en stdout, el motivo está en stderr (uv o un proceso terminado).
+            err = p.stderr.strip().splitlines()[-5:]
+            return Resultado(13, titulo, FALLA, [f"pytest: {ultima} (código {p.returncode})",
+                                                 *[f"stderr: {x}" for x in err]])
         det.append(f"pytest: {ultima}")
     else:
         det.append("pruebas omitidas (--sin-pruebas)")
