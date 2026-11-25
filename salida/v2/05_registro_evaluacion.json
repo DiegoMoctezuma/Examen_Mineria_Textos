@@ -1,0 +1,25 @@
+{
+  "ejecutado": "2026-11-24T19:27:34",
+  "comando_oficial": "python kit/evaluar.py ir salida/v2/juicios_relevancia.csv salida/v2/ranking_8_variantes.csv",
+  "consultas": 15,
+  "map_oficial_8_variantes": {
+    "bm25_con_filtro": 0.5356,
+    "bm25_lema_con_filtro": 0.507,
+    "bm25_lema_sin_filtro": 0.5153,
+    "bm25_sin_filtro": 0.5274,
+    "tfidf_con_filtro": 0.3521,
+    "tfidf_lema_con_filtro": 0.3493,
+    "tfidf_lema_sin_filtro": 0.3371,
+    "tfidf_sin_filtro": 0.3313
+  },
+  "mejor_modelo": "bm25_con_filtro",
+  "avisos": [],
+  "sha256": {
+    "kit/evaluar.py": "b70c33ca2cd1436a7d26186786e8ca6685e7d4e3bab8820d054bf6bea891a90f",
+    "juicios_relevancia.csv": "1200e2cec5bcc614b7ab6589d314869135a4b06bbdb849ec9b620de2fa217078",
+    "ranking_8_variantes.csv": "f6d1441f7f937fb1d60425cd39bef88696cd23659ef93c771219a9c905dc527e",
+    "05_ir_8_variantes.csv": "ec93fb05177b6190cc16c72b110e47cc120cbcab6f470aa9e0de642959dda9da",
+    "ranking.csv": "61924ce302cd213466ab00d7fc1d59041db6edd5856d045bbec925b19b24f0bc",
+    "resultados_ir.csv": "7a088e641a26831a4c200753190425a7e9a1dd8a65e4e1922a1ca8bb2d29be8b"
+  }
+}

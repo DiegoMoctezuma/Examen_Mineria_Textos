@@ -1,0 +1,56 @@
+analisis,modelo,comparado_con,consultas,valor,ic95_inf,ic95_sup,p_valor,nota
+map_ic95_bootstrap,tfidf_con_filtro,,15,0.3521,0.2668,0.4454,,"10000 remuestreos de consultas, semilla 42"
+map_ic95_bootstrap,bm25_con_filtro,,15,0.5356,0.4329,0.6407,,"10000 remuestreos de consultas, semilla 42"
+map_ic95_bootstrap,tfidf_sin_filtro,,15,0.3313,0.2321,0.4337,,"10000 remuestreos de consultas, semilla 42"
+map_ic95_bootstrap,bm25_sin_filtro,,15,0.5274,0.4098,0.6398,,"10000 remuestreos de consultas, semilla 42"
+map_ic95_bootstrap,tfidf_lema_con_filtro,,15,0.3493,0.2833,0.4184,,"10000 remuestreos de consultas, semilla 42"
+map_ic95_bootstrap,bm25_lema_con_filtro,,15,0.507,0.3986,0.6183,,"10000 remuestreos de consultas, semilla 42"
+map_ic95_bootstrap,tfidf_lema_sin_filtro,,15,0.3371,0.2592,0.4118,,"10000 remuestreos de consultas, semilla 42"
+map_ic95_bootstrap,bm25_lema_sin_filtro,,15,0.5153,0.4025,0.6263,,"10000 remuestreos de consultas, semilla 42"
+permutacion_pareada,bm25_con_filtro,tfidf_con_filtro,15,0.1835,,,0.0137,"diferencia de MAP; 10000 permutaciones, semilla 42, bilateral"
+permutacion_pareada,bm25_con_filtro,tfidf_sin_filtro,15,0.2043,,,0.01,"diferencia de MAP; 10000 permutaciones, semilla 42, bilateral"
+permutacion_pareada,bm25_con_filtro,bm25_sin_filtro,15,0.0082,,,0.8089,"diferencia de MAP; 10000 permutaciones, semilla 42, bilateral"
+permutacion_pareada,bm25_con_filtro,tfidf_lema_con_filtro,15,0.1863,,,0.0043,"diferencia de MAP; 10000 permutaciones, semilla 42, bilateral"
+permutacion_pareada,bm25_con_filtro,bm25_lema_con_filtro,15,0.0286,,,0.0682,"diferencia de MAP; 10000 permutaciones, semilla 42, bilateral"
+permutacion_pareada,bm25_con_filtro,tfidf_lema_sin_filtro,15,0.1985,,,0.0072,"diferencia de MAP; 10000 permutaciones, semilla 42, bilateral"
+permutacion_pareada,bm25_con_filtro,bm25_lema_sin_filtro,15,0.0204,,,0.5071,"diferencia de MAP; 10000 permutaciones, semilla 42, bilateral"
+sensibilidad_unanimidad,bm25_con_filtro,,15,0.3547,,,,relevante con al menos 3 de 3 votos (kit)
+sensibilidad_unanimidad,bm25_lema_con_filtro,,15,0.3201,,,,relevante con al menos 3 de 3 votos (kit)
+sensibilidad_unanimidad,bm25_lema_sin_filtro,,15,0.3344,,,,relevante con al menos 3 de 3 votos (kit)
+sensibilidad_unanimidad,bm25_sin_filtro,,15,0.3611,,,,relevante con al menos 3 de 3 votos (kit)
+sensibilidad_unanimidad,tfidf_con_filtro,,15,0.243,,,,relevante con al menos 3 de 3 votos (kit)
+sensibilidad_unanimidad,tfidf_lema_con_filtro,,15,0.2575,,,,relevante con al menos 3 de 3 votos (kit)
+sensibilidad_unanimidad,tfidf_lema_sin_filtro,,15,0.2592,,,,relevante con al menos 3 de 3 votos (kit)
+sensibilidad_unanimidad,tfidf_sin_filtro,,15,0.2401,,,,relevante con al menos 3 de 3 votos (kit)
+sensibilidad_al_menos_1_de_3,bm25_con_filtro,,15,0.5628,,,,relevante con al menos 1 de 3 votos (kit)
+sensibilidad_al_menos_1_de_3,bm25_lema_con_filtro,,15,0.552,,,,relevante con al menos 1 de 3 votos (kit)
+sensibilidad_al_menos_1_de_3,bm25_lema_sin_filtro,,15,0.5684,,,,relevante con al menos 1 de 3 votos (kit)
+sensibilidad_al_menos_1_de_3,bm25_sin_filtro,,15,0.5652,,,,relevante con al menos 1 de 3 votos (kit)
+sensibilidad_al_menos_1_de_3,tfidf_con_filtro,,15,0.4286,,,,relevante con al menos 1 de 3 votos (kit)
+sensibilidad_al_menos_1_de_3,tfidf_lema_con_filtro,,15,0.4169,,,,relevante con al menos 1 de 3 votos (kit)
+sensibilidad_al_menos_1_de_3,tfidf_lema_sin_filtro,,15,0.4182,,,,relevante con al menos 1 de 3 votos (kit)
+sensibilidad_al_menos_1_de_3,tfidf_sin_filtro,,15,0.4228,,,,relevante con al menos 1 de 3 votos (kit)
+inflacion_pool_v1,tfidf_con_filtro,,10,0.362,,,,"Q1 a Q10, juicios agregados solo sobre los pares del pool v1 (lote 1)"
+inflacion_pool_v2,tfidf_con_filtro,inflacion_pool_v1,10,0.2996,,,,"Q1 a Q10, juicios agregados sobre todo el pool v2; el kit divide entre los relevantes del pool"
+inflacion_pool_v1,bm25_con_filtro,,10,0.6353,,,,"Q1 a Q10, juicios agregados solo sobre los pares del pool v1 (lote 1)"
+inflacion_pool_v2,bm25_con_filtro,inflacion_pool_v1,10,0.5328,,,,"Q1 a Q10, juicios agregados sobre todo el pool v2; el kit divide entre los relevantes del pool"
+inflacion_pool_v1,tfidf_sin_filtro,,10,0.3346,,,,"Q1 a Q10, juicios agregados solo sobre los pares del pool v1 (lote 1)"
+inflacion_pool_v2,tfidf_sin_filtro,inflacion_pool_v1,10,0.2806,,,,"Q1 a Q10, juicios agregados sobre todo el pool v2; el kit divide entre los relevantes del pool"
+inflacion_pool_v1,bm25_sin_filtro,,10,0.5939,,,,"Q1 a Q10, juicios agregados solo sobre los pares del pool v1 (lote 1)"
+inflacion_pool_v2,bm25_sin_filtro,inflacion_pool_v1,10,0.5073,,,,"Q1 a Q10, juicios agregados sobre todo el pool v2; el kit divide entre los relevantes del pool"
+p_at_10,tfidf_con_filtro,,15,0.5933,,,,
+ndcg_at_10,tfidf_con_filtro,,15,0.6263,,,,"binario, ideal con min(relevantes del pool, 10)"
+p_at_10,bm25_con_filtro,,15,0.7667,,,,
+ndcg_at_10,bm25_con_filtro,,15,0.7862,,,,"binario, ideal con min(relevantes del pool, 10)"
+p_at_10,tfidf_sin_filtro,,15,0.5533,,,,
+ndcg_at_10,tfidf_sin_filtro,,15,0.5794,,,,"binario, ideal con min(relevantes del pool, 10)"
+p_at_10,bm25_sin_filtro,,15,0.7467,,,,
+ndcg_at_10,bm25_sin_filtro,,15,0.7674,,,,"binario, ideal con min(relevantes del pool, 10)"
+p_at_10,tfidf_lema_con_filtro,,15,0.6067,,,,
+ndcg_at_10,tfidf_lema_con_filtro,,15,0.6359,,,,"binario, ideal con min(relevantes del pool, 10)"
+p_at_10,bm25_lema_con_filtro,,15,0.72,,,,
+ndcg_at_10,bm25_lema_con_filtro,,15,0.7617,,,,"binario, ideal con min(relevantes del pool, 10)"
+p_at_10,tfidf_lema_sin_filtro,,15,0.5867,,,,
+ndcg_at_10,tfidf_lema_sin_filtro,,15,0.6079,,,,"binario, ideal con min(relevantes del pool, 10)"
+p_at_10,bm25_lema_sin_filtro,,15,0.72,,,,
+ndcg_at_10,bm25_lema_sin_filtro,,15,0.7483,,,,"binario, ideal con min(relevantes del pool, 10)"

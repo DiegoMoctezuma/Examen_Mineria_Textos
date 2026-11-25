@@ -1,0 +1,24 @@
+{
+  "modelo": "bm25_con_filtro",
+  "preprocesamiento": "stem",
+  "modelo_en_ranking_csv": "bm25_con_filtro",
+  "MAP": 0.5356,
+  "alternativa": "bm25_lema_con_filtro",
+  "MAP_alternativa": 0.507,
+  "diferencia": 0.0286,
+  "empate": false,
+  "empatados": [
+    "bm25_con_filtro"
+  ],
+  "map_con_filtro": {
+    "tfidf_con_filtro": 0.3521,
+    "bm25_con_filtro": 0.5356,
+    "tfidf_lema_con_filtro": 0.3493,
+    "bm25_lema_con_filtro": 0.507
+  },
+  "regla": "D28: mayor MAP oficial (kit, juicios agregados por mayoría) entre las 4 variantes con filtro; empate a 4 decimales → bm25_con_filtro",
+  "sha256_ranking_8_variantes_csv": "f6d1441f7f937fb1d60425cd39bef88696cd23659ef93c771219a9c905dc527e",
+  "sha256_ranking_csv_v2": "61924ce302cd213466ab00d7fc1d59041db6edd5856d045bbec925b19b24f0bc",
+  "sha256_juicios_relevancia_csv_v2": "1200e2cec5bcc614b7ab6589d314869135a4b06bbdb849ec9b620de2fa217078",
+  "sha256_05_ir_8_variantes_csv": "ec93fb05177b6190cc16c72b110e47cc120cbcab6f470aa9e0de642959dda9da"
+}
