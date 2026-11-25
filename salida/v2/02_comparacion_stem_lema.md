@@ -9,7 +9,7 @@ Mismo pipeline (NFC, `RE_TOKEN`, stoplist y longitud mínima sobre la superficie
 | Tokens por pasaje (avgdl) | 72.21 | 72.21 |
 | Pasajes sin tokens | 0 | 0 |
 
-Lematizar el corpus tomó 18.9 min.
+Lematizar el corpus tomó 15.4 min.
 
 ## Pares de palabras
 
@@ -44,3 +44,8 @@ idf con la fórmula de BM25, ln(1 + (N - df + 0.5) / (df + 0.5)).
 | Q8: aumento al salario mínimo y acuerdo con empresarios | `aument` (3.04), `salari` (3.78), `minim` (4.22), `acuerd` (2.24), `empresari` (3.66) | `aumento` (4.19), `salario` (3.78), `mínimo` (4.15), `acuerdo` (2.38), `empresario` (3.67) |
 | Q9: operación y apertura de sucursales del Banco del Bienestar | `oper` (2.78), `apertur` (5.56), `sucursal` (4.73), `banc` (3.49), `bienest` (2.79) | `operación` (3.46), `apertura` (5.65), `sucursal` (4.73), `banco` (3.57), `bienestar` (2.79) |
 | Q10: construcción y operación del Tren Interoceánico del Istmo de Tehuantepec | `construccion` (3.12), `oper` (2.78), `tren` (3.19), `interocean` (6.09), `istmo` (4.63), `tehuantepec` (5.62) | `construcción` (3.12), `operación` (3.46), `tren` (3.19), `interoceánico` (6.09), `istmo` (4.63), `tehuantepec` (5.62) |
+| Q11: despliegue de la Guardia Nacional en los estados | `desplieg` (5.30), `guardi` (3.14), `nacional` (1.94) | `despliegue` (5.37), `guardia` (3.15), `nacional` (1.96) |
+| Q12: atención médica gratuita del IMSS-Bienestar | `atencion` (2.77), `medic` (2.84), `gratuit` (4.09), `imss-bienest` (4.45) | `atención` (2.77), `médico` (2.86), `gratuito` (4.10), `imss-bienestar` (4.45) |
+| Q13: reforma eléctrica y fortalecimiento de la CFE | `reform` (2.66), `electr` (3.28), `fortalec` (3.62), `cfe` (5.43) | `reforma` (2.73), `eléctrico` (3.66), `fortalecimiento` (5.20), `cfe` (5.43) |
+| Q14: becas para aprendices de Jóvenes Construyendo el Futuro | `bec` (3.74), `aprendic` (5.24), `joven` (2.94), `constru` (2.86), `futur` (3.95) | `beca` (3.78), `aprendices` (5.28), `jóvenes` (4.78), `construir` (2.92), `futuro` (3.95) |
+| Q15: daños y reconstrucción de Acapulco tras el huracán Otis | `dañ` (3.57), `reconstruccion` (5.32), `acapulc` (4.56), `tras` (5.28), `huracan` (4.98), `otis` (6.69) | `daño` (3.85), `reconstrucción` (5.32), `acapulco` (4.56), `tras` (5.28), `huracán` (4.98), `otis` (6.69) |
