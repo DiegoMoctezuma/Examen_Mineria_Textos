@@ -80,6 +80,8 @@ def test_oracion_ejemplo_prefiere_la_que_tiene_mas_terminos():
 def test_tokenizacion_e_idf(est):
     pasos = F.pasos_tokenizacion("Vamos a la refinería de Dos Bocas.")
     assert [p for p, _ in pasos][-1].startswith("4.") and "refin" in pasos[-1][1]
+    con_lema = F.pasos_tokenizacion("Vamos a la refinería.", ["ir", "refinería"])
+    assert not any("examen" in p or "proyecto final" in p for p, _ in con_lema)
     _ok(F.fig_tokenizacion(pasos, "Mañanera del 1 de julio de 2022 · fragmento 3", est),
         ejes=False)
     t = F.terminos_idf("combate al huachicol", {"combat": 100, "huachicol": 10}, 1000)
@@ -91,7 +93,9 @@ def test_tokenizacion_e_idf(est):
 def test_stem_lema_e_indice(est):
     pares = pd.DataFrame({"palabra": ["maya", "mayo"], "stem": ["may", "may"],
                           "df_stem": [10, 10], "lema": ["maya", "mayo"], "df_lema": [6, 4]})
-    _ok(F.fig_stem_lema(pares, est), ejes=False)
+    fig = F.fig_stem_lema(pares, est)
+    _ok(fig, ejes=False)
+    assert "examen" not in F.textos_visibles(fig) and "proyecto final" not in F.textos_visibles(fig)
     post = [{"palabra": "huachicol", "raiz": "huachicol", "df": 7, "idf": 5.1,
              "top": [("Mañanera del 25 de enero de 2019 · fragmento 26", 7)]}]
     _ok(F.fig_indice(post, 1000, est), ejes=False)
@@ -136,9 +140,13 @@ def test_ie(est):
                           for t, f, g in (("PER", 0.7, 10), ("FECHA", 0.5, 8), ("TODOS", 0.65, 18))])
     fig = F.fig_f1_referencias(ref, res_c, est)
     _ok(fig)
-    assert list(fig.data[0].x) == ["Personas", "Fechas", "Todas"] and len(fig.data) == 3
-    assert list(fig.data[0].error_y.array)[:2] == [0, 0] and fig.data[0].error_y.array[2] > 0
-    assert "solo 8 en el gold" in fig.layout.title.subtitle.text
+    assert list(fig.data[0].x) == ["Personas", "Fechas", "Todas"] and len(fig.data) == 4
+    intervalo = fig.data[1]  # solo en «Todas»
+    assert list(intervalo.x) == ["Todas"] and intervalo.error_y.array[0] > 0
+    techo = next(d for d in fig.data if d.name and "techo" in d.name)
+    assert pd.isna(list(techo.y)[1])  # sin rombo de techo en Fechas
+    assert "solo 8 fechas anotadas" in fig.layout.title.subtitle.text
+    assert "gold" not in F.textos_visibles(fig)
     err = pd.DataFrame({"error": ["FP", "FN", "FN"], "categoria": ["frontera", "omision",
                                                                     "frontera:entidad_partida"],
                         "tipo": ["LOC"] * 3, "metodo": ["modelo"] * 3, "n": [3, 2, 1]})

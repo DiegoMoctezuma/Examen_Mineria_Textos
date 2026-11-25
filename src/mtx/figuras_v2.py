@@ -175,7 +175,9 @@ def fig_acotaciones(limpieza: dict, est: Estilo, n: int = 8, version: str = "v2"
     top = sorted(tipos.items(), key=lambda kv: -kv[1])[:n]
     fig = go.Figure(go.Bar(x=[v for _, v in top][::-1], y=[f"«{k}»" for k, _ in top][::-1],
                            orientation="h", marker_color=pal["dorado"],
-                           text=[miles(v) for _, v in top][::-1], textposition="outside"))
+                           text=[miles(v) for _, v in top][::-1], textposition="outside",
+                           cliponaxis=False))
+    fig.update_xaxes(range=[0, max(v for _, v in top) * 1.15])
     total = limpieza["acotaciones_eliminadas"]
     return _base(fig, est, "Acotaciones: notas del transcriptor, no palabras de nadie",
                  "Veces que aparece en las versiones estenográficas", "Acotación", version,
@@ -203,9 +205,9 @@ def pasos_tokenizacion(oracion: str, lemas: list[str] | None = None) -> list[tup
     pasos = [("1. Oración original", oracion),
              ("2. Minúsculas y palabras", " · ".join(palabras)),
              ("3. Sin palabras vacías que no distinguen temas", " · ".join(sin_vacias)),
-             ("4. Raíz (stemming, examen)", " · ".join(P.tokenizar(oracion)))]
+             ("4. Raíz (stemming)", " · ".join(P.tokenizar(oracion)))]
     if lemas is not None:
-        pasos.append(("5. Lema (proyecto final)", " · ".join(lemas)))
+        pasos.append(("5. Lema", " · ".join(lemas)))
     return pasos
 
 
@@ -248,8 +250,7 @@ def fig_idf(t: pd.DataFrame, nombre: str, N: int, est: Estilo, version: str = "v
 def fig_stem_lema(pares: pd.DataFrame, est: Estilo, version: str = "v2"):
     """Stem contra lema: qué palabras junta cada uno y en cuántos fragmentos aparece la raíz."""
     go = _go()
-    fig = go.Figure(_tabla(est, ["Palabra", "Raíz (examen)", "Fragmentos", "Lema (proyecto final)",
-                                 "Fragmentos"],
+    fig = go.Figure(_tabla(est, ["Palabra", "Raíz", "Fragmentos", "Lema", "Fragmentos"],
                            [list(pares["palabra"]), list(pares["stem"]),
                             [miles(x) for x in pares["df_stem"]], list(pares["lema"]),
                             [miles(x) for x in pares["df_lema"]]]))
@@ -353,7 +354,10 @@ def fig_map(maps: pd.DataFrame, ganador: str, est: Estilo, version: str = "v2"):
 def fig_ap_consulta(ap: pd.DataFrame, modelos: list[str], est: Estilo, version: str = "v2"):
     """S6: AP por pregunta con nombres y ejes; `ap` tiene query_id, modelo y AP."""
     go, pal = _go(), est.paleta
-    colores = [pal["guinda"], pal["dorado"], pal["gris"], pal["guinda_oscuro"]]
+    por_modelo = {"bm25_con_filtro": pal["guinda"], "bm25_lema_con_filtro": pal["dorado"],
+                  "tfidf_con_filtro": pal["gris"], "tfidf_lema_con_filtro": pal["dorado_claro"]}
+    resto = [pal["guinda_oscuro"], pal["texto"]]
+    colores = [por_modelo.get(m) or resto[i % len(resto)] for i, m in enumerate(modelos)]
     qs = sorted(ap["query_id"].unique(), key=lambda q: int(q.lstrip("Q")))
     barras = []
     for modelo, color in zip(modelos, colores):
@@ -364,10 +368,12 @@ def fig_ap_consulta(ap: pd.DataFrame, modelos: list[str], est: Estilo, version: 
     fig = go.Figure(barras)
     fig.update_layout(barmode="group")
     fig.update_yaxes(range=[0, 100])
-    fig.update_xaxes(tickangle=-35)
-    return _base(fig, est, "Precisión promedio (AP) por pregunta", "Pregunta", "AP (%)", version,
-                 "Más alto es mejor: los relevantes aparecen antes en el top 10", alto=600,
-                 ancho=1250)
+    fig.update_xaxes(tickangle=-35, automargin=True)
+    fig = _base(fig, est, "Precisión promedio (AP) por pregunta", "Pregunta", "AP (%)", version,
+                "Más alto es mejor: los relevantes aparecen antes en el top 10", alto=700,
+                ancho=1250)
+    fig.update_layout(margin={"b": 200})
+    return fig
 
 
 # --------------------------------------------------------------------------- IE (S7, S7c, S8)
@@ -418,24 +424,35 @@ def fig_f1_referencias(ref: pd.DataFrame, res: pd.DataFrame, est: Estilo, versio
         name="Sistema (combinado)", x=[NOMBRE_TIPO[t] for t in tipos], y=100 * f1,
         marker_color=[pal["guinda_oscuro"] if t == "TODOS" else pal["guinda"] for t in tipos],
         text=[pct(v, 0) for v in f1], textposition="inside", insidetextanchor="start",
-        textfont={"color": "white"},
-        error_y={"type": "data", "symmetric": False, "array": [100 * v for v in sup],
-                 "arrayminus": [100 * v for v in inf], "color": pal["texto"]}))
+        textfont={"color": "white"}))
+    if "TODOS" in tipos and any(sup):
+        # Intervalo solo en «Todas», en su propio trazo para que las demás barras no lleven tope.
+        k = tipos.index("TODOS")
+        fig.add_trace(go.Scatter(
+            x=[NOMBRE_TIPO["TODOS"]], y=[100 * f1["TODOS"]], mode="markers",
+            marker={"size": 1, "color": pal["texto"]}, showlegend=False, hoverinfo="skip",
+            error_y={"type": "data", "symmetric": False, "array": [100 * sup[k]],
+                     "arrayminus": [100 * inf[k]], "color": pal["texto"], "thickness": 3,
+                     "width": 16}))
     for nombre, clave, simbolo, color in (("Acuerdo entre dos personas (techo)", "techo_humano",
                                            "diamond", pal["dorado"]),
                                           ("Solo diccionario (línea base)", "linea_base_gazetteer",
                                            "x", pal["gris"])):
         r = ref[ref["referencia"] == clave].drop_duplicates("tipo").set_index("tipo")
         r = r.reindex(tipos)
+        y = 100 * r["f1"].astype(float)
+        if clave == "techo_humano" and "FECHA" in tipos:
+            y[y.index == "FECHA"] = float("nan")  # cada anotador marcó una sola fecha: no se lee
         fig.add_trace(go.Scatter(name=nombre, x=[NOMBRE_TIPO[t] for t in tipos],
-                                 y=100 * r["f1"].astype(float), mode="markers",
+                                 y=y, mode="markers",
                                  marker={"symbol": simbolo, "size": 16, "color": color,
                                          "line": {"width": 1, "color": pal["texto"]}}))
     fig.update_yaxes(range=[0, 105])
-    sub = "Barra de error en «Todas»: intervalo del 95 % (bootstrap sobre los pasajes del gold)"
+    sub = ("Barra de error en «Todas»: intervalo del 95 % (bootstrap sobre los pasajes anotados "
+           "a mano)")
     if "FECHA" in comb.index:
-        sub += (f". Fechas: evaluación exploratoria, solo {int(comb.at['FECHA', 'gold'])} en el "
-                "gold")
+        sub += (f". Fechas: evaluación exploratoria, solo {int(comb.at['FECHA', 'gold'])} fechas "
+                "anotadas, sin referencia humana")
     return _base(fig, est, "¿Está bien el F1? Comparado con lo que logran dos personas",
                  "Tipo de entidad", "F1 (%)", version, sub, alto=560)
 
@@ -471,9 +488,13 @@ def fig_estados(resp: pd.DataFrame, est: Estilo, version: str = "v2"):
                      x=t[e], orientation="h", marker_color=colores[e])
               for e in colores if e in t.columns]
     fig = go.Figure(barras)
-    fig.update_layout(barmode="stack", legend={"orientation": "v", "y": -0.2})
-    return _base(fig, est, "Qué tan respaldada está cada respuesta", "Valores en la tabla",
-                 "Pregunta", version, None, alto=200 + 38 * len(qs) + 140)
+    fig.update_layout(barmode="stack")
+    fig = _base(fig, est, "Qué tan respaldada está cada respuesta", "Valores en la tabla",
+                "Pregunta", version, None, alto=200 + 38 * len(qs) + 140)
+    fig.update_layout(legend={"orientation": "v", "y": -0.09, "yanchor": "top", "x": 0,
+                              "xanchor": "left", "font": {"size": 18}},
+                      margin={"b": 230}, height=fig.layout.height + 150)
+    return fig
 
 
 def textos_visibles(fig) -> str:
