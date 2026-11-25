@@ -1,0 +1,109 @@
+{
+  "s2a_corpus": {
+    "archivo": "salida/v2/figuras/s2a_corpus.png",
+    "titulo": "De 2,294 discursos a 127,739 fragmentos que se pueden buscar",
+    "datos": "corpus",
+    "fuentes": {
+      "salida/01_limpieza.json": "98dba284d0926e666c3e59772d1bf841dcb59dcbae011b6986c736627d880604"
+    }
+  },
+  "s2b_acotaciones": {
+    "archivo": "salida/v2/figuras/s2b_acotaciones.png",
+    "titulo": "Acotaciones: notas del transcriptor, no palabras de nadie",
+    "datos": "corpus",
+    "fuentes": {
+      "salida/01_limpieza.json": "98dba284d0926e666c3e59772d1bf841dcb59dcbae011b6986c736627d880604"
+    }
+  },
+  "s4c_tokenizacion": {
+    "archivo": "salida/v2/figuras/s4c_tokenizacion.png",
+    "titulo": "Cómo se convierte una oración en términos del índice",
+    "datos": "v1",
+    "fuentes": {
+      "ranking.csv": "37ffa3e4367faf8d48f069afd3570ea44a44b4016a33cd1e9da8d92a88ec7f10",
+      "data/pasajes.parquet": "766859a1ab322a449b6ce3ef9e25d15b95f275d140804f3935db7c1de632af0d"
+    }
+  },
+  "s4d_idf": {
+    "archivo": "salida/v2/figuras/s4d_idf.png",
+    "titulo": "La unidad es el idf: entre más raro el término, más pesa",
+    "datos": "corpus",
+    "fuentes": {
+      "data/indice.pkl": "0945fd295b8eff68928efdda56f267da56482d10badc54ad90a23d141f00d765",
+      "data/consultas.csv": "da1d7e84602ea407b03d60c5e60f9c6b4381d7ea2a55d5b4c4de0d602d55018b"
+    }
+  },
+  "stem_lema": {
+    "archivo": "salida/v2/figuras/stem_lema.png",
+    "titulo": "El stemming junta «maya» con «mayo»; el lema las separa",
+    "datos": "v2",
+    "fuentes": {
+      "data/indice.pkl": "0945fd295b8eff68928efdda56f267da56482d10badc54ad90a23d141f00d765",
+      "data/v2/indice_lema.pkl": "1282ba63b229c487e3171b34ece4b4dc7ad562c011d41a9010933b327d2138e1"
+    }
+  },
+  "r09_indice_invertido": {
+    "archivo": "salida/v2/figuras/r09_indice_invertido.png",
+    "titulo": "El índice invertido: para cada término, la lista de fragmentos donde aparece",
+    "datos": "corpus",
+    "fuentes": {
+      "data/indice.pkl": "0945fd295b8eff68928efdda56f267da56482d10badc54ad90a23d141f00d765",
+      "data/pasajes.parquet": "766859a1ab322a449b6ce3ef9e25d15b95f275d140804f3935db7c1de632af0d"
+    }
+  },
+  "s5a_ap_explicado": {
+    "archivo": "salida/v2/figuras/s5a_ap_explicado.png",
+    "titulo": "Cómo se calcula el AP: «Pregunta 3 · Dos Bocas»",
+    "datos": "v1",
+    "fuentes": {
+      "ranking.csv": "37ffa3e4367faf8d48f069afd3570ea44a44b4016a33cd1e9da8d92a88ec7f10",
+      "juicios_relevancia.csv": "ef68db565626bde13a2dc0cc2db6f3f59f55e0c34d78325666d63f81e8c01c35",
+      "resultados_ir.csv": "edf51c066c7fac2d4f2c8638ac95b7a896f76f3ea5ba50932153d784905c0db4"
+    }
+  },
+  "s5a_map_por_modelo": {
+    "archivo": "salida/v2/figuras/s5a_map_por_modelo.png",
+    "titulo": "BM25 · raíz · con filtro de fecha recupera mejor: MAP de 48.4 %",
+    "datos": "v1",
+    "fuentes": {
+      "resultados_ir.csv": "edf51c066c7fac2d4f2c8638ac95b7a896f76f3ea5ba50932153d784905c0db4"
+    }
+  },
+  "s6_ap_por_consulta": {
+    "archivo": "salida/v2/figuras/s6_ap_por_consulta.png",
+    "titulo": "Precisión promedio (AP) por pregunta",
+    "datos": "v1",
+    "fuentes": {
+      "resultados_ir.csv": "edf51c066c7fac2d4f2c8638ac95b7a896f76f3ea5ba50932153d784905c0db4"
+    }
+  },
+  "s7c_prf_por_tipo": {
+    "archivo": "salida/v2/figuras/s7c_prf_por_tipo.png",
+    "titulo": "Qué tan bien se extrae cada tipo de entidad",
+    "datos": "v1",
+    "fuentes": {
+      "resultados_ie.csv": "6ecf82b48d04ab04ca31f5dd1b6d955282ccdc26a6ef402091d3c42445e9054d"
+    }
+  },
+  "s7a_f1_con_referencias": {
+    "archivo": null,
+    "datos": "v1",
+    "nota": "pendiente: necesita las referencias v2 (make all-v2)"
+  },
+  "s8_errores_patrones": {
+    "archivo": "salida/v2/figuras/s8_errores_patrones.png",
+    "titulo": "Los errores se concentran en pocos patrones",
+    "datos": "v1",
+    "fuentes": {
+      "salida/09_resumen_errores.csv": "3c0bb4f695fba611f263e9da1b790be5ee2328ce46fa4857817012ade75c6796"
+    }
+  },
+  "s9_estados_respuesta": {
+    "archivo": "salida/v2/figuras/s9_estados_respuesta.png",
+    "titulo": "Qué tan respaldada está cada respuesta",
+    "datos": "v1",
+    "fuentes": {
+      "salida/respuestas.csv": "6505e1910dd088533466997c3ca54c233d6cba1fc38dd2ba9fa6da09100e811e"
+    }
+  }
+}
