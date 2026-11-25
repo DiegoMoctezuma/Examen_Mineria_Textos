@@ -198,6 +198,8 @@ def test_app_valoraciones_guarda_sin_precargar(tmp_path, monkeypatch):
     monkeypatch.setenv("MTX_ANOTACIONES", str(tmp_path))
     at = AppTest.from_function(_app_val, default_timeout=60).run()
     assert not at.exception
+    if at.sidebar.radio:  # con tablas v2 la pestaña abre en v2; esta prueba es la de v1
+        at.sidebar.radio(key="val_version").set_value("v1").run()
     area = at.text_area[0]
     assert area.value == ""  # nunca precarga texto
     at.button[[b.label for b in at.button].index("Guardar valoración")].click().run()
