@@ -137,3 +137,59 @@ Las láminas técnicas que **no tienen ejemplo concreto (o lo tienen incompleto)
 3. **Traducir las métricas a resultados de negocio y reforzar con ejemplos concretos (Láminas 05, 07, 11–17).** Explicar el desempeño en términos comprensibles para comunicación social (en cuántas consultas la respuesta útil sale en los primeros resultados, cuánto tiempo ahorra frente a la revisión manual) en lugar de depender de `MAP`, `F1` y `kappa`. Incluir ejemplos faltantes en las láminas 05, 11, 14, 15 y 16, corregir el ejemplo de las 262 sucursales en la lámina 17 para aclarar su alcance estatal (Oaxaca) y añadir allí un ejemplo real de dato `Ambiguo` y `Sin evidencia` para demostrar cómo el sistema protege al usuario.
 4. **Corregir errores de datos, orden lógico y legibilidad en las gráficas (Láminas 02, 04, 07, 08, 09, 10, 13 y 15).** Alinear título y gráfica en la lámina 02 (o mover la limpieza a la lámina 04); corregir la cifra recortada `3,47` en la lámina 04 y la etiqueta cortada `Pregunta` en la lámina 13; simplificar las gráficas saturadas de 30 y 60 barras en las láminas 10 y 13 (mostrando promedios y 3 o 4 casos representativos, sin barras en `0` sobre escala logarítmica); aclarar las anomalías visuales del "techo" humano en la lámina 15; y asegurar que ningún término (`MAP`, `idf`, `ambiguo`) aparezca antes de definirse.
 5. **Replantear el arranque de la demostración y orientar los siguientes pasos a adopción operativa (Láminas 18 y 19).** En la lámina 18, abrir el recorrido guiado con un caso sólido (como `Tren Maya` o `Banco del Bienestar` con alcance bien acotado) y usar `Dos Bocas` después para mostrar con transparencia cómo el sistema advierte cuando la evidencia es ambigua; en la lámina 19, sumar pasos de operación real (carga periódica de nuevas conferencias, diccionarios de la dependencia y flujo de revisión editorial).
+
+---
+
+<!-- Lo que sigue lo escribe el equipo; la respuesta del LLM termina en la línea anterior. -->
+
+## Qué tomamos y qué no
+
+Deck regenerado sobre el de 773cc39 con los cambios de Arturo (`laminas/` es de Gonzalo y Arturo, PRD v2 §6.2). Lo que toca figuras (`figuras_v2.py`, Gonzalo), la demo (Leo) o el guion aprobado (Diego y el equipo) no se cambió aquí: se les avisa.
+
+**Seriedad (§6, §8.1)**
+- Caricatura del cierre (20) → tomada: se quitó.
+- «MINERÍA DE TEXTOS» y «Proyecto final» en 01, 18 y 20 → tomada: dicen «DATISA» y ya no hay etiqueta arriba a la derecha.
+- Portada con jerga académica (01) → tomada: subtítulo «Un buscador con respuestas y citas para equipos de comunicación».
+- «BERT en español · el del examen» (14) → tomada: «el de la versión anterior».
+- `(stemming, examen)` y `(proyecto final)` en 06 y 07 → de Gonzalo: van dentro de las figuras `s4c` y `stem_lema`.
+- URL con «examen» (20) → de Leo: es la dirección de la demo.
+
+**Datos y orden**
+- Subtítulo del 15.5 % sin relación con las barras (02) → tomada: se quitó de la figura.
+- Fórmula del idf con coma decimal (09) → tomada: se quitó el subtítulo con la fórmula; las tarjetas dan el idf.
+- Fórmula del AP en el subtítulo (12) → tomada: se quitó.
+- Ejemplo del paso 1 que no es de Dos Bocas (03) → tomada: «Mañanera del 27 de junio de 2022, fragmento 68» (primer resultado de Dos Bocas) y el total de 127,739 pasa al texto del paso.
+- Cómo se arma la tabla (03, 17) → tomada: el paso 4 dice que la arman reglas con lo extraído, sin IA generativa, y el mensaje de la 17 dice que el sistema clasifica con reglas (columna `regla_relacion` de `salida/v2/respuestas.csv`).
+- 262 sucursales sin aclarar que son de Oaxaca (17) → tomada: «262 sucursales en Oaxaca».
+- Sin ejemplo de ambiguo ni de sin evidencia (17) → tomada: Q3, «Soy Yesenia Peralta, de Business Energy, Tabasco.» (pregunta de reportero, 27 de septiembre de 2022) y Q1, montos del Tren Maya (`no_encontrado`).
+- `MAP` antes de definirse (07) → tomada: el apoyo de las tarjetas dice «Calidad de búsqueda».
+- Separador de miles con punto (07) → no: la tabla de la figura usa coma (6,504).
+- Eje del idf en % de fragmentos (09) → no: es la figura de Gonzalo y las tarjetas dan el idf de cada palabra.
+- `índice`, `indexar` y `«ambiguo»` antes de definirse (04 y 05) → abierto: láminas de Arturo, no entró en esta ronda.
+- Umbral de 40 palabras y fragmentos descartados (05) → abierto: láminas de Arturo, no entró en esta ronda.
+
+**Jerga**
+- `BM25` sin definir (10, 12) → tomada: «con BM25, nuestro buscador» y la nota «BM25 y TF-IDF: dos fórmulas para ordenar fragmentos».
+- `kappa de Fleiss` sin referencia (11) → tomada: «va de 0 (azar) a 1 (acuerdo total)».
+- `MAP` sin decir qué mide (12) → tomada: el panel se llama «MAP: calidad promedio».
+- p = 0.014 sin explicar (13) → tomada: «la diferencia no es casualidad (p = 0.014)».
+- `F1` sin definir (14) → tomada: «combina qué tanto acierta y qué tanto encuentra; 100 % es perfecto».
+- `gold` (15, 16, 19) → tomada en el texto de las láminas: «anotación manual». El subtítulo de la figura `s7a` (15) todavía dice «gold» → de Gonzalo.
+- `vacunas (28.6 %)` sin métrica (19) → tomada: «precisión promedio de 25.8 % y 28.6 %».
+
+**Contraste y legibilidad (§5)**
+- Barras grises de los modelos descartados (12, 14) → tomada: más oscuras (`6E9482`).
+- Etiqueta izquierda pegada al borde (02) → tomada: las figuras llevan margen blanco.
+- Barras de la 02 casi iguales → de Gonzalo (figura `s2a`).
+- `3,47` recortado (04) → de Gonzalo (figura `s2b`).
+- Dos rojos parecidos y etiqueta `Pregunta` recortada (13) → de Gonzalo (figura `s6`).
+- Barra de error invisible y rombo contra el eje (15) → de Gonzalo (figura `s7a`).
+- 30 barras en escala logarítmica (10) y leyenda chica (17) → de Gonzalo (figuras `r07` y `s9`).
+- Tabla de 06 y columna de 08 con letra chica → no: las figuras se quedan como están.
+
+**Estructura y demo (§2, §8.2, §8.5)**
+- Pasar 06–10 y 12 a un anexo y condensar la teoría → del equipo: cambia el guion que aprobó Diego.
+- Captura de la herramienta antes de la demo → del equipo y de Leo.
+- Operación: cargar conferencias nuevas, tiempos y despliegue (19) → del equipo.
+- Empezar la demo con un caso fuerte en lugar de Dos Bocas (18) → de Leo.
+- Métricas como resultados de negocio y más ejemplos en 05, 11, 13, 15 y 16 → del equipo: no entra antes de la entrega sin cambiar el guion.
