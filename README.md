@@ -1,6 +1,6 @@
 # Sistema de recuperación y extracción de información sobre discursos presidenciales
 
-Examen 1 de Minería de Textos · Equipo Datisa: Carpio Angeles Leo Yair, Mera Montiel Gonzalo Sebastian, Moctezuma Ramirez Diego Rafael y Ramirez Maza Luis.
+Proyecto final v2 · Equipo Datisa: Carpio Angeles Leo Yahir, Jaramillo Salmerón Arturo, Mera Montiel Gonzalo Sebastian, Moctezuma Ramirez Diego Rafael, Ramirez Maza Luis y Bruno Ruiz Juarez.
 
 Repositorio: https://github.com/DiegoMoctezuma/Examen_Mineria_Textos
 
@@ -83,6 +83,8 @@ docs/           decisiones, contratos del kit, reproducibilidad, guía de defens
 tests/          pytest sin red (433 pruebas)
 ```
 
+La demo web pública se describe en el manifiesto de ejecución cuando su publicación corresponda a v2. En el manifiesto disponible no se confirma que use datos v2, por lo que aquí no se afirma que la demo esté actualizada.
+
 Los seis CSV de entrega están en la raíz: `ranking.csv`, `juicios_relevancia.csv`,
 `resultados_ir.csv`, `entidades.csv`, `gold_entidades.csv` y `resultados_ie.csv`.
 
@@ -104,45 +106,56 @@ de las tablas de respuesta dejan pasar valores sin la relación pedida.
 ## 8. Resultados principales
 
 <!-- resultados:inicio -->
-MAP por variante (`resultados_ir.csv`, relevancia temática):
 
-| Variante | MAP |
-| --- | --- |
+### Recuperación de información (IR)
+
+**Resultados históricos v1** (`resultados_ir.csv`, relevancia temática):
+
+| Variante v1 | MAP |
+| --- | ---: |
 | TF-IDF sin filtro | 0.287 |
 | TF-IDF con filtro | 0.295 |
 | BM25 sin filtro | 0.469 |
 | BM25 con filtro | 0.484 |
 
-F1 del método combinado por tipo (`resultados_ie.csv`, 20 pasajes gold):
+**Resultado oficial v2.** Se evaluaron ocho variantes. El ganador fue BM25 con stemming y filtro temporal, con MAP de 0.5356.
+
+### Selección del modelo NER
+
+Davlan XLM-R large obtuvo un F1 micro exacto de selección de 0.6780. Esta cifra corresponde a la selección del modelo y no a la evaluación final del extractor.
+
+### Evaluación de extracción (IE)
+
+El método combinado v2 obtuvo precisión de 0.7984, recall de 0.8583 y F1 de 0.8273.
+
+**F1 del método combinado por tipo** (`resultados_ie.csv`, gold v1 de 20 pasajes):
 
 | Tipo | F1 |
-| --- | --- |
+| --- | ---: |
 | PER | 0.679 |
 | ORG | 0.725 |
 | LOC | 0.854 |
 | FECHA | 0.364 |
 | MONTO | 1.000 |
 | TODOS | 0.784 |
-<!-- resultados:fin -->
 
+<!-- resultados:fin -->
 ## 9. Uso de IA
 
-- Asistente: Claude Code (modelo Claude Opus 5.5). Escribió o coescribió todo el código de
-  `src/mtx/`, `scripts/`, `tests/`, la app de anotación, el `Makefile`, los documentos de `docs/`,
-  este README y el reporte, a partir de los resultados reales y del PRD.
-- Autoría de la prosa: el reporte y el README los redactó el asistente y el equipo los revisó.
-  La presentación final (`laminas/Presentacion_Mineria_de_Textos.pptx`) y el guion los hizo el
-  equipo a mano; el guion tuvo apoyo de Codex (registrado en `docs/decisiones.md`).
-- Decisiones y trabajo humano de este repositorio (Diego Moctezuma): fase 0 (plazos, repositorio, utilerías con el profesor),
+- Claude Code y Claude asistieron en la elaboración de borradores de código, pruebas, figuras y del reporte a partir de los resultados y especificaciones del equipo. El equipo revisó estos materiales, las decisiones metodológicas y la interpretación de resultados. La asistencia también se utilizó para revisión metodológica, síntesis y redacción.
+- Diego y Arturo eligieron y redactaron las consultas Q11–Q15 a partir de 12 candidatas propuestas por Claude Code (`config/v2/candidatos_q11q15.yaml`).
+- La presentación final (`laminas/Presentacion_Mineria_de_Textos.pptx`) y el guion los hizo el equipo a mano. El guion tuvo apoyo de Codex (registrado en `docs/decisiones.md`).
+- La presentación final pasa por un procedimiento de revisión ciega, cuya conclusión se documentará cuando esté disponible.
+- Contribuciones históricas de v1 de Diego Moctezuma: fase 0 (plazos, repositorio, utilerías con el profesor),
   criterios de relevancia y de anotación, elección de Q9 y Q10, los 176 juicios de relevancia,
   la revisión de las 104 siglas candidatas, el gold de 20 pasajes y sus convenciones para casos no
   previstos, y las 10 valoraciones de las tablas.
-- Diego Moctezuma consultó a Gemini como tutor para dudas de criterio durante el gold y las
+- En v1, Diego Moctezuma consultó a Gemini como tutor para dudas de criterio durante el gold y las
   valoraciones, con indicaciones de no redactar anotaciones ni valoraciones.
-- Los juicios de relevancia y el gold se hicieron a mano en la app leyendo cada pasaje, en modo
+- En v1, los juicios de relevancia y el gold se hicieron a mano en la app leyendo cada pasaje, en modo
   ciego para el gold (sin predicciones visibles hasta el cierre); el asistente no generó ni sugirió
   ninguno de esos valores. Lo mismo vale para la revisión de siglas y las valoraciones.
-- Verificación del código: 433 pruebas de pytest sin red (contratos del kit, fórmulas de TF-IDF y
+- Verificación histórica de v1: 433 pruebas de pytest sin red (contratos del kit, fórmulas de TF-IDF y
   BM25 contra implementaciones de referencia, reglas, fusión, app), validadores de formato de cada
   CSV y `make validar` con 15 condiciones; el equipo leyó el código para la defensa.
 - Para la demo el equipo debe poder explicar cualquier función del paquete; la guía está en
