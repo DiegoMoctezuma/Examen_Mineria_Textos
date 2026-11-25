@@ -1,0 +1,94 @@
+# Valoraciones del alumno (PRD §6.13.5). Las escribe el alumno en la app;
+# `tabla_sha256` es la huella de la tabla valorada.
+Q1:
+  texto: La respuesta es parcialmente creíble, ya que identifica empresas y estados relacionados con el
+    Tren Maya. Sin embargo, no proporciona información sobre los montos, por lo que responde de manera
+    incompleta a la consulta.
+  tabla_sha256: dcdeee43fd2a49d9ed738d40ceaf8f1dacab8536edc7443ce3a98cde0df2cca8
+  fecha: '2026-11-25T00:10:53'
+Q2:
+  texto: La respuesta es mayormente creíble, aunque presenta imprecisiones en la parte de funcionarios,
+    donde se incluyen personas cuya participación institucional no queda suficientemente respaldado por
+    las citas.
+  tabla_sha256: 07b943efadf4a081ddcf31abcb20033e8d953476317c4eb93bedec3ec20d1d5f
+  fecha: '2026-11-25T00:16:28'
+Q3:
+  texto: La respuesta es parcialmente creíble, pero presenta problemas de pertinencia en las organizaciones
+    y personas responsables. Se incluyen medios de comunicación y plataformas digitales.
+  tabla_sha256: 0365fd9362acd423caff0f65d97f5ce4d18fec171fa06acc3d1f940de61a16bc
+  fecha: '2026-11-25T00:20:31'
+Q4:
+  texto: La respuesta es parcialmente creíble. En el apartado de dependencia constructora se presentan
+    errores de clasificación, como Estado de México y AMLO, que corresponden a un lugar y una persona,
+    respectivamente, y no a organizaciones responsables de la construcción.
+  tabla_sha256: 03d73f3e630290d8230568812671e9b7abbea2f0bcf67c08ca16907f0bce2312
+  fecha: '2026-11-25T00:25:34'
+Q5:
+  texto: La respuesta es parcialmente creíble. Se observan errores de delimitación en los nombres de las
+    organizaciones y no se identifica claramente la secretaría operadora. Además, se mezclan montos de
+    inversión global con montos por beneficiario, aunque el apoyo de cinco mil pesos mensuales sí está
+    respaldado.
+  tabla_sha256: b32e8b9e314e12c2d8b81e3859bc889dacc98e1934d900fa7fe07f652b5c7c8f
+  fecha: '2026-11-25T00:28:32'
+Q6:
+  texto: La respuesta es parcialmente creíble, ya que no todos los montos recuperados corresponden a pérdidas
+    por robo de combustible, sino también a ahorros y gastos de otros rubros. Asimismo, la cantidad de
+    litros corresponde a un caso particular y no representa una estimación general del combustible robado.
+  tabla_sha256: 42ba2cf75b725de5cc50baac82d0b984bbc60be353084aae662e22618fae867a
+  fecha: '2026-11-25T00:32:02'
+Q7:
+  texto: La respuesta es parcialmente creíble, pues algunos montos bimestrales están respaldados, pero
+    se mezclan con presupuestos globales y cantidades de otros programas. Además, aparecen instituciones
+    cuya participación en el pago de la pensión no está respaldada por las citas.
+  tabla_sha256: 8808065c9f1964512abd14131b4cbc0240d94667bd1fba3bda710d70b7b57bf9
+  fecha: '2026-11-25T00:35:07'
+Q8:
+  texto: La respuesta es parcialmente creíble, ya que algunos porcentajes corresponden a aumentos del
+    salario mínimo, mientras que otros se refieren a impuestos o pérdidas del poder adquisitivo. De los
+    dos montos recuperados, solo el primero hace referencia al salario diario. Además, no se identifican
+    las organizaciones solicitadas.
+  tabla_sha256: 4be732960fc1a2caf1667cecfb0a3ea5b8176a89b6be21566d3b3e346362b21e
+  fecha: '2026-11-25T00:39:16'
+Q9:
+  texto: La respuesta es mayormente creíble, aunque presenta limitaciones en el apartado de montos. La
+    cantidad recuperada corresponde a la dispersión de recursos entre beneficiarios, sin precisar cuánto
+    se destinó a la construcción o expansión de las sucursales del Banco del Bienestar.
+  tabla_sha256: e384ad68f9142f7859ae537e0001ec294b47f67161ba736b594b02a5dc6a739d
+  fecha: '2026-11-25T00:43:53'
+Q10:
+  texto: La respuesta es mayormente creíble y proporciona información relevante para la consulta. Sin
+    embargo, presenta errores de clasificación en el apartado de dependencias y empresas, como la inclusión
+    de «Estados Unidos Mexicanos», que no corresponde al tipo de organización solicitado.
+  tabla_sha256: 173026967e88a69d9dd51cdec97f2099eb5aebd0a5ebb0b5aa7266fd006143c2
+  fecha: '2026-11-25T00:47:46'
+Q11:
+  texto: La respuesta es creíble y presenta información pertinente para la consulta. No se observan errores
+    relevantes en los datos recuperados.
+  tabla_sha256: f2709fe2e138bf7630da7e8ecf7fe4ceef85d511f3059d103f91861b220ba71e
+  fecha: '2026-11-25T00:50:26'
+Q12:
+  texto: La respuesta es poco creíble, pues no se respalda claramente la participación de las instituciones
+    y se incluyen términos genéricos como «Estado». La identificación de funcionarios es insuficiente,
+    no se recuperan montos y únicamente la fecha de creación de la institución responde claramente a la
+    consulta.
+  tabla_sha256: 67498ff1d9dacc0659084365f58e3a4f4ea9b5261196c2b0526a470f967aa24e
+  fecha: '2026-11-25T00:56:15'
+Q13:
+  texto: La respuesta es parcialmente creíble. Los funcionarios recuperados son pertinentes, aunque se
+    incluyen términos genéricos como «Estado» entre las organizaciones. Además, se confunde un porcentaje
+    de aprobación de la reforma eléctrica con uno de generación de energía, y el monto recuperado corresponde
+    al pago de certificados.
+  tabla_sha256: 70947ce40ba86e21b39dd5fa0d96e8796e6376f8f3bf41f9e671f6c347418e22
+  fecha: '2026-11-25T01:00:03'
+Q14:
+  texto: La respuesta es poco creíble, pues no identifica claramente las dependencias y empresas participantes
+    ni la cantidad de jóvenes beneficiados. Además, mezcla montos de becas individuales con inversiones
+    generales y presenta inconsistencias en la periodicidad de los pagos.
+  tabla_sha256: c1142c366bf1d2df8afbb0d58218afaa9a2d154e982ff2e8f6693fe11306c00e
+  fecha: '2026-11-25T01:03:12'
+Q15:
+  texto: La respuesta es poco creíble, pues pocas dependencias y lugares recuperados se relacionan directamente
+    con los daños y la reconstrucción de Acapulco. No se identifican montos de apoyo y las fechas pertinentes
+    corresponden al impacto del huracán, no al proceso de reconstrucción.
+  tabla_sha256: aeab6b156278335c605af23d937ab6719b6a0fa5e4eb0e07b7de819e580a85ac
+  fecha: '2026-11-25T01:08:28'

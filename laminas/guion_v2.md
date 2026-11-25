@@ -285,6 +285,10 @@ Fuentes: `salida/v2/respuestas.csv` (`estado`; Q9, `sucursales`), `salida/v2/tab
 preguntas con su respuesta y su cita; una consulta libre con fechas propuesta por el público.
 Tener abierta la versión local (`make demo-web`) por si falla la red; no mostrar la terminal.*
 
+Dirección: https://examenmineriatextos-pccjbzo754exhckj6rb75v.streamlit.app/ (Streamlit Community Cloud, datos v2; la consulta libre usa solo reglas porque
+el NER v2 no cabe en la nube). Streamlit duerme las apps sin uso y la primera carga tarda: abrir
+la página y hacer una consulta antes de empezar la presentación.
+
 ## 19. Siguientes pasos
 
 **Expone: Gonzalo. Tiempo: 0:50. Acumulado: 17:45.**
@@ -308,3 +312,5 @@ Fuentes: `salida/v2/resultados_ir.csv` (AP de Q2 y Q3), `salida/v2/09_resumen_er
 Gracias. La demo queda abierta para que la prueben con sus propias preguntas.
 
 *Créditos con «Leo Yahir» (PV3) y la dirección de la demo web.*
+
+Demo: https://examenmineriatextos-pccjbzo754exhckj6rb75v.streamlit.app/

@@ -141,4 +141,21 @@ cierres. La demo de terminal y la web ocultan esos pasajes hasta el cierre del g
 anotación se integraron solo cuando las dos personas de cada parte habían terminado.
 
 **¿Cómo usaron la IA?**
-⟦pendiente WP-19: lo mismo que diga la sección «Uso de IA» del README v2, con la revisión ciega⟧.
+*Borrador del 25 (Claude Code) con los hechos registrados; debe decir lo mismo que la sección «Uso
+de IA» del README v2 de Luis.*
+En tres papeles distintos, y nunca para producir los datos con que se evalúa:
+- **Para construir:** Claude Code escribió o coescribió el código, las pruebas, la app de anotación,
+  la demo web, las figuras y los borradores del reporte, el guion y esta guía, a partir de los
+  resultados reales. El equipo revisó, corrigió y aprobó cada entrega.
+- **Para proponer, no para decidir:** Claude Code propuso 12 temas candidatos y Diego y Arturo
+  eligieron y redactaron Q11 a Q15 (`config/v2/candidatos_q11q15.yaml`). Las reglas de decisión
+  (mayoría, ganador, modelo NER) se fijaron por escrito antes de medir.
+- **Para revisar desde fuera:** un modelo sin contexto del proyecto revisó la presentación como si
+  fuera el cliente (revisión ciega, `docs/revision_ciega_respuesta.md`).
+  ⟦qué cambios tomamos de la revisión ciega⟧
+
+Lo que ningún asistente generó ni sugirió: los 960 juicios de relevancia (3 por par), la
+anotación del conjunto de selección y del gold, las adjudicaciones, la revisión de siglas y las 15
+valoraciones de las tablas. El código se verifica con 742 pruebas automáticas y `make validar`
+(22 condiciones). ⟦otras herramientas de IA que declare cada integrante en el README⟧
+Fuentes: README v2 (sección «Uso de IA»), `docs/decisiones.md`, `salida/v2/04_pool_meta.json`.
