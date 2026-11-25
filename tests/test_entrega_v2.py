@@ -91,3 +91,19 @@ def test_c18_detecta_muestras_que_se_tocan(tmp_path, monkeypatch):
     assert r.estado == FALLA
     assert any("Parte A y Parte B" in d for d in r.detalle)
     assert any("ámbito IE de v1" in d for d in r.detalle)
+
+
+def test_c22_guion_v2_y_revision_ciega(tmp_path):
+    cx = _cx(tmp_path)
+    assert W.c22_presentacion_v2(cx).estado == PENDIENTE
+    (tmp_path / "laminas").mkdir()
+    guion = tmp_path / "laminas" / "guion_v2.md"
+    guion.write_text("# Guion\n\nTiempo medido: pendiente (ensayo del 25)\n")
+    assert W.c22_presentacion_v2(cx).estado == PENDIENTE
+    guion.write_text("Tiempo medido: 21:05\n")
+    assert W.c22_presentacion_v2(cx).estado == FALLA
+    guion.write_text("Tiempo medido: 17:40\n")
+    assert W.c22_presentacion_v2(cx).estado == PENDIENTE
+    (tmp_path / "docs").mkdir()
+    (tmp_path / "docs" / "revision_ciega_respuesta.md").write_text("respuesta")
+    assert W.c22_presentacion_v2(cx).estado == OK
