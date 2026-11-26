@@ -36,7 +36,8 @@ def make(n,body,footer=None,extra='',dark=False,title=None):
     foot=t(n,footer,'div','takeaway') if footer is not None else ''
     pages.append(f'<section class="slide {"dark" if dark else "light"} {extra}" id="slide-{k}" data-origin="{n}" aria-label="Diapositiva {k}">{ribbon(k,dark)}{head}{title}{body}{foot}<span class="page-number">{k:02d} / TOTAL</span></section>')
     mapping.append({'lamina':k,'origen':n})
-def team(n,start,end):return '<div class="team">'+''.join(t(n,i) for i in range(start,end))+'</div>'
+def last(n):return len(S[n-1]['paragraphs'])-1
+def team(n):return '<div class="team">'+''.join(t(n,i) for i in range(4,last(n)))+'</div>'
 def metric(n,ids,cls=''):
     return '<article class="metric '+cls+'">'+t(n,ids[0],'div','metric-value')+''.join(t(n,i,'p','metric-label' if j==0 else 'metric-note') for j,i in enumerate(ids[1:]))+'</article>'
 
@@ -102,7 +103,7 @@ def legend(items,cls=''):
     return '<div class="legend '+cls+'">'+''.join(f'<span><i style="background:{c}"></i>{E(n)}</span>' for c,n in items)+'</div>'
 
 # 1. Portada. Los nombres son metadatos, separados del mensaje principal.
-make(1,'<div class="cover-sub">'+t(1,3)+'</div>'+team(1,4,10)+t(1,10,'div','date'),dark=True,extra='cover')
+make(1,'<div class="cover-sub">'+t(1,3)+'</div>'+team(1)+t(1,last(1),'div','date'),dark=True,extra='cover')
 # 2. Corpus.
 cx=trace('s2a_corpus');co=''
 for j,i in enumerate([2,1,0]):
@@ -237,7 +238,7 @@ for ids in [[4,5,6,7,8],[9,10,11,12,13],[14,15,16,17,18]]:
     nexts+='<article>'+t(19,ids[0],'b','next-number')+t(19,ids[1],'h2')+t(19,ids[2],'p','next-problem')+'<div class="next-action">'+t(19,ids[3],'h3')+t(19,ids[4])+'</div></article>'
 make(19,'<div class="body three-columns next-steps">'+nexts+'</div>',3)
 # 20. Cierre, único lugar con AMLO.
-make(20,'<div class="closing-sub">'+t(20,3)+'</div>'+team(20,4,10)+f'<a class="demo-url" data-source="20:10" href="{value(20,10)}" target="_blank" rel="noopener">{E(value(20,10))}</a><img class="cierre" src="img/cierre.png" alt="Muñeco de AMLO haciendo un corazón con las manos">',dark=True,extra='closing')
+make(20,'<div class="closing-sub">'+t(20,3)+'</div>'+team(20)+f'<a class="demo-url" data-source="20:{last(20)}" href="{value(20,last(20))}" target="_blank" rel="noopener">{E(value(20,last(20)))}</a><img class="cierre" src="img/cierre.png" alt="Muñeco de AMLO haciendo un corazón con las manos">',dark=True,extra='closing')
 
 total=len(pages);pages=[p.replace('TOTAL',str(total)) for p in pages]
 css=(Path(__file__).with_name('proyeccion.css')).read_text()

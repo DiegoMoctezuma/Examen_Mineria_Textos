@@ -35,8 +35,8 @@ Para reexportar los datos visuales de las salidas aprobadas:
   PYTHONPATH=src uv run python laminas/v2/herramientas/exportar_datos_figuras.py
 
 VALIDACIÓN
-Se conserva cada párrafo aprobado, con las dos excepciones previamente acordadas:
-recorrido Tren Maya → Dos Bocas y https://datisa.streamlit.app.
+Se conserva el contenido aprobado. Actualizaciones autorizadas: recorrido Tren Maya → Dos Bocas,
+https://datisa.streamlit.app y Bruno Ruiz Juarez en los créditos del equipo.
 Se renumeraron las láminas y se repitieron algunos encabezados al dividir contenido.
 validacion.json registra el control de texto, hashes de fuentes, recursos y geometría.
 Los PowerPoint y el guion se conservan intactos; esta entrega es HTML + PDF.

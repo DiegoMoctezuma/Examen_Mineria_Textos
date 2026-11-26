@@ -27,3 +27,6 @@ math { font-size: 1em; }
 code { font-size: 0.92em; }
 .portada, .portada * { text-align: left; }
 .portada p { text-align: left; }
+
+/* Mantener completos los nombres de los integrantes. */
+.portada, .portada p { hyphens: none; }

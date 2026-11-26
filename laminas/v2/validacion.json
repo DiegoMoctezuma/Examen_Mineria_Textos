@@ -5,13 +5,14 @@
   "laminas": 26,
   "fuente": {
     "laminas_originales": 20,
-    "parrafos_identificados": 239,
+    "parrafos_identificados": 241,
     "perdidos": [],
     "alterados": [],
     "numeracion": "Se renumera de 1 a 26 al separar contenido denso",
     "excepciones_previas": [
       "Recorrido Tren Maya → Dos Bocas",
-      "https://datisa.streamlit.app"
+      "https://datisa.streamlit.app",
+      "Bruno Ruiz Juarez añadido a los créditos por solicitud de Diego"
     ]
   },
   "proyeccion": {

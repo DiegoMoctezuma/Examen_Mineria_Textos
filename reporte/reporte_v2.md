@@ -5,7 +5,7 @@ lang: es-MX
 
 <div class="portada">
 <strong style="font-size:15pt;color:#691C32">Recuperación y extracción de información sobre discursos presidenciales</strong><br>
-Proyecto final · Equipo Datisa: Carpio Angeles Leo Yahir, Jaramillo Salmerón Arturo, Mera Montiel Gonzalo Sebastian, Moctezuma Ramirez Diego Rafael y Ramirez Maza Luis<br>
+Proyecto final · Equipo Datisa: Carpio Angeles Leo Yahir, Jaramillo Salmerón Arturo, Mera Montiel Gonzalo Sebastian, Moctezuma Ramirez Diego Rafael, Ramirez Maza Luis y Ruiz Juarez Bruno<br>
 Minería de Textos · 25 de noviembre de 2026 · Repositorio: https://github.com/DiegoMoctezuma/Examen_Mineria_Textos
 </div>
 
